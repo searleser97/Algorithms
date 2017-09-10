@@ -33,7 +33,6 @@ def main():
                 count += n
             else:
                 count += maxInColumn
-        print(lf, r, mid, count)
         if count < k:
             lf = mid + 1
         else:
