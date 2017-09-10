@@ -13,8 +13,15 @@ count the numbers up to mid (including repetitions) with the following condition
         count += maxNumberReachedPerColumn
 now that we have the count of numbers lesser than mid
 we check:
-    if (count > k)
-        we discard 
+    if (count < k)
+        we discard left
+        left = mid + 1
+    else
+        we discard right
+        right = mid - 1
+we do this until left > right
+now the answer is left, since right will be always one below the correct answer
+(Binary Search)
 */
 int main() {
     long long int n, m , k, l , r;

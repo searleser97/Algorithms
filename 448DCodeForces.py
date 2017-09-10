@@ -1,6 +1,6 @@
 from numba import jit
 
-"""
+'''
 the problem is to find the kth smallest number in the multiplication table (n rows, m columns)
 for k = 9 the answer is 5
 to solve it:
@@ -13,9 +13,16 @@ count the numbers up to mid (including repetitions) with the following condition
         count += maxNumberReachedPerColumn
 now that we have the count of numbers lesser than mid
 we check:
-    if (count > k)
-        we discard 
-"""
+    if (count < k)
+        we discard left
+        left = mid + 1
+    else
+        we discard right
+        right = mid - 1
+we do this until left > right
+now the answer is left, since right will be always one below the correct answer
+(Binary Search)
+'''
 @jit
 def main():
     n, m, k = map(int, input().split())
