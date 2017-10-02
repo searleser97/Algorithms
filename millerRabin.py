@@ -3,10 +3,12 @@ from random import randrange
 
 def is_prime(p):
     k = 100
-    if p & 1 == 0:
-        return False
-    if p == 3:
+
+    if p == 2 or p == 3:
         return True
+
+    if p & 1 == 0 or p == 1:
+        return False
 
     phi = p - 1
     d = phi
@@ -33,3 +35,7 @@ def is_prime(p):
             return False
 
     return True
+
+
+if __name__ == '__main__':
+    print(is_prime(int(input())))
