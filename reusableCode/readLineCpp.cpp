@@ -25,6 +25,7 @@ double dInput() {
 
 string input() {
     string ans;
+    cin >> ws;
     getline(cin, ans);
     return ans;
 }
