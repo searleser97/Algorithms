@@ -35,4 +35,5 @@ def primesToN(N=10000000):
 
 
 if __name__ == '__main__':
-    print(primesToN(int(input())))
+    for prime in primesToN(int(input())):
+        print(prime)

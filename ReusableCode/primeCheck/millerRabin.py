@@ -18,16 +18,26 @@ def is_prime(p):
         exp = pow(a, d, p)
         if exp == 1 or exp == p - 1:
             continue
+        flag = False
         for j in range(r - 1):
             exp = pow(exp, 2, p)
             if exp == 1:
                 return False
             if exp == p - 1:
+                flag = True
                 break
+        if flag:
+            continue
         else:
             return False
+
     return True
 
 
 if __name__ == '__main__':
-    print(is_prime(int(input())))
+    while True:
+        try:
+            n = int(input())
+            print(n, is_prime(n))
+        except EOFError:
+            break
