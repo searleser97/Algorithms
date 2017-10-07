@@ -30,7 +30,6 @@ def is_prime(p):
             continue
         else:
             return False
-
     return True
 
 
