@@ -33,9 +33,9 @@ def main():
     t = int(input())
     for i in range(t):
         n = int(input())
-        if n & 1 == 0:
+        if (n & 1) == 0:
             n += 1
-        for i in range(n, 5000000000, 2):
+        for i in range(n, 4000000001, 2):
             if is_prime(i):
                 print(i)
                 break

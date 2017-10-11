@@ -26,7 +26,7 @@ pair<vector<int>, vector<int> > mySieve(int N) {
         k = i * i;
     }
     // if you need primes bigger than the root of N
-    while(i < n) {
+    while (i < n) {
         if (dic[i] == 0)
             primes.push_back(i);
         i += w;
@@ -48,9 +48,20 @@ bool isPrime(int N, vector<int> &sieve, vector<int> &primes) {
 }
 
 int main() {
-    pair<vector<int>, vector<int> > sieve = mySieve(10000000);
+    pair<vector<int>, vector<int> > sieve = mySieve(63250);
+    int t;
     long long int n;
-    cin >> n;
-    cout << isPrime(n, sieve.first, sieve.second) << '\n';
+    cin >> t;
+    for (int i = 0; i < t; i++) {
+        cin >> n;
+        if ((n & 1) == 0)
+            n += 1;
+        for (int l = n; l < 4000000001; l += 2) {
+            if (isPrime(l, sieve.first, sieve.second)) {
+                cout << l << '\n';
+                break;
+            }
+        }
+    }
     return 0;
 }
