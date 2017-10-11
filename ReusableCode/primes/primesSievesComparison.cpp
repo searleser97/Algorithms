@@ -3,42 +3,44 @@
 using namespace std;
 
 
-vector<long long int> sieve(long long int N) {
-    long long int n = N + 1LL;
-    vector<long long int> dic(n);
-    dic[0] = -1LL;
-    dic[1] = 1LL;
-    for (long long int i = 4LL; i < n; i += 2LL)
-        dic[i] = 2LL;
-    for (long long int i = 9LL; i < n; i += 3LL)
-        dic[i] = 3LL;
-    long long int i = 5LL, w = 2LL, k = i * i;
+vector<int> sieve(int N) {
+    int n = N + 1;
+    vector<int> dic(n);
+    dic[0] = -1;
+    dic[1] = 1;
+    for (int i = 4; i < n; i += 2)
+        dic[i] = 2;
+    for (int i = 9; i < n; i += 3)
+        dic[i] = 3;
+    int i = 5, w = 2, k = i * i;
     while (k < n) {
-        if (dic[i] == 0LL)
-            for (long long int j = k; j < n; j += i)
+        if (dic[i] == 0) {
+            int jump = 2 * i;
+            for (int j = k; j < n; j += jump)
                 dic[j] = i;
+        }
         i += w;
-        w = 6LL - w;
+        w = 6 - w;
         k = i * i;
     }
     return dic;
 }
 
 // Criba de Eratostenes de 1 a n.
-vector<long long int> clasicSieve(long long int n) {
-    vector<long long int> criba(n + 1LL);
-    for (long long int i = 4LL; i <= n; i += 2LL)
-        criba[i] = 2LL;
-    for (long long int i = 3LL; i * i <= n; i += 2LL)
+vector<int> clasicSieve(int n) {
+    vector<int> criba(n + 1);
+    for (int i = 4; i <= n; i += 2)
+        criba[i] = 2;
+    for (int i = 3; i * i <= n; i += 2)
         if (!criba[i])
-            for (long long int j = i * i; j <= n; j += i)
+            for (int j = i * i; j <= n; j += i)
                 if (!criba[j]) criba[j] = i;
     return criba;
 }
 
 
 int main() {
-    long long int n = 10000000LL;
+    int n = 10000000;
     cin >> n;
     clock_t start, stop;
     for (int i = 0; i < 4; i++) {

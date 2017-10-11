@@ -5,21 +5,24 @@ import timeit
 # sieve of primes, use dict if you want to save memory
 # however using it will make this slower
 def sieve(N=100000000):
-    dic = [0] * (N + 1)
+    n = N + 1
+    dic = [0] * (n)
     # dic = {0: 0, 1: 1}
     dic[0] = -1
     dic[1] = 1
-    for i in range(4, N + 1, 2):
+    for i in range(4, n, 2):
         dic[i] = 2
-    for i in range(9, N + 1, 3):
+    for i in range(9, n, 3):
         dic[i] = 3
     i = 5
     w = 2
     k = i * i
-    while k <= N:
+    while k < n:
         # if i not in dic:
         if dic[i] == 0:
-            for j in range(k, N + 1, i):
+            # skip multiples of 2
+            jump = 2 * i
+            for j in range(k, n, jump):
                 dic[j] = i
         i += w
         w = 6 - w

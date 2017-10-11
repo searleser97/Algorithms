@@ -2,8 +2,6 @@
 
 using namespace std;
 
-// sieve of primes, use unordered_map if you want to save memory
-// however using it will make this slower
 pair<vector<int>, vector<int> > mySieve(int N) {
     int n = N + 1;
     vector<int> dic(n);
@@ -20,7 +18,7 @@ pair<vector<int>, vector<int> > mySieve(int N) {
             primes.push_back(i);
             // skip multiples of 2
             int jump = 2 * i;
-            for (long long int j = k; j < n; j += jump)
+            for (int j = k; j < n; j += jump)
                 dic[j] = i;
         }
         i += w;
@@ -37,21 +35,21 @@ pair<vector<int>, vector<int> > mySieve(int N) {
     return {dic, primes};
 }
 
-void printv(vector<int> v) {
-    if (v.size() == 0) {
-        cout << "[]" << endl;
-        return;
+bool isPrime(int N, vector<int> &sieve, vector<int> &primes) {
+    if (N < sieve.size())
+        return sieve[N] == 0 ? true : false;
+    for (int prime : primes) {
+        if (prime * prime > N)
+            break;
+        if (N % prime == 0)
+            return false;
     }
-    cout << "[" << v[0];
-    for (int i = 1; i < v.size(); i++) {
-        cout << ", " << v[i];
-    }
-    cout << "]" << endl;
 }
 
-
 int main() {
-    int n;
+    pair<vector<int>, vector<int> > sieve = mySieve(10000000);
+    long long int n;
     cin >> n;
-    printv(mySieve(n).second);
+    cout << isPrime(n, sieve.first, sieve.second) << '\n';
+    return 0;
 }

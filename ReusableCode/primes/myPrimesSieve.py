@@ -20,7 +20,9 @@ def mySieve(N=10000000):
         # if i not in dic:
         if dic[i] == 0:
             primes.append(i)
-            for j in range(k, n, i):
+            # skip multiples of 2
+            jump = 2 * i
+            for j in range(k, n, jump):
                 dic[j] = i
         i += w
         w = 6 - w
@@ -35,5 +37,4 @@ def mySieve(N=10000000):
 
 
 if __name__ == '__main__':
-    for prime in mySieve(int(input()))[1]:
-        print(prime)
+    print(mySieve(int(input()))[1])
