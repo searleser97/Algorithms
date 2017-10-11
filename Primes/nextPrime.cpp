@@ -35,7 +35,7 @@ pair<vector<int>, vector<int> > mySieve(int N) {
     return {dic, primes};
 }
 
-bool isPrime(int N, vector<int> &sieve, vector<int> &primes) {
+bool isPrime(long long int N, vector<int> &sieve, vector<int> &primes) {
     if (N < sieve.size())
         return sieve[N] == 0 ? true : false;
     for (int prime : primes) {
@@ -48,20 +48,29 @@ bool isPrime(int N, vector<int> &sieve, vector<int> &primes) {
 }
 
 int main() {
-    pair<vector<int>, vector<int> > sieve = mySieve(63250);
+    ios_base::sync_with_stdio(0);
+    pair<vector<int>, vector<int> > sieve = mySieve(63246);
     int t;
     long long int n;
     cin >> t;
     for (int i = 0; i < t; i++) {
         cin >> n;
-        if ((n & 1) == 0)
-            n += 1;
-        for (int l = n; l < 4000000001; l += 2) {
-            if (isPrime(l, sieve.first, sieve.second)) {
-                cout << l << '\n';
-                break;
+
+        if (n < 3LL)
+            cout << 2;
+        else {
+            if ((n & 1LL) == 0)
+                n += 1LL;
+            for (long long int l = n; l < 5000000000LL; l += 2LL) {
+                if (isPrime(l, sieve.first, sieve.second)) {
+                    cout << l;
+                    break;
+                }
             }
         }
+
+        if (i != t - 1)
+            cout << "\n";
     }
     return 0;
 }
