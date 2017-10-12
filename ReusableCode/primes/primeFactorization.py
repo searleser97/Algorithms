@@ -40,7 +40,7 @@ def getPrimeFactors(N, sieveToMaxN):
             primeFactors.append(n)
             break
         primeFactors.append(sieveToMaxN[n])
-        n = n / sieveToMaxN[n]
+        n /= sieveToMaxN[n]
     return primeFactors
 
 
