@@ -1,12 +1,15 @@
 def divisorCriteria(n, lim):
     results = []
+    tenElevated = 1
     for i in range(lim):
-        remainder = pow(10, i, n)
+        # remainder = pow(10, i, n)
+        remainder = tenElevated % n
         negremainder = remainder - n
         if(remainder <= abs(negremainder)):
             results.append(remainder)
         else:
             results.append(negremainder)
+        tenElevated *= 10
     return results
 
 
@@ -26,4 +29,5 @@ def testDivisibility(dividend, divisor, divisor_criteria):
 if __name__ == '__main__':
     dividend, divisor = map(int, input().split())
     divisor_criteria = divisorCriteria(divisor, len(str(dividend)))
+    print(divisor_criteria)
     print(testDivisibility(dividend, divisor, divisor_criteria))
