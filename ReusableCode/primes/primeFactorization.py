@@ -2,7 +2,11 @@ def mySieve(N=10000000):
     n = N + 1
     dic = [0] * (n)
     # dic = {0: 0, 1: 1}
-    primes = [2, 3]
+    primes = []
+    if N == 2:
+        primes = [2]
+    if N > 2:
+        primes = [2, 3]
     dic[0] = -1
     dic[1] = 1
     for i in range(4, n, 2):

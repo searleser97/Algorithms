@@ -2,8 +2,6 @@
 
 using namespace std;
 
-// sieve of primes, use unordered_map if you want to save memory
-// however using it will make this slower
 pair<vector<int>, vector<int> > mySieve(int N) {
     int n = N + 1;
     vector<int> dic(n);
@@ -41,22 +39,6 @@ pair<vector<int>, vector<int> > mySieve(int N) {
     return {dic, primes};
 }
 
-
-vector<int> getPrimeFactors(long long int N, vector<int> &sieveToMaxN) {
-    long long int n = N;
-    vector<int> primeFactors;
-    while (n != 1LL) {
-        if (sieveToMaxN[n] == 0) {
-            primeFactors.push_back(n);
-            break;
-        }
-        primeFactors.push_back(sieveToMaxN[n]);
-        n /= sieveToMaxN[n];
-    }
-    return primeFactors;
-}
-
-
 void printv(vector<int> v) {
     if (v.size() == 0) {
         cout << "[]" << endl;
@@ -69,11 +51,39 @@ void printv(vector<int> v) {
     cout << "]" << endl;
 }
 
-
 int main() {
-    int n;
-    cin >> n;
-    vector<int> sieve = mySieve(n).first;
-    printv(sieve);
-    printv(getPrimeFactors(n, sieve));
+    while (true) {
+        int n;
+        cin >> n;
+        if (n == 0)
+            break;
+        vector<int> primes = mySieve(n).second;
+        int factorsSize = primes.size();
+        vector<int> factorsCount(factorsSize);
+        int primeToAPower;
+        int i = 0;
+        for (int prime : primes) {
+            primeToAPower = prime;
+            // number of numbers divided by 'K' in a range 1...N = N / K
+            int div = n / primeToAPower;
+            while (true) {
+                factorsCount[i] += div;
+                primeToAPower *= prime;
+                div = n / primeToAPower;
+                if (div == 0)
+                    break;
+            }
+            i++;
+        }
+
+        // output format
+        cout << setw(3) << n << "! =";
+        for (int i = 0; i < factorsSize; i++) {
+            if (i == 15)
+                cout << "\n      ";
+            cout << setw(3) << factorsCount[i];
+        }
+        cout << endl;
+    }
+    return 0;
 }

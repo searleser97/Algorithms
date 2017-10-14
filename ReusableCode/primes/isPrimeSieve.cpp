@@ -5,7 +5,11 @@ using namespace std;
 pair<vector<int>, vector<int> > mySieve(int N) {
     int n = N + 1;
     vector<int> dic(n);
-    vector<int> primes = {2, 3};
+    vector<int> primes;
+    if (N == 2)
+        primes = {2};
+    if (N > 2)
+        primes = {2, 3};
     dic[0] = -1;
     dic[1] = 1;
     for (int i = 4; i < n; i += 2)
@@ -18,7 +22,7 @@ pair<vector<int>, vector<int> > mySieve(int N) {
             primes.push_back(i);
             // skip multiples of 2
             int jump = 2 * i;
-            for (int j = k; j < n; j += jump)
+            for (long long int j = k; j < n; j += jump)
                 dic[j] = i;
         }
         i += w;
@@ -26,7 +30,7 @@ pair<vector<int>, vector<int> > mySieve(int N) {
         k = i * i;
     }
     // if you need primes bigger than the root of N
-    while(i < n) {
+    while (i < n) {
         if (dic[i] == 0)
             primes.push_back(i);
         i += w;
