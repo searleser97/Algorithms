@@ -16,7 +16,6 @@ long long int Exponenciar(long long int a, long long int n, long long int m) {
 }
 
 int main() {
-
     long long int n, k;
     while (cin >> n >> k) {
         if (n == 0LL && k == 0LL)
