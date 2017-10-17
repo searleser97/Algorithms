@@ -72,11 +72,11 @@ void printv(vector<string> v) {
     cout << "]" << endl;
 }
 
-
 int main() {
     int n;
     Trie tr;
     cin >> n;
+    struct rusage *usage;
     for (int i = 0; i < n; i++) {
         string aux;
         cin >> aux;
