@@ -47,6 +47,8 @@ public:
         current->endOfWord = true;
     }
 
+
+    // getWords is optional
     void getWords(TrieNode* node, vector<string> &words, string word) {
         if (node->endOfWord)
             words.push_back(word);
