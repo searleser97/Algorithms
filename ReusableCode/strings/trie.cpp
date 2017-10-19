@@ -30,6 +30,7 @@ private:
     };
 private:
     TrieNode* root;
+    int maximo = 0;
 public:
     Trie() {
         root = new TrieNode();
@@ -51,6 +52,9 @@ public:
 
 
     void getWords(TrieNode* node, vector<string> &words, string word) {
+        cout << word.size() << " " << node->numberOfWords << endl;
+        if (word.size() * node->numberOfWords > this->maximo)
+            this->maximo = word.size() * node->numberOfWords;
         if (node->endOfWord)
             words.push_back(word);
         for (auto i : node->children)
@@ -60,6 +64,8 @@ public:
     vector<string> getWords() {
         vector<string> words;
         getWords(this->root, words, "");
+        cout << this->maximo << endl;
+        this->maximo = 0;
         return words;
     }
 
@@ -82,7 +88,7 @@ public:
 
 void printv(vector<string> v) {
     if (v.size() == 0) {
-        cout << "No match." << endl;
+        cout << "No match." << '\n';
         return;
     }
     for (int i = 0; i < v.size(); i++)
@@ -91,6 +97,22 @@ void printv(vector<string> v) {
 
 int main() {
     ios_base::sync_with_stdio(0);
+    Trie tr;
+    int t;
+    cin >> t;
+    for (int i = 0; i < t; ++i)
+    {
+        int n;
+        cin >> n;
+        for (int i = 0; i < n; ++i)
+        {
+            string str;
+            cin >> str;
+            tr.insert(str);
+        }
+        tr.getWords();
+    }
+    /*
     int n, k;
     Trie tr;
     cin >> n;
@@ -103,10 +125,10 @@ int main() {
     string str;
     for (int i = 0; i < k; i++) {
         cin >> str;
-        cout << "Case #" << i + 1 << ":" << endl;
+        cout << "Case #" << i + 1 << ":" << '\n';
         printv(tr.getWords(str));
     }
-    
+    */
     
     return 0;
 }
