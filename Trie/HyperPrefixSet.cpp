@@ -1,6 +1,3 @@
-//
-// Created by san on 3/09/17.
-//
 #include<bits/stdc++.h>
 
 using namespace std;
@@ -118,23 +115,6 @@ int main() {
         tr->getWords();
         delete tr;
     }
-    /*
-    int n, k;
-    Trie tr;
-    cin >> n;
-    for (int i = 0; i < n; i++) {
-        string aux;
-        cin >> aux;
-        tr.insert(aux);
-    }
-    cin >> k;
-    string str;
-    for (int i = 0; i < k; i++) {
-        cin >> str;
-        cout << "Case #" << i + 1 << ":" << '\n';
-        printv(tr.getWords(str));
-    }
-    */
     
     return 0;
 }
