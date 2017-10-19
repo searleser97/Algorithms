@@ -1,9 +1,7 @@
 //
 // Created by san on 3/09/17.
 //
-#include <unordered_map>
-#include <iostream>
-#include <vector>
+#include<bits/stdc++.h>
 
 using namespace std;
 
@@ -11,16 +9,19 @@ class Trie {
 private:
     class TrieNode {
     public:
-        unordered_map<char, TrieNode*> children;
+        // unordered_map<char, TrieNode*> children;
+        map<char, TrieNode*> children;
         bool endOfWord;
+        int numberOfWords;
         TrieNode() {
             this->endOfWord = false;
         }
         ~TrieNode() {
-            unordered_map<char, TrieNode*> thisNodeChildren = this->children;
-            unordered_map<char, TrieNode*>::iterator i = thisNodeChildren.begin();
+            // unordered_map<char, TrieNode*> thisNodeChildren = this->children;
+            // unordered_map<char, TrieNode*>::iterator i = thisNodeChildren.begin();
+            map<char, TrieNode*> thisNodeChildren = this->children;
+            map<char, TrieNode*>::iterator i = thisNodeChildren.begin();
             while (i != thisNodeChildren.end()) {
-                cout << i->first << " " << i->second->endOfWord << endl;
                 delete i->second;
                 i++;
             }
@@ -39,6 +40,7 @@ public:
     void insert(string &word) {
         TrieNode *current = this->root;
         for (int i = 0; i < word.size(); i++) {
+            current->numberOfWords += 1;
             char symbol = word[i];
             if (current->children.count(symbol) == 0)
                 current->children[symbol] = new TrieNode();
@@ -48,7 +50,6 @@ public:
     }
 
 
-    // getWords is optional
     void getWords(TrieNode* node, vector<string> &words, string word) {
         if (node->endOfWord)
             words.push_back(word);
@@ -61,29 +62,51 @@ public:
         getWords(this->root, words, "");
         return words;
     }
+
+    vector<string> getWords(string &prefix) {
+        vector<string> words;
+        TrieNode *current = this->root;
+        for (int i = 0; i < prefix.size(); i++) {
+            if (current->children.count(prefix[i]) == 0)
+                return words;
+            current = current->children[prefix[i]];
+        }
+        current->endOfWord = false;
+        getWords(current, words, prefix);
+        current->endOfWord = true;
+        return words;
+    }
+
+
 };
 
 void printv(vector<string> v) {
     if (v.size() == 0) {
-        cout << "[]" << endl;
+        cout << "No match." << endl;
         return;
     }
-    cout << "[" << v[0];
-    for (int i = 1; i < v.size(); i++)
-        cout << ", " << v[i];
-    cout << "]" << endl;
+    for (int i = 0; i < v.size(); i++)
+        cout << v[i] << endl;
 }
 
 int main() {
-    int n;
+    ios_base::sync_with_stdio(0);
+    int n, k;
     Trie tr;
     cin >> n;
-    struct rusage *usage;
     for (int i = 0; i < n; i++) {
         string aux;
         cin >> aux;
         tr.insert(aux);
     }
-    printv(tr.getWords());
+    cin >> k;
+    string str;
+    for (int i = 0; i < k; i++) {
+        cin >> str;
+        cout << "Case #" << i + 1 << ":" << endl;
+        printv(tr.getWords(str));
+    }
+    
+    
     return 0;
 }
