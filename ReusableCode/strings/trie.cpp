@@ -70,16 +70,17 @@ public:
                 return words;
             current = current->children[prefix[i]];
         }
+        bool prevState = current->endOfWord;
         current->endOfWord = false;
         getWords(current, words, prefix);
-        current->endOfWord = true;
+        current->endOfWord = prevState;
         return words;
     }
 
 
 };
 
-void printv(vector<int> v) {
+void printv(vector<string> v) {
     if (v.size() == 0) {
         cout << "[]" << endl;
         return;
@@ -93,23 +94,24 @@ void printv(vector<int> v) {
 
 int main() {
     std::ios_base::sync_with_stdio(0);
-    
+
     int n, k;
-    Trie tr;
+    Trie *tr = new Trie();
     cin >> n;
     for (int i = 0; i < n; i++) {
         string aux;
         cin >> aux;
-        tr.insert(aux);
+        tr->insert(aux);
     }
     cin >> k;
-    string str;
-    for (int i = 0; i < k; i++) {
+    for (int j = 0; j < k; j++) {
+        string str;
         cin >> str;
-        cout << "Case #" << i + 1 << ":" << '\n';
-        printv(tr.getWords(str));
+        cout << "Case #" << j + 1 << ":" << '\n';
+        printv(tr->getWords(str));
     }
-    
-    
+
+    delete tr;
+
     return 0;
 }
