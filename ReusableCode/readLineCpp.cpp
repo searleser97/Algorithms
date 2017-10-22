@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 
 using namespace std;
-
+/*
 string strInput() {
     string ans;
     cin >> ans;
@@ -22,7 +22,7 @@ double dInput() {
     cin.ignore();
     return ans;
 }
-
+*/
 string input() {
     string ans;
     cin >> ws;
@@ -32,7 +32,10 @@ string input() {
 
 int main() {
     ios_base::sync_with_stdio(0);
-    cout << strInput() << endl;
+    string ans;
+    // cout << strInput() << endl;
+    cin >> ans;
+    cout << ans << endl;
     cout << input() << endl;
     return 0;
 }
