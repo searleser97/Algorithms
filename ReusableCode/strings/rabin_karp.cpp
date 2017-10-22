@@ -41,10 +41,8 @@ vector<int> rabinKarp(RollingHash &rhStr, string &pattern) {
     vector<int> positions;
     RollingHash rhPattern(pattern);
     unsigned long long int patternHash = rhPattern.getWordHash();
-    int windowSize = pattern.size();
-    int end = windowSize;
-    int limit = rhStr.size();
-    for (int i = 1; end < limit; i++) {
+    int windowSize = pattern.size(), end = windowSize;
+    for (int i = 1; end < rhStr.size(); i++) {
         if (patternHash == rhStr.getSubstrHash(i, end))
             positions.push_back(i);
         end = i + windowSize;
