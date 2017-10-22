@@ -80,6 +80,8 @@ int main() {
     long long int maximum;
 
     while (cin >> L >> U) {
+        if (L > U)
+            swap(L, U);
         if (L == U || U == 2LL) {
             cout << "There are no adjacent primes." << endl;
             continue;
