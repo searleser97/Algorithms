@@ -48,17 +48,54 @@ public:
         current->endOfWord = true;
     }
 
-
-    void getWords(TrieNode* node, vector<string> &words, string word) {
-        if (node->endOfWord)
-            words.push_back(word);
-        for (auto i : node->children)
-            getWords(i.second, words, word + i.first);
+    bool find(string &word) {
+        TrieNode *current = this->root;
+        for (int i = 0; i < word.size(); i++) {
+            char symbol = word[i];
+            if (current->children.count(symbol) == 0)
+                return false;
+            current = current->children[symbol];
+        }
+        return current->endOfWord;
     }
 
+private:
+    bool deleteWord(TrieNode *current, string &word, int &index) {
+        if (index == word.size()) {
+            if (!current->endOfWord)
+                return false;
+            current->endOfWord = false;
+            return current->children.size() == 0;
+        }
+        char symbol = word[index];
+        if (current->children.count(symbol) == 0)
+            return false;
+        bool shouldDeleteChild = deleteWord(current->children[symbol], word, index += 1);
+
+        if (shouldDeleteChild) {
+            current->children.erase(symbol);
+            return current->children.size() == 0;
+        }
+        return false;
+    }
+
+    void getWords(TrieNode* node, vector<string> &words, string &word) {
+        if (node->endOfWord)
+            words.push_back(word);
+        for (auto i : node->children) {
+            getWords(i.second, words, word += i.first);
+            word.pop_back();
+        }
+    }
+public:
+    void deleteWord(string &word) {
+        int index = 0;
+        deleteWord(this->root, word, index);
+    }
     vector<string> getWords() {
         vector<string> words;
-        getWords(this->root, words, "");
+        string word = "";
+        getWords(this->root, words, word);
         return words;
     }
 
@@ -109,6 +146,13 @@ int main() {
         cin >> str;
         cout << "Case #" << j + 1 << ":" << '\n';
         printv(tr->getWords(str));
+    }
+    cin >> k;
+    for (int j = 0; j < k; j++) {
+        string str;
+        cin >> str;
+        tr->deleteWord(str);
+        printv(tr->getWords());
     }
 
     delete tr;
