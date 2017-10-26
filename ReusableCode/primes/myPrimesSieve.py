@@ -15,7 +15,7 @@ def mySieve(N=10000000):
     dic[1] = 1
     for i in range(4, n, 2):
         dic[i] = 2
-    for i in range(9, n, 3):
+    for i in range(9, n, 6):
         dic[i] = 3
     i = 5
     w = 2

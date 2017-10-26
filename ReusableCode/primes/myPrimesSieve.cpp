@@ -16,7 +16,7 @@ pair<vector<int>, vector<int> > mySieve(int N) {
     dic[1] = 1;
     for (int i = 4; i < n; i += 2)
         dic[i] = 2;
-    for (int i = 9; i < n; i += 3)
+    for (int i = 9; i < n; i += 6)
         dic[i] = 3;
     int i = 5, w = 2, k = i * i;
     while (k < n) {
