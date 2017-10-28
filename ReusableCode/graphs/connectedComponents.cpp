@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 
 using namespace std;
-typedef char T;
+typedef int T;
 class Graph {
 public:
     unordered_map<T, unordered_map<T, bool> > edges;
@@ -57,29 +57,13 @@ void printv(vector<T> v) {
 
 
 int main() {
-    char n;
-    while (cin >> n) {
-        cin.ignore();
-        Graph g;
-        while (true) {
-            g.addEdge(n, n);
-            if (n == 'A')
-                break;
-            n--;
-        }
-        string edge;
-        while (getline(cin, edge)) {
-            if (edge == "")
-                break;
-            g.addEdge(edge[0], edge[1]);
-        }
-        /*vector<vector<T>> connectedComponents = g.getConnectedComponents();
-        for (auto vertexes : connectedComponents) {
-            printv(vertexes);
-        }*/
-        cout << g.getConnectedComponents().size() << "\n";
-        cout << g.isEdgeInGraph('A', 'B') << "\n";
-        cout << g.isEdgeInGraph('C', 'A') << "\n";
+    Graph g;
+    T a, b;
+    while (cin >> a >> b) {
+        g.addEdge(a, b);
+    }
+    for (auto vertex : g.getConnectedComponents()) {
+        printv(vertex);
     }
 
     return 0;
