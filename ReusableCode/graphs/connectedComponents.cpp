@@ -5,10 +5,32 @@ typedef int T;
 class Graph {
 public:
     unordered_map<T, unordered_map<T, bool> > edges;
-
+    unordered_map<T, T> tree;
+    unordered_map<T, int> treeSize;
     void addEdge(T v, T w) {
+        this->edges[v][v] = true;
+        this->edges[w][w] = true;
         this->edges[v][w] = true;
         this->edges[w][v] = true;
+        if (!this->tree.count(v)) {
+            this->tree[v] = v;
+            this->treeSize[v] = 1;
+        }
+        if (!this->tree.count(w)) {
+            this->tree[w] = w;
+            this->treeSize[w] = 1;
+        }
+        T i = setGetRoot(v);
+        T j = setGetRoot(w);
+        if (i == j)
+            return;
+        if (treeSize[i] < treeSize[j]) {
+            this->tree[i] = j;
+            this->treeSize[j] += this->treeSize[i];
+        } else {
+            this->tree[j] = i;
+            this->treeSize[i] += this->treeSize[j];
+        }
     }
 
     void dfs(unordered_map<T, bool> &vertexes, unordered_map<T, bool> &visited, vector<T> &connectedComponents) {
@@ -40,6 +62,21 @@ public:
         return this->edges.count(v) ? this->edges[v].count(w) : false;
     }
 
+    bool areVertexesConnected(T v, T w) {
+        if (!this->tree.count(v) || !this->tree.count(w))
+            return false;
+        return setGetRoot(v) == setGetRoot(w);
+    }
+
+private:
+    T setGetRoot(T v) {
+        while (v != this->tree[v]) {
+            this->tree[v] = this->tree[this->tree[v]];
+            v = this->tree[v];
+        }
+        return v;
+    }
+
 };
 
 
@@ -59,12 +96,20 @@ void printv(vector<T> v) {
 int main() {
     Graph g;
     T a, b;
-    while (cin >> a >> b) {
+    int i;
+    cin >> i;
+    while (i--) {
+        cin >> a >> b;
         g.addEdge(a, b);
     }
-    for (auto vertex : g.getConnectedComponents()) {
-        printv(vertex);
-    }
 
+    for (auto v : g.getConnectedComponents()) {
+        printv(v);
+    }
+    cin >> i;
+    while (i--) {
+        cin >> a >> b;
+        cout << g.areVertexesConnected(a, b) << '\n';
+    }
     return 0;
 }
