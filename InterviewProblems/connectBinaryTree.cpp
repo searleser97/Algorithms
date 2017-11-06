@@ -45,13 +45,15 @@ Node * connect(Node* root) {
 
 void printTreeByNext(Node * root) {
     while (root) {
-        cout << root->value << endl;
+        cout << root->value << " ";
         root = root->next;
     }
+    cout << endl;
 }
 
 int main() {
     Node * root = new Node(1, new Node(2, new Node(4, nullptr, nullptr, nullptr), new Node(5, nullptr, nullptr, nullptr), nullptr), new Node(3, new Node(6, nullptr, nullptr, nullptr), new Node(7, nullptr, nullptr, nullptr), nullptr), nullptr);
     printTreeByNext(connect(root));
+    // prints: 1 2 3 4 5 6 7
     return 0;
 }
