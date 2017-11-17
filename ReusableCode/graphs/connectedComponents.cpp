@@ -4,14 +4,14 @@ using namespace std;
 typedef int T;
 class Graph {
 public:
-    unordered_map<T, unordered_map<T, bool> > edges;
+    unordered_map<T, unordered_set<T> > edges;
     unordered_map<T, T> tree;
     unordered_map<T, int> treeSize;
     void addEdge(T v, T w) {
-        this->edges[v][v] = true;
-        this->edges[w][w] = true;
-        this->edges[v][w] = true;
-        this->edges[w][v] = true;
+        this->edges[v].insert(v);
+        this->edges[w].insert(w);
+        this->edges[v].insert(w);
+        this->edges[w].insert(v);
         if (!this->tree.count(v)) {
             this->tree[v] = v;
             this->treeSize[v] = 1;
@@ -33,24 +33,24 @@ public:
         }
     }
 
-    void dfs(unordered_map<T, bool> &vertexes, unordered_map<T, bool> &visited, vector<T> &connectedComponents) {
+    void dfs(unordered_set<T> &vertexes, unordered_set<T> &visited, vector<T> &connectedComponents) {
         for (auto vertex : vertexes) {
-            if (!visited.count(vertex.first)) {
-                connectedComponents.push_back(vertex.first);
-                visited[vertex.first] = true;
-                dfs(this->edges[vertex.first], visited, connectedComponents);
+            if (!visited.count(vertex)) {
+                connectedComponents.push_back(vertex);
+                visited.insert(vertex);
+                dfs(this->edges[vertex], visited, connectedComponents);
             }
         }
     }
 
     vector< vector<T> > getConnectedComponents() {
-        unordered_map<T, bool> visited;
+        unordered_set<T> visited;
         vector< vector<T> > connectedComponents;
         for (auto edge : this->edges) {
             if (!visited.count(edge.first)) {
                 vector<T> vertexes;
                 vertexes.push_back(edge.first);
-                visited[edge.first] = true;
+                visited.insert(edge.first);
                 dfs(this->edges[edge.first], visited, vertexes);
                 connectedComponents.push_back(vertexes);
             }
