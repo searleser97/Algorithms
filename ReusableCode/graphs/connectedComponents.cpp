@@ -4,14 +4,15 @@ using namespace std;
 typedef int T;
 class Graph {
 public:
-    unordered_map<T, unordered_set<T> > edges;
+    //node -> value , neighbors
+    unordered_map<T, unordered_set<T> > nodes;
     unordered_map<T, T> tree;
     unordered_map<T, int> treeSize;
     void addEdge(T v, T w) {
-        this->edges[v].insert(v);
-        this->edges[w].insert(w);
-        this->edges[v].insert(w);
-        this->edges[w].insert(v);
+        this->nodes[v].insert(v);
+        this->nodes[w].insert(w);
+        this->nodes[v].insert(w);
+        this->nodes[w].insert(v);
         if (!this->tree.count(v)) {
             this->tree[v] = v;
             this->treeSize[v] = 1;
@@ -33,33 +34,35 @@ public:
         }
     }
 
-    void dfs(unordered_set<T> &vertexes, unordered_set<T> &visited, vector<T> &connectedComponents) {
-        for (auto vertex : vertexes) {
+private:
+    void dfs(unordered_set<T> &vertexesInComponent, unordered_set<T> &visited, vector<T> &connectedComponents) {
+        for (auto vertex : vertexesInComponent) {
             if (!visited.count(vertex)) {
                 connectedComponents.push_back(vertex);
                 visited.insert(vertex);
-                dfs(this->edges[vertex], visited, connectedComponents);
+                dfs(this->nodes[vertex], visited, connectedComponents);
             }
         }
     }
 
+public:
     vector< vector<T> > getConnectedComponents() {
         unordered_set<T> visited;
         vector< vector<T> > connectedComponents;
-        for (auto edge : this->edges) {
+        for (auto edge : this->nodes) {
             if (!visited.count(edge.first)) {
-                vector<T> vertexes;
-                vertexes.push_back(edge.first);
+                vector<T> vertexesInComponent;
+                vertexesInComponent.push_back(edge.first);
                 visited.insert(edge.first);
-                dfs(this->edges[edge.first], visited, vertexes);
-                connectedComponents.push_back(vertexes);
+                dfs(edge.second, visited, vertexesInComponent);
+                connectedComponents.push_back(vertexesInComponent);
             }
         }
         return connectedComponents;
     }
 
     bool isEdgeInGraph(T v, T w) {
-        return this->edges.count(v) ? this->edges[v].count(w) : false;
+        return this->nodes.count(v) ? this->nodes[v].count(w) : false;
     }
 
     bool areVertexesConnected(T v, T w) {
