@@ -20,10 +20,9 @@ void printv(vector<Object> v) {
 }
 
 int main() {
+    auto cmp = [](const Object& a, const Object& b) {return a.second > b.second;};
     vector<Object> v = {{'c',3}, {'a', 1}, {'b', 2}};
-    sort(v.begin(), v.end(), [](Object a, Object b) {
-        return a.first < b.first;
-    });
+    sort(v.begin(), v.end(), cmp);
     printv(v);
     return 0;
 }
