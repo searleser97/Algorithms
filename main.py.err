@@ -1,4 +1,0 @@
-  File "<stdin>", line 5
-    print '\n'
-             ^
-SyntaxError: Missing parentheses in call to 'print'
