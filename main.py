@@ -1,27 +1,3 @@
-\documentclass{article}
-\usepackage{geometry}
-\usepackage[utf8]{inputenc}
-\usepackage[english]{babel}
-\usepackage{multicol}
-\usepackage{minted}
-\usemintedstyle{vs} % Aqui se define el colorscheme para minted
-\usepackage{python}
-\setlength{\columnsep}{2cm}
-\geometry{a4paper, landscape, margin=0.5in}
-
-\title{ACM-ICPC-REFERENCE}
-\author{serchgabriel97 }
-\date{December 2017}
-
-\begin{document}
-
-\maketitle
-\newpage
-
-\begin{multicols*}{2}
-\tableofcontents
-\newpage
-\begin{python}
 from os import listdir
 from os.path import isfile, join
 import os
@@ -37,7 +13,4 @@ for i in range(limit):
         name, extension = file.split('.')
         print '\subsection{' + name + '}'
         print '\inputminted[breaklines]{' + extension + '}{' + directories[i] + '/' + file + '}'
-\end{python}%
-\end{multicols*}
 
-\end{document}

@@ -1,0 +1,34 @@
+% run the command to compile twice in the terminal to visualize table of contents
+% I don't know why but the above works
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{geometry}
+\usepackage{multicol}
+\usepackage{minted}
+\usepackage{python}
+
+\usemintedstyle{vs} % Aqui se define el colorscheme para minted
+\setlength{\columnsep}{2cm}
+\geometry{a4paper, landscape, margin=0.5in}
+
+\title{ACM-ICPC-REFERENCE}
+\author{serchgabriel97 }
+\date{December 2017}
+
+\begin{document}
+
+\maketitle
+\newpage
+
+\begin{multicols*}{2}
+
+\tableofcontents
+\newpage
+
+\begin{python}[getContents.py]
+\end{python}%
+
+\end{multicols*}
+
+\end{document}

@@ -1,12 +1,14 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6530) (preloaded format=pdflatex 2017.12.22)  22 DEC 2017 23:43
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2018/dev/Debian) (preloaded format=pdflatex 2017.12.24)  24 DEC 2017 10:50
 entering extended mode
-**./main.tex
-(main.tex
+ \write18 enabled.
+ %&-line parsing enabled.
+**main.tex
+(./main.tex
 LaTeX2e <2017-04-15>
-Babel <3.15> and hyphenation patterns for 1 language(s) loaded.
-(/home/san/.miktex/texmfs/install/tex/latex/base/article.cls
+Babel <3.15> and hyphenation patterns for 3 language(s) loaded.
+(/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
-(/home/san/.miktex/texmfs/install/tex/latex/base/size10.clo
+(/usr/share/texlive/texmf-dist/tex/latex/base/size10.clo
 File: size10.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 )
 \c@part=\count79
@@ -21,50 +23,19 @@ File: size10.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
 )
-(/home/san/.miktex/texmfs/install/tex/latex/geometry-de/geometry.sty
-Package: geometry 2010/09/12 v5.6 Page Geometry
-
-(/home/san/.miktex/texmfs/install/tex/latex/graphics/keyval.sty
-Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
-\KV@toks@=\toks14
-)
-(/home/san/.miktex/texmfs/install/tex/generic/oberdiek/ifpdf.sty
-Package: ifpdf 2017/03/15 v3.2 Provides the ifpdf switch
-)
-(/home/san/.miktex/texmfs/install/tex/generic/oberdiek/ifvtex.sty
-Package: ifvtex 2016/05/16 v1.6 Detect VTeX and its facilities (HO)
-Package ifvtex Info: VTeX not detected.
-)
-(/home/san/.miktex/texmfs/install/tex/generic/ifxetex/ifxetex.sty
-Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
-)
-\Gm@cnth=\count87
-\Gm@cntv=\count88
-\c@Gm@tempcnt=\count89
-\Gm@bindingoffset=\dimen103
-\Gm@wd@mp=\dimen104
-\Gm@odd@mp=\dimen105
-\Gm@even@mp=\dimen106
-\Gm@layoutwidth=\dimen107
-\Gm@layoutheight=\dimen108
-\Gm@layouthoffset=\dimen109
-\Gm@layoutvoffset=\dimen110
-\Gm@dimlist=\toks15
-
-(/home/san/.miktex/texmfs/install/tex/latex/geometry/geometry.cfg))
-(/home/san/.miktex/texmfs/install/tex/latex/base/inputenc.sty
+(/usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
 Package: inputenc 2015/03/17 v1.2c Input encoding file
-\inpenc@prehook=\toks16
-\inpenc@posthook=\toks17
+\inpenc@prehook=\toks14
+\inpenc@posthook=\toks15
 
-(/home/san/.miktex/texmfs/install/tex/latex/base/utf8.def
+(/usr/share/texlive/texmf-dist/tex/latex/base/utf8.def
 File: utf8.def 2017/01/28 v1.1t UTF-8 support for inputenc
 Now handling font encoding OML ...
 ... no UTF-8 mapping file for font encoding OML
 Now handling font encoding T1 ...
 ... processing UTF-8 mapping file for font encoding T1
 
-(/home/san/.miktex/texmfs/install/tex/latex/base/t1enc.dfu
+(/usr/share/texlive/texmf-dist/tex/latex/base/t1enc.dfu
 File: t1enc.dfu 2017/01/28 v1.1t UTF-8 support for inputenc
    defining Unicode char U+00A0 (decimal 160)
    defining Unicode char U+00A1 (decimal 161)
@@ -305,7 +276,7 @@ File: t1enc.dfu 2017/01/28 v1.1t UTF-8 support for inputenc
 Now handling font encoding OT1 ...
 ... processing UTF-8 mapping file for font encoding OT1
 
-(/home/san/.miktex/texmfs/install/tex/latex/base/ot1enc.dfu
+(/usr/share/texlive/texmf-dist/tex/latex/base/ot1enc.dfu
 File: ot1enc.dfu 2017/01/28 v1.1t UTF-8 support for inputenc
    defining Unicode char U+00A0 (decimal 160)
    defining Unicode char U+00A1 (decimal 161)
@@ -346,7 +317,7 @@ File: ot1enc.dfu 2017/01/28 v1.1t UTF-8 support for inputenc
 Now handling font encoding OMS ...
 ... processing UTF-8 mapping file for font encoding OMS
 
-(/home/san/.miktex/texmfs/install/tex/latex/base/omsenc.dfu
+(/usr/share/texlive/texmf-dist/tex/latex/base/omsenc.dfu
 File: omsenc.dfu 2017/01/28 v1.1t UTF-8 support for inputenc
    defining Unicode char U+00A7 (decimal 167)
    defining Unicode char U+00B6 (decimal 182)
@@ -370,39 +341,61 @@ Now handling font encoding U ...
    defining Unicode char U+2122 (decimal 8482)
    defining Unicode char U+2423 (decimal 9251)
 ))
-(/home/san/.miktex/texmfs/install/tex/generic/babel/babel.sty
+(/home/san/texmf/tex/generic/babel/babel.sty
 Package: babel 2017/11/03 3.15 The Babel package
 
-(/home/san/.miktex/texmfs/install/tex/generic/babel/switch.def
+(/home/san/texmf/tex/generic/babel/switch.def
 File: switch.def 2017/11/03 3.15 Babel switching mechanism
 )
-*************************************
-* Local config file bblopts.cfg used
-*
-(/home/san/.miktex/texmfs/install/tex/latex/arabi/bblopts.cfg
-File: bblopts.cfg 2005/09/08 v0.1 add Arabic and Farsi to "declared" options of
- babel
-)
-(/home/san/.miktex/texmfs/install/tex/latex/babel-english/english.ldf
+(/usr/share/texlive/texmf-dist/tex/generic/babel-english/english.ldf
 Language: english 2017/06/06 v3.3r English support from the babel system
 
-(/home/san/.miktex/texmfs/install/tex/generic/babel/babel.def
+(/home/san/texmf/tex/generic/babel/babel.def
 File: babel.def 2017/11/03 3.15 Babel common definitions
 
-(/home/san/.miktex/texmfs/install/tex/generic/babel/switch.def
+(/home/san/texmf/tex/generic/babel/switch.def
 File: switch.def 2017/11/03 3.15 Babel switching mechanism
 )
-\babel@savecnt=\count90
-\U@D=\dimen111
+\babel@savecnt=\count87
+\U@D=\dimen103
 )
 \l@british = a dialect from \language\l@english 
 \l@UKenglish = a dialect from \language\l@english 
-\l@american = a dialect from \language\l@english 
 \l@canadian = a dialect from \language\l@american 
 \l@australian = a dialect from \language\l@british 
 \l@newzealand = a dialect from \language\l@british 
 ))
-(/home/san/.miktex/texmfs/install/tex/latex/tools/multicol.sty
+(/home/san/texmf/tex/latex/geometry/geometry.sty
+Package: geometry 2010/09/12 v5.6 Page Geometry
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks16
+)
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2017/03/15 v3.2 Provides the ifpdf switch
+)
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifvtex.sty
+Package: ifvtex 2016/05/16 v1.6 Detect VTeX and its facilities (HO)
+Package ifvtex Info: VTeX not detected.
+)
+(/usr/share/texlive/texmf-dist/tex/generic/ifxetex/ifxetex.sty
+Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
+)
+\Gm@cnth=\count88
+\Gm@cntv=\count89
+\c@Gm@tempcnt=\count90
+\Gm@bindingoffset=\dimen104
+\Gm@wd@mp=\dimen105
+\Gm@odd@mp=\dimen106
+\Gm@even@mp=\dimen107
+\Gm@layoutwidth=\dimen108
+\Gm@layoutheight=\dimen109
+\Gm@layouthoffset=\dimen110
+\Gm@layoutvoffset=\dimen111
+\Gm@dimlist=\toks17
+)
+(/usr/share/texlive/texmf-dist/tex/latex/tools/multicol.sty
 Package: multicol 2017/04/11 v1.8q multicolumn formatting (FMi)
 \c@tracingmulticols=\count91
 \mult@box=\box26
@@ -450,25 +443,26 @@ Package: multicol 2017/04/11 v1.8q multicolumn formatting (FMi)
 \mult@nat@firstbox=\box50
 \colbreak@box=\box51
 \mc@col@check@num=\count99
-) (minted.sty
+)
+(/home/san/texmf/tex/latex/minted/minted.sty
 Package: minted 2017/07/19 v2.5 Yet another Pygments shim for LaTeX
 
-(/home/san/.miktex/texmfs/install/tex/latex/oberdiek/kvoptions.sty
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/kvoptions.sty
 Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
 
-(/home/san/.miktex/texmfs/install/tex/generic/oberdiek/ltxcmds.sty
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
 Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
 )
-(/home/san/.miktex/texmfs/install/tex/generic/oberdiek/kvsetkeys.sty
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
 Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
 
-(/home/san/.miktex/texmfs/install/tex/generic/oberdiek/infwarerr.sty
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/infwarerr.sty
 Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
 )
-(/home/san/.miktex/texmfs/install/tex/generic/oberdiek/etexcmds.sty
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/etexcmds.sty
 Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
 
-(/home/san/.miktex/texmfs/install/tex/generic/oberdiek/ifluatex.sty
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifluatex.sty
 Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
 Package ifluatex Info: LuaTeX not detected.
 )
@@ -477,18 +471,18 @@ Package etexcmds Info: Could not find \expanded.
 (etexcmds)             that some package has redefined \expanded.
 (etexcmds)             In the latter case, load this package earlier.
 )))
-(/home/san/.miktex/texmfs/install/tex/latex/fvextra/fvextra.sty
+(/home/san/texmf/tex/latex/fvextra/fvextra.sty
 Package: fvextra 2017/07/08 v1.3.1 fvextra - extensions and patches for fancyvr
 b
 
-(/home/san/.miktex/texmfs/install/tex/latex/base/ifthen.sty
+(/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
 Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
 )
-(/home/san/.miktex/texmfs/install/tex/latex/etoolbox/etoolbox.sty
+(/usr/share/texlive/texmf-dist/tex/latex/etoolbox/etoolbox.sty
 Package: etoolbox 2017/11/22 v2.5 e-TeX tools for LaTeX (JAW)
 \etb@tempcnta=\count100
 )
-(/home/san/.miktex/texmfs/install/tex/latex/fancyvrb/fancyvrb.sty
+(/usr/share/texlive/texmf-dist/tex/latex/fancyvrb/fancyvrb.sty
 Package: fancyvrb 2008/02/07
 
 Style option: `fancyvrb' v2.7a, with DG/SPQR fixes, and firstline=lastline fix 
@@ -499,12 +493,11 @@ Style option: `fancyvrb' v2.7a, with DG/SPQR fixes, and firstline=lastline fix
 \c@FancyVerbLine=\count102
 \FV@StepNumber=\count103
 \FV@OutFile=\write3
-)
-(/home/san/.miktex/texmfs/install/tex/latex/upquote/upquote.sty
+) (/home/san/texmf/tex/latex/upquote/upquote.sty
 Package: upquote 2012/04/19 v1.3 upright-quote and grave-accent glyphs in verba
 tim
 )
-(/home/san/.miktex/texmfs/install/tex/latex/lineno/lineno.sty
+(/usr/share/texlive/texmf-dist/tex/latex/lineno/lineno.sty
 Package: lineno 2005/11/02 line numbers on paragraphs v4.41
 \linenopenalty=\count104
 \output=\toks18
@@ -544,7 +537,7 @@ LaTeX Info: Redefining \\ on input line 3056.
 \FV@LineBox=\box56
 \FV@LineIndentBox=\box57
 )
-(/home/san/.miktex/texmfs/install/tex/latex/tools/calc.sty
+(/usr/share/texlive/texmf-dist/tex/latex/tools/calc.sty
 Package: calc 2014/10/28 v4.3 Infix arithmetic (KKT,FJ)
 \calc@Acount=\count122
 \calc@Bcount=\count123
@@ -557,14 +550,14 @@ LaTeX Info: Redefining \addtolength on input line 81.
 \calc@Ccount=\count124
 \calc@Cskip=\skip48
 )
-(/home/san/.miktex/texmfs/install/tex/latex/tools/shellesc.sty
+(/usr/share/texlive/texmf-dist/tex/latex/tools/shellesc.sty
 Package: shellesc 2016/06/07 v0.02a unified shell escape interface for LaTeX
-Package shellesc Info: Restricted shell escape enabled on input line 69.
+Package shellesc Info: Unrestricted shell escape enabled on input line 67.
 )
-(/home/san/.miktex/texmfs/install/tex/latex/ifplatform/ifplatform.sty
+(/home/san/texmf/tex/latex/ifplatform/ifplatform.sty
 Package: ifplatform 2017/10/13 v0.4a Testing for the operating system
 
-(/home/san/.miktex/texmfs/install/tex/generic/oberdiek/pdftexcmds.sty
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
 Package: pdftexcmds 2017/03/19 v0.25 Utility functions of pdfTeX for LuaTeX (HO
 )
 Package pdftexcmds Info: LuaTeX not detected.
@@ -572,26 +565,23 @@ Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
 Package pdftexcmds Info: \pdfdraftmode found.
 )
-(/home/san/.miktex/texmfs/install/tex/generic/oberdiek/catchfile.sty
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/catchfile.sty
 Package: catchfile 2016/05/16 v1.7 Catch the contents of a file (HO)
 )
+runsystem(uname -s > "main.w18")...executed.
 
-Package ifplatform Warning: 
-    shell escape is disabled, so I can only detect \ifwindows.
+ (./main.w18)
+runsystem(rm -- "main.w18")...executed.
 
-
-Package ifplatform Warning: 
-    I can't tell if this is Windows or *nix; you appear to be neither.
-
-) (/home/san/.miktex/texmfs/install/tex/latex/xstring/xstring.sty
-(/home/san/.miktex/texmfs/install/tex/generic/xstring/xstring.tex
+) (/home/san/texmf/tex/generic/xstring/xstring.sty
+(/home/san/texmf/tex/generic/xstring/xstring.tex
 \@xs@message=\write4
 \integerpart=\count125
 \decimalpart=\count126
 )
 Package: xstring 2013/10/13  v1.7c  String manipulations (C Tellechea)
 )
-(/home/san/.miktex/texmfs/install/tex/latex/framed/framed.sty
+(/home/san/texmf/tex/latex/framed/framed.sty
 Package: framed 2011/10/22 v 0.96: framed or shaded text with page breaks
 \OuterFrameSep=\skip49
 \fb@frw=\dimen133
@@ -599,7 +589,7 @@ Package: framed 2011/10/22 v 0.96: framed or shaded text with page breaks
 \FrameRule=\dimen135
 \FrameSep=\dimen136
 )
-(/home/san/.miktex/texmfs/install/tex/latex/float/float.sty
+(/usr/share/texlive/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \c@float@type=\count127
 \float@exts=\toks19
@@ -615,15 +605,190 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \@float@every@listing=\toks21
 \c@listing=\count130
 )
-runsystem(if not exist _minted-main mkdir _minted-main)...disabled (restricted)
-.
+runsystem(mkdir -p _minted-main)...executed.
 
 
+(/home/san/texmf/tex/latex/python/python.sty
+Package: python 2007/06/07 v0.21 Python in LaTeX
+\@out=\write6
+\@module=\write7
+)
+(/usr/share/texlive/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
 
-! Package minted Error: You must invoke LaTeX with the -shell-escape flag.
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 225.
 
-See the minted package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.7 \usemintedsty
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2017/06/24 v1.0g Graphics/color driver for pdftex
+)
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1352.
+Package xcolor Info: Model `RGB' extended on input line 1364.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1366.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1367.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1368.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
+)
+runsystem(which pygmentize && touch main.aex)...executed.
+
+runsystem(rm main.aex)...executed.
+
+ (./main.aux)
+\openout1 = `main.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: a4paper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: landscape 
+* h-part:(L,W,R)=(36.135pt, 772.77686pt, 36.135pt)
+* v-part:(T,H,B)=(36.135pt, 525.23788pt, 36.135pt)
+* \paperwidth=845.04684pt
+* \paperheight=597.50787pt
+* \textwidth=772.77686pt
+* \textheight=525.23788pt
+* \oddsidemargin=-36.135pt
+* \evensidemargin=-36.135pt
+* \topmargin=-73.135pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=10.0pt
+* \footskip=30.0pt
+* \marginparwidth=65.0pt
+* \marginparsep=11.0pt
+* \columnsep=56.9055pt
+* \skip\footins=9.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+(/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count131
+\scratchdimen=\dimen137
+\scratchbox=\box61
+\nofMPsegments=\count132
+\nofMParguments=\count133
+\everyMPshowfont=\toks22
+\MPscratchCnt=\count134
+\MPscratchDim=\dimen138
+\MPnumerator=\count135
+\makeMPintoPDFobject=\count136
+\everyMPtoPDFconversion=\toks23
+)
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 21.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 21.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 21.
+ [1
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./main.toc
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 3.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 3.
+)
+\tf@toc=\write8
+\openout8 = `main.toc'.
+
+ [2]
+\openout6 = `main.py'.
+
+\openout7 = `latex.py'.
+
+runsystem(cat getContents.py main.py | python > main.py.out 2> main.py.err)...e
+xecuted.
+
+
+(./main.py.out (./_minted-main/default-pyg-prefix.pygstyle)
+(./_minted-main/vs.pygstyle)
+(./_minted-main/D95C7537C2CDF72C8BFD105ABCBF2F8221A5258FA5E280392AB0F99FC6EBAFF
+4.pygtex)
+(./_minted-main/B7ED35141BF846F699E4CC40FCDCFB705A964AEAEAC2C6617F2D9506AFF0A19
+E.pygtex)
+(./_minted-main/E1B8B4DC57B5ADD5A800544ECA9181145EC66A272139FBC6C748D7C68A65F9D
+B.pygtex [3])
+(./_minted-main/734CE75DD2FC51A19922A4D7876FC324E8470921DA13B1A8AB781F8DAE9DE88
+1.pygtex [4] [5])
+(./_minted-main/95A026A14D8ACC9D10FE1029FD9193106D9884FCCBA6C9158B344B696F68A56
+3.pygtex [6])
+(./_minted-main/C00DCEAF20EEE7D070C002A97A06B52B285276B879DA5F4A6F65B86DF505A88
+1.pygtex [7])
+(./_minted-main/65C1D06EAECE8ECDBAAE6BD26752290B3173B15561D73A18A981BD38863F917
+4.pygtex)
+(./_minted-main/43908B74B2AD274C1A1395C4D5D0D756AD435A3142969EB52DAFC001D18FA98
+4.pygtex [8] [9])
+(./_minted-main/2A672D77F3DDF0194E5FA6234536FE8F4F6295C32733156F89CA8EBA1D0E5F4
+D.pygtex [10])
+(./_minted-main/A9C16354471A068F0B083A72E98CECCA596C62F411D6AFE1D3FEFF74E8A28B4
+9.pygtex [11] [12])
+(./_minted-main/5E4280411F1ACAF5ADFA1DBAFF191D721D600ED289299168AC70D73D7E6813A
+D.pygtex [13])
+(./_minted-main/247E70F651356D7192142A52431292DE11378B8AC296A2EDE84310F1F10BDE5
+8.pygtex [14])
+(./_minted-main/D54455DA7BD279190022D5F069D55C1029DFBCC7AEDBC08B7DE575ACB327F35
+1.pygtex)
+(./_minted-main/5296BC43AAAA749D66C95058E7E8E94FA035CCCB1AA4F6DF8653F0672599D13
+8.pygtex [15])
+(./_minted-main/386B3F758D57F614973011583210FA0FCFC92EF2C39311DE4E6E8D2827D6E54
+2.pygtex)
+(./_minted-main/B8F6D43E572E73DB63813E41331EB188AF24030D0E6058059433AE1FC762B7D
+2.pygtex [16])
+(./_minted-main/97873F1B46D0FB307AC768079E6191E43DB57782A089720E5F8D0B162DD3FF1
+9.pygtex [17])
+(./_minted-main/66442E68724359F773B13752AC43E5096ED9CA5C7BAA15437BAA6F86BF3C551
+4.pygtex)
+(./_minted-main/EE2FFCD07A13465F9E1595C43FA2F850FD06557C14B5ECA515BC1A0C6FE2FDD
+9.pygtex [18])
+(./_minted-main/653787CE27D8CB7748160C3487EB3B8046038C59DCDD8C57315DC52DC1BDF1C
+E.pygtex [19])) [20] (./main.aux) ) 
+Here is how much of TeX's memory you used:
+ 6026 strings out of 494926
+ 103317 string characters out of 6180792
+ 226834 words of memory out of 5000000
+ 9177 multiletter control sequences out of 15000+600000
+ 8231 words of font info for 30 fonts, out of 8000000 for 9000
+ 14 hyphenation exceptions out of 8191
+ 37i,8n,41p,838b,620s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texlive/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
+ts/cm/cmmi5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
+mr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pf
+b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr
+/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/share/
+texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
+Output written on main.pdf (20 pages, 126936 bytes).
+PDF statistics:
+ 101 PDF objects out of 1000 (max. 8388607)
+ 70 compressed objects within 1 object stream
+ 0 named destinations out of 1000 (max. 500000)
+ 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+

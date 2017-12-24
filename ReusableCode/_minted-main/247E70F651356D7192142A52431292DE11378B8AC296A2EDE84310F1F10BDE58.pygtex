@@ -1,0 +1,64 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+cp}{\PYGZsh{}include} \PYG{c+cpf}{\PYGZlt{}bits/stdc++.h\PYGZgt{}}
+
+\PYG{k}{using} \PYG{k}{namespace} \PYG{n}{std}\PYG{p}{;}
+\PYG{k}{template} \PYG{o}{\PYGZlt{}}\PYG{k}{class} \PYG{n+nc}{T}\PYG{o}{\PYGZgt{}} \PYG{k}{class} \PYG{n+nc}{UnionFind} \PYG{p}{\PYGZob{}}
+\PYG{k}{public}\PYG{o}{:}
+    \PYG{n}{unordered\PYGZus{}map}\PYG{o}{\PYGZlt{}}\PYG{n}{T}\PYG{p}{,} \PYG{n}{T}\PYG{o}{\PYGZgt{}} \PYG{n}{tree}\PYG{p}{;}
+    \PYG{n}{unordered\PYGZus{}map}\PYG{o}{\PYGZlt{}}\PYG{n}{T}\PYG{p}{,} \PYG{k+kt}{int}\PYG{o}{\PYGZgt{}} \PYG{n}{treeSize}\PYG{p}{;}
+    \PYG{k+kt}{void} \PYG{n+nf}{addEdge}\PYG{p}{(}\PYG{n}{T} \PYG{n}{v}\PYG{p}{,} \PYG{n}{T} \PYG{n}{w}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+        \PYG{k}{if} \PYG{p}{(}\PYG{o}{!}\PYG{k}{this}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{tree}\PYG{p}{.}\PYG{n}{count}\PYG{p}{(}\PYG{n}{v}\PYG{p}{))} \PYG{p}{\PYGZob{}}
+            \PYG{k}{this}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{tree}\PYG{p}{[}\PYG{n}{v}\PYG{p}{]} \PYG{o}{=} \PYG{n}{v}\PYG{p}{;}
+            \PYG{k}{this}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{treeSize}\PYG{p}{[}\PYG{n}{v}\PYG{p}{]} \PYG{o}{=} \PYG{l+m+mi}{1}\PYG{p}{;}
+        \PYG{p}{\PYGZcb{}}
+        \PYG{k}{if} \PYG{p}{(}\PYG{o}{!}\PYG{k}{this}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{tree}\PYG{p}{.}\PYG{n}{count}\PYG{p}{(}\PYG{n}{w}\PYG{p}{))} \PYG{p}{\PYGZob{}}
+            \PYG{k}{this}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{tree}\PYG{p}{[}\PYG{n}{w}\PYG{p}{]} \PYG{o}{=} \PYG{n}{w}\PYG{p}{;}
+            \PYG{k}{this}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{treeSize}\PYG{p}{[}\PYG{n}{w}\PYG{p}{]} \PYG{o}{=} \PYG{l+m+mi}{1}\PYG{p}{;}
+        \PYG{p}{\PYGZcb{}}
+        \PYG{n}{T} \PYG{n}{i} \PYG{o}{=} \PYG{n}{setGetRoot}\PYG{p}{(}\PYG{n}{v}\PYG{p}{);}
+        \PYG{n}{T} \PYG{n}{j} \PYG{o}{=} \PYG{n}{setGetRoot}\PYG{p}{(}\PYG{n}{w}\PYG{p}{);}
+        \PYG{k}{if} \PYG{p}{(}\PYG{n}{i} \PYG{o}{==} \PYG{n}{j}\PYG{p}{)}
+            \PYG{k}{return}\PYG{p}{;}
+        \PYG{k}{if} \PYG{p}{(}\PYG{n}{treeSize}\PYG{p}{[}\PYG{n}{i}\PYG{p}{]} \PYG{o}{\PYGZlt{}} \PYG{n}{treeSize}\PYG{p}{[}\PYG{n}{j}\PYG{p}{])} \PYG{p}{\PYGZob{}}
+            \PYG{k}{this}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{tree}\PYG{p}{[}\PYG{n}{i}\PYG{p}{]} \PYG{o}{=} \PYG{n}{j}\PYG{p}{;}
+            \PYG{k}{this}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{treeSize}\PYG{p}{[}\PYG{n}{j}\PYG{p}{]} \PYG{o}{+=} \PYG{k}{this}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{treeSize}\PYG{p}{[}\PYG{n}{i}\PYG{p}{];}
+        \PYG{p}{\PYGZcb{}} \PYG{k}{else} \PYG{p}{\PYGZob{}}
+            \PYG{k}{this}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{tree}\PYG{p}{[}\PYG{n}{j}\PYG{p}{]} \PYG{o}{=} \PYG{n}{i}\PYG{p}{;}
+            \PYG{k}{this}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{treeSize}\PYG{p}{[}\PYG{n}{i}\PYG{p}{]} \PYG{o}{+=} \PYG{k}{this}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{treeSize}\PYG{p}{[}\PYG{n}{j}\PYG{p}{];}
+        \PYG{p}{\PYGZcb{}}
+    \PYG{p}{\PYGZcb{}}
+
+    \PYG{k+kt}{bool} \PYG{n+nf}{areVertexesConnected}\PYG{p}{(}\PYG{n}{T} \PYG{n}{v}\PYG{p}{,} \PYG{n}{T} \PYG{n}{w}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+        \PYG{k}{if} \PYG{p}{(}\PYG{o}{!}\PYG{k}{this}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{tree}\PYG{p}{.}\PYG{n}{count}\PYG{p}{(}\PYG{n}{v}\PYG{p}{)} \PYG{o}{||} \PYG{o}{!}\PYG{k}{this}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{tree}\PYG{p}{.}\PYG{n}{count}\PYG{p}{(}\PYG{n}{w}\PYG{p}{))}
+            \PYG{k}{return} \PYG{n+nb}{false}\PYG{p}{;}
+        \PYG{k}{return} \PYG{n}{setGetRoot}\PYG{p}{(}\PYG{n}{v}\PYG{p}{)} \PYG{o}{==} \PYG{n}{setGetRoot}\PYG{p}{(}\PYG{n}{w}\PYG{p}{);}
+    \PYG{p}{\PYGZcb{}}
+
+\PYG{k}{private}\PYG{o}{:}
+    \PYG{n}{T} \PYG{n}{setGetRoot}\PYG{p}{(}\PYG{n}{T} \PYG{n}{v}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+        \PYG{k}{while} \PYG{p}{(}\PYG{n}{v} \PYG{o}{!=} \PYG{k}{this}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{tree}\PYG{p}{[}\PYG{n}{v}\PYG{p}{])} \PYG{p}{\PYGZob{}}
+            \PYG{k}{this}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{tree}\PYG{p}{[}\PYG{n}{v}\PYG{p}{]} \PYG{o}{=} \PYG{k}{this}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{tree}\PYG{p}{[}\PYG{k}{this}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{tree}\PYG{p}{[}\PYG{n}{v}\PYG{p}{]];}
+            \PYG{n}{v} \PYG{o}{=} \PYG{k}{this}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{tree}\PYG{p}{[}\PYG{n}{v}\PYG{p}{];}
+        \PYG{p}{\PYGZcb{}}
+        \PYG{k}{return} \PYG{n}{v}\PYG{p}{;}
+    \PYG{p}{\PYGZcb{}}
+
+\PYG{p}{\PYGZcb{};}
+
+\PYG{c+cm}{/*int main() \PYGZob{}}
+\PYG{c+cm}{    UnionFind\PYGZlt{}int\PYGZgt{} g;}
+\PYG{c+cm}{    int a, b;}
+\PYG{c+cm}{    int i;}
+\PYG{c+cm}{    cin \PYGZgt{}\PYGZgt{} i;}
+\PYG{c+cm}{    while (i\PYGZhy{}\PYGZhy{}) \PYGZob{}}
+\PYG{c+cm}{        cin \PYGZgt{}\PYGZgt{} a \PYGZgt{}\PYGZgt{} b;}
+\PYG{c+cm}{        g.addEdge(a, b);}
+\PYG{c+cm}{    \PYGZcb{}}
+\PYG{c+cm}{    cin \PYGZgt{}\PYGZgt{} i;}
+\PYG{c+cm}{    while (i\PYGZhy{}\PYGZhy{}) \PYGZob{}}
+\PYG{c+cm}{        cin \PYGZgt{}\PYGZgt{} a \PYGZgt{}\PYGZgt{} b;}
+\PYG{c+cm}{        cout \PYGZlt{}\PYGZlt{} g.areVertexesConnected(a, b) \PYGZlt{}\PYGZlt{} \PYGZsq{}\PYGZbs{}n\PYGZsq{};}
+\PYG{c+cm}{    \PYGZcb{}}
+\PYG{c+cm}{    return 0;}
+\PYG{c+cm}{\PYGZcb{}*/}
+\end{Verbatim}
