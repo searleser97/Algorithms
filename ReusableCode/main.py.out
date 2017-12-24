@@ -42,3 +42,16 @@
 \inputminted[breaklines]{cpp}{primes/primeFactorization.cpp}
 \subsection{myPrimesSieve}
 \inputminted[breaklines]{cpp}{primes/myPrimesSieve.cpp}
+\section{codingResources}
+\subsection{priorityQueueOfClass}
+\inputminted[breaklines]{cpp}{codingResources/priorityQueueOfClass.cpp}
+\subsection{printVector}
+\inputminted[breaklines]{cpp}{codingResources/printVector.cpp}
+\subsection{intToBinary}
+\inputminted[breaklines]{cpp}{codingResources/intToBinary.cpp}
+\subsection{readLineCpp}
+\inputminted[breaklines]{cpp}{codingResources/readLineCpp.cpp}
+\subsection{sortVectorOfClass}
+\inputminted[breaklines]{cpp}{codingResources/sortVectorOfClass.cpp}
+\subsection{sortListOfClass}
+\inputminted[breaklines]{py}{codingResources/sortListOfClass.py}

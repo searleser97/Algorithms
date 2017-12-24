@@ -23,3 +23,10 @@
 \contentsline {subsection}{\numberline {4.6}primesSievesComparison}{18}
 \contentsline {subsection}{\numberline {4.7}primeFactorization}{18}
 \contentsline {subsection}{\numberline {4.8}myPrimesSieve}{19}
+\contentsline {section}{\numberline {5}codingResources}{20}
+\contentsline {subsection}{\numberline {5.1}priorityQueueOfClass}{20}
+\contentsline {subsection}{\numberline {5.2}printVector}{20}
+\contentsline {subsection}{\numberline {5.3}intToBinary}{21}
+\contentsline {subsection}{\numberline {5.4}readLineCpp}{21}
+\contentsline {subsection}{\numberline {5.5}sortVectorOfClass}{22}
+\contentsline {subsection}{\numberline {5.6}sortListOfClass}{22}

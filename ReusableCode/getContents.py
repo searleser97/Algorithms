@@ -2,7 +2,7 @@ from os import listdir
 from os.path import isfile, join
 import os
 directories = [name for name in os.listdir(".") if os.path.isdir(name)]
-limit = len(directories) - 1
+limit = len(directories)
 for i in range(limit):
     if directories[i] == '.cache' or directories[i] == '_minted-main':
         continue

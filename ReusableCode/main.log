@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2018/dev/Debian) (preloaded format=pdflatex 2017.12.24)  24 DEC 2017 10:50
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2018/dev/Debian) (preloaded format=pdflatex 2017.12.24)  24 DEC 2017 10:59
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -768,27 +768,39 @@ D.pygtex [13])
 (./_minted-main/EE2FFCD07A13465F9E1595C43FA2F850FD06557C14B5ECA515BC1A0C6FE2FDD
 9.pygtex [18])
 (./_minted-main/653787CE27D8CB7748160C3487EB3B8046038C59DCDD8C57315DC52DC1BDF1C
-E.pygtex [19])) [20] (./main.aux) ) 
+E.pygtex [19])
+(./_minted-main/8909EC28FE09E3E7836AC0EC21311F19E993E9787293A5A7933BEAAE9A84C4F
+A.pygtex)
+(./_minted-main/5EEB665DAB5AB4E9EF4A0F08D7BA38192C7BE204E79C9795D8F47A2AF45AB32
+7.pygtex [20])
+(./_minted-main/175298BCD3235D1518B0286C7B3519C9F1BCE9EEA5641CC47A9F74754A9F35E
+E.pygtex)
+(./_minted-main/D350E5ECE4222D744E1BBB3F5087AB30CD0D7C8DF9685E281988A248072225B
+0.pygtex [21])
+(./_minted-main/46E1BC725524F5D420455B28BA33252C48343B11C2850452C8713A3713CFADF
+7.pygtex)
+(./_minted-main/FD7AEA0E6A81BE728A4D848722BE189CC00D5536F158FB54268E3369425B68A
+3.pygtex)) [22] (./main.aux) ) 
 Here is how much of TeX's memory you used:
- 6026 strings out of 494926
- 103317 string characters out of 6180792
- 226834 words of memory out of 5000000
- 9177 multiletter control sequences out of 15000+600000
+ 6051 strings out of 494926
+ 105243 string characters out of 6180792
+ 227272 words of memory out of 5000000
+ 9184 multiletter control sequences out of 15000+600000
  8231 words of font info for 30 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  37i,8n,41p,838b,620s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/type1/p
-ublic/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
-amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
-ts/cm/cmmi5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
-mr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pf
-b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr
-/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/share/
-texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on main.pdf (20 pages, 126936 bytes).
+</usr/share/texlive/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
+nts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmmi5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.
+pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></u
+sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/shar
+e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/share/texli
+ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
+Output written on main.pdf (22 pages, 133078 bytes).
 PDF statistics:
- 101 PDF objects out of 1000 (max. 8388607)
- 70 compressed objects within 1 object stream
+ 107 PDF objects out of 1000 (max. 8388607)
+ 74 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
