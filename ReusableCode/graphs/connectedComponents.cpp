@@ -1,118 +1,72 @@
 #include <bits/stdc++.h>
 
 using namespace std;
-typedef int T;
-class Graph {
+template <class T> class CC {
 public:
-    //node -> value , neighbors
+    //node -> id , neighbors
     unordered_map<T, unordered_set<T> > nodes;
-    unordered_map<T, T> tree;
-    unordered_map<T, int> treeSize;
+
     void addEdge(T v, T w) {
         this->nodes[v].insert(v);
         this->nodes[w].insert(w);
         this->nodes[v].insert(w);
         this->nodes[w].insert(v);
-        if (!this->tree.count(v)) {
-            this->tree[v] = v;
-            this->treeSize[v] = 1;
-        }
-        if (!this->tree.count(w)) {
-            this->tree[w] = w;
-            this->treeSize[w] = 1;
-        }
-        T i = setGetRoot(v);
-        T j = setGetRoot(w);
-        if (i == j)
-            return;
-        if (treeSize[i] < treeSize[j]) {
-            this->tree[i] = j;
-            this->treeSize[j] += this->treeSize[i];
-        } else {
-            this->tree[j] = i;
-            this->treeSize[i] += this->treeSize[j];
-        }
     }
 
 private:
-    void dfs(unordered_set<T> &vertexesInComponent, unordered_set<T> &visited, vector<T> &connectedComponents) {
-        for (auto vertex : vertexesInComponent) {
-            if (!visited.count(vertex)) {
-                connectedComponents.push_back(vertex);
-                visited.insert(vertex);
-                dfs(this->nodes[vertex], visited, connectedComponents);
-            }
-        }
+    void dfsCC(vector<T> &component, unordered_map<T, int> &nodeComponentIds, unordered_set<T> &visited, T actualNodeId, int &componentId) {
+        visited.insert(actualNodeId);
+        nodeComponentIds[actualNodeId] = componentId;
+        component.push_back(actualNodeId);
+        for (auto neighborId : this->nodes[actualNodeId])
+            if (!visited.count(neighborId))
+                dfsCC(component, nodeComponentIds, visited, neighborId, componentId);
     }
 
 public:
-    vector< vector<T> > getConnectedComponents() {
+    pair<vector<vector<T>>, unordered_map<T, int>> getConnectedComponents() {
+        unordered_map<T, int> nodeComponentIds;
+        vector<vector<T>> connectedComponents;
         unordered_set<T> visited;
-        vector< vector<T> > connectedComponents;
-        for (auto edge : this->nodes) {
-            if (!visited.count(edge.first)) {
-                vector<T> vertexesInComponent;
-                vertexesInComponent.push_back(edge.first);
-                visited.insert(edge.first);
-                dfs(edge.second, visited, vertexesInComponent);
-                connectedComponents.push_back(vertexesInComponent);
+        int componentId = 1;
+        for (auto node : this->nodes) {
+            if (!visited.count(node.first)) {
+                vector<T> component;
+                dfsCC(component, nodeComponentIds, visited, node.first, componentId);
+                connectedComponents.push_back(component);
+                componentId++;
             }
         }
-        return connectedComponents;
+        return {connectedComponents, nodeComponentIds};
     }
-
-    bool isEdgeInGraph(T v, T w) {
-        return this->nodes.count(v) ? this->nodes[v].count(w) : false;
-    }
-
-    bool areVertexesConnected(T v, T w) {
-        if (!this->tree.count(v) || !this->tree.count(w))
-            return false;
-        return setGetRoot(v) == setGetRoot(w);
-    }
-
-private:
-    T setGetRoot(T v) {
-        while (v != this->tree[v]) {
-            this->tree[v] = this->tree[this->tree[v]];
-            v = this->tree[v];
-        }
-        return v;
-    }
-
 };
 
-
-void printv(vector<T> v) {
-    if (v.size() == 0) {
-        cout << "[]" << endl;
-        return;
-    }
-    cout << "[" << v[0];
-    for (int i = 1; i < v.size(); i++) {
-        cout << ", " << v[i];
-    }
-    cout << "]" << endl;
+string input() {
+    string str;
+    getline(cin, str);
+    return str;
 }
 
-
 int main() {
-    Graph g;
-    T a, b;
-    int i;
-    cin >> i;
-    while (i--) {
-        cin >> a >> b;
-        g.addEdge(a, b);
-    }
-
-    for (auto v : g.getConnectedComponents()) {
-        printv(v);
-    }
-    cin >> i;
-    while (i--) {
-        cin >> a >> b;
-        cout << g.areVertexesConnected(a, b) << '\n';
+    int t;
+    t = stoi(input());
+    input();
+    while (t--) {
+        CC<char> g;
+        string highest;
+        highest = input();
+        for (char i = highest[0]; i >= 'A'; i--)
+            g.addEdge(i, i);
+        while (true) {
+            string edge = input();
+            if (edge == "")
+                break;
+            g.addEdge(edge[0], edge[1]);
+        }
+        pair<vector<vector<char>>, unordered_map<char, int>> connectedComponents = g.getConnectedComponents();
+        cout << connectedComponents.first.size() << endl;
+        if (t != 0)
+            cout << endl;
     }
     return 0;
 }
