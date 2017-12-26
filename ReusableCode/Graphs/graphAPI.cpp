@@ -1,5 +1,5 @@
 #include <bits/stdc++.h>
-#include "unionFind.h"
+#include "unionFind.cpp"
 
 using namespace std;
 template <class T> class Graph {
@@ -9,6 +9,7 @@ public:
     bool isDirectedGraph;
     UnionFind<T> uf;
 
+    // 0 -> undirected, 1 -> directed
     Graph(bool isDirectedGraph = false) {
         this->isDirectedGraph = isDirectedGraph;
     }
@@ -27,32 +28,29 @@ public:
     }
 
 private:
-    void dfsConnectedComponents(unordered_map<T, double> &vertexesInComponent, unordered_set<T> &visited, vector<T> &connectedComponents) {
-        for (auto vertex : vertexesInComponent) {
-            if (!visited.count(vertex.first)) {
-                connectedComponents.push_back(vertex.first);
-                visited.insert(vertex.first);
-                dfsConnectedComponents(this->nodes[vertex.first], visited, connectedComponents);
-            }
-        }
+    void dfsCC(vector<T> &component, unordered_map<T, int> &nodeComponentIds, unordered_set<T> &visited, T actualNodeId, int &componentId) {
+        visited.insert(actualNodeId);
+        nodeComponentIds[actualNodeId] = componentId;
+        component.push_back(actualNodeId);
+        for (auto neighbor : this->nodes[actualNodeId])
+            if (!visited.count(neighbor.first))
+                dfsCC(component, nodeComponentIds, visited, neighbor.first, componentId);
     }
 
 public:
-    vector< vector<T> > getConnectedComponents() {
+    pair<vector<vector<T>>, unordered_map<T, int>> getConnectedComponents() {
+        unordered_map<T, int> nodeComponentIds;
+        vector<vector<T>> connectedComponents;
         unordered_set<T> visited;
-        vector< vector<T> > connectedComponents;
-        if (this->isDirectedGraph)
-            return connectedComponents;
-        for (auto edge : this->nodes) {
-            if (!visited.count(edge.first)) {
-                vector<T> vertexesInComponent;
-                vertexesInComponent.push_back(edge.first);
-                visited.insert(edge.first);
-                dfsConnectedComponents(edge.second, visited, vertexesInComponent);
-                connectedComponents.push_back(vertexesInComponent);
+        int componentId = 1;
+        for (auto node : this->nodes)
+            if (!visited.count(node.first)) {
+                vector<T> component;
+                dfsCC(component, nodeComponentIds, visited, node.first, componentId);
+                connectedComponents.push_back(component);
+                componentId++;
             }
-        }
-        return connectedComponents;
+        return {connectedComponents, nodeComponentIds};
     }
 public:
     bool areVertexesConnected(T v, T w) {
@@ -133,21 +131,25 @@ void printv(vector<int> v) {
     return 0;
 }*/
 int main() {
-    Graph<int> g(0);
-    int a, b;
-    int i;
-    cin >> i;
-    while (i--) {
-        cin >> a >> b;
-        g.addEdge(a, b);
-    }
-    for (auto v : g.getConnectedComponents()) {
-        printv(v);
-    }
-    cin >> i;
-    while (i--) {
-        cin >> a >> b;
-        cout << g.areVertexesConnected(a, b) << '\n';
+    int t;
+    t = stoi(input());
+    input();
+    while (t--) {
+        Graph<char> g(0);
+        string highest;
+        highest = input();
+        for (char i = highest[0]; i >= 'A'; i--)
+            g.addEdge(i, i);
+        while (true) {
+            string edge = input();
+            if (edge == "")
+                break;
+            g.addEdge(edge[0], edge[1]);
+        }
+        pair<vector<vector<char>>, unordered_map<char, int>> connectedComponents = g.getConnectedComponents();
+        cout << connectedComponents.first.size() << endl;
+        if (t != 0)
+            cout << endl;
     }
     return 0;
 }

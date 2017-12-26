@@ -29,14 +29,13 @@ public:
         vector<vector<T>> connectedComponents;
         unordered_set<T> visited;
         int componentId = 1;
-        for (auto node : this->nodes) {
+        for (auto node : this->nodes)
             if (!visited.count(node.first)) {
                 vector<T> component;
                 dfsCC(component, nodeComponentIds, visited, node.first, componentId);
                 connectedComponents.push_back(component);
                 componentId++;
             }
-        }
         return {connectedComponents, nodeComponentIds};
     }
 };
