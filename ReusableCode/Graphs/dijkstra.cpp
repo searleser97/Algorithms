@@ -2,6 +2,7 @@
 #include "indexedPriorityQueue.cpp"
 
 using namespace std;
+
 template <class T> class Graph {
 
 public:
@@ -17,10 +18,11 @@ public:
     void addEdge(T v, T w, double cost = 0) {
         this->nodes[v][v] = 0;
         this->nodes[w][w] = 0;
-        this->nodes[v][w] = cost;
+        if (!(this->nodes.count(w) && this->nodes[w].count(v)) || (cost < this->nodes[v][w]))
+            this->nodes[v][w] = cost;
         if (isDirectedGraph)
             return;
-        this->nodes[w][v] = cost;
+        this->nodes[w][v] = this->nodes[v][w];
     }
 
     unordered_map<T, double> dijkstra(T source) {
@@ -28,7 +30,6 @@ public:
         unordered_map<T, double> distances;
         unordered_map<T, T> parents;
         for (auto node : nodes) {
-            cout << node.first << endl;
             ipq.push(node.first, INF);
         }
         ipq.update(source, 0);
@@ -59,14 +60,32 @@ void printMap (unordered_map<int, double> m) {
 }
 
 int main() {
-    Graph<int> graph(1);
-    graph.addEdge(1, 2, 5.0);
-    graph.addEdge(2, 3, 2.0);
-    graph.addEdge(1, 4, 9.0);
-    graph.addEdge(1, 5, 3.0);
-    graph.addEdge(5, 6, 2.0);
-    graph.addEdge(6, 4, 2.0);
-    graph.addEdge(3, 4, 3.0);
-    printMap(graph.dijkstra(1));
+    double INF = 1 << 30;
+    int T;
+    cin >> T;
+    for (int l = 1; l <= T; l++) {
+        int n, m, s, t, a, b;
+        double w;
+        cin >> n >> m >> s >> t;
+        Graph<int> g(0);
+        while (m--) {
+            cin >> a >> b >> w;
+            g.addEdge(a, b, w);
+        }
+        cout << "Case #" << l << ": ";
+        unordered_map<int, double> distances = g.dijkstra(s);
+        
+        if (!distances.count(t)) {
+            cout << "unreachable" << endl;
+            continue;
+        }
+        
+        if (distances[t] == INF) {
+            cout << "unreachable" << endl;
+            continue;
+        }
+
+        cout << distances[t] << endl;
+    }
     return 0;
 }
