@@ -25,8 +25,8 @@ public:
         this->isDirectedGraph = isDirectedGraph;
     }
     void addEdge(T v, T w, double cost = 0) {
-        this->nodes[v][v] = cost;
-        this->nodes[w][w] = cost;
+        this->nodes[v][v] = 0;
+        this->nodes[w][w] = 0;
         this->nodes[v][w] = cost;
         this->edges.push_back(Edge(v, w, cost));
         if (isDirectedGraph)

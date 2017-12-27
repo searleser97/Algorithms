@@ -76,7 +76,7 @@ public:
         return this->pq[this->nodePosition[key]].weight;
     }
 
-    T pop() {
+    pair<T, double> pop() {
         int lastPos = this->pq.size() - 1;
         Node topNode = this->pq[0];
         this->pq[0] = this->pq[lastPos];
@@ -103,7 +103,7 @@ public:
             } else
                 break;
         }
-        return topNode.key;
+        return {topNode.key, topNode.weight};
     }
 
     void printPositionInMap () {
@@ -121,7 +121,7 @@ public:
 };
 
 
-int main () {
+/*int main () {
     indexedPriorityQueue<string> ipq;
     ipq.push("Tushar", 3);
     ipq.push("Ani", 4);
@@ -152,4 +152,4 @@ int main () {
     ipq.printHeap();
     ipq.printPositionInMap();
     return 0;
-}
+}*/
