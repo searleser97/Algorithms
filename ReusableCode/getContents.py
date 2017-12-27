@@ -4,7 +4,7 @@ import os
 directories = [name for name in os.listdir(".") if os.path.isdir(name)]
 limit = len(directories)
 for i in range(limit):
-    if directories[i] == '.cache' or directories[i] == '_minted-main':
+    if directories[i] == '.cache' or directories[i] == '_minted-main' or directories[i] == '_minted-output':
         continue
     print('\\section{' + directories[i] + '}')
     onlyfiles = [f for f in listdir(directories[i] + '/') if isfile(join(directories[i] + '/', f))]
