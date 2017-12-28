@@ -1,5 +1,6 @@
 #include <bits/stdc++.h>
 #include "unionFind.cpp"
+#include "indexedPriorityQueue.cpp"
 
 using namespace std;
 template <class T> class Graph {
@@ -8,18 +9,21 @@ public:
     unordered_map<T, unordered_map<T, double> > nodes;
     bool isDirectedGraph;
     UnionFind<T> uf;
+    double INF = 1 << 30;
 
     // 0 -> undirected, 1 -> directed
     Graph(bool isDirectedGraph = false) {
         this->isDirectedGraph = isDirectedGraph;
     }
     void addEdge(T v, T w, double cost = 0) {
-        this->nodes[v][v] = cost;
-        this->nodes[w][w] = cost;
-        this->nodes[v][w] = cost;
+        this->nodes[v][v] = 0;
+        this->nodes[w][w] = 0;
+        // consider the smallest edge in case of duplicates
+        if (!(this->nodes.count(w) && this->nodes[w].count(v)) || (cost < this->nodes[v][w]))
+            this->nodes[v][w] = cost;
         if (isDirectedGraph)
             return;
-        this->nodes[w][v] = cost;
+        this->nodes[w][v] = this->nodes[v][w];
         uf.addEdge(v, w);
     }
 public:
@@ -87,6 +91,32 @@ public:
             }
         }
         return topologicalSortedNodes;
+    }
+
+    unordered_map<T, double> dijkstra(T source) {
+        indexedPriorityQueue<T> ipq;
+        unordered_map<T, double> distances;
+        unordered_map<T, T> parents;
+        for (auto node : nodes) {
+            ipq.push(node.first, INF);
+        }
+        ipq.update(source, 0);
+        distances[source] = 0;
+        parents[source] = source;
+        while (!ipq.empty()) {
+            auto current = ipq.pop();
+            distances[current.first] = current.second;
+            for (auto neighbor : nodes[current.first]) {
+                if (!ipq.containsKey(neighbor.first))
+                    continue;
+                double newDistance = distances[current.first] + neighbor.second;
+                if (ipq.getWeight(neighbor.first) > newDistance) {
+                    ipq.update(neighbor.first, newDistance);
+                    parents[neighbor.first] = current.first;
+                }
+            }
+        }
+        return distances;
     }
 
 };

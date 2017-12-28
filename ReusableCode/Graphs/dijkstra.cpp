@@ -18,6 +18,7 @@ public:
     void addEdge(T v, T w, double cost = 0) {
         this->nodes[v][v] = 0;
         this->nodes[w][w] = 0;
+        // consider the smallest edge in case of duplicates
         if (!(this->nodes.count(w) && this->nodes[w].count(v)) || (cost < this->nodes[v][w]))
             this->nodes[v][w] = cost;
         if (isDirectedGraph)
