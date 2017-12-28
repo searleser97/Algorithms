@@ -36,10 +36,9 @@ public:
     }
 
 public:
-    vector<Edge> kruskalMST() {
+    double kruskalMST(vector<Edge> &mst) {
         //mst = minimum spanning tree
-        vector<Edge> mst;
-        int minCost = 0;
+        double minCost = 0;
         // change '<' to '>' if maximum spanning tree is needed
         auto cmp = [] (const Edge & a, const Edge & b) {return a.weight < b.weight;};
         sort(this->edges.begin(), this->edges.end(), cmp);
@@ -54,8 +53,7 @@ public:
                 minCost += e.weight;
             }
         }
-        cout << minCost << endl;
-        return mst;
+        return minCost;
     }
 };
 
@@ -83,7 +81,8 @@ int main() {
             cin >> a >> b >> cost;
             g->addEdge(a, b, cost);
         }
-        g->kruskalMST();
+        vector<Edge> mst1;
+        cout << g->kruskalMST(mst1) << endl;
         delete g;
         g = new Graph<int>(0);
         cin >> i;
@@ -96,7 +95,8 @@ int main() {
             cin >> a >> b >> cost;
             g->addEdge(a, b, cost);
         }
-        g->kruskalMST();
+        vector<Edge> mst2;
+        cout << g->kruskalMST(mst2) << endl;
         t++;
     }
     return 0;

@@ -3,12 +3,25 @@
 #include "indexedPriorityQueue.cpp"
 
 using namespace std;
+
+class Edge {
+public:
+    int v, w;
+    double weight;
+    Edge(int v, int w, double weight) {
+        this->v = v;
+        this->w = w;
+        this->weight = weight;
+    }
+};
+
 template <class T> class Graph {
 public:
     //node -> value , neighbors -> value, weight
     unordered_map<T, unordered_map<T, double> > nodes;
     bool isDirectedGraph;
     UnionFind<T> uf;
+    vector<Edge> edges;
     double INF = 1 << 30;
 
     // 0 -> undirected, 1 -> directed
@@ -21,11 +34,14 @@ public:
         // consider the smallest edge in case of duplicates
         if (!(this->nodes.count(v) && this->nodes[v].count(w)) || (cost < this->nodes[v][w]))
             this->nodes[v][w] = cost;
+        this->edges.push_back(Edge(v, w, cost));
         if (isDirectedGraph)
             return;
         this->nodes[w][v] = this->nodes[v][w];
+        this->edges.push_back(Edge(w, v, cost));
         uf.addEdge(v, w);
     }
+
 public:
     bool isEdgeInGraph(T v, T w) {
         return this->nodes.count(v) ? this->nodes[v].count(w) : false;
@@ -57,7 +73,7 @@ public:
         return {connectedComponents, nodeComponentIds};
     }
 public:
-    bool areVertexesConnected(T v, T w) {
+    bool areNodesConnected(T v, T w) {
         return this->uf.areVertexesConnected(v, w);
     }
 
@@ -93,10 +109,28 @@ public:
         return topologicalSortedNodes;
     }
 
-    unordered_map<T, double> dijkstra(T source) {
+    double kruskalMST(vector<Edge> &mst) {
+        //mst = minimum spanning tree
+        double minCost = 0;
+        // change '<' to '>' if maximum spanning tree is needed
+        auto cmp = [] (const Edge & a, const Edge & b) {return a.weight < b.weight;};
+        sort(this->edges.begin(), this->edges.end(), cmp);
+        UnionFind<T> uf;
+        int limit = nodes.size() - 1;
+        for (int i = 0; (i < this->edges.size()) && (mst.size() < limit); i++) {
+            Edge e = this->edges[i];
+            T v = e.v, w = e.w;
+            if (!uf.areVertexesConnected(v, w)) {
+                uf.addEdge(v, w);
+                mst.push_back(e);
+                minCost += e.weight;
+            }
+        }
+        return minCost;
+    }
+
+    void dijkstra(unordered_map<T, double> &distances, unordered_map<T, T> &parents, T source) {
         indexedPriorityQueue<T> ipq;
-        unordered_map<T, double> distances;
-        unordered_map<T, T> parents;
         for (auto node : nodes) {
             ipq.push(node.first, INF);
         }
@@ -116,70 +150,39 @@ public:
                 }
             }
         }
-        return distances;
+    }
+
+    bool bellmanFord(unordered_map<T, double> &distances, unordered_map<T, T> &parents, T source) {
+        queue<T> q;
+        unordered_set<T> in_queue;
+        unordered_map<T, int> ocurrenceOfNodeInQueue;
+        for (auto node : nodes) {
+            distances[node.first] = INF;
+            parents[node.first] = node.first;
+        }
+        distances[source] = 0;
+        q.push(source);
+        int limit = nodes.size() - 1;
+        in_queue.insert(source);
+        ocurrenceOfNodeInQueue[source] += 1;
+        while (!q.empty()) {
+            T u = q.front(); q.pop(); in_queue.erase(u);
+            for (auto neighbor : nodes[u]) {
+                T v = neighbor.first;
+                double newDistance = distances[u] + neighbor.second;
+                if (newDistance < distances[v]) {
+                    distances[v] = newDistance;
+                    parents[v] = u;
+                    if (!in_queue.count(v)) {
+                        q.push(v);
+                        ocurrenceOfNodeInQueue[v] += 1;
+                        if (ocurrenceOfNodeInQueue[v] > limit)
+                            return false;
+                    }
+                }
+            }
+        }
+        return true;
     }
 
 };
-
-
-void printv(vector<int> v) {
-    if (v.size() == 0) {
-        cout << "" << endl;
-        return;
-    }
-    cout << "" << v[0];
-    for (int i = 1; i < v.size(); i++) {
-        cout << " " << v[i];
-    }
-    cout << "" << endl;
-}
-
-
-/*int main() {
-    while (true) {
-        int n, m;
-        int a, b;
-        auto *g = new Graph<int>(true);
-        cin >> n >> m;
-        if (n == 0 && m == 0)
-            break;
-        while (n) {
-            g->addEdge(n, n);
-            n--;
-        }
-        while (m) {
-            cin >> a >> b;
-            g->addEdge(a, b);
-            m--;
-        }
-        printv(g->topologicalSort());
-        delete g;
-    }
-
-
-
-    return 0;
-}*/
-int main() {
-    int t;
-    t = stoi(input());
-    input();
-    while (t--) {
-        Graph<char> g(0);
-        string highest;
-        highest = input();
-        for (char i = highest[0]; i >= 'A'; i--)
-            g.addEdge(i, i);
-        while (true) {
-            string edge = input();
-            if (edge == "")
-                break;
-            g.addEdge(edge[0], edge[1]);
-        }
-        pair<vector<vector<char>>, unordered_map<char, int>> connectedComponents = g.getConnectedComponents();
-        cout << connectedComponents.first.size() << endl;
-        if (t != 0)
-            cout << endl;
-    }
-    return 0;
-}

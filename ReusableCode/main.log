@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2018/dev/Debian) (preloaded format=pdflatex 2017.12.24)  24 DEC 2017 10:59
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2018/dev/Debian) (preloaded format=pdflatex 2017.12.24)  28 DEC 2017 00:00
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -613,6 +613,104 @@ Package: python 2007/06/07 v0.21 Python in LaTeX
 \@out=\write6
 \@module=\write7
 )
+(/home/san/texmf/tex/latex/hyperref/hyperref.sty
+Package: hyperref 2017/03/14 v6.85a Hypertext links for LaTeX
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/hobsub-hyperref.sty
+Package: hobsub-hyperref 2016/05/16 v1.14 Bundle oberdiek, subset hyperref (HO)
+
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/hobsub-generic.sty
+Package: hobsub-generic 2016/05/16 v1.14 Bundle oberdiek, subset generic (HO)
+Package: hobsub 2016/05/16 v1.14 Construct package bundles (HO)
+Package hobsub Info: Skipping package `infwarerr' (already loaded).
+Package hobsub Info: Skipping package `ltxcmds' (already loaded).
+Package hobsub Info: Skipping package `ifluatex' (already loaded).
+Package hobsub Info: Skipping package `ifvtex' (already loaded).
+Package: intcalc 2016/05/16 v1.2 Expandable calculations with integers (HO)
+Package hobsub Info: Skipping package `ifpdf' (already loaded).
+Package hobsub Info: Skipping package `etexcmds' (already loaded).
+Package hobsub Info: Skipping package `kvsetkeys' (already loaded).
+Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
+Package hobsub Info: Skipping package `pdftexcmds' (already loaded).
+Package: pdfescape 2016/05/16 v1.14 Implements pdfTeX's escape features (HO)
+Package: bigintcalc 2016/05/16 v1.4 Expandable calculations on big integers (HO
+)
+Package: bitset 2016/05/16 v1.2 Handle bit-vector datatype (HO)
+Package: uniquecounter 2016/05/16 v1.3 Provide unlimited unique counter (HO)
+)
+Package hobsub Info: Skipping package `hobsub' (already loaded).
+Package: letltxmacro 2016/05/16 v1.5 Let assignment for LaTeX macros (HO)
+Package: hopatch 2016/05/16 v1.3 Wrapper for package hooks (HO)
+Package: xcolor-patch 2016/05/16 xcolor patch
+Package: atveryend 2016/05/16 v1.9 Hooks at the very end of document (HO)
+Package: atbegshi 2016/06/09 v1.18 At begin shipout hook (HO)
+Package: refcount 2016/05/16 v3.5 Data extraction from label references (HO)
+Package: hycolor 2016/05/16 v1.8 Color options for hyperref/bookmark (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/auxhook.sty
+Package: auxhook 2016/05/16 v1.4 Hooks for auxiliary files (HO)
+)
+\@linkdim=\dimen137
+\Hy@linkcounter=\count131
+\Hy@pagecounter=\count132
+
+(/home/san/texmf/tex/latex/hyperref/pd1enc.def
+File: pd1enc.def 2017/03/14 v6.85a Hyperref: PDFDocEncoding definition (HO)
+Now handling font encoding PD1 ...
+... no UTF-8 mapping file for font encoding PD1
+)
+\Hy@SavedSpaceFactor=\count133
+
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/hyperref.cfg
+File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
+)
+Package hyperref Info: Hyper figures OFF on input line 4498.
+Package hyperref Info: Link nesting OFF on input line 4503.
+Package hyperref Info: Hyper index ON on input line 4506.
+Package hyperref Info: Plain pages OFF on input line 4513.
+Package hyperref Info: Backreferencing OFF on input line 4518.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4751.
+\c@Hy@tempcnt=\count134
+
+(/usr/share/texlive/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip10
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 5104.
+\XeTeXLinkMargin=\dimen138
+\Fld@menulength=\count135
+\Field@Width=\dimen139
+\Fld@charsize=\dimen140
+Package hyperref Info: Hyper figures OFF on input line 6358.
+Package hyperref Info: Link nesting OFF on input line 6363.
+Package hyperref Info: Hyper index ON on input line 6366.
+Package hyperref Info: backreferencing OFF on input line 6373.
+Package hyperref Info: Link coloring OFF on input line 6378.
+Package hyperref Info: Link coloring with OCG OFF on input line 6383.
+Package hyperref Info: PDF/A mode OFF on input line 6388.
+LaTeX Info: Redefining \ref on input line 6428.
+LaTeX Info: Redefining \pageref on input line 6432.
+\Hy@abspage=\count136
+\c@Item=\count137
+\c@Hfootnote=\count138
+)
+
+Package hyperref Message: Driver (autodetected): hpdftex.
+
+(/home/san/texmf/tex/latex/hyperref/hpdftex.def
+File: hpdftex.def 2017/03/14 v6.85a Hyperref driver for pdfTeX
+\Fld@listcount=\count139
+\c@bookmark@seq@number=\count140
+
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty
+Package: rerunfilecheck 2016/05/16 v1.8 Rerun checks for auxiliary files (HO)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+82.
+)
+\Hy@SectionHShift=\skip50
+)
 (/usr/share/texlive/texmf-dist/tex/latex/xcolor/xcolor.sty
 Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
 
@@ -641,18 +739,20 @@ runsystem(rm main.aex)...executed.
  (./main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -687,26 +787,45 @@ LaTeX Font Info:    ... okay on input line 19.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
+\AtBeginShipoutBox=\box61
+Package hyperref Info: Link coloring OFF on input line 20.
+(/home/san/texmf/tex/latex/hyperref/nameref.sty
+Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
+Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
+)
+\c@section@level=\count141
+)
+LaTeX Info: Redefining \ref on input line 20.
+LaTeX Info: Redefining \pageref on input line 20.
+LaTeX Info: Redefining \nameref on input line 20.
+
+(./main.out) (./main.out)
+\@outlinefile=\write8
+\openout8 = `main.out'.
+
+
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count131
-\scratchdimen=\dimen137
-\scratchbox=\box61
-\nofMPsegments=\count132
-\nofMParguments=\count133
+\scratchcounter=\count142
+\scratchdimen=\dimen141
+\scratchbox=\box62
+\nofMPsegments=\count143
+\nofMParguments=\count144
 \everyMPshowfont=\toks22
-\MPscratchCnt=\count134
-\MPscratchDim=\dimen138
-\MPnumerator=\count135
-\makeMPintoPDFobject=\count136
+\MPscratchCnt=\count145
+\MPscratchDim=\dimen142
+\MPnumerator=\count146
+\makeMPintoPDFobject=\count147
 \everyMPtoPDFconversion=\toks23
 )
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 21.
+(Font)              <12> on input line 23.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 21.
+(Font)              <8> on input line 23.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 21.
+(Font)              <6> on input line 23.
  [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./main.toc
@@ -715,8 +834,8 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <5> on input line 3.
 )
-\tf@toc=\write8
-\openout8 = `main.toc'.
+\tf@toc=\write9
+\openout9 = `main.toc'.
 
  [2]
 \openout6 = `main.py'.
@@ -729,78 +848,92 @@ xecuted.
 
 (./main.py.out (./_minted-main/default-pyg-prefix.pygstyle)
 (./_minted-main/vs.pygstyle)
+(./_minted-main/734CE75DD2FC51A19922A4D7876FC324A9ACACA2DE422388ED883FADDEC375E
+2.pygtex [3])
+(./_minted-main/95A026A14D8ACC9D10FE1029FD9193102A395F00EB275881A7F0DCA9E5D223F
+4.pygtex [4])
+(./_minted-main/C00DCEAF20EEE7D070C002A97A06B52B1C1469AA7DD34AD876CB20869531ABA
+6.pygtex [5])
+(./_minted-main/47F0C318C60C75382C79151AC1383F9A6CDD5D097E374ED40D12C38D108E25F
+7.pygtex [6] [7])
+(./_minted-main/03A914B232FBAF7A34891E96F485DE4949448A58C15014DE133A39333C8C635
+E.pygtex [8])
+(./_minted-main/1AC7DAD1E5C5C63F81F3A9A87658DADBD387885918D3A8070DBA3F193CCA816
+9.pygtex [9])
+(./_minted-main/8FD97DAD4A69859BC3AF48CB3D24EADC71C4ADDE2E9CC7F5E205F6A16FA99EB
+D.pygtex [10] [11] [12])
+(./_minted-main/C5F9391FD3D1F5E834F345FA99626BC89C9BF426C39E9174A883AF671F16DD8
+2.pygtex [13])
+(./_minted-main/F340C31A4C4A6F2976A5A2B5EA16DF849D81B6EC0D5B092B91A272C606ADD76
+E.pygtex [14])
+(./_minted-main/A9C16354471A068F0B083A72E98CECCAFB1F3E0BEC376E52727F47C644F3145
+F.pygtex [15])
+(./_minted-main/D775458C599F652AAED87261AA11B301127DCE9505D20AA729FD65D1A7A634A
+B.pygtex [16])
 (./_minted-main/D95C7537C2CDF72C8BFD105ABCBF2F8221A5258FA5E280392AB0F99FC6EBAFF
-4.pygtex)
+4.pygtex [17])
 (./_minted-main/B7ED35141BF846F699E4CC40FCDCFB705A964AEAEAC2C6617F2D9506AFF0A19
 E.pygtex)
 (./_minted-main/E1B8B4DC57B5ADD5A800544ECA9181145EC66A272139FBC6C748D7C68A65F9D
-B.pygtex [3])
-(./_minted-main/734CE75DD2FC51A19922A4D7876FC324E8470921DA13B1A8AB781F8DAE9DE88
-1.pygtex [4] [5])
-(./_minted-main/95A026A14D8ACC9D10FE1029FD9193106D9884FCCBA6C9158B344B696F68A56
-3.pygtex [6])
-(./_minted-main/C00DCEAF20EEE7D070C002A97A06B52B285276B879DA5F4A6F65B86DF505A88
-1.pygtex [7])
-(./_minted-main/65C1D06EAECE8ECDBAAE6BD26752290B3173B15561D73A18A981BD38863F917
+B.pygtex [18])
+(./_minted-main/D54455DA7BD279190022D5F069D55C101E112F103B3F8A97168B1E37B33BEAF
 4.pygtex)
-(./_minted-main/43908B74B2AD274C1A1395C4D5D0D756AD435A3142969EB52DAFC001D18FA98
-4.pygtex [8] [9])
-(./_minted-main/2A672D77F3DDF0194E5FA6234536FE8F4F6295C32733156F89CA8EBA1D0E5F4
-D.pygtex [10])
-(./_minted-main/A9C16354471A068F0B083A72E98CECCA596C62F411D6AFE1D3FEFF74E8A28B4
-9.pygtex [11] [12])
-(./_minted-main/5E4280411F1ACAF5ADFA1DBAFF191D721D600ED289299168AC70D73D7E6813A
-D.pygtex [13])
-(./_minted-main/247E70F651356D7192142A52431292DE11378B8AC296A2EDE84310F1F10BDE5
-8.pygtex [14])
-(./_minted-main/D54455DA7BD279190022D5F069D55C1029DFBCC7AEDBC08B7DE575ACB327F35
-1.pygtex)
-(./_minted-main/5296BC43AAAA749D66C95058E7E8E94FA035CCCB1AA4F6DF8653F0672599D13
-8.pygtex [15])
-(./_minted-main/386B3F758D57F614973011583210FA0FCFC92EF2C39311DE4E6E8D2827D6E54
-2.pygtex)
-(./_minted-main/B8F6D43E572E73DB63813E41331EB188AF24030D0E6058059433AE1FC762B7D
-2.pygtex [16])
-(./_minted-main/97873F1B46D0FB307AC768079E6191E43DB57782A089720E5F8D0B162DD3FF1
-9.pygtex [17])
-(./_minted-main/66442E68724359F773B13752AC43E5096ED9CA5C7BAA15437BAA6F86BF3C551
-4.pygtex)
-(./_minted-main/EE2FFCD07A13465F9E1595C43FA2F850FD06557C14B5ECA515BC1A0C6FE2FDD
-9.pygtex [18])
-(./_minted-main/653787CE27D8CB7748160C3487EB3B8046038C59DCDD8C57315DC52DC1BDF1C
-E.pygtex [19])
-(./_minted-main/8909EC28FE09E3E7836AC0EC21311F19E993E9787293A5A7933BEAAE9A84C4F
-A.pygtex)
-(./_minted-main/5EEB665DAB5AB4E9EF4A0F08D7BA38192C7BE204E79C9795D8F47A2AF45AB32
+(./_minted-main/5296BC43AAAA749D66C95058E7E8E94FE4AA88C533B64F2767EB806C6B70D85
+F.pygtex [19])
+(./_minted-main/386B3F758D57F614973011583210FA0F9E01BC35879066A0E4DD8B6B28A6659
 7.pygtex [20])
-(./_minted-main/175298BCD3235D1518B0286C7B3519C9F1BCE9EEA5641CC47A9F74754A9F35E
-E.pygtex)
-(./_minted-main/D350E5ECE4222D744E1BBB3F5087AB30CD0D7C8DF9685E281988A248072225B
-0.pygtex [21])
-(./_minted-main/46E1BC725524F5D420455B28BA33252C48343B11C2850452C8713A3713CFADF
+(./_minted-main/B8F6D43E572E73DB63813E41331EB188A2CF8E8F584A355943F9FAAF1F7C934
+B.pygtex)
+(./_minted-main/97873F1B46D0FB307AC768079E6191E432EE905D98650D33138C71731EA48A1
+D.pygtex [21])
+(./_minted-main/66442E68724359F773B13752AC43E509D39EF6D43BF3FA0F4E78BDC975DE716
+1.pygtex)
+(./_minted-main/EE2FFCD07A13465F9E1595C43FA2F8506435EE186939925905AC0C2E07FC373
+2.pygtex [22])
+(./_minted-main/653787CE27D8CB7748160C3487EB3B80BE280D977BD6ADC26C3E963D63C49FD
+8.pygtex [23])
+(./_minted-main/8909EC28FE09E3E7836AC0EC21311F197A63D8786BDF577FC74A725A32EEE53
+B.pygtex)
+(./_minted-main/5EEB665DAB5AB4E9EF4A0F08D7BA38198BB381DE374A7C4FC3AE893FD080508
+A.pygtex [24])
+(./_minted-main/304B8B07347B83F4CAA29A8318E419AC75089E575093083D1E217E36F8D9235
+6.pygtex)
+(./_minted-main/175298BCD3235D1518B0286C7B3519C960B81C377C136F53AC703EF53086F22
+B.pygtex [25])
+(./_minted-main/D350E5ECE4222D744E1BBB3F5087AB30B0D1F609FFFE6B297D0D193A6D6AF20
+0.pygtex)
+(./_minted-main/46E1BC725524F5D420455B28BA33252CFAF47E578667695F1A3F84B7FD901DC
 7.pygtex)
-(./_minted-main/FD7AEA0E6A81BE728A4D848722BE189CC00D5536F158FB54268E3369425B68A
-3.pygtex)) [22] (./main.aux) ) 
+(./_minted-main/FD7AEA0E6A81BE728A4D848722BE189CD3C45D395ABEB21CE78041130A2E1FD
+A.pygtex [26])) [27]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 35.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 35.
+ (./main.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 35.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 35.
+Package rerunfilecheck Info: File `main.out' has not changed.
+(rerunfilecheck)             Checksum: 35F3D9733C5BABFBCC733D6CD5C9BDF7;2056.
+ ) 
 Here is how much of TeX's memory you used:
- 6051 strings out of 494926
- 105243 string characters out of 6180792
- 227272 words of memory out of 5000000
- 9184 multiletter control sequences out of 15000+600000
+ 9651 strings out of 494926
+ 160999 string characters out of 6180792
+ 306931 words of memory out of 5000000
+ 12676 multiletter control sequences out of 15000+600000
  8231 words of font info for 30 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 37i,8n,41p,838b,620s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/type1/public
-/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
-nts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
-/cmmi5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.
-pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></u
-sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/shar
-e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/share/texli
-ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on main.pdf (22 pages, 133078 bytes).
+ 37i,8n,41p,838b,762s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
+e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texli
+ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmsy5.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmtt10.pfb>
+Output written on main.pdf (27 pages, 147475 bytes).
 PDF statistics:
- 107 PDF objects out of 1000 (max. 8388607)
- 74 compressed objects within 1 object stream
- 0 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 342 PDF objects out of 1000 (max. 8388607)
+ 301 compressed objects within 4 object streams
+ 63 named destinations out of 1000 (max. 500000)
+ 273 words of extra memory for PDF output out of 10000 (max. 10000000)
 

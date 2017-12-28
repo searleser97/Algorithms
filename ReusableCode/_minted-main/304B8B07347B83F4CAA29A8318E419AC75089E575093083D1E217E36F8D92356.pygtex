@@ -1,0 +1,24 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+cp}{\PYGZsh{}include} \PYG{c+cpf}{\PYGZlt{}bits/stdc++.h\PYGZgt{}}
+
+\PYG{k}{using} \PYG{k}{namespace} \PYG{n}{std}\PYG{p}{;}
+
+\PYG{n}{vector}\PYG{o}{\PYGZlt{}}\PYG{n}{string}\PYG{o}{\PYGZgt{}} \PYG{n}{split}\PYG{p}{(}\PYG{n}{string} \PYG{n}{str}\PYG{p}{,} \PYG{k+kt}{char} \PYG{n}{token}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+    \PYG{n}{stringstream} \PYG{n}{test}\PYG{p}{(}\PYG{n}{str}\PYG{p}{);}
+    \PYG{n}{string} \PYG{n}{segment}\PYG{p}{;}
+    \PYG{n}{vector}\PYG{o}{\PYGZlt{}}\PYG{n}{std}\PYG{o}{::}\PYG{n}{string}\PYG{o}{\PYGZgt{}} \PYG{n}{seglist}\PYG{p}{;}
+
+    \PYG{k}{while} \PYG{p}{(}\PYG{n}{std}\PYG{o}{::}\PYG{n}{getline}\PYG{p}{(}\PYG{n}{test}\PYG{p}{,} \PYG{n}{segment}\PYG{p}{,} \PYG{n}{token}\PYG{p}{))}
+        \PYG{n}{seglist}\PYG{p}{.}\PYG{n}{push\PYGZus{}back}\PYG{p}{(}\PYG{n}{segment}\PYG{p}{);}
+    \PYG{k}{return} \PYG{n}{seglist}\PYG{p}{;}
+\PYG{p}{\PYGZcb{}}
+
+\PYG{k+kt}{int} \PYG{n}{main} \PYG{p}{()} \PYG{p}{\PYGZob{}}
+    \PYG{n}{string} \PYG{n}{str}\PYG{p}{;}
+    \PYG{n}{getline}\PYG{p}{(}\PYG{n}{cin}\PYG{p}{,} \PYG{n}{str}\PYG{p}{);}
+    \PYG{n}{vector}\PYG{o}{\PYGZlt{}}\PYG{n}{string}\PYG{o}{\PYGZgt{}} \PYG{n}{segments} \PYG{o}{=} \PYG{n}{split}\PYG{p}{(}\PYG{n}{str}\PYG{p}{,} \PYG{l+s+sc}{\PYGZsq{} \PYGZsq{}}\PYG{p}{);}
+    \PYG{k}{for} \PYG{p}{(}\PYG{n}{string} \PYG{n+nl}{segment} \PYG{p}{:} \PYG{n}{segments}\PYG{p}{)}
+        \PYG{n}{cout} \PYG{o}{\PYGZlt{}\PYGZlt{}} \PYG{n}{segment} \PYG{o}{\PYGZlt{}\PYGZlt{}} \PYG{n}{endl}\PYG{p}{;}
+    \PYG{k}{return} \PYG{l+m+mi}{0}\PYG{p}{;}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

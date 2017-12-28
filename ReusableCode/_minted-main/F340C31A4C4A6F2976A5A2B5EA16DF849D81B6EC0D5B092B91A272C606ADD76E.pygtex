@@ -26,8 +26,8 @@
         \PYG{k}{this}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{isDirectedGraph} \PYG{o}{=} \PYG{n}{isDirectedGraph}\PYG{p}{;}
     \PYG{p}{\PYGZcb{}}
     \PYG{k+kt}{void} \PYG{n}{addEdge}\PYG{p}{(}\PYG{n}{T} \PYG{n}{v}\PYG{p}{,} \PYG{n}{T} \PYG{n}{w}\PYG{p}{,} \PYG{k+kt}{double} \PYG{n}{cost} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{)} \PYG{p}{\PYGZob{}}
-        \PYG{k}{this}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{nodes}\PYG{p}{[}\PYG{n}{v}\PYG{p}{][}\PYG{n}{v}\PYG{p}{]} \PYG{o}{=} \PYG{n}{cost}\PYG{p}{;}
-        \PYG{k}{this}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{nodes}\PYG{p}{[}\PYG{n}{w}\PYG{p}{][}\PYG{n}{w}\PYG{p}{]} \PYG{o}{=} \PYG{n}{cost}\PYG{p}{;}
+        \PYG{k}{this}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{nodes}\PYG{p}{[}\PYG{n}{v}\PYG{p}{][}\PYG{n}{v}\PYG{p}{]} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{;}
+        \PYG{k}{this}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{nodes}\PYG{p}{[}\PYG{n}{w}\PYG{p}{][}\PYG{n}{w}\PYG{p}{]} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{;}
         \PYG{k}{this}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{nodes}\PYG{p}{[}\PYG{n}{v}\PYG{p}{][}\PYG{n}{w}\PYG{p}{]} \PYG{o}{=} \PYG{n}{cost}\PYG{p}{;}
         \PYG{k}{this}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{edges}\PYG{p}{.}\PYG{n}{push\PYGZus{}back}\PYG{p}{(}\PYG{n}{Edge}\PYG{p}{(}\PYG{n}{v}\PYG{p}{,} \PYG{n}{w}\PYG{p}{,} \PYG{n}{cost}\PYG{p}{));}
         \PYG{k}{if} \PYG{p}{(}\PYG{n}{isDirectedGraph}\PYG{p}{)}
@@ -37,10 +37,9 @@
     \PYG{p}{\PYGZcb{}}
 
 \PYG{k}{public}\PYG{o}{:}
-    \PYG{n}{vector}\PYG{o}{\PYGZlt{}}\PYG{n}{Edge}\PYG{o}{\PYGZgt{}} \PYG{n}{kruskalMST}\PYG{p}{()} \PYG{p}{\PYGZob{}}
+    \PYG{k+kt}{double} \PYG{n}{kruskalMST}\PYG{p}{(}\PYG{n}{vector}\PYG{o}{\PYGZlt{}}\PYG{n}{Edge}\PYG{o}{\PYGZgt{}} \PYG{o}{\PYGZam{}}\PYG{n}{mst}\PYG{p}{)} \PYG{p}{\PYGZob{}}
         \PYG{c+c1}{//mst = minimum spanning tree}
-        \PYG{n}{vector}\PYG{o}{\PYGZlt{}}\PYG{n}{Edge}\PYG{o}{\PYGZgt{}} \PYG{n}{mst}\PYG{p}{;}
-        \PYG{k+kt}{int} \PYG{n}{minCost} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{;}
+        \PYG{k+kt}{double} \PYG{n}{minCost} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{;}
         \PYG{c+c1}{// change \PYGZsq{}\PYGZlt{}\PYGZsq{} to \PYGZsq{}\PYGZgt{}\PYGZsq{} if maximum spanning tree is needed}
         \PYG{k}{auto} \PYG{n}{cmp} \PYG{o}{=} \PYG{p}{[]} \PYG{p}{(}\PYG{k}{const} \PYG{n}{Edge} \PYG{o}{\PYGZam{}} \PYG{n}{a}\PYG{p}{,} \PYG{k}{const} \PYG{n}{Edge} \PYG{o}{\PYGZam{}} \PYG{n}{b}\PYG{p}{)} \PYG{p}{\PYGZob{}}\PYG{k}{return} \PYG{n}{a}\PYG{p}{.}\PYG{n}{weight} \PYG{o}{\PYGZlt{}} \PYG{n}{b}\PYG{p}{.}\PYG{n}{weight}\PYG{p}{;\PYGZcb{};}
         \PYG{n}{sort}\PYG{p}{(}\PYG{k}{this}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{edges}\PYG{p}{.}\PYG{n}{begin}\PYG{p}{(),} \PYG{k}{this}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{edges}\PYG{p}{.}\PYG{n}{end}\PYG{p}{(),} \PYG{n}{cmp}\PYG{p}{);}
@@ -55,8 +54,7 @@
                 \PYG{n}{minCost} \PYG{o}{+=} \PYG{n}{e}\PYG{p}{.}\PYG{n}{weight}\PYG{p}{;}
             \PYG{p}{\PYGZcb{}}
         \PYG{p}{\PYGZcb{}}
-        \PYG{n}{cout} \PYG{o}{\PYGZlt{}\PYGZlt{}} \PYG{n}{minCost} \PYG{o}{\PYGZlt{}\PYGZlt{}} \PYG{n}{endl}\PYG{p}{;}
-        \PYG{k}{return} \PYG{n}{mst}\PYG{p}{;}
+        \PYG{k}{return} \PYG{n}{minCost}\PYG{p}{;}
     \PYG{p}{\PYGZcb{}}
 \PYG{p}{\PYGZcb{};}
 
@@ -84,7 +82,8 @@
             \PYG{n}{cin} \PYG{o}{\PYGZgt{}\PYGZgt{}} \PYG{n}{a} \PYG{o}{\PYGZgt{}\PYGZgt{}} \PYG{n}{b} \PYG{o}{\PYGZgt{}\PYGZgt{}} \PYG{n}{cost}\PYG{p}{;}
             \PYG{n}{g}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{addEdge}\PYG{p}{(}\PYG{n}{a}\PYG{p}{,} \PYG{n}{b}\PYG{p}{,} \PYG{n}{cost}\PYG{p}{);}
         \PYG{p}{\PYGZcb{}}
-        \PYG{n}{g}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{kruskalMST}\PYG{p}{();}
+        \PYG{n}{vector}\PYG{o}{\PYGZlt{}}\PYG{n}{Edge}\PYG{o}{\PYGZgt{}} \PYG{n}{mst1}\PYG{p}{;}
+        \PYG{n}{cout} \PYG{o}{\PYGZlt{}\PYGZlt{}} \PYG{n}{g}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{kruskalMST}\PYG{p}{(}\PYG{n}{mst1}\PYG{p}{)} \PYG{o}{\PYGZlt{}\PYGZlt{}} \PYG{n}{endl}\PYG{p}{;}
         \PYG{k}{delete} \PYG{n}{g}\PYG{p}{;}
         \PYG{n}{g} \PYG{o}{=} \PYG{k}{new} \PYG{n}{Graph}\PYG{o}{\PYGZlt{}}\PYG{k+kt}{int}\PYG{o}{\PYGZgt{}}\PYG{p}{(}\PYG{l+m+mi}{0}\PYG{p}{);}
         \PYG{n}{cin} \PYG{o}{\PYGZgt{}\PYGZgt{}} \PYG{n}{i}\PYG{p}{;}
@@ -97,7 +96,8 @@
             \PYG{n}{cin} \PYG{o}{\PYGZgt{}\PYGZgt{}} \PYG{n}{a} \PYG{o}{\PYGZgt{}\PYGZgt{}} \PYG{n}{b} \PYG{o}{\PYGZgt{}\PYGZgt{}} \PYG{n}{cost}\PYG{p}{;}
             \PYG{n}{g}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{addEdge}\PYG{p}{(}\PYG{n}{a}\PYG{p}{,} \PYG{n}{b}\PYG{p}{,} \PYG{n}{cost}\PYG{p}{);}
         \PYG{p}{\PYGZcb{}}
-        \PYG{n}{g}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{kruskalMST}\PYG{p}{();}
+        \PYG{n}{vector}\PYG{o}{\PYGZlt{}}\PYG{n}{Edge}\PYG{o}{\PYGZgt{}} \PYG{n}{mst2}\PYG{p}{;}
+        \PYG{n}{cout} \PYG{o}{\PYGZlt{}\PYGZlt{}} \PYG{n}{g}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{kruskalMST}\PYG{p}{(}\PYG{n}{mst2}\PYG{p}{)} \PYG{o}{\PYGZlt{}\PYGZlt{}} \PYG{n}{endl}\PYG{p}{;}
         \PYG{n}{t}\PYG{o}{++}\PYG{p}{;}
     \PYG{p}{\PYGZcb{}}
     \PYG{k}{return} \PYG{l+m+mi}{0}\PYG{p}{;}

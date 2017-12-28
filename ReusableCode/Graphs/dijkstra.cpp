@@ -26,10 +26,8 @@ public:
         this->nodes[w][v] = this->nodes[v][w];
     }
 
-    unordered_map<T, double> dijkstra(T source) {
+    void dijkstra(unordered_map<T, double> &distances, unordered_map<T, T> &parents, T source) {
         indexedPriorityQueue<T> ipq;
-        unordered_map<T, double> distances;
-        unordered_map<T, T> parents;
         for (auto node : nodes) {
             ipq.push(node.first, INF);
         }
@@ -49,7 +47,6 @@ public:
                 }
             }
         }
-        return distances;
     }
 };
 
@@ -74,13 +71,14 @@ int main() {
             g.addEdge(a, b, w);
         }
         cout << "Case #" << l << ": ";
-        unordered_map<int, double> distances = g.dijkstra(s);
-        
+        unordered_map<int, double> distances;
+        unordered_map<int, int> parents;
+        g.dijkstra(distances, parents, s);
         if (!distances.count(t)) {
             cout << "unreachable" << endl;
             continue;
         }
-        
+
         if (distances[t] == INF) {
             cout << "unreachable" << endl;
             continue;

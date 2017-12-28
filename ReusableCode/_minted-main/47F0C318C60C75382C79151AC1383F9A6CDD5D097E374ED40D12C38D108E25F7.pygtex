@@ -1,0 +1,157 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+cp}{\PYGZsh{}include} \PYG{c+cpf}{\PYGZlt{}bits/stdc++.h\PYGZgt{}}
+
+\PYG{k}{using} \PYG{k}{namespace} \PYG{n}{std}\PYG{p}{;}
+
+\PYG{k}{template} \PYG{o}{\PYGZlt{}}\PYG{k}{typename} \PYG{n}{T}\PYG{o}{\PYGZgt{}} \PYG{k}{class} \PYG{n+nc}{indexedPriorityQueue} \PYG{p}{\PYGZob{}}
+\PYG{k}{private}\PYG{o}{:}
+    \PYG{k}{class} \PYG{n+nc}{Node} \PYG{p}{\PYGZob{}}
+    \PYG{k}{public}\PYG{o}{:}
+        \PYG{k+kt}{double} \PYG{n}{weight}\PYG{p}{;}
+        \PYG{n}{T} \PYG{n}{key}\PYG{p}{;}
+    \PYG{p}{\PYGZcb{};}
+    \PYG{n}{vector}\PYG{o}{\PYGZlt{}}\PYG{n}{Node}\PYG{o}{\PYGZgt{}} \PYG{n}{pq}\PYG{p}{;}
+    \PYG{n}{unordered\PYGZus{}map}\PYG{o}{\PYGZlt{}}\PYG{n}{T}\PYG{p}{,} \PYG{k+kt}{int}\PYG{o}{\PYGZgt{}} \PYG{n}{nodePosition}\PYG{p}{;}
+
+\PYG{k}{private}\PYG{o}{:}
+    \PYG{k+kt}{void} \PYG{n}{updatePositionInMap}\PYG{p}{(}\PYG{n}{T} \PYG{n}{key1}\PYG{p}{,} \PYG{n}{T} \PYG{n}{key2}\PYG{p}{,} \PYG{k+kt}{int} \PYG{n}{pos1}\PYG{p}{,} \PYG{k+kt}{int} \PYG{n}{pos2}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+        \PYG{k}{this}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{nodePosition}\PYG{p}{[}\PYG{n}{key1}\PYG{p}{]} \PYG{o}{=} \PYG{n}{pos1}\PYG{p}{;}
+        \PYG{k}{this}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{nodePosition}\PYG{p}{[}\PYG{n}{key2}\PYG{p}{]} \PYG{o}{=} \PYG{n}{pos2}\PYG{p}{;}
+    \PYG{p}{\PYGZcb{}}
+\PYG{k}{public}\PYG{o}{:}
+    \PYG{k+kt}{bool} \PYG{n}{containsKey}\PYG{p}{(}\PYG{n}{T} \PYG{n}{key}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+        \PYG{k}{return} \PYG{k}{this}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{nodePosition}\PYG{p}{.}\PYG{n}{count}\PYG{p}{(}\PYG{n}{key}\PYG{p}{);}
+    \PYG{p}{\PYGZcb{}}
+
+    \PYG{n}{T} \PYG{n}{top}\PYG{p}{()} \PYG{p}{\PYGZob{}}
+        \PYG{k}{return} \PYG{k}{this}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{pq}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{].}\PYG{n}{key}\PYG{p}{;}
+    \PYG{p}{\PYGZcb{}}
+
+    \PYG{k+kt}{bool} \PYG{n}{empty}\PYG{p}{()} \PYG{p}{\PYGZob{}}
+        \PYG{k}{return} \PYG{k}{this}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{pq}\PYG{p}{.}\PYG{n}{size}\PYG{p}{()} \PYG{o}{==} \PYG{l+m+mi}{0}\PYG{p}{;}
+    \PYG{p}{\PYGZcb{}}
+
+    \PYG{k+kt}{void} \PYG{n}{push}\PYG{p}{(}\PYG{n}{T} \PYG{n}{key}\PYG{p}{,} \PYG{k+kt}{int} \PYG{n}{weight}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+        \PYG{n}{Node} \PYG{n}{node}\PYG{p}{;}
+        \PYG{n}{node}\PYG{p}{.}\PYG{n}{weight} \PYG{o}{=} \PYG{n}{weight}\PYG{p}{;}
+        \PYG{n}{node}\PYG{p}{.}\PYG{n}{key} \PYG{o}{=} \PYG{n}{key}\PYG{p}{;}
+        \PYG{k}{this}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{pq}\PYG{p}{.}\PYG{n}{push\PYGZus{}back}\PYG{p}{(}\PYG{n}{node}\PYG{p}{);}
+        \PYG{k+kt}{int} \PYG{n}{current} \PYG{o}{=} \PYG{k}{this}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{pq}\PYG{p}{.}\PYG{n}{size}\PYG{p}{()} \PYG{o}{\PYGZhy{}} \PYG{l+m+mi}{1}\PYG{p}{;}
+        \PYG{k+kt}{int} \PYG{n}{parentIndex} \PYG{o}{=} \PYG{p}{(}\PYG{n}{current} \PYG{o}{\PYGZhy{}} \PYG{l+m+mi}{1}\PYG{p}{)} \PYG{o}{/} \PYG{l+m+mi}{2}\PYG{p}{;}
+        \PYG{k}{this}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{nodePosition}\PYG{p}{[}\PYG{n}{node}\PYG{p}{.}\PYG{n}{key}\PYG{p}{]} \PYG{o}{=} \PYG{n}{current}\PYG{p}{;}
+        \PYG{k}{while} \PYG{p}{(}\PYG{n}{parentIndex} \PYG{o}{\PYGZgt{}} \PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+            \PYG{n}{Node} \PYG{n}{parentNode} \PYG{o}{=} \PYG{k}{this}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{pq}\PYG{p}{[}\PYG{n}{parentIndex}\PYG{p}{];}
+            \PYG{n}{Node} \PYG{n}{currentNode} \PYG{o}{=} \PYG{k}{this}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{pq}\PYG{p}{[}\PYG{n}{current}\PYG{p}{];}
+            \PYG{c+c1}{// use \PYGZsq{}\PYGZgt{}\PYGZsq{} for minHeap, use \PYGZsq{}\PYGZlt{}\PYGZsq{} for maxheap}
+            \PYG{k}{if} \PYG{p}{(}\PYG{n}{parentNode}\PYG{p}{.}\PYG{n}{weight} \PYG{o}{\PYGZgt{}} \PYG{n}{currentNode}\PYG{p}{.}\PYG{n}{weight}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+                \PYG{n}{swap}\PYG{p}{(}\PYG{k}{this}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{pq}\PYG{p}{[}\PYG{n}{parentIndex}\PYG{p}{],} \PYG{k}{this}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{pq}\PYG{p}{[}\PYG{n}{current}\PYG{p}{]);}
+                \PYG{n}{updatePositionInMap}\PYG{p}{(}\PYG{k}{this}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{pq}\PYG{p}{[}\PYG{n}{parentIndex}\PYG{p}{].}\PYG{n}{key}\PYG{p}{,} \PYG{k}{this}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{pq}\PYG{p}{[}\PYG{n}{current}\PYG{p}{].}\PYG{n}{key}\PYG{p}{,} \PYG{n}{parentIndex}\PYG{p}{,} \PYG{n}{current}\PYG{p}{);}
+                \PYG{n}{current} \PYG{o}{=} \PYG{n}{parentIndex}\PYG{p}{;}
+                \PYG{n}{parentIndex} \PYG{o}{=} \PYG{p}{(}\PYG{n}{current} \PYG{o}{\PYGZhy{}} \PYG{l+m+mi}{1}\PYG{p}{)} \PYG{o}{/} \PYG{l+m+mi}{2}\PYG{p}{;}
+            \PYG{p}{\PYGZcb{}} \PYG{k}{else}
+                \PYG{k}{break}\PYG{p}{;}
+        \PYG{p}{\PYGZcb{}}
+    \PYG{p}{\PYGZcb{}}
+
+    \PYG{k+kt}{void} \PYG{n}{update}\PYG{p}{(}\PYG{n}{T} \PYG{n}{key}\PYG{p}{,} \PYG{k+kt}{int} \PYG{n}{newWeight}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+        \PYG{k}{if} \PYG{p}{(}\PYG{o}{!}\PYG{k}{this}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{nodePosition}\PYG{p}{.}\PYG{n}{count}\PYG{p}{(}\PYG{n}{key}\PYG{p}{))}
+            \PYG{k}{return}\PYG{p}{;}
+        \PYG{k+kt}{int} \PYG{n}{pos} \PYG{o}{=} \PYG{k}{this}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{nodePosition}\PYG{p}{[}\PYG{n}{key}\PYG{p}{];}
+        \PYG{k}{this}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{pq}\PYG{p}{[}\PYG{n}{pos}\PYG{p}{].}\PYG{n}{weight} \PYG{o}{=} \PYG{n}{newWeight}\PYG{p}{;}
+        \PYG{k+kt}{int} \PYG{n}{parent} \PYG{o}{=} \PYG{p}{(}\PYG{n}{pos} \PYG{o}{\PYGZhy{}} \PYG{l+m+mi}{1}\PYG{p}{)} \PYG{o}{/} \PYG{l+m+mi}{2}\PYG{p}{;}
+        \PYG{k}{while} \PYG{p}{(}\PYG{n}{parent} \PYG{o}{\PYGZgt{}} \PYG{o}{\PYGZhy{}} \PYG{l+m+mi}{1}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+            \PYG{c+c1}{// use \PYGZsq{}\PYGZgt{}\PYGZsq{} for minHeap, use \PYGZsq{}\PYGZlt{}\PYGZsq{} for maxheap}
+            \PYG{k}{if} \PYG{p}{(}\PYG{k}{this}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{pq}\PYG{p}{[}\PYG{n}{parent}\PYG{p}{].}\PYG{n}{weight} \PYG{o}{\PYGZgt{}} \PYG{k}{this}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{pq}\PYG{p}{[}\PYG{n}{pos}\PYG{p}{].}\PYG{n}{weight}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+                \PYG{n}{swap}\PYG{p}{(}\PYG{k}{this}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{pq}\PYG{p}{[}\PYG{n}{parent}\PYG{p}{],} \PYG{k}{this}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{pq}\PYG{p}{[}\PYG{n}{pos}\PYG{p}{]);}
+                \PYG{n}{updatePositionInMap}\PYG{p}{(}\PYG{k}{this}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{pq}\PYG{p}{[}\PYG{n}{parent}\PYG{p}{].}\PYG{n}{key}\PYG{p}{,} \PYG{k}{this}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{pq}\PYG{p}{[}\PYG{n}{pos}\PYG{p}{].}\PYG{n}{key}\PYG{p}{,} \PYG{n}{parent}\PYG{p}{,} \PYG{n}{pos}\PYG{p}{);}
+                \PYG{n}{pos} \PYG{o}{=} \PYG{n}{parent}\PYG{p}{;}
+                \PYG{n}{parent} \PYG{o}{=} \PYG{p}{(}\PYG{n}{pos} \PYG{o}{\PYGZhy{}} \PYG{l+m+mi}{1}\PYG{p}{)} \PYG{o}{/} \PYG{l+m+mi}{2}\PYG{p}{;}
+            \PYG{p}{\PYGZcb{}} \PYG{k}{else}
+                \PYG{k}{break}\PYG{p}{;}
+        \PYG{p}{\PYGZcb{}}
+    \PYG{p}{\PYGZcb{}}
+
+    \PYG{k+kt}{double} \PYG{n}{getWeight}\PYG{p}{(}\PYG{n}{T} \PYG{n}{key}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+        \PYG{k}{if} \PYG{p}{(}\PYG{o}{!}\PYG{k}{this}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{nodePosition}\PYG{p}{.}\PYG{n}{count}\PYG{p}{(}\PYG{n}{key}\PYG{p}{))}
+            \PYG{k}{return} \PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{;}
+        \PYG{k}{return} \PYG{k}{this}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{pq}\PYG{p}{[}\PYG{k}{this}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{nodePosition}\PYG{p}{[}\PYG{n}{key}\PYG{p}{]].}\PYG{n}{weight}\PYG{p}{;}
+    \PYG{p}{\PYGZcb{}}
+
+    \PYG{n}{pair}\PYG{o}{\PYGZlt{}}\PYG{n}{T}\PYG{p}{,} \PYG{k+kt}{double}\PYG{o}{\PYGZgt{}} \PYG{n}{pop}\PYG{p}{()} \PYG{p}{\PYGZob{}}
+        \PYG{k+kt}{int} \PYG{n}{lastPos} \PYG{o}{=} \PYG{k}{this}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{pq}\PYG{p}{.}\PYG{n}{size}\PYG{p}{()} \PYG{o}{\PYGZhy{}} \PYG{l+m+mi}{1}\PYG{p}{;}
+        \PYG{n}{Node} \PYG{n}{topNode} \PYG{o}{=} \PYG{k}{this}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{pq}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{];}
+        \PYG{k}{this}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{pq}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{]} \PYG{o}{=} \PYG{k}{this}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{pq}\PYG{p}{[}\PYG{n}{lastPos}\PYG{p}{];}
+        \PYG{k}{this}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{nodePosition}\PYG{p}{.}\PYG{n}{erase}\PYG{p}{(}\PYG{n}{topNode}\PYG{p}{.}\PYG{n}{key}\PYG{p}{);}
+        \PYG{k}{this}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{nodePosition}\PYG{p}{[}\PYG{k}{this}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{pq}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{].}\PYG{n}{key}\PYG{p}{]} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{;}
+        \PYG{k}{this}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{pq}\PYG{p}{.}\PYG{n}{erase}\PYG{p}{(}\PYG{n}{pq}\PYG{p}{.}\PYG{n}{begin}\PYG{p}{()} \PYG{o}{+} \PYG{n}{lastPos}\PYG{p}{);}
+        \PYG{k+kt}{int} \PYG{n}{currentPos} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{;}
+        \PYG{n}{lastPos}\PYG{o}{\PYGZhy{}\PYGZhy{}}\PYG{p}{;}
+        \PYG{k}{while} \PYG{p}{(}\PYG{n+nb}{true}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+            \PYG{k+kt}{int} \PYG{n}{left} \PYG{o}{=} \PYG{l+m+mi}{2} \PYG{o}{*} \PYG{n}{currentPos} \PYG{o}{+} \PYG{l+m+mi}{1}\PYG{p}{;}
+            \PYG{k+kt}{int} \PYG{n}{right} \PYG{o}{=} \PYG{n}{left} \PYG{o}{+} \PYG{l+m+mi}{1}\PYG{p}{;}
+            \PYG{k}{if} \PYG{p}{(}\PYG{n}{left} \PYG{o}{\PYGZgt{}} \PYG{n}{lastPos}\PYG{p}{)}
+                \PYG{k}{break}\PYG{p}{;}
+            \PYG{k}{if} \PYG{p}{(}\PYG{n}{right} \PYG{o}{\PYGZgt{}} \PYG{n}{lastPos}\PYG{p}{)}
+                \PYG{n}{right} \PYG{o}{=} \PYG{n}{left}\PYG{p}{;}
+            \PYG{c+c1}{// in case of using maxheap, smallerPos will haver the biggerPos value}
+            \PYG{c+c1}{// use \PYGZsq{}\PYGZgt{}\PYGZsq{} for minHeap, use \PYGZsq{}\PYGZlt{}\PYGZsq{} for maxheap}
+            \PYG{k+kt}{int} \PYG{n}{smallerPos} \PYG{o}{=} \PYG{k}{this}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{pq}\PYG{p}{[}\PYG{n}{right}\PYG{p}{].}\PYG{n}{weight} \PYG{o}{\PYGZgt{}} \PYG{k}{this}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{pq}\PYG{p}{[}\PYG{n}{left}\PYG{p}{].}\PYG{n}{weight} \PYG{o}{?} \PYG{n+nl}{left} \PYG{p}{:} \PYG{n}{right}\PYG{p}{;}
+            \PYG{c+c1}{// use \PYGZsq{}\PYGZgt{}\PYGZsq{} for minHeap, use \PYGZsq{}\PYGZlt{}\PYGZsq{} for maxheap}
+            \PYG{k}{if} \PYG{p}{(}\PYG{k}{this}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{pq}\PYG{p}{[}\PYG{n}{currentPos}\PYG{p}{].}\PYG{n}{weight} \PYG{o}{\PYGZgt{}} \PYG{k}{this}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{pq}\PYG{p}{[}\PYG{n}{smallerPos}\PYG{p}{].}\PYG{n}{weight}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+                \PYG{n}{swap}\PYG{p}{(}\PYG{k}{this}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{pq}\PYG{p}{[}\PYG{n}{currentPos}\PYG{p}{],} \PYG{k}{this}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{pq}\PYG{p}{[}\PYG{n}{smallerPos}\PYG{p}{]);}
+                \PYG{n}{updatePositionInMap}\PYG{p}{(}\PYG{k}{this}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{pq}\PYG{p}{[}\PYG{n}{currentPos}\PYG{p}{].}\PYG{n}{key}\PYG{p}{,} \PYG{k}{this}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{pq}\PYG{p}{[}\PYG{n}{smallerPos}\PYG{p}{].}\PYG{n}{key}\PYG{p}{,} \PYG{n}{currentPos}\PYG{p}{,} \PYG{n}{smallerPos}\PYG{p}{);}
+                \PYG{n}{currentPos} \PYG{o}{=} \PYG{n}{smallerPos}\PYG{p}{;}
+            \PYG{p}{\PYGZcb{}} \PYG{k}{else}
+                \PYG{k}{break}\PYG{p}{;}
+        \PYG{p}{\PYGZcb{}}
+        \PYG{k}{return} \PYG{p}{\PYGZob{}}\PYG{n}{topNode}\PYG{p}{.}\PYG{n}{key}\PYG{p}{,} \PYG{n}{topNode}\PYG{p}{.}\PYG{n}{weight}\PYG{p}{\PYGZcb{};}
+    \PYG{p}{\PYGZcb{}}
+
+    \PYG{k+kt}{void} \PYG{n}{printPositionInMap} \PYG{p}{()} \PYG{p}{\PYGZob{}}
+        \PYG{n}{cout} \PYG{o}{\PYGZlt{}\PYGZlt{}} \PYG{l+s}{\PYGZdq{}\PYGZob{} \PYGZdq{}}\PYG{p}{;}
+        \PYG{k}{for} \PYG{p}{(}\PYG{k}{auto} \PYG{n+nl}{i} \PYG{p}{:} \PYG{k}{this}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{nodePosition}\PYG{p}{)}
+            \PYG{n}{cout} \PYG{o}{\PYGZlt{}\PYGZlt{}} \PYG{n}{i}\PYG{p}{.}\PYG{n}{first} \PYG{o}{\PYGZlt{}\PYGZlt{}} \PYG{l+s}{\PYGZdq{}=\PYGZdq{}} \PYG{o}{\PYGZlt{}\PYGZlt{}} \PYG{n}{i}\PYG{p}{.}\PYG{n}{second} \PYG{o}{\PYGZlt{}\PYGZlt{}} \PYG{l+s}{\PYGZdq{},\PYGZdq{}}\PYG{p}{;}
+        \PYG{n}{cout} \PYG{o}{\PYGZlt{}\PYGZlt{}} \PYG{l+s}{\PYGZdq{} \PYGZcb{}\PYGZdq{}} \PYG{o}{\PYGZlt{}\PYGZlt{}} \PYG{n}{endl}\PYG{p}{;}
+    \PYG{p}{\PYGZcb{}}
+
+    \PYG{k+kt}{void} \PYG{n}{printHeap} \PYG{p}{()} \PYG{p}{\PYGZob{}}
+        \PYG{k}{for} \PYG{p}{(}\PYG{n}{Node} \PYG{n+nl}{n} \PYG{p}{:} \PYG{k}{this}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{pq}\PYG{p}{)}
+            \PYG{n}{cout} \PYG{o}{\PYGZlt{}\PYGZlt{}} \PYG{n}{n}\PYG{p}{.}\PYG{n}{weight} \PYG{o}{\PYGZlt{}\PYGZlt{}} \PYG{l+s}{\PYGZdq{} \PYGZdq{}} \PYG{o}{\PYGZlt{}\PYGZlt{}} \PYG{n}{n}\PYG{p}{.}\PYG{n}{key} \PYG{o}{\PYGZlt{}\PYGZlt{}} \PYG{n}{endl}\PYG{p}{;}
+    \PYG{p}{\PYGZcb{}}
+
+\PYG{p}{\PYGZcb{};}
+
+
+\PYG{c+cm}{/*int main () \PYGZob{}}
+\PYG{c+cm}{    indexedPriorityQueue\PYGZlt{}string\PYGZgt{} ipq;}
+\PYG{c+cm}{    ipq.push(\PYGZdq{}Tushar\PYGZdq{}, 3);}
+\PYG{c+cm}{    ipq.push(\PYGZdq{}Ani\PYGZdq{}, 4);}
+\PYG{c+cm}{    ipq.push(\PYGZdq{}Vijay\PYGZdq{}, 8);}
+\PYG{c+cm}{    ipq.push(\PYGZdq{}Pramila\PYGZdq{}, 10);}
+\PYG{c+cm}{    ipq.push(\PYGZdq{}Roy\PYGZdq{}, 5);}
+\PYG{c+cm}{    ipq.push(\PYGZdq{}NTF\PYGZdq{}, 6);}
+\PYG{c+cm}{    ipq.push(\PYGZdq{}AFR\PYGZdq{}, 2);}
+\PYG{c+cm}{    ipq.update(\PYGZdq{}Pramila\PYGZdq{}, 1);}
+\PYG{c+cm}{    ipq.printHeap();}
+\PYG{c+cm}{    ipq.printPositionInMap();}
+\PYG{c+cm}{    ipq.pop();}
+\PYG{c+cm}{    ipq.printHeap();}
+\PYG{c+cm}{    ipq.printPositionInMap();}
+\PYG{c+cm}{    ipq.pop();}
+\PYG{c+cm}{    ipq.printHeap();}
+\PYG{c+cm}{    ipq.printPositionInMap();}
+\PYG{c+cm}{    ipq.pop();}
+\PYG{c+cm}{    ipq.printHeap();}
+\PYG{c+cm}{    ipq.printPositionInMap();}
+\PYG{c+cm}{    ipq.pop();}
+\PYG{c+cm}{    ipq.printHeap();}
+\PYG{c+cm}{    ipq.printPositionInMap();}
+\PYG{c+cm}{    ipq.pop();}
+\PYG{c+cm}{    ipq.printHeap();}
+\PYG{c+cm}{    ipq.printPositionInMap();}
+\PYG{c+cm}{    ipq.pop();}
+\PYG{c+cm}{    ipq.printHeap();}
+\PYG{c+cm}{    ipq.printPositionInMap();}
+\PYG{c+cm}{    return 0;}
+\PYG{c+cm}{\PYGZcb{}*/}
+\end{Verbatim}

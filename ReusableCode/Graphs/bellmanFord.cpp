@@ -25,18 +25,19 @@ public:
         this->nodes[w][v] = this->nodes[v][w];
     }
 
-    unordered_map<T, double> bellmanFord(T source) {
-        unordered_map<T, double> distances;
-        unordered_map<T, T> parents;
+    bool bellmanFord(unordered_map<T, double> &distances, unordered_map<T, T> &parents, T source) {
         queue<T> q;
         unordered_set<T> in_queue;
+        unordered_map<T, int> ocurrenceOfNodeInQueue;
         for (auto node : nodes) {
             distances[node.first] = INF;
             parents[node.first] = node.first;
         }
         distances[source] = 0;
         q.push(source);
+        int limit = nodes.size() - 1;
         in_queue.insert(source);
+        ocurrenceOfNodeInQueue[source] += 1;
         while (!q.empty()) {
             T u = q.front(); q.pop(); in_queue.erase(u);
             for (auto neighbor : nodes[u]) {
@@ -45,12 +46,16 @@ public:
                 if (newDistance < distances[v]) {
                     distances[v] = newDistance;
                     parents[v] = u;
-                    if (!in_queue.count(v))
+                    if (!in_queue.count(v)) {
                         q.push(v);
+                        ocurrenceOfNodeInQueue[v] += 1;
+                        if (ocurrenceOfNodeInQueue[v] > limit)
+                            return false;
+                    }
                 }
             }
         }
-        return distances;
+        return true;
     }
 };
 
@@ -62,14 +67,23 @@ void printMap (unordered_map<int, double> m) {
 }
 
 int main() {
-    Graph<int> g(1);
-    g.addEdge(0, 3, 8.0);
-    g.addEdge(0, 1, 4.0);
-    g.addEdge(0, 2, 5.0);
-    g.addEdge(1, 2, -3.0);
-    g.addEdge(2, 4, 4.0);
-    g.addEdge(3, 4, 2.0);
-    g.addEdge(4, 3, 1.0);
-    printMap(g.bellmanFord(0));
+    int T;
+    cin >> T;
+    while (T--) {
+        unordered_map<int, double> distances;
+        unordered_map<int, int> parents;
+        Graph<int> g(1);
+        int n, m, x, y, t;
+        cin >> n >> m;
+        while (m--) {
+            cin >> x >> y >> t;
+            g.addEdge(x, y, t);
+        }
+        if (!g.bellmanFord(distances, parents, 0))
+            cout << "possible" << endl;
+        else
+            cout << "not possible" << endl;
+    }
+
     return 0;
 }
