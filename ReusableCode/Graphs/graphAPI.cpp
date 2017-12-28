@@ -19,7 +19,7 @@ public:
         this->nodes[v][v] = 0;
         this->nodes[w][w] = 0;
         // consider the smallest edge in case of duplicates
-        if (!(this->nodes.count(w) && this->nodes[w].count(v)) || (cost < this->nodes[v][w]))
+        if (!(this->nodes.count(v) && this->nodes[v].count(w)) || (cost < this->nodes[v][w]))
             this->nodes[v][w] = cost;
         if (isDirectedGraph)
             return;
