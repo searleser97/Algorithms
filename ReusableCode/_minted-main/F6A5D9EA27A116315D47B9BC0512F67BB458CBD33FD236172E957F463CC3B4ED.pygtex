@@ -1,0 +1,123 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+cp}{\PYGZsh{}include} \PYG{c+cpf}{\PYGZlt{}bits/stdc++.h\PYGZgt{}}
+
+\PYG{k}{using} \PYG{k}{namespace} \PYG{n}{std}\PYG{p}{;}
+
+\PYG{k}{template} \PYG{o}{\PYGZlt{}}\PYG{k}{class} \PYG{n+nc}{T}\PYG{o}{\PYGZgt{}} \PYG{k}{class} \PYG{n+nc}{Graph} \PYG{p}{\PYGZob{}}
+\PYG{k}{public}\PYG{o}{:}
+    \PYG{c+c1}{//node \PYGZhy{}\PYGZgt{} value , neighbors \PYGZhy{}\PYGZgt{} value, weight}
+    \PYG{n}{unordered\PYGZus{}map}\PYG{o}{\PYGZlt{}}\PYG{n}{T}\PYG{p}{,} \PYG{n}{unordered\PYGZus{}map}\PYG{o}{\PYGZlt{}}\PYG{n}{T}\PYG{p}{,} \PYG{k+kt}{double}\PYG{o}{\PYGZgt{}} \PYG{o}{\PYGZgt{}} \PYG{n}{nodes}\PYG{p}{;}
+    \PYG{k+kt}{bool} \PYG{n}{isDirectedGraph}\PYG{p}{;}
+    \PYG{k+kt}{double} \PYG{n}{INF} \PYG{o}{=} \PYG{l+m+mi}{1} \PYG{o}{\PYGZlt{}\PYGZlt{}} \PYG{l+m+mi}{30}\PYG{p}{;}
+    \PYG{c+c1}{// 0 \PYGZhy{}\PYGZgt{} undirected, 1 \PYGZhy{}\PYGZgt{} directed}
+    \PYG{n}{Graph}\PYG{p}{(}\PYG{k+kt}{bool} \PYG{n}{isDirectedGraph} \PYG{o}{=} \PYG{n+nb}{false}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+        \PYG{k}{this}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{isDirectedGraph} \PYG{o}{=} \PYG{n}{isDirectedGraph}\PYG{p}{;}
+    \PYG{p}{\PYGZcb{}}
+
+    \PYG{n}{unordered\PYGZus{}map}\PYG{o}{\PYGZlt{}}\PYG{n}{T}\PYG{p}{,} \PYG{n}{unordered\PYGZus{}map}\PYG{o}{\PYGZlt{}}\PYG{n}{T}\PYG{p}{,} \PYG{k+kt}{double}\PYG{o}{\PYGZgt{}} \PYG{o}{\PYGZgt{}} \PYG{n}{getNodes}\PYG{p}{()} \PYG{p}{\PYGZob{}}
+        \PYG{k}{return} \PYG{k}{this}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{nodes}\PYG{p}{;}
+    \PYG{p}{\PYGZcb{}}
+
+    \PYG{k+kt}{void} \PYG{n}{addOrUpdateEdge}\PYG{p}{(}\PYG{n}{T} \PYG{n}{v}\PYG{p}{,} \PYG{n}{T} \PYG{n}{w}\PYG{p}{,} \PYG{k+kt}{double} \PYG{n}{cost} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+        \PYG{k}{this}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{nodes}\PYG{p}{[}\PYG{n}{v}\PYG{p}{][}\PYG{n}{v}\PYG{p}{]} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{;}
+        \PYG{k}{this}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{nodes}\PYG{p}{[}\PYG{n}{w}\PYG{p}{][}\PYG{n}{w}\PYG{p}{]} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{;}
+        \PYG{k}{this}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{nodes}\PYG{p}{[}\PYG{n}{v}\PYG{p}{][}\PYG{n}{w}\PYG{p}{]} \PYG{o}{=} \PYG{n}{cost}\PYG{p}{;}
+        \PYG{k}{if} \PYG{p}{(}\PYG{n}{isDirectedGraph}\PYG{p}{)}
+            \PYG{k}{return}\PYG{p}{;}
+        \PYG{k}{this}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{nodes}\PYG{p}{[}\PYG{n}{w}\PYG{p}{][}\PYG{n}{v}\PYG{p}{]} \PYG{o}{=} \PYG{n}{cost}\PYG{p}{;}
+    \PYG{p}{\PYGZcb{}}
+
+    \PYG{k+kt}{bool} \PYG{n}{hasEdge}\PYG{p}{(}\PYG{n}{T} \PYG{n}{v}\PYG{p}{,} \PYG{n}{T} \PYG{n}{w}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+        \PYG{k}{return} \PYG{k}{this}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{nodes}\PYG{p}{.}\PYG{n}{count}\PYG{p}{(}\PYG{n}{v}\PYG{p}{)} \PYG{o}{?} \PYG{k}{this}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{nodes}\PYG{p}{[}\PYG{n}{v}\PYG{p}{].}\PYG{n}{count}\PYG{p}{(}\PYG{n}{w}\PYG{p}{)} \PYG{o}{:} \PYG{n+nb}{false}\PYG{p}{;}
+    \PYG{p}{\PYGZcb{}}
+
+    \PYG{k+kt}{double} \PYG{n}{getEdgeWeight}\PYG{p}{(}\PYG{n}{T} \PYG{n}{v}\PYG{p}{,} \PYG{n}{T} \PYG{n}{w}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+        \PYG{k}{if} \PYG{p}{(}\PYG{n}{hasEdge}\PYG{p}{(}\PYG{n}{v}\PYG{p}{,} \PYG{n}{w}\PYG{p}{))}
+            \PYG{k}{return} \PYG{k}{this}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{nodes}\PYG{p}{[}\PYG{n}{v}\PYG{p}{][}\PYG{n}{w}\PYG{p}{];}
+        \PYG{k}{return} \PYG{l+m+mi}{0}\PYG{p}{;}
+    \PYG{p}{\PYGZcb{}}
+
+    \PYG{k+kt}{void} \PYG{n}{printEdges}\PYG{p}{()} \PYG{p}{\PYGZob{}}
+        \PYG{k}{for} \PYG{p}{(}\PYG{k}{auto} \PYG{n+nl}{node} \PYG{p}{:} \PYG{k}{this}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{nodes}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+            \PYG{n}{T} \PYG{n}{u} \PYG{o}{=} \PYG{n}{node}\PYG{p}{.}\PYG{n}{first}\PYG{p}{;}
+            \PYG{k}{for} \PYG{p}{(}\PYG{k}{auto} \PYG{n+nl}{neighbor} \PYG{p}{:} \PYG{k}{this}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{nodes}\PYG{p}{[}\PYG{n}{u}\PYG{p}{])} \PYG{p}{\PYGZob{}}
+                \PYG{n}{cout} \PYG{o}{\PYGZlt{}\PYGZlt{}} \PYG{n}{u} \PYG{o}{\PYGZlt{}\PYGZlt{}} \PYG{l+s}{\PYGZdq{} \PYGZdq{}} \PYG{o}{\PYGZlt{}\PYGZlt{}} \PYG{n}{neighbor}\PYG{p}{.}\PYG{n}{first} \PYG{o}{\PYGZlt{}\PYGZlt{}} \PYG{l+s}{\PYGZdq{} \PYGZdq{}} \PYG{o}{\PYGZlt{}\PYGZlt{}} \PYG{n}{neighbor}\PYG{p}{.}\PYG{n}{second} \PYG{o}{\PYGZlt{}\PYGZlt{}} \PYG{n}{endl}\PYG{p}{;}
+            \PYG{p}{\PYGZcb{}}
+        \PYG{p}{\PYGZcb{}}
+    \PYG{p}{\PYGZcb{}}
+
+    \PYG{k+kt}{double} \PYG{n}{maxFlow}\PYG{p}{(}\PYG{n}{vector}\PYG{o}{\PYGZlt{}}\PYG{n}{vector}\PYG{o}{\PYGZlt{}}\PYG{n}{T}\PYG{o}{\PYGZgt{}\PYGZgt{}} \PYG{o}{\PYGZam{}}\PYG{n}{paths}\PYG{p}{,} \PYG{n}{T} \PYG{n}{source}\PYG{p}{,} \PYG{n}{T} \PYG{n}{target}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+        \PYG{n}{Graph}\PYG{o}{\PYGZlt{}}\PYG{n}{T}\PYG{o}{\PYGZgt{}} \PYG{n}{residualGraph}\PYG{p}{(}\PYG{l+m+mi}{1}\PYG{p}{);}
+        \PYG{n}{residualGraph}\PYG{p}{.}\PYG{n}{nodes} \PYG{o}{=} \PYG{k}{this}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{nodes}\PYG{p}{;}
+        \PYG{k+kt}{double} \PYG{n}{max\PYGZus{}flow} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{;}
+        \PYG{n}{unordered\PYGZus{}map}\PYG{o}{\PYGZlt{}}\PYG{n}{T}\PYG{p}{,} \PYG{n}{T}\PYG{o}{\PYGZgt{}} \PYG{n}{parent}\PYG{p}{;}
+        \PYG{k}{while} \PYG{p}{(}\PYG{n}{hasAugmentedPath}\PYG{p}{(}\PYG{n}{residualGraph}\PYG{p}{,} \PYG{n}{parent}\PYG{p}{,} \PYG{n}{source}\PYG{p}{,} \PYG{n}{target}\PYG{p}{))} \PYG{p}{\PYGZob{}}
+            \PYG{n}{vector}\PYG{o}{\PYGZlt{}}\PYG{n}{T}\PYG{o}{\PYGZgt{}} \PYG{n}{path}\PYG{p}{;}
+            \PYG{k+kt}{double} \PYG{n}{flow} \PYG{o}{=} \PYG{n}{INF}\PYG{p}{;}
+            \PYG{n}{T} \PYG{n}{v} \PYG{o}{=} \PYG{n}{target}\PYG{p}{;}
+            \PYG{k}{while} \PYG{p}{(}\PYG{n}{v} \PYG{o}{!=} \PYG{n}{source}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+                \PYG{n}{T} \PYG{n}{u} \PYG{o}{=} \PYG{n}{parent}\PYG{p}{[}\PYG{n}{v}\PYG{p}{];}
+                \PYG{k}{if} \PYG{p}{(}\PYG{n}{flow} \PYG{o}{\PYGZgt{}} \PYG{n}{residualGraph}\PYG{p}{.}\PYG{n}{getEdgeWeight}\PYG{p}{(}\PYG{n}{u}\PYG{p}{,} \PYG{n}{v}\PYG{p}{))}
+                    \PYG{n}{flow} \PYG{o}{=} \PYG{n}{residualGraph}\PYG{p}{.}\PYG{n}{getEdgeWeight}\PYG{p}{(}\PYG{n}{u}\PYG{p}{,} \PYG{n}{v}\PYG{p}{);}
+                \PYG{n}{path}\PYG{p}{.}\PYG{n}{push\PYGZus{}back}\PYG{p}{(}\PYG{n}{v}\PYG{p}{);}
+                \PYG{n}{v} \PYG{o}{=} \PYG{n}{u}\PYG{p}{;}
+            \PYG{p}{\PYGZcb{}}
+            \PYG{n}{path}\PYG{p}{.}\PYG{n}{push\PYGZus{}back}\PYG{p}{(}\PYG{n}{source}\PYG{p}{);}
+            \PYG{n}{reverse}\PYG{p}{(}\PYG{n}{path}\PYG{p}{.}\PYG{n}{begin}\PYG{p}{(),} \PYG{n}{path}\PYG{p}{.}\PYG{n}{end}\PYG{p}{());}
+            \PYG{n}{paths}\PYG{p}{.}\PYG{n}{push\PYGZus{}back}\PYG{p}{(}\PYG{n}{path}\PYG{p}{);}
+            \PYG{n}{max\PYGZus{}flow} \PYG{o}{+=} \PYG{n}{flow}\PYG{p}{;}
+            \PYG{n}{v} \PYG{o}{=} \PYG{n}{target}\PYG{p}{;}
+            \PYG{k}{while} \PYG{p}{(}\PYG{n}{v} \PYG{o}{!=} \PYG{n}{source}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+                \PYG{n}{T} \PYG{n}{u} \PYG{o}{=} \PYG{n}{parent}\PYG{p}{[}\PYG{n}{v}\PYG{p}{];}
+                \PYG{n}{residualGraph}\PYG{p}{.}\PYG{n}{addOrUpdateEdge}\PYG{p}{(}\PYG{n}{u}\PYG{p}{,} \PYG{n}{v}\PYG{p}{,} \PYG{n}{residualGraph}\PYG{p}{.}\PYG{n}{getEdgeWeight}\PYG{p}{(}\PYG{n}{u}\PYG{p}{,} \PYG{n}{v}\PYG{p}{)} \PYG{o}{\PYGZhy{}} \PYG{n}{flow}\PYG{p}{);}
+                \PYG{n}{residualGraph}\PYG{p}{.}\PYG{n}{addOrUpdateEdge}\PYG{p}{(}\PYG{n}{v}\PYG{p}{,} \PYG{n}{u}\PYG{p}{,} \PYG{n}{residualGraph}\PYG{p}{.}\PYG{n}{getEdgeWeight}\PYG{p}{(}\PYG{n}{v}\PYG{p}{,} \PYG{n}{u}\PYG{p}{)} \PYG{o}{+} \PYG{n}{flow}\PYG{p}{);}
+                \PYG{n}{v} \PYG{o}{=} \PYG{n}{u}\PYG{p}{;}
+            \PYG{p}{\PYGZcb{}}
+        \PYG{p}{\PYGZcb{}}
+        \PYG{k}{return} \PYG{n}{max\PYGZus{}flow}\PYG{p}{;}
+    \PYG{p}{\PYGZcb{}}
+
+    \PYG{k+kt}{bool} \PYG{n}{hasAugmentedPath}\PYG{p}{(}\PYG{n}{Graph}\PYG{o}{\PYGZlt{}}\PYG{n}{T}\PYG{o}{\PYGZgt{}} \PYG{o}{\PYGZam{}}\PYG{n}{residualGraph}\PYG{p}{,} \PYG{n}{unordered\PYGZus{}map}\PYG{o}{\PYGZlt{}}\PYG{n}{T}\PYG{p}{,} \PYG{n}{T}\PYG{o}{\PYGZgt{}} \PYG{o}{\PYGZam{}}\PYG{n}{parent}\PYG{p}{,} \PYG{n}{T} \PYG{n}{source}\PYG{p}{,} \PYG{n}{T} \PYG{n}{target}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+        \PYG{n}{queue}\PYG{o}{\PYGZlt{}}\PYG{n}{T}\PYG{o}{\PYGZgt{}} \PYG{n}{q}\PYG{p}{;}
+        \PYG{n}{q}\PYG{p}{.}\PYG{n}{push}\PYG{p}{(}\PYG{n}{source}\PYG{p}{);}
+        \PYG{n}{unordered\PYGZus{}set}\PYG{o}{\PYGZlt{}}\PYG{n}{T}\PYG{o}{\PYGZgt{}} \PYG{n}{visited}\PYG{p}{;}
+        \PYG{n}{visited}\PYG{p}{.}\PYG{n}{insert}\PYG{p}{(}\PYG{n}{source}\PYG{p}{);}
+        \PYG{k}{while} \PYG{p}{(}\PYG{o}{!}\PYG{n}{q}\PYG{p}{.}\PYG{n}{empty}\PYG{p}{())} \PYG{p}{\PYGZob{}}
+            \PYG{n}{T} \PYG{n}{current} \PYG{o}{=} \PYG{n}{q}\PYG{p}{.}\PYG{n}{front}\PYG{p}{();} \PYG{n}{q}\PYG{p}{.}\PYG{n}{pop}\PYG{p}{();}
+            \PYG{k}{for} \PYG{p}{(}\PYG{k}{auto} \PYG{n+nl}{neighbor} \PYG{p}{:} \PYG{n}{residualGraph}\PYG{p}{.}\PYG{n}{nodes}\PYG{p}{[}\PYG{n}{current}\PYG{p}{])} \PYG{p}{\PYGZob{}}
+                \PYG{n}{T} \PYG{n}{v} \PYG{o}{=} \PYG{n}{neighbor}\PYG{p}{.}\PYG{n}{first}\PYG{p}{;}
+                \PYG{k}{if} \PYG{p}{(}\PYG{o}{!}\PYG{n}{visited}\PYG{p}{.}\PYG{n}{count}\PYG{p}{(}\PYG{n}{v}\PYG{p}{)} \PYG{o}{\PYGZam{}\PYGZam{}} \PYG{n}{neighbor}\PYG{p}{.}\PYG{n}{second} \PYG{o}{\PYGZgt{}} \PYG{l+m+mi}{0}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+                    \PYG{n}{q}\PYG{p}{.}\PYG{n}{push}\PYG{p}{(}\PYG{n}{v}\PYG{p}{);}
+                    \PYG{n}{visited}\PYG{p}{.}\PYG{n}{insert}\PYG{p}{(}\PYG{n}{v}\PYG{p}{);}
+                    \PYG{n}{parent}\PYG{p}{[}\PYG{n}{v}\PYG{p}{]} \PYG{o}{=} \PYG{n}{current}\PYG{p}{;}
+                    \PYG{k}{if} \PYG{p}{(}\PYG{n}{v} \PYG{o}{==} \PYG{n}{target}\PYG{p}{)}
+                        \PYG{k}{return} \PYG{n+nb}{true}\PYG{p}{;}
+                \PYG{p}{\PYGZcb{}}
+            \PYG{p}{\PYGZcb{}}
+        \PYG{p}{\PYGZcb{}}
+        \PYG{k}{return} \PYG{n+nb}{false}\PYG{p}{;}
+    \PYG{p}{\PYGZcb{}}
+\PYG{p}{\PYGZcb{};}
+
+\PYG{k+kt}{int} \PYG{n+nf}{main}\PYG{p}{()} \PYG{p}{\PYGZob{}}
+    \PYG{k+kt}{int} \PYG{n}{i} \PYG{o}{=} \PYG{l+m+mi}{1}\PYG{p}{,} \PYG{n}{n}\PYG{p}{,} \PYG{n}{s}\PYG{p}{,} \PYG{n}{t}\PYG{p}{,} \PYG{n}{c}\PYG{p}{,} \PYG{n}{u}\PYG{p}{,} \PYG{n}{v}\PYG{p}{;}
+    \PYG{k+kt}{double} \PYG{n}{w}\PYG{p}{;}
+    \PYG{k}{while} \PYG{p}{(}\PYG{n+nb}{true}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+        \PYG{n}{Graph}\PYG{o}{\PYGZlt{}}\PYG{k+kt}{int}\PYG{o}{\PYGZgt{}} \PYG{n}{g}\PYG{p}{(}\PYG{l+m+mi}{0}\PYG{p}{);}
+        \PYG{n}{cin} \PYG{o}{\PYGZgt{}\PYGZgt{}} \PYG{n}{n}\PYG{p}{;}
+        \PYG{k}{if} \PYG{p}{(}\PYG{o}{!}\PYG{n}{n}\PYG{p}{)}
+            \PYG{k}{break}\PYG{p}{;}
+        \PYG{n}{cin} \PYG{o}{\PYGZgt{}\PYGZgt{}} \PYG{n}{s} \PYG{o}{\PYGZgt{}\PYGZgt{}} \PYG{n}{t} \PYG{o}{\PYGZgt{}\PYGZgt{}} \PYG{n}{c}\PYG{p}{;}
+        \PYG{k}{while} \PYG{p}{(}\PYG{n}{c}\PYG{o}{\PYGZhy{}\PYGZhy{}}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+            \PYG{n}{cin} \PYG{o}{\PYGZgt{}\PYGZgt{}} \PYG{n}{u} \PYG{o}{\PYGZgt{}\PYGZgt{}} \PYG{n}{v} \PYG{o}{\PYGZgt{}\PYGZgt{}} \PYG{n}{w}\PYG{p}{;}
+            \PYG{n}{g}\PYG{p}{.}\PYG{n}{addOrUpdateEdge}\PYG{p}{(}\PYG{n}{u}\PYG{p}{,} \PYG{n}{v}\PYG{p}{,} \PYG{n}{g}\PYG{p}{.}\PYG{n}{getEdgeWeight}\PYG{p}{(}\PYG{n}{u}\PYG{p}{,} \PYG{n}{v}\PYG{p}{)} \PYG{o}{+} \PYG{n}{w}\PYG{p}{);}
+        \PYG{p}{\PYGZcb{}}
+        \PYG{n}{vector}\PYG{o}{\PYGZlt{}}\PYG{n}{vector}\PYG{o}{\PYGZlt{}}\PYG{k+kt}{int}\PYG{o}{\PYGZgt{}\PYGZgt{}} \PYG{n}{parents}\PYG{p}{;}
+        \PYG{n}{cout} \PYG{o}{\PYGZlt{}\PYGZlt{}} \PYG{l+s}{\PYGZdq{}Network \PYGZdq{}} \PYG{o}{\PYGZlt{}\PYGZlt{}} \PYG{n}{i} \PYG{o}{\PYGZlt{}\PYGZlt{}} \PYG{n}{endl}\PYG{p}{;}
+        \PYG{n}{cout} \PYG{o}{\PYGZlt{}\PYGZlt{}} \PYG{l+s}{\PYGZdq{}The bandwidth is \PYGZdq{}} \PYG{o}{\PYGZlt{}\PYGZlt{}} \PYG{n}{g}\PYG{p}{.}\PYG{n}{maxFlow}\PYG{p}{(}\PYG{n}{parents}\PYG{p}{,} \PYG{n}{s}\PYG{p}{,} \PYG{n}{t}\PYG{p}{)} \PYG{o}{\PYGZlt{}\PYGZlt{}} \PYG{l+s}{\PYGZdq{}.\PYGZdq{}} \PYG{o}{\PYGZlt{}\PYGZlt{}} \PYG{n}{endl}\PYG{p}{;}
+        \PYG{n}{cout} \PYG{o}{\PYGZlt{}\PYGZlt{}} \PYG{n}{endl}\PYG{p}{;}
+        \PYG{n}{i}\PYG{o}{++}\PYG{p}{;}
+    \PYG{p}{\PYGZcb{}}
+    \PYG{k}{return} \PYG{l+m+mi}{0}\PYG{p}{;}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

@@ -20,6 +20,8 @@
 \inputminted[breaklines]{cpp}{Graphs/kruskalMST.cpp}
 \subsection{topologicalSort}
 \inputminted[breaklines]{cpp}{Graphs/topologicalSort.cpp}
+\subsection{maxFlow}
+\inputminted[breaklines]{cpp}{Graphs/maxFlow.cpp}
 \subsection{unionFind}
 \inputminted[breaklines]{cpp}{Graphs/unionFind.cpp}
 \section{NumberTheory}

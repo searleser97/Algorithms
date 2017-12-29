@@ -4,6 +4,8 @@
 
 using namespace std;
 
+double INF = 1 << 30;
+
 class Edge {
 public:
     int v, w;
@@ -22,7 +24,6 @@ public:
     bool isDirectedGraph;
     UnionFind<T> uf;
     vector<Edge> edges;
-    double INF = 1 << 30;
 
     // 0 -> undirected, 1 -> directed
     Graph(bool isDirectedGraph = false) {
