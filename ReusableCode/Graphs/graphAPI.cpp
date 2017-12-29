@@ -255,6 +255,29 @@ private:
         return false;
     }
 
+    private:
+    bool hasUndirectedCycle(T node, T prevNode, unordered_set<T> &visited) {
+        visited.insert(node);
+        for (auto neighbor : this->nodes[node]) {
+            if (neighbor.first == node || neighbor.first == prevNode)
+                continue;
+            if (visited.count(neighbor.first))
+                return true;
+            if (hasUndirectedCycle(neighbor.first, node, visited))
+                return true;
+        }
+        return false;
+    }
+public:
+    bool hasUndirectedCycle() {
+        unordered_set<T> visited;
+        for (auto node : this->nodes)
+            if (!visited.count(node.first)) {
+                if (hasUndirectedCycle(node.first, node.first, visited))
+                    return true;
+            }
+        return false;
+    }
 };
 
 int main() {
