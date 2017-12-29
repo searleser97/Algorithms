@@ -8,7 +8,7 @@ class Edge {
 public:
     int v, w;
     double weight;
-    Edge(int v, int w, double weight) {
+    Edge(int v, int w, double weight = 0) {
         this->v = v;
         this->w = w;
         this->weight = weight;
@@ -28,23 +28,40 @@ public:
     Graph(bool isDirectedGraph = false) {
         this->isDirectedGraph = isDirectedGraph;
     }
-    void addEdge(T v, T w, double cost = 0) {
+
+    unordered_map<T, unordered_map<T, double> > getNodes() {
+        return this->nodes;
+    }
+
+    void addOrUpdateEdge(T v, T w, double cost = 0) {
         this->nodes[v][v] = 0;
         this->nodes[w][w] = 0;
-        // consider the smallest edge in case of duplicates
-        if (!(this->nodes.count(v) && this->nodes[v].count(w)) || (cost < this->nodes[v][w]))
-            this->nodes[v][w] = cost;
+        this->nodes[v][w] = cost;
         this->edges.push_back(Edge(v, w, cost));
         if (isDirectedGraph)
             return;
-        this->nodes[w][v] = this->nodes[v][w];
+        this->nodes[w][v] = cost;
         this->edges.push_back(Edge(w, v, cost));
         uf.addEdge(v, w);
     }
 
-public:
-    bool isEdgeInGraph(T v, T w) {
+    bool hasEdge(T v, T w) {
         return this->nodes.count(v) ? this->nodes[v].count(w) : false;
+    }
+
+    double getEdgeWeight(T v, T w) {
+        if (hasEdge(v, w))
+            return this->nodes[v][w];
+        return 0;
+    }
+
+    void printEdges() {
+        for (auto node : this->nodes) {
+            T u = node.first;
+            for (auto neighbor : this->nodes[u]) {
+                cout << u << " " << neighbor.first << " " << neighbor.second << endl;
+            }
+        }
     }
 
 private:
@@ -72,7 +89,7 @@ public:
             }
         return {connectedComponents, nodeComponentIds};
     }
-public:
+
     bool areNodesConnected(T v, T w) {
         return this->uf.areVertexesConnected(v, w);
     }
@@ -185,4 +202,60 @@ public:
         return true;
     }
 
+    double maxFlow(vector<vector<T>> &paths, T source, T target) {
+        Graph<T> residualGraph(1);
+        residualGraph.nodes = this->nodes;
+        double max_flow = 0;
+        unordered_map<T, T> parent;
+        while (hasAugmentedPath(residualGraph, parent, source, target)) {
+            vector<T> path;
+            double flow = INF;
+            T v = target;
+            while (v != source) {
+                T u = parent[v];
+                if (flow > residualGraph.getEdgeWeight(u, v))
+                    flow = residualGraph.getEdgeWeight(u, v);
+                path.push_back(v);
+                v = u;
+            }
+            path.push_back(source);
+            reverse(path.begin(), path.end());
+            paths.push_back(path);
+            max_flow += flow;
+            v = target;
+            while (v != source) {
+                T u = parent[v];
+                residualGraph.addOrUpdateEdge(u, v, residualGraph.getEdgeWeight(u, v) - flow);
+                residualGraph.addOrUpdateEdge(v, u, residualGraph.getEdgeWeight(v, u) + flow);
+                v = u;
+            }
+        }
+        return max_flow;
+    }
+private:
+    bool hasAugmentedPath(Graph<T> &residualGraph, unordered_map<T, T> &parent, T source, T target) {
+        queue<T> q;
+        q.push(source);
+        unordered_set<T> visited;
+        visited.insert(source);
+        while (!q.empty()) {
+            T current = q.front(); q.pop();
+            for (auto neighbor : residualGraph.nodes[current]) {
+                T v = neighbor.first;
+                if (!visited.count(v) && neighbor.second > 0) {
+                    q.push(v);
+                    visited.insert(v);
+                    parent[v] = current;
+                    if (v == target)
+                        return true;
+                }
+            }
+        }
+        return false;
+    }
+
 };
+
+int main() {
+    return 0;
+}

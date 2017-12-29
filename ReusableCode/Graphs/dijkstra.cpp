@@ -3,27 +3,36 @@
 
 using namespace std;
 
+double INF = 1 << 30;
+
 template <class T> class Graph {
 
 public:
     //node -> value , neighbors -> value, weight
     unordered_map<T, unordered_map<T, double> > nodes;
     bool isDirectedGraph;
-    double INF = 1 << 30;
 
     // 0 -> undirected, 1 -> directed
     Graph(bool isDirectedGraph = false) {
         this->isDirectedGraph = isDirectedGraph;
     }
-    void addEdge(T v, T w, double cost = 0) {
+    void addOrUpdateEdge(T v, T w, double cost = 0) {
         this->nodes[v][v] = 0;
         this->nodes[w][w] = 0;
-        // consider the smallest edge in case of duplicates
-        if (!(this->nodes.count(v) && this->nodes[v].count(w)) || (cost < this->nodes[v][w]))
-            this->nodes[v][w] = cost;
+        this->nodes[v][w] = cost;
         if (isDirectedGraph)
             return;
-        this->nodes[w][v] = this->nodes[v][w];
+        this->nodes[w][v] = cost;
+    }
+
+    bool hasEdge(T v, T w) {
+        return this->nodes.count(v) ? this->nodes[v].count(w) : false;
+    }
+
+    double getEdgeWeight(T v, T w) {
+        if (hasEdge(v, w))
+            return this->nodes[v][w];
+        return INF;
     }
 
     void dijkstra(unordered_map<T, double> &distances, unordered_map<T, T> &parents, T source) {
@@ -58,7 +67,6 @@ void printMap (unordered_map<int, double> m) {
 }
 
 int main() {
-    double INF = 1 << 30;
     int T;
     cin >> T;
     for (int l = 1; l <= T; l++) {
@@ -68,7 +76,7 @@ int main() {
         Graph<int> g(0);
         while (m--) {
             cin >> a >> b >> w;
-            g.addEdge(a, b, w);
+            g.addOrUpdateEdge(a, b, w < g.getEdgeWeight(a, b) ? w : g.getEdgeWeight(a, b));
         }
         cout << "Case #" << l << ": ";
         unordered_map<int, double> distances;
