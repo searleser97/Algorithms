@@ -255,7 +255,7 @@ private:
         return false;
     }
 
-    private:
+private:
     bool hasUndirectedCycle(T node, T prevNode, unordered_set<T> &visited) {
         visited.insert(node);
         for (auto neighbor : this->nodes[node]) {
@@ -276,6 +276,30 @@ public:
                 if (hasUndirectedCycle(node.first, node.first, visited))
                     return true;
             }
+        return false;
+    }
+private:
+    bool hasDirectedCycle(T node, T prevNode, unordered_map<T, int> &visited) {
+        visited[node] = 1;
+        for (auto neighbor : this->nodes[node]) {
+            T v = neighbor.first;
+            if (v == node || v == prevNode || visited[v] == 2)
+                continue;
+            if (visited[v] == 1)
+                return true;
+            if (hasDirectedCycle(v, node, visited))
+                return true;
+        }
+        visited[node] = 2;
+        return false;
+    }
+public:
+    bool hasDirectedCycle() {
+        unordered_map<T, int> visited;
+        for (auto node : this->nodes)
+            if (!visited[node.first])
+                if (hasDirectedCycle(node.first, node.first, visited))
+                    return true;
         return false;
     }
 };

@@ -27,40 +27,40 @@ public:
     }
 
 private:
-    bool hasUndirectedCycle(T node, T prevNode, unordered_set<T> &visited) {
-        visited.insert(node);
+    bool hasDirectedCycle(T node, T prevNode, unordered_map<T, int> &visited) {
+        visited[node] = 1;
         for (auto neighbor : this->nodes[node]) {
             T v = neighbor.first;
-            if (v == node || v == prevNode)
+            if (v == node || v == prevNode || visited[v] == 2)
                 continue;
-            if (visited.count(v))
+            if (visited[v] == 1)
                 return true;
-            if (hasUndirectedCycle(v, node, visited))
+            if (hasDirectedCycle(v, node, visited))
                 return true;
         }
+        visited[node] = 2;
         return false;
     }
 public:
-    bool hasUndirectedCycle() {
-        unordered_set<T> visited;
+    bool hasDirectedCycle() {
+        unordered_map<T, int> visited;
         for (auto node : this->nodes)
-            if (!visited.count(node.first))
-                if (hasUndirectedCycle(node.first, node.first, visited))
+            if (!visited[node.first])
+                if (hasDirectedCycle(node.first, node.first, visited))
                     return true;
         return false;
     }
 };
 
 int main() {
-    Graph<int> g(0);
-    int n, m, u , v;
-    cin >> n >> m;
-    while (n--)
-        g.addOrUpdateEdge(n + 1, n + 1);
-    while (m--) {
-        cin >> u >> v;
-        g.addOrUpdateEdge(u, v);
-    }
-    cout << (g.hasUndirectedCycle() ? "cycle" : "no cycle") << endl;
+    Graph<int> g(1);
+    g.addOrUpdateEdge(1, 2);
+    g.addOrUpdateEdge(1, 3);
+    g.addOrUpdateEdge(2, 3);
+    g.addOrUpdateEdge(4, 1);
+    g.addOrUpdateEdge(4, 5);
+    g.addOrUpdateEdge(5, 6);
+    g.addOrUpdateEdge(6, 4);
+    cout << g.hasDirectedCycle() << endl;
     return 0;
 }
