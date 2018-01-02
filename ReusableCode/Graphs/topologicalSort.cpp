@@ -1,55 +1,27 @@
+// uva 10305 Ordering Tasks
 #include <bits/stdc++.h>
-
+#include "graphAPI.h"
 using namespace std;
+
 typedef int T;
-class Graph {
-public:
-    //node -> value , neighbors
-    unordered_map<T, unordered_set<T> > nodes;
-    bool isDirectedGraph;
 
-    Graph(bool isDirectedGraph) {
-        this->isDirectedGraph = isDirectedGraph;
-    }
-    void addEdge(T v, T w) {
-        this->nodes[v].insert(v);
-        this->nodes[w].insert(w);
-        this->nodes[v].insert(w);
-        if (!isDirectedGraph)
-            this->nodes[w].insert(v);
-    }
+void dfsTopologicalSort(Graph<T> &g, T current, int &index, unordered_set<T> &visited, vector<T> &topologicalSortedNodes) {
+    visited.insert(current);
+    for (auto neighbor : g.nodes[current])
+        if (!visited.count(neighbor.first))
+            dfsTopologicalSort(g, neighbor.first, index, visited, topologicalSortedNodes);
+    topologicalSortedNodes[index--] = current;
+}
 
-
-private:
-    void dfsTopologicalSort(unordered_set<T> neighbors, int &index, unordered_set<T> &visited, vector<T> &topologicalSortedNodes) {
-        for (auto neighbor : neighbors) {
-            if (!visited.count(neighbor)) {
-                visited.insert(neighbor);
-                dfsTopologicalSort(this->nodes[neighbor], index, visited, topologicalSortedNodes);
-                topologicalSortedNodes[index] = neighbor;
-                index--;
-            }
-        }
-    }
-
-public:
-    vector<T> topologicalSort() {
-        unordered_set<T> visited;
-        vector<T> topologicalSortedNodes(this->nodes.size());
-        int index = this->nodes.size() - 1;
-        for (auto edge : this->nodes) {
-            if (!visited.count(edge.first)) {
-                visited.insert(edge.first);
-                dfsTopologicalSort(edge.second, index, visited, topologicalSortedNodes);
-                topologicalSortedNodes[index] = edge.first;
-                index--;
-            }
-        }
-        return topologicalSortedNodes;
-    }
-
-};
-
+vector<T> topologicalSort(Graph<T> &g) {
+    unordered_set<T> visited;
+    int index = g.nodes.size() - 1;
+    vector<T> topologicalSortedNodes(g.nodes.size());
+    for (auto node : g.nodes)
+        if (!visited.count(node.first))
+            dfsTopologicalSort(g, node.first, index, visited, topologicalSortedNodes);
+    return topologicalSortedNodes;
+}
 
 void printv(vector<T> v) {
     if (v.size() == 0) {
@@ -57,35 +29,29 @@ void printv(vector<T> v) {
         return;
     }
     cout << "" << v[0];
-    for (int i = 1; i < v.size(); i++) {
+    for (int i = 1; i < v.size(); i++)
         cout << " " << v[i];
-    }
     cout << "" << endl;
 }
-
 
 int main() {
     while (true) {
         int n, m;
         T a, b;
-        Graph *g = new Graph(true);
+        Graph<T> g(1);
         cin >> n >> m;
         if (n == 0 && m == 0)
             break;
         while (n) {
-            g->addEdge(n, n);
+            g.addOrUpdateEdge(n, n);
             n--;
         }
         while (m) {
             cin >> a >> b;
-            g->addEdge(a, b);
+            g.addOrUpdateEdge(a, b);
             m--;
         }
-        printv(g->topologicalSort());
-        delete g;
+        printv(topologicalSort(g));
     }
-
-
-
     return 0;
 }

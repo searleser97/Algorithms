@@ -1,56 +1,34 @@
-#include<bits/stdc++.h>
-
+#include <bits/stdc++.h>
+#include "graphAPI.h"
 using namespace std;
 
-template <class T> class Graph {
-public:
-    //node -> value , neighbors -> value, weight
-    unordered_map<T, unordered_map<T, double> > nodes;
-    bool isDirectedGraph;
+typedef int T;
 
-    // 0 -> undirected, 1 -> directed
-    Graph(bool isDirectedGraph = false) {
-        this->isDirectedGraph = isDirectedGraph;
+bool hasDirectedCycle(Graph<T> &g, T node, T prevNode, unordered_map<T, int> &visited) {
+    visited[node] = 1;
+    for (auto neighbor : g.nodes[node]) {
+        T v = neighbor.first;
+        if (v == node || visited[v] == 2)
+            continue;
+        if (visited[v] == 1)
+            return true;
+        if (hasDirectedCycle(g, v, node, visited))
+            return true;
     }
+    visited[node] = 2;
+    return false;
+}
 
-    unordered_map<T, unordered_map<T, double> > getNodes() {
-        return this->nodes;
-    }
-
-    void addOrUpdateEdge(T v, T w, double cost = 0) {
-        this->nodes[v][v] = 0;
-        this->nodes[w][w] = 0;
-        this->nodes[v][w] = cost;
-        if (isDirectedGraph)
-            return;
-        this->nodes[w][v] = cost;
-    }
-
-private:
-    bool hasDirectedCycle(T node, T prevNode, unordered_map<T, int> &visited) {
-        visited[node] = 1;
-        for (auto neighbor : this->nodes[node]) {
-            T v = neighbor.first;
-            if (v == node || v == prevNode || visited[v] == 2)
-                continue;
-            if (visited[v] == 1)
+bool hasDirectedCycle(Graph<T> &g) {
+    unordered_map<T, int> visited;
+    for (auto node : g.nodes) {
+        T u = node.first;
+        if (!visited[u])
+            if (hasDirectedCycle(g, u, u, visited))
                 return true;
-            if (hasDirectedCycle(v, node, visited))
-                return true;
-        }
-        visited[node] = 2;
-        return false;
     }
-public:
-    bool hasDirectedCycle() {
-        unordered_map<T, int> visited;
-        for (auto node : this->nodes)
-            if (!visited[node.first])
-                if (hasDirectedCycle(node.first, node.first, visited))
-                    return true;
-        return false;
-    }
-};
+    return false;
+}
 
 int main() {
     Graph<int> g(1);
@@ -61,6 +39,6 @@ int main() {
     g.addOrUpdateEdge(4, 5);
     g.addOrUpdateEdge(5, 6);
     g.addOrUpdateEdge(6, 4);
-    cout << g.hasDirectedCycle() << endl;
+    cout << hasDirectedCycle(g) << endl;
     return 0;
 }

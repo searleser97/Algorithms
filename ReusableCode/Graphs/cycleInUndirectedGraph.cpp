@@ -1,55 +1,33 @@
-#include<bits/stdc++.h>
-
+#include <bits/stdc++.h>
+#include "graphAPI.h"
 using namespace std;
 
-template <class T> class Graph {
-public:
-    //node -> value , neighbors -> value, weight
-    unordered_map<T, unordered_map<T, double> > nodes;
-    bool isDirectedGraph;
+typedef int T;
 
-    // 0 -> undirected, 1 -> directed
-    Graph(bool isDirectedGraph = false) {
-        this->isDirectedGraph = isDirectedGraph;
+bool hasUndirectedCycle(Graph<T> &g, T node, T prevNode, unordered_set<T> &visited) {
+    visited.insert(node);
+    for (auto neighbor : g.nodes[node]) {
+        T v = neighbor.first;
+        if (v == node || v == prevNode)
+            continue;
+        if (visited.count(v))
+            return true;
+        if (hasUndirectedCycle(g, v, node, visited))
+            return true;
     }
+    return false;
+}
 
-    unordered_map<T, unordered_map<T, double> > getNodes() {
-        return this->nodes;
-    }
-
-    void addOrUpdateEdge(T v, T w, double cost = 0) {
-        this->nodes[v][v] = 0;
-        this->nodes[w][w] = 0;
-        this->nodes[v][w] = cost;
-        if (isDirectedGraph)
-            return;
-        this->nodes[w][v] = cost;
-    }
-
-private:
-    bool hasUndirectedCycle(T node, T prevNode, unordered_set<T> &visited) {
-        visited.insert(node);
-        for (auto neighbor : this->nodes[node]) {
-            T v = neighbor.first;
-            if (v == node || v == prevNode)
-                continue;
-            if (visited.count(v))
+bool hasUndirectedCycle(Graph<T> &g) {
+    unordered_set<T> visited;
+    for (auto node : g.nodes) {
+        T u = node.first;
+        if (!visited.count(u))
+            if (hasUndirectedCycle(g, u, u, visited))
                 return true;
-            if (hasUndirectedCycle(v, node, visited))
-                return true;
-        }
-        return false;
     }
-public:
-    bool hasUndirectedCycle() {
-        unordered_set<T> visited;
-        for (auto node : this->nodes)
-            if (!visited.count(node.first))
-                if (hasUndirectedCycle(node.first, node.first, visited))
-                    return true;
-        return false;
-    }
-};
+    return false;
+}
 
 int main() {
     Graph<int> g(0);
@@ -61,6 +39,6 @@ int main() {
         cin >> u >> v;
         g.addOrUpdateEdge(u, v);
     }
-    cout << (g.hasUndirectedCycle() ? "cycle" : "no cycle") << endl;
+    cout << (hasUndirectedCycle(g) ? "cycle" : "no cycle") << endl;
     return 0;
 }

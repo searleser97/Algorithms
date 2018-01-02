@@ -1,44 +1,33 @@
+// uva 459 - graph connectivity
 #include <bits/stdc++.h>
-
+#include "graphAPI.h"
 using namespace std;
-template <class T> class CC {
-public:
-    //node -> id , neighbors
-    unordered_map<T, unordered_set<T> > nodes;
 
-    void addEdge(T v, T w) {
-        this->nodes[v].insert(v);
-        this->nodes[w].insert(w);
-        this->nodes[v].insert(w);
-        this->nodes[w].insert(v);
-    }
+typedef char T;
 
-private:
-    void dfsCC(vector<T> &component, unordered_map<T, int> &nodeComponentIds, unordered_set<T> &visited, T actualNodeId, int &componentId) {
-        visited.insert(actualNodeId);
-        nodeComponentIds[actualNodeId] = componentId;
-        component.push_back(actualNodeId);
-        for (auto neighborId : this->nodes[actualNodeId])
-            if (!visited.count(neighborId))
-                dfsCC(component, nodeComponentIds, visited, neighborId, componentId);
-    }
+void dfsCC(Graph<T> &g, vector<T> &component, unordered_map<T, int> &nodeComponentIds, unordered_set<T> &visited, T actualNodeId, int &componentId) {
+    visited.insert(actualNodeId);
+    nodeComponentIds[actualNodeId] = componentId;
+    component.push_back(actualNodeId);
+    for (auto neighbor : g.nodes[actualNodeId])
+        if (!visited.count(neighbor.first))
+            dfsCC(g, component, nodeComponentIds, visited, neighbor.first, componentId);
+}
 
-public:
-    pair<vector<vector<T>>, unordered_map<T, int>> getConnectedComponents() {
-        unordered_map<T, int> nodeComponentIds;
-        vector<vector<T>> connectedComponents;
-        unordered_set<T> visited;
-        int componentId = 1;
-        for (auto node : this->nodes)
-            if (!visited.count(node.first)) {
-                vector<T> component;
-                dfsCC(component, nodeComponentIds, visited, node.first, componentId);
-                connectedComponents.push_back(component);
-                componentId++;
-            }
-        return {connectedComponents, nodeComponentIds};
-    }
-};
+pair<vector<vector<T>>, unordered_map<T, int>> getConnectedComponents(Graph<T> &g) {
+    unordered_map<T, int> nodeComponentIds;
+    vector<vector<T>> connectedComponents;
+    unordered_set<T> visited;
+    int componentId = 1;
+    for (auto node : g.nodes)
+        if (!visited.count(node.first)) {
+            vector<T> component;
+            dfsCC(g, component, nodeComponentIds, visited, node.first, componentId);
+            connectedComponents.push_back(component);
+            componentId++;
+        }
+    return {connectedComponents, nodeComponentIds};
+}
 
 string input() {
     string str;
@@ -51,18 +40,18 @@ int main() {
     t = stoi(input());
     input();
     while (t--) {
-        CC<char> g;
+        Graph<T> g;
         string highest;
         highest = input();
-        for (char i = highest[0]; i >= 'A'; i--)
-            g.addEdge(i, i);
+        for (T i = highest[0]; i >= 'A'; i--)
+            g.addNode(i);
         while (true) {
             string edge = input();
             if (edge == "")
                 break;
-            g.addEdge(edge[0], edge[1]);
+            g.addOrUpdateEdge(edge[0], edge[1]);
         }
-        pair<vector<vector<char>>, unordered_map<char, int>> connectedComponents = g.getConnectedComponents();
+        pair<vector<vector<T>>, unordered_map<T, int>> connectedComponents = getConnectedComponents(g);
         cout << connectedComponents.first.size() << endl;
         if (t != 0)
             cout << endl;

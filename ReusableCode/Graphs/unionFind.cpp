@@ -7,19 +7,28 @@ public:
     unordered_map<T, T> tree;
     // stores the size of each sub-tree
     unordered_map<T, int> treeSize;
+    int numberOfSets = 0;
+
+    bool hasNode(T node) {
+        return this->tree.count(node);
+    }
+
+    void addNode(T newNode) {
+        if (!hasNode(newNode)) {
+            this->tree[newNode] = newNode;
+            this->treeSize[newNode] = 1;
+            this->numberOfSets++;
+        }
+    }
+
     void addEdge(T v, T w) {
-        if (!this->tree.count(v)) {
-            this->tree[v] = v;
-            this->treeSize[v] = 1;
-        }
-        if (!this->tree.count(w)) {
-            this->tree[w] = w;
-            this->treeSize[w] = 1;
-        }
+        addNode(v);
+        addNode(w);
         T i = setGetRoot(v);
         T j = setGetRoot(w);
         if (i == j)
             return;
+        this->numberOfSets--;
         if (treeSize[i] < treeSize[j]) {
             this->tree[i] = j;
             this->treeSize[j] += this->treeSize[i];
@@ -29,10 +38,14 @@ public:
         }
     }
 
-    bool areVertexesConnected(T v, T w) {
+    bool areNodesConnected(T v, T w) {
         if (!this->tree.count(v) || !this->tree.count(w))
             return false;
         return setGetRoot(v) == setGetRoot(w);
+    }
+
+    int getNumberOfSets() {
+        return this->numberOfSets;
     }
 
 private:
@@ -81,7 +94,7 @@ vector<string> split(string str, char token) {
                 g->addEdge(stoi(vals[1]), stoi(vals[2]));
             }
             if (vals[0] == "q") {
-                if (g->areVertexesConnected(stoi(vals[1]), stoi(vals[2]))) {
+                if (g->areNodesConnected(stoi(vals[1]), stoi(vals[2]))) {
                     ac++;
                 }
                 else {

@@ -115,41 +115,7 @@ public:
 
     void printHeap () {
         for (Node n : this->pq)
-            cout << n.weight << " " << n.key << endl;
+            cout << n.key << " " << n.weight << endl;
     }
 
 };
-
-
-/*int main () {
-    indexedPriorityQueue<string> ipq;
-    ipq.push("Tushar", 3);
-    ipq.push("Ani", 4);
-    ipq.push("Vijay", 8);
-    ipq.push("Pramila", 10);
-    ipq.push("Roy", 5);
-    ipq.push("NTF", 6);
-    ipq.push("AFR", 2);
-    ipq.update("Pramila", 1);
-    ipq.printHeap();
-    ipq.printPositionInMap();
-    ipq.pop();
-    ipq.printHeap();
-    ipq.printPositionInMap();
-    ipq.pop();
-    ipq.printHeap();
-    ipq.printPositionInMap();
-    ipq.pop();
-    ipq.printHeap();
-    ipq.printPositionInMap();
-    ipq.pop();
-    ipq.printHeap();
-    ipq.printPositionInMap();
-    ipq.pop();
-    ipq.printHeap();
-    ipq.printPositionInMap();
-    ipq.pop();
-    ipq.printHeap();
-    ipq.printPositionInMap();
-    return 0;
-}*/
