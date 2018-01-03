@@ -40,6 +40,10 @@ public:
             this->nodes[newNode];
     }
 
+    T nextNode() {
+        return this->nodes.begin()->first;
+    }
+
     vector<Edge> getEdges() {
         return this->edges;
     }
