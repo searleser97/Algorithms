@@ -32,13 +32,13 @@ bool hasDirectedCycle(Graph<T> &g) {
 
 int main() {
     Graph<int> g(1);
-    g.addOrUpdateEdge(1, 2);
-    g.addOrUpdateEdge(1, 3);
-    g.addOrUpdateEdge(2, 3);
-    g.addOrUpdateEdge(4, 1);
-    g.addOrUpdateEdge(4, 5);
-    g.addOrUpdateEdge(5, 6);
-    g.addOrUpdateEdge(6, 4);
+    g.addEdge(1, 2);
+    g.addEdge(1, 3);
+    g.addEdge(2, 3);
+    g.addEdge(4, 1);
+    g.addEdge(4, 5);
+    g.addEdge(5, 6);
+    g.addEdge(6, 4);
     cout << hasDirectedCycle(g) << endl;
     return 0;
 }

@@ -49,8 +49,8 @@ double maxFlow(Graph<T> &g, vector<vector<T>> &paths, T source, T target) {
         v = target;
         while (v != source) {
             T u = parent[v];
-            residualGraph.addOrUpdateEdge(u, v, residualGraph.getEdgeWeight(u, v) - flow);
-            residualGraph.addOrUpdateEdge(v, u, residualGraph.getEdgeWeight(v, u) + flow);
+            residualGraph.addEdge(u, v, residualGraph.getEdgeWeight(u, v) - flow);
+            residualGraph.addEdge(v, u, residualGraph.getEdgeWeight(v, u) + flow);
             v = u;
         }
     }
@@ -69,9 +69,9 @@ int main() {
         while (c--) {
             cin >> u >> v >> w;
             if (g.hasEdge(u, v))
-                g.addOrUpdateEdge(u, v, g.getEdgeWeight(u, v) + w);
+                g.addEdge(u, v, g.getEdgeWeight(u, v) + w);
             else
-                g.addOrUpdateEdge(u, v, w);
+                g.addEdge(u, v, w);
         }
         vector<vector<int>> parents;
         cout << "Network " << i << endl;

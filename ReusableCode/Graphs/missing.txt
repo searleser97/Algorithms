@@ -1,4 +1,5 @@
 flood fill
-strong components tarjan's algorithm
+find bridges
 Bipartite Graph Check
 floyd warshall
+all simple cycles in directed graph johnsons

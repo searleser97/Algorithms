@@ -8,19 +8,28 @@
     \PYG{n}{unordered\PYGZus{}map}\PYG{o}{\PYGZlt{}}\PYG{n}{T}\PYG{p}{,} \PYG{n}{T}\PYG{o}{\PYGZgt{}} \PYG{n}{tree}\PYG{p}{;}
     \PYG{c+c1}{// stores the size of each sub\PYGZhy{}tree}
     \PYG{n}{unordered\PYGZus{}map}\PYG{o}{\PYGZlt{}}\PYG{n}{T}\PYG{p}{,} \PYG{k+kt}{int}\PYG{o}{\PYGZgt{}} \PYG{n}{treeSize}\PYG{p}{;}
+    \PYG{k+kt}{int} \PYG{n}{numberOfSets} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{;}
+
+    \PYG{k+kt}{bool} \PYG{n+nf}{hasNode}\PYG{p}{(}\PYG{n}{T} \PYG{n}{node}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+        \PYG{k}{return} \PYG{k}{this}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{tree}\PYG{p}{.}\PYG{n}{count}\PYG{p}{(}\PYG{n}{node}\PYG{p}{);}
+    \PYG{p}{\PYGZcb{}}
+
+    \PYG{k+kt}{void} \PYG{n+nf}{addNode}\PYG{p}{(}\PYG{n}{T} \PYG{n}{newNode}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+        \PYG{k}{if} \PYG{p}{(}\PYG{o}{!}\PYG{n}{hasNode}\PYG{p}{(}\PYG{n}{newNode}\PYG{p}{))} \PYG{p}{\PYGZob{}}
+            \PYG{k}{this}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{tree}\PYG{p}{[}\PYG{n}{newNode}\PYG{p}{]} \PYG{o}{=} \PYG{n}{newNode}\PYG{p}{;}
+            \PYG{k}{this}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{treeSize}\PYG{p}{[}\PYG{n}{newNode}\PYG{p}{]} \PYG{o}{=} \PYG{l+m+mi}{1}\PYG{p}{;}
+            \PYG{k}{this}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{numberOfSets}\PYG{o}{++}\PYG{p}{;}
+        \PYG{p}{\PYGZcb{}}
+    \PYG{p}{\PYGZcb{}}
+
     \PYG{k+kt}{void} \PYG{n+nf}{addEdge}\PYG{p}{(}\PYG{n}{T} \PYG{n}{v}\PYG{p}{,} \PYG{n}{T} \PYG{n}{w}\PYG{p}{)} \PYG{p}{\PYGZob{}}
-        \PYG{k}{if} \PYG{p}{(}\PYG{o}{!}\PYG{k}{this}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{tree}\PYG{p}{.}\PYG{n}{count}\PYG{p}{(}\PYG{n}{v}\PYG{p}{))} \PYG{p}{\PYGZob{}}
-            \PYG{k}{this}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{tree}\PYG{p}{[}\PYG{n}{v}\PYG{p}{]} \PYG{o}{=} \PYG{n}{v}\PYG{p}{;}
-            \PYG{k}{this}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{treeSize}\PYG{p}{[}\PYG{n}{v}\PYG{p}{]} \PYG{o}{=} \PYG{l+m+mi}{1}\PYG{p}{;}
-        \PYG{p}{\PYGZcb{}}
-        \PYG{k}{if} \PYG{p}{(}\PYG{o}{!}\PYG{k}{this}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{tree}\PYG{p}{.}\PYG{n}{count}\PYG{p}{(}\PYG{n}{w}\PYG{p}{))} \PYG{p}{\PYGZob{}}
-            \PYG{k}{this}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{tree}\PYG{p}{[}\PYG{n}{w}\PYG{p}{]} \PYG{o}{=} \PYG{n}{w}\PYG{p}{;}
-            \PYG{k}{this}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{treeSize}\PYG{p}{[}\PYG{n}{w}\PYG{p}{]} \PYG{o}{=} \PYG{l+m+mi}{1}\PYG{p}{;}
-        \PYG{p}{\PYGZcb{}}
+        \PYG{n}{addNode}\PYG{p}{(}\PYG{n}{v}\PYG{p}{);}
+        \PYG{n}{addNode}\PYG{p}{(}\PYG{n}{w}\PYG{p}{);}
         \PYG{n}{T} \PYG{n}{i} \PYG{o}{=} \PYG{n}{setGetRoot}\PYG{p}{(}\PYG{n}{v}\PYG{p}{);}
         \PYG{n}{T} \PYG{n}{j} \PYG{o}{=} \PYG{n}{setGetRoot}\PYG{p}{(}\PYG{n}{w}\PYG{p}{);}
         \PYG{k}{if} \PYG{p}{(}\PYG{n}{i} \PYG{o}{==} \PYG{n}{j}\PYG{p}{)}
             \PYG{k}{return}\PYG{p}{;}
+        \PYG{k}{this}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{numberOfSets}\PYG{o}{\PYGZhy{}\PYGZhy{}}\PYG{p}{;}
         \PYG{k}{if} \PYG{p}{(}\PYG{n}{treeSize}\PYG{p}{[}\PYG{n}{i}\PYG{p}{]} \PYG{o}{\PYGZlt{}} \PYG{n}{treeSize}\PYG{p}{[}\PYG{n}{j}\PYG{p}{])} \PYG{p}{\PYGZob{}}
             \PYG{k}{this}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{tree}\PYG{p}{[}\PYG{n}{i}\PYG{p}{]} \PYG{o}{=} \PYG{n}{j}\PYG{p}{;}
             \PYG{k}{this}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{treeSize}\PYG{p}{[}\PYG{n}{j}\PYG{p}{]} \PYG{o}{+=} \PYG{k}{this}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{treeSize}\PYG{p}{[}\PYG{n}{i}\PYG{p}{];}
@@ -30,10 +39,14 @@
         \PYG{p}{\PYGZcb{}}
     \PYG{p}{\PYGZcb{}}
 
-    \PYG{k+kt}{bool} \PYG{n+nf}{areVertexesConnected}\PYG{p}{(}\PYG{n}{T} \PYG{n}{v}\PYG{p}{,} \PYG{n}{T} \PYG{n}{w}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+    \PYG{k+kt}{bool} \PYG{n+nf}{areNodesConnected}\PYG{p}{(}\PYG{n}{T} \PYG{n}{v}\PYG{p}{,} \PYG{n}{T} \PYG{n}{w}\PYG{p}{)} \PYG{p}{\PYGZob{}}
         \PYG{k}{if} \PYG{p}{(}\PYG{o}{!}\PYG{k}{this}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{tree}\PYG{p}{.}\PYG{n}{count}\PYG{p}{(}\PYG{n}{v}\PYG{p}{)} \PYG{o}{||} \PYG{o}{!}\PYG{k}{this}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{tree}\PYG{p}{.}\PYG{n}{count}\PYG{p}{(}\PYG{n}{w}\PYG{p}{))}
             \PYG{k}{return} \PYG{n+nb}{false}\PYG{p}{;}
         \PYG{k}{return} \PYG{n}{setGetRoot}\PYG{p}{(}\PYG{n}{v}\PYG{p}{)} \PYG{o}{==} \PYG{n}{setGetRoot}\PYG{p}{(}\PYG{n}{w}\PYG{p}{);}
+    \PYG{p}{\PYGZcb{}}
+
+    \PYG{k+kt}{int} \PYG{n+nf}{getNumberOfSets}\PYG{p}{()} \PYG{p}{\PYGZob{}}
+        \PYG{k}{return} \PYG{k}{this}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{numberOfSets}\PYG{p}{;}
     \PYG{p}{\PYGZcb{}}
 
 \PYG{k}{private}\PYG{o}{:}
@@ -82,7 +95,7 @@
 \PYG{c+cm}{                g\PYGZhy{}\PYGZgt{}addEdge(stoi(vals[1]), stoi(vals[2]));}
 \PYG{c+cm}{            \PYGZcb{}}
 \PYG{c+cm}{            if (vals[0] == \PYGZdq{}q\PYGZdq{}) \PYGZob{}}
-\PYG{c+cm}{                if (g\PYGZhy{}\PYGZgt{}areVertexesConnected(stoi(vals[1]), stoi(vals[2]))) \PYGZob{}}
+\PYG{c+cm}{                if (g\PYGZhy{}\PYGZgt{}areNodesConnected(stoi(vals[1]), stoi(vals[2]))) \PYGZob{}}
 \PYG{c+cm}{                    ac++;}
 \PYG{c+cm}{                \PYGZcb{}}
 \PYG{c+cm}{                else \PYGZob{}}

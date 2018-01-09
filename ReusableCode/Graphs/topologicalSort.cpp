@@ -43,12 +43,12 @@ int main() {
         if (n == 0 && m == 0)
             break;
         while (n) {
-            g.addOrUpdateEdge(n, n);
+            g.addEdge(n, n);
             n--;
         }
         while (m) {
             cin >> a >> b;
-            g.addOrUpdateEdge(a, b);
+            g.addEdge(a, b);
             m--;
         }
         printv(topologicalSort(g));

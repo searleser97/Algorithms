@@ -116,42 +116,8 @@
 
     \PYG{k+kt}{void} \PYG{n}{printHeap} \PYG{p}{()} \PYG{p}{\PYGZob{}}
         \PYG{k}{for} \PYG{p}{(}\PYG{n}{Node} \PYG{n+nl}{n} \PYG{p}{:} \PYG{k}{this}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{pq}\PYG{p}{)}
-            \PYG{n}{cout} \PYG{o}{\PYGZlt{}\PYGZlt{}} \PYG{n}{n}\PYG{p}{.}\PYG{n}{weight} \PYG{o}{\PYGZlt{}\PYGZlt{}} \PYG{l+s}{\PYGZdq{} \PYGZdq{}} \PYG{o}{\PYGZlt{}\PYGZlt{}} \PYG{n}{n}\PYG{p}{.}\PYG{n}{key} \PYG{o}{\PYGZlt{}\PYGZlt{}} \PYG{n}{endl}\PYG{p}{;}
+            \PYG{n}{cout} \PYG{o}{\PYGZlt{}\PYGZlt{}} \PYG{n}{n}\PYG{p}{.}\PYG{n}{key} \PYG{o}{\PYGZlt{}\PYGZlt{}} \PYG{l+s}{\PYGZdq{} \PYGZdq{}} \PYG{o}{\PYGZlt{}\PYGZlt{}} \PYG{n}{n}\PYG{p}{.}\PYG{n}{weight} \PYG{o}{\PYGZlt{}\PYGZlt{}} \PYG{n}{endl}\PYG{p}{;}
     \PYG{p}{\PYGZcb{}}
 
 \PYG{p}{\PYGZcb{};}
-
-
-\PYG{c+cm}{/*int main () \PYGZob{}}
-\PYG{c+cm}{    indexedPriorityQueue\PYGZlt{}string\PYGZgt{} ipq;}
-\PYG{c+cm}{    ipq.push(\PYGZdq{}Tushar\PYGZdq{}, 3);}
-\PYG{c+cm}{    ipq.push(\PYGZdq{}Ani\PYGZdq{}, 4);}
-\PYG{c+cm}{    ipq.push(\PYGZdq{}Vijay\PYGZdq{}, 8);}
-\PYG{c+cm}{    ipq.push(\PYGZdq{}Pramila\PYGZdq{}, 10);}
-\PYG{c+cm}{    ipq.push(\PYGZdq{}Roy\PYGZdq{}, 5);}
-\PYG{c+cm}{    ipq.push(\PYGZdq{}NTF\PYGZdq{}, 6);}
-\PYG{c+cm}{    ipq.push(\PYGZdq{}AFR\PYGZdq{}, 2);}
-\PYG{c+cm}{    ipq.update(\PYGZdq{}Pramila\PYGZdq{}, 1);}
-\PYG{c+cm}{    ipq.printHeap();}
-\PYG{c+cm}{    ipq.printPositionInMap();}
-\PYG{c+cm}{    ipq.pop();}
-\PYG{c+cm}{    ipq.printHeap();}
-\PYG{c+cm}{    ipq.printPositionInMap();}
-\PYG{c+cm}{    ipq.pop();}
-\PYG{c+cm}{    ipq.printHeap();}
-\PYG{c+cm}{    ipq.printPositionInMap();}
-\PYG{c+cm}{    ipq.pop();}
-\PYG{c+cm}{    ipq.printHeap();}
-\PYG{c+cm}{    ipq.printPositionInMap();}
-\PYG{c+cm}{    ipq.pop();}
-\PYG{c+cm}{    ipq.printHeap();}
-\PYG{c+cm}{    ipq.printPositionInMap();}
-\PYG{c+cm}{    ipq.pop();}
-\PYG{c+cm}{    ipq.printHeap();}
-\PYG{c+cm}{    ipq.printPositionInMap();}
-\PYG{c+cm}{    ipq.pop();}
-\PYG{c+cm}{    ipq.printHeap();}
-\PYG{c+cm}{    ipq.printPositionInMap();}
-\PYG{c+cm}{    return 0;}
-\PYG{c+cm}{\PYGZcb{}*/}
 \end{Verbatim}

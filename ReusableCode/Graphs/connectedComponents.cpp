@@ -49,7 +49,7 @@ int main() {
             string edge = input();
             if (edge == "")
                 break;
-            g.addOrUpdateEdge(edge[0], edge[1]);
+            g.addEdge(edge[0], edge[1]);
         }
         pair<vector<vector<T>>, unordered_map<T, int>> connectedComponents = getConnectedComponents(g);
         cout << connectedComponents.first.size() << endl;

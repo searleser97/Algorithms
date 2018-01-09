@@ -1,0 +1,82 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{// uva 247 \PYGZhy{} Calling Circles}
+\PYG{c+cp}{\PYGZsh{}include} \PYG{c+cpf}{\PYGZlt{}bits/stdc++.h\PYGZgt{}}
+\PYG{c+cp}{\PYGZsh{}include} \PYG{c+cpf}{\PYGZdq{}graphAPI.h\PYGZdq{}}
+\PYG{k}{using} \PYG{k}{namespace} \PYG{n}{std}\PYG{p}{;}
+
+\PYG{k}{typedef} \PYG{n}{string} \PYG{n}{T}\PYG{p}{;}
+
+\PYG{k+kt}{void} \PYG{n+nf}{dfsStronglyConnectedComponents}\PYG{p}{(}\PYG{n}{Graph}\PYG{o}{\PYGZlt{}}\PYG{n}{T}\PYG{o}{\PYGZgt{}} \PYG{o}{\PYGZam{}}\PYG{n}{g}\PYG{p}{,} \PYG{n}{T} \PYG{n}{node}\PYG{p}{,} \PYG{k+kt}{int} \PYG{o}{\PYGZam{}}\PYG{n}{time}\PYG{p}{,}
+                                    \PYG{n}{unordered\PYGZus{}map}\PYG{o}{\PYGZlt{}}\PYG{n}{T}\PYG{p}{,} \PYG{k+kt}{int}\PYG{o}{\PYGZgt{}} \PYG{o}{\PYGZam{}}\PYG{n}{visitedTime}\PYG{p}{,} \PYG{n}{unordered\PYGZus{}map}\PYG{o}{\PYGZlt{}}\PYG{n}{T}\PYG{p}{,} \PYG{k+kt}{int}\PYG{o}{\PYGZgt{}} \PYG{o}{\PYGZam{}}\PYG{n}{lowTime}\PYG{p}{,}
+                                    \PYG{n}{vector}\PYG{o}{\PYGZlt{}}\PYG{n}{vector}\PYG{o}{\PYGZlt{}}\PYG{n}{T}\PYG{o}{\PYGZgt{}\PYGZgt{}} \PYG{o}{\PYGZam{}}\PYG{n}{stronglyConnectedComponents}\PYG{p}{,} \PYG{n}{stack}\PYG{o}{\PYGZlt{}}\PYG{n}{T}\PYG{o}{\PYGZgt{}} \PYG{o}{\PYGZam{}}\PYG{n}{Stack}\PYG{p}{,}
+                                    \PYG{n}{unordered\PYGZus{}set}\PYG{o}{\PYGZlt{}}\PYG{n}{T}\PYG{o}{\PYGZgt{}} \PYG{o}{\PYGZam{}}\PYG{n}{inStack}\PYG{p}{,} \PYG{n}{unordered\PYGZus{}set}\PYG{o}{\PYGZlt{}}\PYG{n}{T}\PYG{o}{\PYGZgt{}} \PYG{o}{\PYGZam{}}\PYG{n}{visited}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+    \PYG{n}{visited}\PYG{p}{.}\PYG{n}{insert}\PYG{p}{(}\PYG{n}{node}\PYG{p}{);}
+    \PYG{n}{visitedTime}\PYG{p}{[}\PYG{n}{node}\PYG{p}{]} \PYG{o}{=} \PYG{n}{time}\PYG{p}{;}
+    \PYG{n}{lowTime}\PYG{p}{[}\PYG{n}{node}\PYG{p}{]} \PYG{o}{=} \PYG{n}{time}\PYG{p}{;}
+    \PYG{n}{time}\PYG{o}{++}\PYG{p}{;}
+    \PYG{n}{Stack}\PYG{p}{.}\PYG{n}{push}\PYG{p}{(}\PYG{n}{node}\PYG{p}{);}
+    \PYG{n}{inStack}\PYG{p}{.}\PYG{n}{insert}\PYG{p}{(}\PYG{n}{node}\PYG{p}{);}
+    \PYG{k}{for} \PYG{p}{(}\PYG{k}{const} \PYG{k}{auto} \PYG{o}{\PYGZam{}}\PYG{n+nl}{neighbor} \PYG{p}{:} \PYG{n}{g}\PYG{p}{.}\PYG{n}{nodes}\PYG{p}{[}\PYG{n}{node}\PYG{p}{])} \PYG{p}{\PYGZob{}}
+        \PYG{n}{T} \PYG{n}{v} \PYG{o}{=} \PYG{n}{neighbor}\PYG{p}{.}\PYG{n}{first}\PYG{p}{;}
+        \PYG{k}{if} \PYG{p}{(}\PYG{o}{!}\PYG{n}{visited}\PYG{p}{.}\PYG{n}{count}\PYG{p}{(}\PYG{n}{v}\PYG{p}{))} \PYG{p}{\PYGZob{}}
+            \PYG{n}{dfsStronglyConnectedComponents}\PYG{p}{(}\PYG{n}{g}\PYG{p}{,} \PYG{n}{v}\PYG{p}{,} \PYG{n}{time}\PYG{p}{,} \PYG{n}{visitedTime}\PYG{p}{,} \PYG{n}{lowTime}\PYG{p}{,} \PYG{n}{stronglyConnectedComponents}\PYG{p}{,} \PYG{n}{Stack}\PYG{p}{,} \PYG{n}{inStack}\PYG{p}{,} \PYG{n}{visited}\PYG{p}{);}
+            \PYG{n}{lowTime}\PYG{p}{[}\PYG{n}{node}\PYG{p}{]} \PYG{o}{=} \PYG{n}{min}\PYG{p}{(}\PYG{n}{lowTime}\PYG{p}{[}\PYG{n}{node}\PYG{p}{],} \PYG{n}{lowTime}\PYG{p}{[}\PYG{n}{v}\PYG{p}{]);}
+        \PYG{p}{\PYGZcb{}} \PYG{k}{else} \PYG{k}{if} \PYG{p}{(}\PYG{n}{inStack}\PYG{p}{.}\PYG{n}{count}\PYG{p}{(}\PYG{n}{v}\PYG{p}{))}
+            \PYG{n}{lowTime}\PYG{p}{[}\PYG{n}{node}\PYG{p}{]} \PYG{o}{=} \PYG{n}{min}\PYG{p}{(}\PYG{n}{lowTime}\PYG{p}{[}\PYG{n}{node}\PYG{p}{],} \PYG{n}{visitedTime}\PYG{p}{[}\PYG{n}{v}\PYG{p}{]);}
+    \PYG{p}{\PYGZcb{}}
+    \PYG{k}{if} \PYG{p}{(}\PYG{n}{visitedTime}\PYG{p}{[}\PYG{n}{node}\PYG{p}{]} \PYG{o}{==} \PYG{n}{lowTime}\PYG{p}{[}\PYG{n}{node}\PYG{p}{])} \PYG{p}{\PYGZob{}}
+        \PYG{n}{vector}\PYG{o}{\PYGZlt{}}\PYG{n}{T}\PYG{o}{\PYGZgt{}} \PYG{n}{stronglyConnectedComponent}\PYG{p}{;}
+        \PYG{n}{T} \PYG{n}{u}\PYG{p}{;}
+        \PYG{k}{while} \PYG{p}{(}\PYG{n+nb}{true}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+            \PYG{n}{u} \PYG{o}{=} \PYG{n}{Stack}\PYG{p}{.}\PYG{n}{top}\PYG{p}{();} \PYG{n}{Stack}\PYG{p}{.}\PYG{n}{pop}\PYG{p}{();}
+            \PYG{n}{inStack}\PYG{p}{.}\PYG{n}{erase}\PYG{p}{(}\PYG{n}{u}\PYG{p}{);}
+            \PYG{n}{stronglyConnectedComponent}\PYG{p}{.}\PYG{n}{push\PYGZus{}back}\PYG{p}{(}\PYG{n}{u}\PYG{p}{);}
+            \PYG{k}{if} \PYG{p}{(}\PYG{n}{u} \PYG{o}{==} \PYG{n}{node}\PYG{p}{)}
+                \PYG{k}{break}\PYG{p}{;}
+        \PYG{p}{\PYGZcb{}}
+        \PYG{n}{stronglyConnectedComponents}\PYG{p}{.}\PYG{n}{push\PYGZus{}back}\PYG{p}{(}\PYG{n}{stronglyConnectedComponent}\PYG{p}{);}
+    \PYG{p}{\PYGZcb{}}
+\PYG{p}{\PYGZcb{}}
+
+\PYG{n}{vector}\PYG{o}{\PYGZlt{}}\PYG{n}{vector}\PYG{o}{\PYGZlt{}}\PYG{n}{T}\PYG{o}{\PYGZgt{}\PYGZgt{}} \PYG{n}{getStronglyConnectedComponents}\PYG{p}{(}\PYG{n}{Graph}\PYG{o}{\PYGZlt{}}\PYG{n}{T}\PYG{o}{\PYGZgt{}} \PYG{o}{\PYGZam{}}\PYG{n}{g}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+    \PYG{n}{unordered\PYGZus{}set}\PYG{o}{\PYGZlt{}}\PYG{n}{T}\PYG{o}{\PYGZgt{}} \PYG{n}{visited}\PYG{p}{;}
+    \PYG{n}{vector}\PYG{o}{\PYGZlt{}}\PYG{n}{vector}\PYG{o}{\PYGZlt{}}\PYG{n}{T}\PYG{o}{\PYGZgt{}\PYGZgt{}} \PYG{n}{stronglyConnectedComponents}\PYG{p}{;}
+    \PYG{n}{unordered\PYGZus{}map}\PYG{o}{\PYGZlt{}}\PYG{n}{T}\PYG{p}{,} \PYG{k+kt}{int}\PYG{o}{\PYGZgt{}} \PYG{n}{visitedTime}\PYG{p}{,} \PYG{n}{lowTime}\PYG{p}{;}
+    \PYG{n}{unordered\PYGZus{}set}\PYG{o}{\PYGZlt{}}\PYG{n}{T}\PYG{o}{\PYGZgt{}} \PYG{n}{inStack}\PYG{p}{;}
+    \PYG{n}{stack}\PYG{o}{\PYGZlt{}}\PYG{n}{T}\PYG{o}{\PYGZgt{}} \PYG{n}{Stack}\PYG{p}{;}
+    \PYG{k+kt}{int} \PYG{n}{time} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{;}
+    \PYG{k}{for} \PYG{p}{(}\PYG{k}{const} \PYG{k}{auto} \PYG{o}{\PYGZam{}}\PYG{n+nl}{node} \PYG{p}{:} \PYG{n}{g}\PYG{p}{.}\PYG{n}{nodes}\PYG{p}{)}
+        \PYG{k}{if} \PYG{p}{(}\PYG{o}{!}\PYG{n}{visited}\PYG{p}{.}\PYG{n}{count}\PYG{p}{(}\PYG{n}{node}\PYG{p}{.}\PYG{n}{first}\PYG{p}{))}
+            \PYG{n}{dfsStronglyConnectedComponents}\PYG{p}{(}\PYG{n}{g}\PYG{p}{,} \PYG{n}{node}\PYG{p}{.}\PYG{n}{first}\PYG{p}{,} \PYG{n}{time}\PYG{p}{,} \PYG{n}{visitedTime}\PYG{p}{,} \PYG{n}{lowTime}\PYG{p}{,} \PYG{n}{stronglyConnectedComponents}\PYG{p}{,} \PYG{n}{Stack}\PYG{p}{,} \PYG{n}{inStack}\PYG{p}{,} \PYG{n}{visited}\PYG{p}{);}
+    \PYG{k}{return} \PYG{n}{stronglyConnectedComponents}\PYG{p}{;}
+\PYG{p}{\PYGZcb{}}
+
+
+\PYG{k+kt}{int} \PYG{n}{main}\PYG{p}{()} \PYG{p}{\PYGZob{}}
+    \PYG{k+kt}{int} \PYG{n}{n}\PYG{p}{,} \PYG{n}{m}\PYG{p}{,} \PYG{n}{nT} \PYG{o}{=} \PYG{l+m+mi}{1}\PYG{p}{;}
+    \PYG{k}{while} \PYG{p}{(}\PYG{n+nb}{true}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+        \PYG{n}{cin} \PYG{o}{\PYGZgt{}\PYGZgt{}} \PYG{n}{n} \PYG{o}{\PYGZgt{}\PYGZgt{}} \PYG{n}{m}\PYG{p}{;}
+        \PYG{k}{if} \PYG{p}{(}\PYG{o}{!}\PYG{n}{n} \PYG{o}{\PYGZam{}\PYGZam{}} \PYG{o}{!}\PYG{n}{m}\PYG{p}{)}
+            \PYG{k}{return} \PYG{l+m+mi}{0}\PYG{p}{;}
+        \PYG{k}{if} \PYG{p}{(}\PYG{n}{nT} \PYG{o}{!=} \PYG{l+m+mi}{1}\PYG{p}{)}
+            \PYG{n}{cout} \PYG{o}{\PYGZlt{}\PYGZlt{}} \PYG{n}{endl}\PYG{p}{;}
+        \PYG{n}{Graph}\PYG{o}{\PYGZlt{}}\PYG{n}{T}\PYG{o}{\PYGZgt{}} \PYG{n}{g}\PYG{p}{(}\PYG{l+m+mi}{1}\PYG{p}{);}
+        \PYG{n}{string} \PYG{n}{from}\PYG{p}{,} \PYG{n}{to}\PYG{p}{;}
+        \PYG{k}{while} \PYG{p}{(}\PYG{n}{m}\PYG{o}{\PYGZhy{}\PYGZhy{}}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+            \PYG{n}{cin} \PYG{o}{\PYGZgt{}\PYGZgt{}} \PYG{n}{from} \PYG{o}{\PYGZgt{}\PYGZgt{}} \PYG{n}{to}\PYG{p}{;}
+            \PYG{n}{g}\PYG{p}{.}\PYG{n}{addOrUpdateEdge}\PYG{p}{(}\PYG{n}{from}\PYG{p}{,} \PYG{n}{to}\PYG{p}{);}
+        \PYG{p}{\PYGZcb{}}
+
+        \PYG{n}{vector}\PYG{o}{\PYGZlt{}}\PYG{n}{vector}\PYG{o}{\PYGZlt{}}\PYG{n}{T}\PYG{o}{\PYGZgt{}\PYGZgt{}} \PYG{n}{scc} \PYG{o}{=} \PYG{n}{getStronglyConnectedComponents}\PYG{p}{(}\PYG{n}{g}\PYG{p}{);}
+        \PYG{n}{cout} \PYG{o}{\PYGZlt{}\PYGZlt{}} \PYG{l+s}{\PYGZdq{}Calling circles for data set \PYGZdq{}} \PYG{o}{\PYGZlt{}\PYGZlt{}} \PYG{n}{nT} \PYG{o}{\PYGZlt{}\PYGZlt{}} \PYG{l+s}{\PYGZdq{}:\PYGZdq{}} \PYG{o}{\PYGZlt{}\PYGZlt{}} \PYG{n}{endl}\PYG{p}{;}
+        \PYG{k}{for} \PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{i} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{;} \PYG{n}{i} \PYG{o}{\PYGZlt{}} \PYG{n}{scc}\PYG{p}{.}\PYG{n}{size}\PYG{p}{();} \PYG{n}{i}\PYG{o}{++}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+            \PYG{n}{cout} \PYG{o}{\PYGZlt{}\PYGZlt{}} \PYG{n}{scc}\PYG{p}{[}\PYG{n}{i}\PYG{p}{][}\PYG{l+m+mi}{0}\PYG{p}{];}
+            \PYG{k}{for} \PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{j} \PYG{o}{=} \PYG{l+m+mi}{1}\PYG{p}{;} \PYG{n}{j} \PYG{o}{\PYGZlt{}} \PYG{n}{scc}\PYG{p}{[}\PYG{n}{i}\PYG{p}{].}\PYG{n}{size}\PYG{p}{();} \PYG{n}{j}\PYG{o}{++}\PYG{p}{)}
+                \PYG{n}{cout} \PYG{o}{\PYGZlt{}\PYGZlt{}} \PYG{l+s}{\PYGZdq{}, \PYGZdq{}} \PYG{o}{\PYGZlt{}\PYGZlt{}} \PYG{n}{scc}\PYG{p}{[}\PYG{n}{i}\PYG{p}{][}\PYG{n}{j}\PYG{p}{];}
+            \PYG{n}{cout} \PYG{o}{\PYGZlt{}\PYGZlt{}} \PYG{n}{endl}\PYG{p}{;}
+        \PYG{p}{\PYGZcb{}}
+        \PYG{n}{nT}\PYG{o}{++}\PYG{p}{;}
+    \PYG{p}{\PYGZcb{}}
+    \PYG{k}{return} \PYG{l+m+mi}{0}\PYG{p}{;}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

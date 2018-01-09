@@ -49,7 +49,7 @@ int main() {
         cin >> n >> m;
         while (m--) {
             cin >> x >> y >> t;
-            g.addOrUpdateEdge(x, y, t);
+            g.addEdge(x, y, t);
         }
         if (!bellmanFord(g, distances, parents, 0))
             cout << "possible" << endl;

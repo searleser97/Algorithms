@@ -4,11 +4,11 @@ using namespace std;
 
 double INF = 1 << 30;
 
-class Edge {
+template <class T> class Edge {
 public:
-    int v, w;
+    T v, w;
     double weight;
-    Edge(int v, int w, double weight = 0) {
+    Edge(T v, T w, double weight = 0) {
         this->v = v;
         this->w = w;
         this->weight = weight;
@@ -20,7 +20,7 @@ public:
     //node -> value , neighbors -> value, weight
     unordered_map<T, unordered_map<T, double> > nodes;
     bool isDirectedGraph;
-    vector<Edge> edges;
+    vector<Edge<T>> edges;
 
     // 0 -> undirected, 1 -> directed
     Graph(bool isDirectedGraph = false) {
@@ -44,7 +44,7 @@ public:
         return this->nodes.begin()->first;
     }
 
-    vector<Edge> getEdges() {
+    vector<Edge<T>> getEdges() {
         return this->edges;
     }
 
@@ -58,15 +58,15 @@ public:
         return INF;
     }
 
-    void addOrUpdateEdge(T v, T w, double cost = 0) {
+    void addEdge(T v, T w, double cost = 0) {
         if (!hasNode(v)) addNode(v);
         if (!hasNode(w)) addNode(w);
         this->nodes[v][w] = cost;
-        this->edges.push_back(Edge(v, w, cost));
+        this->edges.push_back(Edge<T>(v, w, cost));
         if (isDirectedGraph)
             return;
         this->nodes[w][v] = cost;
-        this->edges.push_back(Edge(w, v, cost));
+        this->edges.push_back(Edge<T>(w, v, cost));
     }
 
     void printEdges() {

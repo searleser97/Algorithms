@@ -79,7 +79,7 @@ int main() {
             vector<string> nodes = split(line, ' ');
             T u = stoi(nodes[0]);
             for (int i = 1; i < nodes.size(); i++)
-                g.addOrUpdateEdge(u, stoi(nodes[i]));
+                g.addEdge(u, stoi(nodes[i]));
         }
         cout << getArticulationPoints(g).size() << endl;
     }

@@ -39,7 +39,7 @@ int main() {
         Graph<T> g(0);
         while (m--) {
             cin >> a >> b >> w;
-            g.addOrUpdateEdge(a, b, w < g.getEdgeWeight(a, b) ? w : g.getEdgeWeight(a, b));
+            g.addEdge(a, b, w < g.getEdgeWeight(a, b) ? w : g.getEdgeWeight(a, b));
         }
         cout << "Case #" << l << ": ";
         unordered_map<T, double> distances;

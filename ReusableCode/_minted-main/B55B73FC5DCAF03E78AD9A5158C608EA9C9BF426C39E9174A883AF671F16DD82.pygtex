@@ -1,0 +1,63 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{// uva 558 \PYGZhy{} Wormholes}
+\PYG{c+cp}{\PYGZsh{}include} \PYG{c+cpf}{\PYGZlt{}bits/stdc++.h\PYGZgt{}}
+\PYG{c+cp}{\PYGZsh{}include} \PYG{c+cpf}{\PYGZdq{}graphAPI.h\PYGZdq{}}
+\PYG{k}{using} \PYG{k}{namespace} \PYG{n}{std}\PYG{p}{;}
+
+\PYG{k}{typedef} \PYG{k+kt}{int} \PYG{n}{T}\PYG{p}{;}
+
+\PYG{k+kt}{bool} \PYG{n+nf}{bellmanFord}\PYG{p}{(}\PYG{n}{Graph}\PYG{o}{\PYGZlt{}}\PYG{n}{T}\PYG{o}{\PYGZgt{}} \PYG{o}{\PYGZam{}}\PYG{n}{g}\PYG{p}{,} \PYG{n}{unordered\PYGZus{}map}\PYG{o}{\PYGZlt{}}\PYG{n}{T}\PYG{p}{,} \PYG{k+kt}{double}\PYG{o}{\PYGZgt{}} \PYG{o}{\PYGZam{}}\PYG{n}{distances}\PYG{p}{,} \PYG{n}{unordered\PYGZus{}map}\PYG{o}{\PYGZlt{}}\PYG{n}{T}\PYG{p}{,} \PYG{n}{T}\PYG{o}{\PYGZgt{}} \PYG{o}{\PYGZam{}}\PYG{n}{parents}\PYG{p}{,} \PYG{n}{T} \PYG{n}{source}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+    \PYG{n}{queue}\PYG{o}{\PYGZlt{}}\PYG{n}{T}\PYG{o}{\PYGZgt{}} \PYG{n}{q}\PYG{p}{;}
+    \PYG{n}{unordered\PYGZus{}set}\PYG{o}{\PYGZlt{}}\PYG{n}{T}\PYG{o}{\PYGZgt{}} \PYG{n}{in\PYGZus{}queue}\PYG{p}{;}
+    \PYG{n}{unordered\PYGZus{}map}\PYG{o}{\PYGZlt{}}\PYG{n}{T}\PYG{p}{,} \PYG{k+kt}{int}\PYG{o}{\PYGZgt{}} \PYG{n}{ocurrenceOfNodeInQueue}\PYG{p}{;}
+    \PYG{k}{for} \PYG{p}{(}\PYG{k}{auto} \PYG{n+nl}{node} \PYG{p}{:} \PYG{n}{g}\PYG{p}{.}\PYG{n}{nodes}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+        \PYG{n}{distances}\PYG{p}{[}\PYG{n}{node}\PYG{p}{.}\PYG{n}{first}\PYG{p}{]} \PYG{o}{=} \PYG{n}{INF}\PYG{p}{;}
+        \PYG{n}{parents}\PYG{p}{[}\PYG{n}{node}\PYG{p}{.}\PYG{n}{first}\PYG{p}{]} \PYG{o}{=} \PYG{n}{node}\PYG{p}{.}\PYG{n}{first}\PYG{p}{;}
+    \PYG{p}{\PYGZcb{}}
+    \PYG{n}{distances}\PYG{p}{[}\PYG{n}{source}\PYG{p}{]} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{;}
+    \PYG{n}{q}\PYG{p}{.}\PYG{n}{push}\PYG{p}{(}\PYG{n}{source}\PYG{p}{);}
+    \PYG{k+kt}{int} \PYG{n}{limit} \PYG{o}{=} \PYG{n}{g}\PYG{p}{.}\PYG{n}{nodes}\PYG{p}{.}\PYG{n}{size}\PYG{p}{()} \PYG{o}{\PYGZhy{}} \PYG{l+m+mi}{1}\PYG{p}{;}
+    \PYG{n}{in\PYGZus{}queue}\PYG{p}{.}\PYG{n}{insert}\PYG{p}{(}\PYG{n}{source}\PYG{p}{);}
+    \PYG{n}{ocurrenceOfNodeInQueue}\PYG{p}{[}\PYG{n}{source}\PYG{p}{]} \PYG{o}{+=} \PYG{l+m+mi}{1}\PYG{p}{;}
+    \PYG{k}{while} \PYG{p}{(}\PYG{o}{!}\PYG{n}{q}\PYG{p}{.}\PYG{n}{empty}\PYG{p}{())} \PYG{p}{\PYGZob{}}
+        \PYG{n}{T} \PYG{n}{u} \PYG{o}{=} \PYG{n}{q}\PYG{p}{.}\PYG{n}{front}\PYG{p}{();} \PYG{n}{q}\PYG{p}{.}\PYG{n}{pop}\PYG{p}{();} \PYG{n}{in\PYGZus{}queue}\PYG{p}{.}\PYG{n}{erase}\PYG{p}{(}\PYG{n}{u}\PYG{p}{);}
+        \PYG{k}{for} \PYG{p}{(}\PYG{k}{auto} \PYG{n+nl}{neighbor} \PYG{p}{:} \PYG{n}{g}\PYG{p}{.}\PYG{n}{nodes}\PYG{p}{[}\PYG{n}{u}\PYG{p}{])} \PYG{p}{\PYGZob{}}
+            \PYG{n}{T} \PYG{n}{v} \PYG{o}{=} \PYG{n}{neighbor}\PYG{p}{.}\PYG{n}{first}\PYG{p}{;}
+            \PYG{k+kt}{double} \PYG{n}{newDistance} \PYG{o}{=} \PYG{n}{distances}\PYG{p}{[}\PYG{n}{u}\PYG{p}{]} \PYG{o}{+} \PYG{n}{neighbor}\PYG{p}{.}\PYG{n}{second}\PYG{p}{;}
+            \PYG{k}{if} \PYG{p}{(}\PYG{n}{newDistance} \PYG{o}{\PYGZlt{}} \PYG{n}{distances}\PYG{p}{[}\PYG{n}{v}\PYG{p}{])} \PYG{p}{\PYGZob{}}
+                \PYG{n}{distances}\PYG{p}{[}\PYG{n}{v}\PYG{p}{]} \PYG{o}{=} \PYG{n}{newDistance}\PYG{p}{;}
+                \PYG{n}{parents}\PYG{p}{[}\PYG{n}{v}\PYG{p}{]} \PYG{o}{=} \PYG{n}{u}\PYG{p}{;}
+                \PYG{k}{if} \PYG{p}{(}\PYG{o}{!}\PYG{n}{in\PYGZus{}queue}\PYG{p}{.}\PYG{n}{count}\PYG{p}{(}\PYG{n}{v}\PYG{p}{))} \PYG{p}{\PYGZob{}}
+                    \PYG{n}{q}\PYG{p}{.}\PYG{n}{push}\PYG{p}{(}\PYG{n}{v}\PYG{p}{);}
+                    \PYG{n}{ocurrenceOfNodeInQueue}\PYG{p}{[}\PYG{n}{v}\PYG{p}{]} \PYG{o}{+=} \PYG{l+m+mi}{1}\PYG{p}{;}
+                    \PYG{k}{if} \PYG{p}{(}\PYG{n}{ocurrenceOfNodeInQueue}\PYG{p}{[}\PYG{n}{v}\PYG{p}{]} \PYG{o}{\PYGZgt{}} \PYG{n}{limit}\PYG{p}{)}
+                        \PYG{k}{return} \PYG{n+nb}{false}\PYG{p}{;}
+                \PYG{p}{\PYGZcb{}}
+            \PYG{p}{\PYGZcb{}}
+        \PYG{p}{\PYGZcb{}}
+    \PYG{p}{\PYGZcb{}}
+    \PYG{k}{return} \PYG{n+nb}{true}\PYG{p}{;}
+\PYG{p}{\PYGZcb{}}
+
+\PYG{k+kt}{int} \PYG{n+nf}{main}\PYG{p}{()} \PYG{p}{\PYGZob{}}
+    \PYG{k+kt}{int} \PYG{n}{T}\PYG{p}{;}
+    \PYG{n}{cin} \PYG{o}{\PYGZgt{}\PYGZgt{}} \PYG{n}{T}\PYG{p}{;}
+    \PYG{k}{while} \PYG{p}{(}\PYG{n}{T}\PYG{o}{\PYGZhy{}\PYGZhy{}}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+        \PYG{n}{unordered\PYGZus{}map}\PYG{o}{\PYGZlt{}}\PYG{k+kt}{int}\PYG{p}{,} \PYG{k+kt}{double}\PYG{o}{\PYGZgt{}} \PYG{n}{distances}\PYG{p}{;}
+        \PYG{n}{unordered\PYGZus{}map}\PYG{o}{\PYGZlt{}}\PYG{k+kt}{int}\PYG{p}{,} \PYG{k+kt}{int}\PYG{o}{\PYGZgt{}} \PYG{n}{parents}\PYG{p}{;}
+        \PYG{n}{Graph}\PYG{o}{\PYGZlt{}}\PYG{k+kt}{int}\PYG{o}{\PYGZgt{}} \PYG{n}{g}\PYG{p}{(}\PYG{l+m+mi}{1}\PYG{p}{);}
+        \PYG{k+kt}{int} \PYG{n}{n}\PYG{p}{,} \PYG{n}{m}\PYG{p}{,} \PYG{n}{x}\PYG{p}{,} \PYG{n}{y}\PYG{p}{,} \PYG{n}{t}\PYG{p}{;}
+        \PYG{n}{cin} \PYG{o}{\PYGZgt{}\PYGZgt{}} \PYG{n}{n} \PYG{o}{\PYGZgt{}\PYGZgt{}} \PYG{n}{m}\PYG{p}{;}
+        \PYG{k}{while} \PYG{p}{(}\PYG{n}{m}\PYG{o}{\PYGZhy{}\PYGZhy{}}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+            \PYG{n}{cin} \PYG{o}{\PYGZgt{}\PYGZgt{}} \PYG{n}{x} \PYG{o}{\PYGZgt{}\PYGZgt{}} \PYG{n}{y} \PYG{o}{\PYGZgt{}\PYGZgt{}} \PYG{n}{t}\PYG{p}{;}
+            \PYG{n}{g}\PYG{p}{.}\PYG{n}{addOrUpdateEdge}\PYG{p}{(}\PYG{n}{x}\PYG{p}{,} \PYG{n}{y}\PYG{p}{,} \PYG{n}{t}\PYG{p}{);}
+        \PYG{p}{\PYGZcb{}}
+        \PYG{k}{if} \PYG{p}{(}\PYG{o}{!}\PYG{n}{bellmanFord}\PYG{p}{(}\PYG{n}{g}\PYG{p}{,} \PYG{n}{distances}\PYG{p}{,} \PYG{n}{parents}\PYG{p}{,} \PYG{l+m+mi}{0}\PYG{p}{))}
+            \PYG{n}{cout} \PYG{o}{\PYGZlt{}\PYGZlt{}} \PYG{l+s}{\PYGZdq{}possible\PYGZdq{}} \PYG{o}{\PYGZlt{}\PYGZlt{}} \PYG{n}{endl}\PYG{p}{;}
+        \PYG{k}{else}
+            \PYG{n}{cout} \PYG{o}{\PYGZlt{}\PYGZlt{}} \PYG{l+s}{\PYGZdq{}not possible\PYGZdq{}} \PYG{o}{\PYGZlt{}\PYGZlt{}} \PYG{n}{endl}\PYG{p}{;}
+    \PYG{p}{\PYGZcb{}}
+
+    \PYG{k}{return} \PYG{l+m+mi}{0}\PYG{p}{;}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

@@ -34,10 +34,10 @@ int main() {
     int n, m, u , v;
     cin >> n >> m;
     while (n--)
-        g.addOrUpdateEdge(n + 1, n + 1);
+        g.addEdge(n + 1, n + 1);
     while (m--) {
         cin >> u >> v;
-        g.addOrUpdateEdge(u, v);
+        g.addEdge(u, v);
     }
     cout << (hasUndirectedCycle(g) ? "cycle" : "no cycle") << endl;
     return 0;
