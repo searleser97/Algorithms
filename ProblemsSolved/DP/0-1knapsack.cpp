@@ -18,6 +18,10 @@ vector<vector<T>> knapsack(vector<T> &val, vector<T> &weight, T totalWeight) {
     return dpMat;
 }
 
+vector<int> getItemsIds(vector<vector<T>> dpMat) {
+    
+}
+
 int main() {
     int nT;
     cin >> nT;

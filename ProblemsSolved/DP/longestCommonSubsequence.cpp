@@ -16,22 +16,15 @@ vector<vector<int>> lcs(string str1, string str2) {
     return lcsMat;
 }
 
-void printv(vector<int> v) {
-    if (v.size() == 0) {
-        cout << "[]" << endl;
-        return;
-    }
-    cout << "[" << v[0];
-    for (int i = 1; i < v.size(); i++) {
-        cout << ", " << v[i];
-    }
-    cout << "]" << endl;
+vector<int> getSequence(vector<vector<T>> lcsMat) {
+
 }
 
 int main() {
     string str1, str2;
-    cin >> str1 >> str2;
-    vector<vector<int>> lcslocal = lcs(str1, str2);
-    for (auto i : lcslocal)
-        printv(i);
+    while (getline(cin, str1)) {
+        getline(cin, str2);
+        vector<vector<int>> lcslocal = lcs(str1, str2);
+        cout << lcslocal[lcslocal.size() - 1][lcslocal[0].size() - 1] << endl;
+    }
 }
