@@ -59,8 +59,8 @@ public:
     }
 
     void addEdge(T v, T w, double cost = 0) {
-        if (!hasNode(v)) addNode(v);
-        if (!hasNode(w)) addNode(w);
+        addNode(v);
+        addNode(w);
         this->nodes[v][w] = cost;
         this->edges.push_back(Edge<T>(v, w, cost));
         if (isDirectedGraph)
