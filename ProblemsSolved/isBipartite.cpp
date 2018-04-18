@@ -12,6 +12,7 @@ bool isBipartite(Graph<T> &g) {
         T s = node.first;
         if (!nodeColor.count(s)) {
             nodeColor[s] = 0;
+            black++;
             queue<int> q;
             q.push(s);
             while (!q.empty()) {
@@ -19,6 +20,10 @@ bool isBipartite(Graph<T> &g) {
                 for (const auto &neighbor : g.nodes[u]) {
                     T v = neighbor.first;
                     if (!nodeColor.count(v)) {
+                        if (nodeColor[u])
+                            white++;
+                        else
+                            black++;
                         nodeColor[v] = !nodeColor[u];
                         q.push(v);
                     }
