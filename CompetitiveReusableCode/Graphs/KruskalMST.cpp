@@ -2,7 +2,7 @@ typedef int Weight;
 typedef pair<int, int> Edge;
 typedef pair<Weight, Edge> Wedge;
 
-vector<WEdge> Wedges; // gets filled from input;
+vector<Wedge> Wedges; // gets filled from input;
 
 vector<Wedge> kruskal() {
     vector<Wedge> mst;
