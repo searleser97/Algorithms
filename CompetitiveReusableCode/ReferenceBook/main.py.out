@@ -1,0 +1,50 @@
+\section{Coding Resources}
+\subsection{C++}
+\subsubsection{IntToBinary}
+\inputminted[breaklines]{cpp}{"/home/san/CODE/Algorithms/CompetitiveReusableCode/Coding Resources/C++/IntToBinary.cpp"}
+\subsubsection{IOoptimizationCPP}
+\inputminted[breaklines]{cpp}{"/home/san/CODE/Algorithms/CompetitiveReusableCode/Coding Resources/C++/IOoptimizationCPP.cpp"}
+\subsubsection{PrintVector}
+\inputminted[breaklines]{cpp}{"/home/san/CODE/Algorithms/CompetitiveReusableCode/Coding Resources/C++/PrintVector.cpp"}
+\subsubsection{PriorityQueueOfClass}
+\inputminted[breaklines]{cpp}{"/home/san/CODE/Algorithms/CompetitiveReusableCode/Coding Resources/C++/PriorityQueueOfClass.cpp"}
+\subsubsection{ReadLineCpp}
+\inputminted[breaklines]{cpp}{"/home/san/CODE/Algorithms/CompetitiveReusableCode/Coding Resources/C++/ReadLineCpp.cpp"}
+\subsubsection{SortPair}
+\inputminted[breaklines]{cpp}{"/home/san/CODE/Algorithms/CompetitiveReusableCode/Coding Resources/C++/SortPair.cpp"}
+\subsubsection{SortVectorOfClass}
+\inputminted[breaklines]{cpp}{"/home/san/CODE/Algorithms/CompetitiveReusableCode/Coding Resources/C++/SortVectorOfClass.cpp"}
+\subsubsection{SplitString}
+\inputminted[breaklines]{cpp}{"/home/san/CODE/Algorithms/CompetitiveReusableCode/Coding Resources/C++/SplitString.cpp"}
+\subsection{Python}
+\subsubsection{SortListOfClass}
+\inputminted[breaklines]{py}{"/home/san/CODE/Algorithms/CompetitiveReusableCode/Coding Resources/Python/SortListOfClass.py"}
+\section{Data Structures}
+\section{Geometry}
+\section{Graphs}
+\subsection{CycleInDirectedGraph}
+\inputminted[breaklines]{cpp}{"/home/san/CODE/Algorithms/CompetitiveReusableCode/Graphs/CycleInDirectedGraph.cpp"}
+\subsection{CycleInUndirectedGraph}
+\inputminted[breaklines]{cpp}{"/home/san/CODE/Algorithms/CompetitiveReusableCode/Graphs/CycleInUndirectedGraph.cpp"}
+\subsection{FloodFill}
+\inputminted[breaklines]{cpp}{"/home/san/CODE/Algorithms/CompetitiveReusableCode/Graphs/FloodFill.cpp"}
+\subsection{IsBipartite}
+\inputminted[breaklines]{cpp}{"/home/san/CODE/Algorithms/CompetitiveReusableCode/Graphs/IsBipartite.cpp"}
+\subsection{KruskalMST}
+\inputminted[breaklines]{cpp}{"/home/san/CODE/Algorithms/CompetitiveReusableCode/Graphs/KruskalMST.cpp"}
+\subsection{TopologicalSort}
+\inputminted[breaklines]{cpp}{"/home/san/CODE/Algorithms/CompetitiveReusableCode/Graphs/TopologicalSort.cpp"}
+\subsection{UnionFind}
+\inputminted[breaklines]{cpp}{"/home/san/CODE/Algorithms/CompetitiveReusableCode/Graphs/UnionFind.cpp"}
+\section{Maths}
+\subsection{Combinatorics}
+\subsection{Game Theory}
+\subsection{Number Theory}
+\subsection{Probability}
+\section{Multiple Queries}
+\subsection{Mo}
+\inputminted[breaklines]{cpp}{"/home/san/CODE/Algorithms/CompetitiveReusableCode/Multiple Queries/Mo.cpp"}
+\subsection{SqrtDecomposition}
+\inputminted[breaklines]{cpp}{"/home/san/CODE/Algorithms/CompetitiveReusableCode/Multiple Queries/SqrtDecomposition.cpp"}
+\section{Rare Topics}
+\section{Strings}

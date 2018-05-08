@@ -1,0 +1,33 @@
+\select@language {english}
+\contentsline {section}{\numberline {1}Coding Resources}{3}{section.1}
+\contentsline {subsection}{\numberline {1.1}C++}{3}{subsection.1.1}
+\contentsline {subsubsection}{\numberline {1.1.1}IntToBinary}{3}{subsubsection.1.1.1}
+\contentsline {subsubsection}{\numberline {1.1.2}IOoptimizationCPP}{3}{subsubsection.1.1.2}
+\contentsline {subsubsection}{\numberline {1.1.3}PrintVector}{3}{subsubsection.1.1.3}
+\contentsline {subsubsection}{\numberline {1.1.4}PriorityQueueOfClass}{3}{subsubsection.1.1.4}
+\contentsline {subsubsection}{\numberline {1.1.5}ReadLineCpp}{3}{subsubsection.1.1.5}
+\contentsline {subsubsection}{\numberline {1.1.6}SortPair}{3}{subsubsection.1.1.6}
+\contentsline {subsubsection}{\numberline {1.1.7}SortVectorOfClass}{3}{subsubsection.1.1.7}
+\contentsline {subsubsection}{\numberline {1.1.8}SplitString}{3}{subsubsection.1.1.8}
+\contentsline {subsection}{\numberline {1.2}Python}{3}{subsection.1.2}
+\contentsline {subsubsection}{\numberline {1.2.1}SortListOfClass}{3}{subsubsection.1.2.1}
+\contentsline {section}{\numberline {2}Data Structures}{4}{section.2}
+\contentsline {section}{\numberline {3}Geometry}{4}{section.3}
+\contentsline {section}{\numberline {4}Graphs}{4}{section.4}
+\contentsline {subsection}{\numberline {4.1}CycleInDirectedGraph}{4}{subsection.4.1}
+\contentsline {subsection}{\numberline {4.2}CycleInUndirectedGraph}{4}{subsection.4.2}
+\contentsline {subsection}{\numberline {4.3}FloodFill}{4}{subsection.4.3}
+\contentsline {subsection}{\numberline {4.4}IsBipartite}{4}{subsection.4.4}
+\contentsline {subsection}{\numberline {4.5}KruskalMST}{5}{subsection.4.5}
+\contentsline {subsection}{\numberline {4.6}TopologicalSort}{5}{subsection.4.6}
+\contentsline {subsection}{\numberline {4.7}UnionFind}{5}{subsection.4.7}
+\contentsline {section}{\numberline {5}Maths}{5}{section.5}
+\contentsline {subsection}{\numberline {5.1}Combinatorics}{5}{subsection.5.1}
+\contentsline {subsection}{\numberline {5.2}Game Theory}{5}{subsection.5.2}
+\contentsline {subsection}{\numberline {5.3}Number Theory}{5}{subsection.5.3}
+\contentsline {subsection}{\numberline {5.4}Probability}{5}{subsection.5.4}
+\contentsline {section}{\numberline {6}Multiple Queries}{5}{section.6}
+\contentsline {subsection}{\numberline {6.1}Mo}{5}{subsection.6.1}
+\contentsline {subsection}{\numberline {6.2}SqrtDecomposition}{5}{subsection.6.2}
+\contentsline {section}{\numberline {7}Rare Topics}{5}{section.7}
+\contentsline {section}{\numberline {8}Strings}{5}{section.8}

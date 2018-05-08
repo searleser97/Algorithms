@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2018/dev/Debian) (preloaded format=pdflatex 2018.1.17)  18 APR 2018 05:19
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2018/dev/Debian) (preloaded format=pdflatex 2018.1.17)  5 MAY 2018 10:29
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -760,13 +760,13 @@ LaTeX Font Info:    ... okay on input line 20.
 * paper: a4paper
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
-* modes: landscape 
-* h-part:(L,W,R)=(21.68121pt, 801.68442pt, 21.68121pt)
-* v-part:(T,H,B)=(21.68121pt, 554.14545pt, 21.68121pt)
-* \paperwidth=845.04684pt
-* \paperheight=597.50787pt
-* \textwidth=801.68442pt
-* \textheight=554.14545pt
+* modes: 
+* h-part:(L,W,R)=(21.68121pt, 554.14545pt, 21.68121pt)
+* v-part:(T,H,B)=(21.68121pt, 801.68442pt, 21.68121pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=554.14545pt
+* \textheight=801.68442pt
 * \oddsidemargin=-50.58878pt
 * \evensidemargin=-50.58878pt
 * \topmargin=-87.58878pt
@@ -848,47 +848,55 @@ xecuted.
 
 (./main.py.out (./_minted-main/default-pyg-prefix.pygstyle)
 (./_minted-main/vs.pygstyle)
-(./_minted-main/756D0940E0AA2317376B3BDF66ECCDFBD3294476895268937C25D277FE26632
+(./_minted-main/756D0940E0AA2317376B3BDF66ECCDFBFA7EA1551AA65E31C818A69D849161D
+6.pygtex)
+(./_minted-main/E655405F907731A357141C0D979EC703974C71B5CBD92046978967165193310
+B.pygtex)
+(./_minted-main/C4FA422928322FB6FE078985B664BA8916B6C2DDB7E2D6F011A8AAEF3B89D0C
+D.pygtex)
+(./_minted-main/71AE0F88AD50B22304C542C02EFAEE06A5B40FE9C6AB5407ECC453801943615
+B.pygtex)
+(./_minted-main/4131C103B6BA94B0F710B4C0E1D81CEC2648497966020617AE167E4747A2E96
+8.pygtex)
+(./_minted-main/F9FD9CB940B67439159409212781DDC4FB0EEE98AF60E477A03D7AE79F61A2F
 E.pygtex)
-(./_minted-main/E655405F907731A357141C0D979EC703D2A3D7FD986087617F99CDA9AFF25B3
-0.pygtex)
-(./_minted-main/C4FA422928322FB6FE078985B664BA89134167ACEBFE691DE2884B600E9F4A5
-F.pygtex)
-(./_minted-main/71AE0F88AD50B22304C542C02EFAEE0674538CFAACE315EA7305F24E0D5AF90
-8.pygtex)
-(./_minted-main/4131C103B6BA94B0F710B4C0E1D81CEC0DD8F2DBA92FEA3A815AB9833A98CBB
-0.pygtex)
-(./_minted-main/E47AA076FBD8E7129B336DA8CE032696548FEB04DEAC581D6C6F37194BA40FF
-4.pygtex)
-(./_minted-main/C7311CC407304D006CDE92B326C23C403E0A5B71F08D45ABF9C98BDF0FB7324
-2.pygtex [3])
-(./_minted-main/B33F067D07E72433F357137C29CCB743FC00FCCA03A236D9B457854F8EEC9AE
-4.pygtex)
-(./_minted-main/D789B38D3F1D018B70D67552A64203CE1D65107F88EB7690E2AAC7456ED9E87
-8.pygtex)
-(./_minted-main/3D82198BEC1B768A3C01119467077B5851D57B7D2BBECA1A2840A4350B7984B
-1.pygtex [4])
-(./_minted-main/2699C7407E5D640BF36AED178F6DCB4D2D029B6BD7D59D7B80982F19A41779A
+(./_minted-main/C7311CC407304D006CDE92B326C23C4066F99855AAA76BDA361F93E305FA6FB
+B.pygtex)
+(./_minted-main/B33F067D07E72433F357137C29CCB7432D7ECD4BEEEB48B041D18E48D03C608
 7.pygtex)
-(./_minted-main/F2970EF745FBCCCEFF23FB96DE3AF3E33E19308F8F4C7DC57D5C24D985D2A7F
-7.pygtex)
-(./_minted-main/DF1D7CA23105F34D6FF888A84D4DCC12DDB8BE2C07638B7540E2232B838EEFD
+(./_minted-main/E47AA076FBD8E7129B336DA8CE032696FC0145AF9321D198C92F65C1941F32E
+5.pygtex)
+(./_minted-main/D789B38D3F1D018B70D67552A64203CECC59548A4F20F7F5DA03D5564D869C6
+A.pygtex [3])
+(./_minted-main/3D82198BEC1B768A3C01119467077B588148991F0CF43262A0B6B7C2E14079A
+D.pygtex)
+(./_minted-main/2699C7407E5D640BF36AED178F6DCB4DDBBFF36379F9C0ADC3F3E34C196809B
+E.pygtex)
+(./_minted-main/F2970EF745FBCCCEFF23FB96DE3AF3E38B694BA50E11ADBF2ABD2377A80DAAC
+3.pygtex [4])
+(./_minted-main/56B0204BD7A58C27336BDC5274F15FB0AE8CF420325D9E780B757946332530F
+8.pygtex)
+(./_minted-main/DF1D7CA23105F34D6FF888A84D4DCC12B51337B87E520BDB1F05BC0C92D2A2D
 4.pygtex)
-(./_minted-main/61CE0F01CEEA8D084012ABBB65A2967064805B52C549AF984878880D3CB5B37
-A.pygtex [5])) [6]
+(./_minted-main/61CE0F01CEEA8D084012ABBB65A29670F06C366F7FADF56670E9CA849E9CDC3
+7.pygtex)
+(./_minted-main/8473978EF08C7F6C5FAD3966D020A4BB82E87B8F5271DF4ACF02046156B289F
+6.pygtex)
+(./_minted-main/8473978EF08C7F6C5FAD3966D020A4BB11DA4721BB872553B38ABDAD60B3D47
+F.pygtex)) [5]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 35.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 35.
  (./main.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 35.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 35.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: A5CE583EA49691CE1CA06EE50995B52D;983.
+(rerunfilecheck)             Checksum: 2EF133EF710ABB5632EF5D8327A0ACFD;1946.
  ) 
 Here is how much of TeX's memory you used:
- 9536 strings out of 494921
- 155585 string characters out of 6180716
- 304313 words of memory out of 5000000
- 12650 multiletter control sequences out of 15000+600000
+ 9583 strings out of 494921
+ 157365 string characters out of 6180716
+ 308688 words of memory out of 5000000
+ 12670 multiletter control sequences out of 15000+600000
  8231 words of font info for 30 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  37i,8n,41p,838b,753s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -900,10 +908,10 @@ f-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/
 fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/t
 ype1/public/amsfonts/cm/cmsy5.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
 blic/amsfonts/cm/cmtt10.pfb>
-Output written on main.pdf (6 pages, 105116 bytes).
+Output written on main.pdf (5 pages, 114485 bytes).
 PDF statistics:
- 152 PDF objects out of 1000 (max. 8388607)
- 134 compressed objects within 2 object streams
- 24 named destinations out of 1000 (max. 500000)
- 129 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 234 PDF objects out of 1000 (max. 8388607)
+ 216 compressed objects within 3 object streams
+ 39 named destinations out of 1000 (max. 500000)
+ 257 words of extra memory for PDF output out of 10000 (max. 10000000)
 
