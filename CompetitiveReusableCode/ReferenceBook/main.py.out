@@ -17,6 +17,8 @@
 \subsubsection{SplitString}
 \inputminted[breaklines]{cpp}{"/home/san/CODE/Algorithms/CompetitiveReusableCode/Coding Resources/C++/SplitString.cpp"}
 \subsection{Python}
+\subsubsection{Fast IO}
+\inputminted[breaklines]{py}{"/home/san/CODE/Algorithms/CompetitiveReusableCode/Coding Resources/Python/Fast IO.py"}
 \subsubsection{SortListOfClass}
 \inputminted[breaklines]{py}{"/home/san/CODE/Algorithms/CompetitiveReusableCode/Coding Resources/Python/SortListOfClass.py"}
 \section{Data Structures}

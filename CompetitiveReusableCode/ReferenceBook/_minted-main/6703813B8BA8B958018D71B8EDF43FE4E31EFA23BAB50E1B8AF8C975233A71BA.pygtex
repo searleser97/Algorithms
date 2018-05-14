@@ -1,0 +1,17 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k+kn}{from} \PYG{n+nn}{sys} \PYG{k+kn}{import} \PYG{n}{stdin}\PYG{p}{,} \PYG{n}{stdout}
+
+\PYG{n}{N} \PYG{o}{=} \PYG{l+m+mi}{10}
+\PYG{c+c1}{\PYGZsh{} Reads N chars from stdin (it counts \PYGZsq{}\PYGZbs{}n\PYGZsq{} as char)}
+\PYG{n}{stdin}\PYG{o}{.}\PYG{n}{read}\PYG{p}{(}\PYG{n}{N}\PYG{p}{)}
+\PYG{c+c1}{\PYGZsh{} Reads until \PYGZsq{}\PYGZbs{}n\PYGZsq{} or EOF}
+\PYG{n}{line} \PYG{o}{=} \PYG{n}{stdin}\PYG{o}{.}\PYG{n}{readline}\PYG{p}{()}
+\PYG{c+c1}{\PYGZsh{} Reads all lines in stdin until EOF}
+\PYG{n}{lines} \PYG{o}{=} \PYG{n}{stdin}\PYG{o}{.}\PYG{n}{readlines}\PYG{p}{()}
+\PYG{c+c1}{\PYGZsh{} Writes a string to stdout, it doesn\PYGZsq{}t adds \PYGZsq{}\PYGZbs{}n\PYGZsq{}}
+\PYG{n}{stdout}\PYG{o}{.}\PYG{n}{write}\PYG{p}{(}\PYG{n}{line}\PYG{p}{)}
+\PYG{c+c1}{\PYGZsh{} Writes a list of strings to stdout}
+\PYG{n}{stdout}\PYG{o}{.}\PYG{n}{writelines}\PYG{p}{(}\PYG{n}{lines}\PYG{p}{)}
+\PYG{c+c1}{\PYGZsh{} Reads numbers separated by space in a line}
+\PYG{n}{numbers} \PYG{o}{=} \PYG{n+nb}{list}\PYG{p}{(}\PYG{n+nb}{map}\PYG{p}{(}\PYG{n+nb}{int}\PYG{p}{,} \PYG{n}{stdin}\PYG{o}{.}\PYG{n}{readline}\PYG{p}{()}\PYG{o}{.}\PYG{n}{split}\PYG{p}{()))}
+\end{Verbatim}

@@ -1,9 +1,8 @@
 vector<string> split(string str, char token) {
     stringstream test(str);
-    string segment;
-    vector<std::string> seglist;
-
-    while (std::getline(test, segment, token))
-        seglist.push_back(segment);
+    string seg;
+    vector<string> seglist;
+    while (getline(test, seg, token))
+        seglist.push_back(seg);
     return seglist;
 }

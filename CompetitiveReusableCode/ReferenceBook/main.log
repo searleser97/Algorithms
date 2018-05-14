@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2018/dev/Debian) (preloaded format=pdflatex 2018.1.17)  5 MAY 2018 10:29
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2018/dev/Debian) (preloaded format=pdflatex 2018.1.17)  13 MAY 2018 12:36
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -856,18 +856,20 @@ B.pygtex)
 D.pygtex)
 (./_minted-main/71AE0F88AD50B22304C542C02EFAEE06A5B40FE9C6AB5407ECC453801943615
 B.pygtex)
-(./_minted-main/4131C103B6BA94B0F710B4C0E1D81CEC2648497966020617AE167E4747A2E96
+(./_minted-main/071266567A8DE0061BAF8803106702752648497966020617AE167E4747A2E96
 8.pygtex)
 (./_minted-main/F9FD9CB940B67439159409212781DDC4FB0EEE98AF60E477A03D7AE79F61A2F
 E.pygtex)
 (./_minted-main/C7311CC407304D006CDE92B326C23C4066F99855AAA76BDA361F93E305FA6FB
 B.pygtex)
-(./_minted-main/B33F067D07E72433F357137C29CCB7432D7ECD4BEEEB48B041D18E48D03C608
+(./_minted-main/C15FA3C6C89D2EBAB275F4DF13A772022D7ECD4BEEEB48B041D18E48D03C608
 7.pygtex)
+(./_minted-main/6703813B8BA8B958018D71B8EDF43FE4E31EFA23BAB50E1B8AF8C975233A71B
+A.pygtex)
 (./_minted-main/E47AA076FBD8E7129B336DA8CE032696FC0145AF9321D198C92F65C1941F32E
-5.pygtex)
+5.pygtex [3])
 (./_minted-main/D789B38D3F1D018B70D67552A64203CECC59548A4F20F7F5DA03D5564D869C6
-A.pygtex [3])
+A.pygtex)
 (./_minted-main/3D82198BEC1B768A3C01119467077B588148991F0CF43262A0B6B7C2E14079A
 D.pygtex)
 (./_minted-main/2699C7407E5D640BF36AED178F6DCB4DDBBFF36379F9C0ADC3F3E34C196809B
@@ -890,16 +892,16 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 35.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 35.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 35.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 2EF133EF710ABB5632EF5D8327A0ACFD;1946.
+(rerunfilecheck)             Checksum: F09F25E1ECDFBDDAE22EE69222D5E407;2013.
  ) 
 Here is how much of TeX's memory you used:
- 9583 strings out of 494921
- 157365 string characters out of 6180716
- 308688 words of memory out of 5000000
- 12670 multiletter control sequences out of 15000+600000
+ 9590 strings out of 494921
+ 157736 string characters out of 6180716
+ 309078 words of memory out of 5000000
+ 12673 multiletter control sequences out of 15000+600000
  8231 words of font info for 30 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 37i,8n,41p,838b,753s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 37i,9n,42p,838b,753s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texli
@@ -908,10 +910,10 @@ f-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/
 fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/t
 ype1/public/amsfonts/cm/cmsy5.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
 blic/amsfonts/cm/cmtt10.pfb>
-Output written on main.pdf (5 pages, 114485 bytes).
+Output written on main.pdf (5 pages, 115358 bytes).
 PDF statistics:
- 234 PDF objects out of 1000 (max. 8388607)
- 216 compressed objects within 3 object streams
- 39 named destinations out of 1000 (max. 500000)
- 257 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 239 PDF objects out of 1000 (max. 8388607)
+ 221 compressed objects within 3 object streams
+ 40 named destinations out of 1000 (max. 500000)
+ 265 words of extra memory for PDF output out of 10000 (max. 10000000)
 

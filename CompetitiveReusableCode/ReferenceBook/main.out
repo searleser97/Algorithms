@@ -9,24 +9,25 @@
 \BOOKMARK [3][-]{subsubsection.1.1.7}{SortVectorOfClass}{subsection.1.1}% 9
 \BOOKMARK [3][-]{subsubsection.1.1.8}{SplitString}{subsection.1.1}% 10
 \BOOKMARK [2][-]{subsection.1.2}{Python}{section.1}% 11
-\BOOKMARK [3][-]{subsubsection.1.2.1}{SortListOfClass}{subsection.1.2}% 12
-\BOOKMARK [1][-]{section.2}{Data Structures}{}% 13
-\BOOKMARK [1][-]{section.3}{Geometry}{}% 14
-\BOOKMARK [1][-]{section.4}{Graphs}{}% 15
-\BOOKMARK [2][-]{subsection.4.1}{CycleInDirectedGraph}{section.4}% 16
-\BOOKMARK [2][-]{subsection.4.2}{CycleInUndirectedGraph}{section.4}% 17
-\BOOKMARK [2][-]{subsection.4.3}{FloodFill}{section.4}% 18
-\BOOKMARK [2][-]{subsection.4.4}{IsBipartite}{section.4}% 19
-\BOOKMARK [2][-]{subsection.4.5}{KruskalMST}{section.4}% 20
-\BOOKMARK [2][-]{subsection.4.6}{TopologicalSort}{section.4}% 21
-\BOOKMARK [2][-]{subsection.4.7}{UnionFind}{section.4}% 22
-\BOOKMARK [1][-]{section.5}{Maths}{}% 23
-\BOOKMARK [2][-]{subsection.5.1}{Combinatorics}{section.5}% 24
-\BOOKMARK [2][-]{subsection.5.2}{Game Theory}{section.5}% 25
-\BOOKMARK [2][-]{subsection.5.3}{Number Theory}{section.5}% 26
-\BOOKMARK [2][-]{subsection.5.4}{Probability}{section.5}% 27
-\BOOKMARK [1][-]{section.6}{Multiple Queries}{}% 28
-\BOOKMARK [2][-]{subsection.6.1}{Mo}{section.6}% 29
-\BOOKMARK [2][-]{subsection.6.2}{SqrtDecomposition}{section.6}% 30
-\BOOKMARK [1][-]{section.7}{Rare Topics}{}% 31
-\BOOKMARK [1][-]{section.8}{Strings}{}% 32
+\BOOKMARK [3][-]{subsubsection.1.2.1}{Fast IO}{subsection.1.2}% 12
+\BOOKMARK [3][-]{subsubsection.1.2.2}{SortListOfClass}{subsection.1.2}% 13
+\BOOKMARK [1][-]{section.2}{Data Structures}{}% 14
+\BOOKMARK [1][-]{section.3}{Geometry}{}% 15
+\BOOKMARK [1][-]{section.4}{Graphs}{}% 16
+\BOOKMARK [2][-]{subsection.4.1}{CycleInDirectedGraph}{section.4}% 17
+\BOOKMARK [2][-]{subsection.4.2}{CycleInUndirectedGraph}{section.4}% 18
+\BOOKMARK [2][-]{subsection.4.3}{FloodFill}{section.4}% 19
+\BOOKMARK [2][-]{subsection.4.4}{IsBipartite}{section.4}% 20
+\BOOKMARK [2][-]{subsection.4.5}{KruskalMST}{section.4}% 21
+\BOOKMARK [2][-]{subsection.4.6}{TopologicalSort}{section.4}% 22
+\BOOKMARK [2][-]{subsection.4.7}{UnionFind}{section.4}% 23
+\BOOKMARK [1][-]{section.5}{Maths}{}% 24
+\BOOKMARK [2][-]{subsection.5.1}{Combinatorics}{section.5}% 25
+\BOOKMARK [2][-]{subsection.5.2}{Game Theory}{section.5}% 26
+\BOOKMARK [2][-]{subsection.5.3}{Number Theory}{section.5}% 27
+\BOOKMARK [2][-]{subsection.5.4}{Probability}{section.5}% 28
+\BOOKMARK [1][-]{section.6}{Multiple Queries}{}% 29
+\BOOKMARK [2][-]{subsection.6.1}{Mo}{section.6}% 30
+\BOOKMARK [2][-]{subsection.6.2}{SqrtDecomposition}{section.6}% 31
+\BOOKMARK [1][-]{section.7}{Rare Topics}{}% 32
+\BOOKMARK [1][-]{section.8}{Strings}{}% 33
