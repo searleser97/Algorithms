@@ -1,6 +1,6 @@
-int n; // max node id >= 1
-vector<vector<int>> ady; // ady.resize(n + 1)
-vector<int> vis; // vis.resize(n + 1)
+int n; // max node id >= 0
+vector<vector<int>> ady; // ady.resize(n)
+vector<int> vis; // vis.resize(n)
 vector<vector<int>> cycles;
 vector<int> cycle;
 bool flag = false;
@@ -28,7 +28,7 @@ bool hasDirectedCycle(int u) {
 
 bool hasDirectedCycle() {
     vis.clear();
-    for (int u = 1; u <= n; u++)
+    for (int u = 0; u < n; u++)
         if (!vis[u]) {
             cycle.clear();
             if (hasDirectedCycle(u))

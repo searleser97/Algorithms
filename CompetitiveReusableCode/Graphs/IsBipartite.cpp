@@ -1,9 +1,9 @@
-int n; // max node id >= 1
-vector<vector<int>> ady; // ady.resize(n + 1)
+int n; // max node id >= 0
+vector<vector<int>> ady; // ady.resize(n)
 
 bool isBipartite() {
-    vector<int> color(n + 1, -1);
-    for (int s = 1; s <= n; s++) {
+    vector<int> color(n, -1);
+    for (int s = 0; s < n; s++) {
         if (color[s] > -1)
             continue;
         color[s] = 0;

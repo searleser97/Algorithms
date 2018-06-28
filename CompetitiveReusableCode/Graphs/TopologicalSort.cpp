@@ -1,6 +1,6 @@
-int n; // max node id >= 1
-vector<vector<int>> ady; // ady.resize(n + 1)
-vector<int> vis; // vis.resize(n + 1)
+int n; // max node id >= 0
+vector<vector<int>> ady; // ady.resize(n)
+vector<int> vis; // vis.resize(n)
 vector<int> toposorted;
 
 bool toposort(int u) {
@@ -18,7 +18,7 @@ bool toposort(int u) {
 
 bool toposort() {
     vis.clear();
-    for (int u = 1; u <= n; u++)
+    for (int u = 0; u < n; u++)
         if (!vis[u])
             if (!toposort(u))
                 return false;
