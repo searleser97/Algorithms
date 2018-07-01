@@ -32,8 +32,8 @@ using namespace std;
 // prev[a] = previous node of a
 
 typedef int Num;
-vector<int> level;
-vector<vector<int>> ady, cap, flow;
+vector<int> level(101);
+vector<vector<int>> ady(101, vector<int>()), cap(101, vector<int>(101)), flow(101, vector<int>(101));
 bool isBidirectional = false;
 int N;
 
@@ -123,10 +123,10 @@ int main() {
             return 0;
         unordered_map<int, int> nodeId;
         nextId = 0;
-        ady.resize(N);
-        level.resize(N);
-        cap.resize(N, vector<int>(N));
-        flow.resize(N, vector<int>(N));                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
+        ady.clear();
+        level.clear();
+        cap.clear();
+        flow.clear();                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
         cin >> s >> t >> c;
         while (c--) {
             int u, v, c;
@@ -137,7 +137,7 @@ int main() {
             addEdge(v, u, cap[v][u] + c);
         }
         cout << "Network " << i << endl;
-        cout << "The bandwidth is " << dinicMaxFlow(s - 1, t - 1) << "." << endl;
+        cout << "The bandwidth is " << dinicMaxFlow(Map(s, nodeId), Map(t, nodeId)) << "." << endl;
         i++;
     }
     return 0;
