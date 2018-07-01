@@ -13,6 +13,7 @@
         "initializer_list": "cpp",
         "string_view": "cpp",
         "iostream": "cpp",
-        "ostream": "cpp"
+        "ostream": "cpp",
+        "thread": "cpp"
     }
 }
