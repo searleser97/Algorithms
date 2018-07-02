@@ -24,7 +24,7 @@ bool levelGraph(int s, int t) {
     return level[t];
 }
 
-int blockingFlow(int u, int t, Num currPathMaxFlow) {
+Num blockingFlow(int u, int t, Num currPathMaxFlow) {
     if (u == t) return currPathMaxFlow;
     for (int v : ady[u]) {
         Num capleft = cap[u][v] - flow[u][v];

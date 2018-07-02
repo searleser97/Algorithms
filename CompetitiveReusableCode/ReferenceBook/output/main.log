@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Debian) (preloaded format=pdflatex 2018.6.28)  1 JUL 2018 23:01
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Debian) (preloaded format=pdflatex 2018.6.28)  2 JUL 2018 00:06
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -396,6 +396,19 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 \Hy@SectionHShift=\skip50
 )
+(/usr/share/texlive/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
+Package: fancyhdr 2017/06/30 v3.9a Extensive control of page headers and footer
+s
+\f@nch@headwidth=\skip51
+\f@nch@O@elh=\skip52
+\f@nch@O@erh=\skip53
+\f@nch@O@olh=\skip54
+\f@nch@O@orh=\skip55
+\f@nch@O@elf=\skip56
+\f@nch@O@erf=\skip57
+\f@nch@O@olf=\skip58
+\f@nch@O@orf=\skip59
+)
 (/home/san/texmf/tex/latex/xcolor/xcolor.sty
 Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
 
@@ -422,23 +435,24 @@ runsystem(which pygmentize && touch main.aex)...executed.
 runsystem(rm main.aex)...executed.
 
 
-No file main.aux.
+(output/main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -447,15 +461,15 @@ LaTeX Font Info:    ... okay on input line 20.
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: 
-* h-part:(L,W,R)=(21.68121pt, 554.14545pt, 21.68121pt)
-* v-part:(T,H,B)=(21.68121pt, 801.68442pt, 21.68121pt)
+* h-part:(L,W,R)=(28.90755pt, 539.69278pt, 28.90755pt)
+* v-part:(T,H,B)=(65.04256pt, 722.18808pt, 57.81621pt)
 * \paperwidth=597.50787pt
 * \paperheight=845.04684pt
-* \textwidth=554.14545pt
-* \textheight=801.68442pt
-* \oddsidemargin=-50.58878pt
-* \evensidemargin=-50.58878pt
-* \topmargin=-87.58878pt
+* \textwidth=539.69278pt
+* \textheight=722.18808pt
+* \oddsidemargin=-43.36244pt
+* \evensidemargin=-43.36244pt
+* \topmargin=-44.22743pt
 * \headheight=12.0pt
 * \headsep=25.0pt
 * \topskip=10.0pt
@@ -474,7 +488,7 @@ LaTeX Font Info:    ... okay on input line 20.
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 \AtBeginShipoutBox=\box61
-Package hyperref Info: Link coloring OFF on input line 20.
+Package hyperref Info: Link coloring OFF on input line 31.
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 
@@ -483,9 +497,11 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 \c@section@level=\count143
 )
-LaTeX Info: Redefining \ref on input line 20.
-LaTeX Info: Redefining \pageref on input line 20.
-LaTeX Info: Redefining \nameref on input line 20.
+LaTeX Info: Redefining \ref on input line 31.
+LaTeX Info: Redefining \pageref on input line 31.
+LaTeX Info: Redefining \nameref on input line 31.
+
+(output/main.out) (output/main.out)
 \@outlinefile=\write8
 \openout8 = `main.out'.
 
@@ -505,18 +521,24 @@ LaTeX Info: Redefining \nameref on input line 20.
 \everyMPtoPDFconversion=\toks23
 )
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 23.
+(Font)              <12> on input line 34.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 23.
+(Font)              <8> on input line 34.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 23.
+(Font)              <6> on input line 34.
  [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (output/main.toc
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 3.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 3.
+)
 \tf@toc=\write9
 \openout9 = `main.toc'.
 
- [2]
+
+[2]
 \openout6 = `main.py'.
 
 \openout7 = `latex.py'.
@@ -524,14 +546,10 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 runsystem(cat getContents.py main.py | python > main.py.out 2> main.py.err)...e
 xecuted.
 
- (./main.py.out
-(./_minted-main/default-pyg-prefix.pygstyle) (./_minted-main/vs.pygstyle)
+ (./main.py.out (./_minted-main/default-pyg-prefix.pygstyle)
+(./_minted-main/vs.pygstyle)
 (./_minted-main/E47AA076FBD8E7129B336DA8CE032696FC0145AF9321D198C92F65C1941F32E
-5.pygtex
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              
-<5> on input line 8.
-)
+5.pygtex)
 (./_minted-main/6703813B8BA8B958018D71B8EDF43FE4E31EFA23BAB50E1B8AF8C975233A71B
 A.pygtex)
 (./_minted-main/071266567A8DE0061BAF8803106702752648497966020617AE167E4747A2E96
@@ -547,61 +565,63 @@ E.pygtex)
 (./_minted-main/C15FA3C6C89D2EBAB275F4DF13A772022D7ECD4BEEEB48B041D18E48D03C608
 7.pygtex)
 (./_minted-main/E655405F907731A357141C0D979EC703974C71B5CBD92046978967165193310
-B.pygtex)
-(./_minted-main/C7311CC407304D006CDE92B326C23C4066F99855AAA76BDA361F93E305FA6FB
 B.pygtex [3])
+(./_minted-main/C7311CC407304D006CDE92B326C23C4066F99855AAA76BDA361F93E305FA6FB
+B.pygtex)
 (./_minted-main/8473978EF08C7F6C5FAD3966D020A4BB82E87B8F5271DF4ACF02046156B289F
 6.pygtex)
 (./_minted-main/8473978EF08C7F6C5FAD3966D020A4BB11DA4721BB872553B38ABDAD60B3D47
 F.pygtex)
+(./_minted-main/411CA7DD758345A9D517311E9E29E9169BC13B89C4226C0C38C32B36ECE2393
+5.pygtex)
 (./_minted-main/C85CEFEF5CE76064236248C725CB3827B51337B87E520BDB1F05BC0C92D2A2D
-4.pygtex)
-(./_minted-main/261BEA75C04AFCDE449B1C6B5F84ECD396B37D0A9807E31B80B409CFF1E9087
-8.pygtex)
+4.pygtex [4])
 (./_minted-main/BAF1B51F1E2A07421BD2F49FE5CCC2D6545DE23376F3E549B6A2EB943F77134
-F.pygtex [4])
-(./_minted-main/850CB8A894307EA95AAA701541FDB375A8E25EFA55C419451B6AC6AB765B618
-A.pygtex)
+F.pygtex)
 (./_minted-main/61CE0F01CEEA8D084012ABBB65A29670F06C366F7FADF56670E9CA849E9CDC3
 7.pygtex)
 (./_minted-main/9230F7590E2934B568DA0DBDEC05F8598148991F0CF43262A0B6B7C2E14079A
 D.pygtex)
 (./_minted-main/3B9DB54A2294D61788D2176EB1CF92E78B694BA50E11ADBF2ABD2377A80DAAC
-3.pygtex)
+3.pygtex [5])
+(./_minted-main/850CB8A894307EA95AAA701541FDB37589FBE93A391D329B3D3453C4DBF715A
+F.pygtex)
 (./_minted-main/3F0DADEDBA055C6BB57039F5237E6870CC59548A4F20F7F5DA03D5564D869C6
-A.pygtex [5])
+A.pygtex)
 (./_minted-main/2699C7407E5D640BF36AED178F6DCB4DDBBFF36379F9C0ADC3F3E34C196809B
 E.pygtex)
 (./_minted-main/56B0204BD7A58C27336BDC5274F15FB0AE8CF420325D9E780B757946332530F
-8.pygtex)) [6]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 35.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 35.
+8.pygtex [6])) [7]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 45.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 45.
  (output/main.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 35.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 35.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 45.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 45.
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: <no file>.
  ) 
 Here is how much of TeX's memory you used:
- 9296 strings out of 494590
- 156303 string characters out of 6177877
- 312828 words of memory out of 5000000
- 12699 multiletter control sequences out of 15000+600000
- 8231 words of font info for 30 fonts, out of 8000000 for 9000
+ 9482 strings out of 494590
+ 158684 string characters out of 6177877
+ 315628 words of memory out of 5000000
+ 12868 multiletter control sequences out of 15000+600000
+ 8830 words of font info for 32 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 39i,9n,42p,838b,753s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 37i,11n,43p,838b,763s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texli
 ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texm
 f-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/
 fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/t
-ype1/public/amsfonts/cm/cmsy5.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
-blic/amsfonts/cm/cmtt10.pfb>
-Output written on output/main.pdf (6 pages, 103447 bytes).
+ype1/public/amsfonts/cm/cmss10.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmssbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmsy5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
+nts/cm/cmtt10.pfb>
+Output written on output/main.pdf (7 pages, 141462 bytes).
 PDF statistics:
- 112 PDF objects out of 1000 (max. 8388607)
- 95 compressed objects within 1 object stream
- 44 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 283 PDF objects out of 1000 (max. 8388607)
+ 261 compressed objects within 3 object streams
+ 47 named destinations out of 1000 (max. 500000)
+ 305 words of extra memory for PDF output out of 10000 (max. 10000000)
 
