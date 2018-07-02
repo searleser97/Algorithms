@@ -10,19 +10,18 @@ int N, MAXN = 101;
 
 bool levelGraph(int s, int t) {
     level = vector<int>(MAXN);
-    fill(level.begin(), level.end(), -1);
-    level[s] = 0;
+    level[s] = 1;
     queue<int> q; q.push(s);
     while(!q.empty()) {
         int u = q.front(); q.pop();
         for (int &v : ady[u]) {
-            if (level[v] < 0 && flow[u][v] < cap[u][v]) {
+            if (!level[v] && flow[u][v] < cap[u][v]) {
                 q.push(v);
                 level[v] = level[u] + 1;
             }
         }
     }
-    return level[t] != -1;
+    return level[t];
 }
 
 int blockingFlow(int u, int t, Num currPathMaxFlow) {

@@ -51,19 +51,18 @@ void addEdge(int u, int v, Num capacity) {
 
 bool levelGraph(int s, int t) {
     level = vector<int>(MAXN);
-    fill(level.begin(), level.end(), -1);
-    level[s] = 0;
+    level[s] = 1;
     queue<int> q; q.push(s);
     while(!q.empty()) {
         int u = q.front(); q.pop();
         for (int &v : ady[u]) {
-            if (level[v] < 0 && flow[u][v] < cap[u][v]) {
+            if (!level[v] && flow[u][v] < cap[u][v]) {
                 q.push(v);
                 level[v] = level[u] + 1;
             }
         }
     }
-    return level[t] != -1;
+    return level[t];
 }
 
 int blockingFlow(int u, int t, Num currPathMaxFlow) {
@@ -132,7 +131,7 @@ int main() {
             addEdge(v, u, cap[v][u] + c);
         }
         cout << "Network " << i << endl;
-        cout << "The bandwidth is " << dinicMaxFlow(Maps(s), Maps(t)) << "." << endl;
+        cout << "The bandwidth is " << dinicMaxFlow(Map(s), Map(t)) << "." << endl;
         cout << endl;
         i++;
     }
