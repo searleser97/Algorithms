@@ -23,12 +23,14 @@
 \BOOKMARK [1][-]{section.5}{Strings}{}% 23
 \BOOKMARK [1][-]{section.6}{Graphs}{}% 24
 \BOOKMARK [2][-]{subsection.6.1}{TopologicalSort}{section.6}% 25
-\BOOKMARK [2][-]{subsection.6.2}{Dijkstra}{section.6}% 26
-\BOOKMARK [2][-]{subsection.6.3}{UnionFind}{section.6}% 27
-\BOOKMARK [2][-]{subsection.6.4}{CycleInUndirectedGraph}{section.6}% 28
-\BOOKMARK [2][-]{subsection.6.5}{IsBipartite}{section.6}% 29
-\BOOKMARK [2][-]{subsection.6.6}{CycleInDirectedGraph}{section.6}% 30
-\BOOKMARK [2][-]{subsection.6.7}{FloodFill}{section.6}% 31
-\BOOKMARK [2][-]{subsection.6.8}{KruskalMST}{section.6}% 32
-\BOOKMARK [1][-]{section.7}{Rare Topics}{}% 33
-\BOOKMARK [1][-]{section.8}{Data Structures}{}% 34
+\BOOKMARK [2][-]{subsection.6.2}{MaxFlowDinic}{section.6}% 26
+\BOOKMARK [2][-]{subsection.6.3}{MinimumCut}{section.6}% 27
+\BOOKMARK [2][-]{subsection.6.4}{Dijkstra}{section.6}% 28
+\BOOKMARK [2][-]{subsection.6.5}{UnionFind}{section.6}% 29
+\BOOKMARK [2][-]{subsection.6.6}{CycleInUndirectedGraph}{section.6}% 30
+\BOOKMARK [2][-]{subsection.6.7}{IsBipartite}{section.6}% 31
+\BOOKMARK [2][-]{subsection.6.8}{CycleInDirectedGraph}{section.6}% 32
+\BOOKMARK [2][-]{subsection.6.9}{FloodFill}{section.6}% 33
+\BOOKMARK [2][-]{subsection.6.10}{KruskalMST}{section.6}% 34
+\BOOKMARK [1][-]{section.7}{Rare Topics}{}% 35
+\BOOKMARK [1][-]{section.8}{Data Structures}{}% 36

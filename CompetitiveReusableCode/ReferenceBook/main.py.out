@@ -36,6 +36,10 @@
 \section{Graphs}
 \subsection{TopologicalSort}
 \inputminted[breaklines]{cpp}{"/home/san/CODE/Algorithms/CompetitiveReusableCode/Graphs/TopologicalSort.cpp"}
+\subsection{MaxFlowDinic}
+\inputminted[breaklines]{cpp}{"/home/san/CODE/Algorithms/CompetitiveReusableCode/Graphs/MaxFlowDinic.cpp"}
+\subsection{MinimumCut}
+\inputminted[breaklines]{cpp}{"/home/san/CODE/Algorithms/CompetitiveReusableCode/Graphs/MinimumCut.cpp"}
 \subsection{Dijkstra}
 \inputminted[breaklines]{cpp}{"/home/san/CODE/Algorithms/CompetitiveReusableCode/Graphs/Dijkstra.cpp"}
 \subsection{UnionFind}

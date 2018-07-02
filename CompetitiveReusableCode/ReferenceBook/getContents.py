@@ -2,7 +2,7 @@ from os import listdir
 from os.path import isfile, isdir, join
 
 PATH = '/home/san/CODE/Algorithms/CompetitiveReusableCode/'
-
+excluded = ['ReferenceBook', '.vscode']
 
 def printSectionType(sectionName, depth):
     if depth == 4:
@@ -18,7 +18,7 @@ def printSectionType(sectionName, depth):
 
 def main(currPath, currDir, depth):
 
-    if currDir == 'ReferenceBook':
+    if currDir in excluded :
         return
 
     printSectionType(currDir, depth)

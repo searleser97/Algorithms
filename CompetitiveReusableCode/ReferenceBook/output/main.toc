@@ -24,12 +24,14 @@
 \contentsline {section}{\numberline {5}Strings}{4}{section.5}
 \contentsline {section}{\numberline {6}Graphs}{4}{section.6}
 \contentsline {subsection}{\numberline {6.1}TopologicalSort}{4}{subsection.6.1}
-\contentsline {subsection}{\numberline {6.2}Dijkstra}{4}{subsection.6.2}
-\contentsline {subsection}{\numberline {6.3}UnionFind}{4}{subsection.6.3}
-\contentsline {subsection}{\numberline {6.4}CycleInUndirectedGraph}{4}{subsection.6.4}
-\contentsline {subsection}{\numberline {6.5}IsBipartite}{5}{subsection.6.5}
-\contentsline {subsection}{\numberline {6.6}CycleInDirectedGraph}{5}{subsection.6.6}
-\contentsline {subsection}{\numberline {6.7}FloodFill}{5}{subsection.6.7}
-\contentsline {subsection}{\numberline {6.8}KruskalMST}{6}{subsection.6.8}
+\contentsline {subsection}{\numberline {6.2}MaxFlowDinic}{4}{subsection.6.2}
+\contentsline {subsection}{\numberline {6.3}MinimumCut}{4}{subsection.6.3}
+\contentsline {subsection}{\numberline {6.4}Dijkstra}{5}{subsection.6.4}
+\contentsline {subsection}{\numberline {6.5}UnionFind}{5}{subsection.6.5}
+\contentsline {subsection}{\numberline {6.6}CycleInUndirectedGraph}{5}{subsection.6.6}
+\contentsline {subsection}{\numberline {6.7}IsBipartite}{5}{subsection.6.7}
+\contentsline {subsection}{\numberline {6.8}CycleInDirectedGraph}{6}{subsection.6.8}
+\contentsline {subsection}{\numberline {6.9}FloodFill}{6}{subsection.6.9}
+\contentsline {subsection}{\numberline {6.10}KruskalMST}{6}{subsection.6.10}
 \contentsline {section}{\numberline {7}Rare Topics}{6}{section.7}
 \contentsline {section}{\numberline {8}Data Structures}{6}{section.8}

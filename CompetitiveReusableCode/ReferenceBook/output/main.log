@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Debian) (preloaded format=pdflatex 2018.6.28)  28 JUN 2018 17:07
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Debian) (preloaded format=pdflatex 2018.6.28)  1 JUL 2018 23:01
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -525,179 +525,55 @@ runsystem(cat getContents.py main.py | python > main.py.out 2> main.py.err)...e
 xecuted.
 
  (./main.py.out
-runsystem(pygmentize -S default -f latex -P commandprefix=PYG > _minted-main/de
-fault-pyg-prefix.pygstyle)...executed.
-
-
-(./_minted-main/default-pyg-prefix.pygstyle)
-runsystem(pygmentize -S vs -f latex -P commandprefix=PYGvs > _minted-main/vs.py
-gstyle)...executed.
-
- (./_minted-main/vs.pygstyle)
-runsystem(pygmentize -l py -f latex -P commandprefix=PYG -F tokenmerge -o _mint
-ed-main/E47AA076FBD8E7129B336DA8CE032696FC0145AF9321D198C92F65C1941F32E5.pygtex
- "/home/san/CODE/Algorithms/CompetitiveReusableCode/Coding Resources/Python/Sor
-tListOfClass.py")...executed.
-
-
+(./_minted-main/default-pyg-prefix.pygstyle) (./_minted-main/vs.pygstyle)
 (./_minted-main/E47AA076FBD8E7129B336DA8CE032696FC0145AF9321D198C92F65C1941F32E
 5.pygtex
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              
 <5> on input line 8.
 )
-runsystem(pygmentize -l py -f latex -P commandprefix=PYG -F tokenmerge -o _mint
-ed-main/6703813B8BA8B958018D71B8EDF43FE4E31EFA23BAB50E1B8AF8C975233A71BA.pygtex
- "/home/san/CODE/Algorithms/CompetitiveReusableCode/Coding Resources/Python/Fas
-t IO.py")...executed.
-
-
 (./_minted-main/6703813B8BA8B958018D71B8EDF43FE4E31EFA23BAB50E1B8AF8C975233A71B
 A.pygtex)
-runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -o _min
-ted-main/071266567A8DE0061BAF8803106702752648497966020617AE167E4747A2E968.pygte
-x "/home/san/CODE/Algorithms/CompetitiveReusableCode/Coding Resources/C++/ReadL
-ineCpp.cpp")...executed.
-
-
 (./_minted-main/071266567A8DE0061BAF8803106702752648497966020617AE167E4747A2E96
 8.pygtex)
-runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -o _min
-ted-main/C4FA422928322FB6FE078985B664BA8916B6C2DDB7E2D6F011A8AAEF3B89D0CD.pygte
-x "/home/san/CODE/Algorithms/CompetitiveReusableCode/Coding Resources/C++/Print
-Vector.cpp")...executed.
-
-
 (./_minted-main/C4FA422928322FB6FE078985B664BA8916B6C2DDB7E2D6F011A8AAEF3B89D0C
 D.pygtex)
-runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -o _min
-ted-main/71AE0F88AD50B22304C542C02EFAEE06A5B40FE9C6AB5407ECC453801943615B.pygte
-x "/home/san/CODE/Algorithms/CompetitiveReusableCode/Coding Resources/C++/Prior
-ityQueueOfClass.cpp")...executed.
-
-
 (./_minted-main/71AE0F88AD50B22304C542C02EFAEE06A5B40FE9C6AB5407ECC453801943615
 B.pygtex)
-runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -o _min
-ted-main/F9FD9CB940B67439159409212781DDC4FB0EEE98AF60E477A03D7AE79F61A2FE.pygte
-x "/home/san/CODE/Algorithms/CompetitiveReusableCode/Coding Resources/C++/SortP
-air.cpp")...executed.
-
-
 (./_minted-main/F9FD9CB940B67439159409212781DDC4FB0EEE98AF60E477A03D7AE79F61A2F
 E.pygtex)
-runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -o _min
-ted-main/756D0940E0AA2317376B3BDF66ECCDFBFA7EA1551AA65E31C818A69D849161D6.pygte
-x "/home/san/CODE/Algorithms/CompetitiveReusableCode/Coding Resources/C++/IntTo
-Binary.cpp")...executed.
-
-
 (./_minted-main/756D0940E0AA2317376B3BDF66ECCDFBFA7EA1551AA65E31C818A69D849161D
 6.pygtex)
-runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -o _min
-ted-main/C15FA3C6C89D2EBAB275F4DF13A772022D7ECD4BEEEB48B041D18E48D03C6087.pygte
-x "/home/san/CODE/Algorithms/CompetitiveReusableCode/Coding Resources/C++/Split
-String.cpp")...executed.
-
-
 (./_minted-main/C15FA3C6C89D2EBAB275F4DF13A772022D7ECD4BEEEB48B041D18E48D03C608
 7.pygtex)
-runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -o _min
-ted-main/E655405F907731A357141C0D979EC703974C71B5CBD92046978967165193310B.pygte
-x "/home/san/CODE/Algorithms/CompetitiveReusableCode/Coding Resources/C++/IOopt
-imizationCPP.cpp")...executed.
-
-
 (./_minted-main/E655405F907731A357141C0D979EC703974C71B5CBD92046978967165193310
 B.pygtex)
-runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -o _min
-ted-main/C7311CC407304D006CDE92B326C23C4066F99855AAA76BDA361F93E305FA6FBB.pygte
-x "/home/san/CODE/Algorithms/CompetitiveReusableCode/Coding Resources/C++/SortV
-ectorOfClass.cpp")...executed.
-
-
 (./_minted-main/C7311CC407304D006CDE92B326C23C4066F99855AAA76BDA361F93E305FA6FB
 B.pygtex [3])
-runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -o _min
-ted-main/8473978EF08C7F6C5FAD3966D020A4BB82E87B8F5271DF4ACF02046156B289F6.pygte
-x "/home/san/CODE/Algorithms/CompetitiveReusableCode/Multiple Queries/Mo.cpp").
-..executed.
-
-
 (./_minted-main/8473978EF08C7F6C5FAD3966D020A4BB82E87B8F5271DF4ACF02046156B289F
 6.pygtex)
-runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -o _min
-ted-main/8473978EF08C7F6C5FAD3966D020A4BB11DA4721BB872553B38ABDAD60B3D47F.pygte
-x "/home/san/CODE/Algorithms/CompetitiveReusableCode/Multiple Queries/SqrtDecom
-position.cpp")...executed.
-
-
 (./_minted-main/8473978EF08C7F6C5FAD3966D020A4BB11DA4721BB872553B38ABDAD60B3D47
 F.pygtex)
-runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -o _min
-ted-main/C85CEFEF5CE76064236248C725CB3827B51337B87E520BDB1F05BC0C92D2A2D4.pygte
-x "/home/san/CODE/Algorithms/CompetitiveReusableCode/Graphs/TopologicalSort.cpp
-")...executed.
-
-
 (./_minted-main/C85CEFEF5CE76064236248C725CB3827B51337B87E520BDB1F05BC0C92D2A2D
 4.pygtex)
-runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -o _min
-ted-main/850CB8A894307EA95AAA701541FDB375A8E25EFA55C419451B6AC6AB765B618A.pygte
-x "/home/san/CODE/Algorithms/CompetitiveReusableCode/Graphs/Dijkstra.cpp")...ex
-ecuted.
-
-
+(./_minted-main/261BEA75C04AFCDE449B1C6B5F84ECD396B37D0A9807E31B80B409CFF1E9087
+8.pygtex)
+(./_minted-main/BAF1B51F1E2A07421BD2F49FE5CCC2D6545DE23376F3E549B6A2EB943F77134
+F.pygtex [4])
 (./_minted-main/850CB8A894307EA95AAA701541FDB375A8E25EFA55C419451B6AC6AB765B618
 A.pygtex)
-runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -o _min
-ted-main/61CE0F01CEEA8D084012ABBB65A29670F06C366F7FADF56670E9CA849E9CDC37.pygte
-x "/home/san/CODE/Algorithms/CompetitiveReusableCode/Graphs/UnionFind.cpp")...e
-xecuted.
-
-
 (./_minted-main/61CE0F01CEEA8D084012ABBB65A29670F06C366F7FADF56670E9CA849E9CDC3
 7.pygtex)
-runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -o _min
-ted-main/9230F7590E2934B568DA0DBDEC05F8598148991F0CF43262A0B6B7C2E14079AD.pygte
-x "/home/san/CODE/Algorithms/CompetitiveReusableCode/Graphs/CycleInUndirectedGr
-aph.cpp")...executed.
-
-
 (./_minted-main/9230F7590E2934B568DA0DBDEC05F8598148991F0CF43262A0B6B7C2E14079A
-D.pygtex [4])
-runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -o _min
-ted-main/3B9DB54A2294D61788D2176EB1CF92E78B694BA50E11ADBF2ABD2377A80DAAC3.pygte
-x "/home/san/CODE/Algorithms/CompetitiveReusableCode/Graphs/IsBipartite.cpp")..
-.executed.
-
-
+D.pygtex)
 (./_minted-main/3B9DB54A2294D61788D2176EB1CF92E78B694BA50E11ADBF2ABD2377A80DAAC
 3.pygtex)
-runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -o _min
-ted-main/3F0DADEDBA055C6BB57039F5237E6870CC59548A4F20F7F5DA03D5564D869C6A.pygte
-x "/home/san/CODE/Algorithms/CompetitiveReusableCode/Graphs/CycleInDirectedGrap
-h.cpp")...executed.
-
-
 (./_minted-main/3F0DADEDBA055C6BB57039F5237E6870CC59548A4F20F7F5DA03D5564D869C6
-A.pygtex)
-runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -o _min
-ted-main/2699C7407E5D640BF36AED178F6DCB4DDBBFF36379F9C0ADC3F3E34C196809BE.pygte
-x "/home/san/CODE/Algorithms/CompetitiveReusableCode/Graphs/FloodFill.cpp")...e
-xecuted.
-
-
+A.pygtex [5])
 (./_minted-main/2699C7407E5D640BF36AED178F6DCB4DDBBFF36379F9C0ADC3F3E34C196809B
 E.pygtex)
-runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -o _min
-ted-main/56B0204BD7A58C27336BDC5274F15FB0AE8CF420325D9E780B757946332530F8.pygte
-x "/home/san/CODE/Algorithms/CompetitiveReusableCode/Graphs/KruskalMST.cpp")...
-executed.
-
-
 (./_minted-main/56B0204BD7A58C27336BDC5274F15FB0AE8CF420325D9E780B757946332530F
-8.pygtex [5])) [6]
+8.pygtex)) [6]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 35.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 35.
  (output/main.aux)
@@ -707,10 +583,10 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: <no file>.
  ) 
 Here is how much of TeX's memory you used:
- 9286 strings out of 494590
- 155636 string characters out of 6177877
- 313828 words of memory out of 5000000
- 12697 multiletter control sequences out of 15000+600000
+ 9296 strings out of 494590
+ 156303 string characters out of 6177877
+ 312828 words of memory out of 5000000
+ 12699 multiletter control sequences out of 15000+600000
  8231 words of font info for 30 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  39i,9n,42p,838b,753s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -722,10 +598,10 @@ f-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/
 fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/t
 ype1/public/amsfonts/cm/cmsy5.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
 blic/amsfonts/cm/cmtt10.pfb>
-Output written on output/main.pdf (6 pages, 101026 bytes).
+Output written on output/main.pdf (6 pages, 103447 bytes).
 PDF statistics:
- 109 PDF objects out of 1000 (max. 8388607)
- 92 compressed objects within 1 object stream
- 42 named destinations out of 1000 (max. 500000)
+ 112 PDF objects out of 1000 (max. 8388607)
+ 95 compressed objects within 1 object stream
+ 44 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
