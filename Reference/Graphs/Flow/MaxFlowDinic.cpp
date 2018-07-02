@@ -4,9 +4,11 @@
 // level[a] = level in graph of node a
 // Num = number
 typedef int Num;
-vector<int> level;
-vector<vector<int>> ady, cap, flow;
 int N, MAXN = 101;
+vector<int> level;
+vector<vector<int>> ady(MAXN,vector<int>),
+cap(MAXN, vector<int>(MAXN)),
+flow(MAXN,vector<int>(MAXN));
 
 bool levelGraph(int s, int t) {
     level = vector<int>(MAXN);

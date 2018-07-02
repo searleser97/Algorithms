@@ -1,10 +1,3 @@
-#include <iostream>
-#include <stdio.h>
-#include <vector>
-
-using namespace std;
-
-
 class RollingHash {
     
 public:
@@ -48,32 +41,4 @@ vector<int> rabinKarp(RollingHash &rhStr, string &pattern) {
         end = i + windowSize;
     }
     return positions;
-}
-
-int main() {
-    int t;
-    cin >> t;
-    for (int i = 0; i < t; i++) {
-        string str, pattern;
-        cin >> str;
-        RollingHash rhStr(str);
-        int k;
-        cin >> k;
-        for (int l = 0; l < k; ++l)
-        {
-            cin >> pattern;
-            vector<int> positions = rabinKarp(rhStr, pattern);
-            if (positions.size() == 0) {
-                cout << "Not Found" << "\n\n";
-                continue;
-            }
-            cout << positions.size() << '\n';
-            for (int j = 0; j < positions.size(); j++) {
-                cout << positions[j] << " ";
-            }
-            cout << "\n\n";
-        }
-
-    }
-    return 0;
 }

@@ -4,16 +4,22 @@ from os.path import isfile, isdir, join
 PATH = '/home/san/CODE/Algorithms/CompetitiveReusableCode/'
 excluded = ['ReferenceBook', '.vscode']
 
-def printSectionType(sectionName, depth):
+def printSectionType(sectionName, depth, isFile):
+    sectionType = ''
     if depth == 4:
-        print('\\paragraph{' + sectionName + '}')
+        sectionType = 'paragraph'
     if depth == 5:
-        print('\\subparagraph{' + sectionName + '}')
+        sectionType = 'subparagraph'
     else:
-        subs = ''
         for i in range(depth - 1):
-            subs += 'sub'
-        print('\\' + subs + 'section{' + sectionName + '}')
+            sectionType += 'sub'
+        sectionType += 'section'
+
+    if (isFile):
+        print('\\' + sectionType + 'font{\\sffamily\\underline}')
+    print('\\' + sectionType + '{' + sectionName + '}')
+    if (isFile):
+        print('\\' + sectionType + 'font{\\sffamily}')
 
 
 def main(currPath, currDir, depth):
@@ -21,7 +27,7 @@ def main(currPath, currDir, depth):
     if currDir in excluded :
         return
 
-    printSectionType(currDir, depth)
+    printSectionType(currDir, depth, False)
 
     for dirOrFile in listdir(currPath):
         f = join(currPath, dirOrFile)
@@ -33,13 +39,13 @@ def main(currPath, currDir, depth):
             if len(aux) == 1:
                 continue
             name, extension = aux
-            printSectionType(str(name), depth + 1)
+            printSectionType(str(name), depth + 1, True)
             if extension == 'tex':
                 print('\\cfinput{' + str(f) + '}')
             else:
                 if extension == 'h':
                     extension = 'cpp'
-                print('\\inputminted[breaklines]{' + extension + '}{"' + str(f) + '"}')
+                print('\\inputminted{' + extension + '}{"' + str(f) + '"}')
 
 
 for directory in listdir(PATH):
