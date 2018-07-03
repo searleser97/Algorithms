@@ -6,52 +6,52 @@
 typedef int Num;
 int N, MAXN = 101;
 vector<int> level;
-vector<vector<int>> ady(MAXN,vector<int>),
-cap(MAXN, vector<int>(MAXN)),
-flow(MAXN,vector<int>(MAXN));
+vector<vector<int>> ady(MAXN, vector<int>), cap(MAXN, vector<int>(MAXN)),
+    flow(MAXN, vector<int>(MAXN));
 
 bool levelGraph(int s, int t) {
-    level = vector<int>(MAXN);
-    level[s] = 1;
-    queue<int> q; q.push(s);
-    while(!q.empty()) {
-        int u = q.front(); q.pop();
-        for (int &v : ady[u]) {
-            if (!level[v] && flow[u][v] < cap[u][v]) {
-                q.push(v);
-                level[v] = level[u] + 1;
-            }
-        }
+  level = vector<int>(MAXN);
+  level[s] = 1;
+  queue<int> q;
+  q.push(s);
+  while (!q.empty()) {
+    int u = q.front();
+    q.pop();
+    for (int &v : ady[u]) {
+      if (!level[v] && flow[u][v] < cap[u][v]) {
+        q.push(v);
+        level[v] = level[u] + 1;
+      }
     }
-    return level[t];
+  }
+  return level[t];
 }
 
 Num blockingFlow(int u, int t, Num currPathMaxFlow) {
-    if (u == t) return currPathMaxFlow;
-    for (int v : ady[u]) {
-        Num capleft = cap[u][v] - flow[u][v];
-        if ((level[v] == (level[u] + 1)) && (capleft > 0)) {
-            Num pathMaxFlow = blockingFlow(v, t, min(currPathMaxFlow, capleft));
-            if (pathMaxFlow > 0) {
-                flow[u][v] += pathMaxFlow;
-                flow[v][u] -= pathMaxFlow;
-                return pathMaxFlow;
-            }
-        }
+  if (u == t) return currPathMaxFlow;
+  for (int v : ady[u]) {
+    Num capleft = cap[u][v] - flow[u][v];
+    if ((level[v] == (level[u] + 1)) && (capleft > 0)) {
+      Num pathMaxFlow = blockingFlow(v, t, min(currPathMaxFlow, capleft));
+      if (pathMaxFlow > 0) {
+        flow[u][v] += pathMaxFlow;
+        flow[v][u] -= pathMaxFlow;
+        return pathMaxFlow;
+      }
     }
-    return 0;
+  }
+  return 0;
 }
 
 Num dinicMaxFlow(int s, int t) {
-    if (s == t) return -1;
-    Num maxFlow = 0;
-    while(levelGraph(s, t))
-        while (Num flow = blockingFlow(s, t, 1 << 30))
-            maxFlow += flow;
-    return maxFlow;
+  if (s == t) return -1;
+  Num maxFlow = 0;
+  while (levelGraph(s, t))
+    while (Num flow = blockingFlow(s, t, 1 << 30)) maxFlow += flow;
+  return maxFlow;
 }
 
 void addEdge(int u, int v, Num capacity) {
-    cap[u][v] = capacity;
-    ady[u].push_back(v);
+  cap[u][v] = capacity;
+  ady[u].push_back(v);
 }

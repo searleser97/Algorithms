@@ -1,5 +1,6 @@
 from random import randrange
 
+
 def is_prime(p):
     k = 100
     if p == 2 or p == 3:

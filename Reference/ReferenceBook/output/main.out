@@ -1,48 +1,52 @@
 \BOOKMARK [1][-]{section.1}{Coding Resources}{}% 1
-\BOOKMARK [2][-]{subsection.1.1}{Python}{section.1}% 2
-\BOOKMARK [3][-]{subsubsection.1.1.1}{Combinations}{subsection.1.1}% 3
-\BOOKMARK [3][-]{subsubsection.1.1.2}{SortListOfClass}{subsection.1.1}% 4
-\BOOKMARK [3][-]{subsubsection.1.1.3}{Fast IO}{subsection.1.1}% 5
-\BOOKMARK [3][-]{subsubsection.1.1.4}{Permutations}{subsection.1.1}% 6
-\BOOKMARK [2][-]{subsection.1.2}{C++}{section.1}% 7
-\BOOKMARK [3][-]{subsubsection.1.2.1}{ReadLineCpp}{subsection.1.2}% 8
-\BOOKMARK [3][-]{subsubsection.1.2.2}{PrintVector}{subsection.1.2}% 9
-\BOOKMARK [3][-]{subsubsection.1.2.3}{PriorityQueueOfClass}{subsection.1.2}% 10
-\BOOKMARK [3][-]{subsubsection.1.2.4}{SortPair}{subsection.1.2}% 11
-\BOOKMARK [3][-]{subsubsection.1.2.5}{IntToBinary}{subsection.1.2}% 12
-\BOOKMARK [3][-]{subsubsection.1.2.6}{SplitString}{subsection.1.2}% 13
-\BOOKMARK [3][-]{subsubsection.1.2.7}{MapValueToInt}{subsection.1.2}% 14
-\BOOKMARK [3][-]{subsubsection.1.2.8}{IOoptimizationCPP}{subsection.1.2}% 15
-\BOOKMARK [3][-]{subsubsection.1.2.9}{SortVectorOfClass}{subsection.1.2}% 16
-\BOOKMARK [1][-]{section.2}{Multiple Queries}{}% 17
-\BOOKMARK [2][-]{subsection.2.1}{Mo}{section.2}% 18
-\BOOKMARK [2][-]{subsection.2.2}{SqrtDecomposition}{section.2}% 19
-\BOOKMARK [1][-]{section.3}{Maths}{}% 20
-\BOOKMARK [2][-]{subsection.3.1}{Combinatorics}{section.3}% 21
-\BOOKMARK [2][-]{subsection.3.2}{Number Theory}{section.3}% 22
-\BOOKMARK [3][-]{subsubsection.3.2.1}{extendedEuclidean}{subsection.3.2}% 23
-\BOOKMARK [3][-]{subsubsection.3.2.2}{divisibilityCriterion}{subsection.3.2}% 24
-\BOOKMARK [3][-]{subsubsection.3.2.3}{gcd}{subsection.3.2}% 25
-\BOOKMARK [3][-]{subsubsection.3.2.4}{PrimeCheckMillerRabin}{subsection.3.2}% 26
-\BOOKMARK [2][-]{subsection.3.3}{Probability}{section.3}% 27
-\BOOKMARK [2][-]{subsection.3.4}{Game Theory}{section.3}% 28
-\BOOKMARK [1][-]{section.4}{Geometry}{}% 29
-\BOOKMARK [1][-]{section.5}{Strings}{}% 30
-\BOOKMARK [2][-]{subsection.5.1}{RabinKarp}{section.5}% 31
-\BOOKMARK [1][-]{section.6}{Graphs}{}% 32
-\BOOKMARK [2][-]{subsection.6.1}{Flow}{section.6}% 33
-\BOOKMARK [3][-]{subsubsection.6.1.1}{MaxFlowDinic}{subsection.6.1}% 34
-\BOOKMARK [2][-]{subsection.6.2}{TopologicalSort}{section.6}% 35
-\BOOKMARK [2][-]{subsection.6.3}{MinimumCut}{section.6}% 36
-\BOOKMARK [2][-]{subsection.6.4}{UnionFind}{section.6}% 37
-\BOOKMARK [2][-]{subsection.6.5}{CycleInUndirectedGraph}{section.6}% 38
-\BOOKMARK [2][-]{subsection.6.6}{IsBipartite}{section.6}% 39
-\BOOKMARK [2][-]{subsection.6.7}{ShortestPaths}{section.6}% 40
-\BOOKMARK [3][-]{subsubsection.6.7.1}{Dijkstra}{subsection.6.7}% 41
-\BOOKMARK [2][-]{subsection.6.8}{CycleInDirectedGraph}{section.6}% 42
-\BOOKMARK [2][-]{subsection.6.9}{FloodFill}{section.6}% 43
-\BOOKMARK [2][-]{subsection.6.10}{KruskalMST}{section.6}% 44
-\BOOKMARK [1][-]{section.7}{Rare Topics}{}% 45
-\BOOKMARK [1][-]{section.8}{Data Structures}{}% 46
-\BOOKMARK [2][-]{subsection.8.1}{Trie}{section.8}% 47
-\BOOKMARK [2][-]{subsection.8.2}{SegmentTree}{section.8}% 48
+\BOOKMARK [2][-]{subsection.1.1}{C++}{section.1}% 2
+\BOOKMARK [3][-]{subsubsection.1.1.1}{IOoptimizationCPP}{subsection.1.1}% 3
+\BOOKMARK [3][-]{subsubsection.1.1.2}{IntToBinary}{subsection.1.1}% 4
+\BOOKMARK [3][-]{subsubsection.1.1.3}{MapValueToInt}{subsection.1.1}% 5
+\BOOKMARK [3][-]{subsubsection.1.1.4}{PrintVector}{subsection.1.1}% 6
+\BOOKMARK [3][-]{subsubsection.1.1.5}{PriorityQueueOfClass}{subsection.1.1}% 7
+\BOOKMARK [3][-]{subsubsection.1.1.6}{ReadLineCpp}{subsection.1.1}% 8
+\BOOKMARK [3][-]{subsubsection.1.1.7}{SortPair}{subsection.1.1}% 9
+\BOOKMARK [3][-]{subsubsection.1.1.8}{SortVectorOfClass}{subsection.1.1}% 10
+\BOOKMARK [3][-]{subsubsection.1.1.9}{SplitString}{subsection.1.1}% 11
+\BOOKMARK [2][-]{subsection.1.2}{Python}{section.1}% 12
+\BOOKMARK [3][-]{subsubsection.1.2.1}{Combinations}{subsection.1.2}% 13
+\BOOKMARK [3][-]{subsubsection.1.2.2}{Fast IO}{subsection.1.2}% 14
+\BOOKMARK [3][-]{subsubsection.1.2.3}{Permutations}{subsection.1.2}% 15
+\BOOKMARK [3][-]{subsubsection.1.2.4}{SortListOfClass}{subsection.1.2}% 16
+\BOOKMARK [1][-]{section.2}{Data Structures}{}% 17
+\BOOKMARK [2][-]{subsection.2.1}{SegmentTree}{section.2}% 18
+\BOOKMARK [2][-]{subsection.2.2}{Trie}{section.2}% 19
+\BOOKMARK [1][-]{section.3}{Geometry}{}% 20
+\BOOKMARK [1][-]{section.4}{Graphs}{}% 21
+\BOOKMARK [2][-]{subsection.4.1}{CycleInDirectedGraph}{section.4}% 22
+\BOOKMARK [2][-]{subsection.4.2}{CycleInUndirectedGraph}{section.4}% 23
+\BOOKMARK [2][-]{subsection.4.3}{FloodFill}{section.4}% 24
+\BOOKMARK [2][-]{subsection.4.4}{Flow}{section.4}% 25
+\BOOKMARK [3][-]{subsubsection.4.4.1}{MaxFlowDinic}{subsection.4.4}% 26
+\BOOKMARK [2][-]{subsection.4.5}{IsBipartite}{section.4}% 27
+\BOOKMARK [2][-]{subsection.4.6}{KruskalMST}{section.4}% 28
+\BOOKMARK [2][-]{subsection.4.7}{MinimumCut}{section.4}% 29
+\BOOKMARK [2][-]{subsection.4.8}{ShortestPaths}{section.4}% 30
+\BOOKMARK [3][-]{subsubsection.4.8.1}{BellmanFord}{subsection.4.8}% 31
+\BOOKMARK [3][-]{subsubsection.4.8.2}{Dijkstra}{subsection.4.8}% 32
+\BOOKMARK [2][-]{subsection.4.9}{TopologicalSort}{section.4}% 33
+\BOOKMARK [2][-]{subsection.4.10}{UnionFind}{section.4}% 34
+\BOOKMARK [1][-]{section.5}{Maths}{}% 35
+\BOOKMARK [2][-]{subsection.5.1}{Game Theory}{section.5}% 36
+\BOOKMARK [2][-]{subsection.5.2}{Number Theory}{section.5}% 37
+\BOOKMARK [3][-]{subsubsection.5.2.1}{DivisibilityCriterion}{subsection.5.2}% 38
+\BOOKMARK [3][-]{subsubsection.5.2.2}{ExtendedEuclidean}{subsection.5.2}% 39
+\BOOKMARK [3][-]{subsubsection.5.2.3}{GCD}{subsection.5.2}% 40
+\BOOKMARK [3][-]{subsubsection.5.2.4}{PrimeCheckMillerRabin}{subsection.5.2}% 41
+\BOOKMARK [3][-]{subsubsection.5.2.5}{PrimeSieve}{subsection.5.2}% 42
+\BOOKMARK [2][-]{subsection.5.3}{Probability}{section.5}% 43
+\BOOKMARK [3][-]{subsubsection.5.3.1}{Combinations}{subsection.5.3}% 44
+\BOOKMARK [3][-]{subsubsection.5.3.2}{Permutations}{subsection.5.3}% 45
+\BOOKMARK [1][-]{section.6}{Multiple Queries}{}% 46
+\BOOKMARK [2][-]{subsection.6.1}{Mo}{section.6}% 47
+\BOOKMARK [2][-]{subsection.6.2}{SqrtDecomposition}{section.6}% 48
+\BOOKMARK [1][-]{section.7}{Rare Topics}{}% 49
+\BOOKMARK [1][-]{section.8}{Strings}{}% 50
+\BOOKMARK [2][-]{subsection.8.1}{RabinKarp}{section.8}% 51
+\BOOKMARK [1][-]{section.9}{Faster But Longer}{}% 52

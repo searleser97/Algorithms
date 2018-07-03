@@ -1,23 +1,34 @@
-#include<bits/stdc++.h>
-
-using namespace std;
-
-int n; // max node id >= 0
 typedef int Weight;
-typedef pair<int, int> NeighCost;
-typedef pair<int, NeighCost> ady;
+typedef pair<Weight, int> NodeDist;
+int MAXN = 20001, INF = 1 << 30, isDirected = false;
+vector<vector<int>> ady(MAXN, vector<int>()),
+    weight(MAXN, vector<int>(MAXN, INF));
 
-vector<int> parent;
-vector<int> dist;
-
-void Dijkstra(int src) {
-    
+vector<Weight> dijkstra(int s) {
+  vector<int> dist(MAXN, INF);
+  set<NodeDist> q;
+  q.insert({0, s});
+  dist[s] = 0;
+  while (!q.empty()) {
+    NodeDist nd = *q.begin();
+    q.erase(nd);
+    int u = nd.second;
+    for (int &v : ady[u]) {
+      Weight w = weight[u][v];
+      if (dist[v] > dist[u] + w) {
+        if (dist[v] != INF) q.erase({dist[v], v});
+        dist[v] = dist[u] + w;
+        q.insert({dist[v], v});
+      }
+    }
+  }
+  return dist;
 }
 
-int main() {
-    cin >> n;
-    ady.resize(n);
-    parent.resize(n);
-    dist.resize(n);
-    return 0;
+void addEdge(int u, int v, Weight w) {
+  ady[u].push_back(v);
+  weight[u][v] = w;
+  if (isDirected) return;
+  ady[v].push_back(u);
+  weight[v][u] = w;
 }

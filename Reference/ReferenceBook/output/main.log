@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Debian) (preloaded format=pdflatex 2018.6.28)  2 JUL 2018 16:40
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Debian) (preloaded format=pdflatex 2018.6.28)  3 JUL 2018 09:34
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -413,6 +413,31 @@ s
 Package: sectsty 2002/02/25 v2.0.2 Commands to change all sectional heading sty
 les
 )
+(/home/san/texmf/tex/latex/listings/listings.sty
+\lst@mode=\count143
+\lst@gtempboxa=\box61
+\lst@token=\toks22
+\lst@length=\count144
+\lst@currlwidth=\dimen141
+\lst@column=\count145
+\lst@pos=\count146
+\lst@lostspace=\dimen142
+\lst@width=\dimen143
+\lst@newlines=\count147
+\lst@lineno=\count148
+\lst@maxwidth=\dimen144
+
+(/home/san/texmf/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
+\c@lstnumber=\count149
+\lst@skipnumbers=\count150
+\lst@framebox=\box62
+)
+(/home/san/texmf/tex/latex/listings/listings.cfg
+File: listings.cfg 2015/06/04 1.6 listings configuration
+))
+Package: listings 2015/06/04 1.6 (Carsten Heinz)
+
 (/home/san/texmf/tex/latex/xcolor/xcolor.sty
 Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
 
@@ -442,20 +467,20 @@ runsystem(rm main.aex)...executed.
 (output/main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 38.
-LaTeX Font Info:    ... okay on input line 38.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 38.
-LaTeX Font Info:    ... okay on input line 38.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 38.
-LaTeX Font Info:    ... okay on input line 38.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 38.
-LaTeX Font Info:    ... okay on input line 38.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 38.
-LaTeX Font Info:    ... okay on input line 38.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 38.
-LaTeX Font Info:    ... okay on input line 38.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 38.
-LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -491,45 +516,204 @@ LaTeX Font Info:    ... okay on input line 38.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-\AtBeginShipoutBox=\box61
-Package hyperref Info: Link coloring OFF on input line 38.
+\AtBeginShipoutBox=\box63
+Package hyperref Info: Link coloring OFF on input line 39.
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count143
+\c@section@level=\count151
 )
-LaTeX Info: Redefining \ref on input line 38.
-LaTeX Info: Redefining \pageref on input line 38.
-LaTeX Info: Redefining \nameref on input line 38.
+LaTeX Info: Redefining \ref on input line 39.
+LaTeX Info: Redefining \pageref on input line 39.
+LaTeX Info: Redefining \nameref on input line 39.
 
 (output/main.out) (output/main.out)
 \@outlinefile=\write8
 \openout8 = `main.out'.
 
 
+(/usr/share/texlive/texmf-dist/tex/latex/base/textcomp.sty
+Package: textcomp 2017/04/05 v2.0i Standard LaTeX package
+Package textcomp Info: Sub-encoding information:
+(textcomp)               5 = only ISO-Adobe without \textcurrency
+(textcomp)               4 = 5 + \texteuro
+(textcomp)               3 = 4 + \textohm
+(textcomp)               2 = 3 + \textestimated + \textcurrency
+(textcomp)               1 = TS1 - \textcircled - \t
+(textcomp)               0 = TS1 (full)
+(textcomp)             Font families with sub-encoding setting implement
+(textcomp)             only a restricted character set as indicated.
+(textcomp)             Family '?' is the default used for unknown fonts.
+(textcomp)             See the documentation for details.
+Package textcomp Info: Setting ? sub-encoding to TS1/1 on input line 79.
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/ts1enc.def
+File: ts1enc.def 2001/06/05 v3.0e (jk/car/fm) Standard LaTeX file
+Now handling font encoding TS1 ...
+... processing UTF-8 mapping file for font encoding TS1
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/ts1enc.dfu
+File: ts1enc.dfu 2018/04/05 v1.2c UTF-8 support for inputenc
+   defining Unicode char U+00A2 (decimal 162)
+   defining Unicode char U+00A3 (decimal 163)
+   defining Unicode char U+00A4 (decimal 164)
+   defining Unicode char U+00A5 (decimal 165)
+   defining Unicode char U+00A6 (decimal 166)
+   defining Unicode char U+00A7 (decimal 167)
+   defining Unicode char U+00A8 (decimal 168)
+   defining Unicode char U+00A9 (decimal 169)
+   defining Unicode char U+00AA (decimal 170)
+   defining Unicode char U+00AC (decimal 172)
+   defining Unicode char U+00AE (decimal 174)
+   defining Unicode char U+00AF (decimal 175)
+   defining Unicode char U+00B0 (decimal 176)
+   defining Unicode char U+00B1 (decimal 177)
+   defining Unicode char U+00B2 (decimal 178)
+   defining Unicode char U+00B3 (decimal 179)
+   defining Unicode char U+00B4 (decimal 180)
+   defining Unicode char U+00B5 (decimal 181)
+   defining Unicode char U+00B6 (decimal 182)
+   defining Unicode char U+00B7 (decimal 183)
+   defining Unicode char U+00B9 (decimal 185)
+   defining Unicode char U+00BA (decimal 186)
+   defining Unicode char U+00BC (decimal 188)
+   defining Unicode char U+00BD (decimal 189)
+   defining Unicode char U+00BE (decimal 190)
+   defining Unicode char U+00D7 (decimal 215)
+   defining Unicode char U+00F7 (decimal 247)
+   defining Unicode char U+0192 (decimal 402)
+   defining Unicode char U+02C7 (decimal 711)
+   defining Unicode char U+02D8 (decimal 728)
+   defining Unicode char U+02DD (decimal 733)
+   defining Unicode char U+0E3F (decimal 3647)
+   defining Unicode char U+2016 (decimal 8214)
+   defining Unicode char U+2020 (decimal 8224)
+   defining Unicode char U+2021 (decimal 8225)
+   defining Unicode char U+2022 (decimal 8226)
+   defining Unicode char U+2030 (decimal 8240)
+   defining Unicode char U+2031 (decimal 8241)
+   defining Unicode char U+203B (decimal 8251)
+   defining Unicode char U+203D (decimal 8253)
+   defining Unicode char U+2044 (decimal 8260)
+   defining Unicode char U+204E (decimal 8270)
+   defining Unicode char U+2052 (decimal 8274)
+   defining Unicode char U+20A1 (decimal 8353)
+   defining Unicode char U+20A4 (decimal 8356)
+   defining Unicode char U+20A6 (decimal 8358)
+   defining Unicode char U+20A9 (decimal 8361)
+   defining Unicode char U+20AB (decimal 8363)
+   defining Unicode char U+20AC (decimal 8364)
+   defining Unicode char U+20B1 (decimal 8369)
+   defining Unicode char U+2103 (decimal 8451)
+   defining Unicode char U+2116 (decimal 8470)
+   defining Unicode char U+2117 (decimal 8471)
+   defining Unicode char U+211E (decimal 8478)
+   defining Unicode char U+2120 (decimal 8480)
+   defining Unicode char U+2122 (decimal 8482)
+   defining Unicode char U+2126 (decimal 8486)
+   defining Unicode char U+2127 (decimal 8487)
+   defining Unicode char U+212E (decimal 8494)
+   defining Unicode char U+2190 (decimal 8592)
+   defining Unicode char U+2191 (decimal 8593)
+   defining Unicode char U+2192 (decimal 8594)
+   defining Unicode char U+2193 (decimal 8595)
+   defining Unicode char U+2329 (decimal 9001)
+   defining Unicode char U+232A (decimal 9002)
+   defining Unicode char U+2422 (decimal 9250)
+   defining Unicode char U+25E6 (decimal 9702)
+   defining Unicode char U+25EF (decimal 9711)
+   defining Unicode char U+266A (decimal 9834)
+   defining Unicode char U+FEFF (decimal 65279)
+))
+LaTeX Info: Redefining \oldstylenums on input line 334.
+Package textcomp Info: Setting cmr sub-encoding to TS1/0 on input line 349.
+Package textcomp Info: Setting cmss sub-encoding to TS1/0 on input line 350.
+Package textcomp Info: Setting cmtt sub-encoding to TS1/0 on input line 351.
+Package textcomp Info: Setting cmvtt sub-encoding to TS1/0 on input line 352.
+Package textcomp Info: Setting cmbr sub-encoding to TS1/0 on input line 353.
+Package textcomp Info: Setting cmtl sub-encoding to TS1/0 on input line 354.
+Package textcomp Info: Setting ccr sub-encoding to TS1/0 on input line 355.
+Package textcomp Info: Setting ptm sub-encoding to TS1/4 on input line 356.
+Package textcomp Info: Setting pcr sub-encoding to TS1/4 on input line 357.
+Package textcomp Info: Setting phv sub-encoding to TS1/4 on input line 358.
+Package textcomp Info: Setting ppl sub-encoding to TS1/3 on input line 359.
+Package textcomp Info: Setting pag sub-encoding to TS1/4 on input line 360.
+Package textcomp Info: Setting pbk sub-encoding to TS1/4 on input line 361.
+Package textcomp Info: Setting pnc sub-encoding to TS1/4 on input line 362.
+Package textcomp Info: Setting pzc sub-encoding to TS1/4 on input line 363.
+Package textcomp Info: Setting bch sub-encoding to TS1/4 on input line 364.
+Package textcomp Info: Setting put sub-encoding to TS1/5 on input line 365.
+Package textcomp Info: Setting uag sub-encoding to TS1/5 on input line 366.
+Package textcomp Info: Setting ugq sub-encoding to TS1/5 on input line 367.
+Package textcomp Info: Setting ul8 sub-encoding to TS1/4 on input line 368.
+Package textcomp Info: Setting ul9 sub-encoding to TS1/4 on input line 369.
+Package textcomp Info: Setting augie sub-encoding to TS1/5 on input line 370.
+Package textcomp Info: Setting dayrom sub-encoding to TS1/3 on input line 371.
+Package textcomp Info: Setting dayroms sub-encoding to TS1/3 on input line 372.
+
+Package textcomp Info: Setting pxr sub-encoding to TS1/0 on input line 373.
+Package textcomp Info: Setting pxss sub-encoding to TS1/0 on input line 374.
+Package textcomp Info: Setting pxtt sub-encoding to TS1/0 on input line 375.
+Package textcomp Info: Setting txr sub-encoding to TS1/0 on input line 376.
+Package textcomp Info: Setting txss sub-encoding to TS1/0 on input line 377.
+Package textcomp Info: Setting txtt sub-encoding to TS1/0 on input line 378.
+Package textcomp Info: Setting lmr sub-encoding to TS1/0 on input line 379.
+Package textcomp Info: Setting lmdh sub-encoding to TS1/0 on input line 380.
+Package textcomp Info: Setting lmss sub-encoding to TS1/0 on input line 381.
+Package textcomp Info: Setting lmssq sub-encoding to TS1/0 on input line 382.
+Package textcomp Info: Setting lmvtt sub-encoding to TS1/0 on input line 383.
+Package textcomp Info: Setting lmtt sub-encoding to TS1/0 on input line 384.
+Package textcomp Info: Setting qhv sub-encoding to TS1/0 on input line 385.
+Package textcomp Info: Setting qag sub-encoding to TS1/0 on input line 386.
+Package textcomp Info: Setting qbk sub-encoding to TS1/0 on input line 387.
+Package textcomp Info: Setting qcr sub-encoding to TS1/0 on input line 388.
+Package textcomp Info: Setting qcs sub-encoding to TS1/0 on input line 389.
+Package textcomp Info: Setting qpl sub-encoding to TS1/0 on input line 390.
+Package textcomp Info: Setting qtm sub-encoding to TS1/0 on input line 391.
+Package textcomp Info: Setting qzc sub-encoding to TS1/0 on input line 392.
+Package textcomp Info: Setting qhvc sub-encoding to TS1/0 on input line 393.
+Package textcomp Info: Setting futs sub-encoding to TS1/4 on input line 394.
+Package textcomp Info: Setting futx sub-encoding to TS1/4 on input line 395.
+Package textcomp Info: Setting futj sub-encoding to TS1/4 on input line 396.
+Package textcomp Info: Setting hlh sub-encoding to TS1/3 on input line 397.
+Package textcomp Info: Setting hls sub-encoding to TS1/3 on input line 398.
+Package textcomp Info: Setting hlst sub-encoding to TS1/3 on input line 399.
+Package textcomp Info: Setting hlct sub-encoding to TS1/5 on input line 400.
+Package textcomp Info: Setting hlx sub-encoding to TS1/5 on input line 401.
+Package textcomp Info: Setting hlce sub-encoding to TS1/5 on input line 402.
+Package textcomp Info: Setting hlcn sub-encoding to TS1/5 on input line 403.
+Package textcomp Info: Setting hlcw sub-encoding to TS1/5 on input line 404.
+Package textcomp Info: Setting hlcf sub-encoding to TS1/5 on input line 405.
+Package textcomp Info: Setting pplx sub-encoding to TS1/3 on input line 406.
+Package textcomp Info: Setting pplj sub-encoding to TS1/3 on input line 407.
+Package textcomp Info: Setting ptmx sub-encoding to TS1/4 on input line 408.
+Package textcomp Info: Setting ptmj sub-encoding to TS1/4 on input line 409.
+)
+\c@lstlisting=\count152
+
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count144
-\scratchdimen=\dimen141
-\scratchbox=\box62
-\nofMPsegments=\count145
-\nofMParguments=\count146
-\everyMPshowfont=\toks22
-\MPscratchCnt=\count147
-\MPscratchDim=\dimen142
-\MPnumerator=\count148
-\makeMPintoPDFobject=\count149
-\everyMPtoPDFconversion=\toks23
+\scratchcounter=\count153
+\scratchdimen=\dimen145
+\scratchbox=\box64
+\nofMPsegments=\count154
+\nofMParguments=\count155
+\everyMPshowfont=\toks23
+\MPscratchCnt=\count156
+\MPscratchDim=\dimen146
+\MPnumerator=\count157
+\makeMPintoPDFobject=\count158
+\everyMPtoPDFconversion=\toks24
 )
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 41.
+(Font)              <12> on input line 42.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 41.
+(Font)              <8> on input line 42.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 41.
+(Font)              <6> on input line 42.
  [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (output/main.toc
@@ -552,87 +736,91 @@ xecuted.
 
  (./main.py.out (./_minted-main/default-pyg-prefix.pygstyle)
 (./_minted-main/tango.pygstyle)
-(./_minted-main/341588E2C47125C35411C258CAF19A514FC4F513CC2531FEB228246C55B4A27
-D.pygtex
+(./_minted-main/404E711C0E6468D41E0C5E04213B940A92FD74154E8EFBCE3C946B7785E9915
+A.pygtex
 LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <10> not available
 (Font
 )              Font shape `OT1/cmtt/m/n' tried instead on input line 2.
 )
-(./_minted-main/E47AA076FBD8E7129B336DA8CE032696FC0145AF9321D198C92F65C1941F32E
+(./_minted-main/AB72AA53C6F64F3734ABC160290D794834F6661B379E128357EA6E82C20AD50
 5.pygtex)
-(./_minted-main/6703813B8BA8B958018D71B8EDF43FE4E31EFA23BAB50E1B8AF8C975233A71B
+(./_minted-main/BDF8986E9F99374720967E8B5626377A22D7DC3F5C155B65380E5E6631BDC77
 A.pygtex)
-(./_minted-main/19B0A21C1B346160F57B74AA68C85F80DE32F77B5B08FF57B237430D9485F8F
-1.pygtex)
-(./_minted-main/071266567A8DE0061BAF8803106702752648497966020617AE167E4747A2E96
-8.pygtex)
-(./_minted-main/C4FA422928322FB6FE078985B664BA8916B6C2DDB7E2D6F011A8AAEF3B89D0C
-D.pygtex)
-(./_minted-main/71AE0F88AD50B22304C542C02EFAEE06A5B40FE9C6AB5407ECC453801943615
-B.pygtex)
-(./_minted-main/F9FD9CB940B67439159409212781DDC4FB0EEE98AF60E477A03D7AE79F61A2F
-E.pygtex)
-(./_minted-main/756D0940E0AA2317376B3BDF66ECCDFBFA7EA1551AA65E31C818A69D849161D
-6.pygtex)
-(./_minted-main/C15FA3C6C89D2EBAB275F4DF13A772022D7ECD4BEEEB48B041D18E48D03C608
-7.pygtex [3])
-(./_minted-main/34EE34F6F4BF222B1921C5887A91FE6366C755BE67BA0A6E2753CDDDBC1FAF5
-4.pygtex)
-(./_minted-main/E655405F907731A357141C0D979EC703974C71B5CBD92046978967165193310
-B.pygtex)
-(./_minted-main/C7311CC407304D006CDE92B326C23C4066F99855AAA76BDA361F93E305FA6FB
-B.pygtex)
-(./_minted-main/8473978EF08C7F6C5FAD3966D020A4BB82E87B8F5271DF4ACF02046156B289F
-6.pygtex)
-(./_minted-main/8473978EF08C7F6C5FAD3966D020A4BB11DA4721BB872553B38ABDAD60B3D47
-F.pygtex)
-(./_minted-main/A63F175E5B68D237C14F7929C718D906A6A487BC4B8A0CD78B9FD3B87973A47
-3.pygtex)
-(./_minted-main/B7ED35141BF846F699E4CC40FCDCFB70116716133DCED35998848D8B3EF5E9D
-1.pygtex [4])
-(./_minted-main/68D41ED8C4541622131223B9844226F9EE1E3FE9FFCBDC368DBB68F35B0BA8D
-6.pygtex)
-(./_minted-main/AA1D975FAC371B817DBE617E0329364CCF086570A467FFE9463F30F594D2C14
+(./_minted-main/EEE0F23AE4BDB5949E15B2AD71A8B1A4B25798A2D909C4EA0C2677B7C6C48ED
 0.pygtex)
-(./_minted-main/E2D4664244073E07C7C0112DDC4CD9D39CD7A5F9086138ED87FAAE9538D5333
-9.pygtex [5])
-(./_minted-main/DBC7BDB70ACD1D745D5FFA592EA556A59BC13B89C4226C0C38C32B36ECE2393
-5.pygtex)
-(./_minted-main/C85CEFEF5CE76064236248C725CB3827B51337B87E520BDB1F05BC0C92D2A2D
-4.pygtex)
-(./_minted-main/BAF1B51F1E2A07421BD2F49FE5CCC2D6545DE23376F3E549B6A2EB943F77134
-F.pygtex)
-(./_minted-main/61CE0F01CEEA8D084012ABBB65A29670F06C366F7FADF56670E9CA849E9CDC3
-7.pygtex [6])
-(./_minted-main/9230F7590E2934B568DA0DBDEC05F8598148991F0CF43262A0B6B7C2E14079A
-D.pygtex)
-(./_minted-main/3B9DB54A2294D61788D2176EB1CF92E78B694BA50E11ADBF2ABD2377A80DAAC
+(./_minted-main/978A77A02D5CD1DA15FC1594E7597ACFD92F343E5571DBEEFD7DB5B56CE7169
 3.pygtex)
-(./_minted-main/850CB8A894307EA95AAA701541FDB37589FBE93A391D329B3D3453C4DBF715A
-F.pygtex [7])
-(./_minted-main/3F0DADEDBA055C6BB57039F5237E6870CC59548A4F20F7F5DA03D5564D869C6
-A.pygtex)
-(./_minted-main/2699C7407E5D640BF36AED178F6DCB4DDBBFF36379F9C0ADC3F3E34C196809B
-E.pygtex)
-(./_minted-main/56B0204BD7A58C27336BDC5274F15FB0AE8CF420325D9E780B757946332530F
-8.pygtex)
-(./_minted-main/D41D8CD98F00B204E9800998ECF8427E0A3A71B6B412A520B2B3DCEBE664E2F
+(./_minted-main/7C119C2F4311D745D43C2278E3B2CC5F8B8E2528EFCC3ED12922B353315FDB9
 D.pygtex)
-(./_minted-main/D41D8CD98F00B204E9800998ECF8427E8A7CA0B52DC399524F47C112ECB596E
-F.pygtex)) [8]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 52.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 52.
+(./_minted-main/F9FD9CB940B67439159409212781DDC4721B10D5FF30D5828DB5A180F9BF01A
+A.pygtex)
+(./_minted-main/4BDE645D91AA729CD7768353DF0A6591DFA3AF20A3515052D8DD20966470EC6
+F.pygtex)
+(./_minted-main/F6A49C57BC8C4A19BC45071556A5C43D153A075BBCE7E54584FD1BBB15EE443
+C.pygtex [3])
+(./_minted-main/1F7930AF36B0ED7D28854DCDCB53B1889C70535B2D8B0E12B449B2875ECE605
+5.pygtex)
+(./_minted-main/6703813B8BA8B958018D71B8EDF43FE4608C1AA67D4364808AEF137E9B5AAD8
+2.pygtex)
+(./_minted-main/85806484F6051D7D22A0F4F4E2B01BA4C2E29C98F5409900032684352795A6C
+C.pygtex)
+(./_minted-main/E47AA076FBD8E7129B336DA8CE032696F2194D1B5D06FAB05DFDFC0A69BE58D
+D.pygtex)
+(./_minted-main/D41D8CD98F00B204E9800998ECF8427EB52E2D5860F8FAE8E3343E046C120F1
+5.pygtex)
+(./_minted-main/D41D8CD98F00B204E9800998ECF8427E01374DE6A75B7F3E69CA1F3A9D556F1
+A.pygtex)
+(./_minted-main/2C1D0DB93364C30D7834D6C812D58D624B82ED5A3302723D68B4F315E3CAB1A
+C.pygtex)
+(./_minted-main/089846EA0C3164C6E0150EE12471A52D766FDF05A8B8FF9BBB03840DF83B31A
+B.pygtex [4])
+(./_minted-main/F2A9F63DB6987B25AA0AFD321D635CE5A641E83067413033B5E0DBDF9519DE0
+0.pygtex)
+(./_minted-main/863C5966DAC72C4B366B8DD2C6FD5721D4C7372811749D791E89321A915C834
+D.pygtex [5])
+(./_minted-main/B70AD3FB0B8F2228EDC3FBF57C6B3C5A053701B2890799789B86B25BB2E2C7A
+8.pygtex)
+(./_minted-main/53ABCEB2F34FC5C57980F0EEA61A838ABFCA0B84E74473579182D14FC5DC80D
+3.pygtex)
+(./_minted-main/BAF1B51F1E2A07421BD2F49FE5CCC2D6FAA9BD2D7CA900737D787A8694F4355
+A.pygtex)
+(./_minted-main/7CC86812B6687827A6E5BA805B301A208BDF2B52986F97AD790931AE6B6AF55
+C.pygtex)
+(./_minted-main/D36163464896AD840371D04728A67DAAF4224F3FB9926148550BF9141A4F93C
+6.pygtex [6])
+(./_minted-main/35035397D80C267B8A2CE81F03F5B24F690BCA0726C85E47896BDA7CBE5A48B
+2.pygtex)
+(./_minted-main/A603829B43A1CCE3C26E02A4B9A159012F41680E148187C1CAF291EB1AD4166
+9.pygtex)
+(./_minted-main/B7ED35141BF846F699E4CC40FCDCFB70E85F2E3CA5C450ECE08DCF1E1B1319A
+F.pygtex)
+(./_minted-main/A323B9EB00CF559F933FD35EB577F7837298FB9212848E06D7E9460A9D77B5E
+3.pygtex [7])
+(./_minted-main/53AEBD8965F528BF4BF3B639890FE2DD961A024133FEBDBEF2D1134DBF86BF1
+1.pygtex)
+(./_minted-main/729B60A1BE5B53FD652B923B8AAE236AACF7A7884D9E01264C257FD95E5C71C
+E.pygtex)
+(./_minted-main/EC7823CFB8E63C9FE5D8B777EA0DD854CC296420C1AF79EB4F1AF2893B15EE0
+1.pygtex)
+(./_minted-main/8473978EF08C7F6C5FAD3966D020A4BB14833C6A127AC645FCE726CB990E2CC
+7.pygtex)
+(./_minted-main/8473978EF08C7F6C5FAD3966D020A4BB1E925DF1293BA12028FB0B824A0C2E1
+D.pygtex)
+(./_minted-main/2EA642E20585E773D99F4366F282CF2425C50A1E41319F6A6FE111B9BFC9003
+2.pygtex [8])) [9]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 53.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 53.
  (output/main.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 52.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 52.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 53.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 53.
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: <no file>.
  ) 
 Here is how much of TeX's memory you used:
- 9670 strings out of 494590
- 164318 string characters out of 6177877
- 345849 words of memory out of 5000000
- 13010 multiletter control sequences out of 15000+600000
+ 11462 strings out of 494590
+ 189863 string characters out of 6177877
+ 372947 words of memory out of 5000000
+ 14771 multiletter control sequences out of 15000+600000
  9586 words of font info for 35 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  37i,11n,43p,838b,761s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -646,10 +834,10 @@ type1/public/amsfonts/cm/cmss10.pfb></usr/share/texlive/texmf-dist/fonts/type1/
 public/amsfonts/cm/cmssbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
 ic/amsfonts/cm/cmsy5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsf
 onts/cm/cmtt10.pfb>
-Output written on output/main.pdf (8 pages, 150518 bytes).
+Output written on output/main.pdf (9 pages, 153754 bytes).
 PDF statistics:
- 340 PDF objects out of 1000 (max. 8388607)
- 316 compressed objects within 4 object streams
- 58 named destinations out of 1000 (max. 500000)
- 385 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 365 PDF objects out of 1000 (max. 8388607)
+ 340 compressed objects within 4 object streams
+ 63 named destinations out of 1000 (max. 500000)
+ 417 words of extra memory for PDF output out of 10000 (max. 10000000)
 

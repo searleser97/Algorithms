@@ -26,16 +26,16 @@ vector<int> sieve(int N) {
     return dic;
 }
 
-// Criba de Eratostenes de 1 a n.
-vector<int> clasicSieve(int n) {
-    vector<int> criba(n + 1);
+// sieve de Eratostenes de 1 a n.
+vector<int> getSieve(int n) {
+    vector<int> sieve(n + 1);
     for (int i = 4; i <= n; i += 2)
-        criba[i] = 2;
+        sieve[i] = 2;
     for (int i = 3; i * i <= n; i += 2)
-        if (!criba[i])
-            for (int j = i * i; j <= n; j += i)
-                if (!criba[j]) criba[j] = i;
-    return criba;
+        if (!sieve[i])
+            for (int j = i * i; j <= n; j += 2 * i)
+                if (!sieve[j]) sieve[j] = i;
+    return sieve;
 }
 
 
