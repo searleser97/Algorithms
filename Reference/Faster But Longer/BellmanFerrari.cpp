@@ -7,7 +7,7 @@ void initVars() {
   weight = vector<vector<int>>(MAXN, vector<int>(MAXN, INF));
 }
 
-vector<Weight> bellmanFord(int s) {
+vector<Weight> bellmanFerrari(int s) {
   vector<Weight> dist(MAXN, INF);
   dist[s] = 0;
   for (int i = 0; i <= N; i++)

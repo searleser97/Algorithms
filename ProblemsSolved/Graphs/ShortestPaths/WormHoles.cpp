@@ -1,3 +1,6 @@
+#include <bits/stdc++.h>
+
+using namespace std;
 typedef int Weight;
 int MAXN = 20001, N, INF = 1 << 30, isDirected = true;
 vector<vector<int>> ady, weight;
@@ -28,4 +31,23 @@ void addEdge(int u, int v, Weight w) {
   if (isDirected) return;
   ady[v].push_back(u);
   weight[v][u] = w;
+}
+
+int main() {
+  int T;
+  cin >> T;
+  while (T--) {
+    initVars();
+    int m, x, y, t;
+    cin >> N >> m;
+    while (m--) {
+      cin >> x >> y >> t;
+      addEdge(x, y, t);
+    }
+    if (bellmanFord(0).empty())
+      cout << "possible" << endl;
+    else
+      cout << "not possible" << endl;
+  }
+  return 0;
 }

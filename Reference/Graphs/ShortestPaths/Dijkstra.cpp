@@ -1,8 +1,12 @@
 typedef int Weight;
 typedef pair<Weight, int> NodeDist;
 int MAXN = 20001, INF = 1 << 30, isDirected = false;
-vector<vector<int>> ady(MAXN, vector<int>()),
-    weight(MAXN, vector<int>(MAXN, INF));
+vector<vector<int>> ady, weight;
+
+void initVars() {
+    ady = vector<vector<int>>(MAXN, vector<int>());
+    weight = vector<vector<int>>(MAXN, vector<int>(MAXN, INF));
+}
 
 vector<Weight> dijkstra(int s) {
   vector<int> dist(MAXN, INF);
