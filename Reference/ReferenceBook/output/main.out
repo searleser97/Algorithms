@@ -19,34 +19,36 @@
 \BOOKMARK [2][-]{subsection.2.2}{Trie}{section.2}% 19
 \BOOKMARK [1][-]{section.3}{Geometry}{}% 20
 \BOOKMARK [1][-]{section.4}{Graphs}{}% 21
-\BOOKMARK [2][-]{subsection.4.1}{CycleInDirectedGraph}{section.4}% 22
-\BOOKMARK [2][-]{subsection.4.2}{CycleInUndirectedGraph}{section.4}% 23
-\BOOKMARK [2][-]{subsection.4.3}{FloodFill}{section.4}% 24
-\BOOKMARK [2][-]{subsection.4.4}{Flow}{section.4}% 25
-\BOOKMARK [3][-]{subsubsection.4.4.1}{MaxFlowDinic}{subsection.4.4}% 26
-\BOOKMARK [2][-]{subsection.4.5}{IsBipartite}{section.4}% 27
-\BOOKMARK [2][-]{subsection.4.6}{KruskalMST}{section.4}% 28
-\BOOKMARK [2][-]{subsection.4.7}{MinimumCut}{section.4}% 29
-\BOOKMARK [2][-]{subsection.4.8}{ShortestPaths}{section.4}% 30
-\BOOKMARK [3][-]{subsubsection.4.8.1}{BellmanFord}{subsection.4.8}% 31
-\BOOKMARK [3][-]{subsubsection.4.8.2}{Dijkstra}{subsection.4.8}% 32
-\BOOKMARK [2][-]{subsection.4.9}{TopologicalSort}{section.4}% 33
-\BOOKMARK [2][-]{subsection.4.10}{UnionFind}{section.4}% 34
-\BOOKMARK [1][-]{section.5}{Maths}{}% 35
-\BOOKMARK [2][-]{subsection.5.1}{Game Theory}{section.5}% 36
-\BOOKMARK [2][-]{subsection.5.2}{Number Theory}{section.5}% 37
-\BOOKMARK [3][-]{subsubsection.5.2.1}{DivisibilityCriterion}{subsection.5.2}% 38
-\BOOKMARK [3][-]{subsubsection.5.2.2}{ExtendedEuclidean}{subsection.5.2}% 39
-\BOOKMARK [3][-]{subsubsection.5.2.3}{GCD}{subsection.5.2}% 40
-\BOOKMARK [3][-]{subsubsection.5.2.4}{PrimeCheckMillerRabin}{subsection.5.2}% 41
-\BOOKMARK [3][-]{subsubsection.5.2.5}{PrimeSieve}{subsection.5.2}% 42
-\BOOKMARK [2][-]{subsection.5.3}{Probability}{section.5}% 43
-\BOOKMARK [3][-]{subsubsection.5.3.1}{Combinations}{subsection.5.3}% 44
-\BOOKMARK [3][-]{subsubsection.5.3.2}{Permutations}{subsection.5.3}% 45
-\BOOKMARK [1][-]{section.6}{Multiple Queries}{}% 46
-\BOOKMARK [2][-]{subsection.6.1}{Mo}{section.6}% 47
-\BOOKMARK [2][-]{subsection.6.2}{SqrtDecomposition}{section.6}% 48
-\BOOKMARK [1][-]{section.7}{Rare Topics}{}% 49
-\BOOKMARK [1][-]{section.8}{Strings}{}% 50
-\BOOKMARK [2][-]{subsection.8.1}{RabinKarp}{section.8}% 51
-\BOOKMARK [1][-]{section.9}{Faster But Longer}{}% 52
+\BOOKMARK [2][-]{subsection.4.1}{ConnectedComponents}{section.4}% 22
+\BOOKMARK [2][-]{subsection.4.2}{CycleInDirectedGraph}{section.4}% 23
+\BOOKMARK [2][-]{subsection.4.3}{CycleInUndirectedGraph}{section.4}% 24
+\BOOKMARK [2][-]{subsection.4.4}{FloodFill}{section.4}% 25
+\BOOKMARK [2][-]{subsection.4.5}{Flow}{section.4}% 26
+\BOOKMARK [3][-]{subsubsection.4.5.1}{MaxFlowDinic}{subsection.4.5}% 27
+\BOOKMARK [2][-]{subsection.4.6}{IsBipartite}{section.4}% 28
+\BOOKMARK [2][-]{subsection.4.7}{KruskalMST}{section.4}% 29
+\BOOKMARK [2][-]{subsection.4.8}{MinimumCut}{section.4}% 30
+\BOOKMARK [2][-]{subsection.4.9}{ShortestPaths}{section.4}% 31
+\BOOKMARK [3][-]{subsubsection.4.9.1}{BellmanFord}{subsection.4.9}% 32
+\BOOKMARK [3][-]{subsubsection.4.9.2}{Dijkstra}{subsection.4.9}% 33
+\BOOKMARK [2][-]{subsection.4.10}{TopologicalSort}{section.4}% 34
+\BOOKMARK [2][-]{subsection.4.11}{UnionFind}{section.4}% 35
+\BOOKMARK [1][-]{section.5}{Maths}{}% 36
+\BOOKMARK [2][-]{subsection.5.1}{Game Theory}{section.5}% 37
+\BOOKMARK [2][-]{subsection.5.2}{Number Theory}{section.5}% 38
+\BOOKMARK [3][-]{subsubsection.5.2.1}{DivisibilityCriterion}{subsection.5.2}% 39
+\BOOKMARK [3][-]{subsubsection.5.2.2}{ExtendedEuclidean}{subsection.5.2}% 40
+\BOOKMARK [3][-]{subsubsection.5.2.3}{GCD}{subsection.5.2}% 41
+\BOOKMARK [3][-]{subsubsection.5.2.4}{PrimeCheckMillerRabin}{subsection.5.2}% 42
+\BOOKMARK [3][-]{subsubsection.5.2.5}{PrimeSieve}{subsection.5.2}% 43
+\BOOKMARK [2][-]{subsection.5.3}{Probability}{section.5}% 44
+\BOOKMARK [3][-]{subsubsection.5.3.1}{Combinations}{subsection.5.3}% 45
+\BOOKMARK [3][-]{subsubsection.5.3.2}{Permutations}{subsection.5.3}% 46
+\BOOKMARK [1][-]{section.6}{Multiple Queries}{}% 47
+\BOOKMARK [2][-]{subsection.6.1}{Mo}{section.6}% 48
+\BOOKMARK [2][-]{subsection.6.2}{SqrtDecomposition}{section.6}% 49
+\BOOKMARK [1][-]{section.7}{Rare Topics}{}% 50
+\BOOKMARK [1][-]{section.8}{Strings}{}% 51
+\BOOKMARK [2][-]{subsection.8.1}{RabinKarp}{section.8}% 52
+\BOOKMARK [1][-]{section.9}{Faster But Longer}{}% 53
+\BOOKMARK [2][-]{subsection.9.1}{BellmanFerrari}{section.9}% 54

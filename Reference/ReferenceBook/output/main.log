@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Debian) (preloaded format=pdflatex 2018.6.28)  3 JUL 2018 09:34
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Debian) (preloaded format=pdflatex 2018.6.28)  3 JUL 2018 11:52
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -770,10 +770,12 @@ D.pygtex)
 5.pygtex)
 (./_minted-main/D41D8CD98F00B204E9800998ECF8427E01374DE6A75B7F3E69CA1F3A9D556F1
 A.pygtex)
+(./_minted-main/1A5B22F4F7BCC3B7F398A76E9B7A416B07376695BD54AFBDA8D54AB3936D1A1
+F.pygtex)
 (./_minted-main/2C1D0DB93364C30D7834D6C812D58D624B82ED5A3302723D68B4F315E3CAB1A
-C.pygtex)
+C.pygtex [4])
 (./_minted-main/089846EA0C3164C6E0150EE12471A52D766FDF05A8B8FF9BBB03840DF83B31A
-B.pygtex [4])
+B.pygtex)
 (./_minted-main/F2A9F63DB6987B25AA0AFD321D635CE5A641E83067413033B5E0DBDF9519DE0
 0.pygtex)
 (./_minted-main/863C5966DAC72C4B366B8DD2C6FD5721D4C7372811749D791E89321A915C834
@@ -784,30 +786,32 @@ D.pygtex [5])
 3.pygtex)
 (./_minted-main/BAF1B51F1E2A07421BD2F49FE5CCC2D6FAA9BD2D7CA900737D787A8694F4355
 A.pygtex)
-(./_minted-main/7CC86812B6687827A6E5BA805B301A208BDF2B52986F97AD790931AE6B6AF55
-C.pygtex)
-(./_minted-main/D36163464896AD840371D04728A67DAAF4224F3FB9926148550BF9141A4F93C
-6.pygtex [6])
+(./_minted-main/E33FD03100ECA60C6E103EC7079A70DF8BDF2B52986F97AD790931AE6B6AF55
+C.pygtex [6])
+(./_minted-main/DAD1651F76DA840FC48AA64D6E17E8C2F4224F3FB9926148550BF9141A4F93C
+6.pygtex)
 (./_minted-main/35035397D80C267B8A2CE81F03F5B24F690BCA0726C85E47896BDA7CBE5A48B
 2.pygtex)
 (./_minted-main/A603829B43A1CCE3C26E02A4B9A159012F41680E148187C1CAF291EB1AD4166
 9.pygtex)
 (./_minted-main/B7ED35141BF846F699E4CC40FCDCFB70E85F2E3CA5C450ECE08DCF1E1B1319A
-F.pygtex)
+F.pygtex [7])
 (./_minted-main/A323B9EB00CF559F933FD35EB577F7837298FB9212848E06D7E9460A9D77B5E
-3.pygtex [7])
+3.pygtex)
 (./_minted-main/53AEBD8965F528BF4BF3B639890FE2DD961A024133FEBDBEF2D1134DBF86BF1
 1.pygtex)
 (./_minted-main/729B60A1BE5B53FD652B923B8AAE236AACF7A7884D9E01264C257FD95E5C71C
 E.pygtex)
 (./_minted-main/EC7823CFB8E63C9FE5D8B777EA0DD854CC296420C1AF79EB4F1AF2893B15EE0
-1.pygtex)
+1.pygtex [8])
 (./_minted-main/8473978EF08C7F6C5FAD3966D020A4BB14833C6A127AC645FCE726CB990E2CC
 7.pygtex)
 (./_minted-main/8473978EF08C7F6C5FAD3966D020A4BB1E925DF1293BA12028FB0B824A0C2E1
 D.pygtex)
 (./_minted-main/2EA642E20585E773D99F4366F282CF2425C50A1E41319F6A6FE111B9BFC9003
-2.pygtex [8])) [9]
+2.pygtex)
+(./_minted-main/CBDA491816C558DDA5D59DC2E683152EB4929FE700C50A278E684024B18B9E7
+7.pygtex)) [9]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 53.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 53.
  (output/main.aux)
@@ -817,10 +821,10 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: <no file>.
  ) 
 Here is how much of TeX's memory you used:
- 11462 strings out of 494590
- 189863 string characters out of 6177877
- 372947 words of memory out of 5000000
- 14771 multiletter control sequences out of 15000+600000
+ 11474 strings out of 494590
+ 190563 string characters out of 6177877
+ 375618 words of memory out of 5000000
+ 14775 multiletter control sequences out of 15000+600000
  9586 words of font info for 35 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  37i,11n,43p,838b,761s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -834,10 +838,10 @@ type1/public/amsfonts/cm/cmss10.pfb></usr/share/texlive/texmf-dist/fonts/type1/
 public/amsfonts/cm/cmssbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
 ic/amsfonts/cm/cmsy5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsf
 onts/cm/cmtt10.pfb>
-Output written on output/main.pdf (9 pages, 153754 bytes).
+Output written on output/main.pdf (9 pages, 155765 bytes).
 PDF statistics:
- 365 PDF objects out of 1000 (max. 8388607)
- 340 compressed objects within 4 object streams
- 63 named destinations out of 1000 (max. 500000)
- 417 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 375 PDF objects out of 1000 (max. 8388607)
+ 350 compressed objects within 4 object streams
+ 65 named destinations out of 1000 (max. 500000)
+ 433 words of extra memory for PDF output out of 10000 (max. 10000000)
 

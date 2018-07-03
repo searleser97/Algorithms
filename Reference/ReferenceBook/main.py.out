@@ -65,6 +65,10 @@
 \section{Geometry}
 \section{Graphs}
 \subsectionfont{\sffamily\underline}
+\subsection{ConnectedComponents}
+\subsectionfont{\sffamily}
+\inputminted{cpp}{"/home/san/CODE/Algorithms/Reference/Graphs/ConnectedComponents.cpp"}
+\subsectionfont{\sffamily\underline}
 \subsection{CycleInDirectedGraph}
 \subsectionfont{\sffamily}
 \inputminted{cpp}{"/home/san/CODE/Algorithms/Reference/Graphs/CycleInDirectedGraph.cpp"}
@@ -152,3 +156,7 @@
 \subsectionfont{\sffamily}
 \inputminted{cpp}{"/home/san/CODE/Algorithms/Reference/Strings/RabinKarp.cpp"}
 \section{Faster But Longer}
+\subsectionfont{\sffamily\underline}
+\subsection{BellmanFerrari}
+\subsectionfont{\sffamily}
+\inputminted{cpp}{"/home/san/CODE/Algorithms/Reference/Faster But Longer/BellmanFerrari.cpp"}
