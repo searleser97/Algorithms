@@ -23,7 +23,7 @@ void initVars() { ady = vector<vector<int>>(MAXN, vector<int>()); }
 int dfsAPB(int u, int p) {
   int ch = 0;
   low[u] = disc[u] = ++Time;
-  for (int &v : ady[u]) {
+  for (int& v : ady[u]) {
     if (v == p) continue;
     if (!disc[v]) {
       ch++;
@@ -66,10 +66,9 @@ string input() {
   return ans;
 }
 
+bool cmp(const Edge& a, const Edge& b) { return a.second < b.second; }
+
 int main() {
-  auto cmp = [](const Edge& a, const Edge& b) {
-    return a.second < b.second;
-  };
   int m;
   cin >> N >> m;
   initVars();
@@ -81,17 +80,14 @@ int main() {
   APB();
   int numberofaps = 0;
   for (int i = 0; i < N; i++)
-    if (ap[i])
-      numberofaps++;
+    if (ap[i]) numberofaps++;
   cout << numberofaps << endl;
   for (int i = 0; i < N; i++)
-    if (ap[i])
-      cout << i << " ";
+    if (ap[i]) cout << i << " ";
   cout << endl;
 
   cout << br.size() << endl;
   sort(br.begin(), br.end(), cmp);
-  for (auto &i : br)
-    cout << i.first << " " << i.second << endl;
+  for (auto& i : br) cout << i.first << " " << i.second << endl;
   return 0;
 }

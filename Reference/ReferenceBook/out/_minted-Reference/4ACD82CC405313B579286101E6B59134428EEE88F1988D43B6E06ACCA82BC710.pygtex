@@ -10,7 +10,7 @@
   \PYG{k+kt}{int} \PYG{n}{cost} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{;}
   \PYG{n}{sort}\PYG{p}{(}\PYG{n}{Wedges}\PYG{p}{.}\PYG{n}{begin}\PYG{p}{(),} \PYG{n}{Wedges}\PYG{p}{.}\PYG{n}{end}\PYG{p}{());}
   \PYG{c+c1}{// reverse(Wedges.begin(), Wedges.end());}
-  \PYG{n}{UnionFind} \PYG{n}{uf}\PYG{p}{(}\PYG{n}{n}\PYG{p}{);}
+  \PYG{n}{UnionFind} \PYG{n}{uf}\PYG{p}{(}\PYG{n}{N}\PYG{p}{);}
   \PYG{k}{for} \PYG{p}{(}\PYG{n}{Wedge} \PYG{o}{\PYGZam{}}\PYG{n+nl}{wedge} \PYG{p}{:} \PYG{n}{Wedges}\PYG{p}{)} \PYG{p}{\PYGZob{}}
     \PYG{k+kt}{int} \PYG{n}{u} \PYG{o}{=} \PYG{n}{wedge}\PYG{p}{.}\PYG{n}{second}\PYG{p}{.}\PYG{n}{first}\PYG{p}{,} \PYG{n}{v} \PYG{o}{=} \PYG{n}{wedge}\PYG{p}{.}\PYG{n}{second}\PYG{p}{.}\PYG{n}{second}\PYG{p}{;}
     \PYG{k}{if} \PYG{p}{(}\PYG{o}{!}\PYG{n}{uf}\PYG{p}{.}\PYG{n}{areConnected}\PYG{p}{(}\PYG{n}{u}\PYG{p}{,} \PYG{n}{v}\PYG{p}{))}

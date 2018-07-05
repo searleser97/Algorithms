@@ -1,10 +1,14 @@
-typedef int Key;
-unordered_map<int, int> id;
-int nextId = 0;
+typedef string Key;
+unordered_map<Key, int> val;
+unordered_map<int, Key> getKey;
+int mapId = 0;
 
-int Map(Key key) { return id.count(key) ? id[key] : id[key] = nextId++; }
+int Map(Key key) {
+  getKey[mapId] = key;
+  return val.count(key) ? val[key] : val[key] = mapId++;
+}
 
 void initMapping() {
-  nextId = 0;
-  id.clear();
+  mapId = 0;
+  val.clear();
 }

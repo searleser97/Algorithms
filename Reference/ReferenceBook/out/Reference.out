@@ -29,10 +29,10 @@
 \BOOKMARK [3][-]{subsubsection.4.6.1}{MaxFlowDinic}{subsection.4.6}% 29
 \BOOKMARK [2][-]{subsection.4.7}{IsBipartite}{section.4}% 30
 \BOOKMARK [2][-]{subsection.4.8}{KruskalMST}{section.4}% 31
-\BOOKMARK [2][-]{subsection.4.9}{MinimumCut}{section.4}% 32
-\BOOKMARK [2][-]{subsection.4.10}{ShortestPaths}{section.4}% 33
-\BOOKMARK [3][-]{subsubsection.4.10.1}{BellmanFord}{subsection.4.10}% 34
-\BOOKMARK [3][-]{subsubsection.4.10.2}{Dijkstra}{subsection.4.10}% 35
+\BOOKMARK [2][-]{subsection.4.9}{ShortestPaths}{section.4}% 32
+\BOOKMARK [3][-]{subsubsection.4.9.1}{BellmanFord}{subsection.4.9}% 33
+\BOOKMARK [3][-]{subsubsection.4.9.2}{Dijkstra}{subsection.4.9}% 34
+\BOOKMARK [2][-]{subsection.4.10}{StronglyConnectedComponents}{section.4}% 35
 \BOOKMARK [2][-]{subsection.4.11}{TopologicalSort}{section.4}% 36
 \BOOKMARK [1][-]{section.5}{Maths}{}% 37
 \BOOKMARK [2][-]{subsection.5.1}{Game Theory}{section.5}% 38
