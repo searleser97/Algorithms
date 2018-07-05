@@ -1,7 +1,7 @@
 from os import listdir
 from os.path import isfile, isdir, join
 
-PATH = '/home/san/CODE/Algorithms/Reference/'
+PATH = '/home/san/grive/Algorithms/Reference/'
 excluded = ['ReferenceBook', '.vscode', 'Faster But Longer']
 
 def printSectionType(sectionName, depth, isFile):
