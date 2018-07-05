@@ -6,7 +6,7 @@
 // s = stack
 // top = top index of the stack
 
-int MAXN = 101, N = 7, INF = 1 << 30, Time, top;
+int MAXN = 101, N = 7, Time, top;
 vector<vector<int>> ady, sccs;
 vector<int> disc, low, s;
 

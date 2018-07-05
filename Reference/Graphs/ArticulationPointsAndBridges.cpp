@@ -7,7 +7,7 @@
 // ch = children
 
 typedef pair<int, int> Edge;
-int MAXN = 101, N = 7, INF = 1 << 30, Time;
+int MAXN = 101, N = 7, Time;
 vector<vector<int>> ady;
 vector<int> disc, low, ap;
 vector<Edge> br;
