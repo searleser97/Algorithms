@@ -1,0 +1,53 @@
+% run the command ' pdflatex -shell-escape main.tex ' twice in the terminal to visualize table of contents
+% I don't know why but above instructions work
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{geometry}
+\usepackage{multicol}
+\usepackage{minted}
+\usepackage{python}
+\usepackage{hyperref}
+\usepackage{fancyhdr}
+\usepackage{sectsty}
+\usepackage{listings}
+
+\allsectionsfont{\sffamily}
+
+\setminted{
+    style=tango,
+    breaklines=true
+}
+
+\setlength{\columnsep}{0.5cm}
+\geometry{a4paper, portrait, left=0.4in, right=0.4in, top=0.9in, bottom=0.8in}
+
+\pagestyle{fancy}
+\pagenumbering{arabic}
+\fancyhead[L]{\textsf{\rightmark}}
+\fancyhead[R]{\textsf{\leftmark}}
+\fancyfoot[R]{\textbf{\textsf{\thepage}}}
+\cfoot{}
+ 
+\renewcommand{\headrulewidth}{1.4pt}
+\renewcommand{\footrulewidth}{1.4pt}
+
+\title{ACM-ICPC-REFERENCE}
+\author{ Searlese }
+\date{April 2018}
+
+\begin{document}
+
+\maketitle
+\newpage
+
+\begin{multicols*}{2}
+
+	\tableofcontents
+	\newpage
+
+	\begin{python}[getContents.py]
+	\end{python}
+
+\end{multicols*}
+\end{document}
