@@ -156,6 +156,10 @@
 \section{Rare Topics}
 \section{Strings}
 \subsectionfont{\sffamily\underline}
+\subsection{KMP}
+\subsectionfont{\sffamily}
+\inputminted{cpp}{"/home/san/grive/Algorithms/Reference/Strings/KMP.cpp"}
+\subsectionfont{\sffamily\underline}
 \subsection{RabinKarp}
 \subsectionfont{\sffamily}
 \inputminted{cpp}{"/home/san/grive/Algorithms/Reference/Strings/RabinKarp.cpp"}
@@ -164,3 +168,7 @@
 \subsection{BellmanFerrari}
 \subsectionfont{\sffamily}
 \inputminted{cpp}{"/home/san/grive/Algorithms/Reference/Faster But Longer/BellmanFerrari.cpp"}
+\subsectionfont{\sffamily\underline}
+\subsection{KMP}
+\subsectionfont{\sffamily}
+\inputminted{cpp}{"/home/san/grive/Algorithms/Reference/Faster But Longer/KMP.cpp"}

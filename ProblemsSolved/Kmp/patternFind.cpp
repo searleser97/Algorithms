@@ -2,50 +2,30 @@
 
 using namespace std;
 
-vector<int> prefixArray(string& pattern) {
+// f = error function
+// cf = create error function
+// p = pattern
+// t = text
+// pos = positions where pattern is found in text
 
-    vector<int> prefixArr(pattern.size());
-    for (int i = 0, j = 1; j < pattern.size();)
-    {
-        if (pattern[i] == pattern[j])
-        {
-            i++;
-            prefixArr[j] = i;
-            j++;
-        } else {
-            if (i != 0)
-                i = prefixArr[i - 1];
-            else {
-                prefixArr[j] = 0;
-                j++;
-            }
-        }
-    }
-    return prefixArr;
+int MAXN = 1000000;
+vector<int> f(MAXN + 1);
+
+vector<int> kmp(string &p, string &t, int cf) {
+  vector<int> pos;
+  if (cf) f[0] = -1;
+  for (int i = cf, j = 0; j < t.size();) {
+    while (i > -1 && p[i] != t[j]) i = f[i];
+    i++, j++;
+    if (cf) f[j] = i;
+    if (!cf && i == p.size()) pos.push_back(j - i), i = f[i];
+  }
+  return pos;
 }
 
-vector<int> kmp(string& str, string& pattern) {
-    vector<int> positions;
-    if (pattern.size() == 0)
-        return positions;
-    vector<int> prefixArr = prefixArray(pattern);
-    for (int i = 0, j = 0; j < str.size();) {
-        if (pattern[i] == str[j]) {
-            j++;
-            i++;
-        } else {
-            if (i != 0) {
-                i = prefixArr[i - 1];
-            } else {
-                j++;
-            }
-        }
-        if (i == pattern.size()) {
-            positions.push_back(j + 1 - pattern.size());
-            i = prefixArr[i - 1];
-        }
-    }
-    return positions;
+vector<int> search(string &p, string &t) {
+  kmp(p, p, -1); // create error function
+  return kmp(p, t, 0); // search in text
 }
 
 int main() {
@@ -54,14 +34,14 @@ int main() {
     for (int i = 0; i < t; i++) {
         string str, pattern;
         cin >> str >> pattern;
-        vector<int> positions = kmp(str, pattern);
+        vector<int> positions = search(pattern, str);
         if (positions.size() == 0) {
             cout << "Not Found" << "\n\n";
             continue;
         }
         cout << positions.size() << '\n';
         for (int j = 0; j < positions.size(); j++) {
-            cout << positions[j] << " ";
+            cout << positions[j] + 1 << " ";
         }
         cout << "\n\n";
     }
