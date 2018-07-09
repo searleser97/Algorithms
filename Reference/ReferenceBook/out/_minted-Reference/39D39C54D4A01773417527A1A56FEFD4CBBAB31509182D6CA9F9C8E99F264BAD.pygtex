@@ -1,0 +1,25 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+cp}{\PYGZsh{}include} \PYG{c+cpf}{\PYGZlt{}bits/stdc++.h\PYGZgt{}}
+
+\PYG{k}{using} \PYG{k}{namespace} \PYG{n}{std}\PYG{p}{;}
+
+\PYG{k}{struct} \PYG{n}{Hola} \PYG{p}{\PYGZob{}}
+  \PYG{k+kt}{int} \PYG{n}{x} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{,} \PYG{n}{y} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{;}
+\PYG{p}{\PYGZcb{};}
+
+\PYG{c+c1}{// int \PYGZam{}id = i; just keeps the first initialization}
+
+\PYG{k+kt}{int} \PYG{n+nf}{main}\PYG{p}{()} \PYG{p}{\PYGZob{}}
+  
+  \PYG{n}{Hola} \PYG{o}{*}\PYG{n}{h} \PYG{o}{=} \PYG{k}{new} \PYG{n}{Hola}\PYG{p}{();}
+  \PYG{n}{Hola} \PYG{o}{*}\PYG{n}{h1} \PYG{o}{=} \PYG{k}{new} \PYG{n}{Hola}\PYG{p}{();}
+  \PYG{n}{Hola} \PYG{o}{*}\PYG{n}{hh} \PYG{o}{=} \PYG{n}{h}\PYG{p}{;}
+  \PYG{n}{h}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{x} \PYG{o}{=} \PYG{l+m+mi}{1}\PYG{p}{;}
+  \PYG{n}{h}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{y} \PYG{o}{=} \PYG{l+m+mi}{2}\PYG{p}{;}
+  \PYG{n}{hh} \PYG{o}{=} \PYG{n}{h1}\PYG{p}{;}
+  \PYG{n}{hh}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{x} \PYG{o}{=} \PYG{l+m+mi}{5}\PYG{p}{;}
+
+  \PYG{n}{cout} \PYG{o}{\PYGZlt{}\PYGZlt{}} \PYG{n}{h1}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{x} \PYG{o}{\PYGZlt{}\PYGZlt{}} \PYG{n}{endl}\PYG{p}{;}
+  \PYG{k}{return} \PYG{l+m+mi}{0}\PYG{p}{;}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

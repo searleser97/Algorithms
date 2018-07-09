@@ -18,41 +18,42 @@
 \contentsline {section}{\numberline {2}Data Structures}{4}{section.2}
 \contentsline {subsection}{\numberline {2.1}SegmentTree}{4}{subsection.2.1}
 \contentsline {subsection}{\numberline {2.2}Trie}{4}{subsection.2.2}
-\contentsline {subsection}{\numberline {2.3}UnionFind}{4}{subsection.2.3}
-\contentsline {section}{\numberline {3}Geometry}{5}{section.3}
-\contentsline {section}{\numberline {4}Graphs}{5}{section.4}
-\contentsline {subsection}{\numberline {4.1}ArticulationPointsAndBridges}{5}{subsection.4.1}
-\contentsline {subsection}{\numberline {4.2}ConnectedComponents}{5}{subsection.4.2}
-\contentsline {subsection}{\numberline {4.3}CycleInDirectedGraph}{5}{subsection.4.3}
-\contentsline {subsection}{\numberline {4.4}CycleInUndirectedGraph}{6}{subsection.4.4}
-\contentsline {subsection}{\numberline {4.5}FloodFill}{6}{subsection.4.5}
-\contentsline {subsection}{\numberline {4.6}Flow}{6}{subsection.4.6}
-\contentsline {subsubsection}{\numberline {4.6.1}MaxFlowDinic}{6}{subsubsection.4.6.1}
-\contentsline {subsection}{\numberline {4.7}IsBipartite}{7}{subsection.4.7}
-\contentsline {subsection}{\numberline {4.8}KruskalMST}{7}{subsection.4.8}
-\contentsline {subsection}{\numberline {4.9}ShortestPaths}{7}{subsection.4.9}
-\contentsline {subsubsection}{\numberline {4.9.1}BellmanFord}{7}{subsubsection.4.9.1}
-\contentsline {subsubsection}{\numberline {4.9.2}Dijkstra}{7}{subsubsection.4.9.2}
-\contentsline {subsection}{\numberline {4.10}StronglyConnectedComponents}{8}{subsection.4.10}
-\contentsline {subsection}{\numberline {4.11}TopologicalSort}{8}{subsection.4.11}
-\contentsline {section}{\numberline {5}Maths}{8}{section.5}
-\contentsline {subsection}{\numberline {5.1}Game Theory}{8}{subsection.5.1}
-\contentsline {subsection}{\numberline {5.2}Number Theory}{8}{subsection.5.2}
-\contentsline {subsubsection}{\numberline {5.2.1}DivisibilityCriterion}{8}{subsubsection.5.2.1}
-\contentsline {subsubsection}{\numberline {5.2.2}ExtendedEuclidean}{9}{subsubsection.5.2.2}
-\contentsline {subsubsection}{\numberline {5.2.3}GCD}{9}{subsubsection.5.2.3}
-\contentsline {subsubsection}{\numberline {5.2.4}PrimeCheckMillerRabin}{9}{subsubsection.5.2.4}
-\contentsline {subsubsection}{\numberline {5.2.5}PrimeSieve}{9}{subsubsection.5.2.5}
-\contentsline {subsection}{\numberline {5.3}Probability}{10}{subsection.5.3}
-\contentsline {subsubsection}{\numberline {5.3.1}Combinations}{10}{subsubsection.5.3.1}
-\contentsline {subsubsection}{\numberline {5.3.2}Permutations}{10}{subsubsection.5.3.2}
-\contentsline {section}{\numberline {6}Multiple Queries}{10}{section.6}
-\contentsline {subsection}{\numberline {6.1}Mo}{10}{subsection.6.1}
-\contentsline {subsection}{\numberline {6.2}SqrtDecomposition}{10}{subsection.6.2}
-\contentsline {section}{\numberline {7}Rare Topics}{10}{section.7}
-\contentsline {section}{\numberline {8}Strings}{10}{section.8}
-\contentsline {subsection}{\numberline {8.1}KMP}{10}{subsection.8.1}
-\contentsline {subsection}{\numberline {8.2}RabinKarp}{10}{subsection.8.2}
-\contentsline {section}{\numberline {9}Faster But Longer}{10}{section.9}
-\contentsline {subsection}{\numberline {9.1}BellmanFerrari}{10}{subsection.9.1}
-\contentsline {subsection}{\numberline {9.2}KMP}{10}{subsection.9.2}
+\contentsline {subsection}{\numberline {2.3}UnionFind}{5}{subsection.2.3}
+\contentsline {subsection}{\numberline {2.4}pointers}{5}{subsection.2.4}
+\contentsline {section}{\numberline {3}Geometry}{6}{section.3}
+\contentsline {section}{\numberline {4}Graphs}{6}{section.4}
+\contentsline {subsection}{\numberline {4.1}ArticulationPointsAndBridges}{6}{subsection.4.1}
+\contentsline {subsection}{\numberline {4.2}ConnectedComponents}{6}{subsection.4.2}
+\contentsline {subsection}{\numberline {4.3}CycleInDirectedGraph}{6}{subsection.4.3}
+\contentsline {subsection}{\numberline {4.4}CycleInUndirectedGraph}{7}{subsection.4.4}
+\contentsline {subsection}{\numberline {4.5}FloodFill}{7}{subsection.4.5}
+\contentsline {subsection}{\numberline {4.6}Flow}{7}{subsection.4.6}
+\contentsline {subsubsection}{\numberline {4.6.1}MaxFlowDinic}{7}{subsubsection.4.6.1}
+\contentsline {subsection}{\numberline {4.7}IsBipartite}{8}{subsection.4.7}
+\contentsline {subsection}{\numberline {4.8}KruskalMST}{8}{subsection.4.8}
+\contentsline {subsection}{\numberline {4.9}ShortestPaths}{8}{subsection.4.9}
+\contentsline {subsubsection}{\numberline {4.9.1}BellmanFord}{8}{subsubsection.4.9.1}
+\contentsline {subsubsection}{\numberline {4.9.2}Dijkstra}{8}{subsubsection.4.9.2}
+\contentsline {subsection}{\numberline {4.10}StronglyConnectedComponents}{9}{subsection.4.10}
+\contentsline {subsection}{\numberline {4.11}TopologicalSort}{9}{subsection.4.11}
+\contentsline {section}{\numberline {5}Maths}{9}{section.5}
+\contentsline {subsection}{\numberline {5.1}Game Theory}{9}{subsection.5.1}
+\contentsline {subsection}{\numberline {5.2}Number Theory}{9}{subsection.5.2}
+\contentsline {subsubsection}{\numberline {5.2.1}DivisibilityCriterion}{9}{subsubsection.5.2.1}
+\contentsline {subsubsection}{\numberline {5.2.2}ExtendedEuclidean}{10}{subsubsection.5.2.2}
+\contentsline {subsubsection}{\numberline {5.2.3}GCD}{10}{subsubsection.5.2.3}
+\contentsline {subsubsection}{\numberline {5.2.4}PrimeCheckMillerRabin}{10}{subsubsection.5.2.4}
+\contentsline {subsubsection}{\numberline {5.2.5}PrimeSieve}{10}{subsubsection.5.2.5}
+\contentsline {subsection}{\numberline {5.3}Probability}{11}{subsection.5.3}
+\contentsline {subsubsection}{\numberline {5.3.1}Combinations}{11}{subsubsection.5.3.1}
+\contentsline {subsubsection}{\numberline {5.3.2}Permutations}{11}{subsubsection.5.3.2}
+\contentsline {section}{\numberline {6}Multiple Queries}{11}{section.6}
+\contentsline {subsection}{\numberline {6.1}Mo}{11}{subsection.6.1}
+\contentsline {subsection}{\numberline {6.2}SqrtDecomposition}{11}{subsection.6.2}
+\contentsline {section}{\numberline {7}Rare Topics}{11}{section.7}
+\contentsline {section}{\numberline {8}Strings}{11}{section.8}
+\contentsline {subsection}{\numberline {8.1}KMP}{11}{subsection.8.1}
+\contentsline {subsection}{\numberline {8.2}RabinKarp}{11}{subsection.8.2}
+\contentsline {section}{\numberline {9}Faster But Longer}{11}{section.9}
+\contentsline {subsection}{\numberline {9.1}BellmanFerrari}{11}{subsection.9.1}
+\contentsline {subsection}{\numberline {9.2}KMP}{11}{subsection.9.2}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Debian) (preloaded format=pdflatex 2018.7.4)  8 JUL 2018 13:49
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Debian) (preloaded format=pdflatex 2018.7.4)  9 JUL 2018 16:24
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -776,27 +776,35 @@ E14531.pygtex [3])
 (./_minted-Reference/D41D8CD98F00B204E9800998ECF8427E097D7B46430100D0071C98AD77
 B005EC.pygtex)
 runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -o _min
-ted-Reference/DEC47D025A19DF433A27606CF96A92034909EAF8C63328E0D9965260541AE83F.
+ted-Reference/CA609113EA52464E01DA6E64948DB6B84909EAF8C63328E0D9965260541AE83F.
 pygtex "/home/san/grive/Algorithms/Reference/Data Structures/Trie.cpp")...execu
 ted.
 
 
-(./_minted-Reference/DEC47D025A19DF433A27606CF96A92034909EAF8C63328E0D996526054
-1AE83F.pygtex)
+(./_minted-Reference/CA609113EA52464E01DA6E64948DB6B84909EAF8C63328E0D996526054
+1AE83F.pygtex [4])
 (./_minted-Reference/A603829B43A1CCE3C26E02A4B9A1590121FF761F2F7D6BEDC35A298F80
 BC8461.pygtex)
+runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -o _min
+ted-Reference/39D39C54D4A01773417527A1A56FEFD4CBBAB31509182D6CA9F9C8E99F264BAD.
+pygtex "/home/san/grive/Algorithms/Reference/Data Structures/pointers.cpp")...e
+xecuted.
+
+
+(./_minted-Reference/39D39C54D4A01773417527A1A56FEFD4CBBAB31509182D6CA9F9C8E99F
+264BAD.pygtex [5])
 (./_minted-Reference/A9FF1B94F880272DE7F5683EAAE5FC4BCCF234C994F3338DE898584FCD
-41F4DC.pygtex [4])
+41F4DC.pygtex)
 (./_minted-Reference/1A5B22F4F7BCC3B7F398A76E9B7A416B6BB9C16A4E0587E6693E26266B
 C96C9C.pygtex)
 (./_minted-Reference/2C1D0DB93364C30D7834D6C812D58D627DC800F9F005CB93805835BF6D
-57E067.pygtex [5])
+57E067.pygtex [6])
 (./_minted-Reference/089846EA0C3164C6E0150EE12471A52D937143AC400396EB86896BD8FC
 204A98.pygtex)
 (./_minted-Reference/F2A9F63DB6987B25AA0AFD321D635CE51FC718A17597496E98977CB7CA
 EA458B.pygtex)
 (./_minted-Reference/863C5966DAC72C4B366B8DD2C6FD5721A8A133C61A363293F58761C397
-D0E476.pygtex [6])
+D0E476.pygtex [7])
 (./_minted-Reference/B70AD3FB0B8F2228EDC3FBF57C6B3C5A211109473E0616698D0D054990
 DCC8EB.pygtex)
 (./_minted-Reference/4ACD82CC405313B579286101E6B59134428EEE88F1988D43B6E06ACCA8
@@ -804,13 +812,13 @@ DCC8EB.pygtex)
 (./_minted-Reference/E33FD03100ECA60C6E103EC7079A70DF53E4947D564BCEC6A3845712F3
 E2CF75.pygtex)
 (./_minted-Reference/DAD1651F76DA840FC48AA64D6E17E8C210D51ECDC66AFE85ABE67CD10F
-D2AC9D.pygtex [7])
+D2AC9D.pygtex [8])
 (./_minted-Reference/D7094E7770C31CE87FEEB47B9F3223982F675793FB79C452151B1C6F87
 8C42CF.pygtex)
 (./_minted-Reference/35035397D80C267B8A2CE81F03F5B24F36F343A2C4B9B2C16515AD22A8
 78B67D.pygtex)
 (./_minted-Reference/B7ED35141BF846F699E4CC40FCDCFB706500B9A75C1FAC9D1F3DBC089F
-E35A9E.pygtex [8])
+E35A9E.pygtex [9])
 (./_minted-Reference/A323B9EB00CF559F933FD35EB577F783EE5D06D0563B0FB5BE961B4844
 4E1F3B.pygtex)
 (./_minted-Reference/53AEBD8965F528BF4BF3B639890FE2DD20D4D3B50EDCAB0C653B4CAD78
@@ -820,42 +828,40 @@ DBA769.pygtex)
 (./_minted-Reference/EC7823CFB8E63C9FE5D8B777EA0DD854D10433DE5DC9CAEFDACE1F89CD
 51AF1D.pygtex)
 (./_minted-Reference/8473978EF08C7F6C5FAD3966D020A4BBB50FBDE1E525FF18F4DF49BB38
-DD2162.pygtex [9])
+DD2162.pygtex [10])
 (./_minted-Reference/8473978EF08C7F6C5FAD3966D020A4BB9B6F2358A999ABC6CC397035F2
 E01B53.pygtex)
 (./_minted-Reference/A7947D0D2EA6D510C3F792461E583ED4D9886162F8A1A220271930695C
 EC60F5.pygtex)
 (./_minted-Reference/2EA642E20585E773D99F4366F282CF246F819CFAEFB01B6E7D3CB89089
 5456AE.pygtex)
-runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -o _min
-ted-Reference/7120254C5C8AA94D26D54C30142D16D0A7491E336434506F7A5233DB9C84E287.
-pygtex "/home/san/grive/Algorithms/Reference/Faster But Longer/BellmanFerrari.c
-pp")...executed.
-
-
 (./_minted-Reference/7120254C5C8AA94D26D54C30142D16D0A7491E336434506F7A5233DB9C
 84E287.pygtex)
 (./_minted-Reference/D41D8CD98F00B204E9800998ECF8427EC6539992620DD0987F242E3DC7
-46FC9C.pygtex)) [10]
-runsystem(rm _minted-Reference/D41D8CD98F00B204E9800998ECF8427E4909EAF8C63328E0
+46FC9C.pygtex)) [11]
+runsystem(rm _minted-Reference/DEC47D025A19DF433A27606CF96A92034909EAF8C63328E0
 D9965260541AE83F.pygtex)...executed.
-
-runsystem(rm _minted-Reference/CBDA491816C558DDA5D59DC2E683152EA7491E336434506F
-7A5233DB9C84E287.pygtex)...executed.
 
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 55.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 55.
  (./Reference.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 55.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 55.
-Package rerunfilecheck Info: File `Reference.out' has not changed.
-(rerunfilecheck)             Checksum: CBC496A9D604E82EB91E42858C5C266E;3634.
+
+
+Package rerunfilecheck Warning: File `Reference.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `Reference.out':
+(rerunfilecheck)             Before: CBC496A9D604E82EB91E42858C5C266E;3634
+(rerunfilecheck)             After:  7ECE50F4716C1AF6FDA89DEE7140D618;3692.
  ) 
 Here is how much of TeX's memory you used:
- 11528 strings out of 494590
- 192864 string characters out of 6177878
- 374110 words of memory out of 5000000
- 14810 multiletter control sequences out of 15000+600000
+ 11533 strings out of 494590
+ 193150 string characters out of 6177878
+ 376120 words of memory out of 5000000
+ 14811 multiletter control sequences out of 15000+600000
  15021 words of font info for 37 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  37i,11n,43p,843b,731s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -870,10 +876,10 @@ mss10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx1
 /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/s
 hare/texmf/fonts/type1/public/lm/lmss10.pfb></usr/share/texmf/fonts/type1/publi
 c/lm/lmssbx10.pfb>
-Output written on Reference.pdf (10 pages, 181977 bytes).
+Output written on Reference.pdf (11 pages, 185421 bytes).
 PDF statistics:
- 400 PDF objects out of 1000 (max. 8388607)
- 373 compressed objects within 4 object streams
- 69 named destinations out of 1000 (max. 500000)
+ 405 PDF objects out of 1000 (max. 8388607)
+ 377 compressed objects within 4 object streams
+ 71 named destinations out of 1000 (max. 500000)
  457 words of extra memory for PDF output out of 10000 (max. 10000000)
 

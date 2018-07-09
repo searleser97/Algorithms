@@ -66,6 +66,10 @@
 \subsection{UnionFind}
 \subsectionfont{\sffamily}
 \inputminted{cpp}{"/home/san/grive/Algorithms/Reference/Data Structures/UnionFind.cpp"}
+\subsectionfont{\sffamily\underline}
+\subsection{pointers}
+\subsectionfont{\sffamily}
+\inputminted{cpp}{"/home/san/grive/Algorithms/Reference/Data Structures/pointers.cpp"}
 \section{Geometry}
 \section{Graphs}
 \subsectionfont{\sffamily\underline}
