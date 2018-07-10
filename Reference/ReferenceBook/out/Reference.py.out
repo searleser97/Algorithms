@@ -55,6 +55,10 @@
 \inputminted{py}{"/home/san/grive/Algorithms/Reference/Coding Resources/Python/SortListOfClass.py"}
 \section{Data Structures}
 \subsectionfont{\sffamily\underline}
+\subsection{BIT}
+\subsectionfont{\sffamily}
+\inputminted{cpp}{"/home/san/grive/Algorithms/Reference/Data Structures/BIT.cpp"}
+\subsectionfont{\sffamily\underline}
 \subsection{SegmentTree}
 \subsectionfont{\sffamily}
 \inputminted{cpp}{"/home/san/grive/Algorithms/Reference/Data Structures/SegmentTree.cpp"}
@@ -66,10 +70,6 @@
 \subsection{UnionFind}
 \subsectionfont{\sffamily}
 \inputminted{cpp}{"/home/san/grive/Algorithms/Reference/Data Structures/UnionFind.cpp"}
-\subsectionfont{\sffamily\underline}
-\subsection{pointers}
-\subsectionfont{\sffamily}
-\inputminted{cpp}{"/home/san/grive/Algorithms/Reference/Data Structures/pointers.cpp"}
 \section{Geometry}
 \section{Graphs}
 \subsectionfont{\sffamily\underline}

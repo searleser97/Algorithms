@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Debian) (preloaded format=pdflatex 2018.7.4)  9 JUL 2018 22:22
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Debian) (preloaded format=pdflatex 2018.7.4)  9 JUL 2018 22:52
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -773,20 +773,26 @@ E14531.pygtex [3])
 69D920.pygtex)
 (./_minted-Reference/8BD4EBBB8199044E56261B9F0554FD04CBC5BF2AC4ECC3689463088C36
 865066.pygtex)
+runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -o _min
+ted-Reference/D41D8CD98F00B204E9800998ECF8427E156525900AEDD29FABDD5D50F6E69ACA.
+pygtex "/home/san/grive/Algorithms/Reference/Data Structures/BIT.cpp")...execut
+ed.
+
+
+(./_minted-Reference/D41D8CD98F00B204E9800998ECF8427E156525900AEDD29FABDD5D50F6
+E69ACA.pygtex)
 (./_minted-Reference/D41D8CD98F00B204E9800998ECF8427E097D7B46430100D0071C98AD77
 B005EC.pygtex)
 runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -o _min
-ted-Reference/DA9F63BD68FE2A92F5D062D1304E60964909EAF8C63328E0D9965260541AE83F.
+ted-Reference/CABBFB859E648EA8C8CAA4D2A96E98314909EAF8C63328E0D9965260541AE83F.
 pygtex "/home/san/grive/Algorithms/Reference/Data Structures/Trie.cpp")...execu
 ted.
 
 
-(./_minted-Reference/DA9F63BD68FE2A92F5D062D1304E60964909EAF8C63328E0D996526054
+(./_minted-Reference/CABBFB859E648EA8C8CAA4D2A96E98314909EAF8C63328E0D996526054
 1AE83F.pygtex [4])
 (./_minted-Reference/1163184C87CC9056B57C373E421EF6AB21FF761F2F7D6BEDC35A298F80
 BC8461.pygtex)
-(./_minted-Reference/05B4A0A850A97D472CCB027A83CAC983CBBAB31509182D6CA9F9C8E99F
-264BAD.pygtex)
 (./_minted-Reference/A71685536E6CB9048882474DF3AAC0ACCCF234C994F3338DE898584FCD
 41F4DC.pygtex [5])
 (./_minted-Reference/1A5B22F4F7BCC3B7F398A76E9B7A416B6BB9C16A4E0587E6693E26266B
@@ -800,21 +806,21 @@ EA458B.pygtex)
 (./_minted-Reference/97E21B462619A821F2FF2D361C3BB2BCA8A133C61A363293F58761C397
 D0E476.pygtex)
 (./_minted-Reference/6CA0E8932614C58B71EC7F7462286D14211109473E0616698D0D054990
-DCC8EB.pygtex [7])
+DCC8EB.pygtex)
 (./_minted-Reference/53816674F5EFC5E30DBD32926998A419428EEE88F1988D43B6E06ACCA8
-2BC710.pygtex)
+2BC710.pygtex [7])
 (./_minted-Reference/8FFBAC2C8F81DC278321D871F3EA0BD853E4947D564BCEC6A3845712F3
 E2CF75.pygtex)
 (./_minted-Reference/23DAEC057B191C5C17E7BA045E669C3810D51ECDC66AFE85ABE67CD10F
-D2AC9D.pygtex [8])
+D2AC9D.pygtex)
 (./_minted-Reference/247DFBBF5C1528D83CE28B8DB5A170192F675793FB79C452151B1C6F87
-8C42CF.pygtex)
+8C42CF.pygtex [8])
 (./_minted-Reference/35035397D80C267B8A2CE81F03F5B24F36F343A2C4B9B2C16515AD22A8
 78B67D.pygtex)
 (./_minted-Reference/B7ED35141BF846F699E4CC40FCDCFB706500B9A75C1FAC9D1F3DBC089F
-E35A9E.pygtex [9])
+E35A9E.pygtex)
 (./_minted-Reference/1B8FC9345F1DCCC889E2BCCDEF65A0E0EE5D06D0563B0FB5BE961B4844
-4E1F3B.pygtex)
+4E1F3B.pygtex [9])
 (./_minted-Reference/FB9B4D5F350717DC32047A09184F36E920D4D3B50EDCAB0C653B4CAD78
 DBA769.pygtex)
 (./_minted-Reference/729B60A1BE5B53FD652B923B8AAE236AFD90A4D8028BF7F9A47F033677
@@ -833,21 +839,31 @@ EC60F5.pygtex [10])
 84E287.pygtex)
 (./_minted-Reference/D41D8CD98F00B204E9800998ECF8427EC6539992620DD0987F242E3DC7
 46FC9C.pygtex)) [11]
-runsystem(rm _minted-Reference/BCCF6053BCF4688A9F794026E96E3BB14909EAF8C63328E0
+runsystem(rm _minted-Reference/DA9F63BD68FE2A92F5D062D1304E60964909EAF8C63328E0
 D9965260541AE83F.pygtex)...executed.
+
+runsystem(rm _minted-Reference/05B4A0A850A97D472CCB027A83CAC983CBBAB31509182D6C
+A9F9C8E99F264BAD.pygtex)...executed.
 
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 55.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 55.
  (./Reference.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 55.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 55.
-Package rerunfilecheck Info: File `Reference.out' has not changed.
-(rerunfilecheck)             Checksum: 7ECE50F4716C1AF6FDA89DEE7140D618;3692.
+
+
+Package rerunfilecheck Warning: File `Reference.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `Reference.out':
+(rerunfilecheck)             Before: 7ECE50F4716C1AF6FDA89DEE7140D618;3692
+(rerunfilecheck)             After:  B2861597D8E1CB76CAC654FEE547C7D5;3687.
  ) 
 Here is how much of TeX's memory you used:
- 11534 strings out of 494590
- 193166 string characters out of 6177878
- 373231 words of memory out of 5000000
+ 11535 strings out of 494590
+ 193230 string characters out of 6177878
+ 373888 words of memory out of 5000000
  14812 multiletter control sequences out of 15000+600000
  15021 words of font info for 37 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
@@ -863,7 +879,7 @@ mss10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx1
 /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/s
 hare/texmf/fonts/type1/public/lm/lmss10.pfb></usr/share/texmf/fonts/type1/publi
 c/lm/lmssbx10.pfb>
-Output written on Reference.pdf (11 pages, 184755 bytes).
+Output written on Reference.pdf (11 pages, 183413 bytes).
 PDF statistics:
  409 PDF objects out of 1000 (max. 8388607)
  381 compressed objects within 4 object streams

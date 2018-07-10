@@ -7,9 +7,7 @@
 using namespace std;
 struct Trie {
   struct Node {
-    // for lexicographical order use 'map'
-    map<char, Node *> ch;
-    // unordered_map<char, Node *> ch;
+    unordered_map<char, Node *> ch;
     int w = 0, wpt = 0;
   };
 
@@ -64,7 +62,6 @@ void printv(vector<string> v) {
 
 int main() {
   std::ios_base::sync_with_stdio(0);
-  cin.tie(0);
 
   int n, k;
   Trie *tr = new Trie();
@@ -79,7 +76,9 @@ int main() {
     string str;
     cin >> str;
     cout << "Case #" << j + 1 << ":" << '\n';
-    printv(tr->getWordsByPrefix(str));
+    vector<string> ans = tr->getWordsByPrefix(str);
+    sort(ans.begin(), ans.end());
+    printv(ans);
   }
   delete tr;
   return 0;

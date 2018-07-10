@@ -1,4 +1,3 @@
-// ASIZE = alphabet size
 // wpt = number of words passing through
 // w = number of words ending in the node
 // c = character
