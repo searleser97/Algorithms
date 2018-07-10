@@ -11,7 +11,8 @@ bool hasUndirectedCycle(int u, int prev) {
   for (auto &v : ady[u]) {
     if (v == u || v == prev) continue;
     if (vis[v] || hasUndirectedCycle(v, u)) {
-      if (rootNode == -1) rootNode = v, flag = true;
+      if (rootNode == -1)
+        rootNode = v, flag = true;
       if (flag) {
         cycle.push_back(u);
         if (rootNode == u) flag = false;
@@ -27,7 +28,8 @@ bool hasUndirectedCycle() {
   for (int u = 0; u < n; u++)
     if (!vis[u]) {
       cycle.clear();
-      if (hasUndirectedCycle(u, -1)) cycles.push_back(cycle);
+      if (hasUndirectedCycle(u, -1))
+        cycles.push_back(cycle);
     }
   return cycles.size() > 0;
 }

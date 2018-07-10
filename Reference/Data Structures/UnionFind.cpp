@@ -10,7 +10,9 @@ struct UnionFind {
     return dad[u] = root(dad[u]);
   }
 
-  bool areConnected(int u, int v) { return root(u) == root(v); }
+  bool areConnected(int u, int v) {
+    return root(u) == root(v);
+  }
 
   void join(int u, int v) {
     int Ru = root(u), Rv = root(v);
@@ -19,7 +21,11 @@ struct UnionFind {
     size[Rv] += size[Ru];
   }
 
-  int getSize(int u) { return size[root(u)]; }
+  int getSize(int u) {
+    return size[root(u)];
+  }
 
-  int numberOfSets() { return n; }
+  int numberOfSets() {
+    return n;
+  }
 };

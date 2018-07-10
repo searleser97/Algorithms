@@ -6,7 +6,8 @@
 \PYG{k}{typedef} \PYG{k+kt}{int} \PYG{n}{Num}\PYG{p}{;}
 \PYG{k+kt}{int} \PYG{n}{N}\PYG{p}{,} \PYG{n}{MAXN} \PYG{o}{=} \PYG{l+m+mi}{101}\PYG{p}{;}
 \PYG{n}{vector}\PYG{o}{\PYGZlt{}}\PYG{k+kt}{int}\PYG{o}{\PYGZgt{}} \PYG{n}{level}\PYG{p}{;}
-\PYG{n}{vector}\PYG{o}{\PYGZlt{}}\PYG{n}{vector}\PYG{o}{\PYGZlt{}}\PYG{k+kt}{int}\PYG{o}{\PYGZgt{}\PYGZgt{}} \PYG{n}{ady}\PYG{p}{(}\PYG{n}{MAXN}\PYG{p}{,} \PYG{n}{vector}\PYG{o}{\PYGZlt{}}\PYG{k+kt}{int}\PYG{o}{\PYGZgt{}}\PYG{p}{),} \PYG{n}{cap}\PYG{p}{(}\PYG{n}{MAXN}\PYG{p}{,} \PYG{n}{vector}\PYG{o}{\PYGZlt{}}\PYG{k+kt}{int}\PYG{o}{\PYGZgt{}}\PYG{p}{(}\PYG{n}{MAXN}\PYG{p}{)),}
+\PYG{n}{vector}\PYG{o}{\PYGZlt{}}\PYG{n}{vector}\PYG{o}{\PYGZlt{}}\PYG{k+kt}{int}\PYG{o}{\PYGZgt{}\PYGZgt{}} \PYG{n}{ady}\PYG{p}{(}\PYG{n}{MAXN}\PYG{p}{,} \PYG{n}{vector}\PYG{o}{\PYGZlt{}}\PYG{k+kt}{int}\PYG{o}{\PYGZgt{}}\PYG{p}{),}
+    \PYG{n}{cap}\PYG{p}{(}\PYG{n}{MAXN}\PYG{p}{,} \PYG{n}{vector}\PYG{o}{\PYGZlt{}}\PYG{k+kt}{int}\PYG{o}{\PYGZgt{}}\PYG{p}{(}\PYG{n}{MAXN}\PYG{p}{)),}
     \PYG{n}{flow}\PYG{p}{(}\PYG{n}{MAXN}\PYG{p}{,} \PYG{n}{vector}\PYG{o}{\PYGZlt{}}\PYG{k+kt}{int}\PYG{o}{\PYGZgt{}}\PYG{p}{(}\PYG{n}{MAXN}\PYG{p}{));}
 
 \PYG{k+kt}{bool} \PYG{n+nf}{levelGraph}\PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{s}\PYG{p}{,} \PYG{k+kt}{int} \PYG{n}{t}\PYG{p}{)} \PYG{p}{\PYGZob{}}
@@ -27,12 +28,15 @@
   \PYG{k}{return} \PYG{n}{level}\PYG{p}{[}\PYG{n}{t}\PYG{p}{];}
 \PYG{p}{\PYGZcb{}}
 
-\PYG{n}{Num} \PYG{n+nf}{blockingFlow}\PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{u}\PYG{p}{,} \PYG{k+kt}{int} \PYG{n}{t}\PYG{p}{,} \PYG{n}{Num} \PYG{n}{currPathMaxFlow}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+\PYG{n}{Num} \PYG{n+nf}{blockingFlow}\PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{u}\PYG{p}{,} \PYG{k+kt}{int} \PYG{n}{t}\PYG{p}{,}
+                 \PYG{n}{Num} \PYG{n}{currPathMaxFlow}\PYG{p}{)} \PYG{p}{\PYGZob{}}
   \PYG{k}{if} \PYG{p}{(}\PYG{n}{u} \PYG{o}{==} \PYG{n}{t}\PYG{p}{)} \PYG{k}{return} \PYG{n}{currPathMaxFlow}\PYG{p}{;}
   \PYG{k}{for} \PYG{p}{(}\PYG{k+kt}{int} \PYG{n+nl}{v} \PYG{p}{:} \PYG{n}{ady}\PYG{p}{[}\PYG{n}{u}\PYG{p}{])} \PYG{p}{\PYGZob{}}
     \PYG{n}{Num} \PYG{n}{capleft} \PYG{o}{=} \PYG{n}{cap}\PYG{p}{[}\PYG{n}{u}\PYG{p}{][}\PYG{n}{v}\PYG{p}{]} \PYG{o}{\PYGZhy{}} \PYG{n}{flow}\PYG{p}{[}\PYG{n}{u}\PYG{p}{][}\PYG{n}{v}\PYG{p}{];}
-    \PYG{k}{if} \PYG{p}{((}\PYG{n}{level}\PYG{p}{[}\PYG{n}{v}\PYG{p}{]} \PYG{o}{==} \PYG{p}{(}\PYG{n}{level}\PYG{p}{[}\PYG{n}{u}\PYG{p}{]} \PYG{o}{+} \PYG{l+m+mi}{1}\PYG{p}{))} \PYG{o}{\PYGZam{}\PYGZam{}} \PYG{p}{(}\PYG{n}{capleft} \PYG{o}{\PYGZgt{}} \PYG{l+m+mi}{0}\PYG{p}{))} \PYG{p}{\PYGZob{}}
-      \PYG{n}{Num} \PYG{n}{pathMaxFlow} \PYG{o}{=} \PYG{n}{blockingFlow}\PYG{p}{(}\PYG{n}{v}\PYG{p}{,} \PYG{n}{t}\PYG{p}{,} \PYG{n}{min}\PYG{p}{(}\PYG{n}{currPathMaxFlow}\PYG{p}{,} \PYG{n}{capleft}\PYG{p}{));}
+    \PYG{k}{if} \PYG{p}{((}\PYG{n}{level}\PYG{p}{[}\PYG{n}{v}\PYG{p}{]} \PYG{o}{==} \PYG{p}{(}\PYG{n}{level}\PYG{p}{[}\PYG{n}{u}\PYG{p}{]} \PYG{o}{+} \PYG{l+m+mi}{1}\PYG{p}{))} \PYG{o}{\PYGZam{}\PYGZam{}}
+        \PYG{p}{(}\PYG{n}{capleft} \PYG{o}{\PYGZgt{}} \PYG{l+m+mi}{0}\PYG{p}{))} \PYG{p}{\PYGZob{}}
+      \PYG{n}{Num} \PYG{n}{pathMaxFlow} \PYG{o}{=} \PYG{n}{blockingFlow}\PYG{p}{(}
+          \PYG{n}{v}\PYG{p}{,} \PYG{n}{t}\PYG{p}{,} \PYG{n}{min}\PYG{p}{(}\PYG{n}{currPathMaxFlow}\PYG{p}{,} \PYG{n}{capleft}\PYG{p}{));}
       \PYG{k}{if} \PYG{p}{(}\PYG{n}{pathMaxFlow} \PYG{o}{\PYGZgt{}} \PYG{l+m+mi}{0}\PYG{p}{)} \PYG{p}{\PYGZob{}}
         \PYG{n}{flow}\PYG{p}{[}\PYG{n}{u}\PYG{p}{][}\PYG{n}{v}\PYG{p}{]} \PYG{o}{+=} \PYG{n}{pathMaxFlow}\PYG{p}{;}
         \PYG{n}{flow}\PYG{p}{[}\PYG{n}{v}\PYG{p}{][}\PYG{n}{u}\PYG{p}{]} \PYG{o}{\PYGZhy{}=} \PYG{n}{pathMaxFlow}\PYG{p}{;}
@@ -47,7 +51,8 @@
   \PYG{k}{if} \PYG{p}{(}\PYG{n}{s} \PYG{o}{==} \PYG{n}{t}\PYG{p}{)} \PYG{k}{return} \PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{;}
   \PYG{n}{Num} \PYG{n}{maxFlow} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{;}
   \PYG{k}{while} \PYG{p}{(}\PYG{n}{levelGraph}\PYG{p}{(}\PYG{n}{s}\PYG{p}{,} \PYG{n}{t}\PYG{p}{))}
-    \PYG{k}{while} \PYG{p}{(}\PYG{n}{Num} \PYG{n}{flow} \PYG{o}{=} \PYG{n}{blockingFlow}\PYG{p}{(}\PYG{n}{s}\PYG{p}{,} \PYG{n}{t}\PYG{p}{,} \PYG{l+m+mi}{1} \PYG{o}{\PYGZlt{}\PYGZlt{}} \PYG{l+m+mi}{30}\PYG{p}{))} \PYG{n}{maxFlow} \PYG{o}{+=} \PYG{n}{flow}\PYG{p}{;}
+    \PYG{k}{while} \PYG{p}{(}\PYG{n}{Num} \PYG{n}{flow} \PYG{o}{=} \PYG{n}{blockingFlow}\PYG{p}{(}\PYG{n}{s}\PYG{p}{,} \PYG{n}{t}\PYG{p}{,} \PYG{l+m+mi}{1} \PYG{o}{\PYGZlt{}\PYGZlt{}} \PYG{l+m+mi}{30}\PYG{p}{))}
+      \PYG{n}{maxFlow} \PYG{o}{+=} \PYG{n}{flow}\PYG{p}{;}
   \PYG{k}{return} \PYG{n}{maxFlow}\PYG{p}{;}
 \PYG{p}{\PYGZcb{}}
 

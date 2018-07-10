@@ -6,7 +6,8 @@
 typedef int Num;
 int N, MAXN = 101;
 vector<int> level;
-vector<vector<int>> ady(MAXN, vector<int>), cap(MAXN, vector<int>(MAXN)),
+vector<vector<int>> ady(MAXN, vector<int>),
+    cap(MAXN, vector<int>(MAXN)),
     flow(MAXN, vector<int>(MAXN));
 
 bool levelGraph(int s, int t) {
@@ -27,12 +28,15 @@ bool levelGraph(int s, int t) {
   return level[t];
 }
 
-Num blockingFlow(int u, int t, Num currPathMaxFlow) {
+Num blockingFlow(int u, int t,
+                 Num currPathMaxFlow) {
   if (u == t) return currPathMaxFlow;
   for (int v : ady[u]) {
     Num capleft = cap[u][v] - flow[u][v];
-    if ((level[v] == (level[u] + 1)) && (capleft > 0)) {
-      Num pathMaxFlow = blockingFlow(v, t, min(currPathMaxFlow, capleft));
+    if ((level[v] == (level[u] + 1)) &&
+        (capleft > 0)) {
+      Num pathMaxFlow = blockingFlow(
+          v, t, min(currPathMaxFlow, capleft));
       if (pathMaxFlow > 0) {
         flow[u][v] += pathMaxFlow;
         flow[v][u] -= pathMaxFlow;
@@ -47,7 +51,8 @@ Num dinicMaxFlow(int s, int t) {
   if (s == t) return -1;
   Num maxFlow = 0;
   while (levelGraph(s, t))
-    while (Num flow = blockingFlow(s, t, 1 << 30)) maxFlow += flow;
+    while (Num flow = blockingFlow(s, t, 1 << 30))
+      maxFlow += flow;
   return maxFlow;
 }
 

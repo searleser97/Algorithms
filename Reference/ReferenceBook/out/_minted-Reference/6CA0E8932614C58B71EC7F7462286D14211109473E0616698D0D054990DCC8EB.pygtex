@@ -13,7 +13,8 @@
       \PYG{k+kt}{int} \PYG{n}{u} \PYG{o}{=} \PYG{n}{q}\PYG{p}{.}\PYG{n}{front}\PYG{p}{();}
       \PYG{n}{q}\PYG{p}{.}\PYG{n}{pop}\PYG{p}{();}
       \PYG{k}{for} \PYG{p}{(}\PYG{k+kt}{int} \PYG{o}{\PYGZam{}}\PYG{n+nl}{v} \PYG{p}{:} \PYG{n}{ady}\PYG{p}{[}\PYG{n}{u}\PYG{p}{])} \PYG{p}{\PYGZob{}}
-        \PYG{k}{if} \PYG{p}{(}\PYG{n}{color}\PYG{p}{[}\PYG{n}{v}\PYG{p}{]} \PYG{o}{\PYGZlt{}} \PYG{l+m+mi}{0}\PYG{p}{)} \PYG{n}{q}\PYG{p}{.}\PYG{n}{push}\PYG{p}{(}\PYG{n}{v}\PYG{p}{),} \PYG{n}{color}\PYG{p}{[}\PYG{n}{v}\PYG{p}{]} \PYG{o}{=} \PYG{o}{!}\PYG{n}{color}\PYG{p}{[}\PYG{n}{u}\PYG{p}{];}
+        \PYG{k}{if} \PYG{p}{(}\PYG{n}{color}\PYG{p}{[}\PYG{n}{v}\PYG{p}{]} \PYG{o}{\PYGZlt{}} \PYG{l+m+mi}{0}\PYG{p}{)}
+          \PYG{n}{q}\PYG{p}{.}\PYG{n}{push}\PYG{p}{(}\PYG{n}{v}\PYG{p}{),} \PYG{n}{color}\PYG{p}{[}\PYG{n}{v}\PYG{p}{]} \PYG{o}{=} \PYG{o}{!}\PYG{n}{color}\PYG{p}{[}\PYG{n}{u}\PYG{p}{];}
         \PYG{k}{if} \PYG{p}{(}\PYG{n}{color}\PYG{p}{[}\PYG{n}{v}\PYG{p}{]} \PYG{o}{==} \PYG{n}{color}\PYG{p}{[}\PYG{n}{u}\PYG{p}{])} \PYG{k}{return} \PYG{n+nb}{false}\PYG{p}{;}
       \PYG{p}{\PYGZcb{}}
     \PYG{p}{\PYGZcb{}}

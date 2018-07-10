@@ -4,6 +4,14 @@
         "iostream": "cpp",
         "*.tcc": "cpp",
         "forward_list": "cpp",
-        "list": "cpp"
+        "list": "cpp",
+        "array": "cpp",
+        "string_view": "cpp",
+        "chrono": "cpp",
+        "limits": "cpp",
+        "valarray": "cpp",
+        "algorithm": "cpp",
+        "unordered_map": "cpp",
+        "unordered_set": "cpp"
     }
 }

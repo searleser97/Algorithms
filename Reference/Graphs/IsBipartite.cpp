@@ -12,7 +12,8 @@ bool isBipartite() {
       int u = q.front();
       q.pop();
       for (int &v : ady[u]) {
-        if (color[v] < 0) q.push(v), color[v] = !color[u];
+        if (color[v] < 0)
+          q.push(v), color[v] = !color[u];
         if (color[v] == color[u]) return false;
       }
     }

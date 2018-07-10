@@ -1,10 +1,12 @@
 typedef int Weight;
-int MAXN = 20001, N, INF = 1 << 30, isDirected = true;
+int MAXN = 20001, N, INF = 1 << 30,
+    isDirected = true;
 vector<vector<int>> ady, weight;
 
 void initVars() {
   ady = vector<vector<int>>(MAXN, vector<int>());
-  weight = vector<vector<int>>(MAXN, vector<int>(MAXN, INF));
+  weight = vector<vector<int>>(
+      MAXN, vector<int>(MAXN, INF));
 }
 
 vector<Weight> bellmanFord(int s) {
@@ -14,7 +16,8 @@ vector<Weight> bellmanFord(int s) {
     for (int u = 0; u < N; u++)
       for (auto &v : ady[u]) {
         Weight w = weight[u][v];
-        if (dist[u] != INF && dist[v] > dist[u] + w) {
+        if (dist[u] != INF &&
+            dist[v] > dist[u] + w) {
           if (i == N) return vector<Weight>();
           dist[v] = dist[u] + w;
         }

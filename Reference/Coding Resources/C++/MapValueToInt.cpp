@@ -5,7 +5,8 @@ int mapId = 0;
 
 int Map(Key key) {
   getKey[mapId] = key;
-  return val.count(key) ? val[key] : val[key] = mapId++;
+  return val.count(key) ? val[key]
+                        : val[key] = mapId++;
 }
 
 void initMapping() {

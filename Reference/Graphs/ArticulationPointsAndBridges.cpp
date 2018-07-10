@@ -12,7 +12,9 @@ vector<vector<int>> ady;
 vector<int> disc, low, ap;
 vector<Edge> br;
 
-void initVars() { ady = vector<vector<int>>(MAXN, vector<int>()); }
+void initVars() {
+  ady = vector<vector<int>>(MAXN, vector<int>());
+}
 
 int dfsAPB(int u, int p) {
   int ch = 0;

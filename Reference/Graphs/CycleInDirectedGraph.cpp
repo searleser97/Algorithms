@@ -11,7 +11,8 @@ bool hasDirectedCycle(int u) {
   for (auto &v : ady[u]) {
     if (v == u || vis[v] == 2) continue;
     if (vis[v] == 1 || hasDirectedCycle(v)) {
-      if (rootNode == -1) rootNode = v, flag = true;
+      if (rootNode == -1)
+        rootNode = v, flag = true;
       if (flag) {
         cycle.push_back(u);
         if (rootNode == u) flag = false;
@@ -28,7 +29,8 @@ bool hasDirectedCycle() {
   for (int u = 0; u < n; u++)
     if (!vis[u]) {
       cycle.clear();
-      if (hasDirectedCycle(u)) cycles.push_back(cycle);
+      if (hasDirectedCycle(u))
+        cycles.push_back(cycle);
     }
   return cycles.size() > 0;
 }

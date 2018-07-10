@@ -6,10 +6,10 @@ struct Hola {
   int x = 0, y = 0;
 };
 
-// int &id = i; just keeps the first initialization
+// int &id = i; just keeps the first
+// initialization
 
 int main() {
-  
   Hola *h = new Hola();
   Hola *h1 = new Hola();
   Hola *hh = h;

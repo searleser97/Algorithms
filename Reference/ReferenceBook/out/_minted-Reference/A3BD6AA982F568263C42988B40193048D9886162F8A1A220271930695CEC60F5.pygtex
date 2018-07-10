@@ -15,7 +15,8 @@
     \PYG{k}{while} \PYG{p}{(}\PYG{n}{i} \PYG{o}{\PYGZgt{}} \PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1} \PYG{o}{\PYGZam{}\PYGZam{}} \PYG{n}{p}\PYG{p}{[}\PYG{n}{i}\PYG{p}{]} \PYG{o}{!=} \PYG{n}{t}\PYG{p}{[}\PYG{n}{j}\PYG{p}{])} \PYG{n}{i} \PYG{o}{=} \PYG{n}{f}\PYG{p}{[}\PYG{n}{i}\PYG{p}{];}
     \PYG{n}{i}\PYG{o}{++}\PYG{p}{,} \PYG{n}{j}\PYG{o}{++}\PYG{p}{;}
     \PYG{k}{if} \PYG{p}{(}\PYG{n}{cf}\PYG{p}{)} \PYG{n}{f}\PYG{p}{[}\PYG{n}{j}\PYG{p}{]} \PYG{o}{=} \PYG{n}{i}\PYG{p}{;}
-    \PYG{k}{if} \PYG{p}{(}\PYG{o}{!}\PYG{n}{cf} \PYG{o}{\PYGZam{}\PYGZam{}} \PYG{n}{i} \PYG{o}{==} \PYG{n}{p}\PYG{p}{.}\PYG{n}{size}\PYG{p}{())} \PYG{n}{pos}\PYG{p}{.}\PYG{n}{push\PYGZus{}back}\PYG{p}{(}\PYG{n}{j} \PYG{o}{\PYGZhy{}} \PYG{n}{i}\PYG{p}{),} \PYG{n}{i} \PYG{o}{=} \PYG{n}{f}\PYG{p}{[}\PYG{n}{i}\PYG{p}{];}
+    \PYG{k}{if} \PYG{p}{(}\PYG{o}{!}\PYG{n}{cf} \PYG{o}{\PYGZam{}\PYGZam{}} \PYG{n}{i} \PYG{o}{==} \PYG{n}{p}\PYG{p}{.}\PYG{n}{size}\PYG{p}{())}
+      \PYG{n}{pos}\PYG{p}{.}\PYG{n}{push\PYGZus{}back}\PYG{p}{(}\PYG{n}{j} \PYG{o}{\PYGZhy{}} \PYG{n}{i}\PYG{p}{),} \PYG{n}{i} \PYG{o}{=} \PYG{n}{f}\PYG{p}{[}\PYG{n}{i}\PYG{p}{];}
   \PYG{p}{\PYGZcb{}}
   \PYG{k}{return} \PYG{n}{pos}\PYG{p}{;}
 \PYG{p}{\PYGZcb{}}

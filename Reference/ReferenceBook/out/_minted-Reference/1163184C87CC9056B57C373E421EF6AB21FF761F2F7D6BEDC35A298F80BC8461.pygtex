@@ -11,7 +11,9 @@
     \PYG{k}{return} \PYG{n}{dad}\PYG{p}{[}\PYG{n}{u}\PYG{p}{]} \PYG{o}{=} \PYG{n}{root}\PYG{p}{(}\PYG{n}{dad}\PYG{p}{[}\PYG{n}{u}\PYG{p}{]);}
   \PYG{p}{\PYGZcb{}}
 
-  \PYG{k+kt}{bool} \PYG{n}{areConnected}\PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{u}\PYG{p}{,} \PYG{k+kt}{int} \PYG{n}{v}\PYG{p}{)} \PYG{p}{\PYGZob{}} \PYG{k}{return} \PYG{n}{root}\PYG{p}{(}\PYG{n}{u}\PYG{p}{)} \PYG{o}{==} \PYG{n}{root}\PYG{p}{(}\PYG{n}{v}\PYG{p}{);} \PYG{p}{\PYGZcb{}}
+  \PYG{k+kt}{bool} \PYG{n}{areConnected}\PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{u}\PYG{p}{,} \PYG{k+kt}{int} \PYG{n}{v}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+    \PYG{k}{return} \PYG{n}{root}\PYG{p}{(}\PYG{n}{u}\PYG{p}{)} \PYG{o}{==} \PYG{n}{root}\PYG{p}{(}\PYG{n}{v}\PYG{p}{);}
+  \PYG{p}{\PYGZcb{}}
 
   \PYG{k+kt}{void} \PYG{n}{join}\PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{u}\PYG{p}{,} \PYG{k+kt}{int} \PYG{n}{v}\PYG{p}{)} \PYG{p}{\PYGZob{}}
     \PYG{k+kt}{int} \PYG{n}{Ru} \PYG{o}{=} \PYG{n}{root}\PYG{p}{(}\PYG{n}{u}\PYG{p}{),} \PYG{n}{Rv} \PYG{o}{=} \PYG{n}{root}\PYG{p}{(}\PYG{n}{v}\PYG{p}{);}
@@ -20,8 +22,12 @@
     \PYG{n}{size}\PYG{p}{[}\PYG{n}{Rv}\PYG{p}{]} \PYG{o}{+=} \PYG{n}{size}\PYG{p}{[}\PYG{n}{Ru}\PYG{p}{];}
   \PYG{p}{\PYGZcb{}}
 
-  \PYG{k+kt}{int} \PYG{n}{getSize}\PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{u}\PYG{p}{)} \PYG{p}{\PYGZob{}} \PYG{k}{return} \PYG{n}{size}\PYG{p}{[}\PYG{n}{root}\PYG{p}{(}\PYG{n}{u}\PYG{p}{)];} \PYG{p}{\PYGZcb{}}
+  \PYG{k+kt}{int} \PYG{n}{getSize}\PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{u}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+    \PYG{k}{return} \PYG{n}{size}\PYG{p}{[}\PYG{n}{root}\PYG{p}{(}\PYG{n}{u}\PYG{p}{)];}
+  \PYG{p}{\PYGZcb{}}
 
-  \PYG{k+kt}{int} \PYG{n}{numberOfSets}\PYG{p}{()} \PYG{p}{\PYGZob{}} \PYG{k}{return} \PYG{n}{n}\PYG{p}{;} \PYG{p}{\PYGZcb{}}
+  \PYG{k+kt}{int} \PYG{n}{numberOfSets}\PYG{p}{()} \PYG{p}{\PYGZob{}}
+    \PYG{k}{return} \PYG{n}{n}\PYG{p}{;}
+  \PYG{p}{\PYGZcb{}}
 \PYG{p}{\PYGZcb{};}
 \end{Verbatim}

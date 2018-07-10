@@ -7,10 +7,10 @@
   \PYG{k+kt}{int} \PYG{n}{x} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{,} \PYG{n}{y} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{;}
 \PYG{p}{\PYGZcb{};}
 
-\PYG{c+c1}{// int \PYGZam{}id = i; just keeps the first initialization}
+\PYG{c+c1}{// int \PYGZam{}id = i; just keeps the first}
+\PYG{c+c1}{// initialization}
 
 \PYG{k+kt}{int} \PYG{n+nf}{main}\PYG{p}{()} \PYG{p}{\PYGZob{}}
-  
   \PYG{n}{Hola} \PYG{o}{*}\PYG{n}{h} \PYG{o}{=} \PYG{k}{new} \PYG{n}{Hola}\PYG{p}{();}
   \PYG{n}{Hola} \PYG{o}{*}\PYG{n}{h1} \PYG{o}{=} \PYG{k}{new} \PYG{n}{Hola}\PYG{p}{();}
   \PYG{n}{Hola} \PYG{o}{*}\PYG{n}{hh} \PYG{o}{=} \PYG{n}{h}\PYG{p}{;}

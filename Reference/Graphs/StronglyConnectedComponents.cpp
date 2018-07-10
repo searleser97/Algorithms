@@ -10,7 +10,9 @@ int MAXN = 101, N = 7, Time, top;
 vector<vector<int>> ady, sccs;
 vector<int> disc, low, s;
 
-void initVars() { ady = vector<vector<int>>(MAXN, vector<int>()); }
+void initVars() {
+  ady = vector<vector<int>>(MAXN, vector<int>());
+}
 
 void dfsSCCS(int u) {
   if (disc[u]) return;
@@ -38,4 +40,6 @@ void SCCS() {
   for (int u = 0; u < N; u++) dfsSCCS(u);
 }
 
-void addEdge(int u, int v) { ady[u].push_back(v); }
+void addEdge(int u, int v) {
+  ady[u].push_back(v);
+}

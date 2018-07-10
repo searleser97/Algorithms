@@ -11,9 +11,11 @@ int kruskal() {
   // reverse(Wedges.begin(), Wedges.end());
   UnionFind uf(N);
   for (Wedge &wedge : Wedges) {
-    int u = wedge.second.first, v = wedge.second.second;
+    int u = wedge.second.first,
+        v = wedge.second.second;
     if (!uf.areConnected(u, v))
-      uf.join(u, v), mst.push_back(wedge), cost += wedge.first;
+      uf.join(u, v), mst.push_back(wedge),
+          cost += wedge.first;
   }
   return cost;
 }
