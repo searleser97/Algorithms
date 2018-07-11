@@ -1,6 +1,10 @@
 \section{Coding Resources}
 \subsection{C++}
 \subsubsectionfont{\sffamily\underline}
+\subsubsection{DecimalPrecision}
+\subsubsectionfont{\sffamily}
+\inputminted{cpp}{"/home/san/grive/Algorithms/Reference/Coding Resources/C++/DecimalPrecision.cpp"}
+\subsubsectionfont{\sffamily\underline}
 \subsubsection{IOoptimizationCPP}
 \subsubsectionfont{\sffamily}
 \inputminted{cpp}{"/home/san/grive/Algorithms/Reference/Coding Resources/C++/IOoptimizationCPP.cpp"}
@@ -13,6 +17,10 @@
 \subsubsectionfont{\sffamily}
 \inputminted{cpp}{"/home/san/grive/Algorithms/Reference/Coding Resources/C++/MapValueToInt.cpp"}
 \subsubsectionfont{\sffamily\underline}
+\subsubsection{Permutations}
+\subsubsectionfont{\sffamily}
+\inputminted{cpp}{"/home/san/grive/Algorithms/Reference/Coding Resources/C++/Permutations.cpp"}
+\subsubsectionfont{\sffamily\underline}
 \subsubsection{PrintVector}
 \subsubsectionfont{\sffamily}
 \inputminted{cpp}{"/home/san/grive/Algorithms/Reference/Coding Resources/C++/PrintVector.cpp"}
@@ -20,6 +28,10 @@
 \subsubsection{PriorityQueueOfClass}
 \subsubsectionfont{\sffamily}
 \inputminted{cpp}{"/home/san/grive/Algorithms/Reference/Coding Resources/C++/PriorityQueueOfClass.cpp"}
+\subsubsectionfont{\sffamily\underline}
+\subsubsection{Random}
+\subsubsectionfont{\sffamily}
+\inputminted{cpp}{"/home/san/grive/Algorithms/Reference/Coding Resources/C++/Random.cpp"}
 \subsubsectionfont{\sffamily\underline}
 \subsubsection{ReadLineCpp}
 \subsubsectionfont{\sffamily}
@@ -36,6 +48,10 @@
 \subsubsection{SplitString}
 \subsubsectionfont{\sffamily}
 \inputminted{cpp}{"/home/san/grive/Algorithms/Reference/Coding Resources/C++/SplitString.cpp"}
+\subsubsectionfont{\sffamily\underline}
+\subsubsection{Typedef}
+\subsubsectionfont{\sffamily}
+\inputminted{cpp}{"/home/san/grive/Algorithms/Reference/Coding Resources/C++/Typedef.cpp"}
 \subsection{Python}
 \subsubsectionfont{\sffamily\underline}
 \subsubsection{Combinations}
@@ -49,6 +65,14 @@
 \subsubsection{Permutations}
 \subsubsectionfont{\sffamily}
 \inputminted{py}{"/home/san/grive/Algorithms/Reference/Coding Resources/Python/Permutations.py"}
+\subsubsectionfont{\sffamily\underline}
+\subsubsection{Random}
+\subsubsectionfont{\sffamily}
+\inputminted{py}{"/home/san/grive/Algorithms/Reference/Coding Resources/Python/Random.py"}
+\subsubsectionfont{\sffamily\underline}
+\subsubsection{SortList}
+\subsubsectionfont{\sffamily}
+\inputminted{py}{"/home/san/grive/Algorithms/Reference/Coding Resources/Python/SortList.py"}
 \subsubsectionfont{\sffamily\underline}
 \subsubsection{SortListOfClass}
 \subsubsectionfont{\sffamily}
@@ -137,6 +161,10 @@
 \subsubsection{GCD}
 \subsubsectionfont{\sffamily}
 \inputminted{cpp}{"/home/san/grive/Algorithms/Reference/Maths/Number Theory/GCD.cpp"}
+\subsubsectionfont{\sffamily\underline}
+\subsubsection{LCM}
+\subsubsectionfont{\sffamily}
+\inputminted{cpp}{"/home/san/grive/Algorithms/Reference/Maths/Number Theory/LCM.cpp"}
 \subsubsectionfont{\sffamily\underline}
 \subsubsection{PrimeCheckMillerRabin}
 \subsubsectionfont{\sffamily}
