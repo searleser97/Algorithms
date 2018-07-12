@@ -1,6 +1,10 @@
 \begin{Verbatim}[commandchars=\\\{\}]
 \PYG{k+kt}{int} \PYG{n+nf}{random}\PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{min}\PYG{p}{,} \PYG{k+kt}{int} \PYG{n}{max}\PYG{p}{)} \PYG{p}{\PYGZob{}}
-  \PYG{n}{srand}\PYG{p}{(}\PYG{n}{time}\PYG{p}{(}\PYG{l+m+mi}{0}\PYG{p}{));}
   \PYG{k}{return} \PYG{n}{min} \PYG{o}{+} \PYG{n}{rand}\PYG{p}{()} \PYG{o}{\PYGZpc{}} \PYG{p}{(}\PYG{n}{max} \PYG{o}{\PYGZhy{}} \PYG{n}{min} \PYG{o}{+} \PYG{l+m+mi}{1}\PYG{p}{);}
+\PYG{p}{\PYGZcb{}}
+
+\PYG{k+kt}{int} \PYG{n+nf}{main}\PYG{p}{()} \PYG{p}{\PYGZob{}}
+  \PYG{n}{srand}\PYG{p}{(}\PYG{n}{time}\PYG{p}{(}\PYG{l+m+mi}{0}\PYG{p}{));}
+  \PYG{c+c1}{// code}
 \PYG{p}{\PYGZcb{}}
 \end{Verbatim}

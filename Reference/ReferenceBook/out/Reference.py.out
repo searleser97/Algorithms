@@ -83,6 +83,10 @@
 \subsectionfont{\sffamily}
 \inputminted{cpp}{"/home/san/grive/Algorithms/Reference/Data Structures/BIT.cpp"}
 \subsectionfont{\sffamily\underline}
+\subsection{IntervalTree}
+\subsectionfont{\sffamily}
+\inputminted{cpp}{"/home/san/grive/Algorithms/Reference/Data Structures/IntervalTree.cpp"}
+\subsectionfont{\sffamily\underline}
 \subsection{SegmentTree}
 \subsectionfont{\sffamily}
 \inputminted{cpp}{"/home/san/grive/Algorithms/Reference/Data Structures/SegmentTree.cpp"}
@@ -176,15 +180,6 @@
 \subsection{Probability}
 \subsubsection{Combinations}
 \subsubsection{Permutations}
-\section{Multiple Queries}
-\subsectionfont{\sffamily\underline}
-\subsection{Mo}
-\subsectionfont{\sffamily}
-\inputminted{cpp}{"/home/san/grive/Algorithms/Reference/Multiple Queries/Mo.cpp"}
-\subsectionfont{\sffamily\underline}
-\subsection{SqrtDecomposition}
-\subsectionfont{\sffamily}
-\inputminted{cpp}{"/home/san/grive/Algorithms/Reference/Multiple Queries/SqrtDecomposition.cpp"}
 \section{Rare Topics}
 \section{Strings}
 \subsectionfont{\sffamily\underline}
@@ -195,6 +190,21 @@
 \subsection{RabinKarp}
 \subsectionfont{\sffamily}
 \inputminted{cpp}{"/home/san/grive/Algorithms/Reference/Strings/RabinKarp.cpp"}
+\section{Techniques}
+\subsectionfont{\sffamily\underline}
+\subsection{BinarySearch}
+\subsectionfont{\sffamily}
+\inputminted{cpp}{"/home/san/grive/Algorithms/Reference/Techniques/BinarySearch.cpp"}
+\subsection{DP}
+\subsection{Multiple Queries}
+\subsubsectionfont{\sffamily\underline}
+\subsubsection{Mo}
+\subsubsectionfont{\sffamily}
+\inputminted{cpp}{"/home/san/grive/Algorithms/Reference/Techniques/Multiple Queries/Mo.cpp"}
+\subsubsectionfont{\sffamily\underline}
+\subsubsection{SqrtDecomposition}
+\subsubsectionfont{\sffamily}
+\inputminted{cpp}{"/home/san/grive/Algorithms/Reference/Techniques/Multiple Queries/SqrtDecomposition.cpp"}
 \section{Faster But Longer}
 \subsectionfont{\sffamily\underline}
 \subsection{BellmanFerrari}
