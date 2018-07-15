@@ -1,5 +1,5 @@
 int gcd(int a, int b) {
-  return b == 0 ? a : gcd(b, a % b);
+  return !b ? a : gcd(b, a % b);
 }
 
 int gcdI(int a, int b) {

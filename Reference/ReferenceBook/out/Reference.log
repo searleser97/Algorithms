@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Debian) (preloaded format=pdflatex 2018.7.4)  11 JUL 2018 20:40
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Debian) (preloaded format=pdflatex 2018.7.4)  14 JUL 2018 23:15
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -837,45 +837,42 @@ EC60F5.pygtex)
 5456AE.pygtex [11])
 (./_minted-Reference/D41D8CD98F00B204E9800998ECF8427ED109DEA1E10E8585B34F54FEC5
 391F91.pygtex)
-runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -o _min
-ted-Reference/B7488CC92591C330F2FF8E02EA02CA2007678AF61DFBB7D1BDC90F626C71F71E.
-pygtex "/home/san/grive/Algorithms/Reference/Techniques/Multiple Queries/Mo.cpp
-")...executed.
-
-
 (./_minted-Reference/B7488CC92591C330F2FF8E02EA02CA2007678AF61DFBB7D1BDC90F626C
 71F71E.pygtex)
 runsystem(pygmentize -l cpp -f latex -P commandprefix=PYG -F tokenmerge -o _min
-ted-Reference/57D4D3295C047816D3328E11F3FD7709ADD3E6D67536D9A025EF7E4F94A4C655.
-pygtex "/home/san/grive/Algorithms/Reference/Techniques/Multiple Queries/SqrtDe
-composition.cpp")...executed.
+ted-Reference/D41D8CD98F00B204E9800998ECF8427EFD933FCC0ECD28DFFD02B2E91B457213.
+pygtex "/home/san/grive/Algorithms/Reference/Techniques/Multiple Queries/Sparse
+Table.cpp")...executed.
 
 
+(./_minted-Reference/D41D8CD98F00B204E9800998ECF8427EFD933FCC0ECD28DFFD02B2E91B
+457213.pygtex)
 (./_minted-Reference/57D4D3295C047816D3328E11F3FD7709ADD3E6D67536D9A025EF7E4F94
 A4C655.pygtex [12])
 (./_minted-Reference/7120254C5C8AA94D26D54C30142D16D0A7491E336434506F7A5233DB9C
 84E287.pygtex)
 (./_minted-Reference/D41D8CD98F00B204E9800998ECF8427EC6539992620DD0987F242E3DC7
 46FC9C.pygtex)) [13]
-runsystem(rm _minted-Reference/1D941D0AAFA415E73A0BF8AA9F8D1D9D07678AF61DFBB7D1
-BDC90F626C71F71E.pygtex)...executed.
-
-runsystem(rm _minted-Reference/2A02423F35435CC81DCDB58A7A093D7DADD3E6D67536D9A0
-25EF7E4F94A4C655.pygtex)...executed.
-
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 55.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 55.
  (./Reference.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 55.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 55.
-Package rerunfilecheck Info: File `Reference.out' has not changed.
-(rerunfilecheck)             Checksum: 02734865FA18C8D701A9522E7BD3F5D8;4425.
+
+
+Package rerunfilecheck Warning: File `Reference.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `Reference.out':
+(rerunfilecheck)             Before: 02734865FA18C8D701A9522E7BD3F5D8;4425
+(rerunfilecheck)             After:  DB86D0777E703F481190517593A981D0;4496.
  ) 
 Here is how much of TeX's memory you used:
- 11595 strings out of 494590
- 196633 string characters out of 6177878
+ 11598 strings out of 494590
+ 196853 string characters out of 6177878
  374064 words of memory out of 5000000
- 14832 multiletter control sequences out of 15000+600000
+ 14833 multiletter control sequences out of 15000+600000
  15021 words of font info for 37 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  37i,11n,43p,843b,731s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -890,10 +887,10 @@ mss10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx1
 /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/s
 hare/texmf/fonts/type1/public/lm/lmss10.pfb></usr/share/texmf/fonts/type1/publi
 c/lm/lmssbx10.pfb>
-Output written on Reference.pdf (13 pages, 190447 bytes).
+Output written on Reference.pdf (13 pages, 190507 bytes).
 PDF statistics:
- 477 PDF objects out of 1000 (max. 8388607)
- 446 compressed objects within 5 object streams
- 84 named destinations out of 1000 (max. 500000)
+ 479 PDF objects out of 1000 (max. 8388607)
+ 448 compressed objects within 5 object streams
+ 85 named destinations out of 1000 (max. 500000)
  553 words of extra memory for PDF output out of 10000 (max. 10000000)
 

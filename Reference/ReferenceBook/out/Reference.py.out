@@ -202,6 +202,10 @@
 \subsubsectionfont{\sffamily}
 \inputminted{cpp}{"/home/san/grive/Algorithms/Reference/Techniques/Multiple Queries/Mo.cpp"}
 \subsubsectionfont{\sffamily\underline}
+\subsubsection{SparseTable}
+\subsubsectionfont{\sffamily}
+\inputminted{cpp}{"/home/san/grive/Algorithms/Reference/Techniques/Multiple Queries/SparseTable.cpp"}
+\subsubsectionfont{\sffamily\underline}
 \subsubsection{SqrtDecomposition}
 \subsubsectionfont{\sffamily}
 \inputminted{cpp}{"/home/san/grive/Algorithms/Reference/Techniques/Multiple Queries/SqrtDecomposition.cpp"}

@@ -63,7 +63,8 @@
 \BOOKMARK [2][-]{subsection.8.2}{DP}{section.8}% 63
 \BOOKMARK [2][-]{subsection.8.3}{Multiple Queries}{section.8}% 64
 \BOOKMARK [3][-]{subsubsection.8.3.1}{Mo}{subsection.8.3}% 65
-\BOOKMARK [3][-]{subsubsection.8.3.2}{SqrtDecomposition}{subsection.8.3}% 66
-\BOOKMARK [1][-]{section.9}{Faster But Longer}{}% 67
-\BOOKMARK [2][-]{subsection.9.1}{BellmanFerrari}{section.9}% 68
-\BOOKMARK [2][-]{subsection.9.2}{KMP}{section.9}% 69
+\BOOKMARK [3][-]{subsubsection.8.3.2}{SparseTable}{subsection.8.3}% 66
+\BOOKMARK [3][-]{subsubsection.8.3.3}{SqrtDecomposition}{subsection.8.3}% 67
+\BOOKMARK [1][-]{section.9}{Faster But Longer}{}% 68
+\BOOKMARK [2][-]{subsection.9.1}{BellmanFerrari}{section.9}% 69
+\BOOKMARK [2][-]{subsection.9.2}{KMP}{section.9}% 70

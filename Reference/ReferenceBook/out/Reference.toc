@@ -64,7 +64,8 @@
 \contentsline {subsection}{\numberline {8.2}DP}{12}{subsection.8.2}
 \contentsline {subsection}{\numberline {8.3}Multiple Queries}{12}{subsection.8.3}
 \contentsline {subsubsection}{\numberline {8.3.1}Mo}{12}{subsubsection.8.3.1}
-\contentsline {subsubsection}{\numberline {8.3.2}SqrtDecomposition}{12}{subsubsection.8.3.2}
+\contentsline {subsubsection}{\numberline {8.3.2}SparseTable}{12}{subsubsection.8.3.2}
+\contentsline {subsubsection}{\numberline {8.3.3}SqrtDecomposition}{12}{subsubsection.8.3.3}
 \contentsline {section}{\numberline {9}Faster But Longer}{13}{section.9}
 \contentsline {subsection}{\numberline {9.1}BellmanFerrari}{13}{subsection.9.1}
 \contentsline {subsection}{\numberline {9.2}KMP}{13}{subsection.9.2}
