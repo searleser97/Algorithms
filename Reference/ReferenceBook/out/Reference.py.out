@@ -133,6 +133,10 @@
 \subsection{KruskalMST}
 \subsectionfont{\sffamily}
 \inputminted{cpp}{"/home/san/grive/Algorithms/Reference/Graphs/KruskalMST.cpp"}
+\subsectionfont{\sffamily\underline}
+\subsection{LCA}
+\subsectionfont{\sffamily}
+\inputminted{cpp}{"/home/san/grive/Algorithms/Reference/Graphs/LCA.cpp"}
 \subsection{ShortestPaths}
 \subsubsectionfont{\sffamily\underline}
 \subsubsection{BellmanFord}

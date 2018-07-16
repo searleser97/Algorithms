@@ -37,34 +37,35 @@
 \BOOKMARK [3][-]{subsubsection.4.6.1}{MaxFlowDinic}{subsection.4.6}% 37
 \BOOKMARK [2][-]{subsection.4.7}{IsBipartite}{section.4}% 38
 \BOOKMARK [2][-]{subsection.4.8}{KruskalMST}{section.4}% 39
-\BOOKMARK [2][-]{subsection.4.9}{ShortestPaths}{section.4}% 40
-\BOOKMARK [3][-]{subsubsection.4.9.1}{BellmanFord}{subsection.4.9}% 41
-\BOOKMARK [3][-]{subsubsection.4.9.2}{Dijkstra}{subsection.4.9}% 42
-\BOOKMARK [2][-]{subsection.4.10}{StronglyConnectedComponents}{section.4}% 43
-\BOOKMARK [2][-]{subsection.4.11}{TopologicalSort}{section.4}% 44
-\BOOKMARK [1][-]{section.5}{Maths}{}% 45
-\BOOKMARK [2][-]{subsection.5.1}{Game Theory}{section.5}% 46
-\BOOKMARK [2][-]{subsection.5.2}{Number Theory}{section.5}% 47
-\BOOKMARK [3][-]{subsubsection.5.2.1}{DivisibilityCriterion}{subsection.5.2}% 48
-\BOOKMARK [3][-]{subsubsection.5.2.2}{ExtendedEuclidean}{subsection.5.2}% 49
-\BOOKMARK [3][-]{subsubsection.5.2.3}{GCD}{subsection.5.2}% 50
-\BOOKMARK [3][-]{subsubsection.5.2.4}{LCM}{subsection.5.2}% 51
-\BOOKMARK [3][-]{subsubsection.5.2.5}{PrimeCheckMillerRabin}{subsection.5.2}% 52
-\BOOKMARK [3][-]{subsubsection.5.2.6}{PrimeSieve}{subsection.5.2}% 53
-\BOOKMARK [2][-]{subsection.5.3}{Probability}{section.5}% 54
-\BOOKMARK [3][-]{subsubsection.5.3.1}{Combinations}{subsection.5.3}% 55
-\BOOKMARK [3][-]{subsubsection.5.3.2}{Permutations}{subsection.5.3}% 56
-\BOOKMARK [1][-]{section.6}{Rare Topics}{}% 57
-\BOOKMARK [1][-]{section.7}{Strings}{}% 58
-\BOOKMARK [2][-]{subsection.7.1}{KMP}{section.7}% 59
-\BOOKMARK [2][-]{subsection.7.2}{RabinKarp}{section.7}% 60
-\BOOKMARK [1][-]{section.8}{Techniques}{}% 61
-\BOOKMARK [2][-]{subsection.8.1}{BinarySearch}{section.8}% 62
-\BOOKMARK [2][-]{subsection.8.2}{DP}{section.8}% 63
-\BOOKMARK [2][-]{subsection.8.3}{Multiple Queries}{section.8}% 64
-\BOOKMARK [3][-]{subsubsection.8.3.1}{Mo}{subsection.8.3}% 65
-\BOOKMARK [3][-]{subsubsection.8.3.2}{SparseTable}{subsection.8.3}% 66
-\BOOKMARK [3][-]{subsubsection.8.3.3}{SqrtDecomposition}{subsection.8.3}% 67
-\BOOKMARK [1][-]{section.9}{Faster But Longer}{}% 68
-\BOOKMARK [2][-]{subsection.9.1}{BellmanFerrari}{section.9}% 69
-\BOOKMARK [2][-]{subsection.9.2}{KMP}{section.9}% 70
+\BOOKMARK [2][-]{subsection.4.9}{LCA}{section.4}% 40
+\BOOKMARK [2][-]{subsection.4.10}{ShortestPaths}{section.4}% 41
+\BOOKMARK [3][-]{subsubsection.4.10.1}{BellmanFord}{subsection.4.10}% 42
+\BOOKMARK [3][-]{subsubsection.4.10.2}{Dijkstra}{subsection.4.10}% 43
+\BOOKMARK [2][-]{subsection.4.11}{StronglyConnectedComponents}{section.4}% 44
+\BOOKMARK [2][-]{subsection.4.12}{TopologicalSort}{section.4}% 45
+\BOOKMARK [1][-]{section.5}{Maths}{}% 46
+\BOOKMARK [2][-]{subsection.5.1}{Game Theory}{section.5}% 47
+\BOOKMARK [2][-]{subsection.5.2}{Number Theory}{section.5}% 48
+\BOOKMARK [3][-]{subsubsection.5.2.1}{DivisibilityCriterion}{subsection.5.2}% 49
+\BOOKMARK [3][-]{subsubsection.5.2.2}{ExtendedEuclidean}{subsection.5.2}% 50
+\BOOKMARK [3][-]{subsubsection.5.2.3}{GCD}{subsection.5.2}% 51
+\BOOKMARK [3][-]{subsubsection.5.2.4}{LCM}{subsection.5.2}% 52
+\BOOKMARK [3][-]{subsubsection.5.2.5}{PrimeCheckMillerRabin}{subsection.5.2}% 53
+\BOOKMARK [3][-]{subsubsection.5.2.6}{PrimeSieve}{subsection.5.2}% 54
+\BOOKMARK [2][-]{subsection.5.3}{Probability}{section.5}% 55
+\BOOKMARK [3][-]{subsubsection.5.3.1}{Combinations}{subsection.5.3}% 56
+\BOOKMARK [3][-]{subsubsection.5.3.2}{Permutations}{subsection.5.3}% 57
+\BOOKMARK [1][-]{section.6}{Rare Topics}{}% 58
+\BOOKMARK [1][-]{section.7}{Strings}{}% 59
+\BOOKMARK [2][-]{subsection.7.1}{KMP}{section.7}% 60
+\BOOKMARK [2][-]{subsection.7.2}{RabinKarp}{section.7}% 61
+\BOOKMARK [1][-]{section.8}{Techniques}{}% 62
+\BOOKMARK [2][-]{subsection.8.1}{BinarySearch}{section.8}% 63
+\BOOKMARK [2][-]{subsection.8.2}{DP}{section.8}% 64
+\BOOKMARK [2][-]{subsection.8.3}{Multiple Queries}{section.8}% 65
+\BOOKMARK [3][-]{subsubsection.8.3.1}{Mo}{subsection.8.3}% 66
+\BOOKMARK [3][-]{subsubsection.8.3.2}{SparseTable}{subsection.8.3}% 67
+\BOOKMARK [3][-]{subsubsection.8.3.3}{SqrtDecomposition}{subsection.8.3}% 68
+\BOOKMARK [1][-]{section.9}{Faster But Longer}{}% 69
+\BOOKMARK [2][-]{subsection.9.1}{BellmanFerrari}{section.9}% 70
+\BOOKMARK [2][-]{subsection.9.2}{KMP}{section.9}% 71
