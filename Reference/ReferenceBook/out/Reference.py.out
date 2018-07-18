@@ -91,6 +91,14 @@
 \subsectionfont{\sffamily}
 \inputminted{cpp}{"/home/san/grive/Algorithms/Reference/Data Structures/SegmentTree.cpp"}
 \subsectionfont{\sffamily\underline}
+\subsection{SegmentTreeLazy}
+\subsectionfont{\sffamily}
+\inputminted{cpp}{"/home/san/grive/Algorithms/Reference/Data Structures/SegmentTreeLazy.cpp"}
+\subsectionfont{\sffamily\underline}
+\subsection{SparseTable}
+\subsectionfont{\sffamily}
+\inputminted{cpp}{"/home/san/grive/Algorithms/Reference/Data Structures/SparseTable.cpp"}
+\subsectionfont{\sffamily\underline}
 \subsection{Trie}
 \subsectionfont{\sffamily}
 \inputminted{cpp}{"/home/san/grive/Algorithms/Reference/Data Structures/Trie.cpp"}
@@ -98,6 +106,10 @@
 \subsection{UnionFind}
 \subsectionfont{\sffamily}
 \inputminted{cpp}{"/home/san/grive/Algorithms/Reference/Data Structures/UnionFind.cpp"}
+\subsectionfont{\sffamily\underline}
+\subsection{try}
+\subsectionfont{\sffamily}
+\inputminted{cpp}{"/home/san/grive/Algorithms/Reference/Data Structures/try.cpp"}
 \section{Geometry}
 \section{Graphs}
 \subsectionfont{\sffamily\underline}
@@ -205,10 +217,6 @@
 \subsubsection{Mo}
 \subsubsectionfont{\sffamily}
 \inputminted{cpp}{"/home/san/grive/Algorithms/Reference/Techniques/Multiple Queries/Mo.cpp"}
-\subsubsectionfont{\sffamily\underline}
-\subsubsection{SparseTable}
-\subsubsectionfont{\sffamily}
-\inputminted{cpp}{"/home/san/grive/Algorithms/Reference/Techniques/Multiple Queries/SparseTable.cpp"}
 \subsubsectionfont{\sffamily\underline}
 \subsubsection{SqrtDecomposition}
 \subsubsectionfont{\sffamily}

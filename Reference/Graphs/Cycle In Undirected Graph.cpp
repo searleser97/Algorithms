@@ -23,6 +23,7 @@ bool hasUndirectedCycle(int u, int prev) {
   return false;
 }
 
+// O(N)
 bool hasUndirectedCycle() {
   vis.clear();
   for (int u = 0; u < n; u++)

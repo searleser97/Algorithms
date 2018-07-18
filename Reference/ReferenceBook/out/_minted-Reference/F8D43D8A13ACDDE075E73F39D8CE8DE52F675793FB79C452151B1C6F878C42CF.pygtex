@@ -35,6 +35,7 @@
   \PYG{p}{\PYGZcb{}}
 \PYG{p}{\PYGZcb{}}
 
+\PYG{c+c1}{// O(N)}
 \PYG{k+kt}{void} \PYG{n+nf}{SCCS}\PYG{p}{()} \PYG{p}{\PYGZob{}}
   \PYG{n}{s} \PYG{o}{=} \PYG{n}{low} \PYG{o}{=} \PYG{n}{disc} \PYG{o}{=} \PYG{n}{vector}\PYG{o}{\PYGZlt{}}\PYG{k+kt}{int}\PYG{o}{\PYGZgt{}}\PYG{p}{(}\PYG{n}{MAXN}\PYG{p}{);}
   \PYG{n}{Time} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{,} \PYG{n}{top} \PYG{o}{=} \PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{,} \PYG{n}{sccs}\PYG{p}{.}\PYG{n}{clear}\PYG{p}{();}

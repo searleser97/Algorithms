@@ -24,6 +24,7 @@ bool hasDirectedCycle(int u) {
   return false;
 }
 
+// O(N)
 bool hasDirectedCycle() {
   vis.clear();
   for (int u = 0; u < n; u++)

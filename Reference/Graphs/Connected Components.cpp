@@ -15,6 +15,7 @@ void dfsCC(int u, vector<int> &comp) {
   for (auto &v : ady[u]) dfsCC(v, comp);
 }
 
+// O(N)
 vector<vector<int>> connectedComponents() {
   vector<vector<int>> comps;
   for (int u = 0; u < N; u++) {

@@ -12,6 +12,7 @@ struct Trie {
 
   Node *root = new Node();
 
+  // O(STR.SIZE)
   void insert(string str) {
     Node *curr = root;
     for (auto &c : str) {
@@ -33,12 +34,12 @@ struct Trie {
     return curr;
   }
 
-  // number of words with given prefix
+  // number of words with given prefix O(N)
   int prefixCount(string prefix) {
     Node *node = find(prefix);
     return node ? node->wpt : 0;
   }
-  // number of words matching str
+  // number of words matching str O(N)
   int strCount(string str) {
     Node *node = find(str);
     return node ? node->w : 0;
@@ -54,6 +55,7 @@ struct Trie {
     }
   }
 
+  // O(N)
   vector<string> getWords() {
     vector<string> words;
     string word = "";
@@ -61,11 +63,13 @@ struct Trie {
     return words;
   }
 
+  // O(N)
   vector<string> getWordsByPrefix(string prefix) {
     vector<string> words;
     getWords(find(prefix), words, prefix);
   }
 
+  // O(N)
   bool remove(Node *curr, string &str, int &i) {
     if (i == str.size()) {
       curr->wpt--;

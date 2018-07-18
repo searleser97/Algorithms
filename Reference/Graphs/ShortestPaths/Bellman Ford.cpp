@@ -9,6 +9,7 @@ void initVars() {
       MAXN, vector<int>(MAXN, INF));
 }
 
+// O(N^2)
 vector<Weight> bellmanFord(int s) {
   vector<Weight> dist(MAXN, INF);
   dist[s] = 0;

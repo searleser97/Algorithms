@@ -14,6 +14,7 @@ bool toposort(int u) {
   return true;
 }
 
+// O(N)
 bool toposort() {
   vis.clear();
   for (int u = 0; u < n; u++)

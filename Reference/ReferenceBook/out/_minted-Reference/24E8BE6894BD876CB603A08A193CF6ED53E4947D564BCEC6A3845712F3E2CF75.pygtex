@@ -10,6 +10,7 @@
       \PYG{n}{MAXN}\PYG{p}{,} \PYG{n}{vector}\PYG{o}{\PYGZlt{}}\PYG{k+kt}{int}\PYG{o}{\PYGZgt{}}\PYG{p}{(}\PYG{n}{MAXN}\PYG{p}{,} \PYG{n}{INF}\PYG{p}{));}
 \PYG{p}{\PYGZcb{}}
 
+\PYG{c+c1}{// O(N\PYGZca{}2)}
 \PYG{n}{vector}\PYG{o}{\PYGZlt{}}\PYG{n}{Weight}\PYG{o}{\PYGZgt{}} \PYG{n}{bellmanFord}\PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{s}\PYG{p}{)} \PYG{p}{\PYGZob{}}
   \PYG{n}{vector}\PYG{o}{\PYGZlt{}}\PYG{n}{Weight}\PYG{o}{\PYGZgt{}} \PYG{n}{dist}\PYG{p}{(}\PYG{n}{MAXN}\PYG{p}{,} \PYG{n}{INF}\PYG{p}{);}
   \PYG{n}{dist}\PYG{p}{[}\PYG{n}{s}\PYG{p}{]} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{;}

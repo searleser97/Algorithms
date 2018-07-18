@@ -24,6 +24,7 @@ static T F2(T a, T b) {
   // return a * b;
 }
 
+// O(NlgN)
 void buildSparseTabe(T F(T, T)) {
   st[0] = arr;
   for (int i = 1; (1 << i) <= N; i++)
@@ -32,12 +33,15 @@ void buildSparseTabe(T F(T, T)) {
                    st[i - 1][j + (1 << (i - 1))]);
 }
 
+// O(1)
 T query(int L, int R) {
   int i = log2(R - L + 1);
   return F1(st[i][L], st[i][R + 1 - (1 << i)]);
 }
 
+// O(lgN)
 T queryArith(int L, int R) {
+  // Neutral Element
   T ans = 0;  // for sum
   // T ans = 1; for multiplication
   while (true) {

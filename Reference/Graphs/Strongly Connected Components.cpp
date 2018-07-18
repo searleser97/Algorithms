@@ -34,6 +34,7 @@ void dfsSCCS(int u) {
   }
 }
 
+// O(N)
 void SCCS() {
   s = low = disc = vector<int>(MAXN);
   Time = 0, top = -1, sccs.clear();

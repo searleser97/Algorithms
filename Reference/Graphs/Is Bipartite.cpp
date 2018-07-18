@@ -1,6 +1,7 @@
 int n;                    // max node id >= 0
 vector<vector<int>> ady;  // ady.resize(n)
 
+// O(N)
 bool isBipartite() {
   vector<int> color(n, -1);
   for (int s = 0; s < n; s++) {

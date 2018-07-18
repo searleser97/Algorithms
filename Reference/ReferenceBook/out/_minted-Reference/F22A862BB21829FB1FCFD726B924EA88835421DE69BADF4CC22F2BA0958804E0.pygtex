@@ -25,6 +25,7 @@
   \PYG{c+c1}{// return a * b;}
 \PYG{p}{\PYGZcb{}}
 
+\PYG{c+c1}{// O(NlgN)}
 \PYG{k+kt}{void} \PYG{n+nf}{buildSparseTabe}\PYG{p}{(}\PYG{n}{T} \PYG{n}{F}\PYG{p}{(}\PYG{n}{T}\PYG{p}{,} \PYG{n}{T}\PYG{p}{))} \PYG{p}{\PYGZob{}}
   \PYG{n}{st}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{]} \PYG{o}{=} \PYG{n}{arr}\PYG{p}{;}
   \PYG{k}{for} \PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{i} \PYG{o}{=} \PYG{l+m+mi}{1}\PYG{p}{;} \PYG{p}{(}\PYG{l+m+mi}{1} \PYG{o}{\PYGZlt{}\PYGZlt{}} \PYG{n}{i}\PYG{p}{)} \PYG{o}{\PYGZlt{}=} \PYG{n}{N}\PYG{p}{;} \PYG{n}{i}\PYG{o}{++}\PYG{p}{)}
@@ -33,12 +34,15 @@
                    \PYG{n}{st}\PYG{p}{[}\PYG{n}{i} \PYG{o}{\PYGZhy{}} \PYG{l+m+mi}{1}\PYG{p}{][}\PYG{n}{j} \PYG{o}{+} \PYG{p}{(}\PYG{l+m+mi}{1} \PYG{o}{\PYGZlt{}\PYGZlt{}} \PYG{p}{(}\PYG{n}{i} \PYG{o}{\PYGZhy{}} \PYG{l+m+mi}{1}\PYG{p}{))]);}
 \PYG{p}{\PYGZcb{}}
 
+\PYG{c+c1}{// O(1)}
 \PYG{n}{T} \PYG{n+nf}{query}\PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{L}\PYG{p}{,} \PYG{k+kt}{int} \PYG{n}{R}\PYG{p}{)} \PYG{p}{\PYGZob{}}
   \PYG{k+kt}{int} \PYG{n}{i} \PYG{o}{=} \PYG{n}{log2}\PYG{p}{(}\PYG{n}{R} \PYG{o}{\PYGZhy{}} \PYG{n}{L} \PYG{o}{+} \PYG{l+m+mi}{1}\PYG{p}{);}
   \PYG{k}{return} \PYG{n}{F1}\PYG{p}{(}\PYG{n}{st}\PYG{p}{[}\PYG{n}{i}\PYG{p}{][}\PYG{n}{L}\PYG{p}{],} \PYG{n}{st}\PYG{p}{[}\PYG{n}{i}\PYG{p}{][}\PYG{n}{R} \PYG{o}{+} \PYG{l+m+mi}{1} \PYG{o}{\PYGZhy{}} \PYG{p}{(}\PYG{l+m+mi}{1} \PYG{o}{\PYGZlt{}\PYGZlt{}} \PYG{n}{i}\PYG{p}{)]);}
 \PYG{p}{\PYGZcb{}}
 
+\PYG{c+c1}{// O(lgN)}
 \PYG{n}{T} \PYG{n+nf}{queryArith}\PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{L}\PYG{p}{,} \PYG{k+kt}{int} \PYG{n}{R}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+  \PYG{c+c1}{// Neutral Element}
   \PYG{n}{T} \PYG{n}{ans} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{;}  \PYG{c+c1}{// for sum}
   \PYG{c+c1}{// T ans = 1; for multiplication}
   \PYG{k}{while} \PYG{p}{(}\PYG{n+nb}{true}\PYG{p}{)} \PYG{p}{\PYGZob{}}

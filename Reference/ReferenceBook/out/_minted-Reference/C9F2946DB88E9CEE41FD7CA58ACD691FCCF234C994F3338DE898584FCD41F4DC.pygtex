@@ -34,6 +34,7 @@
   \PYG{k}{return} \PYG{n}{ch}\PYG{p}{;}
 \PYG{p}{\PYGZcb{}}
 
+\PYG{c+c1}{// O(N)}
 \PYG{k+kt}{void} \PYG{n+nf}{APB}\PYG{p}{()} \PYG{p}{\PYGZob{}}
   \PYG{n}{br}\PYG{p}{.}\PYG{n}{clear}\PYG{p}{();}
   \PYG{n}{ap} \PYG{o}{=} \PYG{n}{low} \PYG{o}{=} \PYG{n}{disc} \PYG{o}{=} \PYG{n}{vector}\PYG{o}{\PYGZlt{}}\PYG{k+kt}{int}\PYG{o}{\PYGZgt{}}\PYG{p}{(}\PYG{n}{MAXN}\PYG{p}{);}

@@ -15,6 +15,7 @@
   \PYG{k}{return} \PYG{n+nb}{true}\PYG{p}{;}
 \PYG{p}{\PYGZcb{}}
 
+\PYG{c+c1}{// O(N)}
 \PYG{k+kt}{bool} \PYG{n+nf}{toposort}\PYG{p}{()} \PYG{p}{\PYGZob{}}
   \PYG{n}{vis}\PYG{p}{.}\PYG{n}{clear}\PYG{p}{();}
   \PYG{k}{for} \PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{u} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{;} \PYG{n}{u} \PYG{o}{\PYGZlt{}} \PYG{n}{n}\PYG{p}{;} \PYG{n}{u}\PYG{o}{++}\PYG{p}{)}

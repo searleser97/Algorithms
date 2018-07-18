@@ -33,6 +33,7 @@ int dfsAPB(int u, int p) {
   return ch;
 }
 
+// O(N)
 void APB() {
   br.clear();
   ap = low = disc = vector<int>(MAXN);
