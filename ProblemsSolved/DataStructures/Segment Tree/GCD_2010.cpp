@@ -1,11 +1,14 @@
-// st = segment tree. st[1] = root;
+#include <bits/stdc++.h>
+
+using namespace std;
+// st = segment tree
 // neutro = operation neutral value
 // e.g. for sum is 0, for multiplication
 // is 1, for gcd is 0, for min is INF, etc.
 int MAXN = 500000, N;
 vector<int> st, arr;
 typedef int T;
-const T neutro = 0;
+T neutro = 0;
 
 void initVars() {
   st = vector<int>(2 * MAXN, neutro);
@@ -31,12 +34,7 @@ void updateNode(int i, T val) {
     st[i >> 1] = F(st[i], st[i ^ 1]);
 }
 
-// O(3N), [l, r)
-void updateRange(int l, int r, T val) {
-  for (int i = l; i < r; i++)
-    arr[i] = val;
-  build();
-}
+void updateRange();
 
 // O(lg(2N)), [l, r)
 T query(int l, int r) {
@@ -46,4 +44,36 @@ T query(int l, int r) {
     if (r & 1) ans = F(ans, st[--r]);
   }
   return ans;
+}
+
+unordered_map<int, int> getPos, rep;
+int ans, ind = 0;
+
+int main() {
+  scanf(" %d", &N);
+  initVars();
+  for (int h = 0; h < N; h++) {
+    char o;
+    int x, pos;
+    scanf(" %c %d", &o, &x);
+    if (o == '+') {
+      if (getPos.count(x))
+        pos = getPos[x];
+      else {
+        pos = ind++;
+        getPos[x] = pos;
+      }
+      if (!rep[x]++)
+        updateNode(pos, x);
+    } else {
+      if (!--rep[x])
+        updateNode(getPos[x], neutro);
+    }
+    ans = st[1];
+    if (ans)
+      printf("%d\n", ans);
+    else
+      printf("1\n");
+  }
+  return 0;
 }

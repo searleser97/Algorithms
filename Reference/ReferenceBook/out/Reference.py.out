@@ -1,53 +1,53 @@
 \section{Coding Resources}
 \subsection{C++}
 \subsubsectionfont{\sffamily\underline}
-\subsubsection{DecimalPrecision}
+\subsubsection{Decimal Precision}
 \subsubsectionfont{\sffamily}
-\inputminted{cpp}{"/home/san/grive/Algorithms/Reference/Coding Resources/C++/DecimalPrecision.cpp"}
+\inputminted{cpp}{"/home/san/grive/Algorithms/Reference/Coding Resources/C++/Decimal Precision.cpp"}
 \subsubsectionfont{\sffamily\underline}
-\subsubsection{IOoptimizationCPP}
+\subsubsection{IO Optimization}
 \subsubsectionfont{\sffamily}
-\inputminted{cpp}{"/home/san/grive/Algorithms/Reference/Coding Resources/C++/IOoptimizationCPP.cpp"}
+\inputminted{cpp}{"/home/san/grive/Algorithms/Reference/Coding Resources/C++/IO Optimization.cpp"}
 \subsubsectionfont{\sffamily\underline}
-\subsubsection{IntToBinary}
+\subsubsection{Int To Binary}
 \subsubsectionfont{\sffamily}
-\inputminted{cpp}{"/home/san/grive/Algorithms/Reference/Coding Resources/C++/IntToBinary.cpp"}
+\inputminted{cpp}{"/home/san/grive/Algorithms/Reference/Coding Resources/C++/Int To Binary.cpp"}
 \subsubsectionfont{\sffamily\underline}
-\subsubsection{MapValueToInt}
+\subsubsection{Map Value To Int}
 \subsubsectionfont{\sffamily}
-\inputminted{cpp}{"/home/san/grive/Algorithms/Reference/Coding Resources/C++/MapValueToInt.cpp"}
+\inputminted{cpp}{"/home/san/grive/Algorithms/Reference/Coding Resources/C++/Map Value To Int.cpp"}
 \subsubsectionfont{\sffamily\underline}
 \subsubsection{Permutations}
 \subsubsectionfont{\sffamily}
 \inputminted{cpp}{"/home/san/grive/Algorithms/Reference/Coding Resources/C++/Permutations.cpp"}
 \subsubsectionfont{\sffamily\underline}
-\subsubsection{PrintVector}
+\subsubsection{Print Vector}
 \subsubsectionfont{\sffamily}
-\inputminted{cpp}{"/home/san/grive/Algorithms/Reference/Coding Resources/C++/PrintVector.cpp"}
+\inputminted{cpp}{"/home/san/grive/Algorithms/Reference/Coding Resources/C++/Print Vector.cpp"}
 \subsubsectionfont{\sffamily\underline}
-\subsubsection{PriorityQueueOfClass}
+\subsubsection{Priority Queue Of Object}
 \subsubsectionfont{\sffamily}
-\inputminted{cpp}{"/home/san/grive/Algorithms/Reference/Coding Resources/C++/PriorityQueueOfClass.cpp"}
+\inputminted{cpp}{"/home/san/grive/Algorithms/Reference/Coding Resources/C++/Priority Queue Of Object.cpp"}
 \subsubsectionfont{\sffamily\underline}
 \subsubsection{Random}
 \subsubsectionfont{\sffamily}
 \inputminted{cpp}{"/home/san/grive/Algorithms/Reference/Coding Resources/C++/Random.cpp"}
 \subsubsectionfont{\sffamily\underline}
-\subsubsection{ReadLineCpp}
+\subsubsection{Read Line}
 \subsubsectionfont{\sffamily}
-\inputminted{cpp}{"/home/san/grive/Algorithms/Reference/Coding Resources/C++/ReadLineCpp.cpp"}
+\inputminted{cpp}{"/home/san/grive/Algorithms/Reference/Coding Resources/C++/Read Line.cpp"}
 \subsubsectionfont{\sffamily\underline}
-\subsubsection{SortPair}
+\subsubsection{Sort Pair}
 \subsubsectionfont{\sffamily}
-\inputminted{cpp}{"/home/san/grive/Algorithms/Reference/Coding Resources/C++/SortPair.cpp"}
+\inputminted{cpp}{"/home/san/grive/Algorithms/Reference/Coding Resources/C++/Sort Pair.cpp"}
 \subsubsectionfont{\sffamily\underline}
-\subsubsection{SortVectorOfClass}
+\subsubsection{Sort Vector Of Object}
 \subsubsectionfont{\sffamily}
-\inputminted{cpp}{"/home/san/grive/Algorithms/Reference/Coding Resources/C++/SortVectorOfClass.cpp"}
+\inputminted{cpp}{"/home/san/grive/Algorithms/Reference/Coding Resources/C++/Sort Vector Of Object.cpp"}
 \subsubsectionfont{\sffamily\underline}
-\subsubsection{SplitString}
+\subsubsection{Split String}
 \subsubsectionfont{\sffamily}
-\inputminted{cpp}{"/home/san/grive/Algorithms/Reference/Coding Resources/C++/SplitString.cpp"}
+\inputminted{cpp}{"/home/san/grive/Algorithms/Reference/Coding Resources/C++/Split String.cpp"}
 \subsubsectionfont{\sffamily\underline}
 \subsubsection{Typedef}
 \subsubsectionfont{\sffamily}
@@ -70,34 +70,30 @@
 \subsubsectionfont{\sffamily}
 \inputminted{py}{"/home/san/grive/Algorithms/Reference/Coding Resources/Python/Random.py"}
 \subsubsectionfont{\sffamily\underline}
-\subsubsection{SortList}
+\subsubsection{Sort List Of Object}
 \subsubsectionfont{\sffamily}
-\inputminted{py}{"/home/san/grive/Algorithms/Reference/Coding Resources/Python/SortList.py"}
+\inputminted{py}{"/home/san/grive/Algorithms/Reference/Coding Resources/Python/Sort List Of Object.py"}
 \subsubsectionfont{\sffamily\underline}
-\subsubsection{SortListOfClass}
+\subsubsection{Sort List}
 \subsubsectionfont{\sffamily}
-\inputminted{py}{"/home/san/grive/Algorithms/Reference/Coding Resources/Python/SortListOfClass.py"}
+\inputminted{py}{"/home/san/grive/Algorithms/Reference/Coding Resources/Python/Sort List.py"}
 \section{Data Structures}
 \subsectionfont{\sffamily\underline}
 \subsection{BIT}
 \subsectionfont{\sffamily}
 \inputminted{cpp}{"/home/san/grive/Algorithms/Reference/Data Structures/BIT.cpp"}
 \subsectionfont{\sffamily\underline}
-\subsection{IntervalTree}
+\subsection{Interval Tree}
 \subsectionfont{\sffamily}
-\inputminted{cpp}{"/home/san/grive/Algorithms/Reference/Data Structures/IntervalTree.cpp"}
+\inputminted{cpp}{"/home/san/grive/Algorithms/Reference/Data Structures/Interval Tree.cpp"}
 \subsectionfont{\sffamily\underline}
-\subsection{SegmentTree}
+\subsection{Segment Tree}
 \subsectionfont{\sffamily}
-\inputminted{cpp}{"/home/san/grive/Algorithms/Reference/Data Structures/SegmentTree.cpp"}
+\inputminted{cpp}{"/home/san/grive/Algorithms/Reference/Data Structures/Segment Tree.cpp"}
 \subsectionfont{\sffamily\underline}
-\subsection{SegmentTreeLazy}
+\subsection{Sparse Table}
 \subsectionfont{\sffamily}
-\inputminted{cpp}{"/home/san/grive/Algorithms/Reference/Data Structures/SegmentTreeLazy.cpp"}
-\subsectionfont{\sffamily\underline}
-\subsection{SparseTable}
-\subsectionfont{\sffamily}
-\inputminted{cpp}{"/home/san/grive/Algorithms/Reference/Data Structures/SparseTable.cpp"}
+\inputminted{cpp}{"/home/san/grive/Algorithms/Reference/Data Structures/Sparse Table.cpp"}
 \subsectionfont{\sffamily\underline}
 \subsection{Trie}
 \subsectionfont{\sffamily}
@@ -113,70 +109,74 @@
 \section{Geometry}
 \section{Graphs}
 \subsectionfont{\sffamily\underline}
-\subsection{ArticulationPointsAndBridges}
+\subsection{Articulation Points And Bridges}
 \subsectionfont{\sffamily}
-\inputminted{cpp}{"/home/san/grive/Algorithms/Reference/Graphs/ArticulationPointsAndBridges.cpp"}
+\inputminted{cpp}{"/home/san/grive/Algorithms/Reference/Graphs/Articulation Points And Bridges.cpp"}
 \subsectionfont{\sffamily\underline}
-\subsection{ConnectedComponents}
+\subsection{Connected Components}
 \subsectionfont{\sffamily}
-\inputminted{cpp}{"/home/san/grive/Algorithms/Reference/Graphs/ConnectedComponents.cpp"}
+\inputminted{cpp}{"/home/san/grive/Algorithms/Reference/Graphs/Connected Components.cpp"}
 \subsectionfont{\sffamily\underline}
-\subsection{CycleInDirectedGraph}
+\subsection{Cycle In Directed Graph}
 \subsectionfont{\sffamily}
-\inputminted{cpp}{"/home/san/grive/Algorithms/Reference/Graphs/CycleInDirectedGraph.cpp"}
+\inputminted{cpp}{"/home/san/grive/Algorithms/Reference/Graphs/Cycle In Directed Graph.cpp"}
 \subsectionfont{\sffamily\underline}
-\subsection{CycleInUndirectedGraph}
+\subsection{Cycle In Undirected Graph}
 \subsectionfont{\sffamily}
-\inputminted{cpp}{"/home/san/grive/Algorithms/Reference/Graphs/CycleInUndirectedGraph.cpp"}
+\inputminted{cpp}{"/home/san/grive/Algorithms/Reference/Graphs/Cycle In Undirected Graph.cpp"}
 \subsectionfont{\sffamily\underline}
-\subsection{FloodFill}
+\subsection{Flood Fill}
 \subsectionfont{\sffamily}
-\inputminted{cpp}{"/home/san/grive/Algorithms/Reference/Graphs/FloodFill.cpp"}
+\inputminted{cpp}{"/home/san/grive/Algorithms/Reference/Graphs/Flood Fill.cpp"}
 \subsection{Flow}
 \subsubsectionfont{\sffamily\underline}
-\subsubsection{MaxFlowDinic}
+\subsubsection{Max Flow Dinic}
 \subsubsectionfont{\sffamily}
-\inputminted{cpp}{"/home/san/grive/Algorithms/Reference/Graphs/Flow/MaxFlowDinic.cpp"}
+\inputminted{cpp}{"/home/san/grive/Algorithms/Reference/Graphs/Flow/Max Flow Dinic.cpp"}
 \subsectionfont{\sffamily\underline}
-\subsection{IsBipartite}
+\subsection{Is Bipartite}
 \subsectionfont{\sffamily}
-\inputminted{cpp}{"/home/san/grive/Algorithms/Reference/Graphs/IsBipartite.cpp"}
+\inputminted{cpp}{"/home/san/grive/Algorithms/Reference/Graphs/Is Bipartite.cpp"}
 \subsectionfont{\sffamily\underline}
-\subsection{KruskalMST}
+\subsection{Kruskal MST}
 \subsectionfont{\sffamily}
-\inputminted{cpp}{"/home/san/grive/Algorithms/Reference/Graphs/KruskalMST.cpp"}
+\inputminted{cpp}{"/home/san/grive/Algorithms/Reference/Graphs/Kruskal MST.cpp"}
 \subsectionfont{\sffamily\underline}
 \subsection{LCA}
 \subsectionfont{\sffamily}
 \inputminted{cpp}{"/home/san/grive/Algorithms/Reference/Graphs/LCA.cpp"}
+\subsectionfont{\sffamily\underline}
+\subsection{Maximum Bipartite Matching}
+\subsectionfont{\sffamily}
+\inputminted{cpp}{"/home/san/grive/Algorithms/Reference/Graphs/Maximum Bipartite Matching.cpp"}
 \subsection{ShortestPaths}
 \subsubsectionfont{\sffamily\underline}
-\subsubsection{BellmanFord}
+\subsubsection{Bellman Ford}
 \subsubsectionfont{\sffamily}
-\inputminted{cpp}{"/home/san/grive/Algorithms/Reference/Graphs/ShortestPaths/BellmanFord.cpp"}
+\inputminted{cpp}{"/home/san/grive/Algorithms/Reference/Graphs/ShortestPaths/Bellman Ford.cpp"}
 \subsubsectionfont{\sffamily\underline}
 \subsubsection{Dijkstra}
 \subsubsectionfont{\sffamily}
 \inputminted{cpp}{"/home/san/grive/Algorithms/Reference/Graphs/ShortestPaths/Dijkstra.cpp"}
 \subsectionfont{\sffamily\underline}
-\subsection{StronglyConnectedComponents}
+\subsection{Strongly Connected Components}
 \subsectionfont{\sffamily}
-\inputminted{cpp}{"/home/san/grive/Algorithms/Reference/Graphs/StronglyConnectedComponents.cpp"}
+\inputminted{cpp}{"/home/san/grive/Algorithms/Reference/Graphs/Strongly Connected Components.cpp"}
 \subsectionfont{\sffamily\underline}
-\subsection{TopologicalSort}
+\subsection{Topological Sort}
 \subsectionfont{\sffamily}
-\inputminted{cpp}{"/home/san/grive/Algorithms/Reference/Graphs/TopologicalSort.cpp"}
+\inputminted{cpp}{"/home/san/grive/Algorithms/Reference/Graphs/Topological Sort.cpp"}
 \section{Maths}
 \subsection{Game Theory}
 \subsection{Number Theory}
 \subsubsectionfont{\sffamily\underline}
-\subsubsection{DivisibilityCriterion}
+\subsubsection{Divisibility Criterion}
 \subsubsectionfont{\sffamily}
-\inputminted{py}{"/home/san/grive/Algorithms/Reference/Maths/Number Theory/DivisibilityCriterion.py"}
+\inputminted{py}{"/home/san/grive/Algorithms/Reference/Maths/Number Theory/Divisibility Criterion.py"}
 \subsubsectionfont{\sffamily\underline}
-\subsubsection{ExtendedEuclidean}
+\subsubsection{Extended Euclidean}
 \subsubsectionfont{\sffamily}
-\inputminted{cpp}{"/home/san/grive/Algorithms/Reference/Maths/Number Theory/ExtendedEuclidean.cpp"}
+\inputminted{cpp}{"/home/san/grive/Algorithms/Reference/Maths/Number Theory/Extended Euclidean.cpp"}
 \subsubsectionfont{\sffamily\underline}
 \subsubsection{GCD}
 \subsubsectionfont{\sffamily}
@@ -186,13 +186,13 @@
 \subsubsectionfont{\sffamily}
 \inputminted{cpp}{"/home/san/grive/Algorithms/Reference/Maths/Number Theory/LCM.cpp"}
 \subsubsectionfont{\sffamily\underline}
-\subsubsection{PrimeCheckMillerRabin}
+\subsubsection{Prime Check Miller Rabin}
 \subsubsectionfont{\sffamily}
-\inputminted{py}{"/home/san/grive/Algorithms/Reference/Maths/Number Theory/PrimeCheckMillerRabin.py"}
+\inputminted{py}{"/home/san/grive/Algorithms/Reference/Maths/Number Theory/Prime Check Miller Rabin.py"}
 \subsubsectionfont{\sffamily\underline}
-\subsubsection{PrimeSieve}
+\subsubsection{Prime Sieve}
 \subsubsectionfont{\sffamily}
-\inputminted{cpp}{"/home/san/grive/Algorithms/Reference/Maths/Number Theory/PrimeSieve.cpp"}
+\inputminted{cpp}{"/home/san/grive/Algorithms/Reference/Maths/Number Theory/Prime Sieve.cpp"}
 \subsection{Probability}
 \subsubsection{Combinations}
 \subsubsection{Permutations}
@@ -203,14 +203,14 @@
 \subsectionfont{\sffamily}
 \inputminted{cpp}{"/home/san/grive/Algorithms/Reference/Strings/KMP.cpp"}
 \subsectionfont{\sffamily\underline}
-\subsection{RabinKarp}
+\subsection{Rabin Karp}
 \subsectionfont{\sffamily}
-\inputminted{cpp}{"/home/san/grive/Algorithms/Reference/Strings/RabinKarp.cpp"}
+\inputminted{cpp}{"/home/san/grive/Algorithms/Reference/Strings/Rabin Karp.cpp"}
 \section{Techniques}
 \subsectionfont{\sffamily\underline}
-\subsection{BinarySearch}
+\subsection{Binary Search}
 \subsectionfont{\sffamily}
-\inputminted{cpp}{"/home/san/grive/Algorithms/Reference/Techniques/BinarySearch.cpp"}
+\inputminted{cpp}{"/home/san/grive/Algorithms/Reference/Techniques/Binary Search.cpp"}
 \subsection{DP}
 \subsection{Multiple Queries}
 \subsubsectionfont{\sffamily\underline}
@@ -218,9 +218,9 @@
 \subsubsectionfont{\sffamily}
 \inputminted{cpp}{"/home/san/grive/Algorithms/Reference/Techniques/Multiple Queries/Mo.cpp"}
 \subsubsectionfont{\sffamily\underline}
-\subsubsection{SqrtDecomposition}
+\subsubsection{SQRT Decomposition}
 \subsubsectionfont{\sffamily}
-\inputminted{cpp}{"/home/san/grive/Algorithms/Reference/Techniques/Multiple Queries/SqrtDecomposition.cpp"}
+\inputminted{cpp}{"/home/san/grive/Algorithms/Reference/Techniques/Multiple Queries/SQRT Decomposition.cpp"}
 \section{Faster But Longer}
 \subsectionfont{\sffamily\underline}
 \subsection{BellmanFerrari}

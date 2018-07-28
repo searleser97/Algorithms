@@ -6,9 +6,13 @@
 typedef int Num;
 int N, MAXN = 101;
 vector<int> level;
-vector<vector<int>> ady(MAXN, vector<int>),
-    cap(MAXN, vector<int>(MAXN)),
-    flow(MAXN, vector<int>(MAXN));
+vector<vector<int>> ady, cap, flow;
+
+void initVars() {
+  ady = vector<vector<int>>(MAXN, vector<int>());
+  cap = vector<vector<int>>(MAXN, vector<int>(MAXN));
+  flow = vector<vector<int>>(MAXN, vector<int>(MAXN));
+}
 
 bool levelGraph(int s, int t) {
   level = vector<int>(MAXN);
@@ -47,6 +51,7 @@ Num blockingFlow(int u, int t,
   return 0;
 }
 
+// O(E * V^2)
 Num dinicMaxFlow(int s, int t) {
   if (s == t) return -1;
   Num maxFlow = 0;
