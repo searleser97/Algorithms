@@ -21,53 +21,57 @@
 \BOOKMARK [3][-]{subsubsection.1.2.5}{Sort List Of Object}{subsection.1.2}% 21
 \BOOKMARK [3][-]{subsubsection.1.2.6}{Sort List}{subsection.1.2}% 22
 \BOOKMARK [1][-]{section.2}{Data Structures}{}% 23
-\BOOKMARK [2][-]{subsection.2.1}{BIT}{section.2}% 24
-\BOOKMARK [2][-]{subsection.2.2}{Interval Tree}{section.2}% 25
-\BOOKMARK [2][-]{subsection.2.3}{Segment Tree}{section.2}% 26
-\BOOKMARK [2][-]{subsection.2.4}{Sparse Table}{section.2}% 27
-\BOOKMARK [2][-]{subsection.2.5}{Trie}{section.2}% 28
-\BOOKMARK [2][-]{subsection.2.6}{UnionFind}{section.2}% 29
-\BOOKMARK [2][-]{subsection.2.7}{try}{section.2}% 30
-\BOOKMARK [1][-]{section.3}{Geometry}{}% 31
-\BOOKMARK [1][-]{section.4}{Graphs}{}% 32
-\BOOKMARK [2][-]{subsection.4.1}{Articulation Points And Bridges}{section.4}% 33
-\BOOKMARK [2][-]{subsection.4.2}{Connected Components}{section.4}% 34
-\BOOKMARK [2][-]{subsection.4.3}{Cycle In Directed Graph}{section.4}% 35
-\BOOKMARK [2][-]{subsection.4.4}{Cycle In Undirected Graph}{section.4}% 36
-\BOOKMARK [2][-]{subsection.4.5}{Flood Fill}{section.4}% 37
-\BOOKMARK [2][-]{subsection.4.6}{Flow}{section.4}% 38
-\BOOKMARK [3][-]{subsubsection.4.6.1}{Max Flow Dinic}{subsection.4.6}% 39
-\BOOKMARK [2][-]{subsection.4.7}{Is Bipartite}{section.4}% 40
-\BOOKMARK [2][-]{subsection.4.8}{Kruskal MST}{section.4}% 41
-\BOOKMARK [2][-]{subsection.4.9}{LCA}{section.4}% 42
-\BOOKMARK [2][-]{subsection.4.10}{Maximum Bipartite Matching}{section.4}% 43
-\BOOKMARK [2][-]{subsection.4.11}{ShortestPaths}{section.4}% 44
-\BOOKMARK [3][-]{subsubsection.4.11.1}{Bellman Ford}{subsection.4.11}% 45
-\BOOKMARK [3][-]{subsubsection.4.11.2}{Dijkstra}{subsection.4.11}% 46
-\BOOKMARK [2][-]{subsection.4.12}{Strongly Connected Components}{section.4}% 47
-\BOOKMARK [2][-]{subsection.4.13}{Topological Sort}{section.4}% 48
-\BOOKMARK [1][-]{section.5}{Maths}{}% 49
-\BOOKMARK [2][-]{subsection.5.1}{Game Theory}{section.5}% 50
-\BOOKMARK [2][-]{subsection.5.2}{Number Theory}{section.5}% 51
-\BOOKMARK [3][-]{subsubsection.5.2.1}{Divisibility Criterion}{subsection.5.2}% 52
-\BOOKMARK [3][-]{subsubsection.5.2.2}{Extended Euclidean}{subsection.5.2}% 53
-\BOOKMARK [3][-]{subsubsection.5.2.3}{GCD}{subsection.5.2}% 54
-\BOOKMARK [3][-]{subsubsection.5.2.4}{LCM}{subsection.5.2}% 55
-\BOOKMARK [3][-]{subsubsection.5.2.5}{Prime Check Miller Rabin}{subsection.5.2}% 56
-\BOOKMARK [3][-]{subsubsection.5.2.6}{Prime Sieve}{subsection.5.2}% 57
-\BOOKMARK [2][-]{subsection.5.3}{Probability}{section.5}% 58
-\BOOKMARK [3][-]{subsubsection.5.3.1}{Combinations}{subsection.5.3}% 59
-\BOOKMARK [3][-]{subsubsection.5.3.2}{Permutations}{subsection.5.3}% 60
-\BOOKMARK [1][-]{section.6}{Rare Topics}{}% 61
-\BOOKMARK [1][-]{section.7}{Strings}{}% 62
-\BOOKMARK [2][-]{subsection.7.1}{KMP}{section.7}% 63
-\BOOKMARK [2][-]{subsection.7.2}{Rabin Karp}{section.7}% 64
-\BOOKMARK [1][-]{section.8}{Techniques}{}% 65
-\BOOKMARK [2][-]{subsection.8.1}{Binary Search}{section.8}% 66
-\BOOKMARK [2][-]{subsection.8.2}{DP}{section.8}% 67
-\BOOKMARK [2][-]{subsection.8.3}{Multiple Queries}{section.8}% 68
-\BOOKMARK [3][-]{subsubsection.8.3.1}{Mo}{subsection.8.3}% 69
-\BOOKMARK [3][-]{subsubsection.8.3.2}{SQRT Decomposition}{subsection.8.3}% 70
-\BOOKMARK [1][-]{section.9}{Faster But Longer}{}% 71
-\BOOKMARK [2][-]{subsection.9.1}{BellmanFerrari}{section.9}% 72
-\BOOKMARK [2][-]{subsection.9.2}{KMP}{section.9}% 73
+\BOOKMARK [2][-]{subsection.2.1}{Graphs}{section.2}% 24
+\BOOKMARK [3][-]{subsubsection.2.1.1}{UnionFind}{subsection.2.1}% 25
+\BOOKMARK [2][-]{subsection.2.2}{Ranges}{section.2}% 26
+\BOOKMARK [3][-]{subsubsection.2.2.1}{BIT}{subsection.2.2}% 27
+\BOOKMARK [3][-]{subsubsection.2.2.2}{Interval Tree}{subsection.2.2}% 28
+\BOOKMARK [3][-]{subsubsection.2.2.3}{Segment Tree}{subsection.2.2}% 29
+\BOOKMARK [3][-]{subsubsection.2.2.4}{Sparse Table}{subsection.2.2}% 30
+\BOOKMARK [2][-]{subsection.2.3}{Strings}{section.2}% 31
+\BOOKMARK [3][-]{subsubsection.2.3.1}{Trie}{subsection.2.3}% 32
+\BOOKMARK [2][-]{subsection.2.4}{Trees}{section.2}% 33
+\BOOKMARK [3][-]{subsubsection.2.4.1}{Treap}{subsection.2.4}% 34
+\BOOKMARK [1][-]{section.3}{Geometry}{}% 35
+\BOOKMARK [1][-]{section.4}{Graphs}{}% 36
+\BOOKMARK [2][-]{subsection.4.1}{Articulation Points And Bridges}{section.4}% 37
+\BOOKMARK [2][-]{subsection.4.2}{Connected Components}{section.4}% 38
+\BOOKMARK [2][-]{subsection.4.3}{Cycle In Directed Graph}{section.4}% 39
+\BOOKMARK [2][-]{subsection.4.4}{Cycle In Undirected Graph}{section.4}% 40
+\BOOKMARK [2][-]{subsection.4.5}{Flood Fill}{section.4}% 41
+\BOOKMARK [2][-]{subsection.4.6}{Flow}{section.4}% 42
+\BOOKMARK [3][-]{subsubsection.4.6.1}{Max Flow Dinic}{subsection.4.6}% 43
+\BOOKMARK [2][-]{subsection.4.7}{Is Bipartite}{section.4}% 44
+\BOOKMARK [2][-]{subsection.4.8}{Kruskal MST}{section.4}% 45
+\BOOKMARK [2][-]{subsection.4.9}{LCA}{section.4}% 46
+\BOOKMARK [2][-]{subsection.4.10}{Maximum Bipartite Matching}{section.4}% 47
+\BOOKMARK [2][-]{subsection.4.11}{ShortestPaths}{section.4}% 48
+\BOOKMARK [3][-]{subsubsection.4.11.1}{Bellman Ford}{subsection.4.11}% 49
+\BOOKMARK [3][-]{subsubsection.4.11.2}{Dijkstra}{subsection.4.11}% 50
+\BOOKMARK [2][-]{subsection.4.12}{Strongly Connected Components}{section.4}% 51
+\BOOKMARK [2][-]{subsection.4.13}{Topological Sort}{section.4}% 52
+\BOOKMARK [1][-]{section.5}{Maths}{}% 53
+\BOOKMARK [2][-]{subsection.5.1}{Game Theory}{section.5}% 54
+\BOOKMARK [2][-]{subsection.5.2}{Number Theory}{section.5}% 55
+\BOOKMARK [3][-]{subsubsection.5.2.1}{Divisibility Criterion}{subsection.5.2}% 56
+\BOOKMARK [3][-]{subsubsection.5.2.2}{Extended Euclidean}{subsection.5.2}% 57
+\BOOKMARK [3][-]{subsubsection.5.2.3}{GCD}{subsection.5.2}% 58
+\BOOKMARK [3][-]{subsubsection.5.2.4}{LCM}{subsection.5.2}% 59
+\BOOKMARK [3][-]{subsubsection.5.2.5}{Prime Check Miller Rabin}{subsection.5.2}% 60
+\BOOKMARK [3][-]{subsubsection.5.2.6}{Prime Sieve}{subsection.5.2}% 61
+\BOOKMARK [2][-]{subsection.5.3}{Probability}{section.5}% 62
+\BOOKMARK [3][-]{subsubsection.5.3.1}{Combinations}{subsection.5.3}% 63
+\BOOKMARK [3][-]{subsubsection.5.3.2}{Permutations}{subsection.5.3}% 64
+\BOOKMARK [1][-]{section.6}{Rare Topics}{}% 65
+\BOOKMARK [1][-]{section.7}{Strings}{}% 66
+\BOOKMARK [2][-]{subsection.7.1}{KMP}{section.7}% 67
+\BOOKMARK [2][-]{subsection.7.2}{Rabin Karp}{section.7}% 68
+\BOOKMARK [1][-]{section.8}{Techniques}{}% 69
+\BOOKMARK [2][-]{subsection.8.1}{Binary Search}{section.8}% 70
+\BOOKMARK [2][-]{subsection.8.2}{DP}{section.8}% 71
+\BOOKMARK [2][-]{subsection.8.3}{Multiple Queries}{section.8}% 72
+\BOOKMARK [3][-]{subsubsection.8.3.1}{Mo}{subsection.8.3}% 73
+\BOOKMARK [3][-]{subsubsection.8.3.2}{SQRT Decomposition}{subsection.8.3}% 74
+\BOOKMARK [1][-]{section.9}{Faster But Longer}{}% 75
+\BOOKMARK [2][-]{subsection.9.1}{BellmanFerrari}{section.9}% 76
+\BOOKMARK [2][-]{subsection.9.2}{KMP}{section.9}% 77

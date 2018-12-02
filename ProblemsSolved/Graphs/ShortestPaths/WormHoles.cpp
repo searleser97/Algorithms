@@ -13,12 +13,12 @@ void initVars() {
 vector<Weight> bellmanFord(int s) {
   vector<Weight> dist(MAXN, INF);
   dist[s] = 0;
-  for (int i = 0; i <= N; i++)
+  for (int i = 1; i <= N; i++)
     for (int u = 0; u < N; u++)
       for (auto &v : ady[u]) {
         Weight w = weight[u][v];
         if (dist[u] != INF && dist[v] > dist[u] + w) {
-          if (i == N) return vector<Weight>();
+          if (i == N) return {};
           dist[v] = dist[u] + w;
         }
       }

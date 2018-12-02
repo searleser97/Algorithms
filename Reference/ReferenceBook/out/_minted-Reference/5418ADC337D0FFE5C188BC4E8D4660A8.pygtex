@@ -1,4 +1,7 @@
 \begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{// N = number of nodes}
+\PYG{c+c1}{// returns \PYGZob{}\PYGZcb{} if there is a negative weight cycle}
+
 \PYG{k}{typedef} \PYG{k+kt}{int} \PYG{n}{Weight}\PYG{p}{;}
 \PYG{k+kt}{int} \PYG{n}{MAXN} \PYG{o}{=} \PYG{l+m+mi}{20001}\PYG{p}{,} \PYG{n}{N}\PYG{p}{,} \PYG{n}{INF} \PYG{o}{=} \PYG{l+m+mi}{1} \PYG{o}{\PYGZlt{}\PYGZlt{}} \PYG{l+m+mi}{30}\PYG{p}{,}
     \PYG{n}{isDirected} \PYG{o}{=} \PYG{n+nb}{true}\PYG{p}{;}
@@ -10,17 +13,17 @@
       \PYG{n}{MAXN}\PYG{p}{,} \PYG{n}{vector}\PYG{o}{\PYGZlt{}}\PYG{k+kt}{int}\PYG{o}{\PYGZgt{}}\PYG{p}{(}\PYG{n}{MAXN}\PYG{p}{,} \PYG{n}{INF}\PYG{p}{));}
 \PYG{p}{\PYGZcb{}}
 
-\PYG{c+c1}{// O(N\PYGZca{}2)}
+\PYG{c+c1}{// O(V * E)}
 \PYG{n}{vector}\PYG{o}{\PYGZlt{}}\PYG{n}{Weight}\PYG{o}{\PYGZgt{}} \PYG{n}{bellmanFord}\PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{s}\PYG{p}{)} \PYG{p}{\PYGZob{}}
   \PYG{n}{vector}\PYG{o}{\PYGZlt{}}\PYG{n}{Weight}\PYG{o}{\PYGZgt{}} \PYG{n}{dist}\PYG{p}{(}\PYG{n}{MAXN}\PYG{p}{,} \PYG{n}{INF}\PYG{p}{);}
   \PYG{n}{dist}\PYG{p}{[}\PYG{n}{s}\PYG{p}{]} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{;}
-  \PYG{k}{for} \PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{i} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{;} \PYG{n}{i} \PYG{o}{\PYGZlt{}=} \PYG{n}{N}\PYG{p}{;} \PYG{n}{i}\PYG{o}{++}\PYG{p}{)}
+  \PYG{k}{for} \PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{i} \PYG{o}{=} \PYG{l+m+mi}{1}\PYG{p}{;} \PYG{n}{i} \PYG{o}{\PYGZlt{}=} \PYG{n}{N}\PYG{p}{;} \PYG{n}{i}\PYG{o}{++}\PYG{p}{)}
     \PYG{k}{for} \PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{u} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{;} \PYG{n}{u} \PYG{o}{\PYGZlt{}} \PYG{n}{N}\PYG{p}{;} \PYG{n}{u}\PYG{o}{++}\PYG{p}{)}
       \PYG{k}{for} \PYG{p}{(}\PYG{k}{auto} \PYG{o}{\PYGZam{}}\PYG{n+nl}{v} \PYG{p}{:} \PYG{n}{ady}\PYG{p}{[}\PYG{n}{u}\PYG{p}{])} \PYG{p}{\PYGZob{}}
         \PYG{n}{Weight} \PYG{n}{w} \PYG{o}{=} \PYG{n}{weight}\PYG{p}{[}\PYG{n}{u}\PYG{p}{][}\PYG{n}{v}\PYG{p}{];}
         \PYG{k}{if} \PYG{p}{(}\PYG{n}{dist}\PYG{p}{[}\PYG{n}{u}\PYG{p}{]} \PYG{o}{!=} \PYG{n}{INF} \PYG{o}{\PYGZam{}\PYGZam{}}
             \PYG{n}{dist}\PYG{p}{[}\PYG{n}{v}\PYG{p}{]} \PYG{o}{\PYGZgt{}} \PYG{n}{dist}\PYG{p}{[}\PYG{n}{u}\PYG{p}{]} \PYG{o}{+} \PYG{n}{w}\PYG{p}{)} \PYG{p}{\PYGZob{}}
-          \PYG{k}{if} \PYG{p}{(}\PYG{n}{i} \PYG{o}{==} \PYG{n}{N}\PYG{p}{)} \PYG{k}{return} \PYG{n}{vector}\PYG{o}{\PYGZlt{}}\PYG{n}{Weight}\PYG{o}{\PYGZgt{}}\PYG{p}{();}
+          \PYG{k}{if} \PYG{p}{(}\PYG{n}{i} \PYG{o}{==} \PYG{n}{N}\PYG{p}{)} \PYG{k}{return} \PYG{p}{\PYGZob{}\PYGZcb{};}
           \PYG{n}{dist}\PYG{p}{[}\PYG{n}{v}\PYG{p}{]} \PYG{o}{=} \PYG{n}{dist}\PYG{p}{[}\PYG{n}{u}\PYG{p}{]} \PYG{o}{+} \PYG{n}{w}\PYG{p}{;}
         \PYG{p}{\PYGZcb{}}
       \PYG{p}{\PYGZcb{}}

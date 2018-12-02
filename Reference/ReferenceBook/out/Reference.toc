@@ -22,13 +22,17 @@
 \contentsline {subsubsection}{\numberline {1.2.5}Sort List Of Object}{4}{subsubsection.1.2.5}
 \contentsline {subsubsection}{\numberline {1.2.6}Sort List}{5}{subsubsection.1.2.6}
 \contentsline {section}{\numberline {2}Data Structures}{5}{section.2}
-\contentsline {subsection}{\numberline {2.1}BIT}{5}{subsection.2.1}
-\contentsline {subsection}{\numberline {2.2}Interval Tree}{5}{subsection.2.2}
-\contentsline {subsection}{\numberline {2.3}Segment Tree}{5}{subsection.2.3}
-\contentsline {subsection}{\numberline {2.4}Sparse Table}{5}{subsection.2.4}
-\contentsline {subsection}{\numberline {2.5}Trie}{6}{subsection.2.5}
-\contentsline {subsection}{\numberline {2.6}UnionFind}{7}{subsection.2.6}
-\contentsline {subsection}{\numberline {2.7}try}{7}{subsection.2.7}
+\contentsline {subsection}{\numberline {2.1}Graphs}{5}{subsection.2.1}
+\contentsline {subsubsection}{\numberline {2.1.1}UnionFind}{5}{subsubsection.2.1.1}
+\contentsline {subsection}{\numberline {2.2}Ranges}{5}{subsection.2.2}
+\contentsline {subsubsection}{\numberline {2.2.1}BIT}{5}{subsubsection.2.2.1}
+\contentsline {subsubsection}{\numberline {2.2.2}Interval Tree}{5}{subsubsection.2.2.2}
+\contentsline {subsubsection}{\numberline {2.2.3}Segment Tree}{5}{subsubsection.2.2.3}
+\contentsline {subsubsection}{\numberline {2.2.4}Sparse Table}{5}{subsubsection.2.2.4}
+\contentsline {subsection}{\numberline {2.3}Strings}{6}{subsection.2.3}
+\contentsline {subsubsection}{\numberline {2.3.1}Trie}{6}{subsubsection.2.3.1}
+\contentsline {subsection}{\numberline {2.4}Trees}{7}{subsection.2.4}
+\contentsline {subsubsection}{\numberline {2.4.1}Treap}{7}{subsubsection.2.4.1}
 \contentsline {section}{\numberline {3}Geometry}{7}{section.3}
 \contentsline {section}{\numberline {4}Graphs}{7}{section.4}
 \contentsline {subsection}{\numberline {4.1}Articulation Points And Bridges}{7}{subsection.4.1}
@@ -56,12 +60,12 @@
 \contentsline {subsubsection}{\numberline {5.2.4}LCM}{12}{subsubsection.5.2.4}
 \contentsline {subsubsection}{\numberline {5.2.5}Prime Check Miller Rabin}{12}{subsubsection.5.2.5}
 \contentsline {subsubsection}{\numberline {5.2.6}Prime Sieve}{12}{subsubsection.5.2.6}
-\contentsline {subsection}{\numberline {5.3}Probability}{13}{subsection.5.3}
-\contentsline {subsubsection}{\numberline {5.3.1}Combinations}{13}{subsubsection.5.3.1}
-\contentsline {subsubsection}{\numberline {5.3.2}Permutations}{13}{subsubsection.5.3.2}
-\contentsline {section}{\numberline {6}Rare Topics}{13}{section.6}
-\contentsline {section}{\numberline {7}Strings}{13}{section.7}
-\contentsline {subsection}{\numberline {7.1}KMP}{13}{subsection.7.1}
+\contentsline {subsection}{\numberline {5.3}Probability}{12}{subsection.5.3}
+\contentsline {subsubsection}{\numberline {5.3.1}Combinations}{12}{subsubsection.5.3.1}
+\contentsline {subsubsection}{\numberline {5.3.2}Permutations}{12}{subsubsection.5.3.2}
+\contentsline {section}{\numberline {6}Rare Topics}{12}{section.6}
+\contentsline {section}{\numberline {7}Strings}{12}{section.7}
+\contentsline {subsection}{\numberline {7.1}KMP}{12}{subsection.7.1}
 \contentsline {subsection}{\numberline {7.2}Rabin Karp}{13}{subsection.7.2}
 \contentsline {section}{\numberline {8}Techniques}{13}{section.8}
 \contentsline {subsection}{\numberline {8.1}Binary Search}{13}{subsection.8.1}

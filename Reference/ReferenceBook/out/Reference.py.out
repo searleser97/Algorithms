@@ -78,34 +78,38 @@
 \subsubsectionfont{\sffamily}
 \inputminted{py}{"/home/san/grive/Algorithms/Reference/Coding Resources/Python/Sort List.py"}
 \section{Data Structures}
-\subsectionfont{\sffamily\underline}
-\subsection{BIT}
-\subsectionfont{\sffamily}
-\inputminted{cpp}{"/home/san/grive/Algorithms/Reference/Data Structures/BIT.cpp"}
-\subsectionfont{\sffamily\underline}
-\subsection{Interval Tree}
-\subsectionfont{\sffamily}
-\inputminted{cpp}{"/home/san/grive/Algorithms/Reference/Data Structures/Interval Tree.cpp"}
-\subsectionfont{\sffamily\underline}
-\subsection{Segment Tree}
-\subsectionfont{\sffamily}
-\inputminted{cpp}{"/home/san/grive/Algorithms/Reference/Data Structures/Segment Tree.cpp"}
-\subsectionfont{\sffamily\underline}
-\subsection{Sparse Table}
-\subsectionfont{\sffamily}
-\inputminted{cpp}{"/home/san/grive/Algorithms/Reference/Data Structures/Sparse Table.cpp"}
-\subsectionfont{\sffamily\underline}
-\subsection{Trie}
-\subsectionfont{\sffamily}
-\inputminted{cpp}{"/home/san/grive/Algorithms/Reference/Data Structures/Trie.cpp"}
-\subsectionfont{\sffamily\underline}
-\subsection{UnionFind}
-\subsectionfont{\sffamily}
-\inputminted{cpp}{"/home/san/grive/Algorithms/Reference/Data Structures/UnionFind.cpp"}
-\subsectionfont{\sffamily\underline}
-\subsection{try}
-\subsectionfont{\sffamily}
-\inputminted{cpp}{"/home/san/grive/Algorithms/Reference/Data Structures/try.cpp"}
+\subsection{Graphs}
+\subsubsectionfont{\sffamily\underline}
+\subsubsection{UnionFind}
+\subsubsectionfont{\sffamily}
+\inputminted{cpp}{"/home/san/grive/Algorithms/Reference/Data Structures/Graphs/UnionFind.cpp"}
+\subsection{Ranges}
+\subsubsectionfont{\sffamily\underline}
+\subsubsection{BIT}
+\subsubsectionfont{\sffamily}
+\inputminted{cpp}{"/home/san/grive/Algorithms/Reference/Data Structures/Ranges/BIT.cpp"}
+\subsubsectionfont{\sffamily\underline}
+\subsubsection{Interval Tree}
+\subsubsectionfont{\sffamily}
+\inputminted{cpp}{"/home/san/grive/Algorithms/Reference/Data Structures/Ranges/Interval Tree.cpp"}
+\subsubsectionfont{\sffamily\underline}
+\subsubsection{Segment Tree}
+\subsubsectionfont{\sffamily}
+\inputminted{cpp}{"/home/san/grive/Algorithms/Reference/Data Structures/Ranges/Segment Tree.cpp"}
+\subsubsectionfont{\sffamily\underline}
+\subsubsection{Sparse Table}
+\subsubsectionfont{\sffamily}
+\inputminted{cpp}{"/home/san/grive/Algorithms/Reference/Data Structures/Ranges/Sparse Table.cpp"}
+\subsection{Strings}
+\subsubsectionfont{\sffamily\underline}
+\subsubsection{Trie}
+\subsubsectionfont{\sffamily}
+\inputminted{cpp}{"/home/san/grive/Algorithms/Reference/Data Structures/Strings/Trie.cpp"}
+\subsection{Trees}
+\subsubsectionfont{\sffamily\underline}
+\subsubsection{Treap}
+\subsubsectionfont{\sffamily}
+\inputminted{cpp}{"/home/san/grive/Algorithms/Reference/Data Structures/Trees/Treap.cpp"}
 \section{Geometry}
 \section{Graphs}
 \subsectionfont{\sffamily\underline}
