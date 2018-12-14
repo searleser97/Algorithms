@@ -1,3 +1,3 @@
 BasedOnStyle: Google
 AllowShortFunctionsOnASingleLine: None
-ColumnLimit : 50
+ColumnLimit : 1000

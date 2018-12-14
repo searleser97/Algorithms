@@ -1,0 +1,51 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{// st = segment tree. st[1] = root;}
+\PYG{c+c1}{// neutro = operation neutral value}
+\PYG{c+c1}{// e.g. for sum is 0, for multiplication}
+\PYG{c+c1}{// is 1, for gcd is 0, for min is INF, etc.}
+\PYG{k+kt}{int} \PYG{n}{MAXN} \PYG{o}{=} \PYG{l+m+mi}{500000}\PYG{p}{,} \PYG{n}{N}\PYG{p}{;}
+\PYG{n}{vector}\PYG{o}{\PYGZlt{}}\PYG{k+kt}{int}\PYG{o}{\PYGZgt{}} \PYG{n}{st}\PYG{p}{,} \PYG{n}{arr}\PYG{p}{;}
+\PYG{k}{typedef} \PYG{k+kt}{int} \PYG{n}{T}\PYG{p}{;}
+\PYG{k}{const} \PYG{n}{T} \PYG{n}{neutro} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{;}
+
+\PYG{k+kt}{void} \PYG{n+nf}{initVars}\PYG{p}{()} \PYG{p}{\PYGZob{}}
+  \PYG{n}{st} \PYG{o}{=} \PYG{n}{vector}\PYG{o}{\PYGZlt{}}\PYG{k+kt}{int}\PYG{o}{\PYGZgt{}}\PYG{p}{(}\PYG{l+m+mi}{2} \PYG{o}{*} \PYG{n}{MAXN}\PYG{p}{,} \PYG{n}{neutro}\PYG{p}{);}
+\PYG{p}{\PYGZcb{}}
+
+\PYG{k}{const} \PYG{n}{T} \PYG{n+nf}{F}\PYG{p}{(}\PYG{n}{T} \PYG{n}{a}\PYG{p}{,} \PYG{n}{T} \PYG{n}{b}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+  \PYG{c+c1}{// return a + b;}
+  \PYG{k}{return} \PYG{n}{\PYGZus{}\PYGZus{}gcd}\PYG{p}{(}\PYG{n}{a}\PYG{p}{,} \PYG{n}{b}\PYG{p}{);}
+  \PYG{c+c1}{// return a * b;}
+  \PYG{c+c1}{// return min(a, b);}
+\PYG{p}{\PYGZcb{}}
+
+\PYG{c+c1}{// O(2N)}
+\PYG{k+kt}{int} \PYG{n+nf}{build}\PYG{p}{()} \PYG{p}{\PYGZob{}}
+  \PYG{n}{copy}\PYG{p}{(}\PYG{n}{arr}\PYG{p}{.}\PYG{n}{begin}\PYG{p}{(),} \PYG{n}{arr}\PYG{p}{.}\PYG{n}{end}\PYG{p}{(),} \PYG{n}{st}\PYG{p}{.}\PYG{n}{begin}\PYG{p}{()} \PYG{o}{+} \PYG{n}{N}\PYG{p}{);}
+  \PYG{k}{for} \PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{i} \PYG{o}{=} \PYG{n}{N} \PYG{o}{\PYGZhy{}} \PYG{l+m+mi}{1}\PYG{p}{;} \PYG{n}{i} \PYG{o}{\PYGZgt{}} \PYG{l+m+mi}{0}\PYG{p}{;} \PYG{n}{i}\PYG{o}{\PYGZhy{}\PYGZhy{}}\PYG{p}{)}
+    \PYG{n}{st}\PYG{p}{[}\PYG{n}{i}\PYG{p}{]} \PYG{o}{=} \PYG{n}{F}\PYG{p}{(}\PYG{n}{st}\PYG{p}{[}\PYG{n}{i} \PYG{o}{\PYGZlt{}\PYGZlt{}} \PYG{l+m+mi}{1}\PYG{p}{],} \PYG{n}{st}\PYG{p}{[}\PYG{n}{i} \PYG{o}{\PYGZlt{}\PYGZlt{}} \PYG{l+m+mi}{1} \PYG{o}{|} \PYG{l+m+mi}{1}\PYG{p}{]);}
+\PYG{p}{\PYGZcb{}}
+
+\PYG{c+c1}{// O(lg(2N))}
+\PYG{k+kt}{void} \PYG{n+nf}{updateNode}\PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{i}\PYG{p}{,} \PYG{n}{T} \PYG{n}{val}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+  \PYG{k}{for} \PYG{p}{(}\PYG{n}{st}\PYG{p}{[}\PYG{n}{i} \PYG{o}{+=} \PYG{n}{N}\PYG{p}{]} \PYG{o}{=} \PYG{n}{val}\PYG{p}{;} \PYG{n}{i} \PYG{o}{\PYGZgt{}} \PYG{l+m+mi}{1}\PYG{p}{;} \PYG{n}{i} \PYG{o}{\PYGZgt{}\PYGZgt{}=} \PYG{l+m+mi}{1}\PYG{p}{)}
+    \PYG{n}{st}\PYG{p}{[}\PYG{n}{i} \PYG{o}{\PYGZgt{}\PYGZgt{}} \PYG{l+m+mi}{1}\PYG{p}{]} \PYG{o}{=} \PYG{n}{F}\PYG{p}{(}\PYG{n}{st}\PYG{p}{[}\PYG{n}{i}\PYG{p}{],} \PYG{n}{st}\PYG{p}{[}\PYG{n}{i} \PYG{o}{\PYGZca{}} \PYG{l+m+mi}{1}\PYG{p}{]);}
+\PYG{p}{\PYGZcb{}}
+
+\PYG{c+c1}{// O(3N), [l, r)}
+\PYG{k+kt}{void} \PYG{n+nf}{updateRange}\PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{l}\PYG{p}{,} \PYG{k+kt}{int} \PYG{n}{r}\PYG{p}{,} \PYG{n}{T} \PYG{n}{val}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+  \PYG{k}{for} \PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{i} \PYG{o}{=} \PYG{n}{l}\PYG{p}{;} \PYG{n}{i} \PYG{o}{\PYGZlt{}} \PYG{n}{r}\PYG{p}{;} \PYG{n}{i}\PYG{o}{++}\PYG{p}{)}
+    \PYG{n}{arr}\PYG{p}{[}\PYG{n}{i}\PYG{p}{]} \PYG{o}{=} \PYG{n}{val}\PYG{p}{;}
+  \PYG{n}{build}\PYG{p}{();}
+\PYG{p}{\PYGZcb{}}
+
+\PYG{c+c1}{// O(lg(2N)), [l, r)}
+\PYG{n}{T} \PYG{n+nf}{query}\PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{l}\PYG{p}{,} \PYG{k+kt}{int} \PYG{n}{r}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+  \PYG{k+kt}{int} \PYG{n}{ans} \PYG{o}{=} \PYG{n}{neutro}\PYG{p}{;}
+  \PYG{k}{for} \PYG{p}{(}\PYG{n}{l} \PYG{o}{+=} \PYG{n}{N}\PYG{p}{,} \PYG{n}{r} \PYG{o}{+=} \PYG{n}{N}\PYG{p}{;} \PYG{n}{l} \PYG{o}{\PYGZlt{}} \PYG{n}{r}\PYG{p}{;} \PYG{n}{l} \PYG{o}{\PYGZgt{}\PYGZgt{}=} \PYG{l+m+mi}{1}\PYG{p}{,} \PYG{n}{r} \PYG{o}{\PYGZgt{}\PYGZgt{}=} \PYG{l+m+mi}{1}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+    \PYG{k}{if} \PYG{p}{(}\PYG{n}{l} \PYG{o}{\PYGZam{}} \PYG{l+m+mi}{1}\PYG{p}{)} \PYG{n}{ans} \PYG{o}{=} \PYG{n}{F}\PYG{p}{(}\PYG{n}{ans}\PYG{p}{,} \PYG{n}{st}\PYG{p}{[}\PYG{n}{l}\PYG{o}{++}\PYG{p}{]);}
+    \PYG{k}{if} \PYG{p}{(}\PYG{n}{r} \PYG{o}{\PYGZam{}} \PYG{l+m+mi}{1}\PYG{p}{)} \PYG{n}{ans} \PYG{o}{=} \PYG{n}{F}\PYG{p}{(}\PYG{n}{ans}\PYG{p}{,} \PYG{n}{st}\PYG{p}{[}\PYG{o}{\PYGZhy{}\PYGZhy{}}\PYG{n}{r}\PYG{p}{]);}
+  \PYG{p}{\PYGZcb{}}
+  \PYG{k}{return} \PYG{n}{ans}\PYG{p}{;}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

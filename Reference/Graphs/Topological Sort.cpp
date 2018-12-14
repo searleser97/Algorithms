@@ -1,8 +1,14 @@
-int n;                    // max node id >= 0
-vector<vector<int>> ady;  // ady.resize(n)
-vector<int> vis;          // vis.resize(n)
-vector<int> toposorted;
+// vis = visited
+vector<vector<int>> ady;
+vector<int> vis, toposorted;
 
+void initVars(int N) {
+  ady.assign(N, vector<int>());
+  vis.assign(N, 0);
+  toposorted.clear();
+}
+
+// returns false if there is a cycle
 bool toposort(int u) {
   vis[u] = 1;
   for (auto &v : ady[u]) {
@@ -17,7 +23,7 @@ bool toposort(int u) {
 // O(N)
 bool toposort() {
   vis.clear();
-  for (int u = 0; u < n; u++)
+  for (int u = 0; u < ady.size(); u++)
     if (!vis[u])
       if (!toposort(u)) return false;
   return true;

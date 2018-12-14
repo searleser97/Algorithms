@@ -1,15 +1,16 @@
 // comp = component
-int MAXN = 26, N, compId = 1;
+int MAXN = 26, N, compId = 0;
 vector<vector<int>> ady;
 vector<int> getComp;
 
-void initVars() {
-  ady = vector<vector<int>>(MAXN, vector<int>());
-  getComp = vector<int>(MAXN);
+void initVars(int N) {
+  ady.assign(N, vector<int>());
+  getComp.assign(N, -1);
+  compId = 0;
 }
 
 void dfsCC(int u, vector<int> &comp) {
-  if (getComp[u]) return;
+  if (getComp[u] > -1) return;
   getComp[u] = compId;
   comp.push_back(u);
   for (auto &v : ady[u]) dfsCC(v, comp);
@@ -21,8 +22,7 @@ vector<vector<int>> connectedComponents() {
   for (int u = 0; u < N; u++) {
     vector<int> comp;
     dfsCC(u, comp);
-    compId++;
-    if (!comp.empty()) comps.push_back(comp);
+    if (!comp.empty()) comps.push_back(comp), compId++;
   }
   return comps;
 }

@@ -1,0 +1,5 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{typedef} \PYG{n}{TYPE} \PYG{n}{ALIAS}
+\PYG{c+c1}{// e.g.}
+\PYG{k}{typedef} \PYG{k+kt}{int} \PYG{n}{T}\PYG{p}{;}
+\end{Verbatim}

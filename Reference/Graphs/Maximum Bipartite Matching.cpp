@@ -6,10 +6,10 @@ void addEdge(int u, int v) {
 }
 
 int main() {
-  initVars();
-  int m, s = 0, t = 1;
-  cin >> m;
-  while (m--) {
+  int n, s = 0, t = 1;
+  cin >> n;
+  initVars(n);
+  while (n--) {
     int u, v;
     cin >> u >> v;
     addEdge(u += 2, v += 2);

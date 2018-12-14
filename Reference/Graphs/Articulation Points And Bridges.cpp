@@ -7,13 +7,13 @@
 // ch = children
 
 typedef pair<int, int> Edge;
-int MAXN = 101, N = 7, Time;
+int MAXN = 101, Time;
 vector<vector<int>> ady;
 vector<int> disc, low, ap;
 vector<Edge> br;
 
-void initVars() {
-  ady = vector<vector<int>>(MAXN, vector<int>());
+void initVars(int N) {
+  ady.assign(N, vector<int>());
 }
 
 int dfsAPB(int u, int p) {
@@ -36,7 +36,7 @@ int dfsAPB(int u, int p) {
 // O(N)
 void APB() {
   br.clear();
-  ap = low = disc = vector<int>(MAXN);
+  ap = low = disc = vector<int>(ady.size());
   Time = 0;
   for (int u = 0; u < N; u++)
     if (!disc[u]) ap[u] = dfsAPB(u, u) > 1;

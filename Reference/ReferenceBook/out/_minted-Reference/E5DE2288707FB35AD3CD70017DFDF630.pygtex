@@ -1,0 +1,17 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{typedef} \PYG{n}{string} \PYG{n}{Key}\PYG{p}{;}
+\PYG{n}{unordered\PYGZus{}map}\PYG{o}{\PYGZlt{}}\PYG{n}{Key}\PYG{p}{,} \PYG{k+kt}{int}\PYG{o}{\PYGZgt{}} \PYG{n}{val}\PYG{p}{;}
+\PYG{n}{unordered\PYGZus{}map}\PYG{o}{\PYGZlt{}}\PYG{k+kt}{int}\PYG{p}{,} \PYG{n}{Key}\PYG{o}{\PYGZgt{}} \PYG{n}{getKey}\PYG{p}{;}
+\PYG{k+kt}{int} \PYG{n}{mapId} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{;}
+
+\PYG{k+kt}{int} \PYG{n+nf}{Map}\PYG{p}{(}\PYG{n}{Key} \PYG{n}{key}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+  \PYG{n}{getKey}\PYG{p}{[}\PYG{n}{mapId}\PYG{p}{]} \PYG{o}{=} \PYG{n}{key}\PYG{p}{;}
+  \PYG{k}{return} \PYG{n}{val}\PYG{p}{.}\PYG{n}{count}\PYG{p}{(}\PYG{n}{key}\PYG{p}{)} \PYG{o}{?} \PYG{n}{val}\PYG{p}{[}\PYG{n}{key}\PYG{p}{]}
+                        \PYG{o}{:} \PYG{n}{val}\PYG{p}{[}\PYG{n}{key}\PYG{p}{]} \PYG{o}{=} \PYG{n}{mapId}\PYG{o}{++}\PYG{p}{;}
+\PYG{p}{\PYGZcb{}}
+
+\PYG{k+kt}{void} \PYG{n+nf}{initMapping}\PYG{p}{()} \PYG{p}{\PYGZob{}}
+  \PYG{n}{mapId} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{;}
+  \PYG{n}{val}\PYG{p}{.}\PYG{n}{clear}\PYG{p}{();}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}
