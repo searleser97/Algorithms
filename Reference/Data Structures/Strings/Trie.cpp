@@ -5,7 +5,7 @@
 struct Trie {
   struct Node {
     // for lexicographical order use 'map'
-    // map<char, Node *> ch; 
+    // map<char, Node *> ch;
     unordered_map<char, Node *> ch;
     int w = 0, wpt = 0;
   };
@@ -17,8 +17,7 @@ struct Trie {
     Node *curr = root;
     for (auto &c : str) {
       curr->wpt++;
-      if (!curr->ch.count(c))
-        curr->ch[c] = new Node();
+      if (!curr->ch.count(c)) curr->ch[c] = new Node();
       curr = curr->ch[c];
     }
     curr->wpt++;
@@ -45,8 +44,7 @@ struct Trie {
     return node ? node->w : 0;
   }
 
-  void getWords(Node *curr, vector<string> &words,
-                string &word) {
+  void getWords(Node *curr, vector<string> &words, string &word) {
     if (!curr) return;
     if (curr->w) words.push_back(word);
     for (auto &c : curr->ch) {
@@ -69,7 +67,6 @@ struct Trie {
     getWords(find(prefix), words, prefix);
   }
 
-  // O(N)
   bool remove(Node *curr, string &str, int &i) {
     if (i == str.size()) {
       curr->wpt--;
@@ -78,13 +75,13 @@ struct Trie {
     int c = str[i];
     if (!curr->ch.count(c)) return false;
     if (remove(curr->ch[c], str, ++i)) {
-      if (!curr->ch[c]->wpt)
-        curr->wpt--, curr->ch.erase(c);
+      if (!curr->ch[c]->wpt) curr->wpt--, curr->ch.erase(c);
       return true;
     }
     return false;
   }
 
+  // O(STR.SIZE)
   int remove(string str) {
     int i = 0;
     return remove(root, str, i);

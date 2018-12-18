@@ -6,7 +6,7 @@
 \PYG{k}{struct} \PYG{n}{Trie} \PYG{p}{\PYGZob{}}
   \PYG{k}{struct} \PYG{n}{Node} \PYG{p}{\PYGZob{}}
     \PYG{c+c1}{// for lexicographical order use \PYGZsq{}map\PYGZsq{}}
-    \PYG{c+c1}{// map\PYGZlt{}char, Node *\PYGZgt{} ch; }
+    \PYG{c+c1}{// map\PYGZlt{}char, Node *\PYGZgt{} ch;}
     \PYG{n}{unordered\PYGZus{}map}\PYG{o}{\PYGZlt{}}\PYG{k+kt}{char}\PYG{p}{,} \PYG{n}{Node} \PYG{o}{*\PYGZgt{}} \PYG{n}{ch}\PYG{p}{;}
     \PYG{k+kt}{int} \PYG{n}{w} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{,} \PYG{n}{wpt} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{;}
   \PYG{p}{\PYGZcb{};}
@@ -18,8 +18,7 @@
     \PYG{n}{Node} \PYG{o}{*}\PYG{n}{curr} \PYG{o}{=} \PYG{n}{root}\PYG{p}{;}
     \PYG{k}{for} \PYG{p}{(}\PYG{k}{auto} \PYG{o}{\PYGZam{}}\PYG{n+nl}{c} \PYG{p}{:} \PYG{n}{str}\PYG{p}{)} \PYG{p}{\PYGZob{}}
       \PYG{n}{curr}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{wpt}\PYG{o}{++}\PYG{p}{;}
-      \PYG{k}{if} \PYG{p}{(}\PYG{o}{!}\PYG{n}{curr}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{ch}\PYG{p}{.}\PYG{n}{count}\PYG{p}{(}\PYG{n}{c}\PYG{p}{))}
-        \PYG{n}{curr}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{ch}\PYG{p}{[}\PYG{n}{c}\PYG{p}{]} \PYG{o}{=} \PYG{k}{new} \PYG{n}{Node}\PYG{p}{();}
+      \PYG{k}{if} \PYG{p}{(}\PYG{o}{!}\PYG{n}{curr}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{ch}\PYG{p}{.}\PYG{n}{count}\PYG{p}{(}\PYG{n}{c}\PYG{p}{))} \PYG{n}{curr}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{ch}\PYG{p}{[}\PYG{n}{c}\PYG{p}{]} \PYG{o}{=} \PYG{k}{new} \PYG{n}{Node}\PYG{p}{();}
       \PYG{n}{curr} \PYG{o}{=} \PYG{n}{curr}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{ch}\PYG{p}{[}\PYG{n}{c}\PYG{p}{];}
     \PYG{p}{\PYGZcb{}}
     \PYG{n}{curr}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{wpt}\PYG{o}{++}\PYG{p}{;}
@@ -46,8 +45,7 @@
     \PYG{k}{return} \PYG{n}{node} \PYG{o}{?} \PYG{n}{node}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n+nl}{w} \PYG{p}{:} \PYG{l+m+mi}{0}\PYG{p}{;}
   \PYG{p}{\PYGZcb{}}
 
-  \PYG{k+kt}{void} \PYG{n+nf}{getWords}\PYG{p}{(}\PYG{n}{Node} \PYG{o}{*}\PYG{n}{curr}\PYG{p}{,} \PYG{n}{vector}\PYG{o}{\PYGZlt{}}\PYG{n}{string}\PYG{o}{\PYGZgt{}} \PYG{o}{\PYGZam{}}\PYG{n}{words}\PYG{p}{,}
-                \PYG{n}{string} \PYG{o}{\PYGZam{}}\PYG{n}{word}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+  \PYG{k+kt}{void} \PYG{n+nf}{getWords}\PYG{p}{(}\PYG{n}{Node} \PYG{o}{*}\PYG{n}{curr}\PYG{p}{,} \PYG{n}{vector}\PYG{o}{\PYGZlt{}}\PYG{n}{string}\PYG{o}{\PYGZgt{}} \PYG{o}{\PYGZam{}}\PYG{n}{words}\PYG{p}{,} \PYG{n}{string} \PYG{o}{\PYGZam{}}\PYG{n}{word}\PYG{p}{)} \PYG{p}{\PYGZob{}}
     \PYG{k}{if} \PYG{p}{(}\PYG{o}{!}\PYG{n}{curr}\PYG{p}{)} \PYG{k}{return}\PYG{p}{;}
     \PYG{k}{if} \PYG{p}{(}\PYG{n}{curr}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{w}\PYG{p}{)} \PYG{n}{words}\PYG{p}{.}\PYG{n}{push\PYGZus{}back}\PYG{p}{(}\PYG{n}{word}\PYG{p}{);}
     \PYG{k}{for} \PYG{p}{(}\PYG{k}{auto} \PYG{o}{\PYGZam{}}\PYG{n+nl}{c} \PYG{p}{:} \PYG{n}{curr}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{ch}\PYG{p}{)} \PYG{p}{\PYGZob{}}
@@ -70,7 +68,6 @@
     \PYG{n}{getWords}\PYG{p}{(}\PYG{n}{find}\PYG{p}{(}\PYG{n}{prefix}\PYG{p}{),} \PYG{n}{words}\PYG{p}{,} \PYG{n}{prefix}\PYG{p}{);}
   \PYG{p}{\PYGZcb{}}
 
-  \PYG{c+c1}{// O(N)}
   \PYG{k+kt}{bool} \PYG{n}{remove}\PYG{p}{(}\PYG{n}{Node} \PYG{o}{*}\PYG{n}{curr}\PYG{p}{,} \PYG{n}{string} \PYG{o}{\PYGZam{}}\PYG{n}{str}\PYG{p}{,} \PYG{k+kt}{int} \PYG{o}{\PYGZam{}}\PYG{n}{i}\PYG{p}{)} \PYG{p}{\PYGZob{}}
     \PYG{k}{if} \PYG{p}{(}\PYG{n}{i} \PYG{o}{==} \PYG{n}{str}\PYG{p}{.}\PYG{n}{size}\PYG{p}{())} \PYG{p}{\PYGZob{}}
       \PYG{n}{curr}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{wpt}\PYG{o}{\PYGZhy{}\PYGZhy{}}\PYG{p}{;}
@@ -79,13 +76,13 @@
     \PYG{k+kt}{int} \PYG{n}{c} \PYG{o}{=} \PYG{n}{str}\PYG{p}{[}\PYG{n}{i}\PYG{p}{];}
     \PYG{k}{if} \PYG{p}{(}\PYG{o}{!}\PYG{n}{curr}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{ch}\PYG{p}{.}\PYG{n}{count}\PYG{p}{(}\PYG{n}{c}\PYG{p}{))} \PYG{k}{return} \PYG{n+nb}{false}\PYG{p}{;}
     \PYG{k}{if} \PYG{p}{(}\PYG{n}{remove}\PYG{p}{(}\PYG{n}{curr}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{ch}\PYG{p}{[}\PYG{n}{c}\PYG{p}{],} \PYG{n}{str}\PYG{p}{,} \PYG{o}{++}\PYG{n}{i}\PYG{p}{))} \PYG{p}{\PYGZob{}}
-      \PYG{k}{if} \PYG{p}{(}\PYG{o}{!}\PYG{n}{curr}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{ch}\PYG{p}{[}\PYG{n}{c}\PYG{p}{]}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{wpt}\PYG{p}{)}
-        \PYG{n}{curr}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{wpt}\PYG{o}{\PYGZhy{}\PYGZhy{}}\PYG{p}{,} \PYG{n}{curr}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{ch}\PYG{p}{.}\PYG{n}{erase}\PYG{p}{(}\PYG{n}{c}\PYG{p}{);}
+      \PYG{k}{if} \PYG{p}{(}\PYG{o}{!}\PYG{n}{curr}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{ch}\PYG{p}{[}\PYG{n}{c}\PYG{p}{]}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{wpt}\PYG{p}{)} \PYG{n}{curr}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{wpt}\PYG{o}{\PYGZhy{}\PYGZhy{}}\PYG{p}{,} \PYG{n}{curr}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{ch}\PYG{p}{.}\PYG{n}{erase}\PYG{p}{(}\PYG{n}{c}\PYG{p}{);}
       \PYG{k}{return} \PYG{n+nb}{true}\PYG{p}{;}
     \PYG{p}{\PYGZcb{}}
     \PYG{k}{return} \PYG{n+nb}{false}\PYG{p}{;}
   \PYG{p}{\PYGZcb{}}
 
+  \PYG{c+c1}{// O(STR.SIZE)}
   \PYG{k+kt}{int} \PYG{n}{remove}\PYG{p}{(}\PYG{n}{string} \PYG{n}{str}\PYG{p}{)} \PYG{p}{\PYGZob{}}
     \PYG{k+kt}{int} \PYG{n}{i} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{;}
     \PYG{k}{return} \PYG{n+nf}{remove}\PYG{p}{(}\PYG{n}{root}\PYG{p}{,} \PYG{n}{str}\PYG{p}{,} \PYG{n}{i}\PYG{p}{);}

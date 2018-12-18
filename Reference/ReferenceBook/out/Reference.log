@@ -1,4 +1,4 @@
-This is LuaTeX, Version 1.09.0 (MiKTeX 2.9.6880)  (format=lualatex 2018.12.9)  14 DEC 2018 08:45
+This is LuaTeX, Version 1.09.0 (MiKTeX 2.9.6880)  (format=lualatex 2018.12.9)  17 DEC 2018 22:35
  system commands enabled.
  file:line:error style messages enabled.
 **Reference.tex
@@ -49,7 +49,7 @@ Inserting `luaotfload.aux.set_capheight' at position 3 in `luaotfload.patch_font
 '.
 Inserting `luaotfload.rewrite_fontname' at position 4 in `luaotfload.patch_font'
 .
-luaotfload | main : initialization completed in 0.199 seconds
+luaotfload | main : initialization completed in 0.160 seconds
 (/home/san/.miktex/texmfs/install/tex/latex/base/article.cls
 Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
 (/home/san/.miktex/texmfs/install/tex/latex/base/size10.clo
@@ -760,10 +760,10 @@ guage 'english'. Reported on input line 14.
 (./_minted-Reference/ACA11AE38EBC873C27E2CD69BAC6ABD6.pygtex
 Package babel Info: No hyphenation patterns were set for
 (babel)             lan
-guage 'english'. Reported on input line 56.
+guage 'english'. Reported on input line 54.
 Package babel Info: No hyphenation patterns were set for
 (babel)             lan
-guage 'english'. Reported on input line 56.
+guage 'english'. Reported on input line 54.
  [6])
 (./_minted-Reference/E1754F672C4BD028D895C730019A3D69.pygtex)
 (./_minted-Reference/1DBE508D0C15EED3D6B42834B5B20039.pygtex)
@@ -787,61 +787,68 @@ guage 'english'. Reported on input line 23.
  [8])
 (./_minted-Reference/E70EBB3BD077769601651EDBA62CC377.pygtex)
 (./_minted-Reference/8822DB0D721FCAB2EB727450B469FA49.pygtex)
-(./_minted-Reference/DCB14D28EC8504ABBE1BE9BBE3D269D1.pygtex
-Package babel Info: No hyphenation patterns were set for
-(babel)             lan
-guage 'english'. Reported on input line 19.
-Package babel Info: No hyphenation patterns were set for
-(babel)             lan
-guage 'english'. Reported on input line 19.
- [9])
 (./_minted-Reference/91F3DFA12ABDCA07A2AC0D736B4842BA.pygtex)
+(./_minted-Reference/EA9808DE412F8A0683AFEBAEB715EDA1.pygtex
+Package babel Info: No hyphenation patterns were set for
+(babel)             lan
+guage 'english'. Reported on input line 11.
+Package babel Info: No hyphenation patterns were set for
+(babel)             lan
+guage 'english'. Reported on input line 11.
+ [9])
+(./_minted-Reference/6D6E1AC76A10CA7E51A6F83EA5C65636.pygtex
+Package babel Info: No hyphenation patterns were set for
+(babel)             lan
+guage 'english'. Reported on input line 71.
+Package babel Info: No hyphenation patterns were set for
+(babel)             lan
+guage 'english'. Reported on input line 71.
+ [10])
 (./_minted-Reference/0A669FB4403684FAAF4077B67D3C05A6.pygtex)
 (./_minted-Reference/FD6EAE96AE9EF9F9FB29DC6329435519.pygtex)
-(./_minted-Reference/BC706A6DCD2319CCE8F93184415229C1.pygtex)
-(./_minted-Reference/B4F17D9F4E331FF82C630FB6EDF8A139.pygtex
+(./_minted-Reference/BC706A6DCD2319CCE8F93184415229C1.pygtex
 Package babel Info: No hyphenation patterns were set for
 (babel)             lan
-guage 'english'. Reported on input line 5.
+guage 'english'. Reported on input line 33.
 Package babel Info: No hyphenation patterns were set for
 (babel)             lan
-guage 'english'. Reported on input line 5.
- [10])
+guage 'english'. Reported on input line 33.
+ [11])
+(./_minted-Reference/B4F17D9F4E331FF82C630FB6EDF8A139.pygtex)
 (./_minted-Reference/2D538D894A090650D0A22C4EE6B46E94.pygtex)
 (./_minted-Reference/516D5A676B8924F630CC7A756AB82AFF.pygtex
 Package babel Info: No hyphenation patterns were set for
 (babel)             lan
-guage 'english'. Reported on input line 35.
+guage 'english'. Reported on input line 10.
 Package babel Info: No hyphenation patterns were set for
 (babel)             lan
-guage 'english'. Reported on input line 35.
- [11])
+guage 'english'. Reported on input line 10.
+ [12])
 (./_minted-Reference/BE93A1B8CB2ACF5053D1A7392665CFDA.pygtex)
 (./_minted-Reference/AC5AA1ED82FE25BE8580F3798AAA5FEA.pygtex)
 (./_minted-Reference/B3E11EFAC5C4D15C28E16764D38DA4FF.pygtex)
 (./_minted-Reference/8589EDCA71BD0A34ED7C1AA305E1D386.pygtex)
-(./_minted-Reference/077DC3BF90CE98175EA165BC29DA5811.pygtex)
-(./_minted-Reference/9C91CBCCB8E8272B6AB5099BD493262A.pygtex
+(./_minted-Reference/077DC3BF90CE98175EA165BC29DA5811.pygtex
 Package babel Info: No hyphenation patterns were set for
 (babel)             lan
-guage 'english'. Reported on input line 21.
- [12])
+guage 'english'. Reported on input line 8.
+Package babel Info: No hyphenation patterns were set for
+(babel)             lan
+guage 'english'. Reported on input line 8.
+ [13])
+(./_minted-Reference/9C91CBCCB8E8272B6AB5099BD493262A.pygtex)
 (./_minted-Reference/69A7A905BA057968DA4453724E1E6AC6.pygtex)
 (./_minted-Reference/980FEF041704DC0929C6D8DBF9775273.pygtex)
 (./_minted-Reference/F7DC5969B5A04537B8D075B898EFEEF3.pygtex
 Package babel Info: No hyphenation patterns were set for
 (babel)             lan
-guage 'english'. Reported on input line 50.
-Package babel Info: No hyphenation patterns were set for
-(babel)             lan
-guage 'english'. Reported on input line 50.
- [13])
+guage 'english'. Reported on input line 17.
+ [14])
 (./_minted-Reference/9794A8B8A60AA14E146A15DD2C5B3B9F.pygtex)
-(./_minted-Reference/D0C5372A7E9473A20655848182E2101E.pygtex)
-(./_minted-Reference/E7DFF851FCA1972D026A28E03C1D3A0B.pygtex))
+(./_minted-Reference/D0C5372A7E9473A20655848182E2101E.pygtex))
 Package babel Info: No hyphenation patterns were set for
 (babel)             language 'english'. Reported on input line 54.
- [14]
+ [15]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 55.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 55.
 
@@ -852,19 +859,19 @@ Package babel Info: No hyphenation patterns were set for
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 55.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 55.
 Package rerunfilecheck Info: File `Reference.out' has not changed.
-(rerunfilecheck)             Checksum: A0646B40F1475197DB8F5A6CE79D749A;4610.
+(rerunfilecheck)             Checksum: 6E6C998490E74A3C657F92669A03E8AF;4616.
 )
 
 Here is how much of LuaTeX's memory you used:
- 12656 strings out of 494338
- 125171,383344 words of node,token memory allocated
+ 12657 strings out of 494338
+ 125171,460012 words of node,token memory allocated
  435 words of node memory still in use:
    3 hlist, 1 vlist, 1 rule, 2 glue, 3 kern, 1 glyph, 5 attribute, 53 glue_spec,
  5 attribute_list, 1 write nodes
-   avail lists: 2:5584,3:364,4:1411,5:677,6:147,7:3258,8:73,9:819,10:12,11:13
+   avail lists: 2:6202,3:364,4:1665,5:713,6:147,7:3314,8:73,9:860,10:12,11:13
  15422 multiletter control sequences out of 65536+200000
  52 fonts using 4262687 bytes
- 44i,11n,43p,842b,701s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 44i,11n,43p,842b,697s stack positions out of 5000i,500n,10000p,200000b,50000s
 </home/san/.miktex/texmfs/install/fonts/opentype/public/lm/lmmonolt10-bold.otf><
 /home/san/.miktex/texmfs/install/fonts/opentype/public/lm/lmmono10-regular.otf><
 /home/san/.miktex/texmfs/install/fonts/opentype/public/lm/lmmono10-italic.otf></
@@ -875,9 +882,9 @@ me/san/.miktex/texmfs/install/fonts/opentype/public/lm/lmroman12-regular.otf></h
 ome/san/.miktex/texmfs/install/fonts/opentype/public/lm/lmroman17-regular.otf></
 home/san/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmmi5.pfb></home/
 san/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmsy5.pfb>
-Output written on Reference.pdf (14 pages, 177829 bytes).
+Output written on Reference.pdf (15 pages, 186972 bytes).
 
-PDF statistics: 485 PDF objects out of 1000 (max. 8388607)
- 86 named destinations out of 1000 (max. 131072)
+PDF statistics: 489 PDF objects out of 1000 (max. 8388607)
+ 87 named destinations out of 1000 (max. 131072)
  561 words of extra memory for PDF output out of 10000 (max. 100000000)
 

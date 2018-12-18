@@ -42,30 +42,30 @@
 \contentsline {subsection}{\numberline {3.6}Flow}{9}{subsection.3.6}
 \contentsline {subsubsection}{\numberline {3.6.1}Max Flow Dinic}{9}{subsubsection.3.6.1}
 \contentsline {subsection}{\numberline {3.7}Is Bipartite}{9}{subsection.3.7}
-\contentsline {subsection}{\numberline {3.8}Kruskal MST}{9}{subsection.3.8}
-\contentsline {subsection}{\numberline {3.9}LCA}{10}{subsection.3.9}
-\contentsline {subsection}{\numberline {3.10}Maximum Bipartite Matching}{10}{subsection.3.10}
-\contentsline {subsection}{\numberline {3.11}ShortestPaths}{10}{subsection.3.11}
-\contentsline {subsubsection}{\numberline {3.11.1}Bellman Ford}{10}{subsubsection.3.11.1}
-\contentsline {subsubsection}{\numberline {3.11.2}Dijkstra}{10}{subsubsection.3.11.2}
-\contentsline {subsection}{\numberline {3.12}Strongly Connected Components}{11}{subsection.3.12}
-\contentsline {subsection}{\numberline {3.13}Topological Sort}{11}{subsection.3.13}
-\contentsline {section}{\numberline {4}Maths}{11}{section.4}
-\contentsline {subsection}{\numberline {4.1}Number Theory}{11}{subsection.4.1}
-\contentsline {subsubsection}{\numberline {4.1.1}Divisibility Criterion}{11}{subsubsection.4.1.1}
-\contentsline {subsubsection}{\numberline {4.1.2}Extended Euclidean}{12}{subsubsection.4.1.2}
-\contentsline {subsubsection}{\numberline {4.1.3}GCD}{12}{subsubsection.4.1.3}
-\contentsline {subsubsection}{\numberline {4.1.4}LCM}{12}{subsubsection.4.1.4}
-\contentsline {subsubsection}{\numberline {4.1.5}Prime Check Miller Rabin}{12}{subsubsection.4.1.5}
-\contentsline {subsubsection}{\numberline {4.1.6}Prime Sieve}{12}{subsubsection.4.1.6}
-\contentsline {section}{\numberline {5}Strings}{12}{section.5}
-\contentsline {subsection}{\numberline {5.1}KMP}{12}{subsection.5.1}
-\contentsline {subsection}{\numberline {5.2}Rabin Karp}{13}{subsection.5.2}
-\contentsline {section}{\numberline {6}Techniques}{13}{section.6}
-\contentsline {subsection}{\numberline {6.1}Binary Search}{13}{subsection.6.1}
-\contentsline {subsection}{\numberline {6.2}Multiple Queries}{13}{subsection.6.2}
-\contentsline {subsubsection}{\numberline {6.2.1}Mo}{13}{subsubsection.6.2.1}
-\contentsline {subsubsection}{\numberline {6.2.2}SQRT Decomposition}{14}{subsubsection.6.2.2}
-\contentsline {section}{\numberline {7}Faster But Longer}{14}{section.7}
-\contentsline {subsection}{\numberline {7.1}BellmanFerrari}{14}{subsection.7.1}
-\contentsline {subsection}{\numberline {7.2}KMP}{14}{subsection.7.2}
+\contentsline {subsection}{\numberline {3.8}LCA}{9}{subsection.3.8}
+\contentsline {subsection}{\numberline {3.9}MST Kruskal}{9}{subsection.3.9}
+\contentsline {subsection}{\numberline {3.10}MST Prim}{10}{subsection.3.10}
+\contentsline {subsection}{\numberline {3.11}Maximum Bipartite Matching}{11}{subsection.3.11}
+\contentsline {subsection}{\numberline {3.12}ShortestPaths}{11}{subsection.3.12}
+\contentsline {subsubsection}{\numberline {3.12.1}Bellman Ford}{11}{subsubsection.3.12.1}
+\contentsline {subsubsection}{\numberline {3.12.2}Dijkstra}{11}{subsubsection.3.12.2}
+\contentsline {subsection}{\numberline {3.13}Strongly Connected Components}{12}{subsection.3.13}
+\contentsline {subsection}{\numberline {3.14}Topological Sort}{12}{subsection.3.14}
+\contentsline {section}{\numberline {4}Maths}{12}{section.4}
+\contentsline {subsection}{\numberline {4.1}Number Theory}{12}{subsection.4.1}
+\contentsline {subsubsection}{\numberline {4.1.1}Divisibility Criterion}{12}{subsubsection.4.1.1}
+\contentsline {subsubsection}{\numberline {4.1.2}Extended Euclidean}{13}{subsubsection.4.1.2}
+\contentsline {subsubsection}{\numberline {4.1.3}GCD}{13}{subsubsection.4.1.3}
+\contentsline {subsubsection}{\numberline {4.1.4}LCM}{13}{subsubsection.4.1.4}
+\contentsline {subsubsection}{\numberline {4.1.5}Prime Check Miller Rabin}{13}{subsubsection.4.1.5}
+\contentsline {subsubsection}{\numberline {4.1.6}Prime Sieve}{14}{subsubsection.4.1.6}
+\contentsline {section}{\numberline {5}Strings}{14}{section.5}
+\contentsline {subsection}{\numberline {5.1}KMP}{14}{subsection.5.1}
+\contentsline {subsection}{\numberline {5.2}Rabin Karp}{14}{subsection.5.2}
+\contentsline {section}{\numberline {6}Techniques}{14}{section.6}
+\contentsline {subsection}{\numberline {6.1}Binary Search}{14}{subsection.6.1}
+\contentsline {subsection}{\numberline {6.2}Multiple Queries}{14}{subsection.6.2}
+\contentsline {subsubsection}{\numberline {6.2.1}Mo}{14}{subsubsection.6.2.1}
+\contentsline {subsubsection}{\numberline {6.2.2}SQRT Decomposition}{15}{subsubsection.6.2.2}
+\contentsline {section}{\numberline {7}Faster But Longer}{15}{section.7}
+\contentsline {subsection}{\numberline {7.1}BellmanFerrari}{15}{subsection.7.1}

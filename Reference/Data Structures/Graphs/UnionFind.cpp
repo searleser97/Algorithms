@@ -1,8 +1,8 @@
 struct UnionFind {
   vector<int> dad, size;
   int n;
-  UnionFind(int N) : n(N), dad(N), size(N, 1) {
-    while (--N) dad[N] = N;
+  UnionFind(int N=0) : n(N), dad(N), size(N, 1) {
+    while (N--) dad[N] = N;
   }
 
   int root(int u) {

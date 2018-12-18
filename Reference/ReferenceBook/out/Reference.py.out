@@ -141,13 +141,17 @@
 \subsectionfont{\sffamily}
 \inputminted{cpp}{"/home/san/Algorithms/Reference/Graphs/Is Bipartite.cpp"}
 \subsectionfont{\sffamily\underline}
-\subsection{Kruskal MST}
-\subsectionfont{\sffamily}
-\inputminted{cpp}{"/home/san/Algorithms/Reference/Graphs/Kruskal MST.cpp"}
-\subsectionfont{\sffamily\underline}
 \subsection{LCA}
 \subsectionfont{\sffamily}
 \inputminted{cpp}{"/home/san/Algorithms/Reference/Graphs/LCA.cpp"}
+\subsectionfont{\sffamily\underline}
+\subsection{MST Kruskal}
+\subsectionfont{\sffamily}
+\inputminted{cpp}{"/home/san/Algorithms/Reference/Graphs/MST Kruskal.cpp"}
+\subsectionfont{\sffamily\underline}
+\subsection{MST Prim}
+\subsectionfont{\sffamily}
+\inputminted{cpp}{"/home/san/Algorithms/Reference/Graphs/MST Prim.cpp"}
 \subsectionfont{\sffamily\underline}
 \subsection{Maximum Bipartite Matching}
 \subsectionfont{\sffamily}
@@ -223,7 +227,3 @@
 \subsection{BellmanFerrari}
 \subsectionfont{\sffamily}
 \inputminted{cpp}{"/home/san/Algorithms/Reference/Faster But Longer/BellmanFerrari.cpp"}
-\subsectionfont{\sffamily\underline}
-\subsection{KMP}
-\subsectionfont{\sffamily}
-\inputminted{cpp}{"/home/san/Algorithms/Reference/Faster But Longer/KMP.cpp"}

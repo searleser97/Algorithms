@@ -19,7 +19,7 @@ void dfsCC(int u, vector<int> &comp) {
 // O(N)
 vector<vector<int>> connectedComponents() {
   vector<vector<int>> comps;
-  for (int u = 0; u < N; u++) {
+  for (int u = 0; u < ady.size(); u++) {
     vector<int> comp;
     dfsCC(u, comp);
     if (!comp.empty()) comps.push_back(comp), compId++;
