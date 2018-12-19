@@ -1,4 +1,4 @@
-This is LuaTeX, Version 1.09.0 (MiKTeX 2.9.6880)  (format=lualatex 2018.12.9)  17 DEC 2018 22:35
+This is LuaTeX, Version 1.09.0 (MiKTeX 2.9.6880)  (format=lualatex 2018.12.9)  19 DEC 2018 13:46
  system commands enabled.
  file:line:error style messages enabled.
 **Reference.tex
@@ -49,7 +49,7 @@ Inserting `luaotfload.aux.set_capheight' at position 3 in `luaotfload.patch_font
 '.
 Inserting `luaotfload.rewrite_fontname' at position 4 in `luaotfload.patch_font'
 .
-luaotfload | main : initialization completed in 0.160 seconds
+luaotfload | main : initialization completed in 0.186 seconds
 (/home/san/.miktex/texmfs/install/tex/latex/base/article.cls
 Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
 (/home/san/.miktex/texmfs/install/tex/latex/base/size10.clo
@@ -592,30 +592,30 @@ Package babel Info: No hyphenation patterns were set for
 )
 \openout1 = Reference.aux
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 39.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 39.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 38.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 38.
  (/home/san/.miktex/texmfs/install/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 39.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
 Package babel Info: No hyphenation patterns were set for
-(babel)             language 'english'. Reported on input line 39.
+(babel)             language 'english'. Reported on input line 38.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: luatex
@@ -625,17 +625,17 @@ Package babel Info: No hyphenation patterns were set for
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: 
-* h-part:(L,W,R)=(28.90755pt, 539.69278pt, 28.90755pt)
-* v-part:(T,H,B)=(65.04256pt, 722.18808pt, 57.81621pt)
+* h-part:(L,W,R)=(14.22636pt, 569.05515pt, 14.22636pt)
+* v-part:(T,H,B)=(51.21504pt, 765.37906pt, 28.45274pt)
 * \paperwidth=597.50787pt
 * \paperheight=845.04684pt
-* \textwidth=539.69278pt
-* \textheight=722.18808pt
-* \oddsidemargin=-43.36244pt
-* \evensidemargin=-43.36244pt
-* \topmargin=-44.22743pt
+* \textwidth=569.05515pt
+* \textheight=765.37906pt
+* \oddsidemargin=-58.04362pt
+* \evensidemargin=-58.04362pt
+* \topmargin=-58.05495pt
 * \headheight=12.0pt
-* \headsep=25.0pt
+* \headsep=8.5359pt
 * \topskip=10.0pt
 * \footskip=30.0pt
 * \marginparwidth=65.0pt
@@ -666,7 +666,7 @@ Package babel Info: No hyphenation patterns were set for
 \everyMPtoPDFconversion=\toks25
 )
 \AtBeginShipoutBox=\box64
-Package hyperref Info: Link coloring OFF on input line 39.
+Package hyperref Info: Link coloring OFF on input line 38.
  (/home/san/.miktex/texmfs/install/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 
@@ -675,24 +675,16 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 \c@section@level=\count156
 )
-LaTeX Info: Redefining \ref on input line 39.
-LaTeX Info: Redefining \pageref on input line 39.
-LaTeX Info: Redefining \nameref on input line 39.
+LaTeX Info: Redefining \ref on input line 38.
+LaTeX Info: Redefining \pageref on input line 38.
+LaTeX Info: Redefining \nameref on input line 38.
 
 (./Reference.out) (./Reference.out)
 \@outlinefile=\write8
 
 \openout8 = Reference.out
 \c@lstlisting=\count157
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 42.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 42.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 42.
- [1
-
-{/home/san/.miktex/texmfs/data/pdftex/config/pdftex.map}] (./Reference.toc
+ (./Reference.toc
 Package babel Info: No hyphenation patterns were set for
 (babel)             language 'english'. Reported on input line 1.
 LaTeX Font Info:    External font `cmex10' loaded for size
@@ -704,10 +696,10 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 
 \openout9 = Reference.toc
 Package babel Info: No hyphenation patterns were set for
-(babel)             language 'english'. Reported on input line 49.
-Package babel Info: No hyphenation patterns were set for
-(babel)             language 'english'. Reported on input line 49.
- [2]
+(babel)             language 'english'. Reported on input line 43.
+ [1{/home/san/.miktex/texmfs/data/pdftex/config/pdftex.map}
+
+]
 \openout6 = Reference.py
 
 \openout7 = latex.py
@@ -726,12 +718,12 @@ LaTeX Font Info:    Font shape `TU/lmtt/bx/n' in size <10> not available
 (./_minted-Reference/F13614A5F7F94E5A2A8E89AE37B54ACF.pygtex)
 (./_minted-Reference/D1EC5F974C3DCC365D3FB00042713694.pygtex)
 (./_minted-Reference/89EEF73C87A68BD24EF0ECF922489C34.pygtex)
-(./_minted-Reference/6B479EE812460DA22B440E61B774389D.pygtex
+(./_minted-Reference/6B479EE812460DA22B440E61B774389D.pygtex)
+(./_minted-Reference/986CE0B643244D6A1D9A694875E3476C.pygtex
 Package babel Info: No hyphenation patterns were set for
 (babel)             lan
-guage 'english'. Reported on input line 7.
- [3])
-(./_minted-Reference/986CE0B643244D6A1D9A694875E3476C.pygtex)
+guage 'english'. Reported on input line 5.
+ [2])
 (./_minted-Reference/073ACF35DA34F38475915EDC33BB1272.pygtex)
 (./_minted-Reference/7807A1726FAAFD18C246289ECBB52949.pygtex)
 (./_minted-Reference/5055FEC70DCDC79A92A6AE6C2DD9F550.pygtex)
@@ -740,151 +732,132 @@ guage 'english'. Reported on input line 7.
 (./_minted-Reference/1BA3590C09EBE16398307D89E74E1C24.pygtex)
 (./_minted-Reference/22348111F423057C59D705340418799B.pygtex)
 (./_minted-Reference/C2222A853B25DFF209A7EC9ADBD7FCE2.pygtex)
-(./_minted-Reference/F717A96EAC5500E5B40E3615FAB9C88E.pygtex
+(./_minted-Reference/F717A96EAC5500E5B40E3615FAB9C88E.pygtex)
+(./_minted-Reference/699932303780B40B72F63F9C52D9AFB5.pygtex
 Package babel Info: No hyphenation patterns were set for
 (babel)             lan
 guage 'english'. Reported on input line 5.
-Package babel Info: No hyphenation patterns were set for
-(babel)             lan
-guage 'english'. Reported on input line 5.
- [4])
-(./_minted-Reference/699932303780B40B72F63F9C52D9AFB5.pygtex)
+ [3])
 (./_minted-Reference/E7B706C8773D5A39294A8266FA80A2C2.pygtex)
 (./_minted-Reference/5DD014CA31486F7C972DDC2DD98885B1.pygtex)
 (./_minted-Reference/C48C292CB41097859E6F90247A9F16DB.pygtex)
 (./_minted-Reference/5DC2EF53AF523B0662261ADB25CD9EF3.pygtex
 Package babel Info: No hyphenation patterns were set for
 (babel)             lan
-guage 'english'. Reported on input line 14.
- [5])
+guage 'english'. Reported on input line 30.
+ [4])
 (./_minted-Reference/ACA11AE38EBC873C27E2CD69BAC6ABD6.pygtex
 Package babel Info: No hyphenation patterns were set for
 (babel)             lan
-guage 'english'. Reported on input line 54.
-Package babel Info: No hyphenation patterns were set for
-(babel)             lan
-guage 'english'. Reported on input line 54.
- [6])
+guage 'english'. Reported on input line 76.
+ [5])
 (./_minted-Reference/E1754F672C4BD028D895C730019A3D69.pygtex)
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <
+12> on input line 115.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <
+8> on input line 115.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <
+6> on input line 115.
+
 (./_minted-Reference/1DBE508D0C15EED3D6B42834B5B20039.pygtex)
-(./_minted-Reference/4E8B31CE3994AF6ADF91541B2F4B84BF.pygtex
+(./_minted-Reference/4E8B31CE3994AF6ADF91541B2F4B84BF.pygtex)
+(./_minted-Reference/112B647D1C13091FC85740E912227BD1.pygtex
 Package babel Info: No hyphenation patterns were set for
 (babel)             lan
-guage 'english'. Reported on input line 21.
-Package babel Info: No hyphenation patterns were set for
-(babel)             lan
-guage 'english'. Reported on input line 21.
- [7])
-(./_minted-Reference/112B647D1C13091FC85740E912227BD1.pygtex)
+guage 'english'. Reported on input line 14.
+ [6])
 (./_minted-Reference/440CAA94F5EAD93455026C368E92CBCC.pygtex)
-(./_minted-Reference/261A71242DA7F55773E0E20C539BE1CB.pygtex
+(./_minted-Reference/261A71242DA7F55773E0E20C539BE1CB.pygtex)
+(./_minted-Reference/E70EBB3BD077769601651EDBA62CC377.pygtex
 Package babel Info: No hyphenation patterns were set for
 (babel)             lan
-guage 'english'. Reported on input line 23.
-Package babel Info: No hyphenation patterns were set for
-(babel)             lan
-guage 'english'. Reported on input line 23.
- [8])
-(./_minted-Reference/E70EBB3BD077769601651EDBA62CC377.pygtex)
+guage 'english'. Reported on input line 34.
+ [7])
 (./_minted-Reference/8822DB0D721FCAB2EB727450B469FA49.pygtex)
 (./_minted-Reference/91F3DFA12ABDCA07A2AC0D736B4842BA.pygtex)
-(./_minted-Reference/EA9808DE412F8A0683AFEBAEB715EDA1.pygtex
-Package babel Info: No hyphenation patterns were set for
-(babel)             lan
-guage 'english'. Reported on input line 11.
-Package babel Info: No hyphenation patterns were set for
-(babel)             lan
-guage 'english'. Reported on input line 11.
- [9])
+(./_minted-Reference/EA9808DE412F8A0683AFEBAEB715EDA1.pygtex)
 (./_minted-Reference/6D6E1AC76A10CA7E51A6F83EA5C65636.pygtex
 Package babel Info: No hyphenation patterns were set for
 (babel)             lan
-guage 'english'. Reported on input line 71.
-Package babel Info: No hyphenation patterns were set for
-(babel)             lan
-guage 'english'. Reported on input line 71.
- [10])
+guage 'english'. Reported on input line 22.
+ [8])
 (./_minted-Reference/0A669FB4403684FAAF4077B67D3C05A6.pygtex)
-(./_minted-Reference/FD6EAE96AE9EF9F9FB29DC6329435519.pygtex)
-(./_minted-Reference/BC706A6DCD2319CCE8F93184415229C1.pygtex
+(./_minted-Reference/FD6EAE96AE9EF9F9FB29DC6329435519.pygtex
 Package babel Info: No hyphenation patterns were set for
 (babel)             lan
-guage 'english'. Reported on input line 33.
-Package babel Info: No hyphenation patterns were set for
-(babel)             lan
-guage 'english'. Reported on input line 33.
- [11])
+guage 'english'. Reported on input line 30.
+ [9])
+(./_minted-Reference/BC706A6DCD2319CCE8F93184415229C1.pygtex)
 (./_minted-Reference/B4F17D9F4E331FF82C630FB6EDF8A139.pygtex)
-(./_minted-Reference/2D538D894A090650D0A22C4EE6B46E94.pygtex)
-(./_minted-Reference/516D5A676B8924F630CC7A756AB82AFF.pygtex
+(./_minted-Reference/2D538D894A090650D0A22C4EE6B46E94.pygtex
 Package babel Info: No hyphenation patterns were set for
 (babel)             lan
 guage 'english'. Reported on input line 10.
-Package babel Info: No hyphenation patterns were set for
-(babel)             lan
-guage 'english'. Reported on input line 10.
- [12])
+ [10])
+(./_minted-Reference/516D5A676B8924F630CC7A756AB82AFF.pygtex)
 (./_minted-Reference/BE93A1B8CB2ACF5053D1A7392665CFDA.pygtex)
 (./_minted-Reference/AC5AA1ED82FE25BE8580F3798AAA5FEA.pygtex)
 (./_minted-Reference/B3E11EFAC5C4D15C28E16764D38DA4FF.pygtex)
-(./_minted-Reference/8589EDCA71BD0A34ED7C1AA305E1D386.pygtex)
-(./_minted-Reference/077DC3BF90CE98175EA165BC29DA5811.pygtex
+(./_minted-Reference/8589EDCA71BD0A34ED7C1AA305E1D386.pygtex
 Package babel Info: No hyphenation patterns were set for
 (babel)             lan
-guage 'english'. Reported on input line 8.
-Package babel Info: No hyphenation patterns were set for
-(babel)             lan
-guage 'english'. Reported on input line 8.
- [13])
+guage 'english'. Reported on input line 13.
+ [11])
+(./_minted-Reference/077DC3BF90CE98175EA165BC29DA5811.pygtex)
 (./_minted-Reference/9C91CBCCB8E8272B6AB5099BD493262A.pygtex)
 (./_minted-Reference/69A7A905BA057968DA4453724E1E6AC6.pygtex)
-(./_minted-Reference/980FEF041704DC0929C6D8DBF9775273.pygtex)
-(./_minted-Reference/F7DC5969B5A04537B8D075B898EFEEF3.pygtex
+(./_minted-Reference/980FEF041704DC0929C6D8DBF9775273.pygtex
 Package babel Info: No hyphenation patterns were set for
 (babel)             lan
-guage 'english'. Reported on input line 17.
- [14])
-(./_minted-Reference/9794A8B8A60AA14E146A15DD2C5B3B9F.pygtex)
+guage 'english'. Reported on input line 3.
+ [12])
+(./_minted-Reference/F7DC5969B5A04537B8D075B898EFEEF3.pygtex)
+(./_minted-Reference/9794A8B8A60AA14E146A15DD2C5B3B9F.pygtex
+Package babel Info: No hyphenation patterns were set for
+(babel)             lan
+guage 'english'. Reported on input line 60.
+ [13])
 (./_minted-Reference/D0C5372A7E9473A20655848182E2101E.pygtex))
 Package babel Info: No hyphenation patterns were set for
-(babel)             language 'english'. Reported on input line 54.
- [15]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 55.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 55.
+(babel)             language 'english'. Reported on input line 48.
+ [14]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 49.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 49.
 
 (./Reference.aux
 Package babel Info: No hyphenation patterns were set for
 (babel)             language 'english'. Reported on input line 19.
 )
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 55.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 55.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 49.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 49.
 Package rerunfilecheck Info: File `Reference.out' has not changed.
 (rerunfilecheck)             Checksum: 6E6C998490E74A3C657F92669A03E8AF;4616.
 )
 
 Here is how much of LuaTeX's memory you used:
- 12657 strings out of 494338
+ 12654 strings out of 494338
  125171,460012 words of node,token memory allocated
  435 words of node memory still in use:
    3 hlist, 1 vlist, 1 rule, 2 glue, 3 kern, 1 glyph, 5 attribute, 53 glue_spec,
  5 attribute_list, 1 write nodes
-   avail lists: 2:6202,3:364,4:1665,5:713,6:147,7:3314,8:73,9:860,10:12,11:13
- 15422 multiletter control sequences out of 65536+200000
- 52 fonts using 4262687 bytes
- 44i,11n,43p,842b,697s stack positions out of 5000i,500n,10000p,200000b,50000s
+   avail lists: 2:6550,3:367,4:1717,5:745,6:147,7:3377,8:74,9:896,10:12,11:17
+ 15421 multiletter control sequences out of 65536+200000
+ 51 fonts using 4130991 bytes
+ 44i,11n,43p,842b,738s stack positions out of 5000i,500n,10000p,200000b,50000s
 </home/san/.miktex/texmfs/install/fonts/opentype/public/lm/lmmonolt10-bold.otf><
 /home/san/.miktex/texmfs/install/fonts/opentype/public/lm/lmmono10-regular.otf><
 /home/san/.miktex/texmfs/install/fonts/opentype/public/lm/lmmono10-italic.otf></
-home/san/.miktex/texmfs/install/fonts/opentype/public/lm/lmsans10-bold.otf></hom
-e/san/.miktex/texmfs/install/fonts/opentype/public/lm/lmsans10-regular.otf></hom
-e/san/.miktex/texmfs/install/fonts/opentype/public/lm/lmroman10-regular.otf></ho
-me/san/.miktex/texmfs/install/fonts/opentype/public/lm/lmroman12-regular.otf></h
-ome/san/.miktex/texmfs/install/fonts/opentype/public/lm/lmroman17-regular.otf></
-home/san/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmmi5.pfb></home/
-san/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmsy5.pfb>
-Output written on Reference.pdf (15 pages, 186972 bytes).
+home/san/.miktex/texmfs/install/fonts/opentype/public/lm/lmroman10-regular.otf><
+/home/san/.miktex/texmfs/install/fonts/opentype/public/lm/lmsans10-bold.otf></ho
+me/san/.miktex/texmfs/install/fonts/opentype/public/lm/lmsans10-regular.otf></ho
+me/san/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmmi5.pfb></home/sa
+n/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmsy5.pfb>
+Output written on Reference.pdf (14 pages, 178634 bytes).
 
-PDF statistics: 489 PDF objects out of 1000 (max. 8388607)
- 87 named destinations out of 1000 (max. 131072)
+PDF statistics: 471 PDF objects out of 1000 (max. 8388607)
+ 86 named destinations out of 1000 (max. 131072)
  561 words of extra memory for PDF output out of 10000 (max. 100000000)
 

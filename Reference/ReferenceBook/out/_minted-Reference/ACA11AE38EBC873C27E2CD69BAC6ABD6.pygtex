@@ -2,7 +2,6 @@
 \PYG{c+c1}{// wpt = number of words passing through}
 \PYG{c+c1}{// w = number of words ending in the node}
 \PYG{c+c1}{// c = character}
-
 \PYG{k}{struct} \PYG{n}{Trie} \PYG{p}{\PYGZob{}}
   \PYG{k}{struct} \PYG{n}{Node} \PYG{p}{\PYGZob{}}
     \PYG{c+c1}{// for lexicographical order use \PYGZsq{}map\PYGZsq{}}
