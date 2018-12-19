@@ -1,6 +1,4 @@
 // N = number of nodes
-#include <bits/stdc++.h>
-using namespace std;
 #include "../Data Structures/Graphs/UnionFind.cpp"
 typedef int Weight;
 typedef pair<int, int> Edge;
@@ -28,22 +26,4 @@ Weight kruskal() {
 
 void addEdge(int u, int v, Weight w) {
   Wedges.push_back({w, {u, v}});
-}
-
-int main() {
-  int m, n, x, y, z;
-  while (true) {
-    int totalCost = 0;
-    cin >> m >> n;
-    if (!m && !n) return 0;
-    initVars(m);
-    while (n--) {
-      cin >> x >> y >> z;
-      addEdge(x, y, z);
-      totalCost += z;
-    }
-    int minCost = kruskal();
-    cout << totalCost - minCost << endl;
-  }
-  return 0;
 }

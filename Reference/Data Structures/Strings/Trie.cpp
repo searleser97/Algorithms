@@ -1,7 +1,6 @@
 // wpt = number of words passing through
 // w = number of words ending in the node
 // c = character
-
 struct Trie {
   struct Node {
     // for lexicographical order use 'map'
