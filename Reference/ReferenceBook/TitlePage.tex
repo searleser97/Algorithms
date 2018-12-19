@@ -50,37 +50,40 @@
 \end{tikzpicture}%
 }
 
-\geometry{a4paper, portrait, left=0.5cm, right=2cm, top=7.2cm, bottom=7cm}
+\geometry{a4paper, portrait, left=1cm, right=5cm, top=6cm, bottom=4cm}
 
 % \renewcommand\epigraphflush{flushright}
 \renewcommand{\epigraphrule}{1pt}
 \renewcommand\epigraphsize{\normalsize}
-\setlength\epigraphwidth{0.4\textwidth}
+\setlength\epigraphwidth{0.7\textwidth}
 
-\DeclareFixedFont{\titlefont}{T1}{lmss}{b}{it}{32pt}
+\DeclareFixedFont{\titlefont}{T1}{lmss}{b}{it}{75pt}
 
 \begin{document}
 \begin{titlepage}
-  \titlefont Competitive Programming Reference
-  
+  \noindent
+  \titlefont
+  Competitive \\[70pt]
+  Programming \\[70pt]
+  Reference \\[50pt]
   \epigraph{
     \fontfamily{qtm}\selectfont
     First, solve the problem. Then, write the code.
   }{\fontfamily{qtm}\selectfont John Johnson}
   \null\vfill
 
+  \begin{minipage}{0.02\linewidth}
+    \rule{1pt}{70pt}
+  \end{minipage}
+  %
   \begin{minipage}{0.95\linewidth}
-    \begin{flushright}
+    \begin{flushleft}
       \fontfamily{lmss}
       \selectfont
       Sergio Gabriel Sanchez Valencia \\[8pt]
       gabrielsanv97@gmail.com \\[8pt]
       searleser97
-    \end{flushright}
-  \end{minipage}
-  %
-  \begin{minipage}{0.02\linewidth}
-    \rule{1pt}{70pt}
+    \end{flushleft}
   \end{minipage}
   \titlepagedecoration
 \end{titlepage}
