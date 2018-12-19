@@ -50,13 +50,13 @@
 \end{tikzpicture}%
 }
 
-\geometry{a4paper, portrait, left=1cm, right=5cm, top=6cm, bottom=4cm}
+\geometry{a4paper, portrait, left=1cm, right=5cm, top=4cm, bottom=4cm}
 
 \renewcommand{\epigraphrule}{1pt}
 \renewcommand\epigraphsize{\normalsize}
-\setlength\epigraphwidth{0.7\textwidth}
+\setlength\epigraphwidth{0.9\textwidth}
 
-\DeclareFixedFont{\titlefont}{T1}{lmss}{b}{it}{75pt}
+\DeclareFixedFont{\titlefont}{T1}{lmss}{b}{}{75pt}
 
 \begin{document}
 \begin{titlepage}
@@ -64,24 +64,26 @@
   \titlefont
   Competitive \\[70pt]
   Programming \\[70pt]
-  Reference \\[50pt]
+  Reference \\[60pt]
   \epigraph{
-    \fontfamily{qtm}\selectfont
+    \fontfamily{lmss}
+    \selectfont
+    \Large
     First, solve the problem. Then, write the code.
-  }{\fontfamily{qtm}\selectfont John Johnson}
+  }{\fontfamily{lmss}\selectfont\Large John Johnson}
   \null\vfill
 
   \begin{minipage}{0.02\linewidth}
-    \rule{1pt}{70pt}
+    \rule{1pt}{85pt}
   \end{minipage}
   %
   \begin{minipage}{0.95\linewidth}
     \begin{flushleft}
       \fontfamily{lmss}
       \selectfont
-      {\large Sergio Gabriel Sanchez Valencia} \\[8pt]
-      gabrielsanv97@gmail.com \\[8pt]
-      searleser97
+      \Large Sergio Gabriel Sanchez Valencia \\[8pt]
+      \Large gabrielsanv97@gmail.com \\[8pt]
+      \Large searleser97
     \end{flushleft}
   \end{minipage}
   \titlepagedecoration
