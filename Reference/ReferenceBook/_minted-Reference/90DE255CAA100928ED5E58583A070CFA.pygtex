@@ -1,5 +1,0 @@
-\begin{Verbatim}[commandchars=\\\{\}]
-\PYG{k+kn}{import} \PYG{n+nn}{itertools}
-\PYG{c+c1}{\PYGZsh{}from arr choose k = \PYGZgt{} combinations(arr, k)}
-\PYG{k}{print}\PYG{p}{(}\PYG{n+nb}{list}\PYG{p}{(}\PYG{n}{itertools}\PYG{o}{.}\PYG{n}{combinations}\PYG{p}{([}\PYG{l+m+mi}{1}\PYG{p}{,} \PYG{l+m+mi}{2}\PYG{p}{,} \PYG{l+m+mi}{3}\PYG{p}{],} \PYG{l+m+mi}{3}\PYG{p}{)))}
-\end{Verbatim}
