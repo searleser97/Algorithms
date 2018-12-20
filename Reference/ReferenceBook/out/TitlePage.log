@@ -1,4 +1,4 @@
-This is LuaTeX, Version 1.09.0 (MiKTeX 2.9.6880)  (format=lualatex 2018.12.9)  20 DEC 2018 11:13
+This is LuaTeX, Version 1.09.0 (MiKTeX 2.9.6880)  (format=lualatex 2018.12.9)  20 DEC 2018 11:51
  system commands enabled.
  file:line:error style messages enabled.
 **TitlePage.tex
@@ -49,7 +49,7 @@ Inserting `luaotfload.aux.set_capheight' at position 3 in `luaotfload.patch_font
 '.
 Inserting `luaotfload.rewrite_fontname' at position 4 in `luaotfload.patch_font'
 .
-luaotfload | main : initialization completed in 0.163 seconds
+luaotfload | main : initialization completed in 0.162 seconds
 (/home/san/.miktex/texmfs/install/tex/latex/base/article.cls
 Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
 (/home/san/.miktex/texmfs/install/tex/latex/base/size10.clo
@@ -728,11 +728,11 @@ Package grfext Info: Graphics extension search list:
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: 
-* h-part:(L,W,R)=(28.45274pt, 483.69687pt, 85.35826pt)
+* h-part:(L,W,R)=(28.45274pt, 540.60239pt, 28.45274pt)
 * v-part:(T,H,B)=(142.26378pt, 631.65118pt, 71.13188pt)
 * \paperwidth=597.50787pt
 * \paperheight=845.04684pt
-* \textwidth=483.69687pt
+* \textwidth=540.60239pt
 * \textheight=631.65118pt
 * \oddsidemargin=-43.81725pt
 * \evensidemargin=-43.81725pt
@@ -775,7 +775,7 @@ Here is how much of LuaTeX's memory you used:
 </home/san/.miktex/texmfs/install/fonts/opentype/public/lm/lmsans12-regular.otf>
 {/home/san/.miktex/texmfs/install/fonts/enc/dvips/lm/lm-ec.enc}</home/san/.mikte
 x/texmfs/install/fonts/type1/public/lm/lmssbx10.pfb>
-Output written on TitlePage.pdf (1 page, 30115 bytes).
+Output written on TitlePage.pdf (1 page, 30114 bytes).
 
 PDF statistics: 21 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 131072)
