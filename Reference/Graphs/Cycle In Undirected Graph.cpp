@@ -1,18 +1,29 @@
-int n;                    // max node id >= 0
-vector<vector<int>> ady;  // ady.resize(n)
-vector<bool> vis;         // vis.resize(n)
+#include <bits/stdc++.h>
+using namespace std;
+vector<vector<int>> ady;
+vector<bool> vis;
 vector<vector<int>> cycles;
 vector<int> cycle;
 bool flag = false;
 int rootNode = -1;
 
+void initVars(int N) {
+  ady.assign(N, vector<int>());
+  cycles.clear();
+  cycle.clear();
+  vis.clear();
+}
+
 bool hasUndirectedCycle(int u, int prev) {
   vis[u] = true;
   for (auto &v : ady[u]) {
     if (v == u || v == prev) continue;
-    if (vis[v] || hasUndirectedCycle(v, u)) {
-      if (rootNode == -1)
-        rootNode = v, flag = true;
+    if (flag) {
+      hasUndirectedCycle(v, u);
+      continue;
+    }
+    if ((vis[v] || hasUndirectedCycle(v, u))) {
+      if (rootNode == -1) rootNode = v, flag = true;
       if (flag) {
         cycle.push_back(u);
         if (rootNode == u) flag = false;
@@ -25,12 +36,10 @@ bool hasUndirectedCycle(int u, int prev) {
 
 // O(N)
 bool hasUndirectedCycle() {
-  vis.clear();
-  for (int u = 0; u < n; u++)
+  for (int u = 0; u < ady.size(); u++)
     if (!vis[u]) {
       cycle.clear();
-      if (hasUndirectedCycle(u, -1))
-        cycles.push_back(cycle);
+      if (hasUndirectedCycle(u, -1)) cycles.push_back(cycle);
     }
   return cycles.size() > 0;
 }
