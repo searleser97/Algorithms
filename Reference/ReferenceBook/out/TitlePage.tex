@@ -50,42 +50,45 @@
 \end{tikzpicture}%
 }
 
-\geometry{a4paper, portrait, left=1cm, right=5cm, top=4cm, bottom=4cm}
+\geometry{a4paper, portrait, left=1cm, right=3cm, top=5cm, bottom=2.5cm}
 
 \renewcommand{\epigraphrule}{1pt}
 \renewcommand\epigraphsize{\normalsize}
-\setlength\epigraphwidth{0.9\textwidth}
+\setlength\epigraphwidth{1\textwidth}
 
-\DeclareFixedFont{\titlefont}{T1}{lmss}{b}{}{75pt}
+\DeclareFixedFont{\titlefont}{T1}{lmss}{b}{}{78pt}
 
 \begin{document}
 \begin{titlepage}
-  \noindent
-  \titlefont
-  Competitive \\[70pt]
-  Programming \\[70pt]
-  Reference \\[60pt]
-  \epigraph{
-    \fontfamily{lmss}
-    \selectfont
-    \Large
-    First, solve the problem. Then, write the code.
-  }{\fontfamily{lmss}\selectfont\Large John Johnson}
-  \null\vfill
+  \begin{center}
+    \noindent
+    \titlefont
+    Competitive \\[70pt]
+    Programming \\[70pt]
+    Reference \\[70pt]
 
-  \begin{minipage}{0.02\linewidth}
-    \rule{1pt}{85pt}
-  \end{minipage}
-  %
-  \begin{minipage}{0.95\linewidth}
-    \begin{flushleft}
+    \epigraph{
+      \centering
       \fontfamily{lmss}
       \selectfont
-      \Large Sergio Gabriel Sanchez Valencia \\[8pt]
-      \Large gabrielsanv97@gmail.com \\[8pt]
-      \Large searleser97
-    \end{flushleft}
-  \end{minipage}
+      \Large
+      First, solve the problem. Then, write the code.
+    }
+    {
+      \centering
+      \fontfamily{lmss}
+      \selectfont
+      \Large
+      John Johnson
+    }
+    \null\vfill
+    \fontfamily{lmss}
+    \selectfont
+    \large By \\[8pt]
+    \Large Sergio Gabriel Sanchez Valencia \\[8pt]
+    \Large gabrielsanv97@gmail.com \\[8pt]
+    \Large searleser97
+  \end{center}
   \titlepagedecoration
 \end{titlepage}
 

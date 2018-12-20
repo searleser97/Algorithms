@@ -1,4 +1,4 @@
-This is LuaTeX, Version 1.09.0 (MiKTeX 2.9.6880)  (format=lualatex 2018.12.9)  19 DEC 2018 15:30
+This is LuaTeX, Version 1.09.0 (MiKTeX 2.9.6880)  (format=lualatex 2018.12.9)  20 DEC 2018 11:13
  system commands enabled.
  file:line:error style messages enabled.
 **TitlePage.tex
@@ -49,7 +49,7 @@ Inserting `luaotfload.aux.set_capheight' at position 3 in `luaotfload.patch_font
 '.
 Inserting `luaotfload.rewrite_fontname' at position 4 in `luaotfload.patch_font'
 .
-luaotfload | main : initialization completed in 0.180 seconds
+luaotfload | main : initialization completed in 0.163 seconds
 (/home/san/.miktex/texmfs/install/tex/latex/base/article.cls
 Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
 (/home/san/.miktex/texmfs/install/tex/latex/base/size10.clo
@@ -644,7 +644,7 @@ File: t1lmss.fd 2009/10/30 v1.6 Font defs for Latin Modern
 LaTeX Font Warning: Font shape `T1/lmss/b/' undefined
 (Font)              using `T1/lmss/b/n' instead on input line 59.
 
-LaTeX Font Info:    Font shape `T1/lmss/b/n' in size <75> not available
+LaTeX Font Info:    Font shape `T1/lmss/b/n' in size <78> not available
 (Font)              Font shape `T1/lmss/bx/n' tried instead on input line 59.
 (./TitlePage.aux)
 \openout1 = TitlePage.aux
@@ -728,15 +728,15 @@ Package grfext Info: Graphics extension search list:
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: 
-* h-part:(L,W,R)=(28.45274pt, 426.79135pt, 142.26378pt)
-* v-part:(T,H,B)=(113.81102pt, 617.4248pt, 113.81102pt)
+* h-part:(L,W,R)=(28.45274pt, 483.69687pt, 85.35826pt)
+* v-part:(T,H,B)=(142.26378pt, 631.65118pt, 71.13188pt)
 * \paperwidth=597.50787pt
 * \paperheight=845.04684pt
-* \textwidth=426.79135pt
-* \textheight=617.4248pt
+* \textwidth=483.69687pt
+* \textheight=631.65118pt
 * \oddsidemargin=-43.81725pt
 * \evensidemargin=-43.81725pt
-* \topmargin=4.54103pt
+* \topmargin=32.99379pt
 * \headheight=12.0pt
 * \headsep=25.0pt
 * \topskip=10.0pt
@@ -754,16 +754,6 @@ Package grfext Info: Graphics extension search list:
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-
-Overfull \hbox (36.13109pt too wide) in paragraph at lines 63--73
-\T1/lmss/bx/n/75 Programming 
- []
-
-
-Overfull \hbox (20.53004pt too wide) in paragraph at lines 76--90
-[]$[]$ $[]$
- []
-
 [1
 
 {/home/san/.miktex/texmfs/data/pdftex/config/pdftex.map}] (./TitlePage.aux)
@@ -773,19 +763,19 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 )
 
 Here is how much of LuaTeX's memory you used:
- 21935 strings out of 494338
+ 21937 strings out of 494338
  100000,662416 words of node,token memory allocated
  512 words of node memory still in use:
    6 hlist, 2 vlist, 2 rule, 2 glue, 4 kern, 1 glyph, 8 attribute, 56 glue_spec,
  8 attribute_list, 1 write nodes
-   avail lists: 2:374,3:110,4:21,5:48,6:11,7:301,8:1,9:66,10:8
- 25557 multiletter control sequences out of 65536+200000
- 40 fonts using 6642415 bytes
- 55i,5n,63p,410b,666s stack positions out of 5000i,500n,10000p,200000b,50000s
+   avail lists: 2:374,3:102,4:21,5:57,6:13,7:314,8:1,9:62,10:8
+ 25558 multiletter control sequences out of 65536+200000
+ 41 fonts using 6774111 bytes
+ 55i,5n,63p,410b,660s stack positions out of 5000i,500n,10000p,200000b,50000s
 </home/san/.miktex/texmfs/install/fonts/opentype/public/lm/lmsans12-regular.otf>
 {/home/san/.miktex/texmfs/install/fonts/enc/dvips/lm/lm-ec.enc}</home/san/.mikte
 x/texmfs/install/fonts/type1/public/lm/lmssbx10.pfb>
-Output written on TitlePage.pdf (1 page, 29892 bytes).
+Output written on TitlePage.pdf (1 page, 30115 bytes).
 
 PDF statistics: 21 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 131072)
