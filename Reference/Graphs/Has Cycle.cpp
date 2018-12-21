@@ -1,5 +1,3 @@
-#include <bits/stdc++.h>
-using namespace std;
 vector<vector<int>> ady, cycles;
 vector<int> vis, cycle;
 bool flag = false, isDirected = false;
@@ -40,30 +38,4 @@ bool hasCycle() {
 void addEdge(int u, int v) {
   ady[u].push_back(v);
   if (!isDirected) ady[v].push_back(u);
-}
-
-int main() {
-  initVars(11);
-  addEdge(0, 4);
-  addEdge(4, 1);
-  addEdge(4, 2);
-  addEdge(1, 2);
-  addEdge(1, 3);
-  addEdge(3, 2);
-  addEdge(4, 5);
-  addEdge(4, 6);
-  addEdge(6, 5);
-  addEdge(7, 8);
-  addEdge(7, 9);
-  addEdge(8, 9);
-  addEdge(9, 10);
-  if (hasCycle()) {
-    for (auto cycle : cycles) {
-      for (auto u : cycle) {
-        cout << u << " ";
-      }
-      cout << endl;
-    }
-  }
-  return 0;
 }
