@@ -1,8 +1,8 @@
 // N = number of nodes
 #include "../Data Structures/Graphs/UnionFind.cpp"
-typedef int Weight;
+typedef int Num;
 typedef pair<int, int> Edge;
-typedef pair<Weight, Edge> Wedge;
+typedef pair<Num, Edge> Wedge;
 vector<Wedge> Wedges;  // gets filled from input;
 vector<Wedge> mst;
 UnionFind uf(0);
@@ -13,8 +13,8 @@ void initVars(int N) {
   uf = UnionFind(N);
 }
 
-Weight kruskal() {
-  Weight cost = 0;
+Num kruskal() {
+  Num cost = 0;
   sort(Wedges.begin(), Wedges.end());
   // reverse(Wedges.begin(), Wedges.end());
   for (Wedge &wedge : Wedges) {
@@ -24,6 +24,6 @@ Weight kruskal() {
   return cost;
 }
 
-void addEdge(int u, int v, Weight w) {
+void addEdge(int u, int v, Num w) {
   Wedges.push_back({w, {u, v}});
 }

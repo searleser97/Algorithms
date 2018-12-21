@@ -1,8 +1,8 @@
-typedef int Weight;
-typedef pair<Weight, int> DistNode;
+typedef int Num;
+typedef pair<Num, int> DistNode;
 int MAXN = 20001, INF = 1 << 30, isDirected = false;
 vector<vector<int>> ady;
-unordered_map<int, unordered_map<int, Weight>> weight;
+unordered_map<int, unordered_map<int, Num>> weight;
 
 void initVars(int N) {
   ady.assign(N, vector<int>());
@@ -12,14 +12,14 @@ void initVars(int N) {
 // O(E * log(V))
 vector<int> dijkstra(int s) {
   vector<set<DistNode>::iterator> pos(ady.size());
-  vector<Weight> dist(ady.size(), INF);
+  vector<Num> dist(ady.size(), INF);
   set<DistNode> q;
   q.insert({0, s}), dist[s] = 0;
   while (q.size()) {
     int u = q.begin()->second;
     q.erase(q.begin());
     for (int &v : ady[u]) {
-      Weight w = weight[u][v];
+      Num w = weight[u][v];
       if (dist[u] + w < dist[v]) {
         if (dist[v] != INF) q.erase(pos[v]);
         pos[v] = q.insert({dist[v] = dist[u] + w, v}).first;
@@ -38,14 +38,14 @@ vector<int> dijkstraLazy(int s) {
     int u = top.second;
     if (dist[u] < top.first) continue;
     for (int &v : ady[u]) {
-      Weight w = weight[u][v];
+      Num w = weight[u][v];
       if (dist[u] + w < dist[v]) q.push({dist[v] = dist[u] + w, v});
     }
   }
   return dist;
 }
 
-void addEdge(int u, int v, Weight w) {
+void addEdge(int u, int v, Num w) {
   ady[u].push_back(v);
   weight[u][v] = w;
   if (isDirected) return;

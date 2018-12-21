@@ -1,4 +1,4 @@
-#include "Flow/Max Flow Dinic.cpp"
+#include "Max Flow Dinic.cpp"
 void addEdge(int u, int v) {
   cap[u][v] = 1;
   ady[u].push_back(v);
