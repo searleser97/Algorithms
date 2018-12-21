@@ -1,0 +1,220 @@
+\section{Coding Resources}
+\subsection{C++}
+\subsubsectionfont{\sffamily\underline}
+\subsubsection{Decimal Precision}
+\subsubsectionfont{\sffamily}
+\inputminted{cpp}{"/home/san/Algorithms/Reference/Coding Resources/C++/Decimal Precision.cpp"}
+\subsubsectionfont{\sffamily\underline}
+\subsubsection{IO Optimization}
+\subsubsectionfont{\sffamily}
+\inputminted{cpp}{"/home/san/Algorithms/Reference/Coding Resources/C++/IO Optimization.cpp"}
+\subsubsectionfont{\sffamily\underline}
+\subsubsection{Int To Binary}
+\subsubsectionfont{\sffamily}
+\inputminted{cpp}{"/home/san/Algorithms/Reference/Coding Resources/C++/Int To Binary.cpp"}
+\subsubsectionfont{\sffamily\underline}
+\subsubsection{Map Value To Int}
+\subsubsectionfont{\sffamily}
+\inputminted{cpp}{"/home/san/Algorithms/Reference/Coding Resources/C++/Map Value To Int.cpp"}
+\subsubsectionfont{\sffamily\underline}
+\subsubsection{Permutations}
+\subsubsectionfont{\sffamily}
+\inputminted{cpp}{"/home/san/Algorithms/Reference/Coding Resources/C++/Permutations.cpp"}
+\subsubsectionfont{\sffamily\underline}
+\subsubsection{Print Vector}
+\subsubsectionfont{\sffamily}
+\inputminted{cpp}{"/home/san/Algorithms/Reference/Coding Resources/C++/Print Vector.cpp"}
+\subsubsectionfont{\sffamily\underline}
+\subsubsection{Priority Queue Of Object}
+\subsubsectionfont{\sffamily}
+\inputminted{cpp}{"/home/san/Algorithms/Reference/Coding Resources/C++/Priority Queue Of Object.cpp"}
+\subsubsectionfont{\sffamily\underline}
+\subsubsection{Random}
+\subsubsectionfont{\sffamily}
+\inputminted{cpp}{"/home/san/Algorithms/Reference/Coding Resources/C++/Random.cpp"}
+\subsubsectionfont{\sffamily\underline}
+\subsubsection{Read Line}
+\subsubsectionfont{\sffamily}
+\inputminted{cpp}{"/home/san/Algorithms/Reference/Coding Resources/C++/Read Line.cpp"}
+\subsubsectionfont{\sffamily\underline}
+\subsubsection{Sort Pair}
+\subsubsectionfont{\sffamily}
+\inputminted{cpp}{"/home/san/Algorithms/Reference/Coding Resources/C++/Sort Pair.cpp"}
+\subsubsectionfont{\sffamily\underline}
+\subsubsection{Sort Vector Of Object}
+\subsubsectionfont{\sffamily}
+\inputminted{cpp}{"/home/san/Algorithms/Reference/Coding Resources/C++/Sort Vector Of Object.cpp"}
+\subsubsectionfont{\sffamily\underline}
+\subsubsection{Split String}
+\subsubsectionfont{\sffamily}
+\inputminted{cpp}{"/home/san/Algorithms/Reference/Coding Resources/C++/Split String.cpp"}
+\subsubsectionfont{\sffamily\underline}
+\subsubsection{Typedef}
+\subsubsectionfont{\sffamily}
+\inputminted{cpp}{"/home/san/Algorithms/Reference/Coding Resources/C++/Typedef.cpp"}
+\subsection{Python}
+\subsubsectionfont{\sffamily\underline}
+\subsubsection{Combinations}
+\subsubsectionfont{\sffamily}
+\inputminted{py}{"/home/san/Algorithms/Reference/Coding Resources/Python/Combinations.py"}
+\subsubsectionfont{\sffamily\underline}
+\subsubsection{Fast IO}
+\subsubsectionfont{\sffamily}
+\inputminted{py}{"/home/san/Algorithms/Reference/Coding Resources/Python/Fast IO.py"}
+\subsubsectionfont{\sffamily\underline}
+\subsubsection{Permutations}
+\subsubsectionfont{\sffamily}
+\inputminted{py}{"/home/san/Algorithms/Reference/Coding Resources/Python/Permutations.py"}
+\subsubsectionfont{\sffamily\underline}
+\subsubsection{Random}
+\subsubsectionfont{\sffamily}
+\inputminted{py}{"/home/san/Algorithms/Reference/Coding Resources/Python/Random.py"}
+\subsubsectionfont{\sffamily\underline}
+\subsubsection{Sort List Of Object}
+\subsubsectionfont{\sffamily}
+\inputminted{py}{"/home/san/Algorithms/Reference/Coding Resources/Python/Sort List Of Object.py"}
+\subsubsectionfont{\sffamily\underline}
+\subsubsection{Sort List}
+\subsubsectionfont{\sffamily}
+\inputminted{py}{"/home/san/Algorithms/Reference/Coding Resources/Python/Sort List.py"}
+\section{Data Structures}
+\subsection{Graphs}
+\subsubsectionfont{\sffamily\underline}
+\subsubsection{UnionFind}
+\subsubsectionfont{\sffamily}
+\inputminted{cpp}{"/home/san/Algorithms/Reference/Data Structures/Graphs/UnionFind.cpp"}
+\subsection{Ranges}
+\subsubsectionfont{\sffamily\underline}
+\subsubsection{BIT}
+\subsubsectionfont{\sffamily}
+\inputminted{cpp}{"/home/san/Algorithms/Reference/Data Structures/Ranges/BIT.cpp"}
+\subsubsectionfont{\sffamily\underline}
+\subsubsection{Interval Tree}
+\subsubsectionfont{\sffamily}
+\inputminted{cpp}{"/home/san/Algorithms/Reference/Data Structures/Ranges/Interval Tree.cpp"}
+\subsubsectionfont{\sffamily\underline}
+\subsubsection{Segment Tree}
+\subsubsectionfont{\sffamily}
+\inputminted{cpp}{"/home/san/Algorithms/Reference/Data Structures/Ranges/Segment Tree.cpp"}
+\subsubsectionfont{\sffamily\underline}
+\subsubsection{Sparse Table}
+\subsubsectionfont{\sffamily}
+\inputminted{cpp}{"/home/san/Algorithms/Reference/Data Structures/Ranges/Sparse Table.cpp"}
+\subsection{Strings}
+\subsubsectionfont{\sffamily\underline}
+\subsubsection{Trie}
+\subsubsectionfont{\sffamily}
+\inputminted{cpp}{"/home/san/Algorithms/Reference/Data Structures/Strings/Trie.cpp"}
+\subsection{Trees}
+\subsubsectionfont{\sffamily\underline}
+\subsubsection{Treap}
+\subsubsectionfont{\sffamily}
+\inputminted{cpp}{"/home/san/Algorithms/Reference/Data Structures/Trees/Treap.cpp"}
+\section{Graphs}
+\subsectionfont{\sffamily\underline}
+\subsection{Articulation Points And Bridges}
+\subsectionfont{\sffamily}
+\inputminted{cpp}{"/home/san/Algorithms/Reference/Graphs/Articulation Points And Bridges.cpp"}
+\subsectionfont{\sffamily\underline}
+\subsection{Connected Components}
+\subsectionfont{\sffamily}
+\inputminted{cpp}{"/home/san/Algorithms/Reference/Graphs/Connected Components.cpp"}
+\subsectionfont{\sffamily\underline}
+\subsection{Flood Fill}
+\subsectionfont{\sffamily}
+\inputminted{cpp}{"/home/san/Algorithms/Reference/Graphs/Flood Fill.cpp"}
+\subsection{Flow}
+\subsubsectionfont{\sffamily\underline}
+\subsubsection{Max Flow Dinic}
+\subsubsectionfont{\sffamily}
+\inputminted{cpp}{"/home/san/Algorithms/Reference/Graphs/Flow/Max Flow Dinic.cpp"}
+\subsubsectionfont{\sffamily\underline}
+\subsubsection{Maximum Bipartite Matching}
+\subsubsectionfont{\sffamily}
+\inputminted{cpp}{"/home/san/Algorithms/Reference/Graphs/Flow/Maximum Bipartite Matching.cpp"}
+\subsectionfont{\sffamily\underline}
+\subsection{Has Cycle}
+\subsectionfont{\sffamily}
+\inputminted{cpp}{"/home/san/Algorithms/Reference/Graphs/Has Cycle.cpp"}
+\subsectionfont{\sffamily\underline}
+\subsection{Is Bipartite}
+\subsectionfont{\sffamily}
+\inputminted{cpp}{"/home/san/Algorithms/Reference/Graphs/Is Bipartite.cpp"}
+\subsectionfont{\sffamily\underline}
+\subsection{LCA}
+\subsectionfont{\sffamily}
+\inputminted{cpp}{"/home/san/Algorithms/Reference/Graphs/LCA.cpp"}
+\subsectionfont{\sffamily\underline}
+\subsection{MST Kruskal}
+\subsectionfont{\sffamily}
+\inputminted{cpp}{"/home/san/Algorithms/Reference/Graphs/MST Kruskal.cpp"}
+\subsectionfont{\sffamily\underline}
+\subsection{MST Prim}
+\subsectionfont{\sffamily}
+\inputminted{cpp}{"/home/san/Algorithms/Reference/Graphs/MST Prim.cpp"}
+\subsection{ShortestPaths}
+\subsubsectionfont{\sffamily\underline}
+\subsubsection{Bellman Ford}
+\subsubsectionfont{\sffamily}
+\inputminted{cpp}{"/home/san/Algorithms/Reference/Graphs/ShortestPaths/Bellman Ford.cpp"}
+\subsubsectionfont{\sffamily\underline}
+\subsubsection{Dijkstra}
+\subsubsectionfont{\sffamily}
+\inputminted{cpp}{"/home/san/Algorithms/Reference/Graphs/ShortestPaths/Dijkstra.cpp"}
+\subsectionfont{\sffamily\underline}
+\subsection{Strongly Connected Components}
+\subsectionfont{\sffamily}
+\inputminted{cpp}{"/home/san/Algorithms/Reference/Graphs/Strongly Connected Components.cpp"}
+\subsectionfont{\sffamily\underline}
+\subsection{Topological Sort}
+\subsectionfont{\sffamily}
+\inputminted{cpp}{"/home/san/Algorithms/Reference/Graphs/Topological Sort.cpp"}
+\section{Maths}
+\subsection{Number Theory}
+\subsubsectionfont{\sffamily\underline}
+\subsubsection{Divisibility Criterion}
+\subsubsectionfont{\sffamily}
+\inputminted{py}{"/home/san/Algorithms/Reference/Maths/Number Theory/Divisibility Criterion.py"}
+\subsubsectionfont{\sffamily\underline}
+\subsubsection{Extended Euclidean}
+\subsubsectionfont{\sffamily}
+\inputminted{cpp}{"/home/san/Algorithms/Reference/Maths/Number Theory/Extended Euclidean.cpp"}
+\subsubsectionfont{\sffamily\underline}
+\subsubsection{GCD}
+\subsubsectionfont{\sffamily}
+\inputminted{cpp}{"/home/san/Algorithms/Reference/Maths/Number Theory/GCD.cpp"}
+\subsubsectionfont{\sffamily\underline}
+\subsubsection{LCM}
+\subsubsectionfont{\sffamily}
+\inputminted{cpp}{"/home/san/Algorithms/Reference/Maths/Number Theory/LCM.cpp"}
+\subsubsectionfont{\sffamily\underline}
+\subsubsection{Prime Check Miller Rabin}
+\subsubsectionfont{\sffamily}
+\inputminted{py}{"/home/san/Algorithms/Reference/Maths/Number Theory/Prime Check Miller Rabin.py"}
+\subsubsectionfont{\sffamily\underline}
+\subsubsection{Prime Sieve}
+\subsubsectionfont{\sffamily}
+\inputminted{cpp}{"/home/san/Algorithms/Reference/Maths/Number Theory/Prime Sieve.cpp"}
+\section{Strings}
+\subsectionfont{\sffamily\underline}
+\subsection{KMP}
+\subsectionfont{\sffamily}
+\inputminted{cpp}{"/home/san/Algorithms/Reference/Strings/KMP.cpp"}
+\subsectionfont{\sffamily\underline}
+\subsection{Rabin Karp}
+\subsectionfont{\sffamily}
+\inputminted{cpp}{"/home/san/Algorithms/Reference/Strings/Rabin Karp.cpp"}
+\section{Techniques}
+\subsectionfont{\sffamily\underline}
+\subsection{Binary Search}
+\subsectionfont{\sffamily}
+\inputminted{cpp}{"/home/san/Algorithms/Reference/Techniques/Binary Search.cpp"}
+\subsection{Multiple Queries}
+\subsubsectionfont{\sffamily\underline}
+\subsubsection{Mo}
+\subsubsectionfont{\sffamily}
+\inputminted{cpp}{"/home/san/Algorithms/Reference/Techniques/Multiple Queries/Mo.cpp"}
+\subsubsectionfont{\sffamily\underline}
+\subsubsection{SQRT Decomposition}
+\subsubsectionfont{\sffamily}
+\inputminted{cpp}{"/home/san/Algorithms/Reference/Techniques/Multiple Queries/SQRT Decomposition.cpp"}

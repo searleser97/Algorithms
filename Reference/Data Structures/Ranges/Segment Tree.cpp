@@ -7,8 +7,8 @@ vector<int> st, arr;
 typedef int T;
 const T neutro = 0;
 
-void initVars() {
-  st = vector<int>(2 * MAXN, neutro);
+void initVars(int n) {
+  st.assign(2 * (N = n), neutro);
 }
 
 const T F(T a, T b) {
@@ -21,20 +21,17 @@ const T F(T a, T b) {
 // O(2N)
 int build() {
   copy(arr.begin(), arr.end(), st.begin() + N);
-  for (int i = N - 1; i > 0; i--)
-    st[i] = F(st[i << 1], st[i << 1 | 1]);
+  for (int i = N - 1; i > 0; i--) st[i] = F(st[i << 1], st[i << 1 | 1]);
 }
 
 // O(lg(2N))
 void updateNode(int i, T val) {
-  for (st[i += N] = val; i > 1; i >>= 1)
-    st[i >> 1] = F(st[i], st[i ^ 1]);
+  for (st[i += N] = val; i > 1; i >>= 1) st[i >> 1] = F(st[i], st[i ^ 1]);
 }
 
 // O(3N), [l, r)
 void updateRange(int l, int r, T val) {
-  for (int i = l; i < r; i++)
-    arr[i] = val;
+  for (int i = l; i < r; i++) arr[i] = val;
   build();
 }
 

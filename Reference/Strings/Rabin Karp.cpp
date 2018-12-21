@@ -21,10 +21,8 @@ class RollingHash {
     return hash[hash.size() - 1];
   }
 
-  unsigned long long int getSubstrHash(int begin,
-                                       int end) {
-    return hash[end] -
-           hash[begin - 1] * pow[end - begin + 1];
+  unsigned long long int getSubstrHash(int begin, int end) {
+    return hash[end] - hash[begin - 1] * pow[end - begin + 1];
   }
 
   int size() {
@@ -32,18 +30,13 @@ class RollingHash {
   }
 };
 
-vector<int> rabinKarp(RollingHash &rhStr,
-                      string &pattern) {
+vector<int> rabinKarp(RollingHash &rhStr, string &pattern) {
   vector<int> positions;
   RollingHash rhPattern(pattern);
-  unsigned long long int patternHash =
-      rhPattern.getWordHash();
-  int windowSize = pattern.size(),
-      end = windowSize;
+  unsigned long long int patternHash = rhPattern.getWordHash();
+  int windowSize = pattern.size(), end = windowSize;
   for (int i = 1; end < rhStr.size(); i++) {
-    if (patternHash ==
-        rhStr.getSubstrHash(i, end))
-      positions.push_back(i);
+    if (patternHash == rhStr.getSubstrHash(i, end)) positions.push_back(i);
     end = i + windowSize;
   }
   return positions;

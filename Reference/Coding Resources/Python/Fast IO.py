@@ -7,7 +7,7 @@ stdin.read(N)
 line = stdin.readline()
 #Reads all lines in stdin until EOF
 lines = stdin.readlines()
-#Writes a string to stdout, it doesn 't adds '\n'
+#Writes a string to stdout, it doesn't add '\n'
 stdout.write(line)
 #Writes a list of strings to stdout
 stdout.writelines(lines)

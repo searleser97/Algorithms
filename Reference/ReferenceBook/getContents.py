@@ -51,4 +51,3 @@ def main(currPath, currDir, depth, applyExclusions):
 for directory in sorted(listdir(PATH)):
     if isdir(join(PATH, directory)):
         main(join(PATH, directory), directory, 1, True)
-main(join(PATH, 'Faster But Longer'), 'Faster But Longer', 1, False)

@@ -1,15 +1,20 @@
-typedef string Key;
-unordered_map<Key, int> val;
-unordered_map<int, Key> getKey;
+// val = value
+typedef string Val;
+unordered_map<Val, int> intForVal;
+unordered_map<int, Val> valForInt;
 int mapId = 0;
 
-int Map(Key key) {
-  getKey[mapId] = key;
-  return val.count(key) ? val[key]
-                        : val[key] = mapId++;
+int Map(Val val) {
+  valForInt[mapId] = val;
+  return intForVal.count(val) ? intForVal[val] : intForVal[val] = mapId++;
+}
+
+int IMap(int val) {
+  return valForInt[val];
 }
 
 void initMapping() {
   mapId = 0;
-  val.clear();
+  intForVal.clear();
+  valForInt.clear();
 }
