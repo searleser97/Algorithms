@@ -27,42 +27,43 @@
 \contentsline {subsection}{\numberline {2.2}Ranges}{5}{subsection.2.2}
 \contentsline {subsubsection}{\numberline {2.2.1}BIT}{5}{subsubsection.2.2.1}
 \contentsline {subsubsection}{\numberline {2.2.2}Interval Tree}{5}{subsubsection.2.2.2}
-\contentsline {subsubsection}{\numberline {2.2.3}Segment Tree}{5}{subsubsection.2.2.3}
-\contentsline {subsubsection}{\numberline {2.2.4}Sparse Table}{5}{subsubsection.2.2.4}
-\contentsline {subsection}{\numberline {2.3}Strings}{6}{subsection.2.3}
-\contentsline {subsubsection}{\numberline {2.3.1}Trie}{6}{subsubsection.2.3.1}
-\contentsline {subsection}{\numberline {2.4}Trees}{7}{subsection.2.4}
-\contentsline {subsubsection}{\numberline {2.4.1}Treap}{7}{subsubsection.2.4.1}
-\contentsline {section}{\numberline {3}Graphs}{7}{section.3}
-\contentsline {subsection}{\numberline {3.1}Articulation Points And Bridges}{7}{subsection.3.1}
-\contentsline {subsection}{\numberline {3.2}Connected Components}{7}{subsection.3.2}
-\contentsline {subsection}{\numberline {3.3}Flood Fill}{8}{subsection.3.3}
-\contentsline {subsection}{\numberline {3.4}Flow}{8}{subsection.3.4}
-\contentsline {subsubsection}{\numberline {3.4.1}Max Flow Dinic}{8}{subsubsection.3.4.1}
+\contentsline {subsubsection}{\numberline {2.2.3}Segment Tree Lazy Propagation}{5}{subsubsection.2.2.3}
+\contentsline {subsubsection}{\numberline {2.2.4}Segment Tree}{6}{subsubsection.2.2.4}
+\contentsline {subsubsection}{\numberline {2.2.5}Sparse Table}{6}{subsubsection.2.2.5}
+\contentsline {subsection}{\numberline {2.3}Strings}{7}{subsection.2.3}
+\contentsline {subsubsection}{\numberline {2.3.1}Trie}{7}{subsubsection.2.3.1}
+\contentsline {subsection}{\numberline {2.4}Trees}{8}{subsection.2.4}
+\contentsline {subsubsection}{\numberline {2.4.1}Treap}{8}{subsubsection.2.4.1}
+\contentsline {section}{\numberline {3}Graphs}{8}{section.3}
+\contentsline {subsection}{\numberline {3.1}Articulation Points And Bridges}{8}{subsection.3.1}
+\contentsline {subsection}{\numberline {3.2}Connected Components}{8}{subsection.3.2}
+\contentsline {subsection}{\numberline {3.3}Flood Fill}{9}{subsection.3.3}
+\contentsline {subsection}{\numberline {3.4}Flow}{9}{subsection.3.4}
+\contentsline {subsubsection}{\numberline {3.4.1}Max Flow Dinic}{9}{subsubsection.3.4.1}
 \contentsline {subsubsection}{\numberline {3.4.2}Maximum Bipartite Matching}{9}{subsubsection.3.4.2}
-\contentsline {subsection}{\numberline {3.5}Has Cycle}{9}{subsection.3.5}
-\contentsline {subsection}{\numberline {3.6}Is Bipartite}{9}{subsection.3.6}
-\contentsline {subsection}{\numberline {3.7}LCA}{9}{subsection.3.7}
-\contentsline {subsection}{\numberline {3.8}MST Kruskal}{9}{subsection.3.8}
-\contentsline {subsection}{\numberline {3.9}MST Prim}{10}{subsection.3.9}
+\contentsline {subsection}{\numberline {3.5}Has Cycle}{10}{subsection.3.5}
+\contentsline {subsection}{\numberline {3.6}Is Bipartite}{10}{subsection.3.6}
+\contentsline {subsection}{\numberline {3.7}LCA}{10}{subsection.3.7}
+\contentsline {subsection}{\numberline {3.8}MST Kruskal}{10}{subsection.3.8}
+\contentsline {subsection}{\numberline {3.9}MST Prim}{11}{subsection.3.9}
 \contentsline {subsection}{\numberline {3.10}ShortestPaths}{11}{subsection.3.10}
 \contentsline {subsubsection}{\numberline {3.10.1}Bellman Ford}{11}{subsubsection.3.10.1}
-\contentsline {subsubsection}{\numberline {3.10.2}Dijkstra}{11}{subsubsection.3.10.2}
-\contentsline {subsection}{\numberline {3.11}Strongly Connected Components}{11}{subsection.3.11}
-\contentsline {subsection}{\numberline {3.12}Topological Sort}{12}{subsection.3.12}
-\contentsline {section}{\numberline {4}Maths}{12}{section.4}
-\contentsline {subsection}{\numberline {4.1}Number Theory}{12}{subsection.4.1}
-\contentsline {subsubsection}{\numberline {4.1.1}Divisibility Criterion}{12}{subsubsection.4.1.1}
-\contentsline {subsubsection}{\numberline {4.1.2}Extended Euclidean}{12}{subsubsection.4.1.2}
+\contentsline {subsubsection}{\numberline {3.10.2}Dijkstra}{12}{subsubsection.3.10.2}
+\contentsline {subsection}{\numberline {3.11}Strongly Connected Components}{12}{subsection.3.11}
+\contentsline {subsection}{\numberline {3.12}Topological Sort}{13}{subsection.3.12}
+\contentsline {section}{\numberline {4}Maths}{13}{section.4}
+\contentsline {subsection}{\numberline {4.1}Number Theory}{13}{subsection.4.1}
+\contentsline {subsubsection}{\numberline {4.1.1}Divisibility Criterion}{13}{subsubsection.4.1.1}
+\contentsline {subsubsection}{\numberline {4.1.2}Extended Euclidean}{13}{subsubsection.4.1.2}
 \contentsline {subsubsection}{\numberline {4.1.3}GCD}{13}{subsubsection.4.1.3}
-\contentsline {subsubsection}{\numberline {4.1.4}LCM}{13}{subsubsection.4.1.4}
-\contentsline {subsubsection}{\numberline {4.1.5}Prime Check Miller Rabin}{13}{subsubsection.4.1.5}
-\contentsline {subsubsection}{\numberline {4.1.6}Prime Sieve}{13}{subsubsection.4.1.6}
-\contentsline {section}{\numberline {5}Strings}{13}{section.5}
-\contentsline {subsection}{\numberline {5.1}KMP}{13}{subsection.5.1}
+\contentsline {subsubsection}{\numberline {4.1.4}LCM}{14}{subsubsection.4.1.4}
+\contentsline {subsubsection}{\numberline {4.1.5}Prime Check Miller Rabin}{14}{subsubsection.4.1.5}
+\contentsline {subsubsection}{\numberline {4.1.6}Prime Sieve}{14}{subsubsection.4.1.6}
+\contentsline {section}{\numberline {5}Strings}{14}{section.5}
+\contentsline {subsection}{\numberline {5.1}KMP}{14}{subsection.5.1}
 \contentsline {subsection}{\numberline {5.2}Rabin Karp}{14}{subsection.5.2}
-\contentsline {section}{\numberline {6}Techniques}{14}{section.6}
-\contentsline {subsection}{\numberline {6.1}Binary Search}{14}{subsection.6.1}
-\contentsline {subsection}{\numberline {6.2}Multiple Queries}{14}{subsection.6.2}
-\contentsline {subsubsection}{\numberline {6.2.1}Mo}{14}{subsubsection.6.2.1}
+\contentsline {section}{\numberline {6}Techniques}{15}{section.6}
+\contentsline {subsection}{\numberline {6.1}Binary Search}{15}{subsection.6.1}
+\contentsline {subsection}{\numberline {6.2}Multiple Queries}{15}{subsection.6.2}
+\contentsline {subsubsection}{\numberline {6.2.1}Mo}{15}{subsubsection.6.2.1}
 \contentsline {subsubsection}{\numberline {6.2.2}SQRT Decomposition}{15}{subsubsection.6.2.2}

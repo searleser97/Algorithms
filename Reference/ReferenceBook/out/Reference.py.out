@@ -93,6 +93,10 @@
 \subsubsectionfont{\sffamily}
 \inputminted{cpp}{"/home/san/Algorithms/Reference/Data Structures/Ranges/Interval Tree.cpp"}
 \subsubsectionfont{\sffamily\underline}
+\subsubsection{Segment Tree Lazy Propagation}
+\subsubsectionfont{\sffamily}
+\inputminted{cpp}{"/home/san/Algorithms/Reference/Data Structures/Ranges/Segment Tree Lazy Propagation.cpp"}
+\subsubsectionfont{\sffamily\underline}
 \subsubsection{Segment Tree}
 \subsubsectionfont{\sffamily}
 \inputminted{cpp}{"/home/san/Algorithms/Reference/Data Structures/Ranges/Segment Tree.cpp"}

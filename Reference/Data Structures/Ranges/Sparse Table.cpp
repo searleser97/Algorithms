@@ -9,8 +9,7 @@ vector<vector<T>> st;
 vector<T> arr;
 
 void initVars() {
-  st = vector<vector<T>>(
-      MAXN, vector<T>(log2(MAXN) + 1));
+  st = vector<vector<T>>(MAXN, vector<T>(log2(MAXN) + 1));
   arr = vector<T>(MAXN);
 }
 
@@ -28,9 +27,7 @@ static T F2(T a, T b) {
 void buildSparseTabe(T F(T, T)) {
   st[0] = arr;
   for (int i = 1; (1 << i) <= N; i++)
-    for (int j = 0; j + (1 << i) <= N; j++)
-      st[i][j] = F(st[i - 1][j],
-                   st[i - 1][j + (1 << (i - 1))]);
+    for (int j = 0; j + (1 << i) <= N; j++) st[i][j] = F(st[i - 1][j], st[i - 1][j + (1 << (i - 1))]);
 }
 
 // O(1)

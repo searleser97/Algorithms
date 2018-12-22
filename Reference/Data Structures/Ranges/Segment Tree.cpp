@@ -2,16 +2,17 @@
 // neutro = operation neutral value
 // e.g. for sum is 0, for multiplication
 // is 1, for gcd is 0, for min is INF, etc.
-int MAXN = 500000, N;
-vector<int> st, arr;
 typedef int T;
-const T neutro = 0;
+T neutro = 0;
+int N;
+vector<int> st, arr;
 
 void initVars(int n) {
-  st.assign(2 * (N = n), neutro);
+  arr.assign(N = n, neutro);
+  st.assign(2 * N, neutro);
 }
 
-const T F(T a, T b) {
+T F(T a, T b) {
   // return a + b;
   return __gcd(a, b);
   // return a * b;
@@ -19,7 +20,7 @@ const T F(T a, T b) {
 }
 
 // O(2N)
-int build() {
+void build() {
   copy(arr.begin(), arr.end(), st.begin() + N);
   for (int i = N - 1; i > 0; i--) st[i] = F(st[i << 1], st[i << 1 | 1]);
 }
@@ -37,7 +38,7 @@ void updateRange(int l, int r, T val) {
 
 // O(lg(2N)), [l, r)
 T query(int l, int r) {
-  int ans = neutro;
+  T ans = neutro;
   for (l += N, r += N; l < r; l >>= 1, r >>= 1) {
     if (l & 1) ans = F(ans, st[l++]);
     if (r & 1) ans = F(ans, st[--r]);
