@@ -70,13 +70,13 @@
 \subsubsectionfont{\sffamily}
 \inputminted{py}{"/home/san/Algorithms/Reference/Coding Resources/Python/Random.py"}
 \subsubsectionfont{\sffamily\underline}
-\subsubsection{Sort List Of Object}
-\subsubsectionfont{\sffamily}
-\inputminted{py}{"/home/san/Algorithms/Reference/Coding Resources/Python/Sort List Of Object.py"}
-\subsubsectionfont{\sffamily\underline}
 \subsubsection{Sort List}
 \subsubsectionfont{\sffamily}
 \inputminted{py}{"/home/san/Algorithms/Reference/Coding Resources/Python/Sort List.py"}
+\subsubsectionfont{\sffamily\underline}
+\subsubsection{Sort List Of Object}
+\subsubsectionfont{\sffamily}
+\inputminted{py}{"/home/san/Algorithms/Reference/Coding Resources/Python/Sort List Of Object.py"}
 \section{Data Structures}
 \subsection{Graphs}
 \subsubsectionfont{\sffamily\underline}
@@ -93,13 +93,13 @@
 \subsubsectionfont{\sffamily}
 \inputminted{cpp}{"/home/san/Algorithms/Reference/Data Structures/Ranges/Interval Tree.cpp"}
 \subsubsectionfont{\sffamily\underline}
-\subsubsection{Segment Tree Lazy Propagation}
-\subsubsectionfont{\sffamily}
-\inputminted{cpp}{"/home/san/Algorithms/Reference/Data Structures/Ranges/Segment Tree Lazy Propagation.cpp"}
-\subsubsectionfont{\sffamily\underline}
 \subsubsection{Segment Tree}
 \subsubsectionfont{\sffamily}
 \inputminted{cpp}{"/home/san/Algorithms/Reference/Data Structures/Ranges/Segment Tree.cpp"}
+\subsubsectionfont{\sffamily\underline}
+\subsubsection{Segment Tree Lazy Propagation}
+\subsubsectionfont{\sffamily}
+\inputminted{cpp}{"/home/san/Algorithms/Reference/Data Structures/Ranges/Segment Tree Lazy Propagation.cpp"}
 \subsubsectionfont{\sffamily\underline}
 \subsubsection{Sparse Table}
 \subsubsectionfont{\sffamily}

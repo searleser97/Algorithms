@@ -1,8 +1,10 @@
 from os import listdir
 from os.path import isfile, isdir, join
+import re
 
-PATH = '/home/san/Algorithms/Reference/'
-excluded = ['ReferenceBook', '.vscode', 'Faster But Longer']
+PATH = '/home/san/Algorithms/Reference'
+excluded = set(['ReferenceBook', '.vscode'])
+
 
 def printSectionType(sectionName, depth, isFile):
     sectionType = ''
@@ -11,7 +13,7 @@ def printSectionType(sectionName, depth, isFile):
     if depth == 5:
         sectionType = 'subparagraph'
     else:
-        for i in range(depth - 1):
+        for _ in range(depth - 1):
             sectionType += 'sub'
         sectionType += 'section'
 
@@ -22,32 +24,28 @@ def printSectionType(sectionName, depth, isFile):
         print('\\' + sectionType + 'font{\\sffamily}')
 
 
-def main(currPath, currDir, depth, applyExclusions):
-
-    if applyExclusions and currDir in excluded:
+def main(currPath, currDir, depth):
+    if currDir in excluded:
         return
-
     printSectionType(currDir, depth, False)
-
-    for dirOrFile in sorted(listdir(currPath)):
+    for dirOrFile in sorted(listdir(currPath), key=lambda x: x.split('.')[0]):
         f = join(currPath, dirOrFile)
         if isdir(f):
-            main(f, dirOrFile, depth + 1, True)
-        if isfile(f):
-            file = dirOrFile
-            aux = file.split('.')
-            if len(aux) == 1:
-                continue
-            name, extension = aux
-            printSectionType(str(name), depth + 1, True)
-            if extension == 'tex':
-                print('\\cfinput{' + str(f) + '}')
-            else:
-                if extension == 'h':
-                    extension = 'cpp'
-                print('\\inputminted{' + extension + '}{"' + str(f) + '"}')
+            main(f, dirOrFile, depth + 1)
+        elif isfile(f):
+            fileName = dirOrFile
+            if re.fullmatch('.+\\.(cpp|c|py|java|tex)', fileName):
+                name, extension = fileName.split('.')
+                printSectionType(str(name), depth + 1, True)
+                if extension == 'tex':
+                    print('\\cfinput{' + str(f) + '}')
+                else:
+                    if extension == 'h':
+                        extension = 'cpp'
+                    print('\\inputminted{' + extension + '}{"' + str(f) + '"}')
 
 
-for directory in sorted(listdir(PATH)):
-    if isdir(join(PATH, directory)):
-        main(join(PATH, directory), directory, 1, True)
+for directory in sorted(listdir(PATH), key=lambda x: x.split('.')[0]):
+    f = join(PATH, directory)
+    if isdir(f):
+        main(f, directory, 1)

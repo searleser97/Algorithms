@@ -18,16 +18,16 @@
 \BOOKMARK [3][-]{subsubsection.1.2.2}{Fast IO}{subsection.1.2}% 18
 \BOOKMARK [3][-]{subsubsection.1.2.3}{Permutations}{subsection.1.2}% 19
 \BOOKMARK [3][-]{subsubsection.1.2.4}{Random}{subsection.1.2}% 20
-\BOOKMARK [3][-]{subsubsection.1.2.5}{Sort List Of Object}{subsection.1.2}% 21
-\BOOKMARK [3][-]{subsubsection.1.2.6}{Sort List}{subsection.1.2}% 22
+\BOOKMARK [3][-]{subsubsection.1.2.5}{Sort List}{subsection.1.2}% 21
+\BOOKMARK [3][-]{subsubsection.1.2.6}{Sort List Of Object}{subsection.1.2}% 22
 \BOOKMARK [1][-]{section.2}{Data Structures}{}% 23
 \BOOKMARK [2][-]{subsection.2.1}{Graphs}{section.2}% 24
 \BOOKMARK [3][-]{subsubsection.2.1.1}{UnionFind}{subsection.2.1}% 25
 \BOOKMARK [2][-]{subsection.2.2}{Ranges}{section.2}% 26
 \BOOKMARK [3][-]{subsubsection.2.2.1}{BIT}{subsection.2.2}% 27
 \BOOKMARK [3][-]{subsubsection.2.2.2}{Interval Tree}{subsection.2.2}% 28
-\BOOKMARK [3][-]{subsubsection.2.2.3}{Segment Tree Lazy Propagation}{subsection.2.2}% 29
-\BOOKMARK [3][-]{subsubsection.2.2.4}{Segment Tree}{subsection.2.2}% 30
+\BOOKMARK [3][-]{subsubsection.2.2.3}{Segment Tree}{subsection.2.2}% 29
+\BOOKMARK [3][-]{subsubsection.2.2.4}{Segment Tree Lazy Propagation}{subsection.2.2}% 30
 \BOOKMARK [3][-]{subsubsection.2.2.5}{Sparse Table}{subsection.2.2}% 31
 \BOOKMARK [2][-]{subsection.2.3}{Strings}{section.2}% 32
 \BOOKMARK [3][-]{subsubsection.2.3.1}{Trie}{subsection.2.3}% 33
