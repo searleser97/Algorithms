@@ -6,7 +6,7 @@
     {
       "label": "build",
       "type": "shell",
-      "command": "/home/san/ProgramFiles/Scripts/aout /home/san/Algorithms/Reference/Data\\ Structures/Ranges/Segment\\ Tree\\ Lazy\\ Propagation.cpp",
+      "command": "/home/san/ProgramFiles/Scripts/aout /home/san/Algorithms/ProblemsSolved/DataStructures/Segment\\ Tree\\ Lazy\\ Propagation/circular_rmq.cpp",
       "group": "build",
       "problemMatcher": []
     }
