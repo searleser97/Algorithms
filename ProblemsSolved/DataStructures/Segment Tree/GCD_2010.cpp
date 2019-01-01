@@ -34,14 +34,13 @@ void updateNode(int i, T val) {
     st[i >> 1] = F(st[i], st[i ^ 1]);
 }
 
-void updateRange();
-
 // O(lg(2N)), [l, r)
 T query(int l, int r) {
   int ans = neutro;
-  for (l += N, r += N; l < r; l >>= 1, r >>= 1) {
+  r--;
+  for (l += N, r += N; l <= r; l >>= 1, r >>= 1) {
     if (l & 1) ans = F(ans, st[l++]);
-    if (r & 1) ans = F(ans, st[--r]);
+    if (~r & 1) ans = F(ans, st[r--]);
   }
   return ans;
 }

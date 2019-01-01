@@ -37,17 +37,17 @@ void updateRange(int l, int r, T val) {
 // O(lg(2N)), [l, r]
 T query(int l, int r) {
   T ans = neutro;
-  for (l += N, r += N + 1; l < r; l >>= 1, r >>= 1) {
+  for (l += N, r += N; l <= r; l >>= 1, r >>= 1) {
     if (l & 1) ans = F(ans, st[l++]);
-    if (r & 1) ans = F(ans, st[--r]);
+    if (~r & 1) ans = F(ans, st[r--]);
   }
   return ans;
 }
 
-void setValAt(T val, unsigned pos) {
+void setValAt(T val, int pos) {
   st[pos + N] = val;
 }
 
-T getValAt(unsigned pos) {
+T getValAt(int pos) {
   return st[pos + N];
 }
