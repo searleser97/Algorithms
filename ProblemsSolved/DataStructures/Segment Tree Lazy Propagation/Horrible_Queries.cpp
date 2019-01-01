@@ -3,8 +3,10 @@
 // neutro = operation neutral val
 // e.g. for sum is 0, for multiplication
 // is 1, for gcd is 0, for min is INF, etc.
-typedef int T;
-T neutro = 0;
+#include <bits/stdc++.h>
+using namespace std;
+typedef long long int T;
+T neutro = 0LL;
 int N, H;
 vector<T> st, d;
 vector<bool> u;
@@ -29,13 +31,13 @@ T kTimesF(T a, T k) {
   // return pow(a, k);  // multiplication
 }
 
-void apply(int i, T val, int k) {
-  st[i] = kTimesF(val, k);
-  if (i < N) d[i] = val, u[i] = 1;
-}
-
 void calc(int i) {
   if (!u[i]) st[i] = F(st[i << 1], st[i << 1 | 1]);
+}
+
+void apply(int i, T val, int k) {
+  st[i] += kTimesF(val, k);
+  if (i < N) d[i] += val, u[i] = 1;
 }
 
 // O(2N)
@@ -44,7 +46,9 @@ void build() {
 }
 
 void build(int p) {
-  while (p > 1) p >>= 1, calc(p);
+  while (p > 1) {
+    p >>= 1, calc(p);
+  }
 }
 
 void push(int p) {
@@ -62,13 +66,13 @@ void push(int p) {
 void modify(int l, int r, T val) {
   push(l += N);
   push(r += N);
-  int ll = l, rr = r, k = 1;
+  int l0 = l, r0 = r, k = 1;
   for (; l <= r; l >>= 1, r >>= 1, k <<= 1) {
     if (l & 1) apply(l++, val, k);
     if (~r & 1) apply(r--, val, k);
   }
-  build(ll);
-  build(rr);
+  build(l0);
+  build(r0);
 }
 
 // [l, r] O(lg(2N))
@@ -89,4 +93,28 @@ void setValAt(T val, int pos) {
 
 T getValAt(int pos) {
   return st[pos + N];
+}
+
+int main() {
+  int t;
+  cin >> t;
+  while (t--) {
+    long long int n, C;
+    cin >> n >> C;
+    initVars(n);
+    while (C--) {
+      long long int opc, p, q;
+      T val;
+      cin >> opc >> p >> q;
+      if (q < p) swap(p, q);
+      if (q > N) q = N;
+      if (opc) {
+        cout << query(p - 1, q - 1) << '\n';
+      } else {
+        cin >> val;
+        modify(p - 1, q - 1, val);
+      }
+    }
+  }
+  return 0;
 }
