@@ -1,4 +1,4 @@
-// st = segment tree, st[1] = root, H = height of d;
+// st = segment tree, st[1] = root, H = height of d
 // u = updates, d = delayed updates
 // neutro = operation neutral val
 // e.g. for sum is 0, for multiplication

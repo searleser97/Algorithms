@@ -1,5 +1,5 @@
 \begin{Verbatim}[commandchars=\\\{\}]
-\PYG{c+c1}{// st = segment tree, st[1] = root, H = height of d;}
+\PYG{c+c1}{// st = segment tree, st[1] = root, H = height of d}
 \PYG{c+c1}{// u = updates, d = delayed updates}
 \PYG{c+c1}{// neutro = operation neutral val}
 \PYG{c+c1}{// e.g. for sum is 0, for multiplication}

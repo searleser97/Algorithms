@@ -37,33 +37,33 @@
 \contentsline {section}{\numberline {3}Graphs}{8}{section.3}
 \contentsline {subsection}{\numberline {3.1}Articulation Points And Bridges}{8}{subsection.3.1}
 \contentsline {subsection}{\numberline {3.2}Connected Components}{8}{subsection.3.2}
-\contentsline {subsection}{\numberline {3.3}Flood Fill}{9}{subsection.3.3}
+\contentsline {subsection}{\numberline {3.3}Flood Fill}{8}{subsection.3.3}
 \contentsline {subsection}{\numberline {3.4}Flow}{9}{subsection.3.4}
 \contentsline {subsubsection}{\numberline {3.4.1}Max Flow Dinic}{9}{subsubsection.3.4.1}
 \contentsline {subsubsection}{\numberline {3.4.2}Maximum Bipartite Matching}{9}{subsubsection.3.4.2}
-\contentsline {subsection}{\numberline {3.5}Has Cycle}{10}{subsection.3.5}
+\contentsline {subsection}{\numberline {3.5}Has Cycle}{9}{subsection.3.5}
 \contentsline {subsection}{\numberline {3.6}Is Bipartite}{10}{subsection.3.6}
 \contentsline {subsection}{\numberline {3.7}LCA}{10}{subsection.3.7}
-\contentsline {subsection}{\numberline {3.8}MST Kruskal}{10}{subsection.3.8}
+\contentsline {subsection}{\numberline {3.8}MST Kruskal}{11}{subsection.3.8}
 \contentsline {subsection}{\numberline {3.9}MST Prim}{11}{subsection.3.9}
-\contentsline {subsection}{\numberline {3.10}ShortestPaths}{11}{subsection.3.10}
-\contentsline {subsubsection}{\numberline {3.10.1}Bellman Ford}{11}{subsubsection.3.10.1}
+\contentsline {subsection}{\numberline {3.10}ShortestPaths}{12}{subsection.3.10}
+\contentsline {subsubsection}{\numberline {3.10.1}Bellman Ford}{12}{subsubsection.3.10.1}
 \contentsline {subsubsection}{\numberline {3.10.2}Dijkstra}{12}{subsubsection.3.10.2}
 \contentsline {subsection}{\numberline {3.11}Strongly Connected Components}{12}{subsection.3.11}
 \contentsline {subsection}{\numberline {3.12}Topological Sort}{13}{subsection.3.12}
 \contentsline {section}{\numberline {4}Maths}{13}{section.4}
 \contentsline {subsection}{\numberline {4.1}Number Theory}{13}{subsection.4.1}
 \contentsline {subsubsection}{\numberline {4.1.1}Divisibility Criterion}{13}{subsubsection.4.1.1}
-\contentsline {subsubsection}{\numberline {4.1.2}Extended Euclidean}{13}{subsubsection.4.1.2}
+\contentsline {subsubsection}{\numberline {4.1.2}Extended Euclidean}{14}{subsubsection.4.1.2}
 \contentsline {subsubsection}{\numberline {4.1.3}GCD}{14}{subsubsection.4.1.3}
 \contentsline {subsubsection}{\numberline {4.1.4}LCM}{14}{subsubsection.4.1.4}
 \contentsline {subsubsection}{\numberline {4.1.5}Prime Check Miller Rabin}{14}{subsubsection.4.1.5}
 \contentsline {subsubsection}{\numberline {4.1.6}Prime Sieve}{14}{subsubsection.4.1.6}
 \contentsline {section}{\numberline {5}Strings}{14}{section.5}
 \contentsline {subsection}{\numberline {5.1}KMP}{14}{subsection.5.1}
-\contentsline {subsection}{\numberline {5.2}Rabin Karp}{14}{subsection.5.2}
+\contentsline {subsection}{\numberline {5.2}Rabin Karp}{15}{subsection.5.2}
 \contentsline {section}{\numberline {6}Techniques}{15}{section.6}
 \contentsline {subsection}{\numberline {6.1}Binary Search}{15}{subsection.6.1}
 \contentsline {subsection}{\numberline {6.2}Multiple Queries}{15}{subsection.6.2}
 \contentsline {subsubsection}{\numberline {6.2.1}Mo}{15}{subsubsection.6.2.1}
-\contentsline {subsubsection}{\numberline {6.2.2}SQRT Decomposition}{15}{subsubsection.6.2.2}
+\contentsline {subsubsection}{\numberline {6.2.2}SQRT Decomposition}{16}{subsubsection.6.2.2}
