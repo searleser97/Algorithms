@@ -7,6 +7,10 @@ vector<int> first;
 vector<T> tour;
 vector<vector<int>> ady;
 
+void initVars(int N) {
+  ady.assign(N, vector<int>());
+}
+
 T F(T a, T b) {
   return a.first < b.first ? a : b;
 }
@@ -16,15 +20,6 @@ void build() {
   st[0] = tour;
   for (int i = 1; (1 << i) <= tour.size(); i++)
     for (int j = 0; j + (1 << i) <= tour.size(); j++) st[i][j] = F(st[i - 1][j], st[i - 1][j + (1 << (i - 1))]);
-}
-
-T query(int l, int r) {
-  int i = log2(r - l + 1);
-  return F(st[i][l], st[i][r + 1 - (1 << i)]);
-}
-
-void initVars(int N) {
-  ady.assign(N, vector<int>());
 }
 
 void eulerTour(int u, int p, int h) {
@@ -47,7 +42,8 @@ void preprocess() {
 int lca(int u, int v) {
   int l = min(first[u], first[v]);
   int r = max(first[u], first[v]);
-  return query(l, r).second;
+  int i = log2(r - l + 1);
+  return F(st[i][l], st[i][r + 1 - (1 << i)]).second;
 }
 
 void addEdge(int u, int v) {
