@@ -39,7 +39,7 @@
   \PYG{n}{eulerTour}\PYG{p}{(}\PYG{l+m+mi}{0}\PYG{p}{,} \PYG{l+m+mi}{0}\PYG{p}{,} \PYG{l+m+mi}{0}\PYG{p}{);}
   \PYG{n}{build}\PYG{p}{();}
 \PYG{p}{\PYGZcb{}}
-
+\PYG{c+c1}{// O(1)}
 \PYG{k+kt}{int} \PYG{n+nf}{lca}\PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{u}\PYG{p}{,} \PYG{k+kt}{int} \PYG{n}{v}\PYG{p}{)} \PYG{p}{\PYGZob{}}
   \PYG{k+kt}{int} \PYG{n}{l} \PYG{o}{=} \PYG{n}{min}\PYG{p}{(}\PYG{n}{first}\PYG{p}{[}\PYG{n}{u}\PYG{p}{],} \PYG{n}{first}\PYG{p}{[}\PYG{n}{v}\PYG{p}{]);}
   \PYG{k+kt}{int} \PYG{n}{r} \PYG{o}{=} \PYG{n}{max}\PYG{p}{(}\PYG{n}{first}\PYG{p}{[}\PYG{n}{u}\PYG{p}{],} \PYG{n}{first}\PYG{p}{[}\PYG{n}{v}\PYG{p}{]);}

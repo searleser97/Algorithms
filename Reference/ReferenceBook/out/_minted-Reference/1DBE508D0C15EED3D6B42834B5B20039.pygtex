@@ -1,14 +1,11 @@
 \begin{Verbatim}[commandchars=\\\{\}]
 \PYG{c+c1}{// APB = articulation points and bridges}
 \PYG{c+c1}{// ap = Articulation Point}
-\PYG{c+c1}{// br = bridges}
-\PYG{c+c1}{// p = parent}
+\PYG{c+c1}{// br = bridges, p = parent}
 \PYG{c+c1}{// disc = discovery time}
-\PYG{c+c1}{// low = lowTime}
-\PYG{c+c1}{// ch = children}
-
+\PYG{c+c1}{// low = lowTime, ch = children}
 \PYG{k}{typedef} \PYG{n}{pair}\PYG{o}{\PYGZlt{}}\PYG{k+kt}{int}\PYG{p}{,} \PYG{k+kt}{int}\PYG{o}{\PYGZgt{}} \PYG{n}{Edge}\PYG{p}{;}
-\PYG{k+kt}{int} \PYG{n}{MAXN} \PYG{o}{=} \PYG{l+m+mi}{101}\PYG{p}{,} \PYG{n}{Time}\PYG{p}{;}
+\PYG{k+kt}{int} \PYG{n}{Time}\PYG{p}{;}
 \PYG{n}{vector}\PYG{o}{\PYGZlt{}}\PYG{n}{vector}\PYG{o}{\PYGZlt{}}\PYG{k+kt}{int}\PYG{o}{\PYGZgt{}\PYGZgt{}} \PYG{n}{ady}\PYG{p}{;}
 \PYG{n}{vector}\PYG{o}{\PYGZlt{}}\PYG{k+kt}{int}\PYG{o}{\PYGZgt{}} \PYG{n}{disc}\PYG{p}{,} \PYG{n}{low}\PYG{p}{,} \PYG{n}{ap}\PYG{p}{;}
 \PYG{n}{vector}\PYG{o}{\PYGZlt{}}\PYG{n}{Edge}\PYG{o}{\PYGZgt{}} \PYG{n}{br}\PYG{p}{;}
@@ -23,8 +20,7 @@
   \PYG{k}{for} \PYG{p}{(}\PYG{k+kt}{int} \PYG{o}{\PYGZam{}}\PYG{n+nl}{v} \PYG{p}{:} \PYG{n}{ady}\PYG{p}{[}\PYG{n}{u}\PYG{p}{])} \PYG{p}{\PYGZob{}}
     \PYG{k}{if} \PYG{p}{(}\PYG{n}{v} \PYG{o}{==} \PYG{n}{p}\PYG{p}{)} \PYG{k}{continue}\PYG{p}{;}
     \PYG{k}{if} \PYG{p}{(}\PYG{o}{!}\PYG{n}{disc}\PYG{p}{[}\PYG{n}{v}\PYG{p}{])} \PYG{p}{\PYGZob{}}
-      \PYG{n}{ch}\PYG{o}{++}\PYG{p}{;}
-      \PYG{n}{dfsAPB}\PYG{p}{(}\PYG{n}{v}\PYG{p}{,} \PYG{n}{u}\PYG{p}{);}
+      \PYG{n}{ch}\PYG{o}{++}\PYG{p}{,} \PYG{n}{dfsAPB}\PYG{p}{(}\PYG{n}{v}\PYG{p}{,} \PYG{n}{u}\PYG{p}{);}
       \PYG{k}{if} \PYG{p}{(}\PYG{n}{disc}\PYG{p}{[}\PYG{n}{u}\PYG{p}{]} \PYG{o}{\PYGZlt{}=} \PYG{n}{low}\PYG{p}{[}\PYG{n}{v}\PYG{p}{])} \PYG{n}{ap}\PYG{p}{[}\PYG{n}{u}\PYG{p}{]}\PYG{o}{++}\PYG{p}{;}
       \PYG{k}{if} \PYG{p}{(}\PYG{n}{disc}\PYG{p}{[}\PYG{n}{u}\PYG{p}{]} \PYG{o}{\PYGZlt{}} \PYG{n}{low}\PYG{p}{[}\PYG{n}{v}\PYG{p}{])} \PYG{n}{br}\PYG{p}{.}\PYG{n}{push\PYGZus{}back}\PYG{p}{(\PYGZob{}}\PYG{n}{u}\PYG{p}{,} \PYG{n}{v}\PYG{p}{\PYGZcb{});}
       \PYG{n}{low}\PYG{p}{[}\PYG{n}{u}\PYG{p}{]} \PYG{o}{=} \PYG{n}{min}\PYG{p}{(}\PYG{n}{low}\PYG{p}{[}\PYG{n}{u}\PYG{p}{],} \PYG{n}{low}\PYG{p}{[}\PYG{n}{v}\PYG{p}{]);}
@@ -33,13 +29,12 @@
   \PYG{p}{\PYGZcb{}}
   \PYG{k}{return} \PYG{n}{ch}\PYG{p}{;}
 \PYG{p}{\PYGZcb{}}
-
 \PYG{c+c1}{// O(N)}
 \PYG{k+kt}{void} \PYG{n+nf}{APB}\PYG{p}{()} \PYG{p}{\PYGZob{}}
   \PYG{n}{br}\PYG{p}{.}\PYG{n}{clear}\PYG{p}{();}
   \PYG{n}{ap} \PYG{o}{=} \PYG{n}{low} \PYG{o}{=} \PYG{n}{disc} \PYG{o}{=} \PYG{n}{vector}\PYG{o}{\PYGZlt{}}\PYG{k+kt}{int}\PYG{o}{\PYGZgt{}}\PYG{p}{(}\PYG{n}{ady}\PYG{p}{.}\PYG{n}{size}\PYG{p}{());}
   \PYG{n}{Time} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{;}
-  \PYG{k}{for} \PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{u} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{;} \PYG{n}{u} \PYG{o}{\PYGZlt{}} \PYG{n}{N}\PYG{p}{;} \PYG{n}{u}\PYG{o}{++}\PYG{p}{)}
+  \PYG{k}{for} \PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{u} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{;} \PYG{n}{u} \PYG{o}{\PYGZlt{}} \PYG{n}{ady}\PYG{p}{.}\PYG{n}{size}\PYG{p}{();} \PYG{n}{u}\PYG{o}{++}\PYG{p}{)}
     \PYG{k}{if} \PYG{p}{(}\PYG{o}{!}\PYG{n}{disc}\PYG{p}{[}\PYG{n}{u}\PYG{p}{])} \PYG{n}{ap}\PYG{p}{[}\PYG{n}{u}\PYG{p}{]} \PYG{o}{=} \PYG{n}{dfsAPB}\PYG{p}{(}\PYG{n}{u}\PYG{p}{,} \PYG{n}{u}\PYG{p}{)} \PYG{o}{\PYGZgt{}} \PYG{l+m+mi}{1}\PYG{p}{;}
 \PYG{p}{\PYGZcb{}}
 

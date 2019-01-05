@@ -23,30 +23,25 @@ T F(T a, T b) {
   // return min(a, b);
 }
 
-T kTimesF(T a, T k) {
-  return a * k;  // sum
-  // return a; // min, max, gcd
-  // return pow(a, k);  // multiplication
-}
-
 void apply(int i, T val, int k) {
-  st[i] = kTimesF(val, k);
+  st[i] = val * k; // sum
+  // st[i] = val; // min, max, gcd
+  // st[i] = pow(a, k); // multiplication
   if (i < N) d[i] = val, u[i] = 1;
 }
 
 void calc(int i) {
   if (!u[i]) st[i] = F(st[i << 1], st[i << 1 | 1]);
 }
-
 // O(2N)
 void build() {
   for (int i = N - 1; i > 0; i--) calc(i);
 }
-
+// O(lg(N))
 void build(int p) {
   while (p > 1) p >>= 1, calc(p);
 }
-
+// O(lg(N))
 void push(int p) {
   for (int s = H, k = 1 << (H - 1); s > 0; s--, k >>= 1) {
     int i = p >> s;
@@ -57,8 +52,7 @@ void push(int p) {
     }
   }
 }
-
-// [l, r] O(lg(2N))
+// O(lg(N)), [l, r]
 void modify(int l, int r, T val) {
   push(l += N);
   push(r += N);
@@ -70,8 +64,7 @@ void modify(int l, int r, T val) {
   build(ll);
   build(rr);
 }
-
-// [l, r] O(lg(2N))
+// O(lg(2N)), [l, r]
 T query(int l, int r) {
   push(l += N);
   push(r += N);
@@ -83,10 +76,10 @@ T query(int l, int r) {
   return ans;
 }
 
-void setValAt(T val, int pos) {
-  st[pos + N] = val;
+void setValAt(T val, int i) {
+  st[i + N] = val;
 }
 
-T getValAt(int pos) {
-  return st[pos + N];
+T getValAt(int i) {
+  return st[i + N];
 }

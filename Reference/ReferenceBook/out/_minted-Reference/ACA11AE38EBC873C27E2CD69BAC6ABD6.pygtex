@@ -11,7 +11,6 @@
   \PYG{p}{\PYGZcb{};}
 
   \PYG{n}{Node} \PYG{o}{*}\PYG{n}{root} \PYG{o}{=} \PYG{k}{new} \PYG{n}{Node}\PYG{p}{();}
-
   \PYG{c+c1}{// O(STR.SIZE)}
   \PYG{k+kt}{void} \PYG{n+nf}{insert}\PYG{p}{(}\PYG{n}{string} \PYG{n}{str}\PYG{p}{)} \PYG{p}{\PYGZob{}}
     \PYG{n}{Node} \PYG{o}{*}\PYG{n}{curr} \PYG{o}{=} \PYG{n}{root}\PYG{p}{;}
@@ -32,7 +31,6 @@
     \PYG{p}{\PYGZcb{}}
     \PYG{k}{return} \PYG{n}{curr}\PYG{p}{;}
   \PYG{p}{\PYGZcb{}}
-
   \PYG{c+c1}{// number of words with given prefix O(N)}
   \PYG{k+kt}{int} \PYG{n+nf}{prefixCount}\PYG{p}{(}\PYG{n}{string} \PYG{n}{prefix}\PYG{p}{)} \PYG{p}{\PYGZob{}}
     \PYG{n}{Node} \PYG{o}{*}\PYG{n}{node} \PYG{o}{=} \PYG{n}{find}\PYG{p}{(}\PYG{n}{prefix}\PYG{p}{);}
@@ -52,7 +50,6 @@
       \PYG{n}{word}\PYG{p}{.}\PYG{n}{pop\PYGZus{}back}\PYG{p}{();}
     \PYG{p}{\PYGZcb{}}
   \PYG{p}{\PYGZcb{}}
-
   \PYG{c+c1}{// O(N)}
   \PYG{n}{vector}\PYG{o}{\PYGZlt{}}\PYG{n}{string}\PYG{o}{\PYGZgt{}} \PYG{n}{getWords}\PYG{p}{()} \PYG{p}{\PYGZob{}}
     \PYG{n}{vector}\PYG{o}{\PYGZlt{}}\PYG{n}{string}\PYG{o}{\PYGZgt{}} \PYG{n}{words}\PYG{p}{;}
@@ -60,7 +57,6 @@
     \PYG{n}{getWords}\PYG{p}{(}\PYG{n}{root}\PYG{p}{,} \PYG{n}{words}\PYG{p}{,} \PYG{n}{word}\PYG{p}{);}
     \PYG{k}{return} \PYG{n}{words}\PYG{p}{;}
   \PYG{p}{\PYGZcb{}}
-
   \PYG{c+c1}{// O(N)}
   \PYG{n}{vector}\PYG{o}{\PYGZlt{}}\PYG{n}{string}\PYG{o}{\PYGZgt{}} \PYG{n}{getWordsByPrefix}\PYG{p}{(}\PYG{n}{string} \PYG{n}{prefix}\PYG{p}{)} \PYG{p}{\PYGZob{}}
     \PYG{n}{vector}\PYG{o}{\PYGZlt{}}\PYG{n}{string}\PYG{o}{\PYGZgt{}} \PYG{n}{words}\PYG{p}{;}
@@ -80,7 +76,6 @@
     \PYG{p}{\PYGZcb{}}
     \PYG{k}{return} \PYG{n+nb}{false}\PYG{p}{;}
   \PYG{p}{\PYGZcb{}}
-
   \PYG{c+c1}{// O(STR.SIZE)}
   \PYG{k+kt}{int} \PYG{n}{remove}\PYG{p}{(}\PYG{n}{string} \PYG{n}{str}\PYG{p}{)} \PYG{p}{\PYGZob{}}
     \PYG{k+kt}{int} \PYG{n}{i} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{;}

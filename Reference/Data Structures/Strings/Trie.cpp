@@ -10,7 +10,6 @@ struct Trie {
   };
 
   Node *root = new Node();
-
   // O(STR.SIZE)
   void insert(string str) {
     Node *curr = root;
@@ -31,7 +30,6 @@ struct Trie {
     }
     return curr;
   }
-
   // number of words with given prefix O(N)
   int prefixCount(string prefix) {
     Node *node = find(prefix);
@@ -51,7 +49,6 @@ struct Trie {
       word.pop_back();
     }
   }
-
   // O(N)
   vector<string> getWords() {
     vector<string> words;
@@ -59,7 +56,6 @@ struct Trie {
     getWords(root, words, word);
     return words;
   }
-
   // O(N)
   vector<string> getWordsByPrefix(string prefix) {
     vector<string> words;
@@ -79,7 +75,6 @@ struct Trie {
     }
     return false;
   }
-
   // O(STR.SIZE)
   int remove(string str) {
     int i = 0;

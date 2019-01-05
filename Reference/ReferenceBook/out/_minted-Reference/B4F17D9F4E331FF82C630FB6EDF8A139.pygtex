@@ -6,7 +6,7 @@
 \PYG{c+c1}{// low = low time}
 \PYG{c+c1}{// s = stack}
 \PYG{c+c1}{// top = top index of the stack}
-\PYG{k+kt}{int} \PYG{n}{MAXN} \PYG{o}{=} \PYG{l+m+mi}{101}\PYG{p}{,} \PYG{n}{Time}\PYG{p}{,} \PYG{n}{top}\PYG{p}{;}
+\PYG{k+kt}{int} \PYG{n}{Time}\PYG{p}{,} \PYG{n}{top}\PYG{p}{;}
 \PYG{n}{vector}\PYG{o}{\PYGZlt{}}\PYG{n}{vector}\PYG{o}{\PYGZlt{}}\PYG{k+kt}{int}\PYG{o}{\PYGZgt{}\PYGZgt{}} \PYG{n}{ady}\PYG{p}{,} \PYG{n}{sccs}\PYG{p}{;}
 \PYG{n}{vector}\PYG{o}{\PYGZlt{}}\PYG{k+kt}{int}\PYG{o}{\PYGZgt{}} \PYG{n}{disc}\PYG{p}{,} \PYG{n}{low}\PYG{p}{,} \PYG{n}{s}\PYG{p}{;}
 
@@ -30,7 +30,6 @@
     \PYG{n}{sccs}\PYG{p}{.}\PYG{n}{push\PYGZus{}back}\PYG{p}{(}\PYG{n}{scc}\PYG{p}{);}
   \PYG{p}{\PYGZcb{}}
 \PYG{p}{\PYGZcb{}}
-
 \PYG{c+c1}{// O(N)}
 \PYG{k+kt}{void} \PYG{n+nf}{SCCS}\PYG{p}{()} \PYG{p}{\PYGZob{}}
   \PYG{n}{s} \PYG{o}{=} \PYG{n}{low} \PYG{o}{=} \PYG{n}{disc} \PYG{o}{=} \PYG{n}{vector}\PYG{o}{\PYGZlt{}}\PYG{k+kt}{int}\PYG{o}{\PYGZgt{}}\PYG{p}{(}\PYG{n}{ady}\PYG{p}{.}\PYG{n}{size}\PYG{p}{());}

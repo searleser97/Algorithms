@@ -123,6 +123,19 @@
 \subsection{Connected Components}
 \subsectionfont{\sffamily}
 \inputminted{cpp}{"/home/san/Algorithms/Reference/Graphs/Connected Components.cpp"}
+\subsection{Cycles}
+\subsubsectionfont{\sffamily\underline}
+\subsubsection{Get All Simple Cycles}
+\subsubsectionfont{\sffamily}
+\inputminted{cpp}{"/home/san/Algorithms/Reference/Graphs/Cycles/Get All Simple Cycles.cpp"}
+\subsubsectionfont{\sffamily\underline}
+\subsubsection{Get Some Cycles}
+\subsubsectionfont{\sffamily}
+\inputminted{cpp}{"/home/san/Algorithms/Reference/Graphs/Cycles/Get Some Cycles.cpp"}
+\subsubsectionfont{\sffamily\underline}
+\subsubsection{Has Cycle}
+\subsubsectionfont{\sffamily}
+\inputminted{cpp}{"/home/san/Algorithms/Reference/Graphs/Cycles/Has Cycle.cpp"}
 \subsectionfont{\sffamily\underline}
 \subsection{Flood Fill}
 \subsectionfont{\sffamily}
@@ -136,10 +149,6 @@
 \subsubsection{Maximum Bipartite Matching}
 \subsubsectionfont{\sffamily}
 \inputminted{cpp}{"/home/san/Algorithms/Reference/Graphs/Flow/Maximum Bipartite Matching.cpp"}
-\subsectionfont{\sffamily\underline}
-\subsection{Has Cycle}
-\subsectionfont{\sffamily}
-\inputminted{cpp}{"/home/san/Algorithms/Reference/Graphs/Has Cycle.cpp"}
 \subsectionfont{\sffamily\underline}
 \subsection{Is Bipartite}
 \subsectionfont{\sffamily}

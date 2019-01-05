@@ -1,3 +1,3 @@
-typedef TYPE ALIAS
-// e.g.
+typedef TYPE ALIAS;
+// example:
 typedef int T;

@@ -8,7 +8,6 @@
   \PYG{n}{vis}\PYG{p}{.}\PYG{n}{assign}\PYG{p}{(}\PYG{n}{N}\PYG{p}{,} \PYG{l+m+mi}{0}\PYG{p}{);}
   \PYG{n}{toposorted}\PYG{p}{.}\PYG{n}{clear}\PYG{p}{();}
 \PYG{p}{\PYGZcb{}}
-
 \PYG{c+c1}{// returns false if there is a cycle}
 \PYG{k+kt}{bool} \PYG{n+nf}{toposort}\PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{u}\PYG{p}{)} \PYG{p}{\PYGZob{}}
   \PYG{n}{vis}\PYG{p}{[}\PYG{n}{u}\PYG{p}{]} \PYG{o}{=} \PYG{l+m+mi}{1}\PYG{p}{;}
@@ -20,13 +19,11 @@
   \PYG{n}{toposorted}\PYG{p}{.}\PYG{n}{push\PYGZus{}back}\PYG{p}{(}\PYG{n}{u}\PYG{p}{);}
   \PYG{k}{return} \PYG{n+nb}{true}\PYG{p}{;}
 \PYG{p}{\PYGZcb{}}
-
 \PYG{c+c1}{// O(N)}
 \PYG{k+kt}{bool} \PYG{n+nf}{toposort}\PYG{p}{()} \PYG{p}{\PYGZob{}}
   \PYG{n}{vis}\PYG{p}{.}\PYG{n}{clear}\PYG{p}{();}
   \PYG{k}{for} \PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{u} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{;} \PYG{n}{u} \PYG{o}{\PYGZlt{}} \PYG{n}{ady}\PYG{p}{.}\PYG{n}{size}\PYG{p}{();} \PYG{n}{u}\PYG{o}{++}\PYG{p}{)}
-    \PYG{k}{if} \PYG{p}{(}\PYG{o}{!}\PYG{n}{vis}\PYG{p}{[}\PYG{n}{u}\PYG{p}{])}
-      \PYG{k}{if} \PYG{p}{(}\PYG{o}{!}\PYG{n}{toposort}\PYG{p}{(}\PYG{n}{u}\PYG{p}{))} \PYG{k}{return} \PYG{n+nb}{false}\PYG{p}{;}
+    \PYG{k}{if} \PYG{p}{(}\PYG{o}{!}\PYG{n}{vis}\PYG{p}{[}\PYG{n}{u}\PYG{p}{]} \PYG{o}{\PYGZam{}\PYGZam{}} \PYG{o}{!}\PYG{n}{toposort}\PYG{p}{(}\PYG{n}{u}\PYG{p}{))} \PYG{k}{return} \PYG{n+nb}{false}\PYG{p}{;}
   \PYG{k}{return} \PYG{n+nb}{true}\PYG{p}{;}
 \PYG{p}{\PYGZcb{}}
 \end{Verbatim}
