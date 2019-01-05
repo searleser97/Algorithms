@@ -1,5 +1,5 @@
 // comp = component
-int MAXN = 26, N, compId = 0;
+int compId;
 vector<vector<int>> ady;
 vector<int> getComp;
 

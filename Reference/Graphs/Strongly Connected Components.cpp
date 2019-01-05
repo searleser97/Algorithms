@@ -5,7 +5,7 @@
 // low = low time
 // s = stack
 // top = top index of the stack
-int MAXN = 101, Time, top;
+int Time, top;
 vector<vector<int>> ady, sccs;
 vector<int> disc, low, s;
 
@@ -29,7 +29,6 @@ void dfsSCCS(int u) {
     sccs.push_back(scc);
   }
 }
-
 // O(N)
 void SCCS() {
   s = low = disc = vector<int>(ady.size());

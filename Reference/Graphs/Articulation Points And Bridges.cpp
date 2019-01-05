@@ -1,13 +1,10 @@
 // APB = articulation points and bridges
 // ap = Articulation Point
-// br = bridges
-// p = parent
+// br = bridges, p = parent
 // disc = discovery time
-// low = lowTime
-// ch = children
-
+// low = lowTime, ch = children
 typedef pair<int, int> Edge;
-int MAXN = 101, Time;
+int Time;
 vector<vector<int>> ady;
 vector<int> disc, low, ap;
 vector<Edge> br;
@@ -22,8 +19,7 @@ int dfsAPB(int u, int p) {
   for (int &v : ady[u]) {
     if (v == p) continue;
     if (!disc[v]) {
-      ch++;
-      dfsAPB(v, u);
+      ch++, dfsAPB(v, u);
       if (disc[u] <= low[v]) ap[u]++;
       if (disc[u] < low[v]) br.push_back({u, v});
       low[u] = min(low[u], low[v]);
@@ -32,13 +28,12 @@ int dfsAPB(int u, int p) {
   }
   return ch;
 }
-
 // O(N)
 void APB() {
   br.clear();
   ap = low = disc = vector<int>(ady.size());
   Time = 0;
-  for (int u = 0; u < N; u++)
+  for (int u = 0; u < ady.size(); u++)
     if (!disc[u]) ap[u] = dfsAPB(u, u) > 1;
 }
 

@@ -38,7 +38,7 @@ void preprocess() {
   eulerTour(0, 0, 0);
   build();
 }
-
+// O(1)
 int lca(int u, int v) {
   int l = min(first[u], first[v]);
   int r = max(first[u], first[v]);

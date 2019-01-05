@@ -1,3 +1,4 @@
+// at least detects one cycle per component
 vector<vector<int>> ady, cycles;
 vector<int> vis, cycle;
 bool flag = false, isDirected = false;
@@ -27,7 +28,6 @@ bool hasCycle(int u, int prev) {
   vis[u] = 2;
   return flag;
 }
-
 // O(N)
 bool hasCycle() {
   for (int u = 0; u < ady.size(); u++)
