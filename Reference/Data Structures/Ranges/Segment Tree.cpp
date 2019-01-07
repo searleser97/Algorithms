@@ -22,11 +22,11 @@ void build() {
   for (int i = N - 1; i > 0; i--) st[i] = F(st[i << 1], st[i << 1 | 1]);
 }
 // O(lg(2N))
-void updateNode(int i, T val) {
+void update(int i, T val) {
   for (st[i += N] = val; i > 1; i >>= 1) st[i >> 1] = F(st[i], st[i ^ 1]);
 }
 // O(3N), [l, r]
-void updateRange(int l, int r, T val) {
+void update(int l, int r, T val) {
   for (l += N, r += N; l <= r; l++) st[l] = val;
   build();
 }

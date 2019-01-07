@@ -25,7 +25,7 @@
 \PYG{p}{\PYGZcb{}}
 \PYG{c+c1}{// O(lg(N))}
 \PYG{k+kt}{void} \PYG{n+nf}{update}\PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{i}\PYG{p}{,} \PYG{n}{T} \PYG{n}{val}\PYG{p}{)} \PYG{p}{\PYGZob{}}
-  \PYG{k}{for} \PYG{p}{(}\PYG{n}{i}\PYG{o}{++}\PYG{p}{;} \PYG{n}{i} \PYG{o}{\PYGZlt{}=} \PYG{n}{bit}\PYG{p}{.}\PYG{n}{size}\PYG{p}{();} \PYG{n}{i} \PYG{o}{+=} \PYG{n}{i} \PYG{o}{\PYGZam{}} \PYG{o}{\PYGZhy{}}\PYG{n}{i}\PYG{p}{)} \PYG{n}{bit}\PYG{p}{[}\PYG{n}{i}\PYG{p}{]} \PYG{o}{=} \PYG{n}{F}\PYG{p}{(}\PYG{n}{bit}\PYG{p}{[}\PYG{n}{i}\PYG{p}{],} \PYG{n}{val}\PYG{p}{);}
+  \PYG{k}{for} \PYG{p}{(}\PYG{n}{i}\PYG{o}{++}\PYG{p}{;} \PYG{n}{i} \PYG{o}{\PYGZlt{}} \PYG{n}{bit}\PYG{p}{.}\PYG{n}{size}\PYG{p}{();} \PYG{n}{i} \PYG{o}{+=} \PYG{n}{i} \PYG{o}{\PYGZam{}} \PYG{o}{\PYGZhy{}}\PYG{n}{i}\PYG{p}{)} \PYG{n}{bit}\PYG{p}{[}\PYG{n}{i}\PYG{p}{]} \PYG{o}{=} \PYG{n}{F}\PYG{p}{(}\PYG{n}{bit}\PYG{p}{[}\PYG{n}{i}\PYG{p}{],} \PYG{n}{val}\PYG{p}{);}
 \PYG{p}{\PYGZcb{}}
 \PYG{c+c1}{// O(lg(N))}
 \PYG{n}{T} \PYG{n+nf}{query}\PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{i}\PYG{p}{)} \PYG{p}{\PYGZob{}}
@@ -33,9 +33,9 @@
   \PYG{k}{for} \PYG{p}{(}\PYG{n}{i}\PYG{o}{++}\PYG{p}{;} \PYG{n}{i} \PYG{o}{\PYGZgt{}} \PYG{l+m+mi}{0}\PYG{p}{;} \PYG{n}{i} \PYG{o}{\PYGZhy{}=} \PYG{n}{i} \PYG{o}{\PYGZam{}} \PYG{o}{\PYGZhy{}}\PYG{n}{i}\PYG{p}{)} \PYG{n}{ans} \PYG{o}{=} \PYG{n}{F}\PYG{p}{(}\PYG{n}{ans}\PYG{p}{,} \PYG{n}{bit}\PYG{p}{[}\PYG{n}{i}\PYG{p}{]);}
   \PYG{k}{return} \PYG{n}{ans}\PYG{p}{;}
 \PYG{p}{\PYGZcb{}}
-\PYG{c+c1}{// O(lg(N))}
+\PYG{c+c1}{// O(lg(N)), [l, r]}
 \PYG{n}{T} \PYG{n+nf}{query}\PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{l}\PYG{p}{,} \PYG{k+kt}{int} \PYG{n}{r}\PYG{p}{)} \PYG{p}{\PYGZob{}}
-  \PYG{k}{return} \PYG{n}{I}\PYG{p}{(}\PYG{n}{query}\PYG{p}{(}\PYG{n}{r}\PYG{p}{),} \PYG{n}{query}\PYG{p}{(}\PYG{n}{l} \PYG{o}{\PYGZhy{}} \PYG{l+m+mi}{1}\PYG{p}{));}
+  \PYG{k}{return} \PYG{n}{I}\PYG{p}{(}\PYG{n}{query}\PYG{p}{(}\PYG{n}{r}\PYG{p}{),} \PYG{n}{query}\PYG{p}{(}\PYG{o}{\PYGZhy{}\PYGZhy{}}\PYG{n}{l}\PYG{p}{));}
 \PYG{p}{\PYGZcb{}}
 
 \PYG{k+kt}{void} \PYG{n+nf}{setValAt}\PYG{p}{(}\PYG{n}{T} \PYG{n}{val}\PYG{p}{,} \PYG{k+kt}{int} \PYG{n}{i}\PYG{p}{)} \PYG{p}{\PYGZob{}}

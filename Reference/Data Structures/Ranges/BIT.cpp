@@ -24,7 +24,7 @@ void build() {
 }
 // O(lg(N))
 void update(int i, T val) {
-  for (i++; i <= bit.size(); i += i & -i) bit[i] = F(bit[i], val);
+  for (i++; i < bit.size(); i += i & -i) bit[i] = F(bit[i], val);
 }
 // O(lg(N))
 T query(int i) {
@@ -32,9 +32,9 @@ T query(int i) {
   for (i++; i > 0; i -= i & -i) ans = F(ans, bit[i]);
   return ans;
 }
-// O(lg(N))
+// O(lg(N)), [l, r]
 T query(int l, int r) {
-  return I(query(r), query(l - 1));
+  return I(query(r), query(--l));
 }
 
 void setValAt(T val, int i) {

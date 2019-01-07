@@ -6,7 +6,7 @@
     {
       "label": "build",
       "type": "shell",
-      "command": "/home/san/ProgramFiles/Scripts/aout /home/san/Algorithms/Reference/Data\\ Structures/Ranges/Segment\\ Tree\\ Lazy\\ Propagation.cpp",
+      "command": "/home/san/ProgramFiles/Scripts/aout /home/san/Algorithms/Reference/Data\\ Structures/Ranges/BIT.cpp",
       "group": "build",
       "problemMatcher": []
     }

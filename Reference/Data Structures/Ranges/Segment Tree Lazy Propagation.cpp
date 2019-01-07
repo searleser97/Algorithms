@@ -53,7 +53,7 @@ void push(int p) {
   }
 }
 // O(lg(N)), [l, r]
-void modify(int l, int r, T val) {
+void update(int l, int r, T val) {
   push(l += N);
   push(r += N);
   int ll = l, rr = r, k = 1;
