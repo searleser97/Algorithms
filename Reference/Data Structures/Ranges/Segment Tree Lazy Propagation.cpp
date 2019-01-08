@@ -11,8 +11,8 @@ vector<bool> u;
 
 void initVars(T n) {
   u.assign(N = n, 0);
-  d.assign(n, neutro);
   st.assign(2 * n, neutro);
+  d = vector<T>(n);
   H = sizeof(int) * 8 - __builtin_clz(n);
 }
 
