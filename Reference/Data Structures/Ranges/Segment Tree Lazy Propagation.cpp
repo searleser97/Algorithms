@@ -79,7 +79,3 @@ T query(int l, int r) {
 void setValAt(T val, int i) {
   st[i + N] = val;
 }
-
-T getValAt(int i) {
-  return st[i + N];
-}
