@@ -8,7 +8,7 @@ void initVars(int N) {
   ady.assign(N, vector<int>());
   weight.clear();
 }
-// O(E * log(V))
+// O(E * lg(V))
 vector<int> dijkstra(int s) {
   vector<set<DistNode>::iterator> pos(ady.size());
   vector<T> dist(ady.size(), INF);

@@ -1,4 +1,4 @@
-This is LuaTeX, Version 1.09.0 (MiKTeX 2.9.6880)  (format=lualatex 2018.12.9)  9 JAN 2019 20:04
+This is LuaTeX, Version 1.09.0 (MiKTeX 2.9.6880)  (format=lualatex 2018.12.9)  9 JAN 2019 21:03
  system commands enabled.
  file:line:error style messages enabled.
 **Reference.tex
@@ -49,7 +49,7 @@ Inserting `luaotfload.aux.set_capheight' at position 3 in `luaotfload.patch_font
 '.
 Inserting `luaotfload.rewrite_fontname' at position 4 in `luaotfload.patch_font'
 .
-luaotfload | main : initialization completed in 0.234 seconds
+luaotfload | main : initialization completed in 0.162 seconds
 (/home/san/.miktex/texmfs/install/tex/latex/base/article.cls
 Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
 (/home/san/.miktex/texmfs/install/tex/latex/base/size10.clo
@@ -952,7 +952,7 @@ home/san/.miktex/texmfs/install/fonts/opentype/public/lm/lmroman10-regular.otf><
 me/san/.miktex/texmfs/install/fonts/opentype/public/lm/lmsans10-regular.otf></ho
 me/san/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmmi5.pfb></home/sa
 n/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmsy5.pfb>
-Output written on Reference.pdf (17 pages, 223137 bytes).
+Output written on Reference.pdf (17 pages, 223143 bytes).
 
 PDF statistics: 512 PDF objects out of 1000 (max. 8388607)
  91 named destinations out of 1000 (max. 131072)
