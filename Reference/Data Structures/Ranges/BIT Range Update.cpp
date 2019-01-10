@@ -6,12 +6,11 @@ void initVars(int n) {
   bit1.assign(++n, neutro);
   bit2 = bit1;
 }
-
 // O(lg(N))
 void update(vector<T> &bit, int i, T val) {
   for (i++; i < bit.size(); i += i & -i) bit[i] += val;
 }
-// O(lg(N))
+// O(lg(N)), [l, r]
 void update(int l, int r, T val) {
   update(bit1, l, val);
   update(bit1, r + 1, -val);
@@ -28,7 +27,7 @@ T query(vector<T> &bit, int i) {
 T query(int i) {
   return query(bit1, i) * i + query(bit2, i);
 }
-// O(lg(N))
+// O(lg(N)), [l, r]
 T query(int l, int r) {
   return query(r) - query(l - 1);
 }

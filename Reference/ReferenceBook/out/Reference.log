@@ -1,4 +1,4 @@
-This is LuaTeX, Version 1.09.0 (MiKTeX 2.9.6880)  (format=lualatex 2018.12.9)  9 JAN 2019 20:00
+This is LuaTeX, Version 1.09.0 (MiKTeX 2.9.6880)  (format=lualatex 2018.12.9)  9 JAN 2019 20:04
  system commands enabled.
  file:line:error style messages enabled.
 **Reference.tex
@@ -49,7 +49,7 @@ Inserting `luaotfload.aux.set_capheight' at position 3 in `luaotfload.patch_font
 '.
 Inserting `luaotfload.rewrite_fontname' at position 4 in `luaotfload.patch_font'
 .
-luaotfload | main : initialization completed in 0.213 seconds
+luaotfload | main : initialization completed in 0.234 seconds
 (/home/san/.miktex/texmfs/install/tex/latex/base/article.cls
 Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
 (/home/san/.miktex/texmfs/install/tex/latex/base/size10.clo
@@ -836,13 +836,13 @@ guage 'english'. Reported on input line 15.
 (./_minted-Reference/B3AC359E0AB84AC85B45132FB8A11646.pygtex
 Package babel Info: No hyphenation patterns were set for
 (babel)             lan
-guage 'english'. Reported on input line 40.
+guage 'english'. Reported on input line 41.
  [6])
 (./_minted-Reference/5DC2EF53AF523B0662261ADB25CD9EF3.pygtex)
 (./_minted-Reference/ACA11AE38EBC873C27E2CD69BAC6ABD6.pygtex
 Package babel Info: No hyphenation patterns were set for
 (babel)             lan
-guage 'english'. Reported on input line 30.
+guage 'english'. Reported on input line 31.
  [7])
 (./_minted-Reference/E1754F672C4BD028D895C730019A3D69.pygtex)
 LaTeX Font Info:    External font `cmex10' loaded for size
@@ -859,7 +859,7 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (./_minted-Reference/4E8B31CE3994AF6ADF91541B2F4B84BF.pygtex
 Package babel Info: No hyphenation patterns were set for
 (babel)             lan
-guage 'english'. Reported on input line 6.
+guage 'english'. Reported on input line 7.
  [8])
 (./_minted-Reference/DFFC9BEA538AEE9117C443CB877445B6.pygtex)
 (./_minted-Reference/FF785550766940221967F03C1A04AF7C.pygtex)
@@ -952,7 +952,7 @@ home/san/.miktex/texmfs/install/fonts/opentype/public/lm/lmroman10-regular.otf><
 me/san/.miktex/texmfs/install/fonts/opentype/public/lm/lmsans10-regular.otf></ho
 me/san/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmmi5.pfb></home/sa
 n/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmsy5.pfb>
-Output written on Reference.pdf (17 pages, 223156 bytes).
+Output written on Reference.pdf (17 pages, 223137 bytes).
 
 PDF statistics: 512 PDF objects out of 1000 (max. 8388607)
  91 named destinations out of 1000 (max. 131072)
