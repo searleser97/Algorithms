@@ -89,6 +89,10 @@
 \subsubsectionfont{\sffamily}
 \inputminted{cpp}{"/home/san/Algorithms/Reference/Data Structures/Ranges/BIT.cpp"}
 \subsubsectionfont{\sffamily\underline}
+\subsubsection{BIT Range Update}
+\subsubsectionfont{\sffamily}
+\inputminted{cpp}{"/home/san/Algorithms/Reference/Data Structures/Ranges/BIT Range Update.cpp"}
+\subsubsectionfont{\sffamily\underline}
 \subsubsection{Interval Tree}
 \subsubsectionfont{\sffamily}
 \inputminted{cpp}{"/home/san/Algorithms/Reference/Data Structures/Ranges/Interval Tree.cpp"}

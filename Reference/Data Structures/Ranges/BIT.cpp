@@ -1,4 +1,4 @@
-typedef int T;
+typedef long long int T;
 T neutro = 0;
 vector<T> bit;
 
@@ -29,7 +29,7 @@ void update(int i, T val) {
 // O(lg(N))
 T query(int i) {
   T ans = neutro;
-  for (i++; i > 0; i -= i & -i) ans = F(ans, bit[i]);
+  for (i++; i; i -= i & -i) ans = F(ans, bit[i]);
   return ans;
 }
 // O(lg(N)), [l, r]

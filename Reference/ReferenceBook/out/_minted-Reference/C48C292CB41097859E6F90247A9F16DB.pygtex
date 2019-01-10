@@ -44,8 +44,4 @@
 \PYG{k+kt}{void} \PYG{n+nf}{setValAt}\PYG{p}{(}\PYG{n}{T} \PYG{n}{val}\PYG{p}{,} \PYG{k+kt}{int} \PYG{n}{i}\PYG{p}{)} \PYG{p}{\PYGZob{}}
   \PYG{n}{st}\PYG{p}{[}\PYG{n}{i} \PYG{o}{+} \PYG{n}{N}\PYG{p}{]} \PYG{o}{=} \PYG{n}{val}\PYG{p}{;}
 \PYG{p}{\PYGZcb{}}
-
-\PYG{n}{T} \PYG{n+nf}{getValAt}\PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{i}\PYG{p}{)} \PYG{p}{\PYGZob{}}
-  \PYG{k}{return} \PYG{n}{st}\PYG{p}{[}\PYG{n}{i} \PYG{o}{+} \PYG{n}{N}\PYG{p}{];}
-\PYG{p}{\PYGZcb{}}
 \end{Verbatim}

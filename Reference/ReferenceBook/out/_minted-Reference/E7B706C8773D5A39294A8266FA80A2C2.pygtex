@@ -1,5 +1,5 @@
 \begin{Verbatim}[commandchars=\\\{\}]
-\PYG{k}{typedef} \PYG{k+kt}{int} \PYG{n}{T}\PYG{p}{;}
+\PYG{k}{typedef} \PYG{k+kt}{long} \PYG{k+kt}{long} \PYG{k+kt}{int} \PYG{n}{T}\PYG{p}{;}
 \PYG{n}{T} \PYG{n}{neutro} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{;}
 \PYG{n}{vector}\PYG{o}{\PYGZlt{}}\PYG{n}{T}\PYG{o}{\PYGZgt{}} \PYG{n}{bit}\PYG{p}{;}
 
@@ -30,7 +30,7 @@
 \PYG{c+c1}{// O(lg(N))}
 \PYG{n}{T} \PYG{n+nf}{query}\PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{i}\PYG{p}{)} \PYG{p}{\PYGZob{}}
   \PYG{n}{T} \PYG{n}{ans} \PYG{o}{=} \PYG{n}{neutro}\PYG{p}{;}
-  \PYG{k}{for} \PYG{p}{(}\PYG{n}{i}\PYG{o}{++}\PYG{p}{;} \PYG{n}{i} \PYG{o}{\PYGZgt{}} \PYG{l+m+mi}{0}\PYG{p}{;} \PYG{n}{i} \PYG{o}{\PYGZhy{}=} \PYG{n}{i} \PYG{o}{\PYGZam{}} \PYG{o}{\PYGZhy{}}\PYG{n}{i}\PYG{p}{)} \PYG{n}{ans} \PYG{o}{=} \PYG{n}{F}\PYG{p}{(}\PYG{n}{ans}\PYG{p}{,} \PYG{n}{bit}\PYG{p}{[}\PYG{n}{i}\PYG{p}{]);}
+  \PYG{k}{for} \PYG{p}{(}\PYG{n}{i}\PYG{o}{++}\PYG{p}{;} \PYG{n}{i}\PYG{p}{;} \PYG{n}{i} \PYG{o}{\PYGZhy{}=} \PYG{n}{i} \PYG{o}{\PYGZam{}} \PYG{o}{\PYGZhy{}}\PYG{n}{i}\PYG{p}{)} \PYG{n}{ans} \PYG{o}{=} \PYG{n}{F}\PYG{p}{(}\PYG{n}{ans}\PYG{p}{,} \PYG{n}{bit}\PYG{p}{[}\PYG{n}{i}\PYG{p}{]);}
   \PYG{k}{return} \PYG{n}{ans}\PYG{p}{;}
 \PYG{p}{\PYGZcb{}}
 \PYG{c+c1}{// O(lg(N)), [l, r]}
