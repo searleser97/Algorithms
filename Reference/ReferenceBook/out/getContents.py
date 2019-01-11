@@ -7,21 +7,42 @@ excluded = set(['ReferenceBook', '.vscode'])
 
 
 def printSectionType(sectionName, depth, isFile):
-    sectionType = ''
-    if depth == 4:
+    vspace = 0
+    if depth == -1:
+        sectionType = 'part'
+        style = '\\Huge\\bfseries\\sffamily'
+        vspace = 5
+    elif depth == 0:
+        sectionType = 'chapter'
+        style = '\\Huge\\bfseries\\sffamily'
+        vspace = 4
+    elif depth == 1:
+        sectionType = 'section'
+        style = '\\Huge\\bfseries\\sffamily'
+        vspace = 2
+    elif depth == 2:
+        sectionType = 'subsection'
+        style = '\\LARGE\\bfseries\\sffamily'
+    elif depth == 3:
+        sectionType = 'subsubsection'
+        style = '\\Large\\bfseries\\sffamily'
+    elif depth == 4:
         sectionType = 'paragraph'
-    if depth == 5:
+        style = '\\large\\bfseries\\sffamily'
+    elif depth == 5:
         sectionType = 'subparagraph'
+        style = '\\large\\bfseries\\sffamily'
+    if isFile:
+        style += '\\underline\\large'
     else:
-        for _ in range(depth - 1):
-            sectionType += 'sub'
-        sectionType += 'section'
-
-    if (isFile):
-        print('\\' + sectionType + 'font{\\sffamily\\underline}')
-    print('\\' + sectionType + '{' + sectionName + '}')
-    if (isFile):
-        print('\\' + sectionType + 'font{\\sffamily}')
+        style += '\\centering'
+    print('\\' + sectionType + 'font{' + style + '}')
+    if vspace:
+        print('\\vspace{' + str(vspace - 1) + 'em}')
+    print('\\' + sectionType + '*{' + sectionName + '}')
+    print('\\addcontentsline{toc}{' + sectionType + '}{' + sectionName + '}')
+    if vspace:
+        print('\\vspace{' + str(vspace) + 'em}')
 
 
 def printFile(path, extension):
@@ -29,7 +50,6 @@ def printFile(path, extension):
         print('\\cfinput{' + path + '}')
     elif extension == 'h':
         extension = 'cpp'
-    # print('\\inputminted{' + extension + '}{"' + path + '"}')
     with open(path, 'r') as f:
         content = str('\\begin{minted}{' + extension + '}\n' + f.read())
     needspaces = re.findall('(?:#|(?://)) ?[1-9][0-9]*', content)
@@ -47,7 +67,8 @@ def printFile(path, extension):
 def main(currPath, currDir, depth):
     if currDir in excluded:
         return
-    printSectionType(currDir, depth, False)
+    printSectionType(currDir, depth, 0)
+    i = 1
     for dirOrFile in sorted(listdir(currPath), key=lambda x: x.split('.')[0].lower()):
         f = join(currPath, dirOrFile)
         if isdir(f):
@@ -56,8 +77,9 @@ def main(currPath, currDir, depth):
             fileName = dirOrFile
             if re.fullmatch('.+\\.(cpp|c|py|java|tex)', fileName):
                 name, extension = fileName.split('.')
-                printSectionType(str(name), depth + 1, True)
+                printSectionType(str(name), depth + 1, i)
                 printFile(str(f), extension)
+        i += 1
 
 
 for directory in sorted(listdir(PATH), key=lambda x: x.split('.')[0].lower()):
