@@ -16,7 +16,7 @@ T F(T a, T b) {
 }
 
 void build() {
-  st.assign(ceil(log2(tour.size())), vector<T>(tour.size()));
+  st.assign(log2(tour.size()), vector<T>(tour.size()));
   st[0] = tour;
   for (int i = 1; (1 << i) <= tour.size(); i++)
     for (int j = 0; j + (1 << i) <= tour.size(); j++) st[i][j] = F(st[i - 1][j], st[i - 1][j + (1 << (i - 1))]);

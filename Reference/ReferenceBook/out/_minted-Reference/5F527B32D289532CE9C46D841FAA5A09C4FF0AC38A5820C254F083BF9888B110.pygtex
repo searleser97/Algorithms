@@ -9,7 +9,7 @@
   \PYG{n}{ady}\PYG{p}{.}\PYG{n}{assign}\PYG{p}{(}\PYG{n}{N}\PYG{p}{,} \PYG{n}{vector}\PYG{o}{\PYGZlt{}}\PYG{k+kt}{int}\PYG{o}{\PYGZgt{}}\PYG{p}{());}
   \PYG{n}{weight}\PYG{p}{.}\PYG{n}{clear}\PYG{p}{();}
 \PYG{p}{\PYGZcb{}}
-\PYG{c+c1}{// O(E * log(V))}
+\PYG{c+c1}{// O(E * lg(V))}
 \PYG{n}{vector}\PYG{o}{\PYGZlt{}}\PYG{k+kt}{int}\PYG{o}{\PYGZgt{}} \PYG{n}{dijkstra}\PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{s}\PYG{p}{)} \PYG{p}{\PYGZob{}}
   \PYG{n}{vector}\PYG{o}{\PYGZlt{}}\PYG{n}{set}\PYG{o}{\PYGZlt{}}\PYG{n}{DistNode}\PYG{o}{\PYGZgt{}::}\PYG{n}{iterator}\PYG{o}{\PYGZgt{}} \PYG{n}{pos}\PYG{p}{(}\PYG{n}{ady}\PYG{p}{.}\PYG{n}{size}\PYG{p}{());}
   \PYG{n}{vector}\PYG{o}{\PYGZlt{}}\PYG{n}{T}\PYG{o}{\PYGZgt{}} \PYG{n}{dist}\PYG{p}{(}\PYG{n}{ady}\PYG{p}{.}\PYG{n}{size}\PYG{p}{(),} \PYG{n}{INF}\PYG{p}{);}

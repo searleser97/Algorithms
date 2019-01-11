@@ -1,0 +1,5 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k+kt}{int} \PYG{n+nf}{IMap}\PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{val}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+  \PYG{k}{return} \PYG{n}{valForInt}\PYG{p}{[}\PYG{n}{val}\PYG{p}{];}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

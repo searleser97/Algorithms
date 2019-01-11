@@ -11,7 +11,7 @@ T F(T a, T b) {
 }
 // O(Nlg(N))
 void build(vector<T> &arr) {
-  st.assign(log2(arr.size() + 1), vector<T>(arr.size()));
+  st.assign(log2(arr.size()), vector<T>(arr.size()));
   st[0] = arr;
   for (int i = 1; (1 << i) <= arr.size(); i++)
     for (int j = 0; j + (1 << i) <= arr.size(); j++) st[i][j] = F(st[i - 1][j], st[i - 1][j + (1 << (i - 1))]);

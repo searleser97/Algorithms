@@ -3,10 +3,10 @@
 // p = pattern
 // t = text
 // pos = positions where pattern is found in text
-
+//2
 int MAXN = 1000000;
 vector<int> f(MAXN + 1);
-
+//12
 vector<int> kmp(string &p, string &t, int cf) {
   vector<int> pos;
   if (cf) f[0] = -1;
@@ -18,7 +18,7 @@ vector<int> kmp(string &p, string &t, int cf) {
   }
   return pos;
 }
-
+//4
 vector<int> search(string &p, string &t) {
   kmp(p, p, -1);        // create error function
   return kmp(p, t, 0);  // search in text

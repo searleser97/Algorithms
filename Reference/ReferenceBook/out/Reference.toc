@@ -8,7 +8,7 @@
 \contentsline {subsubsection}{\numberline {1.1.5}Permutations}{3}{subsubsection.1.1.5}
 \contentsline {subsubsection}{\numberline {1.1.6}Print Vector}{3}{subsubsection.1.1.6}
 \contentsline {subsubsection}{\numberline {1.1.7}Priority Queue Of Object}{3}{subsubsection.1.1.7}
-\contentsline {subsubsection}{\numberline {1.1.8}Random}{3}{subsubsection.1.1.8}
+\contentsline {subsubsection}{\numberline {1.1.8}Random}{4}{subsubsection.1.1.8}
 \contentsline {subsubsection}{\numberline {1.1.9}Read Line}{4}{subsubsection.1.1.9}
 \contentsline {subsubsection}{\numberline {1.1.10}Sort Pair}{4}{subsubsection.1.1.10}
 \contentsline {subsubsection}{\numberline {1.1.11}Sort Vector Of Object}{4}{subsubsection.1.1.11}
@@ -22,19 +22,20 @@
 \contentsline {subsubsection}{\numberline {1.2.5}Sort List}{4}{subsubsection.1.2.5}
 \contentsline {subsubsection}{\numberline {1.2.6}Sort List Of Object}{5}{subsubsection.1.2.6}
 \contentsline {section}{\numberline {2}Data Structures}{5}{section.2}
-\contentsline {subsection}{\numberline {2.1}Graphs}{5}{subsection.2.1}
-\contentsline {subsubsection}{\numberline {2.1.1}UnionFind}{5}{subsubsection.2.1.1}
-\contentsline {subsection}{\numberline {2.2}Ranges}{5}{subsection.2.2}
-\contentsline {subsubsection}{\numberline {2.2.1}BIT}{5}{subsubsection.2.2.1}
-\contentsline {subsubsection}{\numberline {2.2.2}BIT Range Update}{5}{subsubsection.2.2.2}
-\contentsline {subsubsection}{\numberline {2.2.3}Interval Tree}{6}{subsubsection.2.2.3}
-\contentsline {subsubsection}{\numberline {2.2.4}Segment Tree}{6}{subsubsection.2.2.4}
-\contentsline {subsubsection}{\numberline {2.2.5}Segment Tree Lazy Propagation}{6}{subsubsection.2.2.5}
-\contentsline {subsubsection}{\numberline {2.2.6}Sparse Table}{7}{subsubsection.2.2.6}
-\contentsline {subsection}{\numberline {2.3}Strings}{7}{subsection.2.3}
-\contentsline {subsubsection}{\numberline {2.3.1}Trie}{7}{subsubsection.2.3.1}
-\contentsline {subsection}{\numberline {2.4}Trees}{8}{subsection.2.4}
-\contentsline {subsubsection}{\numberline {2.4.1}Treap}{8}{subsubsection.2.4.1}
+\contentsline {subsection}{\numberline {2.1}Geometry}{5}{subsection.2.1}
+\contentsline {subsubsection}{\numberline {2.1.1}K-D Tree}{5}{subsubsection.2.1.1}
+\contentsline {subsection}{\numberline {2.2}Graphs}{5}{subsection.2.2}
+\contentsline {subsubsection}{\numberline {2.2.1}UnionFind}{5}{subsubsection.2.2.1}
+\contentsline {subsection}{\numberline {2.3}Ranges}{5}{subsection.2.3}
+\contentsline {subsubsection}{\numberline {2.3.1}BIT}{5}{subsubsection.2.3.1}
+\contentsline {subsubsection}{\numberline {2.3.2}BIT Range Update}{5}{subsubsection.2.3.2}
+\contentsline {subsubsection}{\numberline {2.3.3}Segment Tree}{6}{subsubsection.2.3.3}
+\contentsline {subsubsection}{\numberline {2.3.4}Segment Tree Lazy Propagation}{6}{subsubsection.2.3.4}
+\contentsline {subsubsection}{\numberline {2.3.5}Sparse Table}{7}{subsubsection.2.3.5}
+\contentsline {subsection}{\numberline {2.4}Strings}{7}{subsection.2.4}
+\contentsline {subsubsection}{\numberline {2.4.1}Trie}{7}{subsubsection.2.4.1}
+\contentsline {subsection}{\numberline {2.5}Trees And Heaps}{8}{subsection.2.5}
+\contentsline {subsubsection}{\numberline {2.5.1}Treap}{8}{subsubsection.2.5.1}
 \contentsline {section}{\numberline {3}Graphs}{8}{section.3}
 \contentsline {subsection}{\numberline {3.1}Articulation Points And Bridges}{8}{subsection.3.1}
 \contentsline {subsection}{\numberline {3.2}Connected Components}{8}{subsection.3.2}

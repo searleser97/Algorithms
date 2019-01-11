@@ -1,13 +1,4 @@
 \begin{Verbatim}[commandchars=\\\{\}]
-\PYG{c+c1}{// f = error function}
-\PYG{c+c1}{// cf = create error function}
-\PYG{c+c1}{// p = pattern}
-\PYG{c+c1}{// t = text}
-\PYG{c+c1}{// pos = positions where pattern is found in text}
-
-\PYG{k+kt}{int} \PYG{n}{MAXN} \PYG{o}{=} \PYG{l+m+mi}{1000000}\PYG{p}{;}
-\PYG{n}{vector}\PYG{o}{\PYGZlt{}}\PYG{k+kt}{int}\PYG{o}{\PYGZgt{}} \PYG{n}{f}\PYG{p}{(}\PYG{n}{MAXN} \PYG{o}{+} \PYG{l+m+mi}{1}\PYG{p}{);}
-
 \PYG{n}{vector}\PYG{o}{\PYGZlt{}}\PYG{k+kt}{int}\PYG{o}{\PYGZgt{}} \PYG{n}{kmp}\PYG{p}{(}\PYG{n}{string} \PYG{o}{\PYGZam{}}\PYG{n}{p}\PYG{p}{,} \PYG{n}{string} \PYG{o}{\PYGZam{}}\PYG{n}{t}\PYG{p}{,} \PYG{k+kt}{int} \PYG{n}{cf}\PYG{p}{)} \PYG{p}{\PYGZob{}}
   \PYG{n}{vector}\PYG{o}{\PYGZlt{}}\PYG{k+kt}{int}\PYG{o}{\PYGZgt{}} \PYG{n}{pos}\PYG{p}{;}
   \PYG{k}{if} \PYG{p}{(}\PYG{n}{cf}\PYG{p}{)} \PYG{n}{f}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{]} \PYG{o}{=} \PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{;}
@@ -18,10 +9,5 @@
     \PYG{k}{if} \PYG{p}{(}\PYG{o}{!}\PYG{n}{cf} \PYG{o}{\PYGZam{}\PYGZam{}} \PYG{n}{i} \PYG{o}{==} \PYG{n}{p}\PYG{p}{.}\PYG{n}{size}\PYG{p}{())} \PYG{n}{pos}\PYG{p}{.}\PYG{n}{push\PYGZus{}back}\PYG{p}{(}\PYG{n}{j} \PYG{o}{\PYGZhy{}} \PYG{n}{i}\PYG{p}{),} \PYG{n}{i} \PYG{o}{=} \PYG{n}{f}\PYG{p}{[}\PYG{n}{i}\PYG{p}{];}
   \PYG{p}{\PYGZcb{}}
   \PYG{k}{return} \PYG{n}{pos}\PYG{p}{;}
-\PYG{p}{\PYGZcb{}}
-
-\PYG{n}{vector}\PYG{o}{\PYGZlt{}}\PYG{k+kt}{int}\PYG{o}{\PYGZgt{}} \PYG{n}{search}\PYG{p}{(}\PYG{n}{string} \PYG{o}{\PYGZam{}}\PYG{n}{p}\PYG{p}{,} \PYG{n}{string} \PYG{o}{\PYGZam{}}\PYG{n}{t}\PYG{p}{)} \PYG{p}{\PYGZob{}}
-  \PYG{n}{kmp}\PYG{p}{(}\PYG{n}{p}\PYG{p}{,} \PYG{n}{p}\PYG{p}{,} \PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{);}        \PYG{c+c1}{// create error function}
-  \PYG{k}{return} \PYG{n+nf}{kmp}\PYG{p}{(}\PYG{n}{p}\PYG{p}{,} \PYG{n}{t}\PYG{p}{,} \PYG{l+m+mi}{0}\PYG{p}{);}  \PYG{c+c1}{// search in text}
 \PYG{p}{\PYGZcb{}}
 \end{Verbatim}

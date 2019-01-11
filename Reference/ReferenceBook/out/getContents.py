@@ -24,6 +24,26 @@ def printSectionType(sectionName, depth, isFile):
         print('\\' + sectionType + 'font{\\sffamily}')
 
 
+def printFile(path, extension):
+    if extension == 'tex':
+        print('\\cfinput{' + path + '}')
+    elif extension == 'h':
+        extension = 'cpp'
+    # print('\\inputminted{' + extension + '}{"' + path + '"}')
+    with open(path, 'r') as f:
+        content = str('\\begin{minted}{' + extension + '}\n' + f.read())
+    needspaces = re.findall('//[1-9][0-9]*', content)
+    for needspace in needspaces:
+        news = ''\
+            '\\end{minted}\n'\
+            '\\vspace{-1em}\n'\
+            '\\needspace{' + needspace[2:] + '\\baselineskip}\n'\
+            '\\begin{minted}{' + extension + '}'
+        content = content.replace(needspace, news)
+    content += '\n\\end{minted}\n'
+    print(content)
+
+
 def main(currPath, currDir, depth):
     if currDir in excluded:
         return
@@ -37,12 +57,7 @@ def main(currPath, currDir, depth):
             if re.fullmatch('.+\\.(cpp|c|py|java|tex)', fileName):
                 name, extension = fileName.split('.')
                 printSectionType(str(name), depth + 1, True)
-                if extension == 'tex':
-                    print('\\cfinput{' + str(f) + '}')
-                else:
-                    if extension == 'h':
-                        extension = 'cpp'
-                    print('\\inputminted{' + extension + '}{"' + str(f) + '"}')
+                printFile(str(f), extension)
 
 
 for directory in sorted(listdir(PATH), key=lambda x: x.split('.')[0]):
