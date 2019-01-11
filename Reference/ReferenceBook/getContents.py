@@ -8,24 +8,17 @@ excluded = set(['ReferenceBook', '.vscode'])
 
 def printSectionType(sectionName, depth, isFile):
     vspace = 0
-    if depth == -1:
-        sectionType = 'part'
-        style = '\\Huge\\bfseries\\sffamily'
-        vspace = 5
-    elif depth == 0:
-        sectionType = 'chapter'
-        style = '\\Huge\\bfseries\\sffamily'
-        vspace = 4
-    elif depth == 1:
+    style = '\\bfseries\\sffamily'
+    if depth == 1:
         sectionType = 'section'
-        style = '\\Huge\\bfseries\\sffamily'
+        style += '\\Huge'
         vspace = 2
     elif depth == 2:
         sectionType = 'subsection'
-        style = '\\LARGE\\bfseries\\sffamily'
+        style += '\\LARGE\\bfseries\\sffamily'
     elif depth == 3:
         sectionType = 'subsubsection'
-        style = '\\Large\\bfseries\\sffamily'
+        style += '\\Large\\bfseries\\sffamily'
     elif depth == 4:
         sectionType = 'paragraph'
         style = '\\large\\bfseries\\sffamily'
@@ -33,7 +26,7 @@ def printSectionType(sectionName, depth, isFile):
         sectionType = 'subparagraph'
         style = '\\large\\bfseries\\sffamily'
     if isFile:
-        style += '\\underline\\large'
+        style += '\\underline\\normalsize'
     else:
         style += '\\centering'
     print('\\' + sectionType + 'font{' + style + '}')
