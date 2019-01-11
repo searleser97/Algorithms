@@ -3,6 +3,7 @@ vector<vector<int>> ady;
 void initVars(int N) {
   ady.assign(N, vector<int>());
 }
+// 19
 // O(N)
 bool isBipartite() {
   vector<int> color(ady.size(), -1);

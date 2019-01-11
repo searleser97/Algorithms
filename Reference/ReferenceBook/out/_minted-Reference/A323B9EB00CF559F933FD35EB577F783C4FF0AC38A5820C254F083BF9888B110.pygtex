@@ -1,0 +1,22 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{// gcd(a, b) = ax + by}
+\PYG{n}{vector}\PYG{o}{\PYGZlt{}}\PYG{k+kt}{long} \PYG{k+kt}{long} \PYG{k+kt}{int}\PYG{o}{\PYGZgt{}} \PYG{n}{extendedGCD}\PYG{p}{(}\PYG{k+kt}{long} \PYG{k+kt}{long} \PYG{k+kt}{int} \PYG{n}{a}\PYG{p}{,} \PYG{k+kt}{long} \PYG{k+kt}{long} \PYG{k+kt}{int} \PYG{n}{b}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+  \PYG{k}{if} \PYG{p}{(}\PYG{n}{a} \PYG{o}{\PYGZgt{}} \PYG{l+m+mi}{0LL} \PYG{o}{\PYGZam{}\PYGZam{}} \PYG{n}{b} \PYG{o}{==} \PYG{l+m+mi}{0LL}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+    \PYG{k}{return} \PYG{p}{\PYGZob{}}\PYG{n}{a}\PYG{p}{,} \PYG{l+m+mi}{1LL}\PYG{p}{,} \PYG{l+m+mi}{0LL}\PYG{p}{\PYGZcb{};}
+  \PYG{p}{\PYGZcb{}}
+  \PYG{k+kt}{long} \PYG{k+kt}{long} \PYG{k+kt}{int} \PYG{n}{x} \PYG{o}{=} \PYG{l+m+mi}{1LL}\PYG{p}{,} \PYG{n}{y} \PYG{o}{=} \PYG{l+m+mi}{0LL}\PYG{p}{,} \PYG{n}{prevx} \PYG{o}{=} \PYG{l+m+mi}{0LL}\PYG{p}{,} \PYG{n}{prevy} \PYG{o}{=} \PYG{l+m+mi}{1LL}\PYG{p}{,} \PYG{n}{q}\PYG{p}{,} \PYG{n}{remainder}\PYG{p}{;}
+  \PYG{k}{while} \PYG{p}{(}\PYG{n+nb}{true}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+    \PYG{n}{q} \PYG{o}{=} \PYG{n}{a} \PYG{o}{/} \PYG{n}{b}\PYG{p}{;}
+    \PYG{n}{remainder} \PYG{o}{=} \PYG{n}{a} \PYG{o}{\PYGZhy{}} \PYG{n}{b} \PYG{o}{*} \PYG{n}{q}\PYG{p}{;}
+    \PYG{k}{if} \PYG{p}{(}\PYG{n}{remainder} \PYG{o}{==} \PYG{l+m+mi}{0LL}\PYG{p}{)} \PYG{k}{break}\PYG{p}{;}
+    \PYG{n}{a} \PYG{o}{=} \PYG{n}{b}\PYG{p}{;}
+    \PYG{n}{b} \PYG{o}{=} \PYG{n}{remainder}\PYG{p}{;}
+    \PYG{n}{x} \PYG{o}{=} \PYG{n}{x} \PYG{o}{\PYGZhy{}} \PYG{n}{prevx} \PYG{o}{*} \PYG{n}{q}\PYG{p}{;}
+    \PYG{n}{swap}\PYG{p}{(}\PYG{n}{x}\PYG{p}{,} \PYG{n}{prevx}\PYG{p}{);}
+    \PYG{n}{y} \PYG{o}{=} \PYG{n}{y} \PYG{o}{\PYGZhy{}} \PYG{n}{prevy} \PYG{o}{*} \PYG{n}{q}\PYG{p}{;}
+    \PYG{n}{swap}\PYG{p}{(}\PYG{n}{y}\PYG{p}{,} \PYG{n}{prevy}\PYG{p}{);}
+  \PYG{p}{\PYGZcb{}}
+  \PYG{c+c1}{// gcd = b, x = prevx, y = prevy}
+  \PYG{k}{return} \PYG{p}{\PYGZob{}}\PYG{n}{b}\PYG{p}{,} \PYG{n}{prevx}\PYG{p}{,} \PYG{n}{prevy}\PYG{p}{\PYGZcb{};}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

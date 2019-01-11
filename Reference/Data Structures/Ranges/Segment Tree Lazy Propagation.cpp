@@ -9,35 +9,39 @@ struct SegmentTree {
   int N, H;
   vector<T> st, d;
   vector<bool> u;
+  // 3
   SegmentTree(int n) : st(2 * n, neutro), d(n), u(n, 0) {
     H = sizeof(int) * 8 - __builtin_clz(N = n);
   }
-
+  // 6
   T F(T a, T b) {
     return a + b;
     // return __gcd(a, b);
     // return a * b;
     // return min(a, b);
   }
-
+  // 6
   void apply(int i, T val, int k) {
     st[i] = val * k;  // sum
     // st[i] = val; // min, max, gcd
     // st[i] = pow(a, k); // multiplication
     if (i < N) d[i] = val, u[i] = 1;
   }
-
+  // 3
   void calc(int i) {
     if (!u[i]) st[i] = F(st[i << 1], st[i << 1 | 1]);
   }
+  // 4
   // O(2N)
   void build() {
     for (int i = N - 1; i > 0; i--) calc(i);
   }
+  // 4
   // O(lg(N))
   void build(int p) {
     while (p > 1) p >>= 1, calc(p);
   }
+  // 11
   // O(lg(N))
   void push(int p) {
     for (int s = H, k = 1 << (H - 1); s > 0; s--, k >>= 1) {
@@ -49,6 +53,7 @@ struct SegmentTree {
       }
     }
   }
+  // 12
   // O(lg(N)), [l, r]
   void update(int l, int r, T val) {
     push(l += N);
@@ -61,6 +66,7 @@ struct SegmentTree {
     build(ll);
     build(rr);
   }
+  // 11
   // O(lg(2N)), [l, r]
   T query(int l, int r) {
     push(l += N);
@@ -72,7 +78,7 @@ struct SegmentTree {
     }
     return ans;
   }
-
+  // 4
   void setValAt(T val, int i) {
     st[i + N] = val;
   }

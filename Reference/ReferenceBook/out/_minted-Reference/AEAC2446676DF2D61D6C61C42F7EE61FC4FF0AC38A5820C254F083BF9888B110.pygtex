@@ -1,0 +1,11 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+  \PYG{c+c1}{// O(N)}
+  \PYG{k+kt}{void} \PYG{n+nf}{getWords}\PYG{p}{(}\PYG{n}{Node} \PYG{o}{*}\PYG{n}{curr}\PYG{p}{,} \PYG{n}{vector}\PYG{o}{\PYGZlt{}}\PYG{n}{string}\PYG{o}{\PYGZgt{}} \PYG{o}{\PYGZam{}}\PYG{n}{words}\PYG{p}{,} \PYG{n}{string} \PYG{o}{\PYGZam{}}\PYG{n}{word}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+    \PYG{k}{if} \PYG{p}{(}\PYG{o}{!}\PYG{n}{curr}\PYG{p}{)} \PYG{k}{return}\PYG{p}{;}
+    \PYG{k}{if} \PYG{p}{(}\PYG{n}{curr}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{w}\PYG{p}{)} \PYG{n}{words}\PYG{p}{.}\PYG{n}{push\PYGZus{}back}\PYG{p}{(}\PYG{n}{word}\PYG{p}{);}
+    \PYG{k}{for} \PYG{p}{(}\PYG{k}{auto} \PYG{o}{\PYGZam{}}\PYG{n+nl}{c} \PYG{p}{:} \PYG{n}{curr}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{ch}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+      \PYG{n}{getWords}\PYG{p}{(}\PYG{n}{c}\PYG{p}{.}\PYG{n}{second}\PYG{p}{,} \PYG{n}{words}\PYG{p}{,} \PYG{n}{word} \PYG{o}{+=} \PYG{n}{c}\PYG{p}{.}\PYG{n}{first}\PYG{p}{);}
+      \PYG{n}{word}\PYG{p}{.}\PYG{n}{pop\PYGZus{}back}\PYG{p}{();}
+    \PYG{p}{\PYGZcb{}}
+  \PYG{p}{\PYGZcb{}}
+\end{Verbatim}

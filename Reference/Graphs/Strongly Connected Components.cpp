@@ -8,11 +8,11 @@
 int Time, top;
 vector<vector<int>> ady, sccs;
 vector<int> disc, low, s;
-
+// 3
 void initVars(int N) {
   ady.assign(N, vector<int>());
 }
-
+// 17
 void dfsSCCS(int u) {
   if (disc[u]) return;
   low[u] = disc[u] = ++Time;
@@ -29,13 +29,14 @@ void dfsSCCS(int u) {
     sccs.push_back(scc);
   }
 }
+// 6
 // O(N)
 void SCCS() {
   s = low = disc = vector<int>(ady.size());
   Time = 0, top = -1, sccs.clear();
   for (int u = 0; u < ady.size(); u++) dfsSCCS(u);
 }
-
+// 3
 void addEdge(int u, int v) {
   ady[u].push_back(v);
 }

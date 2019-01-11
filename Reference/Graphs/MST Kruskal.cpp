@@ -6,13 +6,13 @@ typedef pair<T, Edge> Wedge;
 vector<Wedge> Wedges;
 vector<Wedge> mst;
 UnionFind uf(0);
-
+// 4
 void initVars(int N) {
   mst.clear();
   Wedges.clear();
   uf = UnionFind(N);
 }
-
+// 12
 T kruskal() {
   T cost = 0;
   sort(Wedges.begin(), Wedges.end());
@@ -23,7 +23,7 @@ T kruskal() {
   }
   return cost;
 }
-
+// 3
 void addEdge(int u, int v, T w) {
   Wedges.push_back({w, {u, v}});
 }

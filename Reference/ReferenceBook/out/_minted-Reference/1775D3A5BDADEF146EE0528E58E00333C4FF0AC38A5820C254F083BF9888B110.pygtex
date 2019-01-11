@@ -1,0 +1,7 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+  \PYG{c+c1}{// number of words with given prefix O(N)}
+  \PYG{k+kt}{int} \PYG{n+nf}{prefixCount}\PYG{p}{(}\PYG{n}{string} \PYG{n}{prefix}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+    \PYG{n}{Node} \PYG{o}{*}\PYG{n}{node} \PYG{o}{=} \PYG{n}{find}\PYG{p}{(}\PYG{n}{prefix}\PYG{p}{);}
+    \PYG{k}{return} \PYG{n}{node} \PYG{o}{?} \PYG{n}{node}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n+nl}{wpt} \PYG{p}{:} \PYG{l+m+mi}{0}\PYG{p}{;}
+  \PYG{p}{\PYGZcb{}}
+\end{Verbatim}

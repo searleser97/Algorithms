@@ -3,14 +3,15 @@ vector<vector<int>> ady, cycles;
 vector<int> vis, cycle;
 bool flag = false, isDirected = false;
 int root = -1;
-
+// 6
 void initVars(int N) {
   ady.assign(N, vector<int>());
   vis.assign(N, 0);
   cycles.clear();
   root = -1, flag = false;
 }
-
+// 20
+// O(N)
 bool hasCycle(int u, int prev) {
   vis[u] = 1;
   for (auto &v : ady[u]) {
@@ -28,13 +29,14 @@ bool hasCycle(int u, int prev) {
   vis[u] = 2;
   return flag;
 }
+// 6
 // O(N)
 bool hasCycle() {
   for (int u = 0; u < ady.size(); u++)
     if (!vis[u]) cycle.clear(), hasCycle(u, -1);
   return cycles.size() > 0;
 }
-
+// 4
 void addEdge(int u, int v) {
   ady[u].push_back(v);
   if (!isDirected) ady[v].push_back(u);

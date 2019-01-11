@@ -1,0 +1,6 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{// wpt = number of words passing through}
+\PYG{c+c1}{// w = number of words ending in the node}
+\PYG{c+c1}{// c = character}
+\PYG{k}{struct} \PYG{n}{Trie} \PYG{p}{\PYGZob{}}
+\end{Verbatim}

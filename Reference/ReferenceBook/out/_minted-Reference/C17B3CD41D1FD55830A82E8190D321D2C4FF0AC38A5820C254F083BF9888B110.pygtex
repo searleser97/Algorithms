@@ -1,0 +1,5 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k+kt}{void} \PYG{n+nf}{setValAt}\PYG{p}{(}\PYG{n}{T} \PYG{n}{val}\PYG{p}{,} \PYG{k+kt}{int} \PYG{n}{i}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+  \PYG{n}{bit}\PYG{p}{[}\PYG{o}{++}\PYG{n}{i}\PYG{p}{]} \PYG{o}{=} \PYG{n}{val}\PYG{p}{;}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

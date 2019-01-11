@@ -1,0 +1,13 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n}{vector}\PYG{o}{\PYGZlt{}}\PYG{k+kt}{int}\PYG{o}{\PYGZgt{}} \PYG{n}{rabinKarp}\PYG{p}{(}\PYG{n}{RollingHash} \PYG{o}{\PYGZam{}}\PYG{n}{rhStr}\PYG{p}{,} \PYG{n}{string} \PYG{o}{\PYGZam{}}\PYG{n}{pattern}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+  \PYG{n}{vector}\PYG{o}{\PYGZlt{}}\PYG{k+kt}{int}\PYG{o}{\PYGZgt{}} \PYG{n}{positions}\PYG{p}{;}
+  \PYG{n}{RollingHash} \PYG{n+nf}{rhPattern}\PYG{p}{(}\PYG{n}{pattern}\PYG{p}{);}
+  \PYG{k+kt}{unsigned} \PYG{k+kt}{long} \PYG{k+kt}{long} \PYG{k+kt}{int} \PYG{n}{patternHash} \PYG{o}{=} \PYG{n}{rhPattern}\PYG{p}{.}\PYG{n}{getWordHash}\PYG{p}{();}
+  \PYG{k+kt}{int} \PYG{n}{windowSize} \PYG{o}{=} \PYG{n}{pattern}\PYG{p}{.}\PYG{n}{size}\PYG{p}{(),} \PYG{n}{end} \PYG{o}{=} \PYG{n}{windowSize}\PYG{p}{;}
+  \PYG{k}{for} \PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{i} \PYG{o}{=} \PYG{l+m+mi}{1}\PYG{p}{;} \PYG{n}{end} \PYG{o}{\PYGZlt{}} \PYG{n}{rhStr}\PYG{p}{.}\PYG{n}{size}\PYG{p}{();} \PYG{n}{i}\PYG{o}{++}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+    \PYG{k}{if} \PYG{p}{(}\PYG{n}{patternHash} \PYG{o}{==} \PYG{n}{rhStr}\PYG{p}{.}\PYG{n}{getSubstrHash}\PYG{p}{(}\PYG{n}{i}\PYG{p}{,} \PYG{n}{end}\PYG{p}{))} \PYG{n}{positions}\PYG{p}{.}\PYG{n}{push\PYGZus{}back}\PYG{p}{(}\PYG{n}{i}\PYG{p}{);}
+    \PYG{n}{end} \PYG{o}{=} \PYG{n}{i} \PYG{o}{+} \PYG{n}{windowSize}\PYG{p}{;}
+  \PYG{p}{\PYGZcb{}}
+  \PYG{k}{return} \PYG{n}{positions}\PYG{p}{;}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

@@ -3,6 +3,7 @@ class RollingHash {
   vector<unsigned long long int> pow;
   vector<unsigned long long int> hash;
   unsigned long long int B;
+  // 13
   RollingHash(const string &text) : B(257) {
     int N = text.size();
     pow.resize(N + 1);
@@ -16,20 +17,20 @@ class RollingHash {
       hash[i] = hash[i - 1] * B + text[i - 1];
     }
   }
-
+  // 3
   unsigned long long int getWordHash() {
     return hash[hash.size() - 1];
   }
-
+  // 5
   unsigned long long int getSubstrHash(int begin, int end) {
     return hash[end] - hash[begin - 1] * pow[end - begin + 1];
   }
-
+  // 4
   int size() {
     return hash.size();
   }
 };
-
+// 11
 vector<int> rabinKarp(RollingHash &rhStr, string &pattern) {
   vector<int> positions;
   RollingHash rhPattern(pattern);

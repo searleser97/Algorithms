@@ -1,0 +1,13 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{// st = segment tree, st[1] = root, H = height of d}
+\PYG{c+c1}{// u = updates, d = delayed updates}
+\PYG{c+c1}{// neutro = operation neutral val}
+\PYG{c+c1}{// e.g. for sum is 0, for multiplication}
+\PYG{c+c1}{// is 1, for gcd is 0, for min is INF, etc.}
+\PYG{k}{template} \PYG{o}{\PYGZlt{}}\PYG{k}{class} \PYG{n+nc}{T}\PYG{o}{\PYGZgt{}}
+\PYG{k}{struct} \PYG{n}{SegmentTree} \PYG{p}{\PYGZob{}}
+  \PYG{n}{T} \PYG{n}{neutro} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{;}
+  \PYG{k+kt}{int} \PYG{n}{N}\PYG{p}{,} \PYG{n}{H}\PYG{p}{;}
+  \PYG{n}{vector}\PYG{o}{\PYGZlt{}}\PYG{n}{T}\PYG{o}{\PYGZgt{}} \PYG{n}{st}\PYG{p}{,} \PYG{n}{d}\PYG{p}{;}
+  \PYG{n}{vector}\PYG{o}{\PYGZlt{}}\PYG{k+kt}{bool}\PYG{o}{\PYGZgt{}} \PYG{n}{u}\PYG{p}{;}
+\end{Verbatim}

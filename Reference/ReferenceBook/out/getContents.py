@@ -32,12 +32,12 @@ def printFile(path, extension):
     # print('\\inputminted{' + extension + '}{"' + path + '"}')
     with open(path, 'r') as f:
         content = str('\\begin{minted}{' + extension + '}\n' + f.read())
-    needspaces = re.findall('//[1-9][0-9]*', content)
+    needspaces = re.findall('(?:#|(?://)) ?[1-9][0-9]*', content)
     for needspace in needspaces:
         news = ''\
             '\\end{minted}\n'\
             '\\vspace{-1em}\n'\
-            '\\needspace{' + needspace[2:] + '\\baselineskip}\n'\
+            '\\needspace{' + needspace[2:].strip() + '\\baselineskip}\n'\
             '\\begin{minted}{' + extension + '}'
         content = content.replace(needspace, news)
     content += '\n\\end{minted}\n'
@@ -48,7 +48,7 @@ def main(currPath, currDir, depth):
     if currDir in excluded:
         return
     printSectionType(currDir, depth, False)
-    for dirOrFile in sorted(listdir(currPath), key=lambda x: x.split('.')[0]):
+    for dirOrFile in sorted(listdir(currPath), key=lambda x: x.split('.')[0].lower()):
         f = join(currPath, dirOrFile)
         if isdir(f):
             main(f, dirOrFile, depth + 1)
@@ -60,7 +60,7 @@ def main(currPath, currDir, depth):
                 printFile(str(f), extension)
 
 
-for directory in sorted(listdir(PATH), key=lambda x: x.split('.')[0]):
+for directory in sorted(listdir(PATH), key=lambda x: x.split('.')[0].lower()):
     f = join(PATH, directory)
     if isdir(f):
         main(f, directory, 1)

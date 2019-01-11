@@ -1,3 +1,4 @@
+# 13
 def divisorCriteria(n, lim):
     results = []
     tenElevated = 1
@@ -13,6 +14,7 @@ def divisorCriteria(n, lim):
     return results
 
 
+# 14
 def testDivisibility(dividend, divisor, divisor_criteria):
     dividend = str(dividend)
     addition = 0
@@ -26,6 +28,7 @@ def testDivisibility(dividend, divisor, divisor_criteria):
     return addition % divisor == 0
 
 
+# 7
 if __name__ == '__main__':
     dividend, divisor = map(int, input().split())
     divisor_criteria = divisorCriteria(divisor, len(str(dividend)))

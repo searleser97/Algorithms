@@ -3,11 +3,12 @@ typedef pair<T, int> DistNode;
 int MAXN = 20001, INF = 1 << 30, isDirected = false;
 vector<vector<int>> ady;
 unordered_map<int, unordered_map<int, T>> weight;
-
+// 4
 void initVars(int N) {
   ady.assign(N, vector<int>());
   weight.clear();
 }
+// 20
 // O(E * lg(V))
 vector<int> dijkstra(int s) {
   vector<set<DistNode>::iterator> pos(ady.size());
@@ -27,7 +28,7 @@ vector<int> dijkstra(int s) {
   }
   return dist;
 }
-
+// 17
 vector<int> dijkstraLazy(int s) {
   vector<int> dist(ady.size(), INF);
   priority_queue<DistNode, vector<DistNode>, greater<DistNode>> q;
@@ -43,7 +44,7 @@ vector<int> dijkstraLazy(int s) {
   }
   return dist;
 }
-
+// 7
 void addEdge(int u, int v, T w) {
   ady[u].push_back(v);
   weight[u][v] = w;

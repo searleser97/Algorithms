@@ -10,7 +10,7 @@ unordered_map<int, unordered_map<int, T>> weight;
 vector<int> p, vis;
 vector<T> dist;
 vector<vector<Wedge>> msts;
-
+// 8
 void initVars(int N) {
   ady.assign(N, vector<int>());
   p.assign(N, 0);
@@ -19,7 +19,8 @@ void initVars(int N) {
   weight.clear();
   msts.clear();
 }
-
+// 25
+// O(E * log(V))
 T prim(int s) {
   vector<Wedge> mst;
   vector<set<Edge>::iterator> pos(ady.size());
@@ -43,7 +44,7 @@ T prim(int s) {
   msts.push_back(vector<Wedge>(mst.begin() + 1, mst.end()));
   return cost;
 }
-
+// 25
 T primLazy(int s) {
   vector<Wedge> mst;
   vector<set<Edge>::iterator> pos(ady.size());
@@ -66,6 +67,7 @@ T primLazy(int s) {
   msts.push_back(vector<Wedge>(mst.begin() + 1, mst.end()));
   return cost;
 }
+// 8
 // O(V + E * log(V))
 T prim() {
   T cost = 0;
@@ -74,7 +76,7 @@ T prim() {
     if (!vis[i]) cost += prim(i);
   return cost;
 }
-
+// 6
 void addEdge(int u, int v, T w) {
   ady[u].push_back(v);
   weight[u][v] = w;

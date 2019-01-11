@@ -1,40 +1,39 @@
 // sum of elements in range
-#include <bits/stdc++.h>
+int neutro = 0;
 
-using namespace std;
-
-int N, blksize;
-int MAXN = 100, MAXSQR = (int)sqrt(MAXN);
-
-vector<int> arr(MAXN);
-vector<int> blks(MAXSQR + 1);
-
+vector<int> arr;
+vector<int> blks;
+// 4
+void initVars(int n) {
+  arr.assign(n, neutro);
+  blks.assign(sqrt(n), neutro);
+}
+// 5
 void preprocess() {
-  blksize = sqrt(N);
-  for (int i = 0, j = 0; i < N; i++) {
-    if (i == blksize * j) j++;
+  for (int i = 0, j = 0; i < arr.size(); i++) {
+    if (i == blks.size() * j) j++;
     blks[j - 1] += arr[i];  // problem specific
   }
 }
-
+// 4
 // problem specific
 void update(int i, int val) {
-  blks[i / blksize] += val - arr[i];
+  blks[i / blks.size()] += val - arr[i];
   arr[i] = val;
 }
-
+// 19
 int query(int l, int r) {
   int sum = 0;
-  int lblk = l / blksize;
-  if (l != blksize * lblk++)
-    while (l < r && l != lblk * blksize) {
+  int lblk = l / blks.size();
+  if (l != blks.size() * lblk++)
+    while (l < r && l != lblk * blks.size()) {
       sum += arr[l];  // problem specific
       l++;
     }
 
-  while (l + blksize <= r) {
-    sum += blks[l / blksize];  // problem specific
-    l += blksize;
+  while (l + blks.size() <= r) {
+    sum += blks[l / blks.size()];  // problem specific
+    l += blks.size();
   }
   while (l <= r) {
     sum += arr[l];  // problem specific
@@ -42,19 +41,18 @@ int query(int l, int r) {
   }
   return sum;
 }
-
+// 15
 int main() {
-  N = 10;
+  initVars(10);
   arr = {1, 5, 2, 4, 6, 1, 3, 5, 7, 10};
   preprocess();
-  for (int i = 0; i < blksize + 1; i++)
-    cout << blks[i] << " ";
-  // 8 11 15 10
+  for (int i = 0; i < blks.size() + 1; i++) cout << blks[i] << " ";
+  // output: 8 11 15 10
   cout << endl;
   cout << query(3, 8) << " ";
   cout << query(1, 6) << " ";
   update(8, 0);
   cout << query(8, 8) << endl;
-  // 26 21 0
+  // output: 26 21 0
   return 0;
 }

@@ -1,3 +1,4 @@
+// 9
 vector<int> primeSieve(int n) {
   vector<int> sieve(n + 1);
   for (int i = 4; i <= n; i += 2) sieve[i] = 2;

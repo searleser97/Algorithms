@@ -2,6 +2,8 @@
 // w = number of words ending in the node
 // c = character
 struct Trie {
+  
+  //6
   struct Node {
     // for lexicographical order use 'map'
     // map<char, Node *> ch;
@@ -10,6 +12,7 @@ struct Trie {
   };
 
   Node *root = new Node();
+  //11
   // O(STR.SIZE)
   void insert(string str) {
     Node *curr = root;
@@ -21,7 +24,8 @@ struct Trie {
     curr->wpt++;
     curr->w++;
   }
-
+  //9
+  // O(STR.SIZE)
   Node *find(string &str) {
     Node *curr = root;
     for (auto &c : str) {
@@ -30,17 +34,20 @@ struct Trie {
     }
     return curr;
   }
+  //5
   // number of words with given prefix O(N)
   int prefixCount(string prefix) {
     Node *node = find(prefix);
     return node ? node->wpt : 0;
   }
+  //5
   // number of words matching str O(N)
   int strCount(string str) {
     Node *node = find(str);
     return node ? node->w : 0;
   }
-
+  //9
+  // O(N)
   void getWords(Node *curr, vector<string> &words, string &word) {
     if (!curr) return;
     if (curr->w) words.push_back(word);
@@ -49,6 +56,7 @@ struct Trie {
       word.pop_back();
     }
   }
+  //7
   // O(N)
   vector<string> getWords() {
     vector<string> words;
@@ -56,12 +64,14 @@ struct Trie {
     getWords(root, words, word);
     return words;
   }
+  //5
   // O(N)
   vector<string> getWordsByPrefix(string prefix) {
     vector<string> words;
     getWords(find(prefix), words, prefix);
   }
-
+  //14
+  // O(STR.SIZE)
   bool remove(Node *curr, string &str, int &i) {
     if (i == str.size()) {
       curr->wpt--;
@@ -75,6 +85,7 @@ struct Trie {
     }
     return false;
   }
+  //6
   // O(STR.SIZE)
   int remove(string str) {
     int i = 0;

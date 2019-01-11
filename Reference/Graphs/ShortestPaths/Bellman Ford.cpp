@@ -4,11 +4,12 @@ typedef int T;
 int MAXN = 20001, N, INF = 1 << 30, isDirected = true;
 vector<vector<int>> ady;
 unordered_map<int, unordered_map<int, T>> weight;
-
+// 4
 void initVars(int N) {
   ady.assign(N, vector<int>());
   weight.clear();
 }
+// 15
 // O(V * E)
 vector<T> bellmanFord(int s) {
   vector<T> dist(ady.size(), INF);
@@ -24,7 +25,7 @@ vector<T> bellmanFord(int s) {
       }
   return dist;
 }
-
+// 7
 void addEdge(int u, int v, T w) {
   ady[u].push_back(v);
   weight[u][v] = w;

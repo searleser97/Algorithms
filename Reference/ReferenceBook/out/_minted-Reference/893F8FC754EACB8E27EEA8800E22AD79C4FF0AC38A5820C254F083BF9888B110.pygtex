@@ -1,0 +1,10 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+  \PYG{k}{struct} \PYG{n}{Node} \PYG{p}{\PYGZob{}}
+    \PYG{c+c1}{// for lexicographical order use \PYGZsq{}map\PYGZsq{}}
+    \PYG{c+c1}{// map\PYGZlt{}char, Node *\PYGZgt{} ch;}
+    \PYG{n}{unordered\PYGZus{}map}\PYG{o}{\PYGZlt{}}\PYG{k+kt}{char}\PYG{p}{,} \PYG{n}{Node} \PYG{o}{*\PYGZgt{}} \PYG{n}{ch}\PYG{p}{;}
+    \PYG{k+kt}{int} \PYG{n}{w} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{,} \PYG{n}{wpt} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{;}
+  \PYG{p}{\PYGZcb{};}
+
+  \PYG{n}{Node} \PYG{o}{*}\PYG{n}{root} \PYG{o}{=} \PYG{k}{new} \PYG{n}{Node}\PYG{p}{();}
+\end{Verbatim}

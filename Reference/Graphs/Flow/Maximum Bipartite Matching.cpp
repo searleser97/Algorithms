@@ -1,9 +1,10 @@
 #include "Max Flow Dinic.cpp"
+// 4
 void addEdge(int u, int v) {
   cap[u][v] = 1;
   ady[u].push_back(v);
 }
-
+// 14
 int main() {
   int n, s = 0, t = 1;
   cin >> n;
