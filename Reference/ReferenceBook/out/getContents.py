@@ -40,12 +40,10 @@ def printFile(path, extension, name, depth):
     firstLine = content[:content.find('\n') + 1]
     print('% ------------------------------------------------------' + firstLine)
     if re.fullmatch('(?:#|(?://)) ?[1-9][0-9]*\\n', firstLine):
+        content = content.replace(firstLine, '')
         print(
             '\\needspace{' + str(int(firstLine[2:].strip()) + 1) + '\\baselineskip}')
-        printSectionType(name, depth, True)
-        content = content.replace(firstLine, '')
-    else:
-        printSectionType(name, depth, True)
+    printSectionType(name, depth, True)
     content = '\\begin{minted}{' + extension + '}\n' + content
     needspaces = re.findall('(?:#|(?://)) ?[1-9][0-9]*\\n', content)
     for needspace in needspaces:
