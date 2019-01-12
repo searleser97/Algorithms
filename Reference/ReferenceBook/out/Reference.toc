@@ -42,36 +42,36 @@
 \contentsline {section}{Graphs}{10}{section*.42}
 \contentsline {subsection}{Articulation Points And Bridges}{10}{section*.43}
 \contentsline {subsection}{Connected Components}{10}{section*.44}
-\contentsline {subsection}{Cycles}{10}{section*.45}
-\contentsline {subsubsection}{Get All Simple Cycles}{10}{section*.46}
-\contentsline {subsubsection}{Get Some Cycles}{10}{section*.47}
+\contentsline {subsection}{Cycles}{11}{section*.45}
+\contentsline {subsubsection}{Get All Simple Cycles}{11}{section*.46}
+\contentsline {subsubsection}{Get Some Cycles}{11}{section*.47}
 \contentsline {subsubsection}{Has Cycle}{11}{section*.48}
 \contentsline {subsection}{Flood Fill}{11}{section*.49}
-\contentsline {subsection}{Flow}{11}{section*.50}
-\contentsline {subsubsection}{Max Flow Dinic}{11}{section*.51}
+\contentsline {subsection}{Flow}{12}{section*.50}
+\contentsline {subsubsection}{Max Flow Dinic}{12}{section*.51}
 \contentsline {subsubsection}{Maximum Bipartite Matching}{12}{section*.52}
 \contentsline {subsection}{Is Bipartite}{12}{section*.53}
-\contentsline {subsection}{LCA}{12}{section*.54}
+\contentsline {subsection}{LCA}{13}{section*.54}
 \contentsline {subsection}{MST Kruskal}{13}{section*.55}
-\contentsline {subsection}{MST Prim}{13}{section*.56}
+\contentsline {subsection}{MST Prim}{14}{section*.56}
 \contentsline {subsection}{ShortestPaths}{14}{section*.57}
 \contentsline {subsubsection}{Bellman Ford}{14}{section*.58}
-\contentsline {subsubsection}{Dijkstra}{14}{section*.59}
+\contentsline {subsubsection}{Dijkstra}{15}{section*.59}
 \contentsline {subsection}{Strongly Connected Components}{15}{section*.60}
-\contentsline {subsection}{Topological Sort}{15}{section*.61}
-\contentsline {section}{Maths}{15}{section*.62}
-\contentsline {subsection}{Number Theory}{15}{section*.63}
+\contentsline {subsection}{Topological Sort}{16}{section*.61}
+\contentsline {section}{Maths}{16}{section*.62}
+\contentsline {subsection}{Number Theory}{16}{section*.63}
 \contentsline {subsubsection}{Divisibility Criterion}{16}{section*.64}
-\contentsline {subsubsection}{Extended Euclidean}{16}{section*.65}
-\contentsline {subsubsection}{GCD}{16}{section*.66}
-\contentsline {subsubsection}{LCM}{16}{section*.67}
+\contentsline {subsubsection}{Extended Euclidean}{17}{section*.65}
+\contentsline {subsubsection}{GCD}{17}{section*.66}
+\contentsline {subsubsection}{LCM}{17}{section*.67}
 \contentsline {subsubsection}{Prime Check Miller Rabin}{17}{section*.68}
 \contentsline {subsubsection}{Prime Sieve}{17}{section*.69}
 \contentsline {section}{Strings}{17}{section*.70}
-\contentsline {subsection}{KMP}{17}{section*.71}
-\contentsline {subsection}{Rabin Karp}{17}{section*.72}
+\contentsline {subsection}{KMP}{18}{section*.71}
+\contentsline {subsection}{Rabin Karp}{18}{section*.72}
 \contentsline {section}{Techniques}{18}{section*.73}
 \contentsline {subsection}{Binary Search}{18}{section*.74}
 \contentsline {subsection}{Multiple Queries}{18}{section*.75}
 \contentsline {subsubsection}{Mo}{18}{section*.76}
-\contentsline {subsubsection}{SQRT Decomposition}{18}{section*.77}
+\contentsline {subsubsection}{SQRT Decomposition}{19}{section*.77}

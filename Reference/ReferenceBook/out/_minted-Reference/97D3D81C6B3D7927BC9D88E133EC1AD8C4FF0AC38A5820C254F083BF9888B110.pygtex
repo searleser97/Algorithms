@@ -1,0 +1,17 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{// O(MaxPoint) maxPoint \PYGZlt{} vector::max\PYGZus{}size}
+\PYG{n}{pair}\PYG{o}{\PYGZlt{}}\PYG{k+kt}{int}\PYG{p}{,} \PYG{k+kt}{int}\PYG{o}{\PYGZgt{}} \PYG{n}{maxOverlap}\PYG{p}{(}\PYG{n}{vector}\PYG{o}{\PYGZlt{}}\PYG{n}{Interval}\PYG{o}{\PYGZgt{}} \PYG{o}{\PYGZam{}}\PYG{n}{arr}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+  \PYG{n}{T} \PYG{n}{maxPoint} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{;}
+  \PYG{k}{for} \PYG{p}{(}\PYG{k}{auto} \PYG{o}{\PYGZam{}}\PYG{n+nl}{i} \PYG{p}{:} \PYG{n}{arr}\PYG{p}{)}
+    \PYG{k}{if} \PYG{p}{(}\PYG{n}{i}\PYG{p}{.}\PYG{n}{second} \PYG{o}{\PYGZgt{}} \PYG{n}{maxPoint}\PYG{p}{)} \PYG{n}{maxPoint} \PYG{o}{=} \PYG{n}{i}\PYG{p}{.}\PYG{n}{second}\PYG{p}{;}
+  \PYG{n}{vector}\PYG{o}{\PYGZlt{}}\PYG{k+kt}{int}\PYG{o}{\PYGZgt{}} \PYG{n}{x}\PYG{p}{(}\PYG{n}{maxPoint} \PYG{o}{+} \PYG{l+m+mi}{2}\PYG{p}{);}
+  \PYG{k}{for} \PYG{p}{(}\PYG{k}{auto} \PYG{o}{\PYGZam{}}\PYG{n+nl}{i} \PYG{p}{:} \PYG{n}{arr}\PYG{p}{)} \PYG{n}{x}\PYG{p}{[}\PYG{n}{i}\PYG{p}{.}\PYG{n}{first}\PYG{p}{]}\PYG{o}{++}\PYG{p}{,} \PYG{n}{x}\PYG{p}{[}\PYG{n}{i}\PYG{p}{.}\PYG{n}{second} \PYG{o}{+} \PYG{l+m+mi}{1}\PYG{p}{]}\PYG{o}{\PYGZhy{}\PYGZhy{}}\PYG{p}{;}
+  \PYG{k+kt}{int} \PYG{n}{maxI} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{,} \PYG{n}{curr} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{;}
+  \PYG{n}{T} \PYG{n}{idx} \PYG{o}{=} \PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1LL}\PYG{p}{;}
+  \PYG{k}{for} \PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{i} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{;} \PYG{n}{i} \PYG{o}{\PYGZlt{}} \PYG{n}{x}\PYG{p}{.}\PYG{n}{size}\PYG{p}{();} \PYG{n}{i}\PYG{o}{++}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+    \PYG{n}{curr} \PYG{o}{+=} \PYG{n}{x}\PYG{p}{[}\PYG{n}{i}\PYG{p}{];}
+    \PYG{k}{if} \PYG{p}{(}\PYG{n}{curr} \PYG{o}{\PYGZgt{}} \PYG{n}{maxI}\PYG{p}{)} \PYG{n}{maxI} \PYG{o}{=} \PYG{n}{curr}\PYG{p}{,} \PYG{n}{idx} \PYG{o}{=} \PYG{n}{i}\PYG{p}{;}
+  \PYG{p}{\PYGZcb{}}
+  \PYG{k}{return} \PYG{p}{\PYGZob{}}\PYG{n}{maxI}\PYG{p}{,} \PYG{n}{idx}\PYG{p}{\PYGZcb{};}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}
