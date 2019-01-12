@@ -8,34 +8,19 @@ excluded = set(['ReferenceBook', '.vscode'])
 
 def printSectionType(sectionName, depth, isFile):
     vspace = 0
-    if depth == -1:
-        sectionType = 'part'
-        style = '\\Huge\\bfseries\\sffamily'
-        vspace = 5
-    elif depth == 0:
-        sectionType = 'chapter'
-        style = '\\Huge\\bfseries\\sffamily'
-        vspace = 4
-    elif depth == 1:
+    style = '\\bfseries\\sffamily\\centering'
+    if depth == 1:
         sectionType = 'section'
-        style = '\\Huge\\bfseries\\sffamily'
+        style += '\\Huge'
         vspace = 2
     elif depth == 2:
         sectionType = 'subsection'
-        style = '\\LARGE\\bfseries\\sffamily'
+        style += '\\LARGE'
     elif depth == 3:
         sectionType = 'subsubsection'
-        style = '\\Large\\bfseries\\sffamily'
-    elif depth == 4:
-        sectionType = 'paragraph'
-        style = '\\large\\bfseries\\sffamily'
-    elif depth == 5:
-        sectionType = 'subparagraph'
-        style = '\\large\\bfseries\\sffamily'
+        style += '\\Large'
     if isFile:
-        style += '\\underline\\large'
-    else:
-        style += '\\centering'
+        style = '\\large\\bfseries\\sffamily\\underline'
     print('\\' + sectionType + 'font{' + style + '}')
     if vspace:
         print('\\vspace{' + str(vspace - 1) + 'em}')
@@ -45,20 +30,30 @@ def printSectionType(sectionName, depth, isFile):
         print('\\vspace{' + str(vspace) + 'em}')
 
 
-def printFile(path, extension):
+def printFile(path, extension, name, depth):
     if extension == 'tex':
         print('\\cfinput{' + path + '}')
     elif extension == 'h':
         extension = 'cpp'
     with open(path, 'r') as f:
-        content = str('\\begin{minted}{' + extension + '}\n' + f.read())
-    needspaces = re.findall('(?:#|(?://)) ?[1-9][0-9]*', content)
+        content = f.read()
+    firstLine = content[:content.find('\n') + 1]
+    print('% ------------------------------------------------------' + firstLine)
+    if re.fullmatch('(?:#|(?://)) ?[1-9][0-9]*\\n', firstLine):
+        print(
+            '\\needspace{' + str(int(firstLine[2:].strip()) + 1) + '\\baselineskip}')
+        printSectionType(name, depth, True)
+        content = content.replace(firstLine, '')
+    else:
+        printSectionType(name, depth, True)
+    content = '\\begin{minted}{' + extension + '}\n' + content
+    needspaces = re.findall('(?:#|(?://)) ?[1-9][0-9]*\\n', content)
     for needspace in needspaces:
-        news = ''\
+        news = '\n'\
             '\\end{minted}\n'\
             '\\vspace{-1em}\n'\
             '\\needspace{' + needspace[2:].strip() + '\\baselineskip}\n'\
-            '\\begin{minted}{' + extension + '}'
+            '\\begin{minted}{' + extension + '}\n'
         content = content.replace(needspace, news)
     content += '\n\\end{minted}\n'
     print(content)
@@ -67,8 +62,7 @@ def printFile(path, extension):
 def main(currPath, currDir, depth):
     if currDir in excluded:
         return
-    printSectionType(currDir, depth, 0)
-    i = 1
+    printSectionType(currDir, depth, False)
     for dirOrFile in sorted(listdir(currPath), key=lambda x: x.split('.')[0].lower()):
         f = join(currPath, dirOrFile)
         if isdir(f):
@@ -77,9 +71,8 @@ def main(currPath, currDir, depth):
             fileName = dirOrFile
             if re.fullmatch('.+\\.(cpp|c|py|java|tex)', fileName):
                 name, extension = fileName.split('.')
-                printSectionType(str(name), depth + 1, i)
-                printFile(str(f), extension)
-        i += 1
+                # printSectionType(name, depth + 1, True)
+                printFile(f, extension, name, depth + 1)
 
 
 for directory in sorted(listdir(PATH), key=lambda x: x.split('.')[0].lower()):

@@ -59,7 +59,7 @@
 \contentsline {section}{Maths}{14}{section*.59}
 \contentsline {subsection}{Number Theory}{14}{section*.60}
 \contentsline {subsubsection}{Divisibility Criterion}{14}{section*.61}
-\contentsline {subsubsection}{Extended Euclidean}{14}{section*.62}
+\contentsline {subsubsection}{Extended Euclidean}{15}{section*.62}
 \contentsline {subsubsection}{GCD}{15}{section*.63}
 \contentsline {subsubsection}{LCM}{15}{section*.64}
 \contentsline {subsubsection}{Prime Check Miller Rabin}{15}{section*.65}
