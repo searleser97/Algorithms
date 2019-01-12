@@ -1,3 +1,4 @@
+// 5
 class RollingHash {
  public:
   vector<unsigned long long int> pow;

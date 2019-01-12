@@ -1,0 +1,6 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{struct} \PYG{n}{Object} \PYG{p}{\PYGZob{}}
+  \PYG{k+kt}{char} \PYG{n}{first}\PYG{p}{;}
+  \PYG{k+kt}{int} \PYG{n}{second}\PYG{p}{;}
+\PYG{p}{\PYGZcb{};}
+\end{Verbatim}

@@ -1,10 +1,10 @@
+// 5
 // tv = top value from stack
 // sccs = strongly connected components
 // scc = strongly connected component
-// disc = discovery time
-// low = low time
-// s = stack
-// top = top index of the stack
+// disc = discovery time, low = low time
+// s = stack, top = top index of the stack
+// 3
 int Time, top;
 vector<vector<int>> ady, sccs;
 vector<int> disc, low, s;

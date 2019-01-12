@@ -1,3 +1,4 @@
+// 5
 vector<vector<int>> ady;
 
 void initVars(int N) {

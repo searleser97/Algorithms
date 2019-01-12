@@ -1,3 +1,4 @@
+// 8
 vector<string> split(string str, char token) {
   stringstream test(str);
   string seg;

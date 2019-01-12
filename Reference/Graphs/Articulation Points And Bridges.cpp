@@ -1,8 +1,10 @@
+// 5
 // APB = articulation points and bridges
 // ap = Articulation Point
 // br = bridges, p = parent
 // disc = discovery time
 // low = lowTime, ch = children
+// 5
 typedef pair<int, int> Edge;
 int Time;
 vector<vector<int>> ady;

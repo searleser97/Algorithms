@@ -1,7 +1,6 @@
-// f = error function
-// cf = create error function
-// p = pattern
-// t = text
+// 3
+// p = pattern, t = text
+// f = error function, cf = create error function
 // pos = positions where pattern is found in text
 // 2
 int MAXN = 1000000;

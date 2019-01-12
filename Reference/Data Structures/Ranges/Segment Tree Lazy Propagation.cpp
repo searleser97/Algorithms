@@ -1,8 +1,10 @@
+// 5
 // st = segment tree, st[1] = root, H = height of d
 // u = updates, d = delayed updates
 // neutro = operation neutral val
 // e.g. for sum is 0, for multiplication
 // is 1, for gcd is 0, for min is INF, etc.
+// 6
 template <class T>
 struct SegmentTree {
   T neutro = 0;

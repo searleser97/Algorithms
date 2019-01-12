@@ -1,3 +1,4 @@
+// 5
 // at least detects one cycle per component
 vector<vector<int>> ady, cycles;
 vector<int> vis, cycle;

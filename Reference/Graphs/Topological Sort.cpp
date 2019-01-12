@@ -1,3 +1,4 @@
+// 3
 // vis = visited
 vector<vector<int>> ady;
 vector<int> vis, toposorted;

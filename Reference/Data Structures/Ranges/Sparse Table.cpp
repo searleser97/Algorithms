@@ -1,3 +1,4 @@
+// 4
 // st = sparse table, Arith = Arithmetic
 typedef int T;
 int neutro = 0;

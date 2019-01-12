@@ -1,7 +1,9 @@
+// 4
 // st = segment tree. st[1] = root;
 // neutro = operation neutral value
 // e.g. for sum is 0, for multiplication
 // is 1, for gcd is 0, for min is INF, etc.
+// 4
 typedef int T;
 T neutro = 0;
 int N;

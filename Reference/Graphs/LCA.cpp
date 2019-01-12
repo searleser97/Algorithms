@@ -1,8 +1,8 @@
+// 7
 // st = sparse table
 typedef pair<int, int> T;
 int neutro = 0;
 vector<vector<T>> st;
-
 vector<int> first;
 vector<T> tour;
 vector<vector<int>> ady;
@@ -31,14 +31,15 @@ void eulerTour(int u, int p, int h) {
       tour.push_back({h, u});
     }
 }
-// 6
+// 7
+// O(N * lg(N))
 void preprocess() {
   tour.clear();
   first.assign(ady.size(), -1);
   eulerTour(0, 0, 0);
   build();
 }
-// 6
+// 7
 // O(1)
 int lca(int u, int v) {
   int l = min(first[u], first[v]);

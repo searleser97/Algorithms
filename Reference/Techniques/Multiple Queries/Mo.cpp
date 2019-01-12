@@ -1,10 +1,11 @@
+// 2
 // q = query
 // qs = queries
 // 3
 struct Query {
   int l, r;
 };
-
+// 3
 int blksize;
 vector<Query> qs;
 vector<int> arr;

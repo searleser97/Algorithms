@@ -1,6 +1,6 @@
+// 4
 int n, m, oldColor = 0, color = 1;
 vector<vector<int>> mat;
-
 vector<vector<int>> movs = {{1, 0}, {0, 1}, {-1, 0}, {0, -1}};
 // 5
 void floodFill(int i, int j) {

@@ -25,6 +25,8 @@ def printSectionType(sectionName, depth, isFile):
     if vspace:
         print('\\vspace{' + str(vspace - 1) + 'em}')
     print('\\' + sectionType + '*{' + sectionName + '}')
+    if depth == 1:
+        print('\\markboth{' + sectionName.upper() + '}{}')
     print('\\addcontentsline{toc}{' + sectionType + '}{' + sectionName + '}')
     if vspace:
         print('\\vspace{' + str(vspace) + 'em}')

@@ -1,6 +1,8 @@
+// 3
 // cap[a][b] = Capacity from a to b
 // flow[a][b] = flow occupied from a to b
 // level[a] = level in graph of node a
+// 5
 typedef int T;
 vector<int> level;
 vector<vector<int>> ady;

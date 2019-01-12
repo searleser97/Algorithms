@@ -1,73 +1,76 @@
 \BOOKMARK [1][-]{section*.2}{Coding Resources}{}% 1
 \BOOKMARK [2][-]{section*.3}{C++}{section*.2}% 2
 \BOOKMARK [3][-]{section*.4}{Decimal Precision}{section*.3}% 3
-\BOOKMARK [3][-]{section*.5}{Int To Binary}{section*.3}% 4
-\BOOKMARK [3][-]{section*.6}{IO Optimization}{section*.3}% 5
-\BOOKMARK [3][-]{section*.7}{Map Value To Int}{section*.3}% 6
-\BOOKMARK [3][-]{section*.8}{Permutations}{section*.3}% 7
-\BOOKMARK [3][-]{section*.9}{Print Vector}{section*.3}% 8
-\BOOKMARK [3][-]{section*.10}{Priority Queue Of Object}{section*.3}% 9
-\BOOKMARK [3][-]{section*.11}{Random}{section*.3}% 10
-\BOOKMARK [3][-]{section*.12}{Read Line}{section*.3}% 11
-\BOOKMARK [3][-]{section*.13}{Sort Pair}{section*.3}% 12
-\BOOKMARK [3][-]{section*.14}{Sort Vector Of Object}{section*.3}% 13
-\BOOKMARK [3][-]{section*.15}{Split String}{section*.3}% 14
-\BOOKMARK [3][-]{section*.16}{Typedef}{section*.3}% 15
-\BOOKMARK [2][-]{section*.17}{Python}{section*.2}% 16
-\BOOKMARK [3][-]{section*.18}{Combinations}{section*.17}% 17
-\BOOKMARK [3][-]{section*.19}{Fast IO}{section*.17}% 18
-\BOOKMARK [3][-]{section*.20}{Permutations}{section*.17}% 19
-\BOOKMARK [3][-]{section*.21}{Random}{section*.17}% 20
-\BOOKMARK [3][-]{section*.22}{Sort List}{section*.17}% 21
-\BOOKMARK [3][-]{section*.23}{Sort List Of Object}{section*.17}% 22
-\BOOKMARK [1][-]{section*.24}{Data Structures}{}% 23
-\BOOKMARK [2][-]{section*.25}{Geometry}{section*.24}% 24
-\BOOKMARK [3][-]{section*.26}{K-D Tree}{section*.25}% 25
-\BOOKMARK [2][-]{section*.27}{Graphs}{section*.24}% 26
-\BOOKMARK [3][-]{section*.28}{UnionFind}{section*.27}% 27
-\BOOKMARK [2][-]{section*.29}{Ranges}{section*.24}% 28
-\BOOKMARK [3][-]{section*.30}{BIT}{section*.29}% 29
-\BOOKMARK [3][-]{section*.31}{BIT Range Update}{section*.29}% 30
-\BOOKMARK [3][-]{section*.32}{Segment Tree}{section*.29}% 31
-\BOOKMARK [3][-]{section*.33}{Segment Tree Lazy Propagation}{section*.29}% 32
-\BOOKMARK [3][-]{section*.34}{Sparse Table}{section*.29}% 33
-\BOOKMARK [2][-]{section*.35}{Strings}{section*.24}% 34
-\BOOKMARK [3][-]{section*.36}{Trie}{section*.35}% 35
-\BOOKMARK [2][-]{section*.37}{Trees And Heaps}{section*.24}% 36
-\BOOKMARK [3][-]{section*.38}{Treap}{section*.37}% 37
-\BOOKMARK [1][-]{section*.39}{Graphs}{}% 38
-\BOOKMARK [2][-]{section*.40}{Articulation Points And Bridges}{section*.39}% 39
-\BOOKMARK [2][-]{section*.41}{Connected Components}{section*.39}% 40
-\BOOKMARK [2][-]{section*.42}{Cycles}{section*.39}% 41
-\BOOKMARK [3][-]{section*.43}{Get All Simple Cycles}{section*.42}% 42
-\BOOKMARK [3][-]{section*.44}{Get Some Cycles}{section*.42}% 43
-\BOOKMARK [3][-]{section*.45}{Has Cycle}{section*.42}% 44
-\BOOKMARK [2][-]{section*.46}{Flood Fill}{section*.39}% 45
-\BOOKMARK [2][-]{section*.47}{Flow}{section*.39}% 46
-\BOOKMARK [3][-]{section*.48}{Max Flow Dinic}{section*.47}% 47
-\BOOKMARK [3][-]{section*.49}{Maximum Bipartite Matching}{section*.47}% 48
-\BOOKMARK [2][-]{section*.50}{Is Bipartite}{section*.39}% 49
-\BOOKMARK [2][-]{section*.51}{LCA}{section*.39}% 50
-\BOOKMARK [2][-]{section*.52}{MST Kruskal}{section*.39}% 51
-\BOOKMARK [2][-]{section*.53}{MST Prim}{section*.39}% 52
-\BOOKMARK [2][-]{section*.54}{ShortestPaths}{section*.39}% 53
-\BOOKMARK [3][-]{section*.55}{Bellman Ford}{section*.54}% 54
-\BOOKMARK [3][-]{section*.56}{Dijkstra}{section*.54}% 55
-\BOOKMARK [2][-]{section*.57}{Strongly Connected Components}{section*.39}% 56
-\BOOKMARK [2][-]{section*.58}{Topological Sort}{section*.39}% 57
-\BOOKMARK [1][-]{section*.59}{Maths}{}% 58
-\BOOKMARK [2][-]{section*.60}{Number Theory}{section*.59}% 59
-\BOOKMARK [3][-]{section*.61}{Divisibility Criterion}{section*.60}% 60
-\BOOKMARK [3][-]{section*.62}{Extended Euclidean}{section*.60}% 61
-\BOOKMARK [3][-]{section*.63}{GCD}{section*.60}% 62
-\BOOKMARK [3][-]{section*.64}{LCM}{section*.60}% 63
-\BOOKMARK [3][-]{section*.65}{Prime Check Miller Rabin}{section*.60}% 64
-\BOOKMARK [3][-]{section*.66}{Prime Sieve}{section*.60}% 65
-\BOOKMARK [1][-]{section*.67}{Strings}{}% 66
-\BOOKMARK [2][-]{section*.68}{KMP}{section*.67}% 67
-\BOOKMARK [2][-]{section*.69}{Rabin Karp}{section*.67}% 68
-\BOOKMARK [1][-]{section*.70}{Techniques}{}% 69
-\BOOKMARK [2][-]{section*.71}{Binary Search}{section*.70}% 70
-\BOOKMARK [2][-]{section*.72}{Multiple Queries}{section*.70}% 71
-\BOOKMARK [3][-]{section*.73}{Mo}{section*.72}% 72
-\BOOKMARK [3][-]{section*.74}{SQRT Decomposition}{section*.72}% 73
+\BOOKMARK [3][-]{section*.5}{Include All Libraries}{section*.3}% 4
+\BOOKMARK [3][-]{section*.6}{Int To Binary}{section*.3}% 5
+\BOOKMARK [3][-]{section*.7}{IO Optimization}{section*.3}% 6
+\BOOKMARK [3][-]{section*.8}{Map Value To Int}{section*.3}% 7
+\BOOKMARK [3][-]{section*.9}{Permutations}{section*.3}% 8
+\BOOKMARK [3][-]{section*.10}{Print Vector}{section*.3}% 9
+\BOOKMARK [3][-]{section*.11}{Priority Queue Of Object}{section*.3}% 10
+\BOOKMARK [3][-]{section*.12}{Random}{section*.3}% 11
+\BOOKMARK [3][-]{section*.13}{Read Line}{section*.3}% 12
+\BOOKMARK [3][-]{section*.14}{Sort Pair}{section*.3}% 13
+\BOOKMARK [3][-]{section*.15}{Sort Vector Of Object}{section*.3}% 14
+\BOOKMARK [3][-]{section*.16}{Split String}{section*.3}% 15
+\BOOKMARK [3][-]{section*.17}{Typedef}{section*.3}% 16
+\BOOKMARK [2][-]{section*.18}{Python}{section*.2}% 17
+\BOOKMARK [3][-]{section*.19}{Combinations}{section*.18}% 18
+\BOOKMARK [3][-]{section*.20}{Fast IO}{section*.18}% 19
+\BOOKMARK [3][-]{section*.21}{Permutations}{section*.18}% 20
+\BOOKMARK [3][-]{section*.22}{Random}{section*.18}% 21
+\BOOKMARK [3][-]{section*.23}{Sort List}{section*.18}% 22
+\BOOKMARK [3][-]{section*.24}{Sort List Of Object}{section*.18}% 23
+\BOOKMARK [1][-]{section*.25}{Data Structures}{}% 24
+\BOOKMARK [2][-]{section*.26}{Geometry}{section*.25}% 25
+\BOOKMARK [3][-]{section*.27}{K-D Tree}{section*.26}% 26
+\BOOKMARK [2][-]{section*.28}{Graphs}{section*.25}% 27
+\BOOKMARK [3][-]{section*.29}{UnionFind}{section*.28}% 28
+\BOOKMARK [2][-]{section*.30}{Ranges}{section*.25}% 29
+\BOOKMARK [3][-]{section*.31}{BIT}{section*.30}% 30
+\BOOKMARK [3][-]{section*.32}{BIT Range Update}{section*.30}% 31
+\BOOKMARK [3][-]{section*.33}{Segment Tree}{section*.30}% 32
+\BOOKMARK [3][-]{section*.34}{Segment Tree Lazy Propagation}{section*.30}% 33
+\BOOKMARK [3][-]{section*.35}{Sparse Table}{section*.30}% 34
+\BOOKMARK [2][-]{section*.36}{Strings}{section*.25}% 35
+\BOOKMARK [3][-]{section*.37}{Trie}{section*.36}% 36
+\BOOKMARK [2][-]{section*.38}{Trees And Heaps}{section*.25}% 37
+\BOOKMARK [3][-]{section*.39}{Treap}{section*.38}% 38
+\BOOKMARK [1][-]{section*.40}{Geometry}{}% 39
+\BOOKMARK [2][-]{section*.41}{Max Interval Overlap}{section*.40}% 40
+\BOOKMARK [1][-]{section*.42}{Graphs}{}% 41
+\BOOKMARK [2][-]{section*.43}{Articulation Points And Bridges}{section*.42}% 42
+\BOOKMARK [2][-]{section*.44}{Connected Components}{section*.42}% 43
+\BOOKMARK [2][-]{section*.45}{Cycles}{section*.42}% 44
+\BOOKMARK [3][-]{section*.46}{Get All Simple Cycles}{section*.45}% 45
+\BOOKMARK [3][-]{section*.47}{Get Some Cycles}{section*.45}% 46
+\BOOKMARK [3][-]{section*.48}{Has Cycle}{section*.45}% 47
+\BOOKMARK [2][-]{section*.49}{Flood Fill}{section*.42}% 48
+\BOOKMARK [2][-]{section*.50}{Flow}{section*.42}% 49
+\BOOKMARK [3][-]{section*.51}{Max Flow Dinic}{section*.50}% 50
+\BOOKMARK [3][-]{section*.52}{Maximum Bipartite Matching}{section*.50}% 51
+\BOOKMARK [2][-]{section*.53}{Is Bipartite}{section*.42}% 52
+\BOOKMARK [2][-]{section*.54}{LCA}{section*.42}% 53
+\BOOKMARK [2][-]{section*.55}{MST Kruskal}{section*.42}% 54
+\BOOKMARK [2][-]{section*.56}{MST Prim}{section*.42}% 55
+\BOOKMARK [2][-]{section*.57}{ShortestPaths}{section*.42}% 56
+\BOOKMARK [3][-]{section*.58}{Bellman Ford}{section*.57}% 57
+\BOOKMARK [3][-]{section*.59}{Dijkstra}{section*.57}% 58
+\BOOKMARK [2][-]{section*.60}{Strongly Connected Components}{section*.42}% 59
+\BOOKMARK [2][-]{section*.61}{Topological Sort}{section*.42}% 60
+\BOOKMARK [1][-]{section*.62}{Maths}{}% 61
+\BOOKMARK [2][-]{section*.63}{Number Theory}{section*.62}% 62
+\BOOKMARK [3][-]{section*.64}{Divisibility Criterion}{section*.63}% 63
+\BOOKMARK [3][-]{section*.65}{Extended Euclidean}{section*.63}% 64
+\BOOKMARK [3][-]{section*.66}{GCD}{section*.63}% 65
+\BOOKMARK [3][-]{section*.67}{LCM}{section*.63}% 66
+\BOOKMARK [3][-]{section*.68}{Prime Check Miller Rabin}{section*.63}% 67
+\BOOKMARK [3][-]{section*.69}{Prime Sieve}{section*.63}% 68
+\BOOKMARK [1][-]{section*.70}{Strings}{}% 69
+\BOOKMARK [2][-]{section*.71}{KMP}{section*.70}% 70
+\BOOKMARK [2][-]{section*.72}{Rabin Karp}{section*.70}% 71
+\BOOKMARK [1][-]{section*.73}{Techniques}{}% 72
+\BOOKMARK [2][-]{section*.74}{Binary Search}{section*.73}% 73
+\BOOKMARK [2][-]{section*.75}{Multiple Queries}{section*.73}% 74
+\BOOKMARK [3][-]{section*.76}{Mo}{section*.75}% 75
+\BOOKMARK [3][-]{section*.77}{SQRT Decomposition}{section*.75}% 76

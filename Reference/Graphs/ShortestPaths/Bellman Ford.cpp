@@ -1,3 +1,4 @@
+// 6
 // N = number of nodes
 // returns {} if there is a negative weight cycle
 typedef int T;

@@ -1,3 +1,4 @@
+// 3
 typedef long long int T;
 T neutro = 0;
 vector<T> bit1, bit2;

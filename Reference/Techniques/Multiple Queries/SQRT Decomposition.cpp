@@ -1,6 +1,6 @@
+// 4
 // sum of elements in range
 int neutro = 0;
-
 vector<int> arr;
 vector<int> blks;
 // 4

@@ -1,5 +1,5 @@
 % run the command ' lualatex -shell-escape Reference.tex ' twice in the terminal to visualize table of contents
-\documentclass{article}
+\documentclass[twoside]{article}
 \usepackage[utf8]{inputenc}
 \usepackage[english]{babel}
 \usepackage{geometry}
@@ -22,17 +22,18 @@
     breaklines=true
 }
 
-\setlength{\headsep}{0.3cm}
+\setlength{\headsep}{0.5cm}
 \setlength{\columnsep}{0.5cm}
 \setlength{\columnseprule}{0.01cm}
-\renewcommand{\columnseprulecolor}{\color{lightgray}}
+\renewcommand{\columnseprulecolor}{\color{gray}}
 
 \pagestyle{fancy}
 \pagenumbering{arabic}
-\fancyhead[L]{}
-\fancyhead[R]{\textsf{\leftmark}}
-\fancyfoot[R]{\textbf{\textsf{\thepage}}}
-\cfoot{}
+\fancyhead{}
+\fancyfoot{}
+\fancyhead[LE,RO]{\textsf{First, solve the problem. Then, write the code.}}
+\fancyhead[LO,RE]{\textsf{\leftmark}}
+\fancyfoot[LO,RE]{\textbf{\textsf{\thepage}}}
  
 \renewcommand{\headrulewidth}{0.01cm}
 \renewcommand{\footrulewidth}{0.01cm}
@@ -44,7 +45,7 @@
 	\selectfont
 	\tableofcontents
 	\newpage
-
+	\null\newpage % temporary
 	\begin{python}[getContents.py]
 	\end{python}
 \end{multicols*}

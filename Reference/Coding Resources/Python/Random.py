@@ -1,3 +1,4 @@
+# 13
 import random
 # Initialize the random number generator.
 random.seed(None)

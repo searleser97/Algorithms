@@ -1,10 +1,11 @@
+// 12
 // st = spanning tree, p = parent
 // vis = visited, dist = distance
 typedef int T;
 typedef pair<int, int> Edge;
 typedef pair<T, Edge> Wedge;
 typedef pair<T, int> DistNode;
-int MAXN = 20001, INF = 1 << 30;
+int INF = 1 << 30;
 vector<vector<int>> ady;
 unordered_map<int, unordered_map<int, T>> weight;
 vector<int> p, vis;

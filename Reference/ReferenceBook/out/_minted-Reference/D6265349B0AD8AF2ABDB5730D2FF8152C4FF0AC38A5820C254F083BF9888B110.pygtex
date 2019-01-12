@@ -1,0 +1,5 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{// p = pattern, t = text}
+\PYG{c+c1}{// f = error function, cf = create error function}
+\PYG{c+c1}{// pos = positions where pattern is found in text}
+\end{Verbatim}

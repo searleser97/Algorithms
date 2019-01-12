@@ -1,3 +1,4 @@
+// 4
 // comp = component
 int compId;
 vector<vector<int>> ady;

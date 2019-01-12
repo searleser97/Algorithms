@@ -1,3 +1,4 @@
+// 5
 typedef int T;
 typedef pair<T, int> DistNode;
 int MAXN = 20001, INF = 1 << 30, isDirected = false;
