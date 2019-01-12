@@ -40,7 +40,6 @@ def printFile(path, extension, name, depth):
     with open(path, 'r') as f:
         content = f.read()
     firstLine = content[:content.find('\n') + 1]
-    print('% ------------------------------------------------------' + firstLine)
     if re.fullmatch('(?:#|(?://)) ?[1-9][0-9]*\\n', firstLine):
         content = content.replace(firstLine, '')
         print(
@@ -62,8 +61,13 @@ def printFile(path, extension, name, depth):
 def main(currPath, currDir, depth):
     if currDir in excluded:
         return
-    printSectionType(currDir, depth, False)
-    for dirOrFile in sorted(listdir(currPath), key=lambda x: x.split('.')[0].lower()):
+    if depth:
+        printSectionType(currDir, depth, False)
+    sortedDirs = sorted(
+        listdir(currPath),
+        key=lambda x: (isdir(join(currPath, x)), x.split('.')[0].lower())
+    )
+    for dirOrFile in sortedDirs:
         f = join(currPath, dirOrFile)
         if isdir(f):
             main(f, dirOrFile, depth + 1)
@@ -74,7 +78,4 @@ def main(currPath, currDir, depth):
                 printFile(f, extension, name, depth + 1)
 
 
-for directory in sorted(listdir(PATH), key=lambda x: x.split('.')[0].lower()):
-    f = join(PATH, directory)
-    if isdir(f):
-        main(f, directory, 1)
+main(PATH, PATH[PATH.rfind('/') + 1:], 0)

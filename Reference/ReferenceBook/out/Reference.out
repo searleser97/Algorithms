@@ -41,23 +41,23 @@
 \BOOKMARK [1][-]{section*.42}{Graphs}{}% 41
 \BOOKMARK [2][-]{section*.43}{Articulation Points And Bridges}{section*.42}% 42
 \BOOKMARK [2][-]{section*.44}{Connected Components}{section*.42}% 43
-\BOOKMARK [2][-]{section*.45}{Cycles}{section*.42}% 44
-\BOOKMARK [3][-]{section*.46}{Get All Simple Cycles}{section*.45}% 45
-\BOOKMARK [3][-]{section*.47}{Get Some Cycles}{section*.45}% 46
-\BOOKMARK [3][-]{section*.48}{Has Cycle}{section*.45}% 47
-\BOOKMARK [2][-]{section*.49}{Flood Fill}{section*.42}% 48
-\BOOKMARK [2][-]{section*.50}{Flow}{section*.42}% 49
-\BOOKMARK [3][-]{section*.51}{Max Flow Dinic}{section*.50}% 50
-\BOOKMARK [3][-]{section*.52}{Maximum Bipartite Matching}{section*.50}% 51
-\BOOKMARK [2][-]{section*.53}{Is Bipartite}{section*.42}% 52
-\BOOKMARK [2][-]{section*.54}{LCA}{section*.42}% 53
-\BOOKMARK [2][-]{section*.55}{MST Kruskal}{section*.42}% 54
-\BOOKMARK [2][-]{section*.56}{MST Prim}{section*.42}% 55
-\BOOKMARK [2][-]{section*.57}{ShortestPaths}{section*.42}% 56
-\BOOKMARK [3][-]{section*.58}{Bellman Ford}{section*.57}% 57
-\BOOKMARK [3][-]{section*.59}{Dijkstra}{section*.57}% 58
-\BOOKMARK [2][-]{section*.60}{Strongly Connected Components}{section*.42}% 59
-\BOOKMARK [2][-]{section*.61}{Topological Sort}{section*.42}% 60
+\BOOKMARK [2][-]{section*.45}{Flood Fill}{section*.42}% 44
+\BOOKMARK [2][-]{section*.46}{Is Bipartite}{section*.42}% 45
+\BOOKMARK [2][-]{section*.47}{LCA}{section*.42}% 46
+\BOOKMARK [2][-]{section*.48}{MST Kruskal}{section*.42}% 47
+\BOOKMARK [2][-]{section*.49}{MST Prim}{section*.42}% 48
+\BOOKMARK [2][-]{section*.50}{Strongly Connected Components}{section*.42}% 49
+\BOOKMARK [2][-]{section*.51}{Topological Sort}{section*.42}% 50
+\BOOKMARK [2][-]{section*.52}{Cycles}{section*.42}% 51
+\BOOKMARK [3][-]{section*.53}{Get All Simple Cycles}{section*.52}% 52
+\BOOKMARK [3][-]{section*.54}{Get Some Cycles}{section*.52}% 53
+\BOOKMARK [3][-]{section*.55}{Has Cycle}{section*.52}% 54
+\BOOKMARK [2][-]{section*.56}{Flow}{section*.42}% 55
+\BOOKMARK [3][-]{section*.57}{Max Flow Dinic}{section*.56}% 56
+\BOOKMARK [3][-]{section*.58}{Maximum Bipartite Matching}{section*.56}% 57
+\BOOKMARK [2][-]{section*.59}{ShortestPaths}{section*.42}% 58
+\BOOKMARK [3][-]{section*.60}{Bellman Ford}{section*.59}% 59
+\BOOKMARK [3][-]{section*.61}{Dijkstra}{section*.59}% 60
 \BOOKMARK [1][-]{section*.62}{Maths}{}% 61
 \BOOKMARK [2][-]{section*.63}{Number Theory}{section*.62}% 62
 \BOOKMARK [3][-]{section*.64}{Divisibility Criterion}{section*.63}% 63

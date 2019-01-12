@@ -7,8 +7,6 @@
 \subsectionfont{\bfseries\sffamily\centering\LARGE}
 \subsection*{C++}
 \addcontentsline{toc}{subsection}{C++}
-% ------------------------------------------------------// 4
-
 \needspace{5\baselineskip}
 \subsubsectionfont{\large\bfseries\sffamily\underline}
 \subsubsection*{Decimal Precision}
@@ -20,8 +18,6 @@ cout << setprecision(N) << n << endl;
 cout << fixed << setprecision(N) << n << endl;
 \end{minted}
 
-% ------------------------------------------------------// 2
-
 \needspace{3\baselineskip}
 \subsubsectionfont{\large\bfseries\sffamily\underline}
 \subsubsection*{Include All Libraries}
@@ -30,8 +26,6 @@ cout << fixed << setprecision(N) << n << endl;
 #include <bits/stdc++.h>
 using namespace std;
 \end{minted}
-
-% ------------------------------------------------------typedef long long int lli;
 
 \subsubsectionfont{\large\bfseries\sffamily\underline}
 \subsubsection*{Int To Binary}
@@ -61,8 +55,6 @@ vector<bool> intToBitsArray(lli n) {
 }
 \end{minted}
 
-% ------------------------------------------------------// 4
-
 \needspace{5\baselineskip}
 \subsubsectionfont{\large\bfseries\sffamily\underline}
 \subsubsection*{IO Optimization}
@@ -73,8 +65,6 @@ int main() {
   cin.tie(0);
 }
 \end{minted}
-
-% ------------------------------------------------------// val = value
 
 \subsubsectionfont{\large\bfseries\sffamily\underline}
 \subsubsection*{Map Value To Int}
@@ -114,8 +104,6 @@ void initMapping() {
 }
 \end{minted}
 
-% ------------------------------------------------------typedef vector<int> T;// typedef string T;
-
 \subsubsectionfont{\large\bfseries\sffamily\underline}
 \subsubsection*{Permutations}
 \addcontentsline{toc}{subsubsection}{Permutations}
@@ -136,8 +124,6 @@ vector<T> permutations(T v) {
 }
 \end{minted}
 
-% ------------------------------------------------------// 9
-
 \needspace{10\baselineskip}
 \subsubsectionfont{\large\bfseries\sffamily\underline}
 \subsubsection*{Print Vector}
@@ -153,8 +139,6 @@ void printv(vector<int> v) {
   cout << "]" << endl;
 }
 \end{minted}
-
-% ------------------------------------------------------// 4
 
 \needspace{5\baselineskip}
 \subsubsectionfont{\large\bfseries\sffamily\underline}
@@ -179,8 +163,6 @@ int main() {
 }
 \end{minted}
 
-% ------------------------------------------------------// 3
-
 \needspace{4\baselineskip}
 \subsubsectionfont{\large\bfseries\sffamily\underline}
 \subsubsection*{Random}
@@ -194,8 +176,6 @@ int main() {
   // code ...
 }
 \end{minted}
-
-% ------------------------------------------------------// 8
 
 \needspace{9\baselineskip}
 \subsubsectionfont{\large\bfseries\sffamily\underline}
@@ -212,8 +192,6 @@ string input() {
 }
 \end{minted}
 
-% ------------------------------------------------------// 3
-
 \needspace{4\baselineskip}
 \subsubsectionfont{\large\bfseries\sffamily\underline}
 \subsubsection*{Sort Pair}
@@ -223,8 +201,6 @@ pair<int, int> p;
 // sorts array on the basis of the first element
 sort(p.begin(), p.end());
 \end{minted}
-
-% ------------------------------------------------------// 4
 
 \needspace{5\baselineskip}
 \subsubsectionfont{\large\bfseries\sffamily\underline}
@@ -256,8 +232,6 @@ int main() {
 }
 \end{minted}
 
-% ------------------------------------------------------// 8
-
 \needspace{9\baselineskip}
 \subsubsectionfont{\large\bfseries\sffamily\underline}
 \subsubsection*{Split String}
@@ -273,8 +247,6 @@ vector<string> split(string str, char token) {
 }
 \end{minted}
 
-% ------------------------------------------------------// 3
-
 \needspace{4\baselineskip}
 \subsubsectionfont{\large\bfseries\sffamily\underline}
 \subsubsection*{Typedef}
@@ -288,8 +260,6 @@ typedef int T;
 \subsectionfont{\bfseries\sffamily\centering\LARGE}
 \subsection*{Python}
 \addcontentsline{toc}{subsection}{Python}
-% ------------------------------------------------------# 3
-
 \needspace{4\baselineskip}
 \subsubsectionfont{\large\bfseries\sffamily\underline}
 \subsubsection*{Combinations}
@@ -300,8 +270,6 @@ import itertools
 print(list(itertools.combinations([1, 2, 3], 3)))
 
 \end{minted}
-
-% ------------------------------------------------------# 15
 
 \needspace{16\baselineskip}
 \subsubsectionfont{\large\bfseries\sffamily\underline}
@@ -325,8 +293,6 @@ stdout.writelines(lines)
 numbers = list(map(int, stdin.readline().split()))
 \end{minted}
 
-% ------------------------------------------------------# 2
-
 \needspace{3\baselineskip}
 \subsubsectionfont{\large\bfseries\sffamily\underline}
 \subsubsection*{Permutations}
@@ -336,8 +302,6 @@ import itertools
 print(list(itertools.permutations([1, 2, 3])))
 
 \end{minted}
-
-% ------------------------------------------------------# 13
 
 \needspace{14\baselineskip}
 \subsubsectionfont{\large\bfseries\sffamily\underline}
@@ -359,8 +323,6 @@ random.getrandbits(k)
 random.shuffle(li)
 \end{minted}
 
-% ------------------------------------------------------# 5
-
 \needspace{6\baselineskip}
 \subsubsectionfont{\large\bfseries\sffamily\underline}
 \subsubsection*{Sort List}
@@ -372,8 +334,6 @@ li.sort(reverse=True)
 # returns sorted list ascending order
 ol = sorted(li)
 \end{minted}
-
-% ------------------------------------------------------# 5
 
 \needspace{6\baselineskip}
 \subsubsectionfont{\large\bfseries\sffamily\underline}
@@ -407,7 +367,6 @@ li.sort(key = lambda x: (x.first, x.second, x.third), reverse=False)
 \subsectionfont{\bfseries\sffamily\centering\LARGE}
 \subsection*{Geometry}
 \addcontentsline{toc}{subsection}{Geometry}
-% ------------------------------------------------------
 \subsubsectionfont{\large\bfseries\sffamily\underline}
 \subsubsection*{K-D Tree}
 \addcontentsline{toc}{subsubsection}{K-D Tree}
@@ -418,8 +377,6 @@ li.sort(key = lambda x: (x.first, x.second, x.third), reverse=False)
 \subsectionfont{\bfseries\sffamily\centering\LARGE}
 \subsection*{Graphs}
 \addcontentsline{toc}{subsection}{Graphs}
-% ------------------------------------------------------// 3
-
 \needspace{4\baselineskip}
 \subsubsectionfont{\large\bfseries\sffamily\underline}
 \subsubsection*{UnionFind}
@@ -471,8 +428,6 @@ struct UnionFind {
 \subsectionfont{\bfseries\sffamily\centering\LARGE}
 \subsection*{Ranges}
 \addcontentsline{toc}{subsection}{Ranges}
-% ------------------------------------------------------// 3
-
 \needspace{4\baselineskip}
 \subsubsectionfont{\large\bfseries\sffamily\underline}
 \subsubsection*{BIT}
@@ -549,8 +504,6 @@ void setValAt(T val, int i) {
 }
 \end{minted}
 
-% ------------------------------------------------------// 3
-
 \needspace{4\baselineskip}
 \subsubsectionfont{\large\bfseries\sffamily\underline}
 \subsubsection*{BIT Range Update}
@@ -620,8 +573,6 @@ T query(int l, int r) {
 }
 \end{minted}
 
-% ------------------------------------------------------// 4
-
 \needspace{5\baselineskip}
 \subsubsectionfont{\large\bfseries\sffamily\underline}
 \subsubsection*{Segment Tree}
@@ -690,8 +641,6 @@ void setValAt(T val, int i) {
   st[i + N] = val;
 }
 \end{minted}
-
-% ------------------------------------------------------// 5
 
 \needspace{6\baselineskip}
 \subsubsectionfont{\large\bfseries\sffamily\underline}
@@ -830,8 +779,6 @@ struct SegmentTree {
 };
 \end{minted}
 
-% ------------------------------------------------------// 4
-
 \needspace{5\baselineskip}
 \subsubsectionfont{\large\bfseries\sffamily\underline}
 \subsubsection*{Sparse Table}
@@ -895,8 +842,6 @@ T queryArith(int l, int r) {
 \subsectionfont{\bfseries\sffamily\centering\LARGE}
 \subsection*{Strings}
 \addcontentsline{toc}{subsection}{Strings}
-% ------------------------------------------------------// 4
-
 \needspace{5\baselineskip}
 \subsubsectionfont{\large\bfseries\sffamily\underline}
 \subsubsection*{Trie}
@@ -1040,7 +985,6 @@ struct Trie {
 \subsectionfont{\bfseries\sffamily\centering\LARGE}
 \subsection*{Trees And Heaps}
 \addcontentsline{toc}{subsection}{Trees And Heaps}
-% ------------------------------------------------------
 \subsubsectionfont{\large\bfseries\sffamily\underline}
 \subsubsection*{Treap}
 \addcontentsline{toc}{subsubsection}{Treap}
@@ -1054,8 +998,6 @@ struct Trie {
 \markboth{GEOMETRY}{}
 \addcontentsline{toc}{section}{Geometry}
 \vspace{2em}
-% ------------------------------------------------------// 2
-
 \needspace{3\baselineskip}
 \subsectionfont{\large\bfseries\sffamily\underline}
 \subsection*{Max Interval Overlap}
@@ -1108,8 +1050,6 @@ pair<int, int> maxOverlap(vector<Interval> &arr) {
 \markboth{GRAPHS}{}
 \addcontentsline{toc}{section}{Graphs}
 \vspace{2em}
-% ------------------------------------------------------// 5
-
 \needspace{6\baselineskip}
 \subsectionfont{\large\bfseries\sffamily\underline}
 \subsection*{Articulation Points And Bridges}
@@ -1177,8 +1117,6 @@ void addEdge(int u, int v) {
 }
 \end{minted}
 
-% ------------------------------------------------------// 4
-
 \needspace{5\baselineskip}
 \subsectionfont{\large\bfseries\sffamily\underline}
 \subsection*{Connected Components}
@@ -1230,139 +1168,6 @@ void addEdge(int u, int v) {
 }
 \end{minted}
 
-\subsectionfont{\bfseries\sffamily\centering\LARGE}
-\subsection*{Cycles}
-\addcontentsline{toc}{subsection}{Cycles}
-% ------------------------------------------------------
-\subsubsectionfont{\large\bfseries\sffamily\underline}
-\subsubsection*{Get All Simple Cycles}
-\addcontentsline{toc}{subsubsection}{Get All Simple Cycles}
-\begin{minted}{cpp}
-
-\end{minted}
-
-% ------------------------------------------------------// 5
-
-\needspace{6\baselineskip}
-\subsubsectionfont{\large\bfseries\sffamily\underline}
-\subsubsection*{Get Some Cycles}
-\addcontentsline{toc}{subsubsection}{Get Some Cycles}
-\begin{minted}{cpp}
-// at least detects one cycle per component
-vector<vector<int>> ady, cycles;
-vector<int> vis, cycle;
-bool flag = false, isDirected = false;
-int root = -1;
-
-\end{minted}
-\vspace{-1em}
-\needspace{6\baselineskip}
-\begin{minted}{cpp}
-void initVars(int N) {
-  ady.assign(N, vector<int>());
-  vis.assign(N, 0);
-  cycles.clear();
-  root = -1, flag = false;
-}
-
-\end{minted}
-\vspace{-1em}
-\needspace{20\baselineskip}
-\begin{minted}{cpp}
-// O(N)
-bool hasCycle(int u, int prev) {
-  vis[u] = 1;
-  for (auto &v : ady[u]) {
-    if (v == u || vis[v] == 2 || (!isDirected && v == prev)) continue;
-    if (flag) {
-      if (!vis[v]) hasCycle(v, u);
-      continue;
-    }
-    if (vis[v] || hasCycle(v, u)) {
-      if (root == -1) root = v, flag = true;
-      cycle.push_back(u);
-      if (root == u) flag = false, root = -1, cycles.push_back(cycle), cycle.clear();
-    }
-  }
-  vis[u] = 2;
-  return flag;
-}
-
-\end{minted}
-\vspace{-1em}
-\needspace{6\baselineskip}
-\begin{minted}{cpp}
-// O(N)
-bool hasCycle() {
-  for (int u = 0; u < ady.size(); u++)
-    if (!vis[u]) cycle.clear(), hasCycle(u, -1);
-  return cycles.size() > 0;
-}
-
-\end{minted}
-\vspace{-1em}
-\needspace{4\baselineskip}
-\begin{minted}{cpp}
-void addEdge(int u, int v) {
-  ady[u].push_back(v);
-  if (!isDirected) ady[v].push_back(u);
-}
-\end{minted}
-
-% ------------------------------------------------------// 3
-
-\needspace{4\baselineskip}
-\subsubsectionfont{\large\bfseries\sffamily\underline}
-\subsubsection*{Has Cycle}
-\addcontentsline{toc}{subsubsection}{Has Cycle}
-\begin{minted}{cpp}
-vector<vector<int>> ady;
-vector<int> vis;
-bool isDirected = false;
-
-\end{minted}
-\vspace{-1em}
-\needspace{4\baselineskip}
-\begin{minted}{cpp}
-void initVars(int N) {
-  ady.assign(N, vector<int>());
-  vis.assign(N, 0);
-}
-
-\end{minted}
-\vspace{-1em}
-\needspace{8\baselineskip}
-\begin{minted}{cpp}
-bool hasCycle(int u, int prev) {
-  vis[u] = 1;
-  for (auto &v : ady[u])
-    if (v != u && vis[v] != 2 && (isDirected || v != prev) && (vis[v] || hasCycle(v, u))) return true;
-  vis[u] = 2;
-  return false;
-}
-
-\end{minted}
-\vspace{-1em}
-\needspace{5\baselineskip}
-\begin{minted}{cpp}
-// O(N)
-bool hasCycle() {
-  for (int u = 0; u < ady.size(); u++)
-    if (!vis[u] && hasCycle(u, -1)) return true;
-}
-
-\end{minted}
-\vspace{-1em}
-\needspace{4\baselineskip}
-\begin{minted}{cpp}
-void addEdge(int u, int v) {
-  ady[u].push_back(v);
-  if (!isDirected) ady[v].push_back(u);
-}
-\end{minted}
-
-% ------------------------------------------------------// 4
-
 \needspace{5\baselineskip}
 \subsectionfont{\large\bfseries\sffamily\underline}
 \subsection*{Flood Fill}
@@ -1392,143 +1197,6 @@ void floodFill() {
       if (mat[i][j] == oldColor) floodFill(i, j);
 }
 \end{minted}
-
-\subsectionfont{\bfseries\sffamily\centering\LARGE}
-\subsection*{Flow}
-\addcontentsline{toc}{subsection}{Flow}
-% ------------------------------------------------------// 3
-
-\needspace{4\baselineskip}
-\subsubsectionfont{\large\bfseries\sffamily\underline}
-\subsubsection*{Max Flow Dinic}
-\addcontentsline{toc}{subsubsection}{Max Flow Dinic}
-\begin{minted}{cpp}
-// cap[a][b] = Capacity from a to b
-// flow[a][b] = flow occupied from a to b
-// level[a] = level in graph of node a
-
-\end{minted}
-\vspace{-1em}
-\needspace{5\baselineskip}
-\begin{minted}{cpp}
-typedef int T;
-vector<int> level;
-vector<vector<int>> ady;
-unordered_map<int, unordered_map<int, T>> cap, flow;
-
-\end{minted}
-\vspace{-1em}
-\needspace{5\baselineskip}
-\begin{minted}{cpp}
-void initVars(int N) {
-  ady.assign(N, vector<int>());
-  cap.clear();
-  flow.clear();
-}
-
-\end{minted}
-\vspace{-1em}
-\needspace{17\baselineskip}
-\begin{minted}{cpp}
-bool levelGraph(int s, int t) {
-  level = vector<int>(ady.size());
-  level[s] = 1;
-  queue<int> q;
-  q.push(s);
-  while (!q.empty()) {
-    int u = q.front();
-    q.pop();
-    for (int &v : ady[u]) {
-      if (!level[v] && flow[u][v] < cap[u][v]) {
-        q.push(v);
-        level[v] = level[u] + 1;
-      }
-    }
-  }
-  return level[t];
-}
-
-\end{minted}
-\vspace{-1em}
-\needspace{17\baselineskip}
-\begin{minted}{cpp}
-T blockingFlow(int u, int t, T currPathMaxFlow) {
-  if (u == t) return currPathMaxFlow;
-  for (int v : ady[u]) {
-    T capleft = cap[u][v] - flow[u][v];
-    if ((level[v] == (level[u] + 1)) && (capleft > 0)) {
-      T pathMaxFlow = blockingFlow(v, t, min(currPathMaxFlow, capleft));
-      if (pathMaxFlow > 0) {
-        flow[u][v] += pathMaxFlow;
-        flow[v][u] -= pathMaxFlow;
-        return pathMaxFlow;
-      }
-    }
-  }
-  return 0;
-}
-
-\end{minted}
-\vspace{-1em}
-\needspace{9\baselineskip}
-\begin{minted}{cpp}
-// O(E * V^2)
-T dinicMaxFlow(int s, int t) {
-  if (s == t) return -1;
-  T maxFlow = 0;
-  while (levelGraph(s, t))
-    while (T flow = blockingFlow(s, t, 1 << 30)) maxFlow += flow;
-  return maxFlow;
-}
-
-\end{minted}
-\vspace{-1em}
-\needspace{4\baselineskip}
-\begin{minted}{cpp}
-void addEdge(int u, int v, T capacity) {
-  cap[u][v] = capacity;
-  ady[u].push_back(v);
-}
-\end{minted}
-
-% ------------------------------------------------------#include "Max Flow Dinic.cpp"
-
-\subsubsectionfont{\large\bfseries\sffamily\underline}
-\subsubsection*{Maximum Bipartite Matching}
-\addcontentsline{toc}{subsubsection}{Maximum Bipartite Matching}
-\begin{minted}{cpp}
-#include "Max Flow Dinic.cpp"
-
-\end{minted}
-\vspace{-1em}
-\needspace{4\baselineskip}
-\begin{minted}{cpp}
-void addEdge(int u, int v) {
-  cap[u][v] = 1;
-  ady[u].push_back(v);
-}
-
-\end{minted}
-\vspace{-1em}
-\needspace{14\baselineskip}
-\begin{minted}{cpp}
-int main() {
-  int n, s = 0, t = 1;
-  cin >> n;
-  initVars(n);
-  while (n--) {
-    int u, v;
-    cin >> u >> v;
-    addEdge(u += 2, v += 2);
-    addEdge(s, u);
-    addEdge(v, t);
-  }
-  cout << dinicMaxFlow(s, t) << endl;
-  return 0;
-}
-\end{minted}
-
-% ------------------------------------------------------// 5
 
 \needspace{6\baselineskip}
 \subsectionfont{\large\bfseries\sffamily\underline}
@@ -1565,8 +1233,6 @@ bool isBipartite() {
   return true;
 }
 \end{minted}
-
-% ------------------------------------------------------// 7
 
 \needspace{8\baselineskip}
 \subsectionfont{\large\bfseries\sffamily\underline}
@@ -1646,8 +1312,6 @@ void addEdge(int u, int v) {
 }
 \end{minted}
 
-% ------------------------------------------------------// 8
-
 \needspace{9\baselineskip}
 \subsectionfont{\large\bfseries\sffamily\underline}
 \subsection*{MST Kruskal}
@@ -1695,8 +1359,6 @@ void addEdge(int u, int v, T w) {
   Wedges.push_back({w, {u, v}});
 }
 \end{minted}
-
-% ------------------------------------------------------// 12
 
 \needspace{13\baselineskip}
 \subsectionfont{\large\bfseries\sffamily\underline}
@@ -1810,11 +1472,380 @@ void addEdge(int u, int v, T w) {
 }
 \end{minted}
 
+\needspace{6\baselineskip}
+\subsectionfont{\large\bfseries\sffamily\underline}
+\subsection*{Strongly Connected Components}
+\addcontentsline{toc}{subsection}{Strongly Connected Components}
+\begin{minted}{cpp}
+// tv = top value from stack
+// sccs = strongly connected components
+// scc = strongly connected component
+// disc = discovery time, low = low time
+// s = stack, top = top index of the stack
+
+\end{minted}
+\vspace{-1em}
+\needspace{3\baselineskip}
+\begin{minted}{cpp}
+int Time, top;
+vector<vector<int>> ady, sccs;
+vector<int> disc, low, s;
+
+\end{minted}
+\vspace{-1em}
+\needspace{3\baselineskip}
+\begin{minted}{cpp}
+void initVars(int N) {
+  ady.assign(N, vector<int>());
+}
+
+\end{minted}
+\vspace{-1em}
+\needspace{17\baselineskip}
+\begin{minted}{cpp}
+void dfsSCCS(int u) {
+  if (disc[u]) return;
+  low[u] = disc[u] = ++Time;
+  s[++top] = u;
+  for (int &v : ady[u]) dfsSCCS(v), low[u] = min(low[u], low[v]);
+  if (disc[u] == low[u]) {
+    vector<int> scc;
+    while (true) {
+      int tv = s[top--];
+      scc.push_back(tv);
+      low[tv] = ady.size();
+      if (tv == u) break;
+    }
+    sccs.push_back(scc);
+  }
+}
+
+\end{minted}
+\vspace{-1em}
+\needspace{6\baselineskip}
+\begin{minted}{cpp}
+// O(N)
+void SCCS() {
+  s = low = disc = vector<int>(ady.size());
+  Time = 0, top = -1, sccs.clear();
+  for (int u = 0; u < ady.size(); u++) dfsSCCS(u);
+}
+
+\end{minted}
+\vspace{-1em}
+\needspace{3\baselineskip}
+\begin{minted}{cpp}
+void addEdge(int u, int v) {
+  ady[u].push_back(v);
+}
+\end{minted}
+
+\needspace{4\baselineskip}
+\subsectionfont{\large\bfseries\sffamily\underline}
+\subsection*{Topological Sort}
+\addcontentsline{toc}{subsection}{Topological Sort}
+\begin{minted}{cpp}
+// vis = visited
+vector<vector<int>> ady;
+vector<int> vis, toposorted;
+
+\end{minted}
+\vspace{-1em}
+\needspace{5\baselineskip}
+\begin{minted}{cpp}
+void initVars(int N) {
+  ady.assign(N, vector<int>());
+  vis.assign(N, 0);
+  toposorted.clear();
+}
+
+\end{minted}
+\vspace{-1em}
+\needspace{10\baselineskip}
+\begin{minted}{cpp}
+// returns false if there is a cycle
+bool toposort(int u) {
+  vis[u] = 1;
+  for (auto &v : ady[u])
+    if (v != u && vis[v] != 2 && (vis[v] || !toposort(v))) return false;
+  vis[u] = 2;
+  toposorted.push_back(u);
+  return true;
+}
+
+\end{minted}
+\vspace{-1em}
+\needspace{7\baselineskip}
+\begin{minted}{cpp}
+// O(N)
+bool toposort() {
+  vis.clear();
+  for (int u = 0; u < ady.size(); u++)
+    if (!vis[u] && !toposort(u)) return false;
+  return true;
+}
+\end{minted}
+
+\subsectionfont{\bfseries\sffamily\centering\LARGE}
+\subsection*{Cycles}
+\addcontentsline{toc}{subsection}{Cycles}
+\subsubsectionfont{\large\bfseries\sffamily\underline}
+\subsubsection*{Get All Simple Cycles}
+\addcontentsline{toc}{subsubsection}{Get All Simple Cycles}
+\begin{minted}{cpp}
+
+\end{minted}
+
+\needspace{6\baselineskip}
+\subsubsectionfont{\large\bfseries\sffamily\underline}
+\subsubsection*{Get Some Cycles}
+\addcontentsline{toc}{subsubsection}{Get Some Cycles}
+\begin{minted}{cpp}
+// at least detects one cycle per component
+vector<vector<int>> ady, cycles;
+vector<int> vis, cycle;
+bool flag = false, isDirected = false;
+int root = -1;
+
+\end{minted}
+\vspace{-1em}
+\needspace{6\baselineskip}
+\begin{minted}{cpp}
+void initVars(int N) {
+  ady.assign(N, vector<int>());
+  vis.assign(N, 0);
+  cycles.clear();
+  root = -1, flag = false;
+}
+
+\end{minted}
+\vspace{-1em}
+\needspace{20\baselineskip}
+\begin{minted}{cpp}
+// O(N)
+bool hasCycle(int u, int prev) {
+  vis[u] = 1;
+  for (auto &v : ady[u]) {
+    if (v == u || vis[v] == 2 || (!isDirected && v == prev)) continue;
+    if (flag) {
+      if (!vis[v]) hasCycle(v, u);
+      continue;
+    }
+    if (vis[v] || hasCycle(v, u)) {
+      if (root == -1) root = v, flag = true;
+      cycle.push_back(u);
+      if (root == u) flag = false, root = -1, cycles.push_back(cycle), cycle.clear();
+    }
+  }
+  vis[u] = 2;
+  return flag;
+}
+
+\end{minted}
+\vspace{-1em}
+\needspace{6\baselineskip}
+\begin{minted}{cpp}
+// O(N)
+bool hasCycle() {
+  for (int u = 0; u < ady.size(); u++)
+    if (!vis[u]) cycle.clear(), hasCycle(u, -1);
+  return cycles.size() > 0;
+}
+
+\end{minted}
+\vspace{-1em}
+\needspace{4\baselineskip}
+\begin{minted}{cpp}
+void addEdge(int u, int v) {
+  ady[u].push_back(v);
+  if (!isDirected) ady[v].push_back(u);
+}
+\end{minted}
+
+\needspace{4\baselineskip}
+\subsubsectionfont{\large\bfseries\sffamily\underline}
+\subsubsection*{Has Cycle}
+\addcontentsline{toc}{subsubsection}{Has Cycle}
+\begin{minted}{cpp}
+vector<vector<int>> ady;
+vector<int> vis;
+bool isDirected = false;
+
+\end{minted}
+\vspace{-1em}
+\needspace{4\baselineskip}
+\begin{minted}{cpp}
+void initVars(int N) {
+  ady.assign(N, vector<int>());
+  vis.assign(N, 0);
+}
+
+\end{minted}
+\vspace{-1em}
+\needspace{8\baselineskip}
+\begin{minted}{cpp}
+bool hasCycle(int u, int prev) {
+  vis[u] = 1;
+  for (auto &v : ady[u])
+    if (v != u && vis[v] != 2 && (isDirected || v != prev) && (vis[v] || hasCycle(v, u))) return true;
+  vis[u] = 2;
+  return false;
+}
+
+\end{minted}
+\vspace{-1em}
+\needspace{5\baselineskip}
+\begin{minted}{cpp}
+// O(N)
+bool hasCycle() {
+  for (int u = 0; u < ady.size(); u++)
+    if (!vis[u] && hasCycle(u, -1)) return true;
+}
+
+\end{minted}
+\vspace{-1em}
+\needspace{4\baselineskip}
+\begin{minted}{cpp}
+void addEdge(int u, int v) {
+  ady[u].push_back(v);
+  if (!isDirected) ady[v].push_back(u);
+}
+\end{minted}
+
+\subsectionfont{\bfseries\sffamily\centering\LARGE}
+\subsection*{Flow}
+\addcontentsline{toc}{subsection}{Flow}
+\needspace{4\baselineskip}
+\subsubsectionfont{\large\bfseries\sffamily\underline}
+\subsubsection*{Max Flow Dinic}
+\addcontentsline{toc}{subsubsection}{Max Flow Dinic}
+\begin{minted}{cpp}
+// cap[a][b] = Capacity from a to b
+// flow[a][b] = flow occupied from a to b
+// level[a] = level in graph of node a
+
+\end{minted}
+\vspace{-1em}
+\needspace{5\baselineskip}
+\begin{minted}{cpp}
+typedef int T;
+vector<int> level;
+vector<vector<int>> ady;
+unordered_map<int, unordered_map<int, T>> cap, flow;
+
+\end{minted}
+\vspace{-1em}
+\needspace{5\baselineskip}
+\begin{minted}{cpp}
+void initVars(int N) {
+  ady.assign(N, vector<int>());
+  cap.clear();
+  flow.clear();
+}
+
+\end{minted}
+\vspace{-1em}
+\needspace{17\baselineskip}
+\begin{minted}{cpp}
+bool levelGraph(int s, int t) {
+  level = vector<int>(ady.size());
+  level[s] = 1;
+  queue<int> q;
+  q.push(s);
+  while (!q.empty()) {
+    int u = q.front();
+    q.pop();
+    for (int &v : ady[u]) {
+      if (!level[v] && flow[u][v] < cap[u][v]) {
+        q.push(v);
+        level[v] = level[u] + 1;
+      }
+    }
+  }
+  return level[t];
+}
+
+\end{minted}
+\vspace{-1em}
+\needspace{17\baselineskip}
+\begin{minted}{cpp}
+T blockingFlow(int u, int t, T currPathMaxFlow) {
+  if (u == t) return currPathMaxFlow;
+  for (int v : ady[u]) {
+    T capleft = cap[u][v] - flow[u][v];
+    if ((level[v] == (level[u] + 1)) && (capleft > 0)) {
+      T pathMaxFlow = blockingFlow(v, t, min(currPathMaxFlow, capleft));
+      if (pathMaxFlow > 0) {
+        flow[u][v] += pathMaxFlow;
+        flow[v][u] -= pathMaxFlow;
+        return pathMaxFlow;
+      }
+    }
+  }
+  return 0;
+}
+
+\end{minted}
+\vspace{-1em}
+\needspace{9\baselineskip}
+\begin{minted}{cpp}
+// O(E * V^2)
+T dinicMaxFlow(int s, int t) {
+  if (s == t) return -1;
+  T maxFlow = 0;
+  while (levelGraph(s, t))
+    while (T flow = blockingFlow(s, t, 1 << 30)) maxFlow += flow;
+  return maxFlow;
+}
+
+\end{minted}
+\vspace{-1em}
+\needspace{4\baselineskip}
+\begin{minted}{cpp}
+void addEdge(int u, int v, T capacity) {
+  cap[u][v] = capacity;
+  ady[u].push_back(v);
+}
+\end{minted}
+
+\subsubsectionfont{\large\bfseries\sffamily\underline}
+\subsubsection*{Maximum Bipartite Matching}
+\addcontentsline{toc}{subsubsection}{Maximum Bipartite Matching}
+\begin{minted}{cpp}
+#include "Max Flow Dinic.cpp"
+
+\end{minted}
+\vspace{-1em}
+\needspace{4\baselineskip}
+\begin{minted}{cpp}
+void addEdge(int u, int v) {
+  cap[u][v] = 1;
+  ady[u].push_back(v);
+}
+
+\end{minted}
+\vspace{-1em}
+\needspace{14\baselineskip}
+\begin{minted}{cpp}
+int main() {
+  int n, s = 0, t = 1;
+  cin >> n;
+  initVars(n);
+  while (n--) {
+    int u, v;
+    cin >> u >> v;
+    addEdge(u += 2, v += 2);
+    addEdge(s, u);
+    addEdge(v, t);
+  }
+  cout << dinicMaxFlow(s, t) << endl;
+  return 0;
+}
+\end{minted}
+
 \subsectionfont{\bfseries\sffamily\centering\LARGE}
 \subsection*{ShortestPaths}
 \addcontentsline{toc}{subsection}{ShortestPaths}
-% ------------------------------------------------------// 6
-
 \needspace{7\baselineskip}
 \subsubsectionfont{\large\bfseries\sffamily\underline}
 \subsubsection*{Bellman Ford}
@@ -1868,8 +1899,6 @@ void addEdge(int u, int v, T w) {
   weight[v][u] = w;
 }
 \end{minted}
-
-% ------------------------------------------------------// 5
 
 \needspace{6\baselineskip}
 \subsubsectionfont{\large\bfseries\sffamily\underline}
@@ -1948,124 +1977,6 @@ void addEdge(int u, int v, T w) {
 }
 \end{minted}
 
-% ------------------------------------------------------// 5
-
-\needspace{6\baselineskip}
-\subsectionfont{\large\bfseries\sffamily\underline}
-\subsection*{Strongly Connected Components}
-\addcontentsline{toc}{subsection}{Strongly Connected Components}
-\begin{minted}{cpp}
-// tv = top value from stack
-// sccs = strongly connected components
-// scc = strongly connected component
-// disc = discovery time, low = low time
-// s = stack, top = top index of the stack
-
-\end{minted}
-\vspace{-1em}
-\needspace{3\baselineskip}
-\begin{minted}{cpp}
-int Time, top;
-vector<vector<int>> ady, sccs;
-vector<int> disc, low, s;
-
-\end{minted}
-\vspace{-1em}
-\needspace{3\baselineskip}
-\begin{minted}{cpp}
-void initVars(int N) {
-  ady.assign(N, vector<int>());
-}
-
-\end{minted}
-\vspace{-1em}
-\needspace{17\baselineskip}
-\begin{minted}{cpp}
-void dfsSCCS(int u) {
-  if (disc[u]) return;
-  low[u] = disc[u] = ++Time;
-  s[++top] = u;
-  for (int &v : ady[u]) dfsSCCS(v), low[u] = min(low[u], low[v]);
-  if (disc[u] == low[u]) {
-    vector<int> scc;
-    while (true) {
-      int tv = s[top--];
-      scc.push_back(tv);
-      low[tv] = ady.size();
-      if (tv == u) break;
-    }
-    sccs.push_back(scc);
-  }
-}
-
-\end{minted}
-\vspace{-1em}
-\needspace{6\baselineskip}
-\begin{minted}{cpp}
-// O(N)
-void SCCS() {
-  s = low = disc = vector<int>(ady.size());
-  Time = 0, top = -1, sccs.clear();
-  for (int u = 0; u < ady.size(); u++) dfsSCCS(u);
-}
-
-\end{minted}
-\vspace{-1em}
-\needspace{3\baselineskip}
-\begin{minted}{cpp}
-void addEdge(int u, int v) {
-  ady[u].push_back(v);
-}
-\end{minted}
-
-% ------------------------------------------------------// 3
-
-\needspace{4\baselineskip}
-\subsectionfont{\large\bfseries\sffamily\underline}
-\subsection*{Topological Sort}
-\addcontentsline{toc}{subsection}{Topological Sort}
-\begin{minted}{cpp}
-// vis = visited
-vector<vector<int>> ady;
-vector<int> vis, toposorted;
-
-\end{minted}
-\vspace{-1em}
-\needspace{5\baselineskip}
-\begin{minted}{cpp}
-void initVars(int N) {
-  ady.assign(N, vector<int>());
-  vis.assign(N, 0);
-  toposorted.clear();
-}
-
-\end{minted}
-\vspace{-1em}
-\needspace{10\baselineskip}
-\begin{minted}{cpp}
-// returns false if there is a cycle
-bool toposort(int u) {
-  vis[u] = 1;
-  for (auto &v : ady[u])
-    if (v != u && vis[v] != 2 && (vis[v] || !toposort(v))) return false;
-  vis[u] = 2;
-  toposorted.push_back(u);
-  return true;
-}
-
-\end{minted}
-\vspace{-1em}
-\needspace{7\baselineskip}
-\begin{minted}{cpp}
-// O(N)
-bool toposort() {
-  vis.clear();
-  for (int u = 0; u < ady.size(); u++)
-    if (!vis[u] && !toposort(u)) return false;
-  return true;
-}
-\end{minted}
-
 \sectionfont{\bfseries\sffamily\centering\Huge}
 \vspace{1em}
 \section*{Maths}
@@ -2075,8 +1986,6 @@ bool toposort() {
 \subsectionfont{\bfseries\sffamily\centering\LARGE}
 \subsection*{Number Theory}
 \addcontentsline{toc}{subsection}{Number Theory}
-% ------------------------------------------------------# 13
-
 \needspace{14\baselineskip}
 \subsubsectionfont{\large\bfseries\sffamily\underline}
 \subsubsection*{Divisibility Criterion}
@@ -2128,8 +2037,6 @@ if __name__ == '__main__':
 
 \end{minted}
 
-% ------------------------------------------------------// 22
-
 \needspace{23\baselineskip}
 \subsubsectionfont{\large\bfseries\sffamily\underline}
 \subsubsection*{Extended Euclidean}
@@ -2157,8 +2064,6 @@ vector<long long int> extendedGCD(long long int a, long long int b) {
 }
 \end{minted}
 
-% ------------------------------------------------------// 4
-
 \needspace{5\baselineskip}
 \subsubsectionfont{\large\bfseries\sffamily\underline}
 \subsubsection*{GCD}
@@ -2183,8 +2088,6 @@ int gcd(int a, int b) {
 }
 \end{minted}
 
-% ------------------------------------------------------// 4
-
 \needspace{5\baselineskip}
 \subsubsectionfont{\large\bfseries\sffamily\underline}
 \subsubsection*{LCM}
@@ -2195,8 +2098,6 @@ int lcm(int a, int b) {
   return c ? a / c * b : 0;
 }
 \end{minted}
-
-% ------------------------------------------------------# 33
 
 \needspace{34\baselineskip}
 \subsubsectionfont{\large\bfseries\sffamily\underline}
@@ -2239,8 +2140,6 @@ def is_prime(p):
 
 \end{minted}
 
-% ------------------------------------------------------// 9
-
 \needspace{10\baselineskip}
 \subsubsectionfont{\large\bfseries\sffamily\underline}
 \subsubsection*{Prime Sieve}
@@ -2263,8 +2162,6 @@ vector<int> primeSieve(int n) {
 \markboth{STRINGS}{}
 \addcontentsline{toc}{section}{Strings}
 \vspace{2em}
-% ------------------------------------------------------// 3
-
 \needspace{4\baselineskip}
 \subsectionfont{\large\bfseries\sffamily\underline}
 \subsection*{KMP}
@@ -2306,8 +2203,6 @@ vector<int> search(string &p, string &t) {
   return kmp(p, t, 0);  // search in text
 }
 \end{minted}
-
-% ------------------------------------------------------// 5
 
 \needspace{6\baselineskip}
 \subsectionfont{\large\bfseries\sffamily\underline}
@@ -2381,7 +2276,6 @@ vector<int> rabinKarp(RollingHash &rhStr, string &pattern) {
 \markboth{TECHNIQUES}{}
 \addcontentsline{toc}{section}{Techniques}
 \vspace{2em}
-% ------------------------------------------------------
 \subsectionfont{\large\bfseries\sffamily\underline}
 \subsection*{Binary Search}
 \addcontentsline{toc}{subsection}{Binary Search}
@@ -2392,8 +2286,6 @@ vector<int> rabinKarp(RollingHash &rhStr, string &pattern) {
 \subsectionfont{\bfseries\sffamily\centering\LARGE}
 \subsection*{Multiple Queries}
 \addcontentsline{toc}{subsection}{Multiple Queries}
-% ------------------------------------------------------// 2
-
 \needspace{3\baselineskip}
 \subsubsectionfont{\large\bfseries\sffamily\underline}
 \subsubsection*{Mo}
@@ -2479,8 +2371,6 @@ int main() {
   getResults();
 }
 \end{minted}
-
-% ------------------------------------------------------// 4
 
 \needspace{5\baselineskip}
 \subsubsectionfont{\large\bfseries\sffamily\underline}
