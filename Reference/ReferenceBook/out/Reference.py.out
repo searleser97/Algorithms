@@ -2129,8 +2129,9 @@ int lcm(int a, int b) {
 }
 \end{minted}
 
-% ------------------------------------------------------from random import randrange
+% ------------------------------------------------------# 33
 
+\needspace{34\baselineskip}
 \subsubsectionfont{\large\bfseries\sffamily\underline}
 \subsubsection*{Prime Check Miller Rabin}
 \addcontentsline{toc}{subsubsection}{Prime Check Miller Rabin}
@@ -2138,11 +2139,6 @@ int lcm(int a, int b) {
 from random import randrange
 
 
-
-\end{minted}
-\vspace{-1em}
-\needspace{30\baselineskip}
-\begin{minted}{py}
 def is_prime(p):
     k = 100
     if p == 2 or p == 3:

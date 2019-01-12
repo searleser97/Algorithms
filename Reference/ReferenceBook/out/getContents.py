@@ -69,7 +69,6 @@ def main(currPath, currDir, depth):
             fileName = dirOrFile
             if re.fullmatch('.+\\.(cpp|c|py|java|tex)', fileName):
                 name, extension = fileName.split('.')
-                # printSectionType(name, depth + 1, True)
                 printFile(f, extension, name, depth + 1)
 
 

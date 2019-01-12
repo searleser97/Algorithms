@@ -1,4 +1,4 @@
-This is LuaTeX, Version 1.09.0 (MiKTeX 2.9.6880)  (format=lualatex 2018.12.9)  11 JAN 2019 19:12
+This is LuaTeX, Version 1.09.0 (MiKTeX 2.9.6880)  (format=lualatex 2018.12.9)  11 JAN 2019 19:16
  system commands enabled.
  file:line:error style messages enabled.
 **Reference.tex
@@ -49,7 +49,7 @@ Inserting `luaotfload.aux.set_capheight' at position 3 in `luaotfload.patch_font
 '.
 Inserting `luaotfload.rewrite_fontname' at position 4 in `luaotfload.patch_font'
 .
-luaotfload | main : initialization completed in 0.175 seconds
+luaotfload | main : initialization completed in 0.162 seconds
 (/home/san/.miktex/texmfs/install/tex/latex/base/article.cls
 Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
 (/home/san/.miktex/texmfs/install/tex/latex/base/size10.clo
@@ -1512,11 +1512,7 @@ guage 'english'. Reported on input line 2066.
 88B110.pygtex)
 \openout3 = Reference.pyg
 
-(./_minted-Reference/2EB53E123AB445B068DD0497E31F5C44CEC67AEB9154649D84ED569E26
-272C6A.pygtex)
-\openout3 = Reference.pyg
-
-(./_minted-Reference/63582463D15A9B929D31C403F5DCF738CEC67AEB9154649D84ED569E26
+(./_minted-Reference/9550B2AB6BEA04C6C9B0944B37921A78CEC67AEB9154649D84ED569E26
 272C6A.pygtex)
 \openout3 = Reference.pyg
 
@@ -1532,7 +1528,7 @@ guage 'english'. Reported on input line 2066.
 88B110.pygtex)
 Package babel Info: No hyphenation patterns were set for
 (babel)             lan
-guage 'english'. Reported on input line 2223.
+guage 'english'. Reported on input line 2219.
  [15]
 \openout3 = Reference.pyg
 
@@ -1588,7 +1584,7 @@ guage 'english'. Reported on input line 2223.
 88B110.pygtex)
 Package babel Info: No hyphenation patterns were set for
 (babel)             lan
-guage 'english'. Reported on input line 2376.
+guage 'english'. Reported on input line 2372.
  [16]
 \openout3 = Reference.pyg
 
@@ -1638,13 +1634,13 @@ Package rerunfilecheck Info: File `Reference.out' has not changed.
 )
 
 Here is how much of LuaTeX's memory you used:
- 16237 strings out of 494338
+ 16219 strings out of 494338
  125171,552014 words of node,token memory allocated
  435 words of node memory still in use:
    3 hlist, 1 vlist, 1 rule, 2 glue, 3 kern, 1 glyph, 5 attribute, 53 glue_spec,
  5 attribute_list, 1 write nodes
    avail lists: 2:6523,3:383,4:1719,5:742,6:156,7:3386,8:76,9:854,10:17,11:25
- 16453 multiletter control sequences out of 65536+200000
+ 16452 multiletter control sequences out of 65536+200000
  54 fonts using 4526079 bytes
  44i,18n,45p,842b,723s stack positions out of 5000i,500n,10000p,200000b,50000s
 </home/san/.miktex/texmfs/install/fonts/opentype/public/lm/lmmonolt10-bold.otf><
@@ -1655,7 +1651,7 @@ home/san/.miktex/texmfs/install/fonts/opentype/public/lm/lmroman10-regular.otf><
 me/san/.miktex/texmfs/install/fonts/opentype/public/lm/lmsans10-regular.otf></ho
 me/san/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmmi5.pfb></home/sa
 n/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmsy5.pfb>
-Output written on Reference.pdf (17 pages, 219818 bytes).
+Output written on Reference.pdf (17 pages, 219824 bytes).
 
 PDF statistics: 517 PDF objects out of 1000 (max. 8388607)
  92 named destinations out of 1000 (max. 131072)
