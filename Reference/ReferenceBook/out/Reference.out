@@ -1,76 +1,76 @@
 \BOOKMARK [1][-]{section*.2}{Coding Resources}{}% 1
 \BOOKMARK [2][-]{section*.3}{C++}{section*.2}% 2
-\BOOKMARK [3][-]{section*.4}{Decimal Precision}{section*.3}% 3
-\BOOKMARK [3][-]{section*.5}{Include All Libraries}{section*.3}% 4
-\BOOKMARK [3][-]{section*.6}{Int To Binary}{section*.3}% 5
-\BOOKMARK [3][-]{section*.7}{IO Optimization}{section*.3}% 6
-\BOOKMARK [3][-]{section*.8}{Map Value To Int}{section*.3}% 7
-\BOOKMARK [3][-]{section*.9}{Permutations}{section*.3}% 8
-\BOOKMARK [3][-]{section*.10}{Print Vector}{section*.3}% 9
-\BOOKMARK [3][-]{section*.11}{Priority Queue Of Object}{section*.3}% 10
-\BOOKMARK [3][-]{section*.12}{Random}{section*.3}% 11
-\BOOKMARK [3][-]{section*.13}{Read Line}{section*.3}% 12
-\BOOKMARK [3][-]{section*.14}{Sort Pair}{section*.3}% 13
-\BOOKMARK [3][-]{section*.15}{Sort Vector Of Object}{section*.3}% 14
-\BOOKMARK [3][-]{section*.16}{Split String}{section*.3}% 15
-\BOOKMARK [3][-]{section*.17}{Typedef}{section*.3}% 16
+\BOOKMARK [3][-]{section*.4}{Decimal Precision.cpp}{section*.3}% 3
+\BOOKMARK [3][-]{section*.5}{Include All Libraries.cpp}{section*.3}% 4
+\BOOKMARK [3][-]{section*.6}{Int To Binary.cpp}{section*.3}% 5
+\BOOKMARK [3][-]{section*.7}{IO Optimization.cpp}{section*.3}% 6
+\BOOKMARK [3][-]{section*.8}{Map Value To Int.cpp}{section*.3}% 7
+\BOOKMARK [3][-]{section*.9}{Permutations.cpp}{section*.3}% 8
+\BOOKMARK [3][-]{section*.10}{Print Vector.cpp}{section*.3}% 9
+\BOOKMARK [3][-]{section*.11}{Priority Queue Of Object.cpp}{section*.3}% 10
+\BOOKMARK [3][-]{section*.12}{Random.cpp}{section*.3}% 11
+\BOOKMARK [3][-]{section*.13}{Read Line.cpp}{section*.3}% 12
+\BOOKMARK [3][-]{section*.14}{Sort Pair.cpp}{section*.3}% 13
+\BOOKMARK [3][-]{section*.15}{Sort Vector Of Object.cpp}{section*.3}% 14
+\BOOKMARK [3][-]{section*.16}{Split String.cpp}{section*.3}% 15
+\BOOKMARK [3][-]{section*.17}{Typedef.cpp}{section*.3}% 16
 \BOOKMARK [2][-]{section*.18}{Python}{section*.2}% 17
-\BOOKMARK [3][-]{section*.19}{Combinations}{section*.18}% 18
-\BOOKMARK [3][-]{section*.20}{Fast IO}{section*.18}% 19
-\BOOKMARK [3][-]{section*.21}{Permutations}{section*.18}% 20
-\BOOKMARK [3][-]{section*.22}{Random}{section*.18}% 21
-\BOOKMARK [3][-]{section*.23}{Sort List}{section*.18}% 22
-\BOOKMARK [3][-]{section*.24}{Sort List Of Object}{section*.18}% 23
+\BOOKMARK [3][-]{section*.19}{Combinations.py}{section*.18}% 18
+\BOOKMARK [3][-]{section*.20}{Fast IO.py}{section*.18}% 19
+\BOOKMARK [3][-]{section*.21}{Permutations.py}{section*.18}% 20
+\BOOKMARK [3][-]{section*.22}{Random.py}{section*.18}% 21
+\BOOKMARK [3][-]{section*.23}{Sort List.py}{section*.18}% 22
+\BOOKMARK [3][-]{section*.24}{Sort List Of Object.py}{section*.18}% 23
 \BOOKMARK [1][-]{section*.25}{Data Structures}{}% 24
 \BOOKMARK [2][-]{section*.26}{Geometry}{section*.25}% 25
-\BOOKMARK [3][-]{section*.27}{K-D Tree}{section*.26}% 26
+\BOOKMARK [3][-]{section*.27}{K-D Tree.cpp}{section*.26}% 26
 \BOOKMARK [2][-]{section*.28}{Graphs}{section*.25}% 27
-\BOOKMARK [3][-]{section*.29}{UnionFind}{section*.28}% 28
+\BOOKMARK [3][-]{section*.29}{UnionFind.cpp}{section*.28}% 28
 \BOOKMARK [2][-]{section*.30}{Ranges}{section*.25}% 29
-\BOOKMARK [3][-]{section*.31}{BIT}{section*.30}% 30
-\BOOKMARK [3][-]{section*.32}{BIT Range Update}{section*.30}% 31
-\BOOKMARK [3][-]{section*.33}{Segment Tree}{section*.30}% 32
-\BOOKMARK [3][-]{section*.34}{Segment Tree Lazy Propagation}{section*.30}% 33
-\BOOKMARK [3][-]{section*.35}{Sparse Table}{section*.30}% 34
+\BOOKMARK [3][-]{section*.31}{BIT.cpp}{section*.30}% 30
+\BOOKMARK [3][-]{section*.32}{BIT Range Update.cpp}{section*.30}% 31
+\BOOKMARK [3][-]{section*.33}{Segment Tree.cpp}{section*.30}% 32
+\BOOKMARK [3][-]{section*.34}{Segment Tree Lazy Propagation.cpp}{section*.30}% 33
+\BOOKMARK [3][-]{section*.35}{Sparse Table.cpp}{section*.30}% 34
 \BOOKMARK [2][-]{section*.36}{Strings}{section*.25}% 35
-\BOOKMARK [3][-]{section*.37}{Trie}{section*.36}% 36
+\BOOKMARK [3][-]{section*.37}{Trie.cpp}{section*.36}% 36
 \BOOKMARK [2][-]{section*.38}{Trees And Heaps}{section*.25}% 37
-\BOOKMARK [3][-]{section*.39}{Treap}{section*.38}% 38
+\BOOKMARK [3][-]{section*.39}{Treap.cpp}{section*.38}% 38
 \BOOKMARK [1][-]{section*.40}{Geometry}{}% 39
-\BOOKMARK [2][-]{section*.41}{Max Interval Overlap}{section*.40}% 40
+\BOOKMARK [2][-]{section*.41}{Max Interval Overlap.cpp}{section*.40}% 40
 \BOOKMARK [1][-]{section*.42}{Graphs}{}% 41
-\BOOKMARK [2][-]{section*.43}{Articulation Points And Bridges}{section*.42}% 42
-\BOOKMARK [2][-]{section*.44}{Connected Components}{section*.42}% 43
-\BOOKMARK [2][-]{section*.45}{Flood Fill}{section*.42}% 44
-\BOOKMARK [2][-]{section*.46}{Is Bipartite}{section*.42}% 45
-\BOOKMARK [2][-]{section*.47}{LCA}{section*.42}% 46
-\BOOKMARK [2][-]{section*.48}{MST Kruskal}{section*.42}% 47
-\BOOKMARK [2][-]{section*.49}{MST Prim}{section*.42}% 48
-\BOOKMARK [2][-]{section*.50}{Strongly Connected Components}{section*.42}% 49
-\BOOKMARK [2][-]{section*.51}{Topological Sort}{section*.42}% 50
+\BOOKMARK [2][-]{section*.43}{Articulation Points And Bridges.cpp}{section*.42}% 42
+\BOOKMARK [2][-]{section*.44}{Connected Components.cpp}{section*.42}% 43
+\BOOKMARK [2][-]{section*.45}{Flood Fill.cpp}{section*.42}% 44
+\BOOKMARK [2][-]{section*.46}{Is Bipartite.cpp}{section*.42}% 45
+\BOOKMARK [2][-]{section*.47}{LCA.cpp}{section*.42}% 46
+\BOOKMARK [2][-]{section*.48}{MST Kruskal.cpp}{section*.42}% 47
+\BOOKMARK [2][-]{section*.49}{MST Prim.cpp}{section*.42}% 48
+\BOOKMARK [2][-]{section*.50}{Strongly Connected Components.cpp}{section*.42}% 49
+\BOOKMARK [2][-]{section*.51}{Topological Sort.cpp}{section*.42}% 50
 \BOOKMARK [2][-]{section*.52}{Cycles}{section*.42}% 51
-\BOOKMARK [3][-]{section*.53}{Get All Simple Cycles}{section*.52}% 52
-\BOOKMARK [3][-]{section*.54}{Get Some Cycles}{section*.52}% 53
-\BOOKMARK [3][-]{section*.55}{Has Cycle}{section*.52}% 54
+\BOOKMARK [3][-]{section*.53}{Get All Simple Cycles.cpp}{section*.52}% 52
+\BOOKMARK [3][-]{section*.54}{Get Some Cycles.cpp}{section*.52}% 53
+\BOOKMARK [3][-]{section*.55}{Has Cycle.cpp}{section*.52}% 54
 \BOOKMARK [2][-]{section*.56}{Flow}{section*.42}% 55
-\BOOKMARK [3][-]{section*.57}{Max Flow Dinic}{section*.56}% 56
-\BOOKMARK [3][-]{section*.58}{Maximum Bipartite Matching}{section*.56}% 57
+\BOOKMARK [3][-]{section*.57}{Max Flow Dinic.cpp}{section*.56}% 56
+\BOOKMARK [3][-]{section*.58}{Maximum Bipartite Matching.cpp}{section*.56}% 57
 \BOOKMARK [2][-]{section*.59}{ShortestPaths}{section*.42}% 58
-\BOOKMARK [3][-]{section*.60}{Bellman Ford}{section*.59}% 59
-\BOOKMARK [3][-]{section*.61}{Dijkstra}{section*.59}% 60
+\BOOKMARK [3][-]{section*.60}{Bellman Ford.cpp}{section*.59}% 59
+\BOOKMARK [3][-]{section*.61}{Dijkstra.cpp}{section*.59}% 60
 \BOOKMARK [1][-]{section*.62}{Maths}{}% 61
 \BOOKMARK [2][-]{section*.63}{Number Theory}{section*.62}% 62
-\BOOKMARK [3][-]{section*.64}{Divisibility Criterion}{section*.63}% 63
-\BOOKMARK [3][-]{section*.65}{Extended Euclidean}{section*.63}% 64
-\BOOKMARK [3][-]{section*.66}{GCD}{section*.63}% 65
-\BOOKMARK [3][-]{section*.67}{LCM}{section*.63}% 66
-\BOOKMARK [3][-]{section*.68}{Prime Check Miller Rabin}{section*.63}% 67
-\BOOKMARK [3][-]{section*.69}{Prime Sieve}{section*.63}% 68
+\BOOKMARK [3][-]{section*.64}{Divisibility Criterion.py}{section*.63}% 63
+\BOOKMARK [3][-]{section*.65}{Extended Euclidean.cpp}{section*.63}% 64
+\BOOKMARK [3][-]{section*.66}{GCD.cpp}{section*.63}% 65
+\BOOKMARK [3][-]{section*.67}{LCM.cpp}{section*.63}% 66
+\BOOKMARK [3][-]{section*.68}{Prime Check Miller Rabin.py}{section*.63}% 67
+\BOOKMARK [3][-]{section*.69}{Prime Sieve.cpp}{section*.63}% 68
 \BOOKMARK [1][-]{section*.70}{Strings}{}% 69
-\BOOKMARK [2][-]{section*.71}{KMP}{section*.70}% 70
-\BOOKMARK [2][-]{section*.72}{Rabin Karp}{section*.70}% 71
+\BOOKMARK [2][-]{section*.71}{KMP.cpp}{section*.70}% 70
+\BOOKMARK [2][-]{section*.72}{Rabin Karp.cpp}{section*.70}% 71
 \BOOKMARK [1][-]{section*.73}{Techniques}{}% 72
-\BOOKMARK [2][-]{section*.74}{Binary Search}{section*.73}% 73
+\BOOKMARK [2][-]{section*.74}{Binary Search.cpp}{section*.73}% 73
 \BOOKMARK [2][-]{section*.75}{Multiple Queries}{section*.73}% 74
-\BOOKMARK [3][-]{section*.76}{Mo}{section*.75}% 75
-\BOOKMARK [3][-]{section*.77}{SQRT Decomposition}{section*.75}% 76
+\BOOKMARK [3][-]{section*.76}{Mo.cpp}{section*.75}% 75
+\BOOKMARK [3][-]{section*.77}{SQRT Decomposition.cpp}{section*.75}% 76

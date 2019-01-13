@@ -29,10 +29,21 @@ def printSectionType(sectionName, depth, isFile):
         print('\\markboth{' + sectionName.upper() + '}{}')
     print('\\addcontentsline{toc}{' + sectionType + '}{' + sectionName + '}')
     if vspace:
-        print('\\vspace{' + str(vspace) + 'em}')
+        print('\\vspace{' + str(vspace + 1) + 'em}')
 
 
-def printFile(path, extension, name, depth):
+def needspaceForDepth(depth):
+    if depth == 1:
+        needspace = 3
+    elif depth == 2:
+        needspace = 2
+    elif depth == 3:
+        needspace = 1
+    return needspace
+
+
+def printFile(path, depth, sections):
+    extension = sections[-1][sections[-1].rfind('.') + 1:]
     if extension == 'tex':
         print('\\cfinput{' + path + '}')
     elif extension == 'h':
@@ -42,9 +53,13 @@ def printFile(path, extension, name, depth):
     firstLine = content[:content.find('\n') + 1]
     if re.fullmatch('(?:#|(?://)) ?[1-9][0-9]*\\n', firstLine):
         content = content.replace(firstLine, '')
-        print(
-            '\\needspace{' + str(int(firstLine[2:].strip()) + 1) + '\\baselineskip}')
-    printSectionType(name, depth, True)
+        needspace = int(firstLine[2:].strip())
+        for i in range(len(sections)):
+            needspace += needspaceForDepth(depth - i)
+        print('\\needspace{' + str(needspace) + '\\baselineskip}')
+    for i in range(len(sections) - 1):
+        printSectionType(sections[i], depth - len(sections) + i + 1, False)
+    printSectionType(sections[-1], depth, True)
     content = '\\begin{minted}{' + extension + '}\n' + content
     needspaces = re.findall('(?:#|(?://)) ?[1-9][0-9]*\\n', content)
     for needspace in needspaces:
@@ -58,24 +73,31 @@ def printFile(path, extension, name, depth):
     print(content)
 
 
-def main(currPath, currDir, depth):
-    if currDir in excluded:
+def main(currPath, depth, sections):
+    if len(sections) and sections[-1] in excluded:
         return
-    if depth:
-        printSectionType(currDir, depth, False)
     sortedDirs = sorted(
         listdir(currPath),
         key=lambda x: (isdir(join(currPath, x)), x.split('.')[0].lower())
     )
+    isFirst = True
     for dirOrFile in sortedDirs:
         f = join(currPath, dirOrFile)
         if isdir(f):
-            main(f, dirOrFile, depth + 1)
-        elif isfile(f):
-            fileName = dirOrFile
-            if re.fullmatch('.+\\.(cpp|c|py|java|tex)', fileName):
-                name, extension = fileName.split('.')
-                printFile(f, extension, name, depth + 1)
+            if isFirst:
+                isFirst = False
+                sections.append(dirOrFile)
+                main(f, depth + 1, sections)
+            else:
+                main(f, depth + 1, [dirOrFile])
+        elif isfile(f) and re.fullmatch('.+\\.(cpp|c|py|java|tex)', dirOrFile):
+            if isFirst:
+                isFirst = False
+                sections.append(dirOrFile)
+                printFile(f, depth + 1, sections)
+            else:
+                printFile(f, depth + 1, [dirOrFile])
 
 
-main(PATH, PATH[PATH.rfind('/') + 1:], 0)
+sections = []
+main(PATH, 0, sections)
