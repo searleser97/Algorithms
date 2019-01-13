@@ -16,9 +16,11 @@ def printSectionType(sectionName, depth, isFile):
     elif depth == 2:
         sectionType = 'subsection'
         style += '\\LARGE'
+        vspace = 1
     elif depth == 3:
         sectionType = 'subsubsection'
         style += '\\Large'
+        vspace = 1
     if isFile:
         style = '\\large\\bfseries\\sffamily\\underline'
     print('\\' + sectionType + 'font{' + style + '}')
