@@ -37,9 +37,9 @@ def printSectionType(sectionName, depth, isFile):
 
 def needspaceForDepth(depth):
     if depth == 1:
-        needspace = 1
+        needspace = 3
     elif depth == 2:
-        needspace = 1
+        needspace = 2
     elif depth == 3:
         needspace = 1
     return needspace

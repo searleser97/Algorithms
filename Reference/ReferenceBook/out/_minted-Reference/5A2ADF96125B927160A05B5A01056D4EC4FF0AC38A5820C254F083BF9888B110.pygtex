@@ -1,0 +1,22 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{// O(N * lg(N))}
+\PYG{k+kt}{int} \PYG{n+nf}{maxOverlap}\PYG{p}{(}\PYG{n}{vector}\PYG{o}{\PYGZlt{}}\PYG{n}{Interval}\PYG{o}{\PYGZgt{}} \PYG{o}{\PYGZam{}}\PYG{n}{arr}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+  \PYG{n}{maxIntervals}\PYG{p}{.}\PYG{n}{clear}\PYG{p}{();}
+  \PYG{n}{map}\PYG{o}{\PYGZlt{}}\PYG{n}{T}\PYG{p}{,} \PYG{k+kt}{int}\PYG{o}{\PYGZgt{}} \PYG{n}{m}\PYG{p}{;}
+  \PYG{k+kt}{int} \PYG{n}{maxI} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{,} \PYG{n}{curr} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{,} \PYG{n}{isFirst} \PYG{o}{=} \PYG{l+m+mi}{1}\PYG{p}{;}
+  \PYG{n}{T} \PYG{n}{l} \PYG{o}{=} \PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1LL}\PYG{p}{,} \PYG{n}{r} \PYG{o}{=} \PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1LL}\PYG{p}{;}
+  \PYG{k}{for} \PYG{p}{(}\PYG{k}{auto} \PYG{o}{\PYGZam{}}\PYG{n+nl}{i} \PYG{p}{:} \PYG{n}{arr}\PYG{p}{)} \PYG{n}{m}\PYG{p}{[}\PYG{n}{i}\PYG{p}{.}\PYG{n}{first}\PYG{p}{]}\PYG{o}{++}\PYG{p}{,} \PYG{n}{m}\PYG{p}{[}\PYG{n}{i}\PYG{p}{.}\PYG{n}{second} \PYG{o}{+} \PYG{l+m+mi}{1}\PYG{p}{]}\PYG{o}{\PYGZhy{}\PYGZhy{}}\PYG{p}{;}
+  \PYG{k}{for} \PYG{p}{(}\PYG{k}{auto} \PYG{o}{\PYGZam{}}\PYG{n+nl}{p} \PYG{p}{:} \PYG{n}{m}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+    \PYG{n}{curr} \PYG{o}{+=} \PYG{n}{p}\PYG{p}{.}\PYG{n}{second}\PYG{p}{;}
+    \PYG{k}{if} \PYG{p}{(}\PYG{n}{curr} \PYG{o}{\PYGZgt{}} \PYG{n}{maxI}\PYG{p}{)} \PYG{n}{maxI} \PYG{o}{=} \PYG{n}{curr}\PYG{p}{,} \PYG{n}{l} \PYG{o}{=} \PYG{n}{p}\PYG{p}{.}\PYG{n}{first}\PYG{p}{;}
+    \PYG{k}{if} \PYG{p}{(}\PYG{n}{curr} \PYG{o}{==} \PYG{n}{maxI}\PYG{p}{)} \PYG{n}{r} \PYG{o}{=} \PYG{n}{p}\PYG{p}{.}\PYG{n}{first}\PYG{p}{;}
+  \PYG{p}{\PYGZcb{}}
+  \PYG{n}{curr} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{;}
+  \PYG{k}{for} \PYG{p}{(}\PYG{k}{auto} \PYG{o}{\PYGZam{}}\PYG{n+nl}{p} \PYG{p}{:} \PYG{n}{m}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+    \PYG{n}{curr} \PYG{o}{+=} \PYG{n}{p}\PYG{p}{.}\PYG{n}{second}\PYG{p}{;}
+    \PYG{k}{if} \PYG{p}{(}\PYG{n}{curr} \PYG{o}{==} \PYG{n}{maxI} \PYG{o}{\PYGZam{}\PYGZam{}} \PYG{n}{isFirst}\PYG{p}{)} \PYG{n}{l} \PYG{o}{=} \PYG{n}{p}\PYG{p}{.}\PYG{n}{first}\PYG{p}{,} \PYG{n}{isFirst} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{;}
+    \PYG{k}{if} \PYG{p}{(}\PYG{n}{curr} \PYG{o}{\PYGZlt{}} \PYG{n}{maxI} \PYG{o}{\PYGZam{}\PYGZam{}} \PYG{o}{!}\PYG{n}{isFirst}\PYG{p}{)} \PYG{n}{maxIntervals}\PYG{p}{.}\PYG{n}{push\PYGZus{}back}\PYG{p}{(\PYGZob{}}\PYG{n}{l}\PYG{p}{,} \PYG{n}{p}\PYG{p}{.}\PYG{n}{first} \PYG{o}{\PYGZhy{}} \PYG{l+m+mi}{1}\PYG{p}{\PYGZcb{}),} \PYG{n}{isFirst} \PYG{o}{=} \PYG{l+m+mi}{1}\PYG{p}{;}
+  \PYG{p}{\PYGZcb{}}
+  \PYG{k}{return} \PYG{n}{maxI}\PYG{p}{;}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

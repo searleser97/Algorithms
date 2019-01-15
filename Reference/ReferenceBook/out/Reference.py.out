@@ -1,4 +1,4 @@
-\needspace{7\baselineskip}
+\needspace{10\baselineskip}
 \sectionfont{\bfseries\sffamily\centering\Huge}
 \vspace{1em}
 \section*{Coding Resources}
@@ -259,7 +259,7 @@ typedef TYPE ALIAS;
 typedef int T;
 \end{minted}
 
-\needspace{5\baselineskip}
+\needspace{6\baselineskip}
 \subsectionfont{\bfseries\sffamily\centering\LARGE}
 \vspace{0em}
 \subsection*{Python}
@@ -380,7 +380,7 @@ li.sort(key = lambda x: (x.first, x.second, x.third), reverse=False)
 
 \end{minted}
 
-\needspace{5\baselineskip}
+\needspace{6\baselineskip}
 \subsectionfont{\bfseries\sffamily\centering\LARGE}
 \vspace{0em}
 \subsection*{Graphs}
@@ -433,7 +433,7 @@ struct UnionFind {
 };
 \end{minted}
 
-\needspace{5\baselineskip}
+\needspace{6\baselineskip}
 \subsectionfont{\bfseries\sffamily\centering\LARGE}
 \vspace{0em}
 \subsection*{Ranges}
@@ -849,7 +849,7 @@ T queryArith(int l, int r) {
 }
 \end{minted}
 
-\needspace{6\baselineskip}
+\needspace{7\baselineskip}
 \subsectionfont{\bfseries\sffamily\centering\LARGE}
 \vspace{0em}
 \subsection*{Strings}
@@ -994,7 +994,7 @@ struct Trie {
 };
 \end{minted}
 
-\needspace{4\baselineskip}
+\needspace{5\baselineskip}
 \subsectionfont{\bfseries\sffamily\centering\LARGE}
 \vspace{0em}
 \subsection*{Trees And Heaps}
@@ -1119,7 +1119,7 @@ struct RedBlackTree {
 
 \end{minted}
 
-\needspace{4\baselineskip}
+\needspace{8\baselineskip}
 \sectionfont{\bfseries\sffamily\centering\Huge}
 \vspace{1em}
 \section*{Geometry}
@@ -1132,46 +1132,62 @@ struct RedBlackTree {
 \begin{minted}{cpp}
 typedef long long int T;
 typedef pair<T, T> Interval;
+vector<Interval> maxIntervals;
 
 \end{minted}
 \vspace{-1em}
-\needspace{13\baselineskip}
+\needspace{22\baselineskip}
 \begin{minted}{cpp}
 // O(N * lg(N))
-pair<int, T> maxOverlap(vector<Interval> &arr) {
+int maxOverlap(vector<Interval> &arr) {
+  maxIntervals.clear();
   map<T, int> m;
-  int maxI = 0, curr = 0;
-  T idx = -1LL;
+  int maxI = 0, curr = 0, isFirst = 1;
+  T l = -1LL, r = -1LL;
   for (auto &i : arr) m[i.first]++, m[i.second + 1]--;
   for (auto &p : m) {
     curr += p.second;
-    if (curr > maxI) maxI = curr, idx = p.first;
+    if (curr > maxI) maxI = curr, l = p.first;
+    if (curr == maxI) r = p.first;
   }
-  return {maxI, idx};
+  curr = 0;
+  for (auto &p : m) {
+    curr += p.second;
+    if (curr == maxI && isFirst) l = p.first, isFirst = 0;
+    if (curr < maxI && !isFirst) maxIntervals.push_back({l, p.first - 1}), isFirst = 1;
+  }
+  return maxI;
 }
 
 \end{minted}
 \vspace{-1em}
-\needspace{15\baselineskip}
+\needspace{29\baselineskip}
 \begin{minted}{cpp}
-// O(MaxPoint) maxPoint < vector::max_size 
-pair<int, int> maxOverlap(vector<Interval> &arr) {
+// O(MaxPoint) maxPoint < vector::max_size
+int maxOverlap(vector<Interval> &arr) {
+  maxIntervals.clear();
   T maxPoint = 0;
   for (auto &i : arr)
     if (i.second > maxPoint) maxPoint = i.second;
   vector<int> x(maxPoint + 2);
   for (auto &i : arr) x[i.first]++, x[i.second + 1]--;
-  int maxI = 0, curr = 0;
-  T idx = -1LL;
+  int maxI = 0, curr = 0, isFirst = 1;
+  T l = -1LL, r = -1LL;
   for (int i = 0; i < x.size(); i++) {
     curr += x[i];
-    if (curr > maxI) maxI = curr, idx = i;
+    if (curr > maxI) maxI = curr;
   }
-  return {maxI, idx};
+  curr = 0;
+  for (int i = 0; i < x.size(); i++) {
+    curr += x[i];
+    if (curr == maxI && isFirst) l = i, isFirst = 0;
+    if (curr < maxI && !isFirst) maxIntervals.push_back({l, i - 1}), isFirst = 1;
+  }
+  return maxI;
 }
 \end{minted}
 
-\needspace{7\baselineskip}
+\needspace{10\baselineskip}
 \sectionfont{\bfseries\sffamily\centering\Huge}
 \vspace{1em}
 \section*{Graphs}
@@ -1244,7 +1260,7 @@ void addEdge(int u, int v) {
 }
 \end{minted}
 
-\needspace{5\baselineskip}
+\needspace{6\baselineskip}
 \subsectionfont{\large\bfseries\sffamily\underline}
 \subsection*{Connected Components.cpp}
 \addcontentsline{toc}{subsection}{Connected Components.cpp}
@@ -1295,7 +1311,7 @@ void addEdge(int u, int v) {
 }
 \end{minted}
 
-\needspace{5\baselineskip}
+\needspace{6\baselineskip}
 \subsectionfont{\large\bfseries\sffamily\underline}
 \subsection*{Flood Fill.cpp}
 \addcontentsline{toc}{subsection}{Flood Fill.cpp}
@@ -1325,7 +1341,7 @@ void floodFill() {
 }
 \end{minted}
 
-\needspace{6\baselineskip}
+\needspace{7\baselineskip}
 \subsectionfont{\large\bfseries\sffamily\underline}
 \subsection*{Is Bipartite.cpp}
 \addcontentsline{toc}{subsection}{Is Bipartite.cpp}
@@ -1361,7 +1377,7 @@ bool isBipartite() {
 }
 \end{minted}
 
-\needspace{8\baselineskip}
+\needspace{9\baselineskip}
 \subsectionfont{\large\bfseries\sffamily\underline}
 \subsection*{LCA.cpp}
 \addcontentsline{toc}{subsection}{LCA.cpp}
@@ -1439,7 +1455,7 @@ void addEdge(int u, int v) {
 }
 \end{minted}
 
-\needspace{9\baselineskip}
+\needspace{10\baselineskip}
 \subsectionfont{\large\bfseries\sffamily\underline}
 \subsection*{MST Kruskal.cpp}
 \addcontentsline{toc}{subsection}{MST Kruskal.cpp}
@@ -1487,7 +1503,7 @@ void addEdge(int u, int v, T w) {
 }
 \end{minted}
 
-\needspace{13\baselineskip}
+\needspace{14\baselineskip}
 \subsectionfont{\large\bfseries\sffamily\underline}
 \subsection*{MST Prim.cpp}
 \addcontentsline{toc}{subsection}{MST Prim.cpp}
@@ -1599,7 +1615,7 @@ void addEdge(int u, int v, T w) {
 }
 \end{minted}
 
-\needspace{6\baselineskip}
+\needspace{7\baselineskip}
 \subsectionfont{\large\bfseries\sffamily\underline}
 \subsection*{Strongly Connected Components.cpp}
 \addcontentsline{toc}{subsection}{Strongly Connected Components.cpp}
@@ -1667,7 +1683,7 @@ void addEdge(int u, int v) {
 }
 \end{minted}
 
-\needspace{4\baselineskip}
+\needspace{5\baselineskip}
 \subsectionfont{\large\bfseries\sffamily\underline}
 \subsection*{Topological Sort.cpp}
 \addcontentsline{toc}{subsection}{Topological Sort.cpp}
@@ -1844,7 +1860,7 @@ void addEdge(int u, int v) {
 }
 \end{minted}
 
-\needspace{5\baselineskip}
+\needspace{6\baselineskip}
 \subsectionfont{\bfseries\sffamily\centering\LARGE}
 \vspace{0em}
 \subsection*{Flow}
@@ -1977,7 +1993,7 @@ int main() {
 }
 \end{minted}
 
-\needspace{8\baselineskip}
+\needspace{9\baselineskip}
 \subsectionfont{\bfseries\sffamily\centering\LARGE}
 \vspace{0em}
 \subsection*{ShortestPaths}
@@ -2113,7 +2129,7 @@ void addEdge(int u, int v, T w) {
 }
 \end{minted}
 
-\needspace{16\baselineskip}
+\needspace{19\baselineskip}
 \sectionfont{\bfseries\sffamily\centering\Huge}
 \vspace{1em}
 \section*{Maths}
@@ -2294,7 +2310,7 @@ vector<int> primeSieve(int n) {
 }
 \end{minted}
 
-\needspace{5\baselineskip}
+\needspace{8\baselineskip}
 \sectionfont{\bfseries\sffamily\centering\Huge}
 \vspace{1em}
 \section*{Strings}
@@ -2342,7 +2358,7 @@ vector<int> search(string &p, string &t) {
 }
 \end{minted}
 
-\needspace{6\baselineskip}
+\needspace{7\baselineskip}
 \subsectionfont{\large\bfseries\sffamily\underline}
 \subsection*{Rabin Karp.cpp}
 \addcontentsline{toc}{subsection}{Rabin Karp.cpp}
@@ -2421,7 +2437,7 @@ vector<int> rabinKarp(RollingHash &rhStr, string &pattern) {
 
 \end{minted}
 
-\needspace{4\baselineskip}
+\needspace{5\baselineskip}
 \subsectionfont{\bfseries\sffamily\centering\LARGE}
 \vspace{0em}
 \subsection*{Multiple Queries}
