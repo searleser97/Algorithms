@@ -26,3 +26,7 @@ bool toposort() {
     if (!vis[u] && !toposort(u)) return false;
   return true;
 }
+// 3
+void addEdge(int u, int v) {
+  ady[u].push_back(v);
+}

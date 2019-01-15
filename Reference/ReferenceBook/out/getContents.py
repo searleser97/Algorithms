@@ -23,6 +23,7 @@ def printSectionType(sectionName, depth, isFile):
         vspace = 1
     if isFile:
         style = '\\large\\bfseries\\sffamily\\underline'
+        vspace = 0
     print('\\' + sectionType + 'font{' + style + '}')
     if vspace:
         print('\\vspace{' + str(vspace - 1) + 'em}')
@@ -36,9 +37,9 @@ def printSectionType(sectionName, depth, isFile):
 
 def needspaceForDepth(depth):
     if depth == 1:
-        needspace = 3
+        needspace = 1
     elif depth == 2:
-        needspace = 2
+        needspace = 1
     elif depth == 3:
         needspace = 1
     return needspace
@@ -59,9 +60,8 @@ def printFile(path, depth, sections):
         for i in range(len(sections)):
             needspace += needspaceForDepth(depth - i)
         print('\\needspace{' + str(needspace) + '\\baselineskip}')
-    for i in range(len(sections) - 1):
-        printSectionType(sections[i], depth - len(sections) + i + 1, False)
-    printSectionType(sections[-1], depth, True)
+    for i in range(len(sections)):
+        printSectionType(sections[i], depth - len(sections) + i + 1, i == len(sections) - 1)
     content = '\\begin{minted}{' + extension + '}\n' + content
     needspaces = re.findall('(?:#|(?://)) ?[1-9][0-9]*\\n', content)
     for needspace in needspaces:

@@ -35,13 +35,13 @@ struct Trie {
     return curr;
   }
   // 5
-  // number of words with given prefix O(N)
+  // O(STR.SIZE) number of words with given prefix
   int prefixCount(string prefix) {
     Node *node = find(prefix);
     return node ? node->wpt : 0;
   }
   // 5
-  // number of words matching str O(N)
+  // O(STR.SIZE) number of words matching str
   int strCount(string str) {
     Node *node = find(str);
     return node ? node->w : 0;

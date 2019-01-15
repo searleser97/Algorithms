@@ -35,42 +35,43 @@
 \BOOKMARK [2][-]{section*.36}{Strings}{section*.25}% 35
 \BOOKMARK [3][-]{section*.37}{Trie.cpp}{section*.36}% 36
 \BOOKMARK [2][-]{section*.38}{Trees And Heaps}{section*.25}% 37
-\BOOKMARK [3][-]{section*.39}{Treap.cpp}{section*.38}% 38
-\BOOKMARK [1][-]{section*.40}{Geometry}{}% 39
-\BOOKMARK [2][-]{section*.41}{Max Interval Overlap.cpp}{section*.40}% 40
-\BOOKMARK [1][-]{section*.42}{Graphs}{}% 41
-\BOOKMARK [2][-]{section*.43}{Articulation Points And Bridges.cpp}{section*.42}% 42
-\BOOKMARK [2][-]{section*.44}{Connected Components.cpp}{section*.42}% 43
-\BOOKMARK [2][-]{section*.45}{Flood Fill.cpp}{section*.42}% 44
-\BOOKMARK [2][-]{section*.46}{Is Bipartite.cpp}{section*.42}% 45
-\BOOKMARK [2][-]{section*.47}{LCA.cpp}{section*.42}% 46
-\BOOKMARK [2][-]{section*.48}{MST Kruskal.cpp}{section*.42}% 47
-\BOOKMARK [2][-]{section*.49}{MST Prim.cpp}{section*.42}% 48
-\BOOKMARK [2][-]{section*.50}{Strongly Connected Components.cpp}{section*.42}% 49
-\BOOKMARK [2][-]{section*.51}{Topological Sort.cpp}{section*.42}% 50
-\BOOKMARK [2][-]{section*.52}{Cycles}{section*.42}% 51
-\BOOKMARK [3][-]{section*.53}{Get All Simple Cycles.cpp}{section*.52}% 52
-\BOOKMARK [3][-]{section*.54}{Get Some Cycles.cpp}{section*.52}% 53
-\BOOKMARK [3][-]{section*.55}{Has Cycle.cpp}{section*.52}% 54
-\BOOKMARK [2][-]{section*.56}{Flow}{section*.42}% 55
-\BOOKMARK [3][-]{section*.57}{Max Flow Dinic.cpp}{section*.56}% 56
-\BOOKMARK [3][-]{section*.58}{Maximum Bipartite Matching.cpp}{section*.56}% 57
-\BOOKMARK [2][-]{section*.59}{ShortestPaths}{section*.42}% 58
-\BOOKMARK [3][-]{section*.60}{Bellman Ford.cpp}{section*.59}% 59
-\BOOKMARK [3][-]{section*.61}{Dijkstra.cpp}{section*.59}% 60
-\BOOKMARK [1][-]{section*.62}{Maths}{}% 61
-\BOOKMARK [2][-]{section*.63}{Number Theory}{section*.62}% 62
-\BOOKMARK [3][-]{section*.64}{Divisibility Criterion.py}{section*.63}% 63
-\BOOKMARK [3][-]{section*.65}{Extended Euclidean.cpp}{section*.63}% 64
-\BOOKMARK [3][-]{section*.66}{GCD.cpp}{section*.63}% 65
-\BOOKMARK [3][-]{section*.67}{LCM.cpp}{section*.63}% 66
-\BOOKMARK [3][-]{section*.68}{Prime Check Miller Rabin.py}{section*.63}% 67
-\BOOKMARK [3][-]{section*.69}{Prime Sieve.cpp}{section*.63}% 68
-\BOOKMARK [1][-]{section*.70}{Strings}{}% 69
-\BOOKMARK [2][-]{section*.71}{KMP.cpp}{section*.70}% 70
-\BOOKMARK [2][-]{section*.72}{Rabin Karp.cpp}{section*.70}% 71
-\BOOKMARK [1][-]{section*.73}{Techniques}{}% 72
-\BOOKMARK [2][-]{section*.74}{Binary Search.cpp}{section*.73}% 73
-\BOOKMARK [2][-]{section*.75}{Multiple Queries}{section*.73}% 74
-\BOOKMARK [3][-]{section*.76}{Mo.cpp}{section*.75}% 75
-\BOOKMARK [3][-]{section*.77}{SQRT Decomposition.cpp}{section*.75}% 76
+\BOOKMARK [3][-]{section*.39}{Red Black Tree.cpp}{section*.38}% 38
+\BOOKMARK [3][-]{section*.40}{Treap.cpp}{section*.38}% 39
+\BOOKMARK [1][-]{section*.41}{Geometry}{}% 40
+\BOOKMARK [2][-]{section*.42}{Max Interval Overlap.cpp}{section*.41}% 41
+\BOOKMARK [1][-]{section*.43}{Graphs}{}% 42
+\BOOKMARK [2][-]{section*.44}{Articulation Points And Bridges.cpp}{section*.43}% 43
+\BOOKMARK [2][-]{section*.45}{Connected Components.cpp}{section*.43}% 44
+\BOOKMARK [2][-]{section*.46}{Flood Fill.cpp}{section*.43}% 45
+\BOOKMARK [2][-]{section*.47}{Is Bipartite.cpp}{section*.43}% 46
+\BOOKMARK [2][-]{section*.48}{LCA.cpp}{section*.43}% 47
+\BOOKMARK [2][-]{section*.49}{MST Kruskal.cpp}{section*.43}% 48
+\BOOKMARK [2][-]{section*.50}{MST Prim.cpp}{section*.43}% 49
+\BOOKMARK [2][-]{section*.51}{Strongly Connected Components.cpp}{section*.43}% 50
+\BOOKMARK [2][-]{section*.52}{Topological Sort.cpp}{section*.43}% 51
+\BOOKMARK [2][-]{section*.53}{Cycles}{section*.43}% 52
+\BOOKMARK [3][-]{section*.54}{Get All Simple Cycles.cpp}{section*.53}% 53
+\BOOKMARK [3][-]{section*.55}{Get Some Cycles.cpp}{section*.53}% 54
+\BOOKMARK [3][-]{section*.56}{Has Cycle.cpp}{section*.53}% 55
+\BOOKMARK [2][-]{section*.57}{Flow}{section*.43}% 56
+\BOOKMARK [3][-]{section*.58}{Max Flow Dinic.cpp}{section*.57}% 57
+\BOOKMARK [3][-]{section*.59}{Maximum Bipartite Matching.cpp}{section*.57}% 58
+\BOOKMARK [2][-]{section*.60}{ShortestPaths}{section*.43}% 59
+\BOOKMARK [3][-]{section*.61}{Bellman Ford.cpp}{section*.60}% 60
+\BOOKMARK [3][-]{section*.62}{Dijkstra.cpp}{section*.60}% 61
+\BOOKMARK [1][-]{section*.63}{Maths}{}% 62
+\BOOKMARK [2][-]{section*.64}{Number Theory}{section*.63}% 63
+\BOOKMARK [3][-]{section*.65}{Divisibility Criterion.py}{section*.64}% 64
+\BOOKMARK [3][-]{section*.66}{Extended Euclidean.cpp}{section*.64}% 65
+\BOOKMARK [3][-]{section*.67}{GCD.cpp}{section*.64}% 66
+\BOOKMARK [3][-]{section*.68}{LCM.cpp}{section*.64}% 67
+\BOOKMARK [3][-]{section*.69}{Prime Check Miller Rabin.py}{section*.64}% 68
+\BOOKMARK [3][-]{section*.70}{Prime Sieve.cpp}{section*.64}% 69
+\BOOKMARK [1][-]{section*.71}{Strings}{}% 70
+\BOOKMARK [2][-]{section*.72}{KMP.cpp}{section*.71}% 71
+\BOOKMARK [2][-]{section*.73}{Rabin Karp.cpp}{section*.71}% 72
+\BOOKMARK [1][-]{section*.74}{Techniques}{}% 73
+\BOOKMARK [2][-]{section*.75}{Binary Search.cpp}{section*.74}% 74
+\BOOKMARK [2][-]{section*.76}{Multiple Queries}{section*.74}% 75
+\BOOKMARK [3][-]{section*.77}{Mo.cpp}{section*.76}% 76
+\BOOKMARK [3][-]{section*.78}{SQRT Decomposition.cpp}{section*.76}% 77

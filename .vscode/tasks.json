@@ -6,7 +6,7 @@
     {
       "label": "build",
       "type": "shell",
-      "command": "/home/san/ProgramFiles/Scripts/aout /home/san/Algorithms/Reference/Data\\ Structures/Ranges/BIT.cpp",
+      "command": "/home/san/ProgramFiles/Scripts/aout /home/san/Algorithms/Reference/Data\\ Structures/Trees\\ And\\ Heaps/Red\\ Black\\ tree.cpp",
       "group": "build",
       "problemMatcher": []
     }
