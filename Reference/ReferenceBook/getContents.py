@@ -67,7 +67,7 @@ def printFile(path, depth, sections):
     for needspace in needspaces:
         news = ''\
             '\\end{minted}\n'\
-            '\\vspace{-1em}\n'\
+            '\\vspace{-12pt}\n'\
             '\\needspace{' + needspace.strip()[2:].strip() + '\\baselineskip}\n'\
             '\\begin{minted}{' + extension + '}\n'
         content = content.replace(needspace, news)

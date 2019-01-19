@@ -35,14 +35,14 @@ using namespace std;
 \begin{minted}{cpp}
 typedef long long int lli;
 \end{minted}
-\vspace{-1em}
+\vspace{-12pt}
 \needspace{3\baselineskip}
 \begin{minted}{cpp}
 lli bitsInInt(lli n) {  // clz = count leading zeroes
   return sizeof(n) * 8 - __builtin_clzll(n);
 }
 \end{minted}
-\vspace{-1em}
+\vspace{-12pt}
 \needspace{9\baselineskip}
 \begin{minted}{cpp}
 vector<bool> intToBitsArray(lli n) {
@@ -77,7 +77,7 @@ unordered_map<Val, int> intForVal;
 unordered_map<int, Val> valForInt;
 int mapId = 0;
 \end{minted}
-\vspace{-1em}
+\vspace{-12pt}
 \needspace{4\baselineskip}
 \begin{minted}{cpp}
 int Map(Val val) {
@@ -87,12 +87,12 @@ int Map(Val val) {
              : intForVal[val] = mapId++;
 }
 \end{minted}
-\vspace{-1em}
+\vspace{-12pt}
 \needspace{3\baselineskip}
 \begin{minted}{cpp}
 int IMap(int val) { return valForInt[val]; }
 \end{minted}
-\vspace{-1em}
+\vspace{-12pt}
 \needspace{5\baselineskip}
 \begin{minted}{cpp}
 void initMapping() {
@@ -108,7 +108,7 @@ void initMapping() {
 \begin{minted}{cpp}
 typedef vector<int> T;  // typedef string T;
 \end{minted}
-\vspace{-1em}
+\vspace{-12pt}
 \needspace{8\baselineskip}
 \begin{minted}{cpp}
 vector<T> permutations(T v) {
@@ -148,7 +148,7 @@ struct Object {
   int second;
 };
 \end{minted}
-\vspace{-1em}
+\vspace{-12pt}
 \needspace{10\baselineskip}
 \begin{minted}{cpp}
 int main() {
@@ -172,7 +172,7 @@ int random(int min, int max) {
   return min + rand() % (max - min + 1);
 }
 \end{minted}
-\vspace{-1em}
+\vspace{-12pt}
 \needspace{3\baselineskip}
 \begin{minted}{cpp}
 int main() {
@@ -216,14 +216,14 @@ struct Object {
   int second;
 };
 \end{minted}
-\vspace{-1em}
+\vspace{-12pt}
 \needspace{3\baselineskip}
 \begin{minted}{cpp}
 bool cmp(const Object& a, const Object& b) {
   return a.second > b.second;
 }
 \end{minted}
-\vspace{-1em}
+\vspace{-12pt}
 \needspace{6\baselineskip}
 \begin{minted}{cpp}
 int main() {
@@ -350,7 +350,7 @@ class MyObject :
     self.second = second
     self.third = third
 \end{minted}
-\vspace{-1em}
+\vspace{-12pt}
 \needspace{10\baselineskip}
 \begin{minted}{py}
 li = [MyObject('b', 3, 1), MyObject('a', 3, 2), MyObject('b', 3, 3)]
@@ -400,14 +400,14 @@ struct UnionFind {
   int n;
   vector<int> dad, size;
 \end{minted}
-\vspace{-1em}
+\vspace{-12pt}
 \needspace{3\baselineskip}
 \begin{minted}{cpp}
   UnionFind(int N) : n(N), dad(N), size(N, 1) {
     while (N--) dad[N] = N;
   }
 \end{minted}
-\vspace{-1em}
+\vspace{-12pt}
 \needspace{4\baselineskip}
 \begin{minted}{cpp}
   int root(int u) {
@@ -415,14 +415,14 @@ struct UnionFind {
     return dad[u] = root(dad[u]);
   }
 \end{minted}
-\vspace{-1em}
+\vspace{-12pt}
 \needspace{3\baselineskip}
 \begin{minted}{cpp}
   bool areConnected(int u, int v) {
     return root(u) == root(v);
   }
 \end{minted}
-\vspace{-1em}
+\vspace{-12pt}
 \needspace{6\baselineskip}
 \begin{minted}{cpp}
   void join(int u, int v) {
@@ -432,7 +432,7 @@ struct UnionFind {
     size[Rv] += size[Ru];
   }
 \end{minted}
-\vspace{-1em}
+\vspace{-12pt}
 \needspace{4\baselineskip}
 \begin{minted}{cpp}
   int getSize(int u) { return size[root(u)]; }
@@ -455,7 +455,7 @@ typedef long long int T;
 T neutro = 0;
 vector<T> bit;
 \end{minted}
-\vspace{-1em}
+\vspace{-12pt}
 \needspace{7\baselineskip}
 \begin{minted}{cpp}
 void initVars(int n) { bit.assign(++n, neutro); }
@@ -465,7 +465,7 @@ T F(T a, T b) {
   // return a * b;
 }
 \end{minted}
-\vspace{-1em}
+\vspace{-12pt}
 \needspace{5\baselineskip}
 \begin{minted}{cpp}
 // Inverse of F
@@ -474,7 +474,7 @@ T I(T a, T b) {
   // return a / b;
 }
 \end{minted}
-\vspace{-1em}
+\vspace{-12pt}
 \needspace{7\baselineskip}
 \begin{minted}{cpp}
 // O(N)
@@ -485,7 +485,7 @@ void build() {
   }
 }
 \end{minted}
-\vspace{-1em}
+\vspace{-12pt}
 \needspace{4\baselineskip}
 \begin{minted}{cpp}
 // O(lg(N))
@@ -494,7 +494,7 @@ void update(int i, T val) {
     bit[i] = F(bit[i], val);
 }
 \end{minted}
-\vspace{-1em}
+\vspace{-12pt}
 \needspace{6\baselineskip}
 \begin{minted}{cpp}
 // O(lg(N))
@@ -504,7 +504,7 @@ T query(int i) {
   return ans;
 }
 \end{minted}
-\vspace{-1em}
+\vspace{-12pt}
 \needspace{6\baselineskip}
 \begin{minted}{cpp}
 // O(lg(N)), [l, r]
@@ -524,7 +524,7 @@ typedef long long int T;
 T neutro = 0;
 vector<T> bit1, bit2;
 \end{minted}
-\vspace{-1em}
+\vspace{-12pt}
 \needspace{4\baselineskip}
 \begin{minted}{cpp}
 void initVars(int n) {
@@ -532,7 +532,7 @@ void initVars(int n) {
   bit2 = bit1;
 }
 \end{minted}
-\vspace{-1em}
+\vspace{-12pt}
 \needspace{5\baselineskip}
 \begin{minted}{cpp}
 // O(lg(N))
@@ -541,7 +541,7 @@ void update(vector<T> &bit, int i, T val) {
     bit[i] += val;
 }
 \end{minted}
-\vspace{-1em}
+\vspace{-12pt}
 \needspace{7\baselineskip}
 \begin{minted}{cpp}
 // O(lg(N)), [l, r]
@@ -552,7 +552,7 @@ void update(int l, int r, T val) {
   update(bit2, l, -val * (l - 1));
 }
 \end{minted}
-\vspace{-1em}
+\vspace{-12pt}
 \needspace{6\baselineskip}
 \begin{minted}{cpp}
 // O(lg(N))
@@ -562,7 +562,7 @@ T query(vector<T> &bit, int i) {
   return ans;
 }
 \end{minted}
-\vspace{-1em}
+\vspace{-12pt}
 \needspace{4\baselineskip}
 \begin{minted}{cpp}
 // O(lg(N))
@@ -570,7 +570,7 @@ T query(int i) {
   return query(bit1, i) * i + query(bit2, i);
 }
 \end{minted}
-\vspace{-1em}
+\vspace{-12pt}
 \needspace{4\baselineskip}
 \begin{minted}{cpp}
 // O(lg(N)), [l, r]
@@ -589,7 +589,7 @@ T query(int l, int r) {
 // e.g. for sum is 0, for multiplication
 // is 1, for gcd is 0, for min is INF, etc.
 \end{minted}
-\vspace{-1em}
+\vspace{-12pt}
 \needspace{5\baselineskip}
 \begin{minted}{cpp}
 template <class T>
@@ -598,7 +598,7 @@ struct SegmentTree {
   int N;
   vector<T> st;
 \end{minted}
-\vspace{-1em}
+\vspace{-12pt}
 \needspace{8\baselineskip}
 \begin{minted}{cpp}
   SegmentTree(int n) : st(2 * n, neutro), N(n) {}
@@ -610,7 +610,7 @@ struct SegmentTree {
     // return min(a, b);
   }
 \end{minted}
-\vspace{-1em}
+\vspace{-12pt}
 \needspace{5\baselineskip}
 \begin{minted}{cpp}
   // O(2N)
@@ -619,7 +619,7 @@ struct SegmentTree {
       st[i] = F(st[i << 1], st[i << 1 | 1]);
   }
 \end{minted}
-\vspace{-1em}
+\vspace{-12pt}
 \needspace{5\baselineskip}
 \begin{minted}{cpp}
   // O(lg(2N))
@@ -628,7 +628,7 @@ struct SegmentTree {
       st[i >> 1] = F(st[i], st[i ^ 1]);
   }
 \end{minted}
-\vspace{-1em}
+\vspace{-12pt}
 \needspace{5\baselineskip}
 \begin{minted}{cpp}
   // O(3N), [l, r]
@@ -637,7 +637,7 @@ struct SegmentTree {
     build();
   }
 \end{minted}
-\vspace{-1em}
+\vspace{-12pt}
 \needspace{9\baselineskip}
 \begin{minted}{cpp}
   // O(lg(2N)), [l, r]
@@ -650,7 +650,7 @@ struct SegmentTree {
     return ans;
   }
 \end{minted}
-\vspace{-1em}
+\vspace{-12pt}
 \needspace{2\baselineskip}
 \begin{minted}{cpp}
   void setValAt(T val, int i) { st[i + N] = val; }
@@ -668,7 +668,7 @@ struct SegmentTree {
 // e.g. for sum is 0, for multiplication
 // is 1, for gcd is 0, for min is INF, etc.
 \end{minted}
-\vspace{-1em}
+\vspace{-12pt}
 \needspace{6\baselineskip}
 \begin{minted}{cpp}
 template <class T>
@@ -678,7 +678,7 @@ struct SegmentTree {
   vector<T> st, d;
   vector<bool> u;
 \end{minted}
-\vspace{-1em}
+\vspace{-12pt}
 \needspace{4\baselineskip}
 \begin{minted}{cpp}
   SegmentTree(int n)
@@ -686,7 +686,7 @@ struct SegmentTree {
     H = sizeof(int) * 8 - __builtin_clz(N = n);
   }
   \end{minted}
-\vspace{-1em}
+\vspace{-12pt}
 \needspace{6\baselineskip}
 \begin{minted}{cpp}
   T F(T a, T b) {
@@ -696,7 +696,7 @@ struct SegmentTree {
     // return min(a, b);
   }
   \end{minted}
-\vspace{-1em}
+\vspace{-12pt}
 \needspace{6\baselineskip}
 \begin{minted}{cpp}
   void apply(int i, T val, int k) {
@@ -706,14 +706,14 @@ struct SegmentTree {
     if (i < N) d[i] = val, u[i] = 1;
   }
 \end{minted}
-\vspace{-1em}
+\vspace{-12pt}
 \needspace{3\baselineskip}
 \begin{minted}{cpp}
   void calc(int i) {
     if (!u[i]) st[i] = F(st[i << 1], st[i << 1 | 1]);
   }
 \end{minted}
-\vspace{-1em}
+\vspace{-12pt}
 \needspace{4\baselineskip}
 \begin{minted}{cpp}
   // O(2N)
@@ -721,7 +721,7 @@ struct SegmentTree {
     for (int i = N - 1; i > 0; i--) calc(i);
   }
 \end{minted}
-\vspace{-1em}
+\vspace{-12pt}
 \needspace{4\baselineskip}
 \begin{minted}{cpp}
   // O(lg(N))
@@ -729,7 +729,7 @@ struct SegmentTree {
     while (p > 1) p >>= 1, calc(p);
   }
 \end{minted}
-\vspace{-1em}
+\vspace{-12pt}
 \needspace{12\baselineskip}
 \begin{minted}{cpp}
   // O(lg(N))
@@ -745,7 +745,7 @@ struct SegmentTree {
     }
   }
 \end{minted}
-\vspace{-1em}
+\vspace{-12pt}
 \needspace{12\baselineskip}
 \begin{minted}{cpp}
   // O(lg(N)), [l, r]
@@ -761,7 +761,7 @@ struct SegmentTree {
     build(rr);
   }
 \end{minted}
-\vspace{-1em}
+\vspace{-12pt}
 \needspace{11\baselineskip}
 \begin{minted}{cpp}
   // O(lg(2N)), [l, r]
@@ -776,7 +776,7 @@ struct SegmentTree {
     return ans;
   }
 \end{minted}
-\vspace{-1em}
+\vspace{-12pt}
 \needspace{2\baselineskip}
 \begin{minted}{cpp}
   void setValAt(T val, int i) { st[i + N] = val; }
@@ -793,7 +793,7 @@ typedef int T;
 int neutro = 0;
 vector<vector<T>> st;
 \end{minted}
-\vspace{-1em}
+\vspace{-12pt}
 \needspace{6\baselineskip}
 \begin{minted}{cpp}
 T F(T a, T b) {
@@ -803,7 +803,7 @@ T F(T a, T b) {
   // return a * b; // Arith
 }
 \end{minted}
-\vspace{-1em}
+\vspace{-12pt}
 \needspace{9\baselineskip}
 \begin{minted}{cpp}
 // O(Nlg(N))
@@ -816,7 +816,7 @@ void build(vector<T> &arr) {
                    st[i - 1][j + (1 << (i - 1))]);
 }
 \end{minted}
-\vspace{-1em}
+\vspace{-12pt}
 \needspace{5\baselineskip}
 \begin{minted}{cpp}
 // O(1), [l, r]
@@ -825,7 +825,7 @@ T query(int l, int r) {
   return F(st[i][l], st[i][r + 1 - (1 << i)]);
 }
 \end{minted}
-\vspace{-1em}
+\vspace{-12pt}
 \needspace{11\baselineskip}
 \begin{minted}{cpp}
 // O(lg(N)), [l, r]
@@ -855,7 +855,7 @@ T queryArith(int l, int r) {
 // w = number of words ending in the node
 // c = character
 \end{minted}
-\vspace{-1em}
+\vspace{-12pt}
 \needspace{8\baselineskip}
 \begin{minted}{cpp}
 struct Trie {
@@ -867,7 +867,7 @@ struct Trie {
     int w = 0, wpt = 0;
   };
 \end{minted}
-\vspace{-1em}
+\vspace{-12pt}
 \needspace{12\baselineskip}
 \begin{minted}{cpp}
   Node *root = new Node();
@@ -883,7 +883,7 @@ struct Trie {
     curr->wpt++, curr->w++;
   }
 \end{minted}
-\vspace{-1em}
+\vspace{-12pt}
 \needspace{9\baselineskip}
 \begin{minted}{cpp}
   // O(STR.SIZE)
@@ -896,7 +896,7 @@ struct Trie {
     return curr;
   }
 \end{minted}
-\vspace{-1em}
+\vspace{-12pt}
 \needspace{5\baselineskip}
 \begin{minted}{cpp}
   // O(STR.SIZE) number of words with given prefix
@@ -905,7 +905,7 @@ struct Trie {
     return node ? node->wpt : 0;
   }
 \end{minted}
-\vspace{-1em}
+\vspace{-12pt}
 \needspace{5\baselineskip}
 \begin{minted}{cpp}
   // O(STR.SIZE) number of words matching str
@@ -914,7 +914,7 @@ struct Trie {
     return node ? node->w : 0;
   }
 \end{minted}
-\vspace{-1em}
+\vspace{-12pt}
 \needspace{10\baselineskip}
 \begin{minted}{cpp}
   // O(N)
@@ -928,7 +928,7 @@ struct Trie {
     }
   }
 \end{minted}
-\vspace{-1em}
+\vspace{-12pt}
 \needspace{7\baselineskip}
 \begin{minted}{cpp}
   // O(N)
@@ -939,7 +939,7 @@ struct Trie {
     return words;
   }
 \end{minted}
-\vspace{-1em}
+\vspace{-12pt}
 \needspace{5\baselineskip}
 \begin{minted}{cpp}
   // O(N)
@@ -948,7 +948,7 @@ struct Trie {
     getWords(find(prefix), words, prefix);
   }
 \end{minted}
-\vspace{-1em}
+\vspace{-12pt}
 \needspace{15\baselineskip}
 \begin{minted}{cpp}
   // O(STR.SIZE)
@@ -967,7 +967,7 @@ struct Trie {
     return false;
   }
 \end{minted}
-\vspace{-1em}
+\vspace{-12pt}
 \needspace{6\baselineskip}
 \begin{minted}{cpp}
   // O(STR.SIZE)
@@ -991,7 +991,7 @@ struct Trie {
 template <class K, class V>
 struct RedBlackTree {
 \end{minted}
-\vspace{-1em}
+\vspace{-12pt}
 \needspace{9\baselineskip}
 \begin{minted}{cpp}
   struct Node {
@@ -1005,7 +1005,7 @@ struct RedBlackTree {
 
   Node *root = nullptr;
 \end{minted}
-\vspace{-1em}
+\vspace{-12pt}
 \needspace{5\baselineskip}
 \begin{minted}{cpp}
   int compare(K a, K b) {
@@ -1014,7 +1014,7 @@ struct RedBlackTree {
     return 0;
   }
 \end{minted}
-\vspace{-1em}
+\vspace{-12pt}
 \needspace{11\baselineskip}
 \begin{minted}{cpp}
   // O(lg(N))
@@ -1029,7 +1029,7 @@ struct RedBlackTree {
     throw runtime_error("Key doesn't exist");
   }
 \end{minted}
-\vspace{-1em}
+\vspace{-12pt}
 \needspace{8\baselineskip}
 \begin{minted}{cpp}
   Node *rotateLeft(Node *h) {
@@ -1041,7 +1041,7 @@ struct RedBlackTree {
     return x;
   }
 \end{minted}
-\vspace{-1em}
+\vspace{-12pt}
 \needspace{8\baselineskip}
 \begin{minted}{cpp}
   Node *rotateRight(Node *h) {
@@ -1053,7 +1053,7 @@ struct RedBlackTree {
     return x;
   }
 \end{minted}
-\vspace{-1em}
+\vspace{-12pt}
 \needspace{5\baselineskip}
 \begin{minted}{cpp}
   void flipColors(Node *h) {
@@ -1062,7 +1062,7 @@ struct RedBlackTree {
     h->r->isRed = 0;
   }
 \end{minted}
-\vspace{-1em}
+\vspace{-12pt}
 \needspace{16\baselineskip}
 \begin{minted}{cpp}
   // O(lg(N))
@@ -1082,7 +1082,7 @@ struct RedBlackTree {
     return h;
   }
 \end{minted}
-\vspace{-1em}
+\vspace{-12pt}
 \needspace{5\baselineskip}
 \begin{minted}{cpp}
   // O(lg(N))
@@ -1114,7 +1114,7 @@ typedef long long int T;
 typedef pair<T, T> Interval;
 vector<Interval> maxIntervals;
 \end{minted}
-\vspace{-1em}
+\vspace{-12pt}
 \needspace{23\baselineskip}
 \begin{minted}{cpp}
 // O(N * lg(N))
@@ -1141,7 +1141,7 @@ int maxOverlap(vector<Interval> &arr) {
   return maxI;
 }
 \end{minted}
-\vspace{-1em}
+\vspace{-12pt}
 \needspace{23\baselineskip}
 \begin{minted}{cpp}
 // O(MaxPoint) maxPoint < vector::max_size
@@ -1186,7 +1186,7 @@ int maxOverlap(vector<Interval> &arr) {
 // disc = discovery time
 // low = lowTime, ch = children
 \end{minted}
-\vspace{-1em}
+\vspace{-12pt}
 \needspace{5\baselineskip}
 \begin{minted}{cpp}
 typedef pair<int, int> Edge;
@@ -1195,14 +1195,14 @@ vector<vector<int>> ady;
 vector<int> disc, low, ap;
 vector<Edge> br;
 \end{minted}
-\vspace{-1em}
+\vspace{-12pt}
 \needspace{3\baselineskip}
 \begin{minted}{cpp}
 void initVars(int N) {
   ady.assign(N, vector<int>());
 }
 \end{minted}
-\vspace{-1em}
+\vspace{-12pt}
 \needspace{15\baselineskip}
 \begin{minted}{cpp}
 int dfsAPB(int u, int p) {
@@ -1221,7 +1221,7 @@ int dfsAPB(int u, int p) {
   return ch;
 }
 \end{minted}
-\vspace{-1em}
+\vspace{-12pt}
 \needspace{8\baselineskip}
 \begin{minted}{cpp}
 // O(N)
@@ -1233,7 +1233,7 @@ void APB() {
     if (!disc[u]) ap[u] = dfsAPB(u, u) > 1;
 }
 \end{minted}
-\vspace{-1em}
+\vspace{-12pt}
 \needspace{4\baselineskip}
 \begin{minted}{cpp}
 void addEdge(int u, int v) {
@@ -1252,7 +1252,7 @@ int compId;
 vector<vector<int>> ady;
 vector<int> getComp;
 \end{minted}
-\vspace{-1em}
+\vspace{-12pt}
 \needspace{5\baselineskip}
 \begin{minted}{cpp}
 void initVars(int N) {
@@ -1261,7 +1261,7 @@ void initVars(int N) {
   compId = 0;
 }
 \end{minted}
-\vspace{-1em}
+\vspace{-12pt}
 \needspace{6\baselineskip}
 \begin{minted}{cpp}
 void dfsCC(int u, vector<int> &comp) {
@@ -1271,7 +1271,7 @@ void dfsCC(int u, vector<int> &comp) {
   for (auto &v : ady[u]) dfsCC(v, comp);
 }
 \end{minted}
-\vspace{-1em}
+\vspace{-12pt}
 \needspace{10\baselineskip}
 \begin{minted}{cpp}
 // O(N)
@@ -1285,7 +1285,7 @@ vector<vector<int>> connectedComponents() {
   return comps;
 }
 \end{minted}
-\vspace{-1em}
+\vspace{-12pt}
 \needspace{4\baselineskip}
 \begin{minted}{cpp}
 void addEdge(int u, int v) {
@@ -1303,7 +1303,7 @@ int n, m, oldColor = 0, color = 1;
 vector<vector<int>> mat;
 vector<vector<int>> movs = {{1, 0}, {0, 1}, {-1, 0}, {0, -1}};
 \end{minted}
-\vspace{-1em}
+\vspace{-12pt}
 \needspace{5\baselineskip}
 \begin{minted}{cpp}
 void floodFill(int i, int j) {
@@ -1312,7 +1312,7 @@ void floodFill(int i, int j) {
   for (auto move : movs) floodFill(i + move[1], j + move[0]);
 }
 \end{minted}
-\vspace{-1em}
+\vspace{-12pt}
 \needspace{5\baselineskip}
 \begin{minted}{cpp}
 void floodFill() {
@@ -1333,7 +1333,7 @@ vector<vector<int>> ady;
 vector<int> p, heavy, depth, root, stPos, val;
 SegmentTree<T> st;
 \end{minted}
-\vspace{-1em}
+\vspace{-12pt}
 \needspace{14\baselineskip}
 \begin{minted}{cpp}
 T F(T a, T b) { return a + b; }
@@ -1350,7 +1350,7 @@ int dfs(int u) {
   return size;
 }
 \end{minted}
-\vspace{-1em}
+\vspace{-12pt}
 \needspace{13\baselineskip}
 \begin{minted}{cpp}
 void initVars(int n) {
@@ -1367,7 +1367,7 @@ void initVars(int n) {
   st.build();
 }
 \end{minted}
-\vspace{-1em}
+\vspace{-12pt}
 \needspace{9\baselineskip}
 \begin{minted}{cpp}
 template <class Op>
@@ -1380,7 +1380,7 @@ void processPath(int u, int v, Op op) {
   op(stPos[u] + 1, stPos[v]);
 }
 \end{minted}
-\vspace{-1em}
+\vspace{-12pt}
 \needspace{5\baselineskip}
 \begin{minted}{cpp}
 void modifyPath(int u, int v, T value) {
@@ -1389,7 +1389,7 @@ void modifyPath(int u, int v, T value) {
   });
 }
 \end{minted}
-\vspace{-1em}
+\vspace{-12pt}
 \needspace{7\baselineskip}
 \begin{minted}{cpp}
 T query(int u, int v) {
@@ -1400,7 +1400,7 @@ T query(int u, int v) {
   return ans;
 }
 \end{minted}
-\vspace{-1em}
+\vspace{-12pt}
 \needspace{4\baselineskip}
 \begin{minted}{cpp}
 void addEdge(int u, int v, T value) {
@@ -1420,7 +1420,7 @@ void initVars(int N) {
   ady.assign(N, vector<int>());
 }
 \end{minted}
-\vspace{-1em}
+\vspace{-12pt}
 \needspace{19\baselineskip}
 \begin{minted}{cpp}
 // O(N)
@@ -1457,21 +1457,21 @@ vector<int> first;
 vector<T> tour;
 vector<vector<int>> ady;
 \end{minted}
-\vspace{-1em}
+\vspace{-12pt}
 \needspace{3\baselineskip}
 \begin{minted}{cpp}
 void initVars(int N) {
   ady.assign(N, vector<int>());
 }
 \end{minted}
-\vspace{-1em}
+\vspace{-12pt}
 \needspace{3\baselineskip}
 \begin{minted}{cpp}
 T F(T a, T b) {
   return a.first < b.first ? a : b;
 }
 \end{minted}
-\vspace{-1em}
+\vspace{-12pt}
 \needspace{9\baselineskip}
 \begin{minted}{cpp}
 void build() {
@@ -1481,7 +1481,7 @@ void build() {
     for (int j = 0; j + (1 << i) <= tour.size(); j++) st[i][j] = F(st[i - 1][j], st[i - 1][j + (1 << (i - 1))]);
 }
 \end{minted}
-\vspace{-1em}
+\vspace{-12pt}
 \needspace{9\baselineskip}
 \begin{minted}{cpp}
 void eulerTour(int u, int p, int h) {
@@ -1494,7 +1494,7 @@ void eulerTour(int u, int p, int h) {
     }
 }
 \end{minted}
-\vspace{-1em}
+\vspace{-12pt}
 \needspace{7\baselineskip}
 \begin{minted}{cpp}
 // O(N * lg(N))
@@ -1505,7 +1505,7 @@ void preprocess() {
   build();
 }
 \end{minted}
-\vspace{-1em}
+\vspace{-12pt}
 \needspace{7\baselineskip}
 \begin{minted}{cpp}
 // O(1)
@@ -1516,7 +1516,7 @@ int lca(int u, int v) {
   return F(st[i][l], st[i][r + 1 - (1 << i)]).second;
 }
 \end{minted}
-\vspace{-1em}
+\vspace{-12pt}
 \needspace{4\baselineskip}
 \begin{minted}{cpp}
 void addEdge(int u, int v) {
@@ -1539,7 +1539,7 @@ vector<Wedge> Wedges;
 vector<Wedge> mst;
 UnionFind uf(0);
 \end{minted}
-\vspace{-1em}
+\vspace{-12pt}
 \needspace{4\baselineskip}
 \begin{minted}{cpp}
 void initVars(int N) {
@@ -1548,7 +1548,7 @@ void initVars(int N) {
   uf = UnionFind(N);
 }
 \end{minted}
-\vspace{-1em}
+\vspace{-12pt}
 \needspace{12\baselineskip}
 \begin{minted}{cpp}
 T kruskal() {
@@ -1562,7 +1562,7 @@ T kruskal() {
   return cost;
 }
 \end{minted}
-\vspace{-1em}
+\vspace{-12pt}
 \needspace{3\baselineskip}
 \begin{minted}{cpp}
 void addEdge(int u, int v, T w) {
@@ -1588,7 +1588,7 @@ vector<int> p, vis;
 vector<T> dist;
 vector<vector<Wedge>> msts;
 \end{minted}
-\vspace{-1em}
+\vspace{-12pt}
 \needspace{8\baselineskip}
 \begin{minted}{cpp}
 void initVars(int N) {
@@ -1600,7 +1600,7 @@ void initVars(int N) {
   msts.clear();
 }
 \end{minted}
-\vspace{-1em}
+\vspace{-12pt}
 \needspace{25\baselineskip}
 \begin{minted}{cpp}
 // O(E * log(V))
@@ -1628,7 +1628,7 @@ T prim(int s) {
   return cost;
 }
 \end{minted}
-\vspace{-1em}
+\vspace{-12pt}
 \needspace{25\baselineskip}
 \begin{minted}{cpp}
 T primLazy(int s) {
@@ -1654,7 +1654,7 @@ T primLazy(int s) {
   return cost;
 }
 \end{minted}
-\vspace{-1em}
+\vspace{-12pt}
 \needspace{8\baselineskip}
 \begin{minted}{cpp}
 // O(V + E * log(V))
@@ -1666,7 +1666,7 @@ T prim() {
   return cost;
 }
 \end{minted}
-\vspace{-1em}
+\vspace{-12pt}
 \needspace{6\baselineskip}
 \begin{minted}{cpp}
 void addEdge(int u, int v, T w) {
@@ -1688,21 +1688,21 @@ void addEdge(int u, int v, T w) {
 // disc = discovery time, low = low time
 // s = stack, top = top index of the stack
 \end{minted}
-\vspace{-1em}
+\vspace{-12pt}
 \needspace{3\baselineskip}
 \begin{minted}{cpp}
 int Time, top;
 vector<vector<int>> ady, sccs;
 vector<int> disc, low, s;
 \end{minted}
-\vspace{-1em}
+\vspace{-12pt}
 \needspace{3\baselineskip}
 \begin{minted}{cpp}
 void initVars(int N) {
   ady.assign(N, vector<int>());
 }
 \end{minted}
-\vspace{-1em}
+\vspace{-12pt}
 \needspace{17\baselineskip}
 \begin{minted}{cpp}
 void dfsSCCS(int u) {
@@ -1722,7 +1722,7 @@ void dfsSCCS(int u) {
   }
 }
 \end{minted}
-\vspace{-1em}
+\vspace{-12pt}
 \needspace{6\baselineskip}
 \begin{minted}{cpp}
 // O(N)
@@ -1732,7 +1732,7 @@ void SCCS() {
   for (int u = 0; u < ady.size(); u++) dfsSCCS(u);
 }
 \end{minted}
-\vspace{-1em}
+\vspace{-12pt}
 \needspace{3\baselineskip}
 \begin{minted}{cpp}
 void addEdge(int u, int v) {
@@ -1749,7 +1749,7 @@ void addEdge(int u, int v) {
 vector<vector<int>> ady;
 vector<int> vis, toposorted;
 \end{minted}
-\vspace{-1em}
+\vspace{-12pt}
 \needspace{5\baselineskip}
 \begin{minted}{cpp}
 void initVars(int N) {
@@ -1758,7 +1758,7 @@ void initVars(int N) {
   toposorted.clear();
 }
 \end{minted}
-\vspace{-1em}
+\vspace{-12pt}
 \needspace{10\baselineskip}
 \begin{minted}{cpp}
 // returns false if there is a cycle
@@ -1771,7 +1771,7 @@ bool toposort(int u) {
   return true;
 }
 \end{minted}
-\vspace{-1em}
+\vspace{-12pt}
 \needspace{7\baselineskip}
 \begin{minted}{cpp}
 // O(N)
@@ -1782,7 +1782,7 @@ bool toposort() {
   return true;
 }
 \end{minted}
-\vspace{-1em}
+\vspace{-12pt}
 \needspace{3\baselineskip}
 \begin{minted}{cpp}
 void addEdge(int u, int v) {
@@ -1813,7 +1813,7 @@ vector<int> vis, cycle;
 bool flag = false, isDirected = false;
 int root = -1;
 \end{minted}
-\vspace{-1em}
+\vspace{-12pt}
 \needspace{6\baselineskip}
 \begin{minted}{cpp}
 void initVars(int N) {
@@ -1823,7 +1823,7 @@ void initVars(int N) {
   root = -1, flag = false;
 }
 \end{minted}
-\vspace{-1em}
+\vspace{-12pt}
 \needspace{20\baselineskip}
 \begin{minted}{cpp}
 // O(N)
@@ -1845,7 +1845,7 @@ bool hasCycle(int u, int prev) {
   return flag;
 }
 \end{minted}
-\vspace{-1em}
+\vspace{-12pt}
 \needspace{6\baselineskip}
 \begin{minted}{cpp}
 // O(N)
@@ -1855,7 +1855,7 @@ bool hasCycle() {
   return cycles.size() > 0;
 }
 \end{minted}
-\vspace{-1em}
+\vspace{-12pt}
 \needspace{4\baselineskip}
 \begin{minted}{cpp}
 void addEdge(int u, int v) {
@@ -1873,7 +1873,7 @@ vector<vector<int>> ady;
 vector<int> vis;
 bool isDirected = false;
 \end{minted}
-\vspace{-1em}
+\vspace{-12pt}
 \needspace{4\baselineskip}
 \begin{minted}{cpp}
 void initVars(int N) {
@@ -1881,7 +1881,7 @@ void initVars(int N) {
   vis.assign(N, 0);
 }
 \end{minted}
-\vspace{-1em}
+\vspace{-12pt}
 \needspace{8\baselineskip}
 \begin{minted}{cpp}
 bool hasCycle(int u, int prev) {
@@ -1892,7 +1892,7 @@ bool hasCycle(int u, int prev) {
   return false;
 }
 \end{minted}
-\vspace{-1em}
+\vspace{-12pt}
 \needspace{5\baselineskip}
 \begin{minted}{cpp}
 // O(N)
@@ -1901,7 +1901,7 @@ bool hasCycle() {
     if (!vis[u] && hasCycle(u, -1)) return true;
 }
 \end{minted}
-\vspace{-1em}
+\vspace{-12pt}
 \needspace{4\baselineskip}
 \begin{minted}{cpp}
 void addEdge(int u, int v) {
@@ -1924,7 +1924,7 @@ void addEdge(int u, int v) {
 // flow[a][b] = flow occupied from a to b
 // level[a] = level in graph of node a
 \end{minted}
-\vspace{-1em}
+\vspace{-12pt}
 \needspace{5\baselineskip}
 \begin{minted}{cpp}
 typedef int T;
@@ -1932,7 +1932,7 @@ vector<int> level;
 vector<vector<int>> ady;
 unordered_map<int, unordered_map<int, T>> cap, flow;
 \end{minted}
-\vspace{-1em}
+\vspace{-12pt}
 \needspace{5\baselineskip}
 \begin{minted}{cpp}
 void initVars(int N) {
@@ -1941,7 +1941,7 @@ void initVars(int N) {
   flow.clear();
 }
 \end{minted}
-\vspace{-1em}
+\vspace{-12pt}
 \needspace{17\baselineskip}
 \begin{minted}{cpp}
 bool levelGraph(int s, int t) {
@@ -1962,7 +1962,7 @@ bool levelGraph(int s, int t) {
   return level[t];
 }
 \end{minted}
-\vspace{-1em}
+\vspace{-12pt}
 \needspace{17\baselineskip}
 \begin{minted}{cpp}
 T blockingFlow(int u, int t, T currPathMaxFlow) {
@@ -1981,7 +1981,7 @@ T blockingFlow(int u, int t, T currPathMaxFlow) {
   return 0;
 }
 \end{minted}
-\vspace{-1em}
+\vspace{-12pt}
 \needspace{9\baselineskip}
 \begin{minted}{cpp}
 // O(E * V^2)
@@ -1993,7 +1993,7 @@ T dinicMaxFlow(int s, int t) {
   return maxFlow;
 }
 \end{minted}
-\vspace{-1em}
+\vspace{-12pt}
 \needspace{4\baselineskip}
 \begin{minted}{cpp}
 void addEdge(int u, int v, T capacity) {
@@ -2008,7 +2008,7 @@ void addEdge(int u, int v, T capacity) {
 \begin{minted}{cpp}
 #include "Max Flow Dinic.cpp"
 \end{minted}
-\vspace{-1em}
+\vspace{-12pt}
 \needspace{4\baselineskip}
 \begin{minted}{cpp}
 void addEdge(int u, int v) {
@@ -2016,7 +2016,7 @@ void addEdge(int u, int v) {
   ady[u].push_back(v);
 }
 \end{minted}
-\vspace{-1em}
+\vspace{-12pt}
 \needspace{14\baselineskip}
 \begin{minted}{cpp}
 int main() {
@@ -2052,7 +2052,7 @@ int MAXN = 20001, N, INF = 1 << 30, isDirected = true;
 vector<vector<int>> ady;
 unordered_map<int, unordered_map<int, T>> weight;
 \end{minted}
-\vspace{-1em}
+\vspace{-12pt}
 \needspace{4\baselineskip}
 \begin{minted}{cpp}
 void initVars(int N) {
@@ -2060,7 +2060,7 @@ void initVars(int N) {
   weight.clear();
 }
 \end{minted}
-\vspace{-1em}
+\vspace{-12pt}
 \needspace{15\baselineskip}
 \begin{minted}{cpp}
 // O(V * E)
@@ -2079,7 +2079,7 @@ vector<T> bellmanFord(int s) {
   return dist;
 }
 \end{minted}
-\vspace{-1em}
+\vspace{-12pt}
 \needspace{7\baselineskip}
 \begin{minted}{cpp}
 void addEdge(int u, int v, T w) {
@@ -2102,7 +2102,7 @@ int MAXN = 20001, INF = 1 << 30, isDirected = false;
 vector<vector<int>> ady;
 unordered_map<int, unordered_map<int, T>> weight;
 \end{minted}
-\vspace{-1em}
+\vspace{-12pt}
 \needspace{4\baselineskip}
 \begin{minted}{cpp}
 void initVars(int N) {
@@ -2110,7 +2110,7 @@ void initVars(int N) {
   weight.clear();
 }
 \end{minted}
-\vspace{-1em}
+\vspace{-12pt}
 \needspace{20\baselineskip}
 \begin{minted}{cpp}
 // O(E * lg(V))
@@ -2133,7 +2133,7 @@ vector<int> dijkstra(int s) {
   return dist;
 }
 \end{minted}
-\vspace{-1em}
+\vspace{-12pt}
 \needspace{17\baselineskip}
 \begin{minted}{cpp}
 vector<int> dijkstraLazy(int s) {
@@ -2152,7 +2152,7 @@ vector<int> dijkstraLazy(int s) {
   return dist;
 }
 \end{minted}
-\vspace{-1em}
+\vspace{-12pt}
 \needspace{7\baselineskip}
 \begin{minted}{cpp}
 void addEdge(int u, int v, T w) {
@@ -2196,7 +2196,7 @@ def divisorCriteria(n, lim):
 
 
 \end{minted}
-\vspace{-1em}
+\vspace{-12pt}
 \needspace{14\baselineskip}
 \begin{minted}{py}
 def testDivisibility(dividend, divisor, divisor_criteria):
@@ -2213,7 +2213,7 @@ def testDivisibility(dividend, divisor, divisor_criteria):
 
 
 \end{minted}
-\vspace{-1em}
+\vspace{-12pt}
 \needspace{7\baselineskip}
 \begin{minted}{py}
 if __name__ == '__main__':
@@ -2261,7 +2261,7 @@ int gcd(int a, int b) {
   return !b ? a : gcd(b, a % b);
 }
 \end{minted}
-\vspace{-1em}
+\vspace{-12pt}
 \needspace{8\baselineskip}
 \begin{minted}{cpp}
 // iterative
@@ -2357,13 +2357,13 @@ vector<int> primeSieve(int n) {
 // f = error function, cf = create error function
 // pos = positions where pattern is found in text
 \end{minted}
-\vspace{-1em}
+\vspace{-12pt}
 \needspace{2\baselineskip}
 \begin{minted}{cpp}
 int MAXN = 1000000;
 vector<int> f(MAXN + 1);
 \end{minted}
-\vspace{-1em}
+\vspace{-12pt}
 \needspace{12\baselineskip}
 \begin{minted}{cpp}
 vector<int> kmp(string &p, string &t, int cf) {
@@ -2378,7 +2378,7 @@ vector<int> kmp(string &p, string &t, int cf) {
   return pos;
 }
 \end{minted}
-\vspace{-1em}
+\vspace{-12pt}
 \needspace{4\baselineskip}
 \begin{minted}{cpp}
 vector<int> search(string &p, string &t) {
@@ -2398,7 +2398,7 @@ class RollingHash {
   vector<unsigned long long int> hash;
   unsigned long long int B;
 \end{minted}
-\vspace{-1em}
+\vspace{-12pt}
 \needspace{13\baselineskip}
 \begin{minted}{cpp}
   RollingHash(const string &text) : B(257) {
@@ -2415,21 +2415,21 @@ class RollingHash {
     }
   }
 \end{minted}
-\vspace{-1em}
+\vspace{-12pt}
 \needspace{3\baselineskip}
 \begin{minted}{cpp}
   unsigned long long int getWordHash() {
     return hash[hash.size() - 1];
   }
 \end{minted}
-\vspace{-1em}
+\vspace{-12pt}
 \needspace{5\baselineskip}
 \begin{minted}{cpp}
   unsigned long long int getSubstrHash(int begin, int end) {
     return hash[end] - hash[begin - 1] * pow[end - begin + 1];
   }
 \end{minted}
-\vspace{-1em}
+\vspace{-12pt}
 \needspace{4\baselineskip}
 \begin{minted}{cpp}
   int size() {
@@ -2437,7 +2437,7 @@ class RollingHash {
   }
 };
 \end{minted}
-\vspace{-1em}
+\vspace{-12pt}
 \needspace{11\baselineskip}
 \begin{minted}{cpp}
 vector<int> rabinKarp(RollingHash &rhStr, string &pattern) {
@@ -2479,21 +2479,21 @@ vector<int> rabinKarp(RollingHash &rhStr, string &pattern) {
 // q = query
 // qs = queries
 \end{minted}
-\vspace{-1em}
+\vspace{-12pt}
 \needspace{3\baselineskip}
 \begin{minted}{cpp}
 struct Query {
   int l, r;
 };
 \end{minted}
-\vspace{-1em}
+\vspace{-12pt}
 \needspace{3\baselineskip}
 \begin{minted}{cpp}
 int blksize;
 vector<Query> qs;
 vector<int> arr;
 \end{minted}
-\vspace{-1em}
+\vspace{-12pt}
 \needspace{4\baselineskip}
 \begin{minted}{cpp}
 void initVars(int N, int M) {
@@ -2501,7 +2501,7 @@ void initVars(int N, int M) {
   qs = vector<Query>(M);
 }
 \end{minted}
-\vspace{-1em}
+\vspace{-12pt}
 \needspace{4\baselineskip}
 \begin{minted}{cpp}
 bool cmp(Query &a, Query &b) {
@@ -2509,7 +2509,7 @@ bool cmp(Query &a, Query &b) {
   return a.l / blksize < b.l / blksize;
 }
 \end{minted}
-\vspace{-1em}
+\vspace{-12pt}
 \needspace{27\baselineskip}
 \begin{minted}{cpp}
 void getResults() {
@@ -2540,7 +2540,7 @@ void getResults() {
   }
 }
 \end{minted}
-\vspace{-1em}
+\vspace{-12pt}
 \needspace{6\baselineskip}
 \begin{minted}{cpp}
 int main() {
@@ -2561,7 +2561,7 @@ int neutro = 0;
 vector<int> arr;
 vector<int> blks;
 \end{minted}
-\vspace{-1em}
+\vspace{-12pt}
 \needspace{4\baselineskip}
 \begin{minted}{cpp}
 void initVars(int n) {
@@ -2569,7 +2569,7 @@ void initVars(int n) {
   blks.assign(sqrt(n), neutro);
 }
 \end{minted}
-\vspace{-1em}
+\vspace{-12pt}
 \needspace{5\baselineskip}
 \begin{minted}{cpp}
 void preprocess() {
@@ -2579,7 +2579,7 @@ void preprocess() {
   }
 }
 \end{minted}
-\vspace{-1em}
+\vspace{-12pt}
 \needspace{4\baselineskip}
 \begin{minted}{cpp}
 // problem specific
@@ -2588,7 +2588,7 @@ void update(int i, int val) {
   arr[i] = val;
 }
 \end{minted}
-\vspace{-1em}
+\vspace{-12pt}
 \needspace{19\baselineskip}
 \begin{minted}{cpp}
 int query(int l, int r) {
@@ -2611,7 +2611,7 @@ int query(int l, int r) {
   return sum;
 }
 \end{minted}
-\vspace{-1em}
+\vspace{-12pt}
 \needspace{15\baselineskip}
 \begin{minted}{cpp}
 int main() {
