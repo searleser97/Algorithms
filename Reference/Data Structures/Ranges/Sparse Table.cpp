@@ -10,13 +10,15 @@ T F(T a, T b) {
   // return a + b; // Arith
   // return a * b; // Arith
 }
-// 7
+// 9
 // O(Nlg(N))
 void build(vector<T> &arr) {
   st.assign(log2(arr.size()), vector<T>(arr.size()));
   st[0] = arr;
   for (int i = 1; (1 << i) <= arr.size(); i++)
-    for (int j = 0; j + (1 << i) <= arr.size(); j++) st[i][j] = F(st[i - 1][j], st[i - 1][j + (1 << (i - 1))]);
+    for (int j = 0; j + (1 << i) <= arr.size(); j++)
+      st[i][j] = F(st[i - 1][j],
+                   st[i - 1][j + (1 << (i - 1))]);
 }
 // 5
 // O(1), [l, r]

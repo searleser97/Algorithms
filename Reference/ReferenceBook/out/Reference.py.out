@@ -39,7 +39,7 @@ typedef long long int lli;
 \vspace{-1em}
 \needspace{3\baselineskip}
 \begin{minted}{cpp}
-lli bitsInInt(lli n) { // clz = count leading zeroes
+lli bitsInInt(lli n) {  // clz = count leading zeroes
   return sizeof(n) * 8 - __builtin_clzll(n);
 }
 
@@ -52,7 +52,8 @@ vector<bool> intToBitsArray(lli n) {
   if (!n) return {};
   int length = bitsInInt(n), lastPos = length - 1;
   vector<bool> v(length);
-  for (lli i = lastPos, j = 0; i > -1LL; i--, j++) v[j] = (n >> i) & 1LL;
+  for (lli i = lastPos, j = 0; i > -1LL; i--, j++)
+    v[j] = (n >> i) & 1LL;
   return v;
 }
 \end{minted}
@@ -84,16 +85,16 @@ int mapId = 0;
 \begin{minted}{cpp}
 int Map(Val val) {
   valForInt[mapId] = val;
-  return intForVal.count(val) ? intForVal[val] : intForVal[val] = mapId++;
+  return intForVal.count(val)
+             ? intForVal[val]
+             : intForVal[val] = mapId++;
 }
 
 \end{minted}
 \vspace{-1em}
 \needspace{3\baselineskip}
 \begin{minted}{cpp}
-int IMap(int val) {
-  return valForInt[val];
-}
+int IMap(int val) { return valForInt[val]; }
 
 \end{minted}
 \vspace{-1em}
@@ -110,7 +111,7 @@ void initMapping() {
 \subsubsection*{Permutations.cpp}
 \addcontentsline{toc}{subsubsection}{Permutations.cpp}
 \begin{minted}{cpp}
-typedef vector<int> T;// typedef string T;
+typedef vector<int> T;  // typedef string T;
 
 \end{minted}
 \vspace{-1em}
@@ -137,7 +138,8 @@ void printv(vector<int> v) {
     return;
   }
   cout << "[" << v[0];
-  for (int i = 1; i < v.size(); i++) cout << ", " << v[i];
+  for (int i = 1; i < v.size(); i++)
+    cout << ", " << v[i];
   cout << "]" << endl;
 }
 \end{minted}
@@ -157,8 +159,11 @@ struct Object {
 \needspace{10\baselineskip}
 \begin{minted}{cpp}
 int main() {
-  auto cmp = [](const Object& a, const Object& b) { return a.second > b.second; };
-  priority_queue<Object, vector<Object>, decltype(cmp)> pq(cmp);
+  auto cmp = [](const Object& a, const Object& b) {
+    return a.second > b.second;
+  };
+  priority_queue<Object, vector<Object>,
+                 decltype(cmp)> pq(cmp);
   vector<Object> v = {{'c', 3}, {'a', 1}, {'b', 2}};
   sort(v.begin(), v.end(), cmp);
   return 0;
@@ -270,9 +275,8 @@ typedef int T;
 \addcontentsline{toc}{subsubsection}{Combinations.py}
 \begin{minted}{py}
 import itertools
-#from arr choose k = > combinations(arr, k)
+# from arr choose k = > combinations(arr, k)
 print(list(itertools.combinations([1, 2, 3], 3)))
-
 \end{minted}
 
 \needspace{16\baselineskip}
@@ -283,18 +287,19 @@ print(list(itertools.combinations([1, 2, 3], 3)))
 from sys import stdin, stdout
 
 N = 10
-#Reads N chars from stdin(it counts '\n' as char)
+# Reads N chars from stdin(it counts '\n' as char)
 stdin.read(N)
-#Reads until '\n' or EOF
+# Reads until '\n' or EOF
 line = stdin.readline()
-#Reads all lines in stdin until EOF
+# Reads all lines in stdin until EOF
 lines = stdin.readlines()
-#Writes a string to stdout, it doesn't add '\n'
+# Writes a string to stdout, it doesn't add '\n'
 stdout.write(line)
-#Writes a list of strings to stdout
+# Writes a list of strings to stdout
 stdout.writelines(lines)
-#Reads numbers separated by space in a line
+# Reads numbers separated by space in a line
 numbers = list(map(int, stdin.readline().split()))
+
 \end{minted}
 
 \needspace{3\baselineskip}
@@ -374,6 +379,13 @@ li.sort(key = lambda x: (x.first, x.second, x.third), reverse=False)
 \addcontentsline{toc}{subsection}{Geometry}
 \vspace{2em}
 \subsubsectionfont{\large\bfseries\sffamily\underline}
+\subsubsection*{Convex Hull.cpp}
+\addcontentsline{toc}{subsubsection}{Convex Hull.cpp}
+\begin{minted}{cpp}
+
+\end{minted}
+
+\subsubsectionfont{\large\bfseries\sffamily\underline}
 \subsubsection*{K-D Tree.cpp}
 \addcontentsline{toc}{subsubsection}{K-D Tree.cpp}
 \begin{minted}{cpp}
@@ -391,9 +403,9 @@ li.sort(key = lambda x: (x.first, x.second, x.third), reverse=False)
 \addcontentsline{toc}{subsubsection}{UnionFind.cpp}
 \begin{minted}{cpp}
 struct UnionFind {
-  vector<int> dad, size;
   int n;
-    UnionFind(int N = 0) : n(N), dad(N), size(N, 1) {
+  vector<int> dad, size;
+    UnionFind(int N) : n(N), dad(N), size(N, 1) {
     while (N--) dad[N] = N;
   }
   
@@ -419,17 +431,14 @@ struct UnionFind {
     --n, dad[Ru] = Rv;
     size[Rv] += size[Ru];
   }
-    int getSize(int u) {
-    return size[root(u)];
-  }
   
 \end{minted}
 \vspace{-1em}
 \needspace{4\baselineskip}
 \begin{minted}{cpp}
-  int numberOfSets() {
-    return n;
-  }
+  int getSize(int u) { return size[root(u)]; }
+
+  int numberOfSets() { return n; }
 };
 \end{minted}
 
@@ -446,14 +455,13 @@ struct UnionFind {
 typedef long long int T;
 T neutro = 0;
 vector<T> bit;
-void initVars(int n) {
-  bit.assign(++n, neutro);
-}
 
 \end{minted}
 \vspace{-1em}
-\needspace{4\baselineskip}
+\needspace{7\baselineskip}
 \begin{minted}{cpp}
+void initVars(int n) { bit.assign(++n, neutro); }
+
 T F(T a, T b) {
   return a + b;
   // return a * b;
@@ -487,7 +495,8 @@ void build() {
 \begin{minted}{cpp}
 // O(lg(N))
 void update(int i, T val) {
-  for (i++; i < bit.size(); i += i & -i) bit[i] = F(bit[i], val);
+  for (i++; i < bit.size(); i += i & -i)
+    bit[i] = F(bit[i], val);
 }
 
 \end{minted}
@@ -503,15 +512,14 @@ T query(int i) {
 
 \end{minted}
 \vspace{-1em}
-\needspace{4\baselineskip}
+\needspace{6\baselineskip}
 \begin{minted}{cpp}
 // O(lg(N)), [l, r]
 T query(int l, int r) {
   return I(query(r), query(--l));
 }
-void setValAt(T val, int i) {
-  bit[++i] = val;
-}
+
+void setValAt(T val, int i) { bit[++i] = val; }
 \end{minted}
 
 \needspace{4\baselineskip}
@@ -534,11 +542,12 @@ void initVars(int n) {
 
 \end{minted}
 \vspace{-1em}
-\needspace{4\baselineskip}
+\needspace{5\baselineskip}
 \begin{minted}{cpp}
 // O(lg(N))
 void update(vector<T> &bit, int i, T val) {
-  for (i++; i < bit.size(); i += i & -i) bit[i] += val;
+  for (i++; i < bit.size(); i += i & -i)
+    bit[i] += val;
 }
 
 \end{minted}
@@ -592,64 +601,69 @@ T query(int l, int r) {
 // neutro = operation neutral value
 // e.g. for sum is 0, for multiplication
 // is 1, for gcd is 0, for min is INF, etc.
-typedef int T;
-T neutro = 0;
-int N;
-vector<T> st;
 
+\end{minted}
+\vspace{-1em}
+\needspace{5\baselineskip}
+\begin{minted}{cpp}
+template <class T>
+struct SegmentTree {
+  T neutro = 0;
+  int N;
+  vector<T> st;
+  
 \end{minted}
 \vspace{-1em}
 \needspace{3\baselineskip}
 \begin{minted}{cpp}
-void initVars(int n) {
-  st.assign(2 * (N = n), neutro);
-}
-
+  SegmentTree(int n) : st(2 * n, neutro), N(n) {}
+  
 \end{minted}
 \vspace{-1em}
 \needspace{6\baselineskip}
 \begin{minted}{cpp}
-T F(T a, T b) {
-  return a + b;
-  // return __gcd(a, b);
-  // return a * b;
-  // return min(a, b);
-}
-// O(2N)
-void build() {
-  for (int i = N - 1; i > 0; i--) st[i] = F(st[i << 1], st[i << 1 | 1]);
-}
-// O(lg(2N))
-void update(int i, T val) {
-  for (st[i += N] = val; i > 1; i >>= 1) st[i >> 1] = F(st[i], st[i ^ 1]);
-}
-// O(3N), [l, r]
-void update(int l, int r, T val) {
-  for (l += N, r += N; l <= r; l++) st[l] = val;
-  build();
-}
-
+  T F(T a, T b) {
+    return a + b;
+    // return __gcd(a, b);
+    // return a * b;
+    // return min(a, b);
+  }
+    // O(2N)
+  void build() {
+    for (int i = N - 1; i > 0; i--)
+      st[i] = F(st[i << 1], st[i << 1 | 1]);
+  }
+    // O(lg(2N))
+  void update(int i, T val) {
+    for (st[i += N] = val; i > 1; i >>= 1)
+      st[i >> 1] = F(st[i], st[i ^ 1]);
+  }
+    // O(3N), [l, r]
+  void update(int l, int r, T val) {
+    for (l += N, r += N; l <= r; l++) st[l] = val;
+    build();
+  }
+  
 \end{minted}
 \vspace{-1em}
 \needspace{9\baselineskip}
 \begin{minted}{cpp}
-// O(lg(2N)), [l, r]
-T query(int l, int r) {
-  T ans = neutro;
-  for (l += N, r += N; l <= r; l >>= 1, r >>= 1) {
-    if (l & 1) ans = F(ans, st[l++]);
-    if (~r & 1) ans = F(ans, st[r--]);
+  // O(lg(2N)), [l, r]
+  T query(int l, int r) {
+    T ans = neutro;
+    for (l += N, r += N; l <= r; l >>= 1, r >>= 1) {
+      if (l & 1) ans = F(ans, st[l++]);
+      if (~r & 1) ans = F(ans, st[r--]);
+    }
+    return ans;
   }
-  return ans;
-}
-
+  
 \end{minted}
 \vspace{-1em}
-\needspace{3\baselineskip}
+\needspace{2\baselineskip}
 \begin{minted}{cpp}
-void setValAt(T val, int i) {
-  st[i + N] = val;
-}
+  void setValAt(T val, int i) { st[i + N] = val; }
+};
 \end{minted}
 
 \needspace{6\baselineskip}
@@ -676,9 +690,10 @@ struct SegmentTree {
   
 \end{minted}
 \vspace{-1em}
-\needspace{3\baselineskip}
+\needspace{4\baselineskip}
 \begin{minted}{cpp}
-  SegmentTree(int n) : st(2 * n, neutro), d(n), u(n, 0) {
+  SegmentTree(int n)
+      : st(2 * n, neutro), d(n), u(n, 0) {
     H = sizeof(int) * 8 - __builtin_clz(N = n);
   }
   
@@ -732,11 +747,12 @@ struct SegmentTree {
   
 \end{minted}
 \vspace{-1em}
-\needspace{11\baselineskip}
+\needspace{12\baselineskip}
 \begin{minted}{cpp}
   // O(lg(N))
   void push(int p) {
-    for (int s = H, k = 1 << (H - 1); s > 0; s--, k >>= 1) {
+    for (int s = H, k = 1 << (H - 1); s > 0;
+         s--, k >>= 1) {
       int i = p >> s;
       if (u[i]) {
         apply(i << 1, d[i], k);
@@ -781,11 +797,9 @@ struct SegmentTree {
   
 \end{minted}
 \vspace{-1em}
-\needspace{4\baselineskip}
+\needspace{2\baselineskip}
 \begin{minted}{cpp}
-  void setValAt(T val, int i) {
-    st[i + N] = val;
-  }
+  void setValAt(T val, int i) { st[i + N] = val; }
 };
 \end{minted}
 
@@ -812,14 +826,16 @@ T F(T a, T b) {
 
 \end{minted}
 \vspace{-1em}
-\needspace{7\baselineskip}
+\needspace{9\baselineskip}
 \begin{minted}{cpp}
 // O(Nlg(N))
 void build(vector<T> &arr) {
   st.assign(log2(arr.size()), vector<T>(arr.size()));
   st[0] = arr;
   for (int i = 1; (1 << i) <= arr.size(); i++)
-    for (int j = 0; j + (1 << i) <= arr.size(); j++) st[i][j] = F(st[i - 1][j], st[i - 1][j + (1 << (i - 1))]);
+    for (int j = 0; j + (1 << i) <= arr.size(); j++)
+      st[i][j] = F(st[i - 1][j],
+                   st[i - 1][j + (1 << (i - 1))]);
 }
 
 \end{minted}
@@ -849,7 +865,7 @@ T queryArith(int l, int r) {
 }
 \end{minted}
 
-\needspace{7\baselineskip}
+\needspace{6\baselineskip}
 \subsectionfont{\bfseries\sffamily\centering\LARGE}
 \vspace{0em}
 \subsection*{Strings}
@@ -862,35 +878,35 @@ T queryArith(int l, int r) {
 // wpt = number of words passing through
 // w = number of words ending in the node
 // c = character
-struct Trie {
-  
+
 \end{minted}
 \vspace{-1em}
-\needspace{6\baselineskip}
+\needspace{8\baselineskip}
 \begin{minted}{cpp}
+struct Trie {
+
   struct Node {
     // for lexicographical order use 'map'
     // map<char, Node *> ch;
     unordered_map<char, Node *> ch;
     int w = 0, wpt = 0;
   };
-
-  Node *root = new Node();
   
 \end{minted}
 \vspace{-1em}
-\needspace{11\baselineskip}
+\needspace{12\baselineskip}
 \begin{minted}{cpp}
+  Node *root = new Node();
+
   // O(STR.SIZE)
   void insert(string str) {
     Node *curr = root;
     for (auto &c : str) {
-      curr->wpt++;
-      if (!curr->ch.count(c)) curr->ch[c] = new Node();
-      curr = curr->ch[c];
+      if (!curr->ch.count(c))
+        curr->ch[c] = new Node();
+      curr->wpt++, curr = curr->ch[c];
     }
-    curr->wpt++;
-    curr->w++;
+    curr->wpt++, curr->w++;
   }
   
 \end{minted}
@@ -929,10 +945,11 @@ struct Trie {
   
 \end{minted}
 \vspace{-1em}
-\needspace{9\baselineskip}
+\needspace{10\baselineskip}
 \begin{minted}{cpp}
   // O(N)
-  void getWords(Node *curr, vector<string> &words, string &word) {
+  void getWords(Node *curr, vector<string> &words,
+                string &word) {
     if (!curr) return;
     if (curr->w) words.push_back(word);
     for (auto &c : curr->ch) {
@@ -965,7 +982,7 @@ struct Trie {
   
 \end{minted}
 \vspace{-1em}
-\needspace{14\baselineskip}
+\needspace{15\baselineskip}
 \begin{minted}{cpp}
   // O(STR.SIZE)
   bool remove(Node *curr, string &str, int &i) {
@@ -976,7 +993,8 @@ struct Trie {
     int c = str[i];
     if (!curr->ch.count(c)) return false;
     if (remove(curr->ch[c], str, ++i)) {
-      if (!curr->ch[c]->wpt) curr->wpt--, curr->ch.erase(c);
+      if (!curr->ch[c]->wpt)
+        curr->wpt--, curr->ch.erase(c);
       return true;
     }
     return false;
@@ -1016,8 +1034,8 @@ struct RedBlackTree {
     V val;
     Node *l, *r;  // left, right
     bool isRed;
-    Node(K k, V v, bool isRed) : key(k), val(v), isRed(isRed) {
-    }
+    Node(K k, V v, bool isRed)
+        : key(k), val(v), isRed(isRed) {}
   };
 
   Node *root = nullptr;
@@ -1086,7 +1104,7 @@ struct RedBlackTree {
   
 \end{minted}
 \vspace{-1em}
-\needspace{15\baselineskip}
+\needspace{16\baselineskip}
 \begin{minted}{cpp}
   // O(lg(N))
   Node *insert(Node *h, K key, V val) {
@@ -1095,15 +1113,19 @@ struct RedBlackTree {
     if (!cmp) h->val = val;
     if (cmp < 0) h->l = insert(h->l, key, val);
     if (cmp > 0) h->r = insert(h->r, key, val);
-    if (h->r && h->r->isRed && !(h->l && h->l->isRed)) h = rotateLeft(h);
-    if (h->l && h->l->isRed && h->l->l && h->l->l->isRed) h = rotateRight(h);
-    if (h->l && h->l->isRed && h->r && h->r->isRed) flipColors(h);
+    if (h->r && h->r->isRed && !(h->l && h->l->isRed))
+      h = rotateLeft(h);
+    if (h->l && h->l->isRed && h->l->l &&
+        h->l->l->isRed)
+      h = rotateRight(h);
+    if (h->l && h->l->isRed && h->r && h->r->isRed)
+      flipColors(h);
     return h;
   }
   
 \end{minted}
 \vspace{-1em}
-\needspace{4\baselineskip}
+\needspace{5\baselineskip}
 \begin{minted}{cpp}
   // O(lg(N))
   void insert(K key, V val) {
@@ -1136,7 +1158,7 @@ vector<Interval> maxIntervals;
 
 \end{minted}
 \vspace{-1em}
-\needspace{22\baselineskip}
+\needspace{23\baselineskip}
 \begin{minted}{cpp}
 // O(N * lg(N))
 int maxOverlap(vector<Interval> &arr) {
@@ -1153,15 +1175,18 @@ int maxOverlap(vector<Interval> &arr) {
   curr = 0;
   for (auto &p : m) {
     curr += p.second;
-    if (curr == maxI && isFirst) l = p.first, isFirst = 0;
-    if (curr < maxI && !isFirst) maxIntervals.push_back({l, p.first - 1}), isFirst = 1;
+    if (curr == maxI && isFirst)
+      l = p.first, isFirst = 0;
+    if (curr < maxI && !isFirst)
+      maxIntervals.push_back({l, p.first - 1}),
+          isFirst = 1;
   }
   return maxI;
 }
 
 \end{minted}
 \vspace{-1em}
-\needspace{29\baselineskip}
+\needspace{23\baselineskip}
 \begin{minted}{cpp}
 // O(MaxPoint) maxPoint < vector::max_size
 int maxOverlap(vector<Interval> &arr) {
@@ -1181,7 +1206,8 @@ int maxOverlap(vector<Interval> &arr) {
   for (int i = 0; i < x.size(); i++) {
     curr += x[i];
     if (curr == maxI && isFirst) l = i, isFirst = 0;
-    if (curr < maxI && !isFirst) maxIntervals.push_back({l, i - 1}), isFirst = 1;
+    if (curr < maxI && !isFirst)
+      maxIntervals.push_back({l, i - 1}), isFirst = 1;
   }
   return maxI;
 }
@@ -1338,6 +1364,94 @@ void floodFill() {
   for (int i = 0; i < n; i++)
     for (int j = 0; j < m; j++)
       if (mat[i][j] == oldColor) floodFill(i, j);
+}
+\end{minted}
+
+\needspace{7\baselineskip}
+\subsectionfont{\large\bfseries\sffamily\underline}
+\subsection*{Heavy Light Decomposition.cpp}
+\addcontentsline{toc}{subsection}{Heavy Light Decomposition.cpp}
+\begin{minted}{cpp}
+#include "../Data Structures/Ranges/Segment Tree Lazy Propagation.cpp"
+typedef int T;
+vector<vector<int>> ady;
+vector<int> p, heavy, depth, root, stPos, val;
+SegmentTree<T> st;
+
+\end{minted}
+\vspace{-1em}
+\needspace{14\baselineskip}
+\begin{minted}{cpp}
+T F(T a, T b) { return a + b; }
+
+int dfs(int u) {
+  int size = 1, maxSubtree = 0;
+  for (int &v : ady[u]) {
+    p[v] = u, depth[v] = depth[u] + 1;
+    int subtree = dfs(v);
+    if (subtree > maxSubtree)
+      heavy[u] = v, maxSubtree = subtree;
+    size += subtree;
+  }
+  return size;
+}
+
+\end{minted}
+\vspace{-1em}
+\needspace{13\baselineskip}
+\begin{minted}{cpp}
+void initVars(int n) {
+  heavy.assign(n, -1);
+  depth.assign(n, 0);
+  st = SegmentTree<T>(n);
+  dfs(0);
+  for (int i = 0, pos = 0; i < n; i++)
+    if (!i || heavy[p[i]] != i)
+      for (int j = i; j; j = heavy[j]) {
+        st.setValAt(val[j], pos);
+        root[j] = i, stPos[j] = pos++;
+      }
+  st.build();
+}
+
+\end{minted}
+\vspace{-1em}
+\needspace{9\baselineskip}
+\begin{minted}{cpp}
+template <class Op>
+void processPath(int u, int v, Op op) {
+  for (; root[u] != root[v]; v = p[root[v]]) {
+    if (depth[root[u]] > depth[root[v]]) swap(u, v);
+    op(stPos[root[v]], stPos[v]);
+  }
+  if (depth[u] > depth[v]) swap(u, v);
+  op(stPos[u] + 1, stPos[v]);
+}
+void modifyPath(int u, int v, T value) {
+  processPath(u, v, [&value](int l, int r) {
+    st.update(l, r, value);
+  });
+}
+
+\end{minted}
+\vspace{-1em}
+\needspace{7\baselineskip}
+\begin{minted}{cpp}
+T query(int u, int v) {
+  T ans = T();
+  processPath(u, v, [&ans](int l, int r) {
+    ans = F(ans, st.query(l, r));
+  });
+  return ans;
+}
+
+\end{minted}
+\vspace{-1em}
+\needspace{4\baselineskip}
+\begin{minted}{cpp}
+void addEdge(int u, int v, T value) {
+  ady[u].push_back(v);
+  val[v] = value;
 }
 \end{minted}
 

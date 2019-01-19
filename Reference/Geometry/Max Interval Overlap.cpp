@@ -2,7 +2,7 @@
 typedef long long int T;
 typedef pair<T, T> Interval;
 vector<Interval> maxIntervals;
-// 22
+// 23
 // O(N * lg(N))
 int maxOverlap(vector<Interval> &arr) {
   maxIntervals.clear();
@@ -18,12 +18,15 @@ int maxOverlap(vector<Interval> &arr) {
   curr = 0;
   for (auto &p : m) {
     curr += p.second;
-    if (curr == maxI && isFirst) l = p.first, isFirst = 0;
-    if (curr < maxI && !isFirst) maxIntervals.push_back({l, p.first - 1}), isFirst = 1;
+    if (curr == maxI && isFirst)
+      l = p.first, isFirst = 0;
+    if (curr < maxI && !isFirst)
+      maxIntervals.push_back({l, p.first - 1}),
+          isFirst = 1;
   }
   return maxI;
 }
-// 29
+// 23
 // O(MaxPoint) maxPoint < vector::max_size
 int maxOverlap(vector<Interval> &arr) {
   maxIntervals.clear();
@@ -42,7 +45,8 @@ int maxOverlap(vector<Interval> &arr) {
   for (int i = 0; i < x.size(); i++) {
     curr += x[i];
     if (curr == maxI && isFirst) l = i, isFirst = 0;
-    if (curr < maxI && !isFirst) maxIntervals.push_back({l, i - 1}), isFirst = 1;
+    if (curr < maxI && !isFirst)
+      maxIntervals.push_back({l, i - 1}), isFirst = 1;
   }
   return maxI;
 }

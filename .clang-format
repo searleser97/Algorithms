@@ -1,4 +1,4 @@
 BasedOnStyle: Google
-AllowShortFunctionsOnASingleLine: false
-ColumnLimit : 10000
+AllowShortFunctionsOnASingleLine: true
+ColumnLimit : 54
 IndentWidth: 2

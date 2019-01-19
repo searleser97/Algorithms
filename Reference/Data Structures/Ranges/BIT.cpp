@@ -2,11 +2,9 @@
 typedef long long int T;
 T neutro = 0;
 vector<T> bit;
-// 3
-void initVars(int n) {
-  bit.assign(++n, neutro);
-}
-// 4
+// 7
+void initVars(int n) { bit.assign(++n, neutro); }
+
 T F(T a, T b) {
   return a + b;
   // return a * b;
@@ -28,7 +26,8 @@ void build() {
 // 4
 // O(lg(N))
 void update(int i, T val) {
-  for (i++; i < bit.size(); i += i & -i) bit[i] = F(bit[i], val);
+  for (i++; i < bit.size(); i += i & -i)
+    bit[i] = F(bit[i], val);
 }
 // 6
 // O(lg(N))
@@ -37,12 +36,10 @@ T query(int i) {
   for (i++; i; i -= i & -i) ans = F(ans, bit[i]);
   return ans;
 }
-// 4
+// 6
 // O(lg(N)), [l, r]
 T query(int l, int r) {
   return I(query(r), query(--l));
 }
-// 3
-void setValAt(T val, int i) {
-  bit[++i] = val;
-}
+
+void setValAt(T val, int i) { bit[++i] = val; }

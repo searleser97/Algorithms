@@ -7,8 +7,8 @@ struct RedBlackTree {
     V val;
     Node *l, *r;  // left, right
     bool isRed;
-    Node(K k, V v, bool isRed) : key(k), val(v), isRed(isRed) {
-    }
+    Node(K k, V v, bool isRed)
+        : key(k), val(v), isRed(isRed) {}
   };
 
   Node *root = nullptr;
@@ -54,7 +54,7 @@ struct RedBlackTree {
     h->l->isRed = 0;
     h->r->isRed = 0;
   }
-  // 15
+  // 16
   // O(lg(N))
   Node *insert(Node *h, K key, V val) {
     if (!h) return new Node(key, val, 1);
@@ -62,12 +62,16 @@ struct RedBlackTree {
     if (!cmp) h->val = val;
     if (cmp < 0) h->l = insert(h->l, key, val);
     if (cmp > 0) h->r = insert(h->r, key, val);
-    if (h->r && h->r->isRed && !(h->l && h->l->isRed)) h = rotateLeft(h);
-    if (h->l && h->l->isRed && h->l->l && h->l->l->isRed) h = rotateRight(h);
-    if (h->l && h->l->isRed && h->r && h->r->isRed) flipColors(h);
+    if (h->r && h->r->isRed && !(h->l && h->l->isRed))
+      h = rotateLeft(h);
+    if (h->l && h->l->isRed && h->l->l &&
+        h->l->l->isRed)
+      h = rotateRight(h);
+    if (h->l && h->l->isRed && h->r && h->r->isRed)
+      flipColors(h);
     return h;
   }
-  // 4
+  // 5
   // O(lg(N))
   void insert(K key, V val) {
     root = insert(root, key, val);

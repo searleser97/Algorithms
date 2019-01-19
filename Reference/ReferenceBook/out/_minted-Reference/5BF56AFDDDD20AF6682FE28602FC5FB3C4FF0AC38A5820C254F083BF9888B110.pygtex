@@ -1,6 +1,0 @@
-\begin{Verbatim}[commandchars=\\\{\}]
-\PYG{k+kt}{int} \PYG{n+nf}{Map}\PYG{p}{(}\PYG{n}{Val} \PYG{n}{val}\PYG{p}{)} \PYG{p}{\PYGZob{}}
-  \PYG{n}{valForInt}\PYG{p}{[}\PYG{n}{mapId}\PYG{p}{]} \PYG{o}{=} \PYG{n}{val}\PYG{p}{;}
-  \PYG{k}{return} \PYG{n}{intForVal}\PYG{p}{.}\PYG{n}{count}\PYG{p}{(}\PYG{n}{val}\PYG{p}{)} \PYG{o}{?} \PYG{n}{intForVal}\PYG{p}{[}\PYG{n}{val}\PYG{p}{]} \PYG{o}{:} \PYG{n}{intForVal}\PYG{p}{[}\PYG{n}{val}\PYG{p}{]} \PYG{o}{=} \PYG{n}{mapId}\PYG{o}{++}\PYG{p}{;}
-\PYG{p}{\PYGZcb{}}
-\end{Verbatim}

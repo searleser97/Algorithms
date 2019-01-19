@@ -1,0 +1,16 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{template} \PYG{o}{\PYGZlt{}}\PYG{k}{class} \PYG{n+nc}{Op}\PYG{o}{\PYGZgt{}}
+\PYG{k+kt}{void} \PYG{n}{processPath}\PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{u}\PYG{p}{,} \PYG{k+kt}{int} \PYG{n}{v}\PYG{p}{,} \PYG{n}{Op} \PYG{n}{op}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+  \PYG{k}{for} \PYG{p}{(;} \PYG{n}{root}\PYG{p}{[}\PYG{n}{u}\PYG{p}{]} \PYG{o}{!=} \PYG{n}{root}\PYG{p}{[}\PYG{n}{v}\PYG{p}{];} \PYG{n}{v} \PYG{o}{=} \PYG{n}{p}\PYG{p}{[}\PYG{n}{root}\PYG{p}{[}\PYG{n}{v}\PYG{p}{]])} \PYG{p}{\PYGZob{}}
+    \PYG{k}{if} \PYG{p}{(}\PYG{n}{depth}\PYG{p}{[}\PYG{n}{root}\PYG{p}{[}\PYG{n}{u}\PYG{p}{]]} \PYG{o}{\PYGZgt{}} \PYG{n}{depth}\PYG{p}{[}\PYG{n}{root}\PYG{p}{[}\PYG{n}{v}\PYG{p}{]])} \PYG{n}{swap}\PYG{p}{(}\PYG{n}{u}\PYG{p}{,} \PYG{n}{v}\PYG{p}{);}
+    \PYG{n}{op}\PYG{p}{(}\PYG{n}{stPos}\PYG{p}{[}\PYG{n}{root}\PYG{p}{[}\PYG{n}{v}\PYG{p}{]],} \PYG{n}{stPos}\PYG{p}{[}\PYG{n}{v}\PYG{p}{]);}
+  \PYG{p}{\PYGZcb{}}
+  \PYG{k}{if} \PYG{p}{(}\PYG{n}{depth}\PYG{p}{[}\PYG{n}{u}\PYG{p}{]} \PYG{o}{\PYGZgt{}} \PYG{n}{depth}\PYG{p}{[}\PYG{n}{v}\PYG{p}{])} \PYG{n}{swap}\PYG{p}{(}\PYG{n}{u}\PYG{p}{,} \PYG{n}{v}\PYG{p}{);}
+  \PYG{n}{op}\PYG{p}{(}\PYG{n}{stPos}\PYG{p}{[}\PYG{n}{u}\PYG{p}{]} \PYG{o}{+} \PYG{l+m+mi}{1}\PYG{p}{,} \PYG{n}{stPos}\PYG{p}{[}\PYG{n}{v}\PYG{p}{]);}
+\PYG{p}{\PYGZcb{}}
+\PYG{k+kt}{void} \PYG{n}{modifyPath}\PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{u}\PYG{p}{,} \PYG{k+kt}{int} \PYG{n}{v}\PYG{p}{,} \PYG{n}{T} \PYG{n}{value}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+  \PYG{n}{processPath}\PYG{p}{(}\PYG{n}{u}\PYG{p}{,} \PYG{n}{v}\PYG{p}{,} \PYG{p}{[}\PYG{o}{\PYGZam{}}\PYG{n}{value}\PYG{p}{](}\PYG{k+kt}{int} \PYG{n}{l}\PYG{p}{,} \PYG{k+kt}{int} \PYG{n}{r}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+    \PYG{n}{st}\PYG{p}{.}\PYG{n}{update}\PYG{p}{(}\PYG{n}{l}\PYG{p}{,} \PYG{n}{r}\PYG{p}{,} \PYG{n}{value}\PYG{p}{);}
+  \PYG{p}{\PYGZcb{});}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

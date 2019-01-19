@@ -1,28 +1,28 @@
-// 4
+// 3
 // wpt = number of words passing through
 // w = number of words ending in the node
 // c = character
+// 8
 struct Trie {
-  // 6
+
   struct Node {
     // for lexicographical order use 'map'
     // map<char, Node *> ch;
     unordered_map<char, Node *> ch;
     int w = 0, wpt = 0;
   };
-
+  // 12
   Node *root = new Node();
-  // 11
+
   // O(STR.SIZE)
   void insert(string str) {
     Node *curr = root;
     for (auto &c : str) {
-      curr->wpt++;
-      if (!curr->ch.count(c)) curr->ch[c] = new Node();
-      curr = curr->ch[c];
+      if (!curr->ch.count(c))
+        curr->ch[c] = new Node();
+      curr->wpt++, curr = curr->ch[c];
     }
-    curr->wpt++;
-    curr->w++;
+    curr->wpt++, curr->w++;
   }
   // 9
   // O(STR.SIZE)
@@ -46,9 +46,10 @@ struct Trie {
     Node *node = find(str);
     return node ? node->w : 0;
   }
-  // 9
+  // 10
   // O(N)
-  void getWords(Node *curr, vector<string> &words, string &word) {
+  void getWords(Node *curr, vector<string> &words,
+                string &word) {
     if (!curr) return;
     if (curr->w) words.push_back(word);
     for (auto &c : curr->ch) {
@@ -70,7 +71,7 @@ struct Trie {
     vector<string> words;
     getWords(find(prefix), words, prefix);
   }
-  // 14
+  // 15
   // O(STR.SIZE)
   bool remove(Node *curr, string &str, int &i) {
     if (i == str.size()) {
@@ -80,7 +81,8 @@ struct Trie {
     int c = str[i];
     if (!curr->ch.count(c)) return false;
     if (remove(curr->ch[c], str, ++i)) {
-      if (!curr->ch[c]->wpt) curr->wpt--, curr->ch.erase(c);
+      if (!curr->ch[c]->wpt)
+        curr->wpt--, curr->ch.erase(c);
       return true;
     }
     return false;

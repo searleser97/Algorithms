@@ -7,10 +7,11 @@ void initVars(int n) {
   bit1.assign(++n, neutro);
   bit2 = bit1;
 }
-// 4
+// 5
 // O(lg(N))
 void update(vector<T> &bit, int i, T val) {
-  for (i++; i < bit.size(); i += i & -i) bit[i] += val;
+  for (i++; i < bit.size(); i += i & -i)
+    bit[i] += val;
 }
 // 7
 // O(lg(N)), [l, r]

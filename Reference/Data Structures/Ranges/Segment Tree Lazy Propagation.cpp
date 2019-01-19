@@ -11,8 +11,9 @@ struct SegmentTree {
   int N, H;
   vector<T> st, d;
   vector<bool> u;
-  // 3
-  SegmentTree(int n) : st(2 * n, neutro), d(n), u(n, 0) {
+  // 4
+  SegmentTree(int n)
+      : st(2 * n, neutro), d(n), u(n, 0) {
     H = sizeof(int) * 8 - __builtin_clz(N = n);
   }
   // 6
@@ -43,10 +44,11 @@ struct SegmentTree {
   void build(int p) {
     while (p > 1) p >>= 1, calc(p);
   }
-  // 11
+  // 12
   // O(lg(N))
   void push(int p) {
-    for (int s = H, k = 1 << (H - 1); s > 0; s--, k >>= 1) {
+    for (int s = H, k = 1 << (H - 1); s > 0;
+         s--, k >>= 1) {
       int i = p >> s;
       if (u[i]) {
         apply(i << 1, d[i], k);
@@ -80,8 +82,6 @@ struct SegmentTree {
     }
     return ans;
   }
-  // 4
-  void setValAt(T val, int i) {
-    st[i + N] = val;
-  }
+  // 2
+  void setValAt(T val, int i) { st[i + N] = val; }
 };

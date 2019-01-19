@@ -1,9 +1,9 @@
 // 3
 struct UnionFind {
-  vector<int> dad, size;
   int n;
+  vector<int> dad, size;
   // 3
-  UnionFind(int N = 0) : n(N), dad(N), size(N, 1) {
+  UnionFind(int N) : n(N), dad(N), size(N, 1) {
     while (N--) dad[N] = N;
   }
   // 4
@@ -22,12 +22,8 @@ struct UnionFind {
     --n, dad[Ru] = Rv;
     size[Rv] += size[Ru];
   }
-  // 3
-  int getSize(int u) {
-    return size[root(u)];
-  }
   // 4
-  int numberOfSets() {
-    return n;
-  }
+  int getSize(int u) { return size[root(u)]; }
+
+  int numberOfSets() { return n; }
 };
