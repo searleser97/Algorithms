@@ -399,14 +399,14 @@ li.sort(key = lambda x: (x.first, x.second, x.third), reverse=False)
 struct UnionFind {
   int n;
   vector<int> dad, size;
-  \end{minted}
+\end{minted}
 \vspace{-1em}
 \needspace{3\baselineskip}
 \begin{minted}{cpp}
   UnionFind(int N) : n(N), dad(N), size(N, 1) {
     while (N--) dad[N] = N;
   }
-  \end{minted}
+\end{minted}
 \vspace{-1em}
 \needspace{4\baselineskip}
 \begin{minted}{cpp}
@@ -414,14 +414,14 @@ struct UnionFind {
     if (dad[u] == u) return u;
     return dad[u] = root(dad[u]);
   }
-  \end{minted}
+\end{minted}
 \vspace{-1em}
 \needspace{3\baselineskip}
 \begin{minted}{cpp}
   bool areConnected(int u, int v) {
     return root(u) == root(v);
   }
-  \end{minted}
+\end{minted}
 \vspace{-1em}
 \needspace{6\baselineskip}
 \begin{minted}{cpp}
@@ -431,7 +431,7 @@ struct UnionFind {
     --n, dad[Ru] = Rv;
     size[Rv] += size[Ru];
   }
-  \end{minted}
+\end{minted}
 \vspace{-1em}
 \needspace{4\baselineskip}
 \begin{minted}{cpp}
@@ -597,7 +597,7 @@ struct SegmentTree {
   T neutro = 0;
   int N;
   vector<T> st;
-  \end{minted}
+\end{minted}
 \vspace{-1em}
 \needspace{8\baselineskip}
 \begin{minted}{cpp}
@@ -609,7 +609,7 @@ struct SegmentTree {
     // return a * b;
     // return min(a, b);
   }
-  \end{minted}
+\end{minted}
 \vspace{-1em}
 \needspace{5\baselineskip}
 \begin{minted}{cpp}
@@ -618,7 +618,7 @@ struct SegmentTree {
     for (int i = N - 1; i > 0; i--)
       st[i] = F(st[i << 1], st[i << 1 | 1]);
   }
-  \end{minted}
+\end{minted}
 \vspace{-1em}
 \needspace{5\baselineskip}
 \begin{minted}{cpp}
@@ -627,7 +627,7 @@ struct SegmentTree {
     for (st[i += N] = val; i > 1; i >>= 1)
       st[i >> 1] = F(st[i], st[i ^ 1]);
   }
-  \end{minted}
+\end{minted}
 \vspace{-1em}
 \needspace{5\baselineskip}
 \begin{minted}{cpp}
@@ -636,7 +636,7 @@ struct SegmentTree {
     for (l += N, r += N; l <= r; l++) st[l] = val;
     build();
   }
-  \end{minted}
+\end{minted}
 \vspace{-1em}
 \needspace{9\baselineskip}
 \begin{minted}{cpp}
@@ -649,7 +649,7 @@ struct SegmentTree {
     }
     return ans;
   }
-  \end{minted}
+\end{minted}
 \vspace{-1em}
 \needspace{2\baselineskip}
 \begin{minted}{cpp}
@@ -677,7 +677,7 @@ struct SegmentTree {
   int N, H;
   vector<T> st, d;
   vector<bool> u;
-  \end{minted}
+\end{minted}
 \vspace{-1em}
 \needspace{4\baselineskip}
 \begin{minted}{cpp}
@@ -705,14 +705,14 @@ struct SegmentTree {
     // st[i] = pow(a, k); // multiplication
     if (i < N) d[i] = val, u[i] = 1;
   }
-  \end{minted}
+\end{minted}
 \vspace{-1em}
 \needspace{3\baselineskip}
 \begin{minted}{cpp}
   void calc(int i) {
     if (!u[i]) st[i] = F(st[i << 1], st[i << 1 | 1]);
   }
-  \end{minted}
+\end{minted}
 \vspace{-1em}
 \needspace{4\baselineskip}
 \begin{minted}{cpp}
@@ -720,7 +720,7 @@ struct SegmentTree {
   void build() {
     for (int i = N - 1; i > 0; i--) calc(i);
   }
-  \end{minted}
+\end{minted}
 \vspace{-1em}
 \needspace{4\baselineskip}
 \begin{minted}{cpp}
@@ -728,7 +728,7 @@ struct SegmentTree {
   void build(int p) {
     while (p > 1) p >>= 1, calc(p);
   }
-  \end{minted}
+\end{minted}
 \vspace{-1em}
 \needspace{12\baselineskip}
 \begin{minted}{cpp}
@@ -744,7 +744,7 @@ struct SegmentTree {
       }
     }
   }
-  \end{minted}
+\end{minted}
 \vspace{-1em}
 \needspace{12\baselineskip}
 \begin{minted}{cpp}
@@ -760,7 +760,7 @@ struct SegmentTree {
     build(ll);
     build(rr);
   }
-  \end{minted}
+\end{minted}
 \vspace{-1em}
 \needspace{11\baselineskip}
 \begin{minted}{cpp}
@@ -775,7 +775,7 @@ struct SegmentTree {
     }
     return ans;
   }
-  \end{minted}
+\end{minted}
 \vspace{-1em}
 \needspace{2\baselineskip}
 \begin{minted}{cpp}
@@ -866,7 +866,7 @@ struct Trie {
     unordered_map<char, Node *> ch;
     int w = 0, wpt = 0;
   };
-  \end{minted}
+\end{minted}
 \vspace{-1em}
 \needspace{12\baselineskip}
 \begin{minted}{cpp}
@@ -882,7 +882,7 @@ struct Trie {
     }
     curr->wpt++, curr->w++;
   }
-  \end{minted}
+\end{minted}
 \vspace{-1em}
 \needspace{9\baselineskip}
 \begin{minted}{cpp}
@@ -895,7 +895,7 @@ struct Trie {
     }
     return curr;
   }
-  \end{minted}
+\end{minted}
 \vspace{-1em}
 \needspace{5\baselineskip}
 \begin{minted}{cpp}
@@ -904,7 +904,7 @@ struct Trie {
     Node *node = find(prefix);
     return node ? node->wpt : 0;
   }
-  \end{minted}
+\end{minted}
 \vspace{-1em}
 \needspace{5\baselineskip}
 \begin{minted}{cpp}
@@ -913,7 +913,7 @@ struct Trie {
     Node *node = find(str);
     return node ? node->w : 0;
   }
-  \end{minted}
+\end{minted}
 \vspace{-1em}
 \needspace{10\baselineskip}
 \begin{minted}{cpp}
@@ -927,7 +927,7 @@ struct Trie {
       word.pop_back();
     }
   }
-  \end{minted}
+\end{minted}
 \vspace{-1em}
 \needspace{7\baselineskip}
 \begin{minted}{cpp}
@@ -938,7 +938,7 @@ struct Trie {
     getWords(root, words, word);
     return words;
   }
-  \end{minted}
+\end{minted}
 \vspace{-1em}
 \needspace{5\baselineskip}
 \begin{minted}{cpp}
@@ -947,7 +947,7 @@ struct Trie {
     vector<string> words;
     getWords(find(prefix), words, prefix);
   }
-  \end{minted}
+\end{minted}
 \vspace{-1em}
 \needspace{15\baselineskip}
 \begin{minted}{cpp}
@@ -966,7 +966,7 @@ struct Trie {
     }
     return false;
   }
-  \end{minted}
+\end{minted}
 \vspace{-1em}
 \needspace{6\baselineskip}
 \begin{minted}{cpp}
@@ -990,7 +990,7 @@ struct Trie {
 \begin{minted}{cpp}
 template <class K, class V>
 struct RedBlackTree {
-  \end{minted}
+\end{minted}
 \vspace{-1em}
 \needspace{9\baselineskip}
 \begin{minted}{cpp}
@@ -1004,7 +1004,7 @@ struct RedBlackTree {
   };
 
   Node *root = nullptr;
-  \end{minted}
+\end{minted}
 \vspace{-1em}
 \needspace{5\baselineskip}
 \begin{minted}{cpp}
@@ -1013,7 +1013,7 @@ struct RedBlackTree {
     if (a > b) return 1;
     return 0;
   }
-  \end{minted}
+\end{minted}
 \vspace{-1em}
 \needspace{11\baselineskip}
 \begin{minted}{cpp}
@@ -1028,7 +1028,7 @@ struct RedBlackTree {
     }
     throw runtime_error("Key doesn't exist");
   }
-  \end{minted}
+\end{minted}
 \vspace{-1em}
 \needspace{8\baselineskip}
 \begin{minted}{cpp}
@@ -1040,7 +1040,7 @@ struct RedBlackTree {
     h->isRed = 1;
     return x;
   }
-  \end{minted}
+\end{minted}
 \vspace{-1em}
 \needspace{8\baselineskip}
 \begin{minted}{cpp}
@@ -1052,7 +1052,7 @@ struct RedBlackTree {
     h->isRed = 1;
     return x;
   }
-  \end{minted}
+\end{minted}
 \vspace{-1em}
 \needspace{5\baselineskip}
 \begin{minted}{cpp}
@@ -1061,7 +1061,7 @@ struct RedBlackTree {
     h->l->isRed = 0;
     h->r->isRed = 0;
   }
-  \end{minted}
+\end{minted}
 \vspace{-1em}
 \needspace{16\baselineskip}
 \begin{minted}{cpp}
@@ -1081,7 +1081,7 @@ struct RedBlackTree {
       flipColors(h);
     return h;
   }
-  \end{minted}
+\end{minted}
 \vspace{-1em}
 \needspace{5\baselineskip}
 \begin{minted}{cpp}
@@ -2397,7 +2397,7 @@ class RollingHash {
   vector<unsigned long long int> pow;
   vector<unsigned long long int> hash;
   unsigned long long int B;
-  \end{minted}
+\end{minted}
 \vspace{-1em}
 \needspace{13\baselineskip}
 \begin{minted}{cpp}
@@ -2414,21 +2414,21 @@ class RollingHash {
       hash[i] = hash[i - 1] * B + text[i - 1];
     }
   }
-  \end{minted}
+\end{minted}
 \vspace{-1em}
 \needspace{3\baselineskip}
 \begin{minted}{cpp}
   unsigned long long int getWordHash() {
     return hash[hash.size() - 1];
   }
-  \end{minted}
+\end{minted}
 \vspace{-1em}
 \needspace{5\baselineskip}
 \begin{minted}{cpp}
   unsigned long long int getSubstrHash(int begin, int end) {
     return hash[end] - hash[begin - 1] * pow[end - begin + 1];
   }
-  \end{minted}
+\end{minted}
 \vspace{-1em}
 \needspace{4\baselineskip}
 \begin{minted}{cpp}

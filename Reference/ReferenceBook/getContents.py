@@ -56,7 +56,7 @@ def printFile(path, depth, sections):
     firstLine = content[:content.find('\n') + 1]
     if re.fullmatch(' *(?:#|(?://)) ?[1-9][0-9]*\\n', firstLine):
         content = content[len(firstLine):]
-        needspace = int(firstLine[2:].strip())
+        needspace = int(firstLine.strip()[2:].strip())
         for i in range(len(sections)):
             needspace += needspaceForDepth(depth - i)
         print('\\needspace{' + str(needspace) + '\\baselineskip}')
@@ -68,7 +68,7 @@ def printFile(path, depth, sections):
         news = ''\
             '\\end{minted}\n'\
             '\\vspace{-1em}\n'\
-            '\\needspace{' + needspace[2:].strip() + '\\baselineskip}\n'\
+            '\\needspace{' + needspace.strip()[2:].strip() + '\\baselineskip}\n'\
             '\\begin{minted}{' + extension + '}\n'
         content = content.replace(needspace, news)
     content += '\n\\end{minted}\n'
