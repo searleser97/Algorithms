@@ -54,7 +54,7 @@ def printFile(path, depth, sections):
     with open(path, 'r') as f:
         content = f.read()
     firstLine = content[:content.find('\n') + 1]
-    if re.fullmatch('(?:#|(?://)) ?[1-9][0-9]*\\n', firstLine):
+    if re.fullmatch(' *(?:#|(?://)) ?[1-9][0-9]*\\n', firstLine):
         content = content[len(firstLine):]
         needspace = int(firstLine[2:].strip())
         for i in range(len(sections)):
@@ -63,7 +63,7 @@ def printFile(path, depth, sections):
     for i in range(len(sections)):
         printSectionType(sections[i], depth - len(sections) + i + 1, i == len(sections) - 1)
     content = '\\begin{minted}{' + extension + '}\n' + content
-    needspaces = set(re.findall('(?:#|(?://)) ?[1-9][0-9]*\\n', content))
+    needspaces = set(re.findall(' *(?:#|(?://)) ?[1-9][0-9]*\\n', content))
     for needspace in needspaces:
         news = ''\
             '\\end{minted}\n'\
