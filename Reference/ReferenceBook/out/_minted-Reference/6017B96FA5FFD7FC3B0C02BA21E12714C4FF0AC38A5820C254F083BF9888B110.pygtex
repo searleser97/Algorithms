@@ -9,8 +9,4 @@
   \PYG{p}{\PYGZcb{}}
   \PYG{k}{return} \PYG{n}{comps}\PYG{p}{;}
 \PYG{p}{\PYGZcb{}}
-\PYG{k+kt}{void} \PYG{n}{addEdge}\PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{u}\PYG{p}{,} \PYG{k+kt}{int} \PYG{n}{v}\PYG{p}{)} \PYG{p}{\PYGZob{}}
-  \PYG{n}{ady}\PYG{p}{[}\PYG{n}{u}\PYG{p}{].}\PYG{n}{push\PYGZus{}back}\PYG{p}{(}\PYG{n}{v}\PYG{p}{);}
-  \PYG{n}{ady}\PYG{p}{[}\PYG{n}{v}\PYG{p}{].}\PYG{n}{push\PYGZus{}back}\PYG{p}{(}\PYG{n}{u}\PYG{p}{);}
-\PYG{p}{\PYGZcb{}}
 \end{Verbatim}

@@ -3,8 +3,4 @@
 \PYG{k+kt}{int} \PYG{n}{neutro} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{;}
 \PYG{n}{vector}\PYG{o}{\PYGZlt{}}\PYG{k+kt}{int}\PYG{o}{\PYGZgt{}} \PYG{n}{arr}\PYG{p}{;}
 \PYG{n}{vector}\PYG{o}{\PYGZlt{}}\PYG{k+kt}{int}\PYG{o}{\PYGZgt{}} \PYG{n}{blks}\PYG{p}{;}
-\PYG{k+kt}{void} \PYG{n+nf}{initVars}\PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{n}\PYG{p}{)} \PYG{p}{\PYGZob{}}
-  \PYG{n}{arr}\PYG{p}{.}\PYG{n}{assign}\PYG{p}{(}\PYG{n}{n}\PYG{p}{,} \PYG{n}{neutro}\PYG{p}{);}
-  \PYG{n}{blks}\PYG{p}{.}\PYG{n}{assign}\PYG{p}{(}\PYG{n}{sqrt}\PYG{p}{(}\PYG{n}{n}\PYG{p}{),} \PYG{n}{neutro}\PYG{p}{);}
-\PYG{p}{\PYGZcb{}}
 \end{Verbatim}

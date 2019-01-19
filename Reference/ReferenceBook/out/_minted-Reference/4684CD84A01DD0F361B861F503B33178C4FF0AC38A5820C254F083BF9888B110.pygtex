@@ -1,9 +1,4 @@
 \begin{Verbatim}[commandchars=\\\{\}]
-\PYG{c+c1}{// APB = articulation points and bridges}
-\PYG{c+c1}{// ap = Articulation Point}
-\PYG{c+c1}{// br = bridges, p = parent}
-\PYG{c+c1}{// disc = discovery time}
-\PYG{c+c1}{// low = lowTime, ch = children}
 \PYG{k}{typedef} \PYG{n}{pair}\PYG{o}{\PYGZlt{}}\PYG{k+kt}{int}\PYG{p}{,} \PYG{k+kt}{int}\PYG{o}{\PYGZgt{}} \PYG{n}{Edge}\PYG{p}{;}
 \PYG{k+kt}{int} \PYG{n}{Time}\PYG{p}{;}
 \PYG{n}{vector}\PYG{o}{\PYGZlt{}}\PYG{n}{vector}\PYG{o}{\PYGZlt{}}\PYG{k+kt}{int}\PYG{o}{\PYGZgt{}\PYGZgt{}} \PYG{n}{ady}\PYG{p}{;}
