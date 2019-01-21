@@ -8,14 +8,14 @@ void initVars(int n) {
   arr.assign(n, neutro);
   blks.assign(sqrt(n), neutro);
 }
-// 5
+// 6
 void preprocess() {
   for (int i = 0, j = 0; i < arr.size(); i++) {
     if (i == blks.size() * j) j++;
     blks[j - 1] += arr[i];  // problem specific
   }
 }
-// 4
+// 5
 // problem specific
 void update(int i, int val) {
   blks[i / blks.size()] += val - arr[i];
@@ -46,7 +46,8 @@ int main() {
   initVars(10);
   arr = {1, 5, 2, 4, 6, 1, 3, 5, 7, 10};
   preprocess();
-  for (int i = 0; i < blks.size() + 1; i++) cout << blks[i] << " ";
+  for (int i = 0; i < blks.size() + 1; i++)
+    cout << blks[i] << " ";
   // output: 8 11 15 10
   cout << endl;
   cout << query(3, 8) << " ";

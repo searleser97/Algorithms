@@ -4,20 +4,19 @@
 // scc = strongly connected component
 // disc = discovery time, low = low time
 // s = stack, top = top index of the stack
-// 3
+// 5
 int Time, top;
 vector<vector<int>> ady, sccs;
 vector<int> disc, low, s;
-// 3
-void initVars(int N) {
-  ady.assign(N, vector<int>());
-}
+
+void initVars(int N) { ady.assign(N, vector<int>()); }
 // 17
 void dfsSCCS(int u) {
   if (disc[u]) return;
   low[u] = disc[u] = ++Time;
   s[++top] = u;
-  for (int &v : ady[u]) dfsSCCS(v), low[u] = min(low[u], low[v]);
+  for (int &v : ady[u])
+    dfsSCCS(v), low[u] = min(low[u], low[v]);
   if (disc[u] == low[u]) {
     vector<int> scc;
     while (true) {
@@ -29,14 +28,12 @@ void dfsSCCS(int u) {
     sccs.push_back(scc);
   }
 }
-// 6
+// 8
 // O(N)
 void SCCS() {
   s = low = disc = vector<int>(ady.size());
   Time = 0, top = -1, sccs.clear();
   for (int u = 0; u < ady.size(); u++) dfsSCCS(u);
 }
-// 3
-void addEdge(int u, int v) {
-  ady[u].push_back(v);
-}
+
+void addEdge(int u, int v) { ady[u].push_back(v); }

@@ -13,7 +13,8 @@ vector<int> kmp(string &p, string &t, int cf) {
     while (i > -1 && p[i] != t[j]) i = f[i];
     i++, j++;
     if (cf) f[j] = i;
-    if (!cf && i == p.size()) pos.push_back(j - i), i = f[i];
+    if (!cf && i == p.size())
+      pos.push_back(j - i), i = f[i];
   }
   return pos;
 }

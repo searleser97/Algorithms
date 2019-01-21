@@ -8,17 +8,19 @@ void initVars(int N) {
   vis.assign(N, 0);
   toposorted.clear();
 }
-// 10
+// 11
 // returns false if there is a cycle
 bool toposort(int u) {
   vis[u] = 1;
   for (auto &v : ady[u])
-    if (v != u && vis[v] != 2 && (vis[v] || !toposort(v))) return false;
+    if (v != u && vis[v] != 2 &&
+        (vis[v] || !toposort(v)))
+      return false;
   vis[u] = 2;
   toposorted.push_back(u);
   return true;
 }
-// 7
+// 9
 // O(N)
 bool toposort() {
   vis.clear();
@@ -26,7 +28,5 @@ bool toposort() {
     if (!vis[u] && !toposort(u)) return false;
   return true;
 }
-// 3
-void addEdge(int u, int v) {
-  ady[u].push_back(v);
-}
+
+void addEdge(int u, int v) { ady[u].push_back(v); }

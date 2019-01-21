@@ -11,12 +11,14 @@ void initVars(int N) {
   cycles.clear();
   root = -1, flag = false;
 }
-// 20
+// 22
 // O(N)
 bool hasCycle(int u, int prev) {
   vis[u] = 1;
   for (auto &v : ady[u]) {
-    if (v == u || vis[v] == 2 || (!isDirected && v == prev)) continue;
+    if (v == u || vis[v] == 2 ||
+        (!isDirected && v == prev))
+      continue;
     if (flag) {
       if (!vis[v]) hasCycle(v, u);
       continue;
@@ -24,7 +26,9 @@ bool hasCycle(int u, int prev) {
     if (vis[v] || hasCycle(v, u)) {
       if (root == -1) root = v, flag = true;
       cycle.push_back(u);
-      if (root == u) flag = false, root = -1, cycles.push_back(cycle), cycle.clear();
+      if (root == u)
+        flag = false, root = -1,
+        cycles.push_back(cycle), cycle.clear();
     }
   }
   vis[u] = 2;

@@ -10,10 +10,8 @@ int Time;
 vector<vector<int>> ady;
 vector<int> disc, low, ap;
 vector<Edge> br;
-// 3
-void initVars(int N) {
-  ady.assign(N, vector<int>());
-}
+// 1
+void initVars(int N) { ady.assign(N, vector<int>()); }
 // 15
 int dfsAPB(int u, int p) {
   int ch = 0;

@@ -23,7 +23,8 @@ vector<int> dijkstra(int s) {
       T w = weight[u][v];
       if (dist[u] + w < dist[v]) {
         if (dist[v] != INF) q.erase(pos[v]);
-        pos[v] = q.insert({dist[v] = dist[u] + w, v}).first;
+        pos[v] = q.insert({dist[v] = dist[u] + w, v})
+                     .first;
       }
     }
   }
@@ -32,15 +33,19 @@ vector<int> dijkstra(int s) {
 // 17
 vector<int> dijkstraLazy(int s) {
   vector<int> dist(ady.size(), INF);
-  priority_queue<DistNode, vector<DistNode>, greater<DistNode>> q;
+  priority_queue<DistNode, vector<DistNode>,
+                 greater<DistNode>>
+      q;
   q.push({0, s}), dist[s] = 0;
   while (q.size()) {
-    DistNode top = q.top(); q.pop();
+    DistNode top = q.top();
+    q.pop();
     int u = top.second;
     if (dist[u] < top.first) continue;
     for (int &v : ady[u]) {
       T w = weight[u][v];
-      if (dist[u] + w < dist[v]) q.push({dist[v] = dist[u] + w, v});
+      if (dist[u] + w < dist[v])
+        q.push({dist[v] = dist[u] + w, v});
     }
   }
   return dist;

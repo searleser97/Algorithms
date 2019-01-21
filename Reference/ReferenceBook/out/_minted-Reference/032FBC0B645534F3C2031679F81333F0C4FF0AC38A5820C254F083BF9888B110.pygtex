@@ -1,0 +1,10 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+  \PYG{k+kt}{unsigned} \PYG{k+kt}{long} \PYG{k+kt}{long} \PYG{k+kt}{int} \PYG{n+nf}{getSubstrHash}\PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{begin}\PYG{p}{,}
+                                       \PYG{k+kt}{int} \PYG{n}{end}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+    \PYG{k}{return} \PYG{n}{hash}\PYG{p}{[}\PYG{n}{end}\PYG{p}{]} \PYG{o}{\PYGZhy{}}
+           \PYG{n}{hash}\PYG{p}{[}\PYG{n}{begin} \PYG{o}{\PYGZhy{}} \PYG{l+m+mi}{1}\PYG{p}{]} \PYG{o}{*} \PYG{n}{pow}\PYG{p}{[}\PYG{n}{end} \PYG{o}{\PYGZhy{}} \PYG{n}{begin} \PYG{o}{+} \PYG{l+m+mi}{1}\PYG{p}{];}
+  \PYG{p}{\PYGZcb{}}
+
+  \PYG{k+kt}{int} \PYG{n+nf}{size}\PYG{p}{()} \PYG{p}{\PYGZob{}} \PYG{k}{return} \PYG{n}{hash}\PYG{p}{.}\PYG{n}{size}\PYG{p}{();} \PYG{p}{\PYGZcb{}}
+\PYG{p}{\PYGZcb{};}
+\end{Verbatim}

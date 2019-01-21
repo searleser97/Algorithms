@@ -46,35 +46,35 @@
 \contentsline {subsection}{Connected Components.cpp}{11}{section*.46}
 \contentsline {subsection}{Flood Fill.cpp}{12}{section*.47}
 \contentsline {subsection}{Heavy Light Decomposition.cpp}{12}{section*.48}
-\contentsline {subsection}{Is Bipartite.cpp}{12}{section*.49}
-\contentsline {subsection}{LCA.cpp}{13}{section*.50}
-\contentsline {subsection}{MST Kruskal.cpp}{13}{section*.51}
+\contentsline {subsection}{Is Bipartite.cpp}{13}{section*.49}
+\contentsline {subsection}{LCA.cpp}{14}{section*.50}
+\contentsline {subsection}{MST Kruskal.cpp}{14}{section*.51}
 \contentsline {subsection}{MST Prim.cpp}{14}{section*.52}
-\contentsline {subsection}{Strongly Connected Components.cpp}{14}{section*.53}
+\contentsline {subsection}{Strongly Connected Components.cpp}{15}{section*.53}
 \contentsline {subsection}{Topological Sort.cpp}{15}{section*.54}
-\contentsline {subsection}{Cycles}{15}{section*.55}
-\contentsline {subsubsection}{Get All Simple Cycles.cpp}{15}{section*.56}
-\contentsline {subsubsection}{Get Some Cycles.cpp}{15}{section*.57}
+\contentsline {subsection}{Cycles}{16}{section*.55}
+\contentsline {subsubsection}{Get All Simple Cycles.cpp}{16}{section*.56}
+\contentsline {subsubsection}{Get Some Cycles.cpp}{16}{section*.57}
 \contentsline {subsubsection}{Has Cycle.cpp}{16}{section*.58}
-\contentsline {subsection}{Flow}{16}{section*.59}
-\contentsline {subsubsection}{Max Flow Dinic.cpp}{16}{section*.60}
-\contentsline {subsubsection}{Maximum Bipartite Matching.cpp}{16}{section*.61}
+\contentsline {subsection}{Flow}{17}{section*.59}
+\contentsline {subsubsection}{Max Flow Dinic.cpp}{17}{section*.60}
+\contentsline {subsubsection}{Maximum Bipartite Matching.cpp}{17}{section*.61}
 \contentsline {subsection}{ShortestPaths}{17}{section*.62}
 \contentsline {subsubsection}{Bellman Ford.cpp}{17}{section*.63}
-\contentsline {subsubsection}{Dijkstra.cpp}{17}{section*.64}
+\contentsline {subsubsection}{Dijkstra.cpp}{18}{section*.64}
 \contentsline {section}{Maths}{18}{section*.65}
 \contentsline {subsection}{Number Theory}{18}{section*.66}
 \contentsline {subsubsection}{Divisibility Criterion.py}{18}{section*.67}
-\contentsline {subsubsection}{Extended Euclidean.cpp}{18}{section*.68}
-\contentsline {subsubsection}{GCD.cpp}{18}{section*.69}
-\contentsline {subsubsection}{LCM.cpp}{18}{section*.70}
+\contentsline {subsubsection}{Extended Euclidean.cpp}{19}{section*.68}
+\contentsline {subsubsection}{GCD.cpp}{19}{section*.69}
+\contentsline {subsubsection}{LCM.cpp}{19}{section*.70}
 \contentsline {subsubsection}{Prime Check Miller Rabin.py}{19}{section*.71}
-\contentsline {subsubsection}{Prime Sieve.cpp}{19}{section*.72}
-\contentsline {section}{Strings}{19}{section*.73}
-\contentsline {subsection}{KMP.cpp}{19}{section*.74}
-\contentsline {subsection}{Rabin Karp.cpp}{19}{section*.75}
+\contentsline {subsubsection}{Prime Sieve.cpp}{20}{section*.72}
+\contentsline {section}{Strings}{20}{section*.73}
+\contentsline {subsection}{KMP.cpp}{20}{section*.74}
+\contentsline {subsection}{Rabin Karp.cpp}{20}{section*.75}
 \contentsline {section}{Techniques}{20}{section*.76}
 \contentsline {subsection}{Binary Search.cpp}{20}{section*.77}
 \contentsline {subsection}{Multiple Queries}{20}{section*.78}
 \contentsline {subsubsection}{Mo.cpp}{20}{section*.79}
-\contentsline {subsubsection}{SQRT Decomposition.cpp}{20}{section*.80}
+\contentsline {subsubsection}{SQRT Decomposition.cpp}{21}{section*.80}

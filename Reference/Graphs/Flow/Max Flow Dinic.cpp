@@ -2,7 +2,7 @@
 // cap[a][b] = Capacity from a to b
 // flow[a][b] = flow occupied from a to b
 // level[a] = level in graph of node a
-// 5
+// 4
 typedef int T;
 vector<int> level;
 vector<vector<int>> ady;
@@ -36,8 +36,10 @@ T blockingFlow(int u, int t, T currPathMaxFlow) {
   if (u == t) return currPathMaxFlow;
   for (int v : ady[u]) {
     T capleft = cap[u][v] - flow[u][v];
-    if ((level[v] == (level[u] + 1)) && (capleft > 0)) {
-      T pathMaxFlow = blockingFlow(v, t, min(currPathMaxFlow, capleft));
+    if ((level[v] == (level[u] + 1)) &&
+        (capleft > 0)) {
+      T pathMaxFlow = blockingFlow(
+          v, t, min(currPathMaxFlow, capleft));
       if (pathMaxFlow > 0) {
         flow[u][v] += pathMaxFlow;
         flow[v][u] -= pathMaxFlow;
@@ -53,7 +55,8 @@ T dinicMaxFlow(int s, int t) {
   if (s == t) return -1;
   T maxFlow = 0;
   while (levelGraph(s, t))
-    while (T flow = blockingFlow(s, t, 1 << 30)) maxFlow += flow;
+    while (T flow = blockingFlow(s, t, 1 << 30))
+      maxFlow += flow;
   return maxFlow;
 }
 // 4

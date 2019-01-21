@@ -42,15 +42,18 @@ T prim(int s) {
       }
     }
   }
-  msts.push_back(vector<Wedge>(mst.begin() + 1, mst.end()));
+  msts.push_back(
+      vector<Wedge>(mst.begin() + 1, mst.end()));
   return cost;
 }
-// 25
+// 26
 T primLazy(int s) {
   vector<Wedge> mst;
   vector<set<Edge>::iterator> pos(ady.size());
   vector<T> dist(ady.size(), INF);
-  priority_queue<DistNode, vector<DistNode>, greater<DistNode>> q;
+  priority_queue<DistNode, vector<DistNode>,
+                 greater<DistNode>>
+      q;
   T cost = dist[s] = 0;
   q.push({0, s});
   while (q.size()) {
@@ -62,10 +65,12 @@ T primLazy(int s) {
     mst.push_back({dist[u], {p[u], u}});
     for (int &v : ady[u]) {
       T w = weight[u][v];
-      if (!vis[v] && w < dist[v]) q.push({dist[v] = w, v});
+      if (!vis[v] && w < dist[v])
+        q.push({dist[v] = w, v});
     }
   }
-  msts.push_back(vector<Wedge>(mst.begin() + 1, mst.end()));
+  msts.push_back(
+      vector<Wedge>(mst.begin() + 1, mst.end()));
   return cost;
 }
 // 8

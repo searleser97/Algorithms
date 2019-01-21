@@ -1,0 +1,44 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k+kt}{void} \PYG{n+nf}{initMapping}\PYG{p}{()} \PYG{p}{\PYGZob{}}
+  \PYG{n}{mapId} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{;}
+  \PYG{n}{intForVal}\PYG{p}{.}\PYG{n}{clear}\PYG{p}{();}
+  \PYG{n}{valForInt}\PYG{p}{.}\PYG{n}{clear}\PYG{p}{();}
+\PYG{p}{\PYGZcb{}}
+
+\PYG{k+kt}{int} \PYG{n+nf}{main}\PYG{p}{()} \PYG{p}{\PYGZob{}}
+  \PYG{k+kt}{int} \PYG{n}{t}\PYG{p}{;}
+  \PYG{n}{cin} \PYG{o}{\PYGZgt{}\PYGZgt{}} \PYG{n}{t}\PYG{p}{;}
+  \PYG{k}{while} \PYG{p}{(}\PYG{n}{t}\PYG{o}{\PYGZhy{}\PYGZhy{}}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+    \PYG{k+kt}{int} \PYG{n}{n}\PYG{p}{;}
+    \PYG{n}{cin} \PYG{o}{\PYGZgt{}\PYGZgt{}} \PYG{n}{n}\PYG{p}{;}
+    \PYG{n}{initVars}\PYG{p}{(}\PYG{n}{n}\PYG{p}{);}
+    \PYG{n}{initMapping}\PYG{p}{();}
+    \PYG{n}{vector}\PYG{o}{\PYGZlt{}}\PYG{n}{pair}\PYG{o}{\PYGZlt{}}\PYG{n}{Val}\PYG{p}{,} \PYG{n}{Val}\PYG{o}{\PYGZgt{}\PYGZgt{}} \PYG{n}{edges}\PYG{p}{;}
+    \PYG{k}{for} \PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{i} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{;} \PYG{n}{i} \PYG{o}{\PYGZlt{}} \PYG{n}{n} \PYG{o}{\PYGZhy{}} \PYG{l+m+mi}{1}\PYG{p}{;} \PYG{n}{i}\PYG{o}{++}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+      \PYG{n}{Val} \PYG{n}{a}\PYG{p}{,} \PYG{n}{b}\PYG{p}{;}
+      \PYG{n}{T} \PYG{n}{c}\PYG{p}{;}
+      \PYG{n}{cin} \PYG{o}{\PYGZgt{}\PYGZgt{}} \PYG{n}{a} \PYG{o}{\PYGZgt{}\PYGZgt{}} \PYG{n}{b} \PYG{o}{\PYGZgt{}\PYGZgt{}} \PYG{n}{c}\PYG{p}{;}
+      \PYG{n}{a} \PYG{o}{=} \PYG{n}{Map}\PYG{p}{(}\PYG{n}{a}\PYG{p}{),} \PYG{n}{b} \PYG{o}{=} \PYG{n}{Map}\PYG{p}{(}\PYG{n}{b}\PYG{p}{);}
+      \PYG{n}{addEdge}\PYG{p}{(}\PYG{n}{a}\PYG{p}{,} \PYG{n}{b}\PYG{p}{,} \PYG{n}{c}\PYG{p}{);}
+      \PYG{n}{edges}\PYG{p}{.}\PYG{n}{push\PYGZus{}back}\PYG{p}{(\PYGZob{}}\PYG{n}{a}\PYG{p}{,} \PYG{n}{b}\PYG{p}{\PYGZcb{});}
+    \PYG{p}{\PYGZcb{}}
+    \PYG{n}{initHeavyLight}\PYG{p}{();}
+    \PYG{k}{while} \PYG{p}{(}\PYG{n+nb}{true}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+      \PYG{n}{string} \PYG{n}{op}\PYG{p}{;}
+      \PYG{n}{cin} \PYG{o}{\PYGZgt{}\PYGZgt{}} \PYG{n}{op}\PYG{p}{;}
+      \PYG{k}{if} \PYG{p}{(}\PYG{n}{op} \PYG{o}{==} \PYG{l+s}{\PYGZdq{}QUERY\PYGZdq{}}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+        \PYG{k+kt}{int} \PYG{n}{a}\PYG{p}{,} \PYG{n}{b}\PYG{p}{;}
+        \PYG{n}{cin} \PYG{o}{\PYGZgt{}\PYGZgt{}} \PYG{n}{a} \PYG{o}{\PYGZgt{}\PYGZgt{}} \PYG{n}{b}\PYG{p}{;}
+        \PYG{n}{cout} \PYG{o}{\PYGZlt{}\PYGZlt{}} \PYG{n}{query}\PYG{p}{(}\PYG{n}{Map}\PYG{p}{(}\PYG{n}{a}\PYG{p}{),} \PYG{n}{Map}\PYG{p}{(}\PYG{n}{b}\PYG{p}{))} \PYG{o}{\PYGZlt{}\PYGZlt{}} \PYG{n}{endl}\PYG{p}{;}
+      \PYG{p}{\PYGZcb{}}
+      \PYG{k}{if} \PYG{p}{(}\PYG{n}{op} \PYG{o}{==} \PYG{l+s}{\PYGZdq{}CHANGE\PYGZdq{}}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+        \PYG{k+kt}{int} \PYG{n}{i}\PYG{p}{,} \PYG{n}{ti}\PYG{p}{;}
+        \PYG{n}{cin} \PYG{o}{\PYGZgt{}\PYGZgt{}} \PYG{n}{i} \PYG{o}{\PYGZgt{}\PYGZgt{}} \PYG{n}{ti}\PYG{p}{;}
+        \PYG{n}{update}\PYG{p}{(}\PYG{n}{edges}\PYG{p}{[}\PYG{n}{i}\PYG{p}{].}\PYG{n}{first}\PYG{p}{,} \PYG{n}{edges}\PYG{p}{[}\PYG{n}{i}\PYG{p}{].}\PYG{n}{second}\PYG{p}{,} \PYG{n}{ti}\PYG{p}{);}
+      \PYG{p}{\PYGZcb{}}
+      \PYG{k}{if} \PYG{p}{(}\PYG{n}{op} \PYG{o}{==} \PYG{l+s}{\PYGZdq{}DONE\PYGZdq{}}\PYG{p}{)} \PYG{k}{break}\PYG{p}{;}
+    \PYG{p}{\PYGZcb{}}
+  \PYG{p}{\PYGZcb{}}
+  \PYG{k}{return} \PYG{l+m+mi}{0}\PYG{p}{;}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

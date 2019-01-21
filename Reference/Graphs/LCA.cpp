@@ -7,19 +7,18 @@ vector<int> first;
 vector<T> tour;
 vector<vector<int>> ady;
 // 3
-void initVars(int N) {
-  ady.assign(N, vector<int>());
-}
-// 3
-T F(T a, T b) {
-  return a.first < b.first ? a : b;
-}
+void initVars(int N) { ady.assign(N, vector<int>()); }
+
+T F(T a, T b) { return a.first < b.first ? a : b; }
 // 9
 void build() {
-  st.assign(log2(tour.size()), vector<T>(tour.size()));
+  st.assign(log2(tour.size()),
+            vector<T>(tour.size()));
   st[0] = tour;
   for (int i = 1; (1 << i) <= tour.size(); i++)
-    for (int j = 0; j + (1 << i) <= tour.size(); j++) st[i][j] = F(st[i - 1][j], st[i - 1][j + (1 << (i - 1))]);
+    for (int j = 0; j + (1 << i) <= tour.size(); j++)
+      st[i][j] = F(st[i - 1][j],
+                   st[i - 1][j + (1 << (i - 1))]);
 }
 // 9
 void eulerTour(int u, int p, int h) {

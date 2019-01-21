@@ -30,11 +30,15 @@ struct SegmentTree {
     for (st[i += N] = val; i > 1; i >>= 1)
       st[i >> 1] = F(st[i], st[i ^ 1]);
   }
-  // 5
+  // 9
   // O(3N), [l, r]
   void update(int l, int r, T val) {
-    for (l += N, r += N; l <= r; l++) st[l] = val;
-    build();
+    if (l == r)
+      update(l, val);
+    else {
+      for (l += N, r += N; l <= r; l++) st[l] = val;
+      build();
+    }
   }
   // 9
   // O(lg(2N)), [l, r]

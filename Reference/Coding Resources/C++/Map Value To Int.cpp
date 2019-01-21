@@ -11,7 +11,7 @@ int Map(Val val) {
              : intForVal[val] = mapId++;
 }
 // 3
-int IMap(int val) { return valForInt[val]; }
+Val IMap(int val) { return valForInt[val]; }
 // 5
 void initMapping() {
   mapId = 0;

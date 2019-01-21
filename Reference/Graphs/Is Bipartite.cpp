@@ -1,10 +1,8 @@
-// 5
+// 3
 vector<vector<int>> ady;
 
-void initVars(int N) {
-  ady.assign(N, vector<int>());
-}
-// 19
+void initVars(int N) { ady.assign(N, vector<int>()); }
+// 20
 // O(N)
 bool isBipartite() {
   vector<int> color(ady.size(), -1);
@@ -17,7 +15,8 @@ bool isBipartite() {
       int u = q.front();
       q.pop();
       for (int &v : ady[u]) {
-        if (color[v] < 0) q.push(v), color[v] = !color[u];
+        if (color[v] < 0)
+          q.push(v), color[v] = !color[u];
         if (color[v] == color[u]) return false;
       }
     }

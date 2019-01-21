@@ -19,7 +19,7 @@ bool cmp(Query &a, Query &b) {
   if (a.l == b.l) return a.r < b.r;
   return a.l / blksize < b.l / blksize;
 }
-// 27
+// 28
 void getResults() {
   blksize = (int)sqrt(arr.size());
   sort(qs.begin(), qs.end(), cmp);
@@ -44,7 +44,8 @@ void getResults() {
       prevR--;
     }
 
-    cout << "sum[" << L << ", " << R << "] = " << sum << endl;
+    cout << "sum[" << L << ", " << R << "] = " << sum
+         << endl;
   }
 }
 // 6

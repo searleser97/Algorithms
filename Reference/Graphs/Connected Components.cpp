@@ -23,7 +23,8 @@ vector<vector<int>> connectedComponents() {
   for (int u = 0; u < ady.size(); u++) {
     vector<int> comp;
     dfsCC(u, comp);
-    if (!comp.empty()) comps.push_back(comp), compId++;
+    if (!comp.empty())
+      comps.push_back(comp), compId++;
   }
   return comps;
 }

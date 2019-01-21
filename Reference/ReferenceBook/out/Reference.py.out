@@ -90,7 +90,7 @@ int Map(Val val) {
 \vspace{-12pt}
 \needspace{3\baselineskip}
 \begin{minted}{cpp}
-int IMap(int val) { return valForInt[val]; }
+Val IMap(int val) { return valForInt[val]; }
 \end{minted}
 \vspace{-12pt}
 \needspace{5\baselineskip}
@@ -629,12 +629,16 @@ struct SegmentTree {
   }
 \end{minted}
 \vspace{-12pt}
-\needspace{5\baselineskip}
+\needspace{9\baselineskip}
 \begin{minted}{cpp}
   // O(3N), [l, r]
   void update(int l, int r, T val) {
-    for (l += N, r += N; l <= r; l++) st[l] = val;
-    build();
+    if (l == r)
+      update(l, val);
+    else {
+      for (l += N, r += N; l <= r; l++) st[l] = val;
+      build();
+    }
   }
 \end{minted}
 \vspace{-12pt}
@@ -1196,11 +1200,9 @@ vector<int> disc, low, ap;
 vector<Edge> br;
 \end{minted}
 \vspace{-12pt}
-\needspace{3\baselineskip}
+\needspace{1\baselineskip}
 \begin{minted}{cpp}
-void initVars(int N) {
-  ady.assign(N, vector<int>());
-}
+void initVars(int N) { ady.assign(N, vector<int>()); }
 \end{minted}
 \vspace{-12pt}
 \needspace{15\baselineskip}
@@ -1280,7 +1282,8 @@ vector<vector<int>> connectedComponents() {
   for (int u = 0; u < ady.size(); u++) {
     vector<int> comp;
     dfsCC(u, comp);
-    if (!comp.empty()) comps.push_back(comp), compId++;
+    if (!comp.empty())
+      comps.push_back(comp), compId++;
   }
   return comps;
 }
@@ -1301,15 +1304,20 @@ void addEdge(int u, int v) {
 \begin{minted}{cpp}
 int n, m, oldColor = 0, color = 1;
 vector<vector<int>> mat;
-vector<vector<int>> movs = {{1, 0}, {0, 1}, {-1, 0}, {0, -1}};
+vector<vector<int>> movs = {
+    {1, 0}, {0, 1}, {-1, 0}, {0, -1}};
 \end{minted}
 \vspace{-12pt}
-\needspace{5\baselineskip}
+\needspace{9\baselineskip}
 \begin{minted}{cpp}
 void floodFill(int i, int j) {
-  if (i >= mat.size() || i < 0 || j >= mat[i].size() || j < 0 || mat[i][j] != oldColor) return;
+  if (i >= mat.size() || i < 0 ||
+      j >= mat[i].size() || j < 0 ||
+      mat[i][j] != oldColor)
+    return;
   mat[i][j] = color;
-  for (auto move : movs) floodFill(i + move[1], j + move[0]);
+  for (auto move : movs)
+    floodFill(i + move[1], j + move[0]);
 }
 \end{minted}
 \vspace{-12pt}
@@ -1322,22 +1330,102 @@ void floodFill() {
 }
 \end{minted}
 
-\needspace{7\baselineskip}
 \subsectionfont{\large\bfseries\sffamily\underline}
 \subsection*{Heavy Light Decomposition.cpp}
 \addcontentsline{toc}{subsection}{Heavy Light Decomposition.cpp}
 \begin{minted}{cpp}
-#include "../Data Structures/Ranges/Segment Tree Lazy Propagation.cpp"
-typedef int T;
-vector<vector<int>> ady;
-vector<int> p, heavy, depth, root, stPos, val;
-SegmentTree<T> st;
+#include <bits/stdc++.h>
+using namespace std;
+template <class T>
+struct SegmentTree {
+  T neutro = 0;
+  int N;
+  vector<T> st;
 \end{minted}
 \vspace{-12pt}
-\needspace{14\baselineskip}
+\needspace{8\baselineskip}
 \begin{minted}{cpp}
-T F(T a, T b) { return a + b; }
+  SegmentTree(int n) : st(2 * n, neutro), N(n) {}
 
+  T F(T a, T b) { return max(a, b); }
+\end{minted}
+\vspace{-12pt}
+\needspace{5\baselineskip}
+\begin{minted}{cpp}
+  // O(2N)
+  void build() {
+    for (int i = N - 1; i > 0; i--)
+      st[i] = F(st[i << 1], st[i << 1 | 1]);
+  }
+\end{minted}
+\vspace{-12pt}
+\needspace{5\baselineskip}
+\begin{minted}{cpp}
+  // O(lg(2N))
+  void update(int i, T val) {
+    for (st[i += N] = val; i > 1; i >>= 1)
+      st[i >> 1] = F(st[i], st[i ^ 1]);
+  }
+\end{minted}
+\vspace{-12pt}
+\needspace{5\baselineskip}
+\begin{minted}{cpp}
+  // O(3N), [l, r]
+  void update(int l, int r, T val) {
+    if (l == r)
+      update(l, val);
+    else {
+      for (l += N, r += N; l <= r; l++) st[l] = val;
+      build();
+    }
+  }
+  \end{minted}
+\vspace{-12pt}
+\needspace{9\baselineskip}
+\begin{minted}{cpp}
+  // O(lg(2N)), [l, r]
+  T query(int l, int r) {
+    T ans = neutro;
+    for (l += N, r += N; l <= r; l >>= 1, r >>= 1) {
+      if (l & 1) ans = F(ans, st[l++]);
+      if (~r & 1) ans = F(ans, st[r--]);
+    }
+    return ans;
+  }
+\end{minted}
+\vspace{-12pt}
+\needspace{2\baselineskip}
+\begin{minted}{cpp}
+  void setValAt(T val, int i) { st[i + N] = val; }
+};
+// p = parent;
+\end{minted}
+\vspace{-12pt}
+\needspace{5\baselineskip}
+\begin{minted}{cpp}
+// #include "../Data Structures/Ranges/Segment
+// Tree.cpp"
+typedef int T;
+vector<vector<int>> ady;
+vector<int> p, heavy, depth, root, stPos, vals;
+SegmentTree<T> st(0);
+\end{minted}
+\vspace{-12pt}
+\needspace{7\baselineskip}
+\begin{minted}{cpp}
+void initVars(int n) {
+  ady.assign(n, vector<int>());
+  heavy.assign(n, -1);
+  vals.assign(n, 0);
+  p = root = stPos = depth = vals;
+  st = SegmentTree<T>(n);
+}
+
+T F(T a, T b) { return max(a, b); }
+\end{minted}
+\vspace{-12pt}
+\needspace{12\baselineskip}
+\begin{minted}{cpp}
 int dfs(int u) {
   int size = 1, maxSubtree = 0;
   for (int &v : ady[u]) {
@@ -1351,17 +1439,14 @@ int dfs(int u) {
 }
 \end{minted}
 \vspace{-12pt}
-\needspace{13\baselineskip}
+\needspace{14\baselineskip}
 \begin{minted}{cpp}
-void initVars(int n) {
-  heavy.assign(n, -1);
-  depth.assign(n, 0);
-  st = SegmentTree<T>(n);
+void initHeavyLight() {
   dfs(0);
-  for (int i = 0, pos = 0; i < n; i++)
+  for (int i = 0, pos = 0; i < ady.size(); i++)
     if (!i || heavy[p[i]] != i)
       for (int j = i; j; j = heavy[j]) {
-        st.setValAt(val[j], pos);
+        st.setValAt(vals[j], pos);
         root[j] = i, stPos[j] = pos++;
       }
   st.build();
@@ -1372,20 +1457,24 @@ void initVars(int n) {
 \begin{minted}{cpp}
 template <class Op>
 void processPath(int u, int v, Op op) {
+  cout << u << " aaaa " << v << endl;
+  return;
   for (; root[u] != root[v]; v = p[root[v]]) {
     if (depth[root[u]] > depth[root[v]]) swap(u, v);
     op(stPos[root[v]], stPos[v]);
   }
   if (depth[u] > depth[v]) swap(u, v);
-  op(stPos[u] + 1, stPos[v]);
+  // op(stPos[u], stPos[v]); // for values on nodes
+  if (u == v) return;          // for values on edges
+  op(stPos[u] + 1, stPos[v]);  // for values on edges
 }
 \end{minted}
 \vspace{-12pt}
 \needspace{5\baselineskip}
 \begin{minted}{cpp}
-void modifyPath(int u, int v, T value) {
-  processPath(u, v, [&value](int l, int r) {
-    st.update(l, r, value);
+void update(int u, int v, T val) {
+  processPath(u, v, [&val](int l, int r) {
+    st.update(l, r, val);
   });
 }
 \end{minted}
@@ -1403,25 +1492,90 @@ T query(int u, int v) {
 \vspace{-12pt}
 \needspace{4\baselineskip}
 \begin{minted}{cpp}
-void addEdge(int u, int v, T value) {
+void addEdge(int u, int v, T val) {
   ady[u].push_back(v);
-  val[v] = value;
+  vals[v] = val;
+}
+
+// val = value
+typedef int Val;
+unordered_map<Val, int> intForVal;
+unordered_map<int, Val> valForInt;
+int mapId;
+\end{minted}
+\vspace{-12pt}
+\needspace{4\baselineskip}
+\begin{minted}{cpp}
+int Map(Val val) {
+  valForInt[mapId] = val;
+  return intForVal.count(val)
+             ? intForVal[val]
+             : intForVal[val] = mapId++;
+}
+\end{minted}
+\vspace{-12pt}
+\needspace{3\baselineskip}
+\begin{minted}{cpp}
+Val IMap(int val) { return valForInt[val]; }
+\end{minted}
+\vspace{-12pt}
+\needspace{5\baselineskip}
+\begin{minted}{cpp}
+void initMapping() {
+  mapId = 0;
+  intForVal.clear();
+  valForInt.clear();
+}
+
+int main() {
+  int t;
+  cin >> t;
+  while (t--) {
+    int n;
+    cin >> n;
+    initVars(n);
+    initMapping();
+    vector<pair<Val, Val>> edges;
+    for (int i = 0; i < n - 1; i++) {
+      Val a, b;
+      T c;
+      cin >> a >> b >> c;
+      a = Map(a), b = Map(b);
+      addEdge(a, b, c);
+      edges.push_back({a, b});
+    }
+    initHeavyLight();
+    while (true) {
+      string op;
+      cin >> op;
+      if (op == "QUERY") {
+        int a, b;
+        cin >> a >> b;
+        cout << query(Map(a), Map(b)) << endl;
+      }
+      if (op == "CHANGE") {
+        int i, ti;
+        cin >> i >> ti;
+        update(edges[i].first, edges[i].second, ti);
+      }
+      if (op == "DONE") break;
+    }
+  }
+  return 0;
 }
 \end{minted}
 
-\needspace{7\baselineskip}
+\needspace{5\baselineskip}
 \subsectionfont{\large\bfseries\sffamily\underline}
 \subsection*{Is Bipartite.cpp}
 \addcontentsline{toc}{subsection}{Is Bipartite.cpp}
 \begin{minted}{cpp}
 vector<vector<int>> ady;
 
-void initVars(int N) {
-  ady.assign(N, vector<int>());
-}
+void initVars(int N) { ady.assign(N, vector<int>()); }
 \end{minted}
 \vspace{-12pt}
-\needspace{19\baselineskip}
+\needspace{20\baselineskip}
 \begin{minted}{cpp}
 // O(N)
 bool isBipartite() {
@@ -1435,7 +1589,8 @@ bool isBipartite() {
       int u = q.front();
       q.pop();
       for (int &v : ady[u]) {
-        if (color[v] < 0) q.push(v), color[v] = !color[u];
+        if (color[v] < 0)
+          q.push(v), color[v] = !color[u];
         if (color[v] == color[u]) return false;
       }
     }
@@ -1460,25 +1615,21 @@ vector<vector<int>> ady;
 \vspace{-12pt}
 \needspace{3\baselineskip}
 \begin{minted}{cpp}
-void initVars(int N) {
-  ady.assign(N, vector<int>());
-}
-\end{minted}
-\vspace{-12pt}
-\needspace{3\baselineskip}
-\begin{minted}{cpp}
-T F(T a, T b) {
-  return a.first < b.first ? a : b;
-}
+void initVars(int N) { ady.assign(N, vector<int>()); }
+
+T F(T a, T b) { return a.first < b.first ? a : b; }
 \end{minted}
 \vspace{-12pt}
 \needspace{9\baselineskip}
 \begin{minted}{cpp}
 void build() {
-  st.assign(log2(tour.size()), vector<T>(tour.size()));
+  st.assign(log2(tour.size()),
+            vector<T>(tour.size()));
   st[0] = tour;
   for (int i = 1; (1 << i) <= tour.size(); i++)
-    for (int j = 0; j + (1 << i) <= tour.size(); j++) st[i][j] = F(st[i - 1][j], st[i - 1][j + (1 << (i - 1))]);
+    for (int j = 0; j + (1 << i) <= tour.size(); j++)
+      st[i][j] = F(st[i - 1][j],
+                   st[i - 1][j + (1 << (i - 1))]);
 }
 \end{minted}
 \vspace{-12pt}
@@ -1540,7 +1691,7 @@ vector<Wedge> mst;
 UnionFind uf(0);
 \end{minted}
 \vspace{-12pt}
-\needspace{4\baselineskip}
+\needspace{5\baselineskip}
 \begin{minted}{cpp}
 void initVars(int N) {
   mst.clear();
@@ -1549,15 +1700,18 @@ void initVars(int N) {
 }
 \end{minted}
 \vspace{-12pt}
-\needspace{12\baselineskip}
+\needspace{13\baselineskip}
 \begin{minted}{cpp}
 T kruskal() {
   T cost = 0;
   sort(Wedges.begin(), Wedges.end());
   // reverse(Wedges.begin(), Wedges.end());
   for (Wedge &wedge : Wedges) {
-    int u = wedge.second.first, v = wedge.second.second;
-    if (!uf.areConnected(u, v)) uf.join(u, v), mst.push_back(wedge), cost += wedge.first;
+    int u = wedge.second.first,
+        v = wedge.second.second;
+    if (!uf.areConnected(u, v))
+      uf.join(u, v), mst.push_back(wedge),
+          cost += wedge.first;
   }
   return cost;
 }
@@ -1624,18 +1778,21 @@ T prim(int s) {
       }
     }
   }
-  msts.push_back(vector<Wedge>(mst.begin() + 1, mst.end()));
+  msts.push_back(
+      vector<Wedge>(mst.begin() + 1, mst.end()));
   return cost;
 }
 \end{minted}
 \vspace{-12pt}
-\needspace{25\baselineskip}
+\needspace{26\baselineskip}
 \begin{minted}{cpp}
 T primLazy(int s) {
   vector<Wedge> mst;
   vector<set<Edge>::iterator> pos(ady.size());
   vector<T> dist(ady.size(), INF);
-  priority_queue<DistNode, vector<DistNode>, greater<DistNode>> q;
+  priority_queue<DistNode, vector<DistNode>,
+                 greater<DistNode>>
+      q;
   T cost = dist[s] = 0;
   q.push({0, s});
   while (q.size()) {
@@ -1647,10 +1804,12 @@ T primLazy(int s) {
     mst.push_back({dist[u], {p[u], u}});
     for (int &v : ady[u]) {
       T w = weight[u][v];
-      if (!vis[v] && w < dist[v]) q.push({dist[v] = w, v});
+      if (!vis[v] && w < dist[v])
+        q.push({dist[v] = w, v});
     }
   }
-  msts.push_back(vector<Wedge>(mst.begin() + 1, mst.end()));
+  msts.push_back(
+      vector<Wedge>(mst.begin() + 1, mst.end()));
   return cost;
 }
 \end{minted}
@@ -1689,18 +1848,13 @@ void addEdge(int u, int v, T w) {
 // s = stack, top = top index of the stack
 \end{minted}
 \vspace{-12pt}
-\needspace{3\baselineskip}
+\needspace{5\baselineskip}
 \begin{minted}{cpp}
 int Time, top;
 vector<vector<int>> ady, sccs;
 vector<int> disc, low, s;
-\end{minted}
-\vspace{-12pt}
-\needspace{3\baselineskip}
-\begin{minted}{cpp}
-void initVars(int N) {
-  ady.assign(N, vector<int>());
-}
+
+void initVars(int N) { ady.assign(N, vector<int>()); }
 \end{minted}
 \vspace{-12pt}
 \needspace{17\baselineskip}
@@ -1709,7 +1863,8 @@ void dfsSCCS(int u) {
   if (disc[u]) return;
   low[u] = disc[u] = ++Time;
   s[++top] = u;
-  for (int &v : ady[u]) dfsSCCS(v), low[u] = min(low[u], low[v]);
+  for (int &v : ady[u])
+    dfsSCCS(v), low[u] = min(low[u], low[v]);
   if (disc[u] == low[u]) {
     vector<int> scc;
     while (true) {
@@ -1723,7 +1878,7 @@ void dfsSCCS(int u) {
 }
 \end{minted}
 \vspace{-12pt}
-\needspace{6\baselineskip}
+\needspace{8\baselineskip}
 \begin{minted}{cpp}
 // O(N)
 void SCCS() {
@@ -1731,13 +1886,8 @@ void SCCS() {
   Time = 0, top = -1, sccs.clear();
   for (int u = 0; u < ady.size(); u++) dfsSCCS(u);
 }
-\end{minted}
-\vspace{-12pt}
-\needspace{3\baselineskip}
-\begin{minted}{cpp}
-void addEdge(int u, int v) {
-  ady[u].push_back(v);
-}
+
+void addEdge(int u, int v) { ady[u].push_back(v); }
 \end{minted}
 
 \needspace{5\baselineskip}
@@ -1759,20 +1909,22 @@ void initVars(int N) {
 }
 \end{minted}
 \vspace{-12pt}
-\needspace{10\baselineskip}
+\needspace{11\baselineskip}
 \begin{minted}{cpp}
 // returns false if there is a cycle
 bool toposort(int u) {
   vis[u] = 1;
   for (auto &v : ady[u])
-    if (v != u && vis[v] != 2 && (vis[v] || !toposort(v))) return false;
+    if (v != u && vis[v] != 2 &&
+        (vis[v] || !toposort(v)))
+      return false;
   vis[u] = 2;
   toposorted.push_back(u);
   return true;
 }
 \end{minted}
 \vspace{-12pt}
-\needspace{7\baselineskip}
+\needspace{9\baselineskip}
 \begin{minted}{cpp}
 // O(N)
 bool toposort() {
@@ -1781,13 +1933,8 @@ bool toposort() {
     if (!vis[u] && !toposort(u)) return false;
   return true;
 }
-\end{minted}
-\vspace{-12pt}
-\needspace{3\baselineskip}
-\begin{minted}{cpp}
-void addEdge(int u, int v) {
-  ady[u].push_back(v);
-}
+
+void addEdge(int u, int v) { ady[u].push_back(v); }
 \end{minted}
 
 \subsectionfont{\bfseries\sffamily\centering\LARGE}
@@ -1824,13 +1971,15 @@ void initVars(int N) {
 }
 \end{minted}
 \vspace{-12pt}
-\needspace{20\baselineskip}
+\needspace{22\baselineskip}
 \begin{minted}{cpp}
 // O(N)
 bool hasCycle(int u, int prev) {
   vis[u] = 1;
   for (auto &v : ady[u]) {
-    if (v == u || vis[v] == 2 || (!isDirected && v == prev)) continue;
+    if (v == u || vis[v] == 2 ||
+        (!isDirected && v == prev))
+      continue;
     if (flag) {
       if (!vis[v]) hasCycle(v, u);
       continue;
@@ -1838,7 +1987,9 @@ bool hasCycle(int u, int prev) {
     if (vis[v] || hasCycle(v, u)) {
       if (root == -1) root = v, flag = true;
       cycle.push_back(u);
-      if (root == u) flag = false, root = -1, cycles.push_back(cycle), cycle.clear();
+      if (root == u)
+        flag = false, root = -1,
+        cycles.push_back(cycle), cycle.clear();
     }
   }
   vis[u] = 2;
@@ -1882,12 +2033,15 @@ void initVars(int N) {
 }
 \end{minted}
 \vspace{-12pt}
-\needspace{8\baselineskip}
+\needspace{10\baselineskip}
 \begin{minted}{cpp}
 bool hasCycle(int u, int prev) {
   vis[u] = 1;
   for (auto &v : ady[u])
-    if (v != u && vis[v] != 2 && (isDirected || v != prev) && (vis[v] || hasCycle(v, u))) return true;
+    if (v != u && vis[v] != 2 &&
+        (isDirected || v != prev) &&
+        (vis[v] || hasCycle(v, u)))
+      return true;
   vis[u] = 2;
   return false;
 }
@@ -1925,7 +2079,7 @@ void addEdge(int u, int v) {
 // level[a] = level in graph of node a
 \end{minted}
 \vspace{-12pt}
-\needspace{5\baselineskip}
+\needspace{4\baselineskip}
 \begin{minted}{cpp}
 typedef int T;
 vector<int> level;
@@ -1969,8 +2123,10 @@ T blockingFlow(int u, int t, T currPathMaxFlow) {
   if (u == t) return currPathMaxFlow;
   for (int v : ady[u]) {
     T capleft = cap[u][v] - flow[u][v];
-    if ((level[v] == (level[u] + 1)) && (capleft > 0)) {
-      T pathMaxFlow = blockingFlow(v, t, min(currPathMaxFlow, capleft));
+    if ((level[v] == (level[u] + 1)) &&
+        (capleft > 0)) {
+      T pathMaxFlow = blockingFlow(
+          v, t, min(currPathMaxFlow, capleft));
       if (pathMaxFlow > 0) {
         flow[u][v] += pathMaxFlow;
         flow[v][u] -= pathMaxFlow;
@@ -1989,7 +2145,8 @@ T dinicMaxFlow(int s, int t) {
   if (s == t) return -1;
   T maxFlow = 0;
   while (levelGraph(s, t))
-    while (T flow = blockingFlow(s, t, 1 << 30)) maxFlow += flow;
+    while (T flow = blockingFlow(s, t, 1 << 30))
+      maxFlow += flow;
   return maxFlow;
 }
 \end{minted}
@@ -2126,7 +2283,8 @@ vector<int> dijkstra(int s) {
       T w = weight[u][v];
       if (dist[u] + w < dist[v]) {
         if (dist[v] != INF) q.erase(pos[v]);
-        pos[v] = q.insert({dist[v] = dist[u] + w, v}).first;
+        pos[v] = q.insert({dist[v] = dist[u] + w, v})
+                     .first;
       }
     }
   }
@@ -2138,15 +2296,19 @@ vector<int> dijkstra(int s) {
 \begin{minted}{cpp}
 vector<int> dijkstraLazy(int s) {
   vector<int> dist(ady.size(), INF);
-  priority_queue<DistNode, vector<DistNode>, greater<DistNode>> q;
+  priority_queue<DistNode, vector<DistNode>,
+                 greater<DistNode>>
+      q;
   q.push({0, s}), dist[s] = 0;
   while (q.size()) {
-    DistNode top = q.top(); q.pop();
+    DistNode top = q.top();
+    q.pop();
     int u = top.second;
     if (dist[u] < top.first) continue;
     for (int &v : ady[u]) {
       T w = weight[u][v];
-      if (dist[u] + w < dist[v]) q.push({dist[v] = dist[u] + w, v});
+      if (dist[u] + w < dist[v])
+        q.push({dist[v] = dist[u] + w, v});
     }
   }
   return dist;
@@ -2224,17 +2386,17 @@ if __name__ == '__main__':
 
 \end{minted}
 
-\needspace{23\baselineskip}
+\needspace{21\baselineskip}
 \subsubsectionfont{\large\bfseries\sffamily\underline}
 \subsubsection*{Extended Euclidean.cpp}
 \addcontentsline{toc}{subsubsection}{Extended Euclidean.cpp}
 \begin{minted}{cpp}
 // gcd(a, b) = ax + by
-vector<long long int> extendedGCD(long long int a, long long int b) {
-  if (a > 0LL && b == 0LL) {
-    return {a, 1LL, 0LL};
-  }
-  long long int x = 1LL, y = 0LL, prevx = 0LL, prevy = 1LL, q, remainder;
+vector<long long int> extendedGCD(long long int a,
+                                  long long int b) {
+  if (a > 0LL && b == 0LL) return {a, 1LL, 0LL};
+  long long int x = 1LL, y = 0LL, prevx = 0LL,
+                prevy = 1LL, q, remainder;
   while (true) {
     q = a / b;
     remainder = a - b * q;
@@ -2373,7 +2535,8 @@ vector<int> kmp(string &p, string &t, int cf) {
     while (i > -1 && p[i] != t[j]) i = f[i];
     i++, j++;
     if (cf) f[j] = i;
-    if (!cf && i == p.size()) pos.push_back(j - i), i = f[i];
+    if (!cf && i == p.size())
+      pos.push_back(j - i), i = f[i];
   }
   return pos;
 }
@@ -2423,30 +2586,30 @@ class RollingHash {
   }
 \end{minted}
 \vspace{-12pt}
-\needspace{5\baselineskip}
+\needspace{8\baselineskip}
 \begin{minted}{cpp}
-  unsigned long long int getSubstrHash(int begin, int end) {
-    return hash[end] - hash[begin - 1] * pow[end - begin + 1];
+  unsigned long long int getSubstrHash(int begin,
+                                       int end) {
+    return hash[end] -
+           hash[begin - 1] * pow[end - begin + 1];
   }
-\end{minted}
-\vspace{-12pt}
-\needspace{4\baselineskip}
-\begin{minted}{cpp}
-  int size() {
-    return hash.size();
-  }
+
+  int size() { return hash.size(); }
 };
 \end{minted}
 \vspace{-12pt}
-\needspace{11\baselineskip}
+\needspace{14\baselineskip}
 \begin{minted}{cpp}
-vector<int> rabinKarp(RollingHash &rhStr, string &pattern) {
+vector<int> rabinKarp(RollingHash &rhStr,
+                      string &pattern) {
   vector<int> positions;
   RollingHash rhPattern(pattern);
-  unsigned long long int patternHash = rhPattern.getWordHash();
+  unsigned long long int patternHash =
+      rhPattern.getWordHash();
   int windowSize = pattern.size(), end = windowSize;
   for (int i = 1; end < rhStr.size(); i++) {
-    if (patternHash == rhStr.getSubstrHash(i, end)) positions.push_back(i);
+    if (patternHash == rhStr.getSubstrHash(i, end))
+      positions.push_back(i);
     end = i + windowSize;
   }
   return positions;
@@ -2510,7 +2673,7 @@ bool cmp(Query &a, Query &b) {
 }
 \end{minted}
 \vspace{-12pt}
-\needspace{27\baselineskip}
+\needspace{28\baselineskip}
 \begin{minted}{cpp}
 void getResults() {
   blksize = (int)sqrt(arr.size());
@@ -2536,7 +2699,8 @@ void getResults() {
       prevR--;
     }
 
-    cout << "sum[" << L << ", " << R << "] = " << sum << endl;
+    cout << "sum[" << L << ", " << R << "] = " << sum
+         << endl;
   }
 }
 \end{minted}
@@ -2570,7 +2734,7 @@ void initVars(int n) {
 }
 \end{minted}
 \vspace{-12pt}
-\needspace{5\baselineskip}
+\needspace{6\baselineskip}
 \begin{minted}{cpp}
 void preprocess() {
   for (int i = 0, j = 0; i < arr.size(); i++) {
@@ -2580,7 +2744,7 @@ void preprocess() {
 }
 \end{minted}
 \vspace{-12pt}
-\needspace{4\baselineskip}
+\needspace{5\baselineskip}
 \begin{minted}{cpp}
 // problem specific
 void update(int i, int val) {
@@ -2618,7 +2782,8 @@ int main() {
   initVars(10);
   arr = {1, 5, 2, 4, 6, 1, 3, 5, 7, 10};
   preprocess();
-  for (int i = 0; i < blks.size() + 1; i++) cout << blks[i] << " ";
+  for (int i = 0; i < blks.size() + 1; i++)
+    cout << blks[i] << " ";
   // output: 8 11 15 10
   cout << endl;
   cout << query(3, 8) << " ";
