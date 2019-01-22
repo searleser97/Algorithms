@@ -80,16 +80,15 @@ void initHeavyLight() {
     if (p[i] < 0) dfs(i);
   for (int i = 0, pos = 0; i < ady.size(); i++)
     if (p[i] < 0 || heavy[p[i]] != i)
-      for (int j = i; j; j = heavy[j]) {
-        st.setValAt(vals[j], pos);
-        root[j] = i, stPos[j] = pos++;
+      for (int j = i; ~j; j = heavy[j]) {
+        st.setValAt(vals[j], stPos[j] = pos++);
+        root[j] = i; 
       }
   st.build();
 }
 // 9
 template <class Op>
 void processPath(int u, int v, Op op) {
-  return;
   for (; root[u] != root[v]; v = p[root[v]]) {
     if (depth[root[u]] > depth[root[v]]) swap(u, v);
     op(stPos[root[v]], stPos[v]);
@@ -169,6 +168,7 @@ int main() {
       if (op == "CHANGE") {
         int i, ti;
         cin >> i >> ti;
+        i--;
         update(edges[i].first, edges[i].second, ti);
       }
       if (op == "DONE") break;
