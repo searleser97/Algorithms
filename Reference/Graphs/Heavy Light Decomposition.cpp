@@ -57,7 +57,7 @@ void initVars(int n) {
   ady.assign(n, vector<int>());
   heavy.assign(n, -1);
   vals.assign(n, 0);
-  p = root = stPos = depth = vals;
+  p = root = stPos = depth = heavy;
   st = SegmentTree<T>(n);
 }
 
@@ -66,7 +66,7 @@ T F(T a, T b) { return max(a, b); }
 int dfs(int u) {
   int size = 1, maxSubtree = 0;
   for (int &v : ady[u]) {
-    p[v] = u, depth[v] = depth[u] + 1;
+    depth[v] = depth[u] + 1;
     int subtree = dfs(v);
     if (subtree > maxSubtree)
       heavy[u] = v, maxSubtree = subtree;
@@ -76,9 +76,10 @@ int dfs(int u) {
 }
 // 14
 void initHeavyLight() {
-  dfs(0);
+  for (int i = 0; i < ady.size(); i++)
+    if (p[i] < 0) dfs(i);
   for (int i = 0, pos = 0; i < ady.size(); i++)
-    if (!i || heavy[p[i]] != i)
+    if (p[i] < 0 || heavy[p[i]] != i)
       for (int j = i; j; j = heavy[j]) {
         st.setValAt(vals[j], pos);
         root[j] = i, stPos[j] = pos++;
@@ -88,7 +89,6 @@ void initHeavyLight() {
 // 9
 template <class Op>
 void processPath(int u, int v, Op op) {
-  cout << u << " aaaa " << v << endl;
   return;
   for (; root[u] != root[v]; v = p[root[v]]) {
     if (depth[root[u]] > depth[root[v]]) swap(u, v);
@@ -116,7 +116,7 @@ T query(int u, int v) {
 // 4
 void addEdge(int u, int v, T val) {
   ady[u].push_back(v);
-  vals[v] = val;
+  p[v] = u, vals[v] = val;
 }
 
 // val = value

@@ -1,4 +1,4 @@
-This is LuaTeX, Version 1.09.0 (MiKTeX 2.9.6880)  (format=lualatex 2018.12.9)  20 JAN 2019 23:25
+This is LuaTeX, Version 1.09.0 (MiKTeX 2.9.6880)  (format=lualatex 2018.12.9)  21 JAN 2019 23:07
  system commands enabled.
  file:line:error style messages enabled.
 **Reference.tex
@@ -49,7 +49,7 @@ Inserting `luaotfload.aux.set_capheight' at position 3 in `luaotfload.patch_font
 '.
 Inserting `luaotfload.rewrite_fontname' at position 4 in `luaotfload.patch_font'
 .
-luaotfload | main : initialization completed in 0.185 seconds
+luaotfload | main : initialization completed in 0.169 seconds
 (/home/san/.miktex/texmfs/install/tex/latex/base/article.cls
 Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
 (/home/san/.miktex/texmfs/install/tex/latex/base/size10.clo
@@ -1342,19 +1342,19 @@ guage 'english'. Reported on input line 1324.
 88B110.pygtex)
 \openout3 = Reference.pyg
 
-(./_minted-Reference/C54F4894A44A03D96BF093FF7A4411E5C4FF0AC38A5820C254F083BF98
+(./_minted-Reference/2B823B53613FF9D16CBBA2CB8AE13F5EC4FF0AC38A5820C254F083BF98
 88B110.pygtex)
 \openout3 = Reference.pyg
 
-(./_minted-Reference/AF0D1A0D70CE0375BD21EAF73DA6DC27C4FF0AC38A5820C254F083BF98
+(./_minted-Reference/15D72B85D34689215F7268C5B75B203CC4FF0AC38A5820C254F083BF98
 88B110.pygtex)
 \openout3 = Reference.pyg
 
-(./_minted-Reference/DC6D29E9FDB6F6EA605CC478134834C8C4FF0AC38A5820C254F083BF98
+(./_minted-Reference/62542F032CAE1B8001CCDEC9EE8C37C8C4FF0AC38A5820C254F083BF98
 88B110.pygtex)
 \openout3 = Reference.pyg
 
-(./_minted-Reference/67CC7EC1F23C4FD8E91DAE5B84096E27C4FF0AC38A5820C254F083BF98
+(./_minted-Reference/B90487D12E9CDCE6D79BF9070857BBDEC4FF0AC38A5820C254F083BF98
 88B110.pygtex)
 \openout3 = Reference.pyg
 
@@ -1370,7 +1370,7 @@ guage 'english'. Reported on input line 1482.
 88B110.pygtex)
 \openout3 = Reference.pyg
 
-(./_minted-Reference/7BB27AF9323517704016F5797C197522C4FF0AC38A5820C254F083BF98
+(./_minted-Reference/8C0C906127FBE675D0C0B12E4D496C54C4FF0AC38A5820C254F083BF98
 88B110.pygtex)
 \openout3 = Reference.pyg
 
@@ -1793,7 +1793,7 @@ Here is how much of LuaTeX's memory you used:
  435 words of node memory still in use:
    3 hlist, 1 vlist, 1 rule, 2 glue, 3 kern, 1 glyph, 5 attribute, 53 glue_spec,
  5 attribute_list, 1 write nodes
-   avail lists: 2:7361,3:412,4:1903,5:857,6:168,7:3515,8:82,9:797,10:10,11:55
+   avail lists: 2:7427,3:412,4:1927,5:867,6:168,7:3529,8:82,9:797,10:10,11:55
  16486 multiletter control sequences out of 65536+200000
  54 fonts using 4526735 bytes
  44i,18n,45p,842b,645s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1805,7 +1805,7 @@ home/san/.miktex/texmfs/install/fonts/opentype/public/lm/lmroman10-regular.otf><
 me/san/.miktex/texmfs/install/fonts/opentype/public/lm/lmsans10-regular.otf></ho
 me/san/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmmi5.pfb></home/sa
 n/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmsy5.pfb>
-Output written on Reference.pdf (21 pages, 242860 bytes).
+Output written on Reference.pdf (21 pages, 242898 bytes).
 
 PDF statistics: 565 PDF objects out of 1000 (max. 8388607)
  102 named destinations out of 1000 (max. 131072)
