@@ -140,6 +140,8 @@ void initMapping() {
 }
 
 int main() {
+  ios_base::sync_with_stdio(0);
+  cin.tie(0);
   int t;
   cin >> t;
   while (t--) {
@@ -160,18 +162,18 @@ int main() {
     while (true) {
       string op;
       cin >> op;
-      if (op == "QUERY") {
+      if (op[0] == 'Q') {
         int a, b;
         cin >> a >> b;
         cout << query(Map(a), Map(b)) << endl;
       }
-      if (op == "CHANGE") {
+      if (op[0] == 'C') {
         int i, ti;
         cin >> i >> ti;
         i--;
         update(edges[i].first, edges[i].second, ti);
       }
-      if (op == "DONE") break;
+      if (op[0] == 'D') break;
     }
   }
   return 0;
