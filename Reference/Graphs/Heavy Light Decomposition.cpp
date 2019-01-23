@@ -1,53 +1,6 @@
-#include <bits/stdc++.h>
-using namespace std;
-template <class T>
-struct SegmentTree {
-  T neutro = 0;
-  int N;
-  vector<T> st;
-  // 8
-  SegmentTree(int n) : st(2 * n, neutro), N(n) {}
-
-  T F(T a, T b) { return max(a, b); }
-  // 5
-  // O(2N)
-  void build() {
-    for (int i = N - 1; i > 0; i--)
-      st[i] = F(st[i << 1], st[i << 1 | 1]);
-  }
-  // 5
-  // O(lg(2N))
-  void update(int i, T val) {
-    for (st[i += N] = val; i > 1; i >>= 1)
-      st[i >> 1] = F(st[i], st[i ^ 1]);
-  }
-  // 5
-  // O(3N), [l, r]
-  void update(int l, int r, T val) {
-    if (l == r)
-      update(l, val);
-    else {
-      for (l += N, r += N; l <= r; l++) st[l] = val;
-      build();
-    }
-  }
-  // 9
-  // O(lg(2N)), [l, r]
-  T query(int l, int r) {
-    T ans = neutro;
-    for (l += N, r += N; l <= r; l >>= 1, r >>= 1) {
-      if (l & 1) ans = F(ans, st[l++]);
-      if (~r & 1) ans = F(ans, st[r--]);
-    }
-    return ans;
-  }
-  // 2
-  void setValAt(T val, int i) { st[i + N] = val; }
-};
+// 6
 // p = parent;
-// 5
-// #include "../Data Structures/Ranges/Segment
-// Tree.cpp"
+#include "../Data Structures/Ranges/Segment Tree.cpp"
 typedef int T;
 vector<vector<int>> ady;
 vector<int> p, heavy, depth, root, stPos, vals;
@@ -61,7 +14,7 @@ void initVars(int n) {
   st = SegmentTree<T>(n);
 }
 
-T F(T a, T b) { return max(a, b); }
+T F(T a, T b) { return a + b; }
 // 12
 int dfs(int u) {
   int size = 1, maxSubtree = 0;
@@ -82,7 +35,7 @@ void initHeavyLight() {
     if (p[i] < 0 || heavy[p[i]] != i)
       for (int j = i; ~j; j = heavy[j]) {
         st.setValAt(vals[j], stPos[j] = pos++);
-        root[j] = i; 
+        root[j] = i;
       }
   st.build();
 }
@@ -116,65 +69,4 @@ T query(int u, int v) {
 void addEdge(int u, int v, T val) {
   ady[u].push_back(v);
   p[v] = u, vals[v] = val;
-}
-
-// val = value
-typedef int Val;
-unordered_map<Val, int> intForVal;
-unordered_map<int, Val> valForInt;
-int mapId;
-// 4
-int Map(Val val) {
-  valForInt[mapId] = val;
-  return intForVal.count(val)
-             ? intForVal[val]
-             : intForVal[val] = mapId++;
-}
-// 3
-Val IMap(int val) { return valForInt[val]; }
-// 5
-void initMapping() {
-  mapId = 0;
-  intForVal.clear();
-  valForInt.clear();
-}
-
-int main() {
-  ios_base::sync_with_stdio(0);
-  cin.tie(0);
-  int t;
-  cin >> t;
-  while (t--) {
-    int n;
-    cin >> n;
-    initVars(n);
-    initMapping();
-    vector<pair<Val, Val>> edges;
-    for (int i = 0; i < n - 1; i++) {
-      Val a, b;
-      T c;
-      cin >> a >> b >> c;
-      a = Map(a), b = Map(b);
-      addEdge(a, b, c);
-      edges.push_back({a, b});
-    }
-    initHeavyLight();
-    while (true) {
-      string op;
-      cin >> op;
-      if (op[0] == 'Q') {
-        int a, b;
-        cin >> a >> b;
-        cout << query(Map(a), Map(b)) << endl;
-      }
-      if (op[0] == 'C') {
-        int i, ti;
-        cin >> i >> ti;
-        i--;
-        update(edges[i].first, edges[i].second, ti);
-      }
-      if (op[0] == 'D') break;
-    }
-  }
-  return 0;
 }

@@ -7,5 +7,5 @@
   \PYG{n}{st} \PYG{o}{=} \PYG{n}{SegmentTree}\PYG{o}{\PYGZlt{}}\PYG{n}{T}\PYG{o}{\PYGZgt{}}\PYG{p}{(}\PYG{n}{n}\PYG{p}{);}
 \PYG{p}{\PYGZcb{}}
 
-\PYG{n}{T} \PYG{n+nf}{F}\PYG{p}{(}\PYG{n}{T} \PYG{n}{a}\PYG{p}{,} \PYG{n}{T} \PYG{n}{b}\PYG{p}{)} \PYG{p}{\PYGZob{}} \PYG{k}{return} \PYG{n}{max}\PYG{p}{(}\PYG{n}{a}\PYG{p}{,} \PYG{n}{b}\PYG{p}{);} \PYG{p}{\PYGZcb{}}
+\PYG{n}{T} \PYG{n+nf}{F}\PYG{p}{(}\PYG{n}{T} \PYG{n}{a}\PYG{p}{,} \PYG{n}{T} \PYG{n}{b}\PYG{p}{)} \PYG{p}{\PYGZob{}} \PYG{k}{return} \PYG{n}{a} \PYG{o}{+} \PYG{n}{b}\PYG{p}{;} \PYG{p}{\PYGZcb{}}
 \end{Verbatim}

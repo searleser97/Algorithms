@@ -609,7 +609,7 @@ struct SegmentTree {
     // return a * b;
     // return min(a, b);
   }
-  \end{minted}
+\end{minted}
 \vspace{-12pt}
 \needspace{5\baselineskip}
 \begin{minted}{cpp}
@@ -618,7 +618,7 @@ struct SegmentTree {
     for (int i = N - 1; i > 0; i--)
       st[i] = F(st[i << 1], st[i << 1 | 1]);
   }
-  \end{minted}
+\end{minted}
 \vspace{-12pt}
 \needspace{5\baselineskip}
 \begin{minted}{cpp}
@@ -1330,81 +1330,13 @@ void floodFill() {
 }
 \end{minted}
 
+\needspace{8\baselineskip}
 \subsectionfont{\large\bfseries\sffamily\underline}
 \subsection*{Heavy Light Decomposition.cpp}
 \addcontentsline{toc}{subsection}{Heavy Light Decomposition.cpp}
 \begin{minted}{cpp}
-#include <bits/stdc++.h>
-using namespace std;
-template <class T>
-struct SegmentTree {
-  T neutro = 0;
-  int N;
-  vector<T> st;
-\end{minted}
-\vspace{-12pt}
-\needspace{8\baselineskip}
-\begin{minted}{cpp}
-  SegmentTree(int n) : st(2 * n, neutro), N(n) {}
-
-  T F(T a, T b) { return max(a, b); }
-  \end{minted}
-\vspace{-12pt}
-\needspace{5\baselineskip}
-\begin{minted}{cpp}
-  // O(2N)
-  void build() {
-    for (int i = N - 1; i > 0; i--)
-      st[i] = F(st[i << 1], st[i << 1 | 1]);
-  }
-  \end{minted}
-\vspace{-12pt}
-\needspace{5\baselineskip}
-\begin{minted}{cpp}
-  // O(lg(2N))
-  void update(int i, T val) {
-    for (st[i += N] = val; i > 1; i >>= 1)
-      st[i >> 1] = F(st[i], st[i ^ 1]);
-  }
-  \end{minted}
-\vspace{-12pt}
-\needspace{5\baselineskip}
-\begin{minted}{cpp}
-  // O(3N), [l, r]
-  void update(int l, int r, T val) {
-    if (l == r)
-      update(l, val);
-    else {
-      for (l += N, r += N; l <= r; l++) st[l] = val;
-      build();
-    }
-  }
-  \end{minted}
-\vspace{-12pt}
-\needspace{9\baselineskip}
-\begin{minted}{cpp}
-  // O(lg(2N)), [l, r]
-  T query(int l, int r) {
-    T ans = neutro;
-    for (l += N, r += N; l <= r; l >>= 1, r >>= 1) {
-      if (l & 1) ans = F(ans, st[l++]);
-      if (~r & 1) ans = F(ans, st[r--]);
-    }
-    return ans;
-  }
-\end{minted}
-\vspace{-12pt}
-\needspace{2\baselineskip}
-\begin{minted}{cpp}
-  void setValAt(T val, int i) { st[i + N] = val; }
-};
 // p = parent;
-\end{minted}
-\vspace{-12pt}
-\needspace{5\baselineskip}
-\begin{minted}{cpp}
-// #include "../Data Structures/Ranges/Segment
-// Tree.cpp"
+#include "../Data Structures/Ranges/Segment Tree.cpp"
 typedef int T;
 vector<vector<int>> ady;
 vector<int> p, heavy, depth, root, stPos, vals;
@@ -1421,7 +1353,7 @@ void initVars(int n) {
   st = SegmentTree<T>(n);
 }
 
-T F(T a, T b) { return max(a, b); }
+T F(T a, T b) { return a + b; }
 \end{minted}
 \vspace{-12pt}
 \needspace{12\baselineskip}
@@ -1446,9 +1378,9 @@ void initHeavyLight() {
     if (p[i] < 0) dfs(i);
   for (int i = 0, pos = 0; i < ady.size(); i++)
     if (p[i] < 0 || heavy[p[i]] != i)
-      for (int j = i; j; j = heavy[j]) {
-        st.setValAt(vals[j], pos);
-        root[j] = i, stPos[j] = pos++;
+      for (int j = i; ~j; j = heavy[j]) {
+        st.setValAt(vals[j], stPos[j] = pos++);
+        root[j] = i;
       }
   st.build();
 }
@@ -1458,7 +1390,6 @@ void initHeavyLight() {
 \begin{minted}{cpp}
 template <class Op>
 void processPath(int u, int v, Op op) {
-  return;
   for (; root[u] != root[v]; v = p[root[v]]) {
     if (depth[root[u]] > depth[root[v]]) swap(u, v);
     op(stPos[root[v]], stPos[v]);
@@ -1495,73 +1426,6 @@ T query(int u, int v) {
 void addEdge(int u, int v, T val) {
   ady[u].push_back(v);
   p[v] = u, vals[v] = val;
-}
-
-// val = value
-typedef int Val;
-unordered_map<Val, int> intForVal;
-unordered_map<int, Val> valForInt;
-int mapId;
-\end{minted}
-\vspace{-12pt}
-\needspace{4\baselineskip}
-\begin{minted}{cpp}
-int Map(Val val) {
-  valForInt[mapId] = val;
-  return intForVal.count(val)
-             ? intForVal[val]
-             : intForVal[val] = mapId++;
-}
-\end{minted}
-\vspace{-12pt}
-\needspace{3\baselineskip}
-\begin{minted}{cpp}
-Val IMap(int val) { return valForInt[val]; }
-\end{minted}
-\vspace{-12pt}
-\needspace{5\baselineskip}
-\begin{minted}{cpp}
-void initMapping() {
-  mapId = 0;
-  intForVal.clear();
-  valForInt.clear();
-}
-
-int main() {
-  int t;
-  cin >> t;
-  while (t--) {
-    int n;
-    cin >> n;
-    initVars(n);
-    initMapping();
-    vector<pair<Val, Val>> edges;
-    for (int i = 0; i < n - 1; i++) {
-      Val a, b;
-      T c;
-      cin >> a >> b >> c;
-      a = Map(a), b = Map(b);
-      addEdge(a, b, c);
-      edges.push_back({a, b});
-    }
-    initHeavyLight();
-    while (true) {
-      string op;
-      cin >> op;
-      if (op == "QUERY") {
-        int a, b;
-        cin >> a >> b;
-        cout << query(Map(a), Map(b)) << endl;
-      }
-      if (op == "CHANGE") {
-        int i, ti;
-        cin >> i >> ti;
-        update(edges[i].first, edges[i].second, ti);
-      }
-      if (op == "DONE") break;
-    }
-  }
-  return 0;
 }
 \end{minted}
 
