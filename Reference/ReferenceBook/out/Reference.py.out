@@ -11,8 +11,8 @@
 \addcontentsline{toc}{subsection}{C++}
 \vspace{2em}
 \subsubsectionfont{\large\bfseries\sffamily\underline}
-\subsubsection*{Decimal Precision.cpp}
-\addcontentsline{toc}{subsubsection}{Decimal Precision.cpp}
+\subsubsection*{Decimal Precision}
+\addcontentsline{toc}{subsubsection}{Decimal Precision}
 \begin{minted}{cpp}
 // rounds up the decimal number
 cout << setprecision(N) << n << endl;
@@ -22,16 +22,16 @@ cout << fixed << setprecision(N) << n << endl;
 
 \needspace{3\baselineskip}
 \subsubsectionfont{\large\bfseries\sffamily\underline}
-\subsubsection*{Include All Libraries.cpp}
-\addcontentsline{toc}{subsubsection}{Include All Libraries.cpp}
+\subsubsection*{Include All Libraries}
+\addcontentsline{toc}{subsubsection}{Include All Libraries}
 \begin{minted}{cpp}
 #include <bits/stdc++.h>
 using namespace std;
 \end{minted}
 
 \subsubsectionfont{\large\bfseries\sffamily\underline}
-\subsubsection*{Int To Binary.cpp}
-\addcontentsline{toc}{subsubsection}{Int To Binary.cpp}
+\subsubsection*{Int To Binary}
+\addcontentsline{toc}{subsubsection}{Int To Binary}
 \begin{minted}{cpp}
 typedef long long int lli;
 \end{minted}
@@ -58,8 +58,8 @@ vector<bool> intToBitsArray(lli n) {
 
 \needspace{5\baselineskip}
 \subsubsectionfont{\large\bfseries\sffamily\underline}
-\subsubsection*{IO Optimization.cpp}
-\addcontentsline{toc}{subsubsection}{IO Optimization.cpp}
+\subsubsection*{IO Optimization}
+\addcontentsline{toc}{subsubsection}{IO Optimization}
 \begin{minted}{cpp}
 int main() {
   ios_base::sync_with_stdio(0);
@@ -68,8 +68,8 @@ int main() {
 \end{minted}
 
 \subsubsectionfont{\large\bfseries\sffamily\underline}
-\subsubsection*{Map Value To Int.cpp}
-\addcontentsline{toc}{subsubsection}{Map Value To Int.cpp}
+\subsubsection*{Map Value To Int}
+\addcontentsline{toc}{subsubsection}{Map Value To Int}
 \begin{minted}{cpp}
 // val = value
 typedef string Val;
@@ -103,8 +103,8 @@ void initMapping() {
 \end{minted}
 
 \subsubsectionfont{\large\bfseries\sffamily\underline}
-\subsubsection*{Permutations.cpp}
-\addcontentsline{toc}{subsubsection}{Permutations.cpp}
+\subsubsection*{Permutations}
+\addcontentsline{toc}{subsubsection}{Permutations}
 \begin{minted}{cpp}
 typedef vector<int> T;  // typedef string T;
 \end{minted}
@@ -123,8 +123,8 @@ vector<T> permutations(T v) {
 
 \needspace{10\baselineskip}
 \subsubsectionfont{\large\bfseries\sffamily\underline}
-\subsubsection*{Print Vector.cpp}
-\addcontentsline{toc}{subsubsection}{Print Vector.cpp}
+\subsubsection*{Print Vector}
+\addcontentsline{toc}{subsubsection}{Print Vector}
 \begin{minted}{cpp}
 void printv(vector<int> v) {
   if (v.size() == 0) {
@@ -140,8 +140,8 @@ void printv(vector<int> v) {
 
 \needspace{5\baselineskip}
 \subsubsectionfont{\large\bfseries\sffamily\underline}
-\subsubsection*{Priority Queue Of Object.cpp}
-\addcontentsline{toc}{subsubsection}{Priority Queue Of Object.cpp}
+\subsubsection*{Priority Queue Of Object}
+\addcontentsline{toc}{subsubsection}{Priority Queue Of Object}
 \begin{minted}{cpp}
 struct Object {
   char first;
@@ -165,8 +165,8 @@ int main() {
 
 \needspace{4\baselineskip}
 \subsubsectionfont{\large\bfseries\sffamily\underline}
-\subsubsection*{Random.cpp}
-\addcontentsline{toc}{subsubsection}{Random.cpp}
+\subsubsection*{Random}
+\addcontentsline{toc}{subsubsection}{Random}
 \begin{minted}{cpp}
 int random(int min, int max) {
   return min + rand() % (max - min + 1);
@@ -183,8 +183,8 @@ int main() {
 
 \needspace{9\baselineskip}
 \subsubsectionfont{\large\bfseries\sffamily\underline}
-\subsubsection*{Read Line.cpp}
-\addcontentsline{toc}{subsubsection}{Read Line.cpp}
+\subsubsection*{Read Line}
+\addcontentsline{toc}{subsubsection}{Read Line}
 \begin{minted}{cpp}
 // when reading lines, don't mix 'cin' with
 // 'getline' just use getline and split
@@ -198,8 +198,8 @@ string input() {
 
 \needspace{4\baselineskip}
 \subsubsectionfont{\large\bfseries\sffamily\underline}
-\subsubsection*{Sort Pair.cpp}
-\addcontentsline{toc}{subsubsection}{Sort Pair.cpp}
+\subsubsection*{Sort Pair}
+\addcontentsline{toc}{subsubsection}{Sort Pair}
 \begin{minted}{cpp}
 pair<int, int> p;
 // sorts array on the basis of the first element
@@ -208,8 +208,8 @@ sort(p.begin(), p.end());
 
 \needspace{5\baselineskip}
 \subsubsectionfont{\large\bfseries\sffamily\underline}
-\subsubsection*{Sort Vector Of Object.cpp}
-\addcontentsline{toc}{subsubsection}{Sort Vector Of Object.cpp}
+\subsubsection*{Sort Vector Of Object}
+\addcontentsline{toc}{subsubsection}{Sort Vector Of Object}
 \begin{minted}{cpp}
 struct Object {
   char first;
@@ -236,8 +236,8 @@ int main() {
 
 \needspace{9\baselineskip}
 \subsubsectionfont{\large\bfseries\sffamily\underline}
-\subsubsection*{Split String.cpp}
-\addcontentsline{toc}{subsubsection}{Split String.cpp}
+\subsubsection*{Split String}
+\addcontentsline{toc}{subsubsection}{Split String}
 \begin{minted}{cpp}
 vector<string> split(string str, char token) {
   stringstream test(str);
@@ -251,8 +251,8 @@ vector<string> split(string str, char token) {
 
 \needspace{4\baselineskip}
 \subsubsectionfont{\large\bfseries\sffamily\underline}
-\subsubsection*{Typedef.cpp}
-\addcontentsline{toc}{subsubsection}{Typedef.cpp}
+\subsubsection*{Typedef}
+\addcontentsline{toc}{subsubsection}{Typedef}
 \begin{minted}{cpp}
 typedef TYPE ALIAS;
 // example:
@@ -266,8 +266,8 @@ typedef int T;
 \addcontentsline{toc}{subsection}{Python}
 \vspace{2em}
 \subsubsectionfont{\large\bfseries\sffamily\underline}
-\subsubsection*{Combinations.py}
-\addcontentsline{toc}{subsubsection}{Combinations.py}
+\subsubsection*{Combinations}
+\addcontentsline{toc}{subsubsection}{Combinations}
 \begin{minted}{py}
 import itertools
 # from arr choose k = > combinations(arr, k)
@@ -276,8 +276,8 @@ print(list(itertools.combinations([1, 2, 3], 3)))
 
 \needspace{16\baselineskip}
 \subsubsectionfont{\large\bfseries\sffamily\underline}
-\subsubsection*{Fast IO.py}
-\addcontentsline{toc}{subsubsection}{Fast IO.py}
+\subsubsection*{Fast IO}
+\addcontentsline{toc}{subsubsection}{Fast IO}
 \begin{minted}{py}
 from sys import stdin, stdout
 
@@ -299,8 +299,8 @@ numbers = list(map(int, stdin.readline().split()))
 
 \needspace{3\baselineskip}
 \subsubsectionfont{\large\bfseries\sffamily\underline}
-\subsubsection*{Permutations.py}
-\addcontentsline{toc}{subsubsection}{Permutations.py}
+\subsubsection*{Permutations}
+\addcontentsline{toc}{subsubsection}{Permutations}
 \begin{minted}{py}
 import itertools
 print(list(itertools.permutations([1, 2, 3])))
@@ -309,8 +309,8 @@ print(list(itertools.permutations([1, 2, 3])))
 
 \needspace{14\baselineskip}
 \subsubsectionfont{\large\bfseries\sffamily\underline}
-\subsubsection*{Random.py}
-\addcontentsline{toc}{subsubsection}{Random.py}
+\subsubsection*{Random}
+\addcontentsline{toc}{subsubsection}{Random}
 \begin{minted}{py}
 import random
 # Initialize the random number generator.
@@ -329,8 +329,8 @@ random.shuffle(li)
 
 \needspace{6\baselineskip}
 \subsubsectionfont{\large\bfseries\sffamily\underline}
-\subsubsection*{Sort List.py}
-\addcontentsline{toc}{subsubsection}{Sort List.py}
+\subsubsection*{Sort List}
+\addcontentsline{toc}{subsubsection}{Sort List}
 \begin{minted}{py}
 li = ['a', 'c', 'b']
 # sorts inplace in descending order
@@ -341,8 +341,8 @@ ol = sorted(li)
 
 \needspace{6\baselineskip}
 \subsubsectionfont{\large\bfseries\sffamily\underline}
-\subsubsection*{Sort List Of Object.py}
-\addcontentsline{toc}{subsubsection}{Sort List Of Object.py}
+\subsubsection*{Sort List Of Object}
+\addcontentsline{toc}{subsubsection}{Sort List Of Object}
 \begin{minted}{py}
 class MyObject :
   def __init__(self, first, second, third):
@@ -373,8 +373,8 @@ li.sort(key = lambda x: (x.first, x.second, x.third), reverse=False)
 \addcontentsline{toc}{subsection}{Geometry}
 \vspace{2em}
 \subsubsectionfont{\large\bfseries\sffamily\underline}
-\subsubsection*{K-D Tree.cpp}
-\addcontentsline{toc}{subsubsection}{K-D Tree.cpp}
+\subsubsection*{K-D Tree}
+\addcontentsline{toc}{subsubsection}{K-D Tree}
 \begin{minted}{cpp}
 
 \end{minted}
@@ -386,8 +386,8 @@ li.sort(key = lambda x: (x.first, x.second, x.third), reverse=False)
 \addcontentsline{toc}{subsection}{Graphs}
 \vspace{2em}
 \subsubsectionfont{\large\bfseries\sffamily\underline}
-\subsubsection*{UnionFind.cpp}
-\addcontentsline{toc}{subsubsection}{UnionFind.cpp}
+\subsubsection*{UnionFind}
+\addcontentsline{toc}{subsubsection}{UnionFind}
 \begin{minted}{cpp}
 struct UnionFind {
   int n;
@@ -441,8 +441,8 @@ struct UnionFind {
 \addcontentsline{toc}{subsection}{Ranges}
 \vspace{2em}
 \subsubsectionfont{\large\bfseries\sffamily\underline}
-\subsubsection*{BIT.cpp}
-\addcontentsline{toc}{subsubsection}{BIT.cpp}
+\subsubsection*{BIT}
+\addcontentsline{toc}{subsubsection}{BIT}
 \begin{minted}{cpp}
 typedef long long int T;
 T neutro = 0;
@@ -510,8 +510,8 @@ void setValAt(T val, int i) { bit[++i] = val; }
 
 \needspace{4\baselineskip}
 \subsubsectionfont{\large\bfseries\sffamily\underline}
-\subsubsection*{BIT Range Update.cpp}
-\addcontentsline{toc}{subsubsection}{BIT Range Update.cpp}
+\subsubsection*{BIT Range Update}
+\addcontentsline{toc}{subsubsection}{BIT Range Update}
 \begin{minted}{cpp}
 typedef long long int T;
 T neutro = 0;
@@ -574,8 +574,8 @@ T query(int l, int r) {
 
 \needspace{5\baselineskip}
 \subsubsectionfont{\large\bfseries\sffamily\underline}
-\subsubsection*{Segment Tree.cpp}
-\addcontentsline{toc}{subsubsection}{Segment Tree.cpp}
+\subsubsection*{Segment Tree}
+\addcontentsline{toc}{subsubsection}{Segment Tree}
 \begin{minted}{cpp}
 // st = segment tree. st[1] = root;
 // neutro = operation neutral value
@@ -602,7 +602,7 @@ struct SegmentTree {
     // return a * b;
     // return min(a, b);
   }
-\end{minted}
+  \end{minted}
 \vspace{-12pt}
 \needspace{5\baselineskip}
 \begin{minted}{cpp}
@@ -611,7 +611,7 @@ struct SegmentTree {
     for (int i = N - 1; i > 0; i--)
       st[i] = F(st[i << 1], st[i << 1 | 1]);
   }
-\end{minted}
+  \end{minted}
 \vspace{-12pt}
 \needspace{5\baselineskip}
 \begin{minted}{cpp}
@@ -656,8 +656,8 @@ struct SegmentTree {
 
 \needspace{6\baselineskip}
 \subsubsectionfont{\large\bfseries\sffamily\underline}
-\subsubsection*{Segment Tree Lazy Propagation.cpp}
-\addcontentsline{toc}{subsubsection}{Segment Tree Lazy Propagation.cpp}
+\subsubsection*{Segment Tree Lazy Propagation}
+\addcontentsline{toc}{subsubsection}{Segment Tree Lazy Propagation}
 \begin{minted}{cpp}
 // st = segment tree, st[1] = root, H = height of d
 // u = updates, d = delayed updates
@@ -782,8 +782,8 @@ struct SegmentTree {
 
 \needspace{5\baselineskip}
 \subsubsectionfont{\large\bfseries\sffamily\underline}
-\subsubsection*{Sparse Table.cpp}
-\addcontentsline{toc}{subsubsection}{Sparse Table.cpp}
+\subsubsection*{Sparse Table}
+\addcontentsline{toc}{subsubsection}{Sparse Table}
 \begin{minted}{cpp}
 // st = sparse table, Arith = Arithmetic
 typedef int T;
@@ -845,8 +845,8 @@ T queryArith(int l, int r) {
 \addcontentsline{toc}{subsection}{Strings}
 \vspace{2em}
 \subsubsectionfont{\large\bfseries\sffamily\underline}
-\subsubsection*{Trie.cpp}
-\addcontentsline{toc}{subsubsection}{Trie.cpp}
+\subsubsection*{Trie}
+\addcontentsline{toc}{subsubsection}{Trie}
 \begin{minted}{cpp}
 // wpt = number of words passing through
 // w = number of words ending in the node
@@ -982,8 +982,8 @@ struct Trie {
 \addcontentsline{toc}{subsection}{Trees And Heaps}
 \vspace{2em}
 \subsubsectionfont{\large\bfseries\sffamily\underline}
-\subsubsection*{Red Black Tree.cpp}
-\addcontentsline{toc}{subsubsection}{Red Black Tree.cpp}
+\subsubsection*{Red Black Tree}
+\addcontentsline{toc}{subsubsection}{Red Black Tree}
 \begin{minted}{cpp}
 template <class K, class V>
 struct RedBlackTree {
@@ -1090,8 +1090,8 @@ struct RedBlackTree {
 \end{minted}
 
 \subsubsectionfont{\large\bfseries\sffamily\underline}
-\subsubsection*{Treap.cpp}
-\addcontentsline{toc}{subsubsection}{Treap.cpp}
+\subsubsection*{Treap}
+\addcontentsline{toc}{subsubsection}{Treap}
 \begin{minted}{cpp}
 
 \end{minted}
@@ -1103,16 +1103,16 @@ struct RedBlackTree {
 \addcontentsline{toc}{section}{Geometry}
 \vspace{3em}
 \subsectionfont{\large\bfseries\sffamily\underline}
-\subsection*{Convex Hull.cpp}
-\addcontentsline{toc}{subsection}{Convex Hull.cpp}
+\subsection*{Convex Hull}
+\addcontentsline{toc}{subsection}{Convex Hull}
 \begin{minted}{cpp}
 
 \end{minted}
 
 \needspace{5\baselineskip}
 \subsectionfont{\large\bfseries\sffamily\underline}
-\subsection*{Max Interval Overlap.cpp}
-\addcontentsline{toc}{subsection}{Max Interval Overlap.cpp}
+\subsection*{Max Interval Overlap}
+\addcontentsline{toc}{subsection}{Max Interval Overlap}
 \begin{minted}{cpp}
 typedef long long int T;
 typedef pair<T, T> Interval;
@@ -1181,8 +1181,8 @@ int maxOverlap(vector<Interval> &arr) {
 \addcontentsline{toc}{section}{Graphs}
 \vspace{3em}
 \subsectionfont{\large\bfseries\sffamily\underline}
-\subsection*{Articulation Points And Bridges.cpp}
-\addcontentsline{toc}{subsection}{Articulation Points And Bridges.cpp}
+\subsection*{Articulation Points And Bridges}
+\addcontentsline{toc}{subsection}{Articulation Points And Bridges}
 \begin{minted}{cpp}
 // APB = articulation points and bridges
 // ap = Articulation Point
@@ -1246,8 +1246,8 @@ void addEdge(int u, int v) {
 
 \needspace{6\baselineskip}
 \subsectionfont{\large\bfseries\sffamily\underline}
-\subsection*{Connected Components.cpp}
-\addcontentsline{toc}{subsection}{Connected Components.cpp}
+\subsection*{Connected Components}
+\addcontentsline{toc}{subsection}{Connected Components}
 \begin{minted}{cpp}
 // comp = component
 int compId;
@@ -1299,8 +1299,8 @@ void addEdge(int u, int v) {
 
 \needspace{6\baselineskip}
 \subsectionfont{\large\bfseries\sffamily\underline}
-\subsection*{Flood Fill.cpp}
-\addcontentsline{toc}{subsection}{Flood Fill.cpp}
+\subsection*{Flood Fill}
+\addcontentsline{toc}{subsection}{Flood Fill}
 \begin{minted}{cpp}
 int n, m, oldColor = 0, color = 1;
 vector<vector<int>> mat;
@@ -1332,8 +1332,8 @@ void floodFill() {
 
 \needspace{8\baselineskip}
 \subsectionfont{\large\bfseries\sffamily\underline}
-\subsection*{Heavy Light Decomposition.cpp}
-\addcontentsline{toc}{subsection}{Heavy Light Decomposition.cpp}
+\subsection*{Heavy Light Decomposition}
+\addcontentsline{toc}{subsection}{Heavy Light Decomposition}
 \begin{minted}{cpp}
 // p = parent;
 #include "../Data Structures/Ranges/Segment Tree.cpp"
@@ -1437,8 +1437,8 @@ void addEdge(int u, int v, T val) {
 
 \needspace{5\baselineskip}
 \subsectionfont{\large\bfseries\sffamily\underline}
-\subsection*{Is Bipartite.cpp}
-\addcontentsline{toc}{subsection}{Is Bipartite.cpp}
+\subsection*{Is Bipartite}
+\addcontentsline{toc}{subsection}{Is Bipartite}
 \begin{minted}{cpp}
 vector<vector<int>> ady;
 
@@ -1471,8 +1471,8 @@ bool isBipartite() {
 
 \needspace{9\baselineskip}
 \subsectionfont{\large\bfseries\sffamily\underline}
-\subsection*{LCA.cpp}
-\addcontentsline{toc}{subsection}{LCA.cpp}
+\subsection*{LCA}
+\addcontentsline{toc}{subsection}{LCA}
 \begin{minted}{cpp}
 // st = sparse table
 typedef pair<int, int> T;
@@ -1548,8 +1548,8 @@ void addEdge(int u, int v) {
 
 \needspace{10\baselineskip}
 \subsectionfont{\large\bfseries\sffamily\underline}
-\subsection*{MST Kruskal.cpp}
-\addcontentsline{toc}{subsection}{MST Kruskal.cpp}
+\subsection*{MST Kruskal}
+\addcontentsline{toc}{subsection}{MST Kruskal}
 \begin{minted}{cpp}
 // N = number of nodes, Wedge = Weighted Edge
 #include "../Data Structures/Graphs/UnionFind.cpp"
@@ -1596,8 +1596,8 @@ void addEdge(int u, int v, T w) {
 
 \needspace{14\baselineskip}
 \subsectionfont{\large\bfseries\sffamily\underline}
-\subsection*{MST Prim.cpp}
-\addcontentsline{toc}{subsection}{MST Prim.cpp}
+\subsection*{MST Prim}
+\addcontentsline{toc}{subsection}{MST Prim}
 \begin{minted}{cpp}
 // st = spanning tree, p = parent
 // vis = visited, dist = distance
@@ -1708,8 +1708,8 @@ void addEdge(int u, int v, T w) {
 
 \needspace{7\baselineskip}
 \subsectionfont{\large\bfseries\sffamily\underline}
-\subsection*{Strongly Connected Components.cpp}
-\addcontentsline{toc}{subsection}{Strongly Connected Components.cpp}
+\subsection*{Strongly Connected Components}
+\addcontentsline{toc}{subsection}{Strongly Connected Components}
 \begin{minted}{cpp}
 // tv = top value from stack
 // sccs = strongly connected components
@@ -1762,8 +1762,8 @@ void addEdge(int u, int v) { ady[u].push_back(v); }
 
 \needspace{5\baselineskip}
 \subsectionfont{\large\bfseries\sffamily\underline}
-\subsection*{Topological Sort.cpp}
-\addcontentsline{toc}{subsection}{Topological Sort.cpp}
+\subsection*{Topological Sort}
+\addcontentsline{toc}{subsection}{Topological Sort}
 \begin{minted}{cpp}
 // vis = visited
 vector<vector<int>> ady;
@@ -1813,16 +1813,16 @@ void addEdge(int u, int v) { ady[u].push_back(v); }
 \addcontentsline{toc}{subsection}{Cycles}
 \vspace{2em}
 \subsubsectionfont{\large\bfseries\sffamily\underline}
-\subsubsection*{Get All Simple Cycles.cpp}
-\addcontentsline{toc}{subsubsection}{Get All Simple Cycles.cpp}
+\subsubsection*{Get All Simple Cycles}
+\addcontentsline{toc}{subsubsection}{Get All Simple Cycles}
 \begin{minted}{cpp}
 
 \end{minted}
 
 \needspace{6\baselineskip}
 \subsubsectionfont{\large\bfseries\sffamily\underline}
-\subsubsection*{Get Some Cycles.cpp}
-\addcontentsline{toc}{subsubsection}{Get Some Cycles.cpp}
+\subsubsection*{Get Some Cycles}
+\addcontentsline{toc}{subsubsection}{Get Some Cycles}
 \begin{minted}{cpp}
 // at least detects one cycle per component
 vector<vector<int>> ady, cycles;
@@ -1887,8 +1887,8 @@ void addEdge(int u, int v) {
 
 \needspace{4\baselineskip}
 \subsubsectionfont{\large\bfseries\sffamily\underline}
-\subsubsection*{Has Cycle.cpp}
-\addcontentsline{toc}{subsubsection}{Has Cycle.cpp}
+\subsubsection*{Has Cycle}
+\addcontentsline{toc}{subsubsection}{Has Cycle}
 \begin{minted}{cpp}
 vector<vector<int>> ady;
 vector<int> vis;
@@ -1941,8 +1941,8 @@ void addEdge(int u, int v) {
 \addcontentsline{toc}{subsection}{Flow}
 \vspace{2em}
 \subsubsectionfont{\large\bfseries\sffamily\underline}
-\subsubsection*{Max Flow Dinic.cpp}
-\addcontentsline{toc}{subsubsection}{Max Flow Dinic.cpp}
+\subsubsection*{Max Flow Dinic}
+\addcontentsline{toc}{subsubsection}{Max Flow Dinic}
 \begin{minted}{cpp}
 // cap[a][b] = Capacity from a to b
 // flow[a][b] = flow occupied from a to b
@@ -2030,8 +2030,8 @@ void addEdge(int u, int v, T capacity) {
 \end{minted}
 
 \subsubsectionfont{\large\bfseries\sffamily\underline}
-\subsubsection*{Maximum Bipartite Matching.cpp}
-\addcontentsline{toc}{subsubsection}{Maximum Bipartite Matching.cpp}
+\subsubsection*{Maximum Bipartite Matching}
+\addcontentsline{toc}{subsubsection}{Maximum Bipartite Matching}
 \begin{minted}{cpp}
 #include "Max Flow Dinic.cpp"
 \end{minted}
@@ -2069,8 +2069,8 @@ int main() {
 \addcontentsline{toc}{subsection}{ShortestPaths}
 \vspace{2em}
 \subsubsectionfont{\large\bfseries\sffamily\underline}
-\subsubsection*{Bellman Ford.cpp}
-\addcontentsline{toc}{subsubsection}{Bellman Ford.cpp}
+\subsubsection*{Bellman Ford}
+\addcontentsline{toc}{subsubsection}{Bellman Ford}
 \begin{minted}{cpp}
 // N = number of nodes
 // returns {} if there is a negative weight cycle
@@ -2120,8 +2120,8 @@ void addEdge(int u, int v, T w) {
 
 \needspace{6\baselineskip}
 \subsubsectionfont{\large\bfseries\sffamily\underline}
-\subsubsection*{Dijkstra.cpp}
-\addcontentsline{toc}{subsubsection}{Dijkstra.cpp}
+\subsubsection*{Dijkstra}
+\addcontentsline{toc}{subsubsection}{Dijkstra}
 \begin{minted}{cpp}
 typedef int T;
 typedef pair<T, int> DistNode;
@@ -2209,8 +2209,8 @@ void addEdge(int u, int v, T w) {
 \addcontentsline{toc}{subsection}{Number Theory}
 \vspace{2em}
 \subsubsectionfont{\large\bfseries\sffamily\underline}
-\subsubsection*{Divisibility Criterion.py}
-\addcontentsline{toc}{subsubsection}{Divisibility Criterion.py}
+\subsubsection*{Divisibility Criterion}
+\addcontentsline{toc}{subsubsection}{Divisibility Criterion}
 \begin{minted}{py}
 def divisorCriteria(n, lim):
     results = []
@@ -2258,8 +2258,8 @@ if __name__ == '__main__':
 
 \needspace{21\baselineskip}
 \subsubsectionfont{\large\bfseries\sffamily\underline}
-\subsubsection*{Extended Euclidean.cpp}
-\addcontentsline{toc}{subsubsection}{Extended Euclidean.cpp}
+\subsubsection*{Extended Euclidean}
+\addcontentsline{toc}{subsubsection}{Extended Euclidean}
 \begin{minted}{cpp}
 // gcd(a, b) = ax + by
 vector<long long int> extendedGCD(long long int a,
@@ -2285,8 +2285,8 @@ vector<long long int> extendedGCD(long long int a,
 
 \needspace{5\baselineskip}
 \subsubsectionfont{\large\bfseries\sffamily\underline}
-\subsubsection*{GCD.cpp}
-\addcontentsline{toc}{subsubsection}{GCD.cpp}
+\subsubsection*{GCD}
+\addcontentsline{toc}{subsubsection}{GCD}
 \begin{minted}{cpp}
 // recursive
 int gcd(int a, int b) {
@@ -2308,8 +2308,8 @@ int gcd(int a, int b) {
 
 \needspace{5\baselineskip}
 \subsubsectionfont{\large\bfseries\sffamily\underline}
-\subsubsection*{LCM.cpp}
-\addcontentsline{toc}{subsubsection}{LCM.cpp}
+\subsubsection*{LCM}
+\addcontentsline{toc}{subsubsection}{LCM}
 \begin{minted}{cpp}
 int lcm(int a, int b) {
   int c = gcd(a, b);
@@ -2319,8 +2319,8 @@ int lcm(int a, int b) {
 
 \needspace{34\baselineskip}
 \subsubsectionfont{\large\bfseries\sffamily\underline}
-\subsubsection*{Prime Check Miller Rabin.py}
-\addcontentsline{toc}{subsubsection}{Prime Check Miller Rabin.py}
+\subsubsection*{Prime Check Miller Rabin}
+\addcontentsline{toc}{subsubsection}{Prime Check Miller Rabin}
 \begin{minted}{py}
 from random import randrange
 
@@ -2360,8 +2360,8 @@ def is_prime(p):
 
 \needspace{10\baselineskip}
 \subsubsectionfont{\large\bfseries\sffamily\underline}
-\subsubsection*{Prime Sieve.cpp}
-\addcontentsline{toc}{subsubsection}{Prime Sieve.cpp}
+\subsubsection*{Prime Sieve}
+\addcontentsline{toc}{subsubsection}{Prime Sieve}
 \begin{minted}{cpp}
 vector<int> primeSieve(int n) {
   vector<int> sieve(n + 1);
@@ -2382,8 +2382,8 @@ vector<int> primeSieve(int n) {
 \addcontentsline{toc}{section}{Strings}
 \vspace{3em}
 \subsectionfont{\large\bfseries\sffamily\underline}
-\subsection*{KMP.cpp}
-\addcontentsline{toc}{subsection}{KMP.cpp}
+\subsection*{KMP}
+\addcontentsline{toc}{subsection}{KMP}
 \begin{minted}{cpp}
 // p = pattern, t = text
 // f = error function, cf = create error function
@@ -2422,8 +2422,8 @@ vector<int> search(string &p, string &t) {
 
 \needspace{7\baselineskip}
 \subsectionfont{\large\bfseries\sffamily\underline}
-\subsection*{Rabin Karp.cpp}
-\addcontentsline{toc}{subsection}{Rabin Karp.cpp}
+\subsection*{Rabin Karp}
+\addcontentsline{toc}{subsection}{Rabin Karp}
 \begin{minted}{cpp}
 class RollingHash {
  public:
@@ -2493,8 +2493,8 @@ vector<int> rabinKarp(RollingHash &rhStr,
 \addcontentsline{toc}{section}{Techniques}
 \vspace{3em}
 \subsectionfont{\large\bfseries\sffamily\underline}
-\subsection*{Binary Search.cpp}
-\addcontentsline{toc}{subsection}{Binary Search.cpp}
+\subsection*{Binary Search}
+\addcontentsline{toc}{subsection}{Binary Search}
 \begin{minted}{cpp}
 
 \end{minted}
@@ -2506,8 +2506,8 @@ vector<int> rabinKarp(RollingHash &rhStr,
 \addcontentsline{toc}{subsection}{Multiple Queries}
 \vspace{2em}
 \subsubsectionfont{\large\bfseries\sffamily\underline}
-\subsubsection*{Mo.cpp}
-\addcontentsline{toc}{subsubsection}{Mo.cpp}
+\subsubsection*{Mo}
+\addcontentsline{toc}{subsubsection}{Mo}
 \begin{minted}{cpp}
 // q = query
 // qs = queries
@@ -2587,8 +2587,8 @@ int main() {
 
 \needspace{5\baselineskip}
 \subsubsectionfont{\large\bfseries\sffamily\underline}
-\subsubsection*{SQRT Decomposition.cpp}
-\addcontentsline{toc}{subsubsection}{SQRT Decomposition.cpp}
+\subsubsection*{SQRT Decomposition}
+\addcontentsline{toc}{subsubsection}{SQRT Decomposition}
 \begin{minted}{cpp}
 // sum of elements in range
 int neutro = 0;

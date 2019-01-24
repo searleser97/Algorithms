@@ -22,6 +22,7 @@ def printSectionType(sectionName, depth, isFile):
         style += '\\Large'
         vspace = 1
     if isFile:
+        sectionName = sectionName[:sectionName.rfind('.')]
         style = '\\large\\bfseries\\sffamily\\underline'
         vspace = 0
     print('\\' + sectionType + 'font{' + style + '}')
