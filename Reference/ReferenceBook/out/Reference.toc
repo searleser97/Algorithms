@@ -24,57 +24,57 @@
 \contentsline {subsubsection}{Sort List Of Object.py}{6}{section*.24}
 \contentsline {section}{Data Structures}{6}{section*.25}
 \contentsline {subsection}{Geometry}{6}{section*.26}
-\contentsline {subsubsection}{Convex Hull.cpp}{6}{section*.27}
-\contentsline {subsubsection}{K-D Tree.cpp}{6}{section*.28}
-\contentsline {subsection}{Graphs}{6}{section*.29}
-\contentsline {subsubsection}{UnionFind.cpp}{6}{section*.30}
-\contentsline {subsection}{Ranges}{6}{section*.31}
-\contentsline {subsubsection}{BIT.cpp}{6}{section*.32}
-\contentsline {subsubsection}{BIT Range Update.cpp}{7}{section*.33}
-\contentsline {subsubsection}{Segment Tree.cpp}{7}{section*.34}
-\contentsline {subsubsection}{Segment Tree Lazy Propagation.cpp}{7}{section*.35}
-\contentsline {subsubsection}{Sparse Table.cpp}{8}{section*.36}
-\contentsline {subsection}{Strings}{8}{section*.37}
-\contentsline {subsubsection}{Trie.cpp}{8}{section*.38}
-\contentsline {subsection}{Trees And Heaps}{9}{section*.39}
-\contentsline {subsubsection}{Red Black Tree.cpp}{9}{section*.40}
-\contentsline {subsubsection}{Treap.cpp}{10}{section*.41}
-\contentsline {section}{Geometry}{10}{section*.42}
+\contentsline {subsubsection}{K-D Tree.cpp}{6}{section*.27}
+\contentsline {subsection}{Graphs}{6}{section*.28}
+\contentsline {subsubsection}{UnionFind.cpp}{6}{section*.29}
+\contentsline {subsection}{Ranges}{6}{section*.30}
+\contentsline {subsubsection}{BIT.cpp}{6}{section*.31}
+\contentsline {subsubsection}{BIT Range Update.cpp}{7}{section*.32}
+\contentsline {subsubsection}{Segment Tree.cpp}{7}{section*.33}
+\contentsline {subsubsection}{Segment Tree Lazy Propagation.cpp}{8}{section*.34}
+\contentsline {subsubsection}{Sparse Table.cpp}{8}{section*.35}
+\contentsline {subsection}{Strings}{9}{section*.36}
+\contentsline {subsubsection}{Trie.cpp}{9}{section*.37}
+\contentsline {subsection}{Trees And Heaps}{10}{section*.38}
+\contentsline {subsubsection}{Red Black Tree.cpp}{10}{section*.39}
+\contentsline {subsubsection}{Treap.cpp}{10}{section*.40}
+\contentsline {section}{Geometry}{10}{section*.41}
+\contentsline {subsection}{Convex Hull.cpp}{10}{section*.42}
 \contentsline {subsection}{Max Interval Overlap.cpp}{10}{section*.43}
 \contentsline {section}{Graphs}{11}{section*.44}
 \contentsline {subsection}{Articulation Points And Bridges.cpp}{11}{section*.45}
 \contentsline {subsection}{Connected Components.cpp}{11}{section*.46}
 \contentsline {subsection}{Flood Fill.cpp}{12}{section*.47}
 \contentsline {subsection}{Heavy Light Decomposition.cpp}{12}{section*.48}
-\contentsline {subsection}{Is Bipartite.cpp}{12}{section*.49}
+\contentsline {subsection}{Is Bipartite.cpp}{13}{section*.49}
 \contentsline {subsection}{LCA.cpp}{13}{section*.50}
 \contentsline {subsection}{MST Kruskal.cpp}{13}{section*.51}
-\contentsline {subsection}{MST Prim.cpp}{13}{section*.52}
+\contentsline {subsection}{MST Prim.cpp}{14}{section*.52}
 \contentsline {subsection}{Strongly Connected Components.cpp}{14}{section*.53}
 \contentsline {subsection}{Topological Sort.cpp}{15}{section*.54}
 \contentsline {subsection}{Cycles}{15}{section*.55}
 \contentsline {subsubsection}{Get All Simple Cycles.cpp}{15}{section*.56}
 \contentsline {subsubsection}{Get Some Cycles.cpp}{15}{section*.57}
-\contentsline {subsubsection}{Has Cycle.cpp}{15}{section*.58}
+\contentsline {subsubsection}{Has Cycle.cpp}{16}{section*.58}
 \contentsline {subsection}{Flow}{16}{section*.59}
 \contentsline {subsubsection}{Max Flow Dinic.cpp}{16}{section*.60}
 \contentsline {subsubsection}{Maximum Bipartite Matching.cpp}{16}{section*.61}
-\contentsline {subsection}{ShortestPaths}{16}{section*.62}
-\contentsline {subsubsection}{Bellman Ford.cpp}{16}{section*.63}
+\contentsline {subsection}{ShortestPaths}{17}{section*.62}
+\contentsline {subsubsection}{Bellman Ford.cpp}{17}{section*.63}
 \contentsline {subsubsection}{Dijkstra.cpp}{17}{section*.64}
-\contentsline {section}{Maths}{17}{section*.65}
-\contentsline {subsection}{Number Theory}{17}{section*.66}
-\contentsline {subsubsection}{Divisibility Criterion.py}{17}{section*.67}
+\contentsline {section}{Maths}{18}{section*.65}
+\contentsline {subsection}{Number Theory}{18}{section*.66}
+\contentsline {subsubsection}{Divisibility Criterion.py}{18}{section*.67}
 \contentsline {subsubsection}{Extended Euclidean.cpp}{18}{section*.68}
 \contentsline {subsubsection}{GCD.cpp}{18}{section*.69}
 \contentsline {subsubsection}{LCM.cpp}{18}{section*.70}
-\contentsline {subsubsection}{Prime Check Miller Rabin.py}{18}{section*.71}
+\contentsline {subsubsection}{Prime Check Miller Rabin.py}{19}{section*.71}
 \contentsline {subsubsection}{Prime Sieve.cpp}{19}{section*.72}
 \contentsline {section}{Strings}{19}{section*.73}
 \contentsline {subsection}{KMP.cpp}{19}{section*.74}
 \contentsline {subsection}{Rabin Karp.cpp}{19}{section*.75}
-\contentsline {section}{Techniques}{19}{section*.76}
-\contentsline {subsection}{Binary Search.cpp}{19}{section*.77}
-\contentsline {subsection}{Multiple Queries}{19}{section*.78}
-\contentsline {subsubsection}{Mo.cpp}{19}{section*.79}
+\contentsline {section}{Techniques}{20}{section*.76}
+\contentsline {subsection}{Binary Search.cpp}{20}{section*.77}
+\contentsline {subsection}{Multiple Queries}{20}{section*.78}
+\contentsline {subsubsection}{Mo.cpp}{20}{section*.79}
 \contentsline {subsubsection}{SQRT Decomposition.cpp}{20}{section*.80}

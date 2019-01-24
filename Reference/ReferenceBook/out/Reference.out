@@ -23,23 +23,23 @@
 \BOOKMARK [3][-]{section*.24}{Sort List Of Object.py}{section*.18}% 23
 \BOOKMARK [1][-]{section*.25}{Data Structures}{}% 24
 \BOOKMARK [2][-]{section*.26}{Geometry}{section*.25}% 25
-\BOOKMARK [3][-]{section*.27}{Convex Hull.cpp}{section*.26}% 26
-\BOOKMARK [3][-]{section*.28}{K-D Tree.cpp}{section*.26}% 27
-\BOOKMARK [2][-]{section*.29}{Graphs}{section*.25}% 28
-\BOOKMARK [3][-]{section*.30}{UnionFind.cpp}{section*.29}% 29
-\BOOKMARK [2][-]{section*.31}{Ranges}{section*.25}% 30
-\BOOKMARK [3][-]{section*.32}{BIT.cpp}{section*.31}% 31
-\BOOKMARK [3][-]{section*.33}{BIT Range Update.cpp}{section*.31}% 32
-\BOOKMARK [3][-]{section*.34}{Segment Tree.cpp}{section*.31}% 33
-\BOOKMARK [3][-]{section*.35}{Segment Tree Lazy Propagation.cpp}{section*.31}% 34
-\BOOKMARK [3][-]{section*.36}{Sparse Table.cpp}{section*.31}% 35
-\BOOKMARK [2][-]{section*.37}{Strings}{section*.25}% 36
-\BOOKMARK [3][-]{section*.38}{Trie.cpp}{section*.37}% 37
-\BOOKMARK [2][-]{section*.39}{Trees And Heaps}{section*.25}% 38
-\BOOKMARK [3][-]{section*.40}{Red Black Tree.cpp}{section*.39}% 39
-\BOOKMARK [3][-]{section*.41}{Treap.cpp}{section*.39}% 40
-\BOOKMARK [1][-]{section*.42}{Geometry}{}% 41
-\BOOKMARK [2][-]{section*.43}{Max Interval Overlap.cpp}{section*.42}% 42
+\BOOKMARK [3][-]{section*.27}{K-D Tree.cpp}{section*.26}% 26
+\BOOKMARK [2][-]{section*.28}{Graphs}{section*.25}% 27
+\BOOKMARK [3][-]{section*.29}{UnionFind.cpp}{section*.28}% 28
+\BOOKMARK [2][-]{section*.30}{Ranges}{section*.25}% 29
+\BOOKMARK [3][-]{section*.31}{BIT.cpp}{section*.30}% 30
+\BOOKMARK [3][-]{section*.32}{BIT Range Update.cpp}{section*.30}% 31
+\BOOKMARK [3][-]{section*.33}{Segment Tree.cpp}{section*.30}% 32
+\BOOKMARK [3][-]{section*.34}{Segment Tree Lazy Propagation.cpp}{section*.30}% 33
+\BOOKMARK [3][-]{section*.35}{Sparse Table.cpp}{section*.30}% 34
+\BOOKMARK [2][-]{section*.36}{Strings}{section*.25}% 35
+\BOOKMARK [3][-]{section*.37}{Trie.cpp}{section*.36}% 36
+\BOOKMARK [2][-]{section*.38}{Trees And Heaps}{section*.25}% 37
+\BOOKMARK [3][-]{section*.39}{Red Black Tree.cpp}{section*.38}% 38
+\BOOKMARK [3][-]{section*.40}{Treap.cpp}{section*.38}% 39
+\BOOKMARK [1][-]{section*.41}{Geometry}{}% 40
+\BOOKMARK [2][-]{section*.42}{Convex Hull.cpp}{section*.41}% 41
+\BOOKMARK [2][-]{section*.43}{Max Interval Overlap.cpp}{section*.41}% 42
 \BOOKMARK [1][-]{section*.44}{Graphs}{}% 43
 \BOOKMARK [2][-]{section*.45}{Articulation Points And Bridges.cpp}{section*.44}% 44
 \BOOKMARK [2][-]{section*.46}{Connected Components.cpp}{section*.44}% 45

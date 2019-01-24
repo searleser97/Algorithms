@@ -373,13 +373,6 @@ li.sort(key = lambda x: (x.first, x.second, x.third), reverse=False)
 \addcontentsline{toc}{subsection}{Geometry}
 \vspace{2em}
 \subsubsectionfont{\large\bfseries\sffamily\underline}
-\subsubsection*{Convex Hull.cpp}
-\addcontentsline{toc}{subsubsection}{Convex Hull.cpp}
-\begin{minted}{cpp}
-
-\end{minted}
-
-\subsubsectionfont{\large\bfseries\sffamily\underline}
 \subsubsection*{K-D Tree.cpp}
 \addcontentsline{toc}{subsubsection}{K-D Tree.cpp}
 \begin{minted}{cpp}
@@ -609,7 +602,7 @@ struct SegmentTree {
     // return a * b;
     // return min(a, b);
   }
-  \end{minted}
+\end{minted}
 \vspace{-12pt}
 \needspace{5\baselineskip}
 \begin{minted}{cpp}
@@ -618,7 +611,7 @@ struct SegmentTree {
     for (int i = N - 1; i > 0; i--)
       st[i] = F(st[i << 1], st[i << 1 | 1]);
   }
-  \end{minted}
+\end{minted}
 \vspace{-12pt}
 \needspace{5\baselineskip}
 \begin{minted}{cpp}
@@ -689,7 +682,7 @@ struct SegmentTree {
       : st(2 * n, neutro), d(n), u(n, 0) {
     H = sizeof(int) * 8 - __builtin_clz(N = n);
   }
-\end{minted}
+  \end{minted}
 \vspace{-12pt}
 \needspace{6\baselineskip}
 \begin{minted}{cpp}
@@ -699,7 +692,7 @@ struct SegmentTree {
     // return a * b;
     // return min(a, b);
   }
-\end{minted}
+  \end{minted}
 \vspace{-12pt}
 \needspace{6\baselineskip}
 \begin{minted}{cpp}
@@ -1103,13 +1096,20 @@ struct RedBlackTree {
 
 \end{minted}
 
-\needspace{8\baselineskip}
 \sectionfont{\bfseries\sffamily\centering\Huge}
 \vspace{1em}
 \section*{Geometry}
 \markboth{GEOMETRY}{}
 \addcontentsline{toc}{section}{Geometry}
 \vspace{3em}
+\subsectionfont{\large\bfseries\sffamily\underline}
+\subsection*{Convex Hull.cpp}
+\addcontentsline{toc}{subsection}{Convex Hull.cpp}
+\begin{minted}{cpp}
+
+\end{minted}
+
+\needspace{5\baselineskip}
 \subsectionfont{\large\bfseries\sffamily\underline}
 \subsection*{Max Interval Overlap.cpp}
 \addcontentsline{toc}{subsection}{Max Interval Overlap.cpp}
