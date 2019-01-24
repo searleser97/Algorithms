@@ -1,4 +1,5 @@
 \begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{// O(N)}
 \PYG{k+kt}{void} \PYG{n+nf}{initHeavyLight}\PYG{p}{()} \PYG{p}{\PYGZob{}}
   \PYG{k}{for} \PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{i} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{;} \PYG{n}{i} \PYG{o}{\PYGZlt{}} \PYG{n}{ady}\PYG{p}{.}\PYG{n}{size}\PYG{p}{();} \PYG{n}{i}\PYG{o}{++}\PYG{p}{)}
     \PYG{k}{if} \PYG{p}{(}\PYG{n}{p}\PYG{p}{[}\PYG{n}{i}\PYG{p}{]} \PYG{o}{\PYGZlt{}} \PYG{l+m+mi}{0}\PYG{p}{)} \PYG{n}{dfs}\PYG{p}{(}\PYG{n}{i}\PYG{p}{);}

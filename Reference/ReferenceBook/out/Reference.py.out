@@ -609,7 +609,7 @@ struct SegmentTree {
     // return a * b;
     // return min(a, b);
   }
-\end{minted}
+  \end{minted}
 \vspace{-12pt}
 \needspace{5\baselineskip}
 \begin{minted}{cpp}
@@ -618,7 +618,7 @@ struct SegmentTree {
     for (int i = N - 1; i > 0; i--)
       st[i] = F(st[i << 1], st[i << 1 | 1]);
   }
-\end{minted}
+  \end{minted}
 \vspace{-12pt}
 \needspace{5\baselineskip}
 \begin{minted}{cpp}
@@ -689,7 +689,7 @@ struct SegmentTree {
       : st(2 * n, neutro), d(n), u(n, 0) {
     H = sizeof(int) * 8 - __builtin_clz(N = n);
   }
-  \end{minted}
+\end{minted}
 \vspace{-12pt}
 \needspace{6\baselineskip}
 \begin{minted}{cpp}
@@ -699,7 +699,7 @@ struct SegmentTree {
     // return a * b;
     // return min(a, b);
   }
-  \end{minted}
+\end{minted}
 \vspace{-12pt}
 \needspace{6\baselineskip}
 \begin{minted}{cpp}
@@ -1356,8 +1356,9 @@ void initVars(int n) {
 T F(T a, T b) { return a + b; }
 \end{minted}
 \vspace{-12pt}
-\needspace{12\baselineskip}
+\needspace{13\baselineskip}
 \begin{minted}{cpp}
+// O(N)
 int dfs(int u) {
   int size = 1, maxSubtree = 0;
   for (int &v : ady[u]) {
@@ -1371,8 +1372,9 @@ int dfs(int u) {
 }
 \end{minted}
 \vspace{-12pt}
-\needspace{14\baselineskip}
+\needspace{12\baselineskip}
 \begin{minted}{cpp}
+// O(N)
 void initHeavyLight() {
   for (int i = 0; i < ady.size(); i++)
     if (p[i] < 0) dfs(i);
@@ -1386,8 +1388,9 @@ void initHeavyLight() {
 }
 \end{minted}
 \vspace{-12pt}
-\needspace{9\baselineskip}
+\needspace{13\baselineskip}
 \begin{minted}{cpp}
+// O(lg^2 (N))
 template <class Op>
 void processPath(int u, int v, Op op) {
   for (; root[u] != root[v]; v = p[root[v]]) {
@@ -1395,14 +1398,16 @@ void processPath(int u, int v, Op op) {
     op(stPos[root[v]], stPos[v]);
   }
   if (depth[u] > depth[v]) swap(u, v);
-  // op(stPos[u], stPos[v]); // for values on nodes
-  if (u == v) return;          // for values on edges
-  op(stPos[u] + 1, stPos[v]);  // for values on edges
+  // for values on edges
+  if (u != v) op(stPos[u] + 1, stPos[v]);
+  // for values on nodes
+  // op(stPos[u], stPos[v]);
 }
 \end{minted}
 \vspace{-12pt}
-\needspace{5\baselineskip}
+\needspace{6\baselineskip}
 \begin{minted}{cpp}
+// O(lg^2 (N))
 void update(int u, int v, T val) {
   processPath(u, v, [&val](int l, int r) {
     st.update(l, r, val);
@@ -1410,8 +1415,9 @@ void update(int u, int v, T val) {
 }
 \end{minted}
 \vspace{-12pt}
-\needspace{7\baselineskip}
+\needspace{8\baselineskip}
 \begin{minted}{cpp}
+// O(lg^2 (N))
 T query(int u, int v) {
   T ans = T();
   processPath(u, v, [&ans](int l, int r) {

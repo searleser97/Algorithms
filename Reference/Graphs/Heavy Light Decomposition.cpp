@@ -15,7 +15,8 @@ void initVars(int n) {
 }
 
 T F(T a, T b) { return a + b; }
-// 12
+// 13
+// O(N)
 int dfs(int u) {
   int size = 1, maxSubtree = 0;
   for (int &v : ady[u]) {
@@ -27,7 +28,8 @@ int dfs(int u) {
   }
   return size;
 }
-// 14
+// 12
+// O(N)
 void initHeavyLight() {
   for (int i = 0; i < ady.size(); i++)
     if (p[i] < 0) dfs(i);
@@ -39,7 +41,8 @@ void initHeavyLight() {
       }
   st.build();
 }
-// 9
+// 13
+// O(lg^2 (N))
 template <class Op>
 void processPath(int u, int v, Op op) {
   for (; root[u] != root[v]; v = p[root[v]]) {
@@ -47,17 +50,20 @@ void processPath(int u, int v, Op op) {
     op(stPos[root[v]], stPos[v]);
   }
   if (depth[u] > depth[v]) swap(u, v);
-  // op(stPos[u], stPos[v]); // for values on nodes
-  if (u == v) return;          // for values on edges
-  op(stPos[u] + 1, stPos[v]);  // for values on edges
+  // for values on edges
+  if (u != v) op(stPos[u] + 1, stPos[v]);
+  // for values on nodes
+  // op(stPos[u], stPos[v]);
 }
-// 5
+// 6
+// O(lg^2 (N))
 void update(int u, int v, T val) {
   processPath(u, v, [&val](int l, int r) {
     st.update(l, r, val);
   });
 }
-// 7
+// 8
+// O(lg^2 (N))
 T query(int u, int v) {
   T ans = T();
   processPath(u, v, [&ans](int l, int r) {
