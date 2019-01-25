@@ -35,8 +35,8 @@
 \contentsline {subsubsection}{Sparse Table}{8}{section*.35}
 \contentsline {subsection}{Strings}{9}{section*.36}
 \contentsline {subsubsection}{Trie}{9}{section*.37}
-\contentsline {subsection}{Trees And Heaps}{9}{section*.38}
-\contentsline {subsubsection}{Red Black Tree}{9}{section*.39}
+\contentsline {subsection}{Trees And Heaps}{10}{section*.38}
+\contentsline {subsubsection}{Red Black Tree}{10}{section*.39}
 \contentsline {subsubsection}{Treap}{10}{section*.40}
 \contentsline {section}{Geometry}{10}{section*.41}
 \contentsline {subsection}{Convex Hull}{10}{section*.42}
@@ -62,7 +62,7 @@
 \contentsline {subsection}{ShortestPaths}{17}{section*.62}
 \contentsline {subsubsection}{Bellman Ford}{17}{section*.63}
 \contentsline {subsubsection}{Dijkstra}{17}{section*.64}
-\contentsline {subsubsection}{Directed Acyclic Graph}{18}{section*.65}
+\contentsline {subsubsection}{Shortest Path in Directed Acyclic Graph}{18}{section*.65}
 \contentsline {section}{Maths}{18}{section*.66}
 \contentsline {subsection}{Number Theory}{18}{section*.67}
 \contentsline {subsubsection}{Divisibility Criterion}{18}{section*.68}

@@ -1,4 +1,7 @@
 \begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{template} \PYG{o}{\PYGZlt{}}\PYG{k}{class} \PYG{n+nc}{K}\PYG{p}{,} \PYG{k}{class} \PYG{n+nc}{V}\PYG{o}{\PYGZgt{}}
+\PYG{k}{struct} \PYG{n}{RedBlackTree} \PYG{p}{\PYGZob{}}
+
   \PYG{k}{struct} \PYG{n}{Node} \PYG{p}{\PYGZob{}}
     \PYG{n}{K} \PYG{n}{key}\PYG{p}{;}
     \PYG{n}{V} \PYG{n}{val}\PYG{p}{;}

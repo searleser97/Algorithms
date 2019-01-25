@@ -676,7 +676,7 @@ struct SegmentTree {
       : st(2 * n, neutro), d(n), u(n, 0) {
     H = sizeof(int) * 8 - __builtin_clz(N = n);
   }
-\end{minted}
+  \end{minted}
 \vspace{-12pt}
 \needspace{6\baselineskip}
 \begin{minted}{cpp}
@@ -686,7 +686,7 @@ struct SegmentTree {
     // return a * b;
     // return min(a, b);
   }
-\end{minted}
+  \end{minted}
 \vspace{-12pt}
 \needspace{6\baselineskip}
 \begin{minted}{cpp}
@@ -969,7 +969,7 @@ struct Trie {
 };
 \end{minted}
 
-\needspace{7\baselineskip}
+\needspace{17\baselineskip}
 \subsectionfont{\bfseries\sffamily\centering\LARGE}
 \vspace{0em}
 \subsection*{Trees And Heaps}
@@ -981,10 +981,7 @@ struct Trie {
 \begin{minted}{cpp}
 template <class K, class V>
 struct RedBlackTree {
-\end{minted}
-\vspace{-12pt}
-\needspace{9\baselineskip}
-\begin{minted}{cpp}
+
   struct Node {
     K key;
     V val;
@@ -2190,8 +2187,8 @@ vector<T> dijkstraLazy(int s) {
 
 \needspace{8\baselineskip}
 \subsubsectionfont{\large\bfseries\sffamily\underline}
-\subsubsection*{Directed Acyclic Graph}
-\addcontentsline{toc}{subsubsection}{Directed Acyclic Graph}
+\subsubsection*{Shortest Path in Directed Acyclic Graph}
+\addcontentsline{toc}{subsubsection}{Shortest Path in Directed Acyclic Graph}
 \begin{minted}{cpp}
 // vis = visited
 typedef int T;
