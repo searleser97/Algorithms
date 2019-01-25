@@ -682,7 +682,7 @@ struct SegmentTree {
       : st(2 * n, neutro), d(n), u(n, 0) {
     H = sizeof(int) * 8 - __builtin_clz(N = n);
   }
-  \end{minted}
+\end{minted}
 \vspace{-12pt}
 \needspace{6\baselineskip}
 \begin{minted}{cpp}
@@ -692,7 +692,7 @@ struct SegmentTree {
     // return a * b;
     // return min(a, b);
   }
-  \end{minted}
+\end{minted}
 \vspace{-12pt}
 \needspace{6\baselineskip}
 \begin{minted}{cpp}
@@ -2194,6 +2194,13 @@ void addEdge(int u, int v, T w) {
   ady[v].push_back(u);
   weight[v][u] = w;
 }
+\end{minted}
+
+\subsubsectionfont{\large\bfseries\sffamily\underline}
+\subsubsection*{Directed Acyclic Graph}
+\addcontentsline{toc}{subsubsection}{Directed Acyclic Graph}
+\begin{minted}{cpp}
+
 \end{minted}
 
 \needspace{19\baselineskip}

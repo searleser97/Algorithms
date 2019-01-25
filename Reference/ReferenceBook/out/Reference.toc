@@ -62,19 +62,20 @@
 \contentsline {subsection}{ShortestPaths}{17}{section*.62}
 \contentsline {subsubsection}{Bellman Ford}{17}{section*.63}
 \contentsline {subsubsection}{Dijkstra}{17}{section*.64}
-\contentsline {section}{Maths}{18}{section*.65}
-\contentsline {subsection}{Number Theory}{18}{section*.66}
-\contentsline {subsubsection}{Divisibility Criterion}{18}{section*.67}
-\contentsline {subsubsection}{Extended Euclidean}{18}{section*.68}
-\contentsline {subsubsection}{GCD}{18}{section*.69}
-\contentsline {subsubsection}{LCM}{18}{section*.70}
-\contentsline {subsubsection}{Prime Check Miller Rabin}{19}{section*.71}
-\contentsline {subsubsection}{Prime Sieve}{19}{section*.72}
-\contentsline {section}{Strings}{19}{section*.73}
-\contentsline {subsection}{KMP}{19}{section*.74}
-\contentsline {subsection}{Rabin Karp}{19}{section*.75}
-\contentsline {section}{Techniques}{20}{section*.76}
-\contentsline {subsection}{Binary Search}{20}{section*.77}
-\contentsline {subsection}{Multiple Queries}{20}{section*.78}
-\contentsline {subsubsection}{Mo}{20}{section*.79}
-\contentsline {subsubsection}{SQRT Decomposition}{20}{section*.80}
+\contentsline {subsubsection}{Directed Acyclic Graph}{18}{section*.65}
+\contentsline {section}{Maths}{18}{section*.66}
+\contentsline {subsection}{Number Theory}{18}{section*.67}
+\contentsline {subsubsection}{Divisibility Criterion}{18}{section*.68}
+\contentsline {subsubsection}{Extended Euclidean}{18}{section*.69}
+\contentsline {subsubsection}{GCD}{18}{section*.70}
+\contentsline {subsubsection}{LCM}{18}{section*.71}
+\contentsline {subsubsection}{Prime Check Miller Rabin}{19}{section*.72}
+\contentsline {subsubsection}{Prime Sieve}{19}{section*.73}
+\contentsline {section}{Strings}{19}{section*.74}
+\contentsline {subsection}{KMP}{19}{section*.75}
+\contentsline {subsection}{Rabin Karp}{19}{section*.76}
+\contentsline {section}{Techniques}{20}{section*.77}
+\contentsline {subsection}{Binary Search}{20}{section*.78}
+\contentsline {subsection}{Multiple Queries}{20}{section*.79}
+\contentsline {subsubsection}{Mo}{20}{section*.80}
+\contentsline {subsubsection}{SQRT Decomposition}{20}{section*.81}

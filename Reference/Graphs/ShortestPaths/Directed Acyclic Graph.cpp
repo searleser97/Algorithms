@@ -20,12 +20,9 @@ bool toposort(int u) {
   toposorted.push_back(u);
   return true;
 }
-// 8
-// O(N)
-bool toposort() {
-  for (int u = 0; u < ady.size(); u++)
-    if (!vis[u] && !toposort(u)) return false;
-  return true;
-}
 
 void addEdge(int u, int v) { ady[u].push_back(v); }
+
+vector<T> SSSP(int s) {
+  
+}

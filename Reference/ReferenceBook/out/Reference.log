@@ -1,4 +1,4 @@
-This is LuaTeX, Version 1.09.0 (MiKTeX 2.9.6880)  (format=lualatex 2018.12.9)  24 JAN 2019 11:19
+This is LuaTeX, Version 1.09.0 (MiKTeX 2.9.6880)  (format=lualatex 2018.12.9)  24 JAN 2019 20:36
  system commands enabled.
  file:line:error style messages enabled.
 **Reference.tex
@@ -49,7 +49,7 @@ Inserting `luaotfload.aux.set_capheight' at position 3 in `luaotfload.patch_font
 '.
 Inserting `luaotfload.rewrite_fontname' at position 4 in `luaotfload.patch_font'
 .
-luaotfload | main : initialization completed in 0.164 seconds
+luaotfload | main : initialization completed in 0.170 seconds
 (/home/san/.miktex/texmfs/install/tex/latex/base/article.cls
 Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
 (/home/san/.miktex/texmfs/install/tex/latex/base/size10.clo
@@ -744,7 +744,7 @@ Package: lscape 2000/10/22 v3.01 Landscape Pages (DPC)
 )
 Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 )
-<TitlePage.pdf, id=319, 614.295pt x 794.97pt>
+<TitlePage.pdf, id=323, 614.295pt x 794.97pt>
 File: TitlePage.pdf Graphic file (type pdf)
 <use TitlePage.pdf>
 Package luatex.def Info: TitlePage.pdf  used on input line 42.
@@ -753,7 +753,7 @@ File: TitlePage.pdf Graphic file (type pdf)
 <use TitlePage.pdf>
 Package luatex.def Info: TitlePage.pdf  used on input line 42.
 (luatex.def)             Requested size: 614.29349pt x 794.96806pt.
-<TitlePage.pdf, id=322, page=1, 614.295pt x 794.97pt>
+<TitlePage.pdf, id=326, page=1, 614.295pt x 794.97pt>
 File: TitlePage.pdf Graphic file (type pdf)
 <use TitlePage.pdf, page 1>
 Package luatex.def Info: TitlePage.pdf , page1 used on input line 42.
@@ -1588,9 +1588,13 @@ guage 'english'. Reported on input line 2065.
 
 (./_minted-Reference/2495481C2347BE063617295AC6BA01D0C4FF0AC38A5820C254F083BF98
 88B110.pygtex)
+\openout3 = Reference.pyg
+
+(./_minted-Reference/68B329DA9893E34099C7D8AD5CB9C940C4FF0AC38A5820C254F083BF98
+88B110.pygtex)
 Package babel Info: No hyphenation patterns were set for
 (babel)             lan
-guage 'english'. Reported on input line 2199.
+guage 'english'. Reported on input line 2206.
  [17]
 \openout3 = Reference.pyg
 
@@ -1622,7 +1626,7 @@ guage 'english'. Reported on input line 2199.
 88B110.pygtex)
 Package babel Info: No hyphenation patterns were set for
 (babel)             lan
-guage 'english'. Reported on input line 2320.
+guage 'english'. Reported on input line 2327.
  [18]
 \openout3 = Reference.pyg
 
@@ -1666,7 +1670,7 @@ guage 'english'. Reported on input line 2320.
 88B110.pygtex)
 Package babel Info: No hyphenation patterns were set for
 (babel)             lan
-guage 'english'. Reported on input line 2471.
+guage 'english'. Reported on input line 2478.
  [19]
 \openout3 = Reference.pyg
 
@@ -1722,7 +1726,7 @@ guage 'english'. Reported on input line 2471.
 88B110.pygtex)
 Package babel Info: No hyphenation patterns were set for
 (babel)             lan
-guage 'english'. Reported on input line 2626.
+guage 'english'. Reported on input line 2633.
  [20]
 \openout3 = Reference.pyg
 
@@ -1744,17 +1748,18 @@ Package babel Info: No hyphenation patterns were set for
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 52.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 52.
 Package rerunfilecheck Info: File `Reference.out' has not changed.
-(rerunfilecheck)             Checksum: CFA441FF7ABE2D50CD78930AA5ACF44F;4730.
+(rerunfilecheck)             Checksum: 6ECB0FDB76AC4710AD6639166C14ECA1;4801.
 )
 
 Here is how much of LuaTeX's memory you used:
- 16688 strings out of 494338
+ 16707 strings out of 494338
  125171,552014 words of node,token memory allocated
  435 words of node memory still in use:
    3 hlist, 1 vlist, 1 rule, 2 glue, 3 kern, 1 glyph, 5 attribute, 53 glue_spec,
  5 attribute_list, 1 write nodes
-   avail lists: 2:6695,3:412,4:1735,5:788,6:168,7:3442,8:82,9:800,10:10,11:55
- 16482 multiletter control sequences out of 65536+200000
+   avail lists: 1:1,2:6695,3:417,4:1735,5:788,6:170,7:3442,8:83,9:800,10:10,11:5
+5
+ 16483 multiletter control sequences out of 65536+200000
  54 fonts using 4526735 bytes
  44i,18n,45p,842b,725s stack positions out of 5000i,500n,10000p,200000b,50000s
 </home/san/.miktex/texmfs/install/fonts/opentype/public/lm/lmmonolt10-bold.otf><
@@ -1765,9 +1770,9 @@ home/san/.miktex/texmfs/install/fonts/opentype/public/lm/lmroman10-regular.otf><
 me/san/.miktex/texmfs/install/fonts/opentype/public/lm/lmsans10-regular.otf></ho
 me/san/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmmi5.pfb></home/sa
 n/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmsy5.pfb>
-Output written on Reference.pdf (21 pages, 237965 bytes).
+Output written on Reference.pdf (21 pages, 238573 bytes).
 
-PDF statistics: 565 PDF objects out of 1000 (max. 8388607)
- 102 named destinations out of 1000 (max. 131072)
- 633 words of extra memory for PDF output out of 10000 (max. 100000000)
+PDF statistics: 570 PDF objects out of 1000 (max. 8388607)
+ 103 named destinations out of 1000 (max. 131072)
+ 641 words of extra memory for PDF output out of 10000 (max. 100000000)
 
