@@ -1,5 +1,6 @@
+// 5
 typedef long long int lli;
-// 3
+
 lli bitsInInt(lli n) {  // clz = count leading zeroes
   return sizeof(n) * 8 - __builtin_clzll(n);
 }

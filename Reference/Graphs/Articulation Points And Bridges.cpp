@@ -10,8 +10,13 @@ int Time;
 vector<vector<int>> ady;
 vector<int> disc, low, ap;
 vector<Edge> br;
-// 1
+
 void initVars(int N) { ady.assign(N, vector<int>()); }
+// 4
+void addEdge(int u, int v) {
+  ady[u].push_back(v);
+  ady[v].push_back(u);
+}
 // 15
 int dfsAPB(int u, int p) {
   int ch = 0;
@@ -36,9 +41,4 @@ void APB() {
   Time = 0;
   for (int u = 0; u < ady.size(); u++)
     if (!disc[u]) ap[u] = dfsAPB(u, u) > 1;
-}
-// 4
-void addEdge(int u, int v) {
-  ady[u].push_back(v);
-  ady[v].push_back(u);
 }

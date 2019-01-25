@@ -1,17 +1,17 @@
+// 5
 // val = value
 typedef string Val;
 unordered_map<Val, int> intForVal;
 unordered_map<int, Val> valForInt;
 int mapId = 0;
-// 4
+// 5
 int Map(Val val) {
+  if (intForVal.count(val)) return intForVal[val];
   valForInt[mapId] = val;
-  return intForVal.count(val)
-             ? intForVal[val]
-             : intForVal[val] = mapId++;
+  return intForVal[val] = mapId++;
 }
-// 3
-Val IMap(int val) { return valForInt[val]; }
+
+Val IMap(int n) { return valForInt[n]; }
 // 5
 void initMapping() {
   mapId = 0;

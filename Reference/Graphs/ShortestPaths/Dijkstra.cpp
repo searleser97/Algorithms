@@ -1,3 +1,5 @@
+#include <bits/stdc++.h>
+using namespace std;
 // 5
 typedef int T;
 typedef pair<T, int> DistNode;
@@ -8,6 +10,14 @@ unordered_map<int, unordered_map<int, T>> weight;
 void initVars(int N) {
   ady.assign(N, vector<int>());
   weight.clear();
+}
+// 7
+void addEdge(int u, int v, T w) {
+  ady[u].push_back(v);
+  weight[u][v] = w;
+  if (isDirected) return;
+  ady[v].push_back(u);
+  weight[v][u] = w;
 }
 // 20
 // O(E * lg(V))
@@ -20,41 +30,30 @@ vector<T> dijkstra(int s) {
     int u = q.begin()->second;
     q.erase(q.begin());
     for (int &v : ady[u]) {
-      T w = weight[u][v];
-      if (dist[u] + w < dist[v]) {
+      T w = weight[u][v], d = dist[u] + w;
+      if (d < dist[v]) {
         if (dist[v] != INF) q.erase(pos[v]);
-        pos[v] = q.insert({dist[v] = dist[u] + w, v})
-                     .first;
+        pos[v] = q.insert({dist[v] = d, v}).first;
       }
     }
   }
   return dist;
 }
 // 17
+// ~ O(E * lg(V))
 vector<T> dijkstraLazy(int s) {
   vector<T> dist(ady.size(), INF);
-  priority_queue<DistNode, vector<DistNode>,
-                 greater<DistNode>>
-      q;
+  priority_queue<DistNode> q;
   q.push({0, s}), dist[s] = 0;
   while (q.size()) {
     DistNode top = q.top();
     q.pop();
     int u = top.second;
-    if (dist[u] < top.first) continue;
+    if (dist[u] < -top.first) continue;
     for (int &v : ady[u]) {
-      T w = weight[u][v];
-      if (dist[u] + w < dist[v])
-        q.push({dist[v] = dist[u] + w, v});
+      T w = weight[u][v], d = dist[u] + w;
+      if (d < dist[v]) q.push({-(dist[v] = d), v});
     }
   }
   return dist;
-}
-// 7
-void addEdge(int u, int v, T w) {
-  ady[u].push_back(v);
-  weight[u][v] = w;
-  if (isDirected) return;
-  ady[v].push_back(u);
-  weight[v][u] = w;
 }

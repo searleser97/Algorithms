@@ -38,10 +38,12 @@ def printSectionType(sectionName, depth, isFile):
 
 def needspaceForDepth(depth):
     if depth == 1:
-        needspace = 3
+        needspace = 4
     elif depth == 2:
-        needspace = 2
+        needspace = 3
     elif depth == 3:
+        needspace = 2
+    else:
         needspace = 1
     return needspace
 
@@ -55,14 +57,16 @@ def printFile(path, depth, sections):
     with open(path, 'r') as f:
         content = f.read()
     firstLine = content[:content.find('\n') + 1]
+    needspace = 0
     if re.fullmatch(' *(?:#|(?://)) ?[1-9][0-9]*\\n', firstLine):
         content = content[len(firstLine):]
         needspace = int(firstLine.strip()[2:].strip())
-        for i in range(len(sections)):
-            needspace += needspaceForDepth(depth - i)
-        print('\\needspace{' + str(needspace) + '\\baselineskip}')
     for i in range(len(sections)):
-        printSectionType(sections[i], depth - len(sections) + i + 1, i == len(sections) - 1)
+        needspace += needspaceForDepth(depth - i)
+    print('\\needspace{' + str(needspace) + '\\baselineskip}')
+    for i in range(len(sections)):
+        printSectionType(sections[i], depth -
+                         len(sections) + i + 1, i == len(sections) - 1)
     content = '\\begin{minted}{' + extension + '}\n' + content
     needspaces = set(re.findall(' *(?:#|(?://)) ?[1-9][0-9]*\\n', content))
     for needspace in needspaces:

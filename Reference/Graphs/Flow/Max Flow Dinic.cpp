@@ -13,6 +13,11 @@ void initVars(int N) {
   cap.clear();
   flow.clear();
 }
+// 4
+void addEdge(int u, int v, T capacity) {
+  cap[u][v] = capacity;
+  ady[u].push_back(v);
+}
 // 17
 bool levelGraph(int s, int t) {
   level = vector<int>(ady.size());
@@ -58,9 +63,4 @@ T dinicMaxFlow(int s, int t) {
     while (T flow = blockingFlow(s, t, 1 << 30))
       maxFlow += flow;
   return maxFlow;
-}
-// 4
-void addEdge(int u, int v, T capacity) {
-  cap[u][v] = capacity;
-  ady[u].push_back(v);
 }

@@ -10,6 +10,14 @@ void initVars(int N) {
   ady.assign(N, vector<int>());
   weight.clear();
 }
+// 7
+void addEdge(int u, int v, T w) {
+  ady[u].push_back(v);
+  weight[u][v] = w;
+  if (isDirected) return;
+  ady[v].push_back(u);
+  weight[v][u] = w;
+}
 // 15
 // O(V * E)
 vector<T> bellmanFord(int s) {
@@ -18,19 +26,11 @@ vector<T> bellmanFord(int s) {
   for (int i = 1; i <= ady.size(); i++)
     for (int u = 0; u < ady.size(); u++)
       for (auto &v : ady[u]) {
-        T w = weight[u][v];
-        if (dist[u] != INF && dist[u] + w < dist[v]) {
+        T w = weight[u][v], d = dist[u] + w;
+        if (dist[u] != INF && d < dist[v]) {
           if (i == ady.size()) return {};
-          dist[v] = dist[u] + w;
+          dist[v] = d;
         }
       }
   return dist;
-}
-// 7
-void addEdge(int u, int v, T w) {
-  ady[u].push_back(v);
-  weight[u][v] = w;
-  if (isDirected) return;
-  ady[v].push_back(u);
-  weight[v][u] = w;
 }

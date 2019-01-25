@@ -6,4 +6,6 @@
 \PYG{n}{vector}\PYG{o}{\PYGZlt{}}\PYG{k+kt}{int}\PYG{o}{\PYGZgt{}} \PYG{n}{first}\PYG{p}{;}
 \PYG{n}{vector}\PYG{o}{\PYGZlt{}}\PYG{n}{T}\PYG{o}{\PYGZgt{}} \PYG{n}{tour}\PYG{p}{;}
 \PYG{n}{vector}\PYG{o}{\PYGZlt{}}\PYG{n}{vector}\PYG{o}{\PYGZlt{}}\PYG{k+kt}{int}\PYG{o}{\PYGZgt{}\PYGZgt{}} \PYG{n}{ady}\PYG{p}{;}
+
+\PYG{k+kt}{void} \PYG{n+nf}{initVars}\PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{N}\PYG{p}{)} \PYG{p}{\PYGZob{}} \PYG{n}{ady}\PYG{p}{.}\PYG{n}{assign}\PYG{p}{(}\PYG{n}{N}\PYG{p}{,} \PYG{n}{vector}\PYG{o}{\PYGZlt{}}\PYG{k+kt}{int}\PYG{o}{\PYGZgt{}}\PYG{p}{());} \PYG{p}{\PYGZcb{}}
 \end{Verbatim}

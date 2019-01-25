@@ -2,6 +2,11 @@
 vector<vector<int>> ady;
 
 void initVars(int N) { ady.assign(N, vector<int>()); }
+// 4
+void addEdge(int u, int v) {
+  ady[u].push_back(v);
+  ady[v].push_back(u);
+}
 // 20
 // O(N)
 bool isBipartite() {

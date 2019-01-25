@@ -1,4 +1,4 @@
-This is LuaTeX, Version 1.09.0 (MiKTeX 2.9.6880)  (format=lualatex 2018.12.9)  24 JAN 2019 20:36
+This is LuaTeX, Version 1.09.0 (MiKTeX 2.9.6880)  (format=lualatex 2018.12.9)  25 JAN 2019 10:21
  system commands enabled.
  file:line:error style messages enabled.
 **Reference.tex
@@ -49,7 +49,7 @@ Inserting `luaotfload.aux.set_capheight' at position 3 in `luaotfload.patch_font
 '.
 Inserting `luaotfload.rewrite_fontname' at position 4 in `luaotfload.patch_font'
 .
-luaotfload | main : initialization completed in 0.170 seconds
+luaotfload | main : initialization completed in 0.166 seconds
 (/home/san/.miktex/texmfs/install/tex/latex/base/article.cls
 Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
 (/home/san/.miktex/texmfs/install/tex/latex/base/size10.clo
@@ -822,11 +822,7 @@ LaTeX Font Info:    Font shape `TU/lmtt/bx/n' in size <10> not available
 88B110.pygtex)
 \openout3 = Reference.pyg
 
-(./_minted-Reference/AB567CA8457B8F095FFB93549FC3DC15C4FF0AC38A5820C254F083BF98
-88B110.pygtex)
-\openout3 = Reference.pyg
-
-(./_minted-Reference/D91BFA44F39915F140F7453CB5F5DFBCC4FF0AC38A5820C254F083BF98
+(./_minted-Reference/FDAB40AD1DB77D74E5ADAE6458E550E7C4FF0AC38A5820C254F083BF98
 88B110.pygtex)
 \openout3 = Reference.pyg
 
@@ -842,11 +838,7 @@ LaTeX Font Info:    Font shape `TU/lmtt/bx/n' in size <10> not available
 88B110.pygtex)
 \openout3 = Reference.pyg
 
-(./_minted-Reference/B211C2F69729A408D24AF9724C7370FAC4FF0AC38A5820C254F083BF98
-88B110.pygtex)
-\openout3 = Reference.pyg
-
-(./_minted-Reference/0E577B7CEE5940F9755F324B076C142CC4FF0AC38A5820C254F083BF98
+(./_minted-Reference/8F8D9290D80900FC75E0E6038E76AFFCC4FF0AC38A5820C254F083BF98
 88B110.pygtex)
 \openout3 = Reference.pyg
 
@@ -854,11 +846,7 @@ LaTeX Font Info:    Font shape `TU/lmtt/bx/n' in size <10> not available
 88B110.pygtex)
 \openout3 = Reference.pyg
 
-(./_minted-Reference/9CD6B25ADE11B245DD196A3F6BE39A69C4FF0AC38A5820C254F083BF98
-88B110.pygtex)
-\openout3 = Reference.pyg
-
-(./_minted-Reference/2299F3F408707D8FE415B4EC697B1DD7C4FF0AC38A5820C254F083BF98
+(./_minted-Reference/07B61DCB836C3461F1C6F903074E96AEC4FF0AC38A5820C254F083BF98
 88B110.pygtex)
 \openout3 = Reference.pyg
 
@@ -882,7 +870,7 @@ LaTeX Font Info:    Font shape `TU/lmtt/bx/n' in size <10> not available
 88B110.pygtex)
 Package babel Info: No hyphenation patterns were set for
 (babel)             lan
-guage 'english'. Reported on input line 184.
+guage 'english'. Reported on input line 177.
  [4]
 \openout3 = Reference.pyg
 
@@ -934,7 +922,7 @@ guage 'english'. Reported on input line 184.
 272C6A.pygtex)
 Package babel Info: No hyphenation patterns were set for
 (babel)             lan
-guage 'english'. Reported on input line 342.
+guage 'english'. Reported on input line 335.
  [5]
 \openout3 = Reference.pyg
 
@@ -1006,7 +994,7 @@ guage 'english'. Reported on input line 342.
 88B110.pygtex)
 Package babel Info: No hyphenation patterns were set for
 (babel)             lan
-guage 'english'. Reported on input line 521.
+guage 'english'. Reported on input line 515.
  [6]
 \openout3 = Reference.pyg
 
@@ -1082,7 +1070,7 @@ guage 'english'. Reported on input line 521.
 88B110.pygtex)
 Package babel Info: No hyphenation patterns were set for
 (babel)             lan
-guage 'english'. Reported on input line 697.
+guage 'english'. Reported on input line 691.
  [7]
 \openout3 = Reference.pyg
 
@@ -1136,14 +1124,14 @@ guage 'english'. Reported on input line 697.
 
 (./_minted-Reference/E742019A0E1D8D4A4F6B19D40D165271C4FF0AC38A5820C254F083BF98
 88B110.pygtex)
+Package babel Info: No hyphenation patterns were set for
+(babel)             lan
+guage 'english'. Reported on input line 835.
+ [8]
 \openout3 = Reference.pyg
 
 (./_minted-Reference/92AA61F713E3DD969951F75414D1F466C4FF0AC38A5820C254F083BF98
-88B110.pygtex
-Package babel Info: No hyphenation patterns were set for
-(babel)             lan
-guage 'english'. Reported on input line 5.
- [8])
+88B110.pygtex)
 \openout3 = Reference.pyg
 
 (./_minted-Reference/CAAE31D56D791908CA07F7F013483A40C4FF0AC38A5820C254F083BF98
@@ -1188,14 +1176,14 @@ guage 'english'. Reported on input line 5.
 
 (./_minted-Reference/2253F20DD53D0BA68487825931F9A05FC4FF0AC38A5820C254F083BF98
 88B110.pygtex)
-Package babel Info: No hyphenation patterns were set for
-(babel)             lan
-guage 'english'. Reported on input line 992.
- [9]
 \openout3 = Reference.pyg
 
 (./_minted-Reference/A0D7BF541F42C1C77DFD193298CFF1E0C4FF0AC38A5820C254F083BF98
 88B110.pygtex)
+Package babel Info: No hyphenation patterns were set for
+(babel)             lan
+guage 'english'. Reported on input line 1000.
+ [9]
 \openout3 = Reference.pyg
 
 (./_minted-Reference/73E0F468194A2DB66BC45350696AA3B6C4FF0AC38A5820C254F083BF98
@@ -1242,7 +1230,7 @@ guage 'english'. Reported on input line 992.
 88B110.pygtex)
 Package babel Info: No hyphenation patterns were set for
 (babel)             lan
-guage 'english'. Reported on input line 1149.
+guage 'english'. Reported on input line 1145.
  [10]
 \openout3 = Reference.pyg
 
@@ -1254,11 +1242,11 @@ guage 'english'. Reported on input line 1149.
 88B110.pygtex)
 \openout3 = Reference.pyg
 
-(./_minted-Reference/4684CD84A01DD0F361B861F503B33178C4FF0AC38A5820C254F083BF98
+(./_minted-Reference/4F9C4711F756A36C5F0E0C0931DAAD8FC4FF0AC38A5820C254F083BF98
 88B110.pygtex)
 \openout3 = Reference.pyg
 
-(./_minted-Reference/7347928379CFAEDB2FFEE68E20943BD2C4FF0AC38A5820C254F083BF98
+(./_minted-Reference/4D66E756D021F93CCCC6E69C4D68F83CC4FF0AC38A5820C254F083BF98
 88B110.pygtex)
 \openout3 = Reference.pyg
 
@@ -1270,10 +1258,6 @@ guage 'english'. Reported on input line 1149.
 88B110.pygtex)
 \openout3 = Reference.pyg
 
-(./_minted-Reference/4D66E756D021F93CCCC6E69C4D68F83CC4FF0AC38A5820C254F083BF98
-88B110.pygtex)
-\openout3 = Reference.pyg
-
 (./_minted-Reference/11369A657680582DD6D61DCA01F9AE89C4FF0AC38A5820C254F083BF98
 88B110.pygtex)
 \openout3 = Reference.pyg
@@ -1282,19 +1266,19 @@ guage 'english'. Reported on input line 1149.
 88B110.pygtex)
 \openout3 = Reference.pyg
 
-(./_minted-Reference/AC04214DFF706DD9FBDF905E81832F43C4FF0AC38A5820C254F083BF98
+(./_minted-Reference/4D66E756D021F93CCCC6E69C4D68F83CC4FF0AC38A5820C254F083BF98
 88B110.pygtex)
 \openout3 = Reference.pyg
 
-(./_minted-Reference/96B13DD1065165975AF4B58F61B1398EC4FF0AC38A5820C254F083BF98
-88B110.pygtex
+(./_minted-Reference/AC04214DFF706DD9FBDF905E81832F43C4FF0AC38A5820C254F083BF98
+88B110.pygtex)
 Package babel Info: No hyphenation patterns were set for
 (babel)             lan
-guage 'english'. Reported on input line 13.
- [11])
+guage 'english'. Reported on input line 1278.
+ [11]
 \openout3 = Reference.pyg
 
-(./_minted-Reference/4D66E756D021F93CCCC6E69C4D68F83CC4FF0AC38A5820C254F083BF98
+(./_minted-Reference/96B13DD1065165975AF4B58F61B1398EC4FF0AC38A5820C254F083BF98
 88B110.pygtex)
 \openout3 = Reference.pyg
 
@@ -1314,7 +1298,11 @@ guage 'english'. Reported on input line 13.
 88B110.pygtex)
 \openout3 = Reference.pyg
 
-(./_minted-Reference/2F7A758E3DB9C5752F42770746E725FAC4FF0AC38A5820C254F083BF98
+(./_minted-Reference/744C0CE3EDE9B2AFA165214DB93A39C3C4FF0AC38A5820C254F083BF98
+88B110.pygtex)
+\openout3 = Reference.pyg
+
+(./_minted-Reference/F6DB1B090C0BD20531FDDCE8F738F855C4FF0AC38A5820C254F083BF98
 88B110.pygtex)
 \openout3 = Reference.pyg
 
@@ -1336,29 +1324,29 @@ guage 'english'. Reported on input line 13.
 
 (./_minted-Reference/38D26376906943F5C4EBA63EA6946035C4FF0AC38A5820C254F083BF98
 88B110.pygtex)
-\openout3 = Reference.pyg
-
-(./_minted-Reference/3A236BD45BEE57EA2B71035F6BAD4FBDC4FF0AC38A5820C254F083BF98
-88B110.pygtex)
+Package babel Info: No hyphenation patterns were set for
+(babel)             lan
+guage 'english'. Reported on input line 1431.
+ [12]
 \openout3 = Reference.pyg
 
 (./_minted-Reference/BF75D4EB96BCDF374EF1FE7BB2DC8F61C4FF0AC38A5820C254F083BF98
 88B110.pygtex)
-Package babel Info: No hyphenation patterns were set for
-(babel)             lan
-guage 'english'. Reported on input line 1448.
- [12]
+\openout3 = Reference.pyg
+
+(./_minted-Reference/4D66E756D021F93CCCC6E69C4D68F83CC4FF0AC38A5820C254F083BF98
+88B110.pygtex)
 \openout3 = Reference.pyg
 
 (./_minted-Reference/6FC28BEF0855B38A920EADACFF457AF1C4FF0AC38A5820C254F083BF98
 88B110.pygtex)
 \openout3 = Reference.pyg
 
-(./_minted-Reference/798EE65ECE4C4E49941AA798A1B3BC28C4FF0AC38A5820C254F083BF98
+(./_minted-Reference/36CB11BF826E66E2683176DE36F914E9C4FF0AC38A5820C254F083BF98
 88B110.pygtex)
 \openout3 = Reference.pyg
 
-(./_minted-Reference/A9EEE5DE0C1BA9BB948254F5FA363AD6C4FF0AC38A5820C254F083BF98
+(./_minted-Reference/EC83CB191ED1F08153F7285D4BBDDE41C4FF0AC38A5820C254F083BF98
 88B110.pygtex)
 \openout3 = Reference.pyg
 
@@ -1378,10 +1366,6 @@ guage 'english'. Reported on input line 1448.
 88B110.pygtex)
 \openout3 = Reference.pyg
 
-(./_minted-Reference/4D66E756D021F93CCCC6E69C4D68F83CC4FF0AC38A5820C254F083BF98
-88B110.pygtex)
-\openout3 = Reference.pyg
-
 (./_minted-Reference/A15EF0C9A970D8B625CB36CCFC45171EC4FF0AC38A5820C254F083BF98
 88B110.pygtex)
 \openout3 = Reference.pyg
@@ -1390,35 +1374,23 @@ guage 'english'. Reported on input line 1448.
 88B110.pygtex)
 \openout3 = Reference.pyg
 
-(./_minted-Reference/9CBE3D0B0BE0DE3B05653F612775C643C4FF0AC38A5820C254F083BF98
-88B110.pygtex)
-\openout3 = Reference.pyg
-
 (./_minted-Reference/3FA7668E2B18F096B0C34FA20D01EBABC4FF0AC38A5820C254F083BF98
 88B110.pygtex)
 \openout3 = Reference.pyg
 
-(./_minted-Reference/7A62A0E41BC245D2769EEFDB2F16203FC4FF0AC38A5820C254F083BF98
+(./_minted-Reference/9CBE3D0B0BE0DE3B05653F612775C643C4FF0AC38A5820C254F083BF98
 88B110.pygtex)
 Package babel Info: No hyphenation patterns were set for
 (babel)             lan
-guage 'english'. Reported on input line 1616.
+guage 'english'. Reported on input line 1595.
  [13]
 \openout3 = Reference.pyg
 
+(./_minted-Reference/7A62A0E41BC245D2769EEFDB2F16203FC4FF0AC38A5820C254F083BF98
+88B110.pygtex)
+\openout3 = Reference.pyg
+
 (./_minted-Reference/848A1C02492565770930923351771860C4FF0AC38A5820C254F083BF98
-88B110.pygtex)
-\openout3 = Reference.pyg
-
-(./_minted-Reference/9ED548C3D3BF317F018E23101775167BC4FF0AC38A5820C254F083BF98
-88B110.pygtex)
-\openout3 = Reference.pyg
-
-(./_minted-Reference/F7095C2D8DF90669057480E22BF659B1C4FF0AC38A5820C254F083BF98
-88B110.pygtex)
-\openout3 = Reference.pyg
-
-(./_minted-Reference/8A533D954CCEE31DB89622FACB1FBC17C4FF0AC38A5820C254F083BF98
 88B110.pygtex)
 \openout3 = Reference.pyg
 
@@ -1426,23 +1398,35 @@ guage 'english'. Reported on input line 1616.
 88B110.pygtex)
 \openout3 = Reference.pyg
 
+(./_minted-Reference/9ED548C3D3BF317F018E23101775167BC4FF0AC38A5820C254F083BF98
+88B110.pygtex)
+\openout3 = Reference.pyg
+
+(./_minted-Reference/8EB17417B63619C54DD224765F80BDD9C4FF0AC38A5820C254F083BF98
+88B110.pygtex)
+\openout3 = Reference.pyg
+
+(./_minted-Reference/8A533D954CCEE31DB89622FACB1FBC17C4FF0AC38A5820C254F083BF98
+88B110.pygtex)
+\openout3 = Reference.pyg
+
 (./_minted-Reference/3B4B9EA90801C25651C7F375C8A50197C4FF0AC38A5820C254F083BF98
 88B110.pygtex)
 \openout3 = Reference.pyg
 
-(./_minted-Reference/6A89D7A639CA5D5CB05BD29F0A9BB811C4FF0AC38A5820C254F083BF98
+(./_minted-Reference/F78EF06883061251F148DFA2738E8793C4FF0AC38A5820C254F083BF98
 88B110.pygtex)
+Package babel Info: No hyphenation patterns were set for
+(babel)             lan
+guage 'english'. Reported on input line 1729.
+ [14]
 \openout3 = Reference.pyg
 
 (./_minted-Reference/2EB113ED26C391B02148889AAD6EF9DBC4FF0AC38A5820C254F083BF98
 88B110.pygtex)
-Package babel Info: No hyphenation patterns were set for
-(babel)             lan
-guage 'english'. Reported on input line 1751.
- [14]
 \openout3 = Reference.pyg
 
-(./_minted-Reference/4A90222E6EFD66E5391464FE68BBF773C4FF0AC38A5820C254F083BF98
+(./_minted-Reference/185A2ABC0C7EC2A77EC5A960C765C3A6C4FF0AC38A5820C254F083BF98
 88B110.pygtex)
 \openout3 = Reference.pyg
 
@@ -1450,15 +1434,15 @@ guage 'english'. Reported on input line 1751.
 88B110.pygtex)
 \openout3 = Reference.pyg
 
-(./_minted-Reference/8AE41D663F7B8197A16BD139B063FCE5C4FF0AC38A5820C254F083BF98
+(./_minted-Reference/B4F579221D649757DB5D075D916B8010C4FF0AC38A5820C254F083BF98
 88B110.pygtex)
 \openout3 = Reference.pyg
 
-(./_minted-Reference/F6B959EF9BEB6794CD86CE246007BC9BC4FF0AC38A5820C254F083BF98
+(./_minted-Reference/F1A16855CF4B8C6A807DF32C845FB4F0C4FF0AC38A5820C254F083BF98
 88B110.pygtex)
 \openout3 = Reference.pyg
 
-(./_minted-Reference/4D4D0B5CB109D054E64E2483E10E41BCC4FF0AC38A5820C254F083BF98
+(./_minted-Reference/31332EF0D8179629B24849976178C85DC4FF0AC38A5820C254F083BF98
 88B110.pygtex)
 \openout3 = Reference.pyg
 
@@ -1474,15 +1458,19 @@ guage 'english'. Reported on input line 1751.
 88B110.pygtex)
 \openout3 = Reference.pyg
 
+(./_minted-Reference/1097554AABFBE6C2B623794111FA474DC4FF0AC38A5820C254F083BF98
+88B110.pygtex)
+\openout3 = Reference.pyg
+
 (./_minted-Reference/5BD3CFB108088EE45879E8095F07B6ADC4FF0AC38A5820C254F083BF98
 88B110.pygtex)
+Package babel Info: No hyphenation patterns were set for
+(babel)             lan
+guage 'english'. Reported on input line 1876.
+ [15]
 \openout3 = Reference.pyg
 
 (./_minted-Reference/3892197C1D5DCEC468BE74AA81E340E1C4FF0AC38A5820C254F083BF98
-88B110.pygtex)
-\openout3 = Reference.pyg
-
-(./_minted-Reference/1097554AABFBE6C2B623794111FA474DC4FF0AC38A5820C254F083BF98
 88B110.pygtex)
 \openout3 = Reference.pyg
 
@@ -1492,10 +1480,10 @@ guage 'english'. Reported on input line 1751.
 
 (./_minted-Reference/0CD3A6743E0CC504343384C296D41F71C4FF0AC38A5820C254F083BF98
 88B110.pygtex)
-Package babel Info: No hyphenation patterns were set for
-(babel)             lan
-guage 'english'. Reported on input line 1906.
- [15]
+\openout3 = Reference.pyg
+
+(./_minted-Reference/1097554AABFBE6C2B623794111FA474DC4FF0AC38A5820C254F083BF98
+88B110.pygtex)
 \openout3 = Reference.pyg
 
 (./_minted-Reference/A843637476E691F3B1A97493A5BA9057C4FF0AC38A5820C254F083BF98
@@ -1503,10 +1491,6 @@ guage 'english'. Reported on input line 1906.
 \openout3 = Reference.pyg
 
 (./_minted-Reference/1B1E53EC908BEED5D1BCC68B94D39401C4FF0AC38A5820C254F083BF98
-88B110.pygtex)
-\openout3 = Reference.pyg
-
-(./_minted-Reference/1097554AABFBE6C2B623794111FA474DC4FF0AC38A5820C254F083BF98
 88B110.pygtex)
 \openout3 = Reference.pyg
 
@@ -1522,36 +1506,36 @@ guage 'english'. Reported on input line 1906.
 88B110.pygtex)
 \openout3 = Reference.pyg
 
+(./_minted-Reference/7A8222B09101776D75DB04A3B4AF425FC4FF0AC38A5820C254F083BF98
+88B110.pygtex)
+\openout3 = Reference.pyg
+
 (./_minted-Reference/D9B6CBEE4BD62DD9BA5EA970C3678D33C4FF0AC38A5820C254F083BF98
 88B110.pygtex)
 \openout3 = Reference.pyg
 
 (./_minted-Reference/8E24AF780753F3F3B2A8AA5E21A77DC8C4FF0AC38A5820C254F083BF98
 88B110.pygtex)
+Package babel Info: No hyphenation patterns were set for
+(babel)             lan
+guage 'english'. Reported on input line 2017.
+ [16]
 \openout3 = Reference.pyg
 
 (./_minted-Reference/DD46AF75CBFDC6B4CFA5DB9844A7E69AC4FF0AC38A5820C254F083BF98
 88B110.pygtex)
 \openout3 = Reference.pyg
 
-(./_minted-Reference/7A8222B09101776D75DB04A3B4AF425FC4FF0AC38A5820C254F083BF98
+(./_minted-Reference/1215CA4D118CE579D63087D264F21826C4FF0AC38A5820C254F083BF98
 88B110.pygtex)
 \openout3 = Reference.pyg
 
-(./_minted-Reference/AB25DF15466B77F4C6D1B0B5CF20954AC4FF0AC38A5820C254F083BF98
+(./_minted-Reference/651E644AE77E2B736B944E8F7C8FAF18C4FF0AC38A5820C254F083BF98
 88B110.pygtex)
 \openout3 = Reference.pyg
 
-(./_minted-Reference/CE0D5465A7714039DF2FB848E6F6B32EC4FF0AC38A5820C254F083BF98
+(./_minted-Reference/38AD7EC6908D7D2F27D2E8BDFD08A790C4FF0AC38A5820C254F083BF98
 88B110.pygtex)
-\openout3 = Reference.pyg
-
-(./_minted-Reference/5320413DC2AAB6D0E699EB836FC64177C4FF0AC38A5820C254F083BF98
-88B110.pygtex)
-Package babel Info: No hyphenation patterns were set for
-(babel)             lan
-guage 'english'. Reported on input line 2065.
- [16]
 \openout3 = Reference.pyg
 
 (./_minted-Reference/8B04CDF61742D8406154DF1A6CBB4DE9C4FF0AC38A5820C254F083BF98
@@ -1562,15 +1546,19 @@ guage 'english'. Reported on input line 2065.
 88B110.pygtex)
 \openout3 = Reference.pyg
 
-(./_minted-Reference/16D9B07A9EEE57167C2123F95AFB3070C4FF0AC38A5820C254F083BF98
-88B110.pygtex)
-\openout3 = Reference.pyg
-
 (./_minted-Reference/2495481C2347BE063617295AC6BA01D0C4FF0AC38A5820C254F083BF98
 88B110.pygtex)
 \openout3 = Reference.pyg
 
-(./_minted-Reference/7878D9F43E0DE809393919BB74CE3F9CC4FF0AC38A5820C254F083BF98
+(./_minted-Reference/60DA00319A7B7B9877995D9037B74F29C4FF0AC38A5820C254F083BF98
+88B110.pygtex)
+\openout3 = Reference.pyg
+
+(./_minted-Reference/AD1A8A3D7A31F37AAA0D39DFABA267B0C4FF0AC38A5820C254F083BF98
+88B110.pygtex)
+\openout3 = Reference.pyg
+
+(./_minted-Reference/E11891F65C27465485AD06D563040638C4FF0AC38A5820C254F083BF98
 88B110.pygtex)
 \openout3 = Reference.pyg
 
@@ -1578,28 +1566,48 @@ guage 'english'. Reported on input line 2065.
 88B110.pygtex)
 \openout3 = Reference.pyg
 
-(./_minted-Reference/FC585876BC0B493E4544A3885932E56FC4FF0AC38A5820C254F083BF98
-88B110.pygtex)
-\openout3 = Reference.pyg
-
-(./_minted-Reference/7156998820DD1C8D383EFC4DC5358F15C4FF0AC38A5820C254F083BF98
-88B110.pygtex)
-\openout3 = Reference.pyg
-
 (./_minted-Reference/2495481C2347BE063617295AC6BA01D0C4FF0AC38A5820C254F083BF98
 88B110.pygtex)
 \openout3 = Reference.pyg
 
-(./_minted-Reference/68B329DA9893E34099C7D8AD5CB9C940C4FF0AC38A5820C254F083BF98
+(./_minted-Reference/AC0C91B6416BB9B65EF0369A11370ADDC4FF0AC38A5820C254F083BF98
 88B110.pygtex)
 Package babel Info: No hyphenation patterns were set for
 (babel)             lan
-guage 'english'. Reported on input line 2206.
+guage 'english'. Reported on input line 2170.
  [17]
+\openout3 = Reference.pyg
+
+(./_minted-Reference/93855B496A4DC43944B8E81C8964D1DCC4FF0AC38A5820C254F083BF98
+88B110.pygtex)
+\openout3 = Reference.pyg
+
+(./_minted-Reference/C7C609C0A795211033DA860185324587C4FF0AC38A5820C254F083BF98
+88B110.pygtex)
+\openout3 = Reference.pyg
+
+(./_minted-Reference/B4868440E2D3922997ED10AC714E5B89C4FF0AC38A5820C254F083BF98
+88B110.pygtex)
+\openout3 = Reference.pyg
+
+(./_minted-Reference/BC120F2CCB2D334A3AA5EA6336A797E6C4FF0AC38A5820C254F083BF98
+88B110.pygtex)
+\openout3 = Reference.pyg
+
+(./_minted-Reference/F1A16855CF4B8C6A807DF32C845FB4F0C4FF0AC38A5820C254F083BF98
+88B110.pygtex)
+\openout3 = Reference.pyg
+
+(./_minted-Reference/E74DAA66AB31209019480C841353216EC4FF0AC38A5820C254F083BF98
+88B110.pygtex)
 \openout3 = Reference.pyg
 
 (./_minted-Reference/3D2544E44B821C4A8C5D3FE7FE9A675FCEC67AEB9154649D84ED569E26
 272C6A.pygtex)
+Package babel Info: No hyphenation patterns were set for
+(babel)             lan
+guage 'english'. Reported on input line 2290.
+ [18]
 \openout3 = Reference.pyg
 
 (./_minted-Reference/A63A596599AE8EF33D931CEF5A0A63C7CEC67AEB9154649D84ED569E26
@@ -1624,10 +1632,6 @@ guage 'english'. Reported on input line 2206.
 
 (./_minted-Reference/AA5123C080E39850A607756B24C0A16FC4FF0AC38A5820C254F083BF98
 88B110.pygtex)
-Package babel Info: No hyphenation patterns were set for
-(babel)             lan
-guage 'english'. Reported on input line 2327.
- [18]
 \openout3 = Reference.pyg
 
 (./_minted-Reference/9550B2AB6BEA04C6C9B0944B37921A78CEC67AEB9154649D84ED569E26
@@ -1636,6 +1640,10 @@ guage 'english'. Reported on input line 2327.
 
 (./_minted-Reference/DC71FF1CE9735DC6710729C7BA487C49C4FF0AC38A5820C254F083BF98
 88B110.pygtex)
+Package babel Info: No hyphenation patterns were set for
+(babel)             lan
+guage 'english'. Reported on input line 2435.
+ [19]
 \openout3 = Reference.pyg
 
 (./_minted-Reference/72592F2F511F4C4513188169DBC104DBC4FF0AC38A5820C254F083BF98
@@ -1668,10 +1676,6 @@ guage 'english'. Reported on input line 2327.
 
 (./_minted-Reference/032FBC0B645534F3C2031679F81333F0C4FF0AC38A5820C254F083BF98
 88B110.pygtex)
-Package babel Info: No hyphenation patterns were set for
-(babel)             lan
-guage 'english'. Reported on input line 2478.
- [19]
 \openout3 = Reference.pyg
 
 (./_minted-Reference/C3AB9A5CBDE9DCCAA3CB037F0C5EE056C4FF0AC38A5820C254F083BF98
@@ -1696,6 +1700,10 @@ guage 'english'. Reported on input line 2478.
 
 (./_minted-Reference/1444A01ECF9CDC7EF9A7CADD37131914C4FF0AC38A5820C254F083BF98
 88B110.pygtex)
+Package babel Info: No hyphenation patterns were set for
+(babel)             lan
+guage 'english'. Reported on input line 2597.
+ [20]
 \openout3 = Reference.pyg
 
 (./_minted-Reference/C650B1E875762175269835FE06759B07C4FF0AC38A5820C254F083BF98
@@ -1724,10 +1732,6 @@ guage 'english'. Reported on input line 2478.
 
 (./_minted-Reference/AEED827FE0692A277A54B423EDCB6FE7C4FF0AC38A5820C254F083BF98
 88B110.pygtex)
-Package babel Info: No hyphenation patterns were set for
-(babel)             lan
-guage 'english'. Reported on input line 2633.
- [20]
 \openout3 = Reference.pyg
 
 (./_minted-Reference/82771692B5A83B939654ED60A85D633BC4FF0AC38A5820C254F083BF98
@@ -1752,16 +1756,16 @@ Package rerunfilecheck Info: File `Reference.out' has not changed.
 )
 
 Here is how much of LuaTeX's memory you used:
- 16707 strings out of 494338
+ 16724 strings out of 494338
  125171,552014 words of node,token memory allocated
  435 words of node memory still in use:
    3 hlist, 1 vlist, 1 rule, 2 glue, 3 kern, 1 glyph, 5 attribute, 53 glue_spec,
  5 attribute_list, 1 write nodes
-   avail lists: 1:1,2:6695,3:417,4:1735,5:788,6:170,7:3442,8:83,9:800,10:10,11:5
+   avail lists: 1:1,2:7019,3:417,4:1837,5:829,6:170,7:3393,8:83,9:797,10:10,11:5
 5
  16483 multiletter control sequences out of 65536+200000
  54 fonts using 4526735 bytes
- 44i,18n,45p,842b,725s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 44i,18n,45p,842b,643s stack positions out of 5000i,500n,10000p,200000b,50000s
 </home/san/.miktex/texmfs/install/fonts/opentype/public/lm/lmmonolt10-bold.otf><
 /home/san/.miktex/texmfs/install/fonts/opentype/public/lm/lmmono10-regular.otf><
 /home/san/.miktex/texmfs/install/fonts/opentype/public/lm/lmmono10-italic.otf></
@@ -1770,7 +1774,7 @@ home/san/.miktex/texmfs/install/fonts/opentype/public/lm/lmroman10-regular.otf><
 me/san/.miktex/texmfs/install/fonts/opentype/public/lm/lmsans10-regular.otf></ho
 me/san/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmmi5.pfb></home/sa
 n/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmsy5.pfb>
-Output written on Reference.pdf (21 pages, 238573 bytes).
+Output written on Reference.pdf (21 pages, 240430 bytes).
 
 PDF statistics: 570 PDF objects out of 1000 (max. 8388607)
  103 named destinations out of 1000 (max. 131072)

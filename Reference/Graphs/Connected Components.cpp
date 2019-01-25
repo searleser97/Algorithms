@@ -9,6 +9,11 @@ void initVars(int N) {
   getComp.assign(N, -1);
   compId = 0;
 }
+// 4
+void addEdge(int u, int v) {
+  ady[u].push_back(v);
+  ady[v].push_back(u);
+}
 // 6
 void dfsCC(int u, vector<int> &comp) {
   if (getComp[u] > -1) return;
@@ -27,9 +32,4 @@ vector<vector<int>> connectedComponents() {
       comps.push_back(comp), compId++;
   }
   return comps;
-}
-// 4
-void addEdge(int u, int v) {
-  ady[u].push_back(v);
-  ady[v].push_back(u);
 }

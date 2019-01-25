@@ -13,6 +13,11 @@ void initVars(int n) {
   p = root = stPos = depth = heavy;
   st = SegmentTree<T>(n);
 }
+// 4
+void addEdge(int u, int v, T val) {
+  ady[u].push_back(v);
+  p[v] = u, vals[v] = val;
+}
 
 T F(T a, T b) { return a + b; }
 // 13
@@ -70,9 +75,4 @@ T query(int u, int v) {
     ans = F(ans, st.query(l, r));
   });
   return ans;
-}
-// 4
-void addEdge(int u, int v, T val) {
-  ady[u].push_back(v);
-  p[v] = u, vals[v] = val;
 }

@@ -1,21 +1,11 @@
+// mbm = maximum bipartite matching
 #include "Max Flow Dinic.cpp"
 // 4
-void addEdge(int u, int v) {
-  cap[u][v] = 1;
-  ady[u].push_back(v);
+void addEdgeMBM(int u, int v) {
+  addEdge(u += 2, v += 2, 1);
+  addEdge(0, u, 1);
+  addEdge(v, 1, 1);
 }
-// 14
-int main() {
-  int n, s = 0, t = 1;
-  cin >> n;
-  initVars(n);
-  while (n--) {
-    int u, v;
-    cin >> u >> v;
-    addEdge(u += 2, v += 2);
-    addEdge(s, u);
-    addEdge(v, t);
-  }
-  cout << dinicMaxFlow(s, t) << endl;
-  return 0;
-}
+// 2
+// O(E * V^2)
+T mbm() { return dinicMaxFlow(0, 1); }

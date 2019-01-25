@@ -13,6 +13,10 @@ void initVars(int N) {
   Wedges.clear();
   uf = UnionFind(N);
 }
+// 3
+void addEdge(int u, int v, T w) {
+  Wedges.push_back({w, {u, v}});
+}
 // 13
 T kruskal() {
   T cost = 0;
@@ -26,8 +30,4 @@ T kruskal() {
           cost += wedge.first;
   }
   return cost;
-}
-// 3
-void addEdge(int u, int v, T w) {
-  Wedges.push_back({w, {u, v}});
 }

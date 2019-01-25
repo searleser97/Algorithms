@@ -1,5 +1,6 @@
 \begin{Verbatim}[commandchars=\\\{\}]
 \PYG{c+c1}{// returns false if there is a cycle}
+\PYG{c+c1}{// O(N)}
 \PYG{k+kt}{bool} \PYG{n+nf}{toposort}\PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{u}\PYG{p}{)} \PYG{p}{\PYGZob{}}
   \PYG{n}{vis}\PYG{p}{[}\PYG{n}{u}\PYG{p}{]} \PYG{o}{=} \PYG{l+m+mi}{1}\PYG{p}{;}
   \PYG{k}{for} \PYG{p}{(}\PYG{k}{auto} \PYG{o}{\PYGZam{}}\PYG{n+nl}{v} \PYG{p}{:} \PYG{n}{ady}\PYG{p}{[}\PYG{n}{u}\PYG{p}{])}

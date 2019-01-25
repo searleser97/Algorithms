@@ -6,8 +6,13 @@ vector<vector<T>> st;
 vector<int> first;
 vector<T> tour;
 vector<vector<int>> ady;
-// 3
+
 void initVars(int N) { ady.assign(N, vector<int>()); }
+// 4
+void addEdge(int u, int v) {
+  ady[u].push_back(v);
+  ady[v].push_back(u);
+}
 
 T F(T a, T b) { return a.first < b.first ? a : b; }
 // 9
@@ -45,9 +50,4 @@ int lca(int u, int v) {
   int r = max(first[u], first[v]);
   int i = log2(r - l + 1);
   return F(st[i][l], st[i][r + 1 - (1 << i)]).second;
-}
-// 4
-void addEdge(int u, int v) {
-  ady[u].push_back(v);
-  ady[v].push_back(u);
 }

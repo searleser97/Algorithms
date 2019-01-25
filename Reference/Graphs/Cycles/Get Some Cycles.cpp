@@ -11,6 +11,11 @@ void initVars(int N) {
   cycles.clear();
   root = -1, flag = false;
 }
+// 4
+void addEdge(int u, int v) {
+  ady[u].push_back(v);
+  if (!isDirected) ady[v].push_back(u);
+}
 // 22
 // O(N)
 bool hasCycle(int u, int prev) {
@@ -40,9 +45,4 @@ bool hasCycle() {
   for (int u = 0; u < ady.size(); u++)
     if (!vis[u]) cycle.clear(), hasCycle(u, -1);
   return cycles.size() > 0;
-}
-// 4
-void addEdge(int u, int v) {
-  ady[u].push_back(v);
-  if (!isDirected) ady[v].push_back(u);
 }
