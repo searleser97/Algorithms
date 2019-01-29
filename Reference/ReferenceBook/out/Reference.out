@@ -51,30 +51,31 @@
 \BOOKMARK [2][-]{section*.52}{MST Prim}{section*.44}% 51
 \BOOKMARK [2][-]{section*.53}{Strongly Connected Components}{section*.44}% 52
 \BOOKMARK [2][-]{section*.54}{Topological Sort}{section*.44}% 53
-\BOOKMARK [2][-]{section*.55}{Cycles}{section*.44}% 54
-\BOOKMARK [3][-]{section*.56}{Get All Simple Cycles}{section*.55}% 55
-\BOOKMARK [3][-]{section*.57}{Get Some Cycles}{section*.55}% 56
-\BOOKMARK [3][-]{section*.58}{Has Cycle}{section*.55}% 57
-\BOOKMARK [2][-]{section*.59}{Flow}{section*.44}% 58
-\BOOKMARK [3][-]{section*.60}{Max Flow Dinic}{section*.59}% 59
-\BOOKMARK [3][-]{section*.61}{Maximum Bipartite Matching}{section*.59}% 60
-\BOOKMARK [2][-]{section*.62}{ShortestPaths}{section*.44}% 61
-\BOOKMARK [3][-]{section*.63}{Bellman Ford}{section*.62}% 62
-\BOOKMARK [3][-]{section*.64}{Dijkstra}{section*.62}% 63
-\BOOKMARK [3][-]{section*.65}{Shortest Path in Directed Acyclic Graph}{section*.62}% 64
-\BOOKMARK [1][-]{section*.66}{Maths}{}% 65
-\BOOKMARK [2][-]{section*.67}{Number Theory}{section*.66}% 66
-\BOOKMARK [3][-]{section*.68}{Divisibility Criterion}{section*.67}% 67
-\BOOKMARK [3][-]{section*.69}{Extended Euclidean}{section*.67}% 68
-\BOOKMARK [3][-]{section*.70}{GCD}{section*.67}% 69
-\BOOKMARK [3][-]{section*.71}{LCM}{section*.67}% 70
-\BOOKMARK [3][-]{section*.72}{Prime Check Miller Rabin}{section*.67}% 71
-\BOOKMARK [3][-]{section*.73}{Prime Sieve}{section*.67}% 72
-\BOOKMARK [1][-]{section*.74}{Strings}{}% 73
-\BOOKMARK [2][-]{section*.75}{KMP}{section*.74}% 74
-\BOOKMARK [2][-]{section*.76}{Rabin Karp}{section*.74}% 75
-\BOOKMARK [1][-]{section*.77}{Techniques}{}% 76
-\BOOKMARK [2][-]{section*.78}{Binary Search}{section*.77}% 77
-\BOOKMARK [2][-]{section*.79}{Multiple Queries}{section*.77}% 78
-\BOOKMARK [3][-]{section*.80}{Mo}{section*.79}% 79
-\BOOKMARK [3][-]{section*.81}{SQRT Decomposition}{section*.79}% 80
+\BOOKMARK [2][-]{section*.55}{Topological Sort \(All possible sorts\)}{section*.44}% 54
+\BOOKMARK [2][-]{section*.56}{Cycles}{section*.44}% 55
+\BOOKMARK [3][-]{section*.57}{Get All Simple Cycles}{section*.56}% 56
+\BOOKMARK [3][-]{section*.58}{Get Some Cycles}{section*.56}% 57
+\BOOKMARK [3][-]{section*.59}{Has Cycle}{section*.56}% 58
+\BOOKMARK [2][-]{section*.60}{Flow}{section*.44}% 59
+\BOOKMARK [3][-]{section*.61}{Max Flow Dinic}{section*.60}% 60
+\BOOKMARK [3][-]{section*.62}{Maximum Bipartite Matching}{section*.60}% 61
+\BOOKMARK [2][-]{section*.63}{ShortestPaths}{section*.44}% 62
+\BOOKMARK [3][-]{section*.64}{Bellman Ford}{section*.63}% 63
+\BOOKMARK [3][-]{section*.65}{Dijkstra}{section*.63}% 64
+\BOOKMARK [3][-]{section*.66}{Shortest Path in Directed Acyclic Graph}{section*.63}% 65
+\BOOKMARK [1][-]{section*.67}{Maths}{}% 66
+\BOOKMARK [2][-]{section*.68}{Number Theory}{section*.67}% 67
+\BOOKMARK [3][-]{section*.69}{Divisibility Criterion}{section*.68}% 68
+\BOOKMARK [3][-]{section*.70}{Extended Euclidean}{section*.68}% 69
+\BOOKMARK [3][-]{section*.71}{GCD}{section*.68}% 70
+\BOOKMARK [3][-]{section*.72}{LCM}{section*.68}% 71
+\BOOKMARK [3][-]{section*.73}{Prime Check Miller Rabin}{section*.68}% 72
+\BOOKMARK [3][-]{section*.74}{Prime Sieve}{section*.68}% 73
+\BOOKMARK [1][-]{section*.75}{Strings}{}% 74
+\BOOKMARK [2][-]{section*.76}{KMP}{section*.75}% 75
+\BOOKMARK [2][-]{section*.77}{Rabin Karp}{section*.75}% 76
+\BOOKMARK [1][-]{section*.78}{Techniques}{}% 77
+\BOOKMARK [2][-]{section*.79}{Binary Search}{section*.78}% 78
+\BOOKMARK [2][-]{section*.80}{Multiple Queries}{section*.78}% 79
+\BOOKMARK [3][-]{section*.81}{Mo}{section*.80}% 80
+\BOOKMARK [3][-]{section*.82}{SQRT Decomposition}{section*.80}% 81

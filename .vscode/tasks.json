@@ -6,7 +6,7 @@
     {
       "label": "build",
       "type": "shell",
-      "command": "/home/san/ProgramFiles/Scripts/aout /home/san/Algorithms/Reference/Data\\ Structures/Trees\\ And\\ Heaps/Red\\ Black\\ tree.cpp",
+      "command": "/home/san/ProgramFiles/Scripts/aout '/home/san/Algorithms/Reference/Graphs/Topological Sort (All possible sorts).cpp'",
       "group": "build",
       "problemMatcher": []
     }
