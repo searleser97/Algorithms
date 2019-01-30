@@ -1,4 +1,4 @@
-This is LuaTeX, Version 1.09.0 (MiKTeX 2.9.6880)  (format=lualatex 2018.12.9)  28 JAN 2019 11:25
+This is LuaTeX, Version 1.09.0 (MiKTeX 2.9.6880)  (format=lualatex 2018.12.9)  29 JAN 2019 18:01
  system commands enabled.
  file:line:error style messages enabled.
 **Reference.tex
@@ -49,7 +49,7 @@ Inserting `luaotfload.aux.set_capheight' at position 3 in `luaotfload.patch_font
 '.
 Inserting `luaotfload.rewrite_fontname' at position 4 in `luaotfload.patch_font'
 .
-luaotfload | main : initialization completed in 0.163 seconds
+luaotfload | main : initialization completed in 0.170 seconds
 (/home/san/.miktex/texmfs/install/tex/latex/base/article.cls
 Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
 (/home/san/.miktex/texmfs/install/tex/latex/base/size10.clo
@@ -1442,12 +1442,32 @@ guage 'english'. Reported on input line 1726.
 88B110.pygtex)
 \openout3 = Reference.pyg
 
-(./_minted-Reference/68B329DA9893E34099C7D8AD5CB9C940C4FF0AC38A5820C254F083BF98
+(./_minted-Reference/379E3866FCA14DE42281C6226F38C6DAC4FF0AC38A5820C254F083BF98
+88B110.pygtex)
+\openout3 = Reference.pyg
+
+(./_minted-Reference/4FE05F5029AB1D11151E753A7F4375B8C4FF0AC38A5820C254F083BF98
+88B110.pygtex)
+\openout3 = Reference.pyg
+
+(./_minted-Reference/6607EC3E12BD1AB1B915AD52B4BB6C6FC4FF0AC38A5820C254F083BF98
+88B110.pygtex)
+\openout3 = Reference.pyg
+
+(./_minted-Reference/8A932861DCF05C777FA066231F475162C4FF0AC38A5820C254F083BF98
+88B110.pygtex)
+\openout3 = Reference.pyg
+
+(./_minted-Reference/8CDAA4EFC73558DB59A03FFF61F11F24C4FF0AC38A5820C254F083BF98
 88B110.pygtex)
 \openout3 = Reference.pyg
 
 (./_minted-Reference/68B329DA9893E34099C7D8AD5CB9C940C4FF0AC38A5820C254F083BF98
 88B110.pygtex)
+Package babel Info: No hyphenation patterns were set for
+(babel)             lan
+guage 'english'. Reported on input line 1878.
+ [15]
 \openout3 = Reference.pyg
 
 (./_minted-Reference/BD5FDB8BE7A6C9CF4D8378A109AC7A7FC4FF0AC38A5820C254F083BF98
@@ -1464,10 +1484,6 @@ guage 'english'. Reported on input line 1726.
 
 (./_minted-Reference/5BD3CFB108088EE45879E8095F07B6ADC4FF0AC38A5820C254F083BF98
 88B110.pygtex)
-Package babel Info: No hyphenation patterns were set for
-(babel)             lan
-guage 'english'. Reported on input line 1881.
- [15]
 \openout3 = Reference.pyg
 
 (./_minted-Reference/3892197C1D5DCEC468BE74AA81E340E1C4FF0AC38A5820C254F083BF98
@@ -1508,6 +1524,10 @@ guage 'english'. Reported on input line 1881.
 
 (./_minted-Reference/7A8222B09101776D75DB04A3B4AF425FC4FF0AC38A5820C254F083BF98
 88B110.pygtex)
+Package babel Info: No hyphenation patterns were set for
+(babel)             lan
+guage 'english'. Reported on input line 2033.
+ [16]
 \openout3 = Reference.pyg
 
 (./_minted-Reference/D9B6CBEE4BD62DD9BA5EA970C3678D33C4FF0AC38A5820C254F083BF98
@@ -1516,10 +1536,6 @@ guage 'english'. Reported on input line 1881.
 
 (./_minted-Reference/8E24AF780753F3F3B2A8AA5E21A77DC8C4FF0AC38A5820C254F083BF98
 88B110.pygtex)
-Package babel Info: No hyphenation patterns were set for
-(babel)             lan
-guage 'english'. Reported on input line 2022.
- [16]
 \openout3 = Reference.pyg
 
 (./_minted-Reference/DD46AF75CBFDC6B4CFA5DB9844A7E69AC4FF0AC38A5820C254F083BF98
@@ -1568,14 +1584,14 @@ guage 'english'. Reported on input line 2022.
 
 (./_minted-Reference/2495481C2347BE063617295AC6BA01D0C4FF0AC38A5820C254F083BF98
 88B110.pygtex)
+Package babel Info: No hyphenation patterns were set for
+(babel)             lan
+guage 'english'. Reported on input line 2205.
+ [17]
 \openout3 = Reference.pyg
 
 (./_minted-Reference/AC0C91B6416BB9B65EF0369A11370ADDC4FF0AC38A5820C254F083BF98
 88B110.pygtex)
-Package babel Info: No hyphenation patterns were set for
-(babel)             lan
-guage 'english'. Reported on input line 2175.
- [17]
 \openout3 = Reference.pyg
 
 (./_minted-Reference/93855B496A4DC43944B8E81C8964D1DCC4FF0AC38A5820C254F083BF98
@@ -1606,7 +1622,7 @@ guage 'english'. Reported on input line 2175.
 272C6A.pygtex)
 Package babel Info: No hyphenation patterns were set for
 (babel)             lan
-guage 'english'. Reported on input line 2295.
+guage 'english'. Reported on input line 2348.
  [18]
 \openout3 = Reference.pyg
 
@@ -1642,7 +1658,7 @@ guage 'english'. Reported on input line 2295.
 88B110.pygtex)
 Package babel Info: No hyphenation patterns were set for
 (babel)             lan
-guage 'english'. Reported on input line 2440.
+guage 'english'. Reported on input line 2493.
  [19]
 \openout3 = Reference.pyg
 
@@ -1702,7 +1718,7 @@ guage 'english'. Reported on input line 2440.
 88B110.pygtex)
 Package babel Info: No hyphenation patterns were set for
 (babel)             lan
-guage 'english'. Reported on input line 2602.
+guage 'english'. Reported on input line 2655.
  [20]
 \openout3 = Reference.pyg
 
@@ -1756,13 +1772,13 @@ Package rerunfilecheck Info: File `Reference.out' has not changed.
 )
 
 Here is how much of LuaTeX's memory you used:
- 16725 strings out of 494338
+ 16798 strings out of 494338
  125171,552014 words of node,token memory allocated
  435 words of node memory still in use:
    3 hlist, 1 vlist, 1 rule, 2 glue, 3 kern, 1 glyph, 5 attribute, 53 glue_spec,
  5 attribute_list, 1 write nodes
    avail lists: 2:7019,3:422,4:1837,5:829,6:172,7:3393,8:84,9:797,10:10,11:55
- 16483 multiletter control sequences out of 65536+200000
+ 16488 multiletter control sequences out of 65536+200000
  54 fonts using 4526735 bytes
  44i,18n,45p,842b,723s stack positions out of 5000i,500n,10000p,200000b,50000s
 </home/san/.miktex/texmfs/install/fonts/opentype/public/lm/lmmonolt10-bold.otf><
@@ -1773,7 +1789,7 @@ home/san/.miktex/texmfs/install/fonts/opentype/public/lm/lmroman10-regular.otf><
 me/san/.miktex/texmfs/install/fonts/opentype/public/lm/lmsans10-regular.otf></ho
 me/san/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmmi5.pfb></home/sa
 n/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmsy5.pfb>
-Output written on Reference.pdf (21 pages, 241432 bytes).
+Output written on Reference.pdf (21 pages, 243380 bytes).
 
 PDF statistics: 575 PDF objects out of 1000 (max. 8388607)
  104 named destinations out of 1000 (max. 131072)

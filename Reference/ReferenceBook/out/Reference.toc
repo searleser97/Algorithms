@@ -53,9 +53,9 @@
 \contentsline {subsection}{Strongly Connected Components}{15}{section*.53}
 \contentsline {subsection}{Topological Sort}{15}{section*.54}
 \contentsline {subsection}{Topological Sort (All possible sorts)}{15}{section*.55}
-\contentsline {subsection}{Cycles}{15}{section*.56}
-\contentsline {subsubsection}{Get All Simple Cycles}{15}{section*.57}
-\contentsline {subsubsection}{Get Some Cycles}{15}{section*.58}
+\contentsline {subsection}{Cycles}{16}{section*.56}
+\contentsline {subsubsection}{Get All Simple Cycles}{16}{section*.57}
+\contentsline {subsubsection}{Get Some Cycles}{16}{section*.58}
 \contentsline {subsubsection}{Has Cycle}{16}{section*.59}
 \contentsline {subsection}{Flow}{16}{section*.60}
 \contentsline {subsubsection}{Max Flow Dinic}{16}{section*.61}
