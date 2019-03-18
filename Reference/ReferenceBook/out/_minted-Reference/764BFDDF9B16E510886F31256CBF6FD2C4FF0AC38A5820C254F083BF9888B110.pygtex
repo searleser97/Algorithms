@@ -1,7 +1,0 @@
-\begin{Verbatim}[commandchars=\\\{\}]
-\PYG{c+c1}{// O(lg(N))}
-\PYG{k+kt}{void} \PYG{n+nf}{update}\PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{i}\PYG{p}{,} \PYG{n}{T} \PYG{n}{val}\PYG{p}{)} \PYG{p}{\PYGZob{}}
-  \PYG{k}{for} \PYG{p}{(}\PYG{n}{i}\PYG{o}{++}\PYG{p}{;} \PYG{n}{i} \PYG{o}{\PYGZlt{}} \PYG{n}{bit}\PYG{p}{.}\PYG{n}{size}\PYG{p}{();} \PYG{n}{i} \PYG{o}{+=} \PYG{n}{i} \PYG{o}{\PYGZam{}} \PYG{o}{\PYGZhy{}}\PYG{n}{i}\PYG{p}{)}
-    \PYG{n}{bit}\PYG{p}{[}\PYG{n}{i}\PYG{p}{]} \PYG{o}{=} \PYG{n}{F}\PYG{p}{(}\PYG{n}{bit}\PYG{p}{[}\PYG{n}{i}\PYG{p}{],} \PYG{n}{val}\PYG{p}{);}
-\PYG{p}{\PYGZcb{}}
-\end{Verbatim}

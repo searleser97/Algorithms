@@ -1,9 +1,0 @@
-\begin{Verbatim}[commandchars=\\\{\}]
-  \PYG{c+c1}{// O(N)}
-  \PYG{n}{vector}\PYG{o}{\PYGZlt{}}\PYG{n}{string}\PYG{o}{\PYGZgt{}} \PYG{n}{getWords}\PYG{p}{()} \PYG{p}{\PYGZob{}}
-    \PYG{n}{vector}\PYG{o}{\PYGZlt{}}\PYG{n}{string}\PYG{o}{\PYGZgt{}} \PYG{n}{words}\PYG{p}{;}
-    \PYG{n}{string} \PYG{n}{word} \PYG{o}{=} \PYG{l+s}{\PYGZdq{}\PYGZdq{}}\PYG{p}{;}
-    \PYG{n}{getWords}\PYG{p}{(}\PYG{n}{root}\PYG{p}{,} \PYG{n}{words}\PYG{p}{,} \PYG{n}{word}\PYG{p}{);}
-    \PYG{k}{return} \PYG{n}{words}\PYG{p}{;}
-  \PYG{p}{\PYGZcb{}}
-\end{Verbatim}

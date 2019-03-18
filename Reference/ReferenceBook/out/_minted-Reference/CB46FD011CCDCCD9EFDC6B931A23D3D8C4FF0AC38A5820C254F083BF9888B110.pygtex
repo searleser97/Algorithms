@@ -1,8 +1,0 @@
-\begin{Verbatim}[commandchars=\\\{\}]
-\PYG{k+kt}{void} \PYG{n+nf}{preprocess}\PYG{p}{()} \PYG{p}{\PYGZob{}}
-  \PYG{k}{for} \PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{i} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{,} \PYG{n}{j} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{;} \PYG{n}{i} \PYG{o}{\PYGZlt{}} \PYG{n}{arr}\PYG{p}{.}\PYG{n}{size}\PYG{p}{();} \PYG{n}{i}\PYG{o}{++}\PYG{p}{)} \PYG{p}{\PYGZob{}}
-    \PYG{k}{if} \PYG{p}{(}\PYG{n}{i} \PYG{o}{==} \PYG{n}{blks}\PYG{p}{.}\PYG{n}{size}\PYG{p}{()} \PYG{o}{*} \PYG{n}{j}\PYG{p}{)} \PYG{n}{j}\PYG{o}{++}\PYG{p}{;}
-    \PYG{n}{blks}\PYG{p}{[}\PYG{n}{j} \PYG{o}{\PYGZhy{}} \PYG{l+m+mi}{1}\PYG{p}{]} \PYG{o}{+=} \PYG{n}{arr}\PYG{p}{[}\PYG{n}{i}\PYG{p}{];}  \PYG{c+c1}{// problem specific}
-  \PYG{p}{\PYGZcb{}}
-\PYG{p}{\PYGZcb{}}
-\end{Verbatim}

@@ -1,7 +1,0 @@
-\begin{Verbatim}[commandchars=\\\{\}]
-  \PYG{c+c1}{// O(lg(N))}
-  \PYG{k+kt}{void} \PYG{n+nf}{insert}\PYG{p}{(}\PYG{n}{K} \PYG{n}{key}\PYG{p}{,} \PYG{n}{V} \PYG{n}{val}\PYG{p}{)} \PYG{p}{\PYGZob{}}
-    \PYG{n}{root} \PYG{o}{=} \PYG{n}{insert}\PYG{p}{(}\PYG{n}{root}\PYG{p}{,} \PYG{n}{key}\PYG{p}{,} \PYG{n}{val}\PYG{p}{);}
-  \PYG{p}{\PYGZcb{}}
-\PYG{p}{\PYGZcb{};}
-\end{Verbatim}

@@ -1,7 +1,0 @@
-\begin{Verbatim}[commandchars=\\\{\}]
-  \PYG{c+c1}{// O(2N)}
-  \PYG{k+kt}{void} \PYG{n+nf}{build}\PYG{p}{()} \PYG{p}{\PYGZob{}}
-    \PYG{k}{for} \PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{i} \PYG{o}{=} \PYG{n}{N} \PYG{o}{\PYGZhy{}} \PYG{l+m+mi}{1}\PYG{p}{;} \PYG{n}{i} \PYG{o}{\PYGZgt{}} \PYG{l+m+mi}{0}\PYG{p}{;} \PYG{n}{i}\PYG{o}{\PYGZhy{}\PYGZhy{}}\PYG{p}{)}
-      \PYG{n}{st}\PYG{p}{[}\PYG{n}{i}\PYG{p}{]} \PYG{o}{=} \PYG{n}{F}\PYG{p}{(}\PYG{n}{st}\PYG{p}{[}\PYG{n}{i} \PYG{o}{\PYGZlt{}\PYGZlt{}} \PYG{l+m+mi}{1}\PYG{p}{],} \PYG{n}{st}\PYG{p}{[}\PYG{n}{i} \PYG{o}{\PYGZlt{}\PYGZlt{}} \PYG{l+m+mi}{1} \PYG{o}{|} \PYG{l+m+mi}{1}\PYG{p}{]);}
-  \PYG{p}{\PYGZcb{}}
-\end{Verbatim}

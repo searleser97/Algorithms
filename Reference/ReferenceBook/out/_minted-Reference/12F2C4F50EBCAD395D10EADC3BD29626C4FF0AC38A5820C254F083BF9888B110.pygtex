@@ -1,5 +1,0 @@
-\begin{Verbatim}[commandchars=\\\{\}]
-\PYG{k}{struct} \PYG{n}{Query} \PYG{p}{\PYGZob{}}
-  \PYG{k+kt}{int} \PYG{n}{l}\PYG{p}{,} \PYG{n}{r}\PYG{p}{;}
-\PYG{p}{\PYGZcb{};}
-\end{Verbatim}
