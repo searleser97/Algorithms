@@ -1,3 +1,0 @@
-\begin{Verbatim}[commandchars=\\\{\}]
-\PYG{k+kt}{bool} \PYG{n+nf}{isPowerOf2}\PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{n}\PYG{p}{)} \PYG{p}{\PYGZob{}} \PYG{k}{return} \PYG{n}{n} \PYG{o}{\PYGZam{}\PYGZam{}} \PYG{o}{!}\PYG{p}{(}\PYG{n}{n} \PYG{o}{\PYGZam{}} \PYG{p}{(}\PYG{n}{n} \PYG{o}{\PYGZhy{}} \PYG{l+m+mi}{1}\PYG{p}{));} \PYG{p}{\PYGZcb{}}
-\end{Verbatim}

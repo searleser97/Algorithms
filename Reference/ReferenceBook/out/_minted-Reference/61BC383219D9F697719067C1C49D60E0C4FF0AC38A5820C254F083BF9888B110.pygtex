@@ -1,7 +1,0 @@
-\begin{Verbatim}[commandchars=\\\{\}]
-\PYG{k+kt}{int} \PYG{n+nf}{popCount}\PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{n}\PYG{p}{)} \PYG{p}{\PYGZob{}}
-  \PYG{k}{return} \PYG{n}{\PYGZus{}\PYGZus{}builtin\PYGZus{}popcount}\PYG{p}{(}\PYG{n}{n}\PYG{p}{);}
-  \PYG{c+c1}{// return \PYGZus{}\PYGZus{}builtin\PYGZus{}popcountl(n); for long}
-  \PYG{c+c1}{// return \PYGZus{}\PYGZus{}builtin\PYGZus{}popcountll(n); for long long}
-\PYG{p}{\PYGZcb{}}
-\end{Verbatim}

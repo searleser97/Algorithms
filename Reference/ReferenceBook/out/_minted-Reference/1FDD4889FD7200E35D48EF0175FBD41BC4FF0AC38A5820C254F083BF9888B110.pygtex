@@ -1,3 +1,0 @@
-\begin{Verbatim}[commandchars=\\\{\}]
-\PYG{k+kt}{int} \PYG{n+nf}{multiplyBy2}\PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{n}\PYG{p}{)} \PYG{p}{\PYGZob{}} \PYG{k}{return} \PYG{n}{n} \PYG{o}{\PYGZlt{}\PYGZlt{}} \PYG{l+m+mi}{1}\PYG{p}{;} \PYG{p}{\PYGZcb{}}
-\end{Verbatim}

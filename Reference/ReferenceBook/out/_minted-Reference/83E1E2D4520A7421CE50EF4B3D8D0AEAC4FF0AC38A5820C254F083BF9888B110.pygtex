@@ -1,7 +1,0 @@
-\begin{Verbatim}[commandchars=\\\{\}]
-  \PYG{k+kt}{void} \PYG{n+nf}{flipColors}\PYG{p}{(}\PYG{n}{Node} \PYG{o}{*}\PYG{n}{h}\PYG{p}{)} \PYG{p}{\PYGZob{}}
-    \PYG{n}{h}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{isRed} \PYG{o}{=} \PYG{l+m+mi}{1}\PYG{p}{;}
-    \PYG{n}{h}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{l}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{isRed} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{;}
-    \PYG{n}{h}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{r}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{isRed} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{;}
-  \PYG{p}{\PYGZcb{}}
-\end{Verbatim}

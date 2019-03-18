@@ -1,5 +1,0 @@
-\begin{Verbatim}[commandchars=\\\{\}]
-\PYG{c+c1}{// cap[a][b] = Capacity from a to b}
-\PYG{c+c1}{// flow[a][b] = flow occupied from a to b}
-\PYG{c+c1}{// level[a] = level in graph of node a}
-\end{Verbatim}
