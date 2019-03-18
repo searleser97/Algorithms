@@ -1,0 +1,4 @@
+BasedOnStyle: Google
+AllowShortFunctionsOnASingleLine: true
+ColumnLimit : 54
+IndentWidth: 2
