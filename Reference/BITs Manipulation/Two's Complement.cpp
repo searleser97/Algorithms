@@ -1,0 +1,1 @@
+int twosComplement(int n) { return ~n + 1; }

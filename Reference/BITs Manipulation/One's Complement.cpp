@@ -1,0 +1,1 @@
+int onesComplement(int n) { return ~n; }
