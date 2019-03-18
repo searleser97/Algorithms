@@ -6,5 +6,5 @@ int Log2(int n) {
 }
 // 3
 int Log2(int n) {
-  return sizeof(n) - __builtin_clz(n);
+  return sizeof(n) * 8 - __builtin_clz(n);
 }

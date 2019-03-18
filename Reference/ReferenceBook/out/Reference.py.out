@@ -1,10 +1,20 @@
-\needspace{14\baselineskip}
+\needspace{10\baselineskip}
 \sectionfont{\bfseries\sffamily\centering\Huge}
 \vspace{1em}
 \section*{BITs Manipulation}
 \markboth{BITS MANIPULATION}{}
 \addcontentsline{toc}{section}{BITs Manipulation}
 \vspace{3em}
+\subsectionfont{\large\bfseries\sffamily\underline}
+\subsection*{Count Bits}
+\addcontentsline{toc}{subsection}{Count Bits}
+\begin{minted}{cpp}
+int bitCount(int n) {
+  return sizeof(n) * 8 - __builtin_clz(n) + 1;
+}
+\end{minted}
+
+\needspace{10\baselineskip}
 \subsectionfont{\large\bfseries\sffamily\underline}
 \subsection*{Count Leading Zeroes}
 \addcontentsline{toc}{subsection}{Count Leading Zeroes}
@@ -114,7 +124,7 @@ int Log2(int n) {
 \needspace{3\baselineskip}
 \begin{minted}{cpp}
 int Log2(int n) {
-  return sizeof(n) - __builtin_clz(n);
+  return sizeof(n) * 8 - __builtin_clz(n);
 }
 \end{minted}
 
@@ -879,7 +889,7 @@ struct SegmentTree {
       : st(2 * n, neutro), d(n), u(n, 0) {
     H = sizeof(int) * 8 - __builtin_clz(N = n);
   }
-\end{minted}
+  \end{minted}
 \vspace{-12pt}
 \needspace{6\baselineskip}
 \begin{minted}{cpp}
@@ -889,7 +899,7 @@ struct SegmentTree {
     // return a * b;
     // return min(a, b);
   }
-\end{minted}
+  \end{minted}
 \vspace{-12pt}
 \needspace{6\baselineskip}
 \begin{minted}{cpp}
