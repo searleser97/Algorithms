@@ -1,1 +1,1 @@
-bool isPowerOf2(int n) { return n & (n - 1); }
+bool isPowerOf2(int n) { return n && !(n & (n - 1)); }

@@ -6,15 +6,24 @@
 \addcontentsline{toc}{section}{BITs Manipulation}
 \vspace{3em}
 \subsectionfont{\large\bfseries\sffamily\underline}
-\subsection*{Count Bits}
-\addcontentsline{toc}{subsection}{Count Bits}
+\subsection*{Bit Count}
+\addcontentsline{toc}{subsection}{Bit Count}
 \begin{minted}{cpp}
 int bitCount(int n) {
   return sizeof(n) * 8 - __builtin_clz(n) + 1;
 }
 \end{minted}
+\vspace{-12pt}
+\needspace{5\baselineskip}
+\begin{minted}{cpp}
+int bitCount(int n) {
+  int c = 0;
+  while (n) c++, n >>= 1;
+  return c;
+}
+\end{minted}
 
-\needspace{10\baselineskip}
+\needspace{8\baselineskip}
 \subsectionfont{\large\bfseries\sffamily\underline}
 \subsection*{Count Leading Zeroes}
 \addcontentsline{toc}{subsection}{Count Leading Zeroes}
@@ -23,6 +32,16 @@ int clz(int n) {
   return __builtin_clz(n);
   // return __builtin_clzl(n); for long
   // return __builtin_clzll(n); for long long
+}
+\end{minted}
+\vspace{-12pt}
+\needspace{6\baselineskip}
+\begin{minted}{cpp}
+int clz(int n) {
+  // return sizeof(n) * 8 - bitCount(n);
+  int c = 0;
+  while (n) c++, n >>= 1;
+  return sizeof(n) * 8 - c;
 }
 \end{minted}
 
@@ -58,6 +77,16 @@ int ctz(int n) {
   // return __builtin_ctzll(n); for long long
 }
 \end{minted}
+\vspace{-12pt}
+\needspace{6\baselineskip}
+\begin{minted}{cpp}
+int ctz(int n) {
+  int c = 0;
+  n = ~n;
+  while(n & 1) c++, n >>= 1;
+  return c;
+}
+\end{minted}
 
 \needspace{3\baselineskip}
 \subsectionfont{\large\bfseries\sffamily\underline}
@@ -80,7 +109,7 @@ int lastSetBit(int n) { return n & -n; }
 \subsection*{Is Even}
 \addcontentsline{toc}{subsection}{Is Even}
 \begin{minted}{cpp}
-bool isEven(int n) { return n & 1; }
+bool isEven(int n) { return ~n & 1; }
 \end{minted}
 
 \needspace{6\baselineskip}
@@ -98,7 +127,7 @@ bool isIthBitSet(int n, int i) {
 \subsection*{Is Odd}
 \addcontentsline{toc}{subsection}{Is Odd}
 \begin{minted}{cpp}
-bool isOdd(int n) { return ~n & 1; }
+bool isOdd(int n) { return n & 1; }
 \end{minted}
 
 \needspace{3\baselineskip}
@@ -106,25 +135,25 @@ bool isOdd(int n) { return ~n & 1; }
 \subsection*{Is Power Of 2}
 \addcontentsline{toc}{subsection}{Is Power Of 2}
 \begin{minted}{cpp}
-bool isPowerOf2(int n) { return n & (n - 1); }
+bool isPowerOf2(int n) { return n && !(n & (n - 1)); }
 \end{minted}
 
-\needspace{8\baselineskip}
+\needspace{6\baselineskip}
 \subsectionfont{\large\bfseries\sffamily\underline}
 \subsection*{Log2}
 \addcontentsline{toc}{subsection}{Log2}
 \begin{minted}{cpp}
 int Log2(int n) {
-  int lg2 = 0;
-  while (n) lg2++, n >>= 1;
-  return lg2;
+  return sizeof(n) * 8 - __builtin_clz(n);
 }
 \end{minted}
 \vspace{-12pt}
-\needspace{3\baselineskip}
+\needspace{5\baselineskip}
 \begin{minted}{cpp}
 int Log2(int n) {
-  return sizeof(n) * 8 - __builtin_clz(n);
+  int lg2 = 0;
+  while (n >>= 1) lg2++;
+  return lg2;
 }
 \end{minted}
 
