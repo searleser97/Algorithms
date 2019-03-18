@@ -1,4 +1,4 @@
-This is LuaTeX, Version 1.09.2 (MiKTeX 2.9.6980)  (format=lualatex 2018.12.9)  18 MAR 2019 10:20
+This is LuaTeX, Version 1.09.2 (MiKTeX 2.9.6980)  (format=lualatex 2018.12.9)  18 MAR 2019 10:42
  system commands enabled.
  file:line:error style messages enabled.
 **Reference.tex
@@ -49,7 +49,7 @@ Inserting `luaotfload.aux.set_capheight' at position 3 in `luaotfload.patch_font
 '.
 Inserting `luaotfload.rewrite_fontname' at position 4 in `luaotfload.patch_font'
 .
-luaotfload | main : initialization completed in 0.150 seconds
+luaotfload | main : initialization completed in 0.148 seconds
 (/home/san/.miktex/texmfs/install/tex/latex/base/article.cls
 Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
 (/home/san/.miktex/texmfs/install/tex/latex/base/size10.clo
@@ -744,7 +744,7 @@ Package: lscape 2000/10/22 v3.01 Landscape Pages (DPC)
 )
 Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 )
-<TitlePage.pdf, id=399, 614.295pt x 794.97pt>
+<TitlePage.pdf, id=403, 614.295pt x 794.97pt>
 File: TitlePage.pdf Graphic file (type pdf)
 <use TitlePage.pdf>
 Package luatex.def Info: TitlePage.pdf  used on input line 42.
@@ -753,7 +753,7 @@ File: TitlePage.pdf Graphic file (type pdf)
 <use TitlePage.pdf>
 Package luatex.def Info: TitlePage.pdf  used on input line 42.
 (luatex.def)             Requested size: 614.29349pt x 794.96806pt.
-<TitlePage.pdf, id=402, page=1, 614.295pt x 794.97pt>
+<TitlePage.pdf, id=406, page=1, 614.295pt x 794.97pt>
 File: TitlePage.pdf Graphic file (type pdf)
 <use TitlePage.pdf, page 1>
 Package luatex.def Info: TitlePage.pdf , page1 used on input line 42.
@@ -834,6 +834,10 @@ LaTeX Font Info:    Font shape `TU/lmtt/bx/n' in size <10> not available
 88B110.pygtex)
 \openout3 = Reference.pyg
 
+(./_minted-Reference/68B329DA9893E34099C7D8AD5CB9C940C4FF0AC38A5820C254F083BF98
+88B110.pygtex)
+\openout3 = Reference.pyg
+
 (./_minted-Reference/B94041A0F157CF7DA67FC18D6E29AB6AC4FF0AC38A5820C254F083BF98
 88B110.pygtex)
 \openout3 = Reference.pyg
@@ -890,7 +894,7 @@ LaTeX Font Info:    Font shape `TU/lmtt/bx/n' in size <10> not available
 88B110.pygtex)
 Package babel Info: No hyphenation patterns were set for
 (babel)             lan
-guage 'english'. Reported on input line 186.
+guage 'english'. Reported on input line 194.
  [4]
 \openout3 = Reference.pyg
 
@@ -942,7 +946,7 @@ guage 'english'. Reported on input line 186.
 88B110.pygtex)
 Package babel Info: No hyphenation patterns were set for
 (babel)             lan
-guage 'english'. Reported on input line 340.
+guage 'english'. Reported on input line 348.
  [5]
 \openout3 = Reference.pyg
 
@@ -998,7 +1002,7 @@ guage 'english'. Reported on input line 340.
 272C6A.pygtex)
 Package babel Info: No hyphenation patterns were set for
 (babel)             lan
-guage 'english'. Reported on input line 498.
+guage 'english'. Reported on input line 506.
  [6]
 \openout3 = Reference.pyg
 
@@ -1062,7 +1066,7 @@ guage 'english'. Reported on input line 498.
 88B110.pygtex)
 Package babel Info: No hyphenation patterns were set for
 (babel)             lan
-guage 'english'. Reported on input line 671.
+guage 'english'. Reported on input line 679.
  [7]
 \openout3 = Reference.pyg
 
@@ -1138,7 +1142,7 @@ guage 'english'. Reported on input line 671.
 88B110.pygtex)
 Package babel Info: No hyphenation patterns were set for
 (babel)             lan
-guage 'english'. Reported on input line 846.
+guage 'english'. Reported on input line 854.
  [8]
 \openout3 = Reference.pyg
 
@@ -1206,7 +1210,7 @@ guage 'english'. Reported on input line 846.
 88B110.pygtex)
 Package babel Info: No hyphenation patterns were set for
 (babel)             lan
-guage 'english'. Reported on input line 1015.
+guage 'english'. Reported on input line 1023.
  [9]
 \openout3 = Reference.pyg
 
@@ -1258,7 +1262,7 @@ guage 'english'. Reported on input line 1015.
 88B110.pygtex)
 Package babel Info: No hyphenation patterns were set for
 (babel)             lan
-guage 'english'. Reported on input line 1167.
+guage 'english'. Reported on input line 1175.
  [10]
 \openout3 = Reference.pyg
 
@@ -1310,7 +1314,7 @@ guage 'english'. Reported on input line 1167.
 88B110.pygtex)
 Package babel Info: No hyphenation patterns were set for
 (babel)             lan
-guage 'english'. Reported on input line 1337.
+guage 'english'. Reported on input line 1345.
  [11]
 \openout3 = Reference.pyg
 
@@ -1354,7 +1358,7 @@ guage 'english'. Reported on input line 1337.
 88B110.pygtex)
 Package babel Info: No hyphenation patterns were set for
 (babel)             lan
-guage 'english'. Reported on input line 1470.
+guage 'english'. Reported on input line 1478.
  [12]
 \openout3 = Reference.pyg
 
@@ -1406,7 +1410,7 @@ guage 'english'. Reported on input line 1470.
 88B110.pygtex)
 Package babel Info: No hyphenation patterns were set for
 (babel)             lan
-guage 'english'. Reported on input line 1623.
+guage 'english'. Reported on input line 1631.
  [13]
 \openout3 = Reference.pyg
 
@@ -1462,7 +1466,7 @@ guage 'english'. Reported on input line 1623.
 88B110.pygtex)
 Package babel Info: No hyphenation patterns were set for
 (babel)             lan
-guage 'english'. Reported on input line 1787.
+guage 'english'. Reported on input line 1795.
  [14]
 \openout3 = Reference.pyg
 
@@ -1498,7 +1502,7 @@ guage 'english'. Reported on input line 1787.
 88B110.pygtex)
 Package babel Info: No hyphenation patterns were set for
 (babel)             lan
-guage 'english'. Reported on input line 1921.
+guage 'english'. Reported on input line 1929.
  [15]
 \openout3 = Reference.pyg
 
@@ -1550,7 +1554,7 @@ guage 'english'. Reported on input line 1921.
 88B110.pygtex)
 Package babel Info: No hyphenation patterns were set for
 (babel)             lan
-guage 'english'. Reported on input line 2073.
+guage 'english'. Reported on input line 2081.
  [16]
 \openout3 = Reference.pyg
 
@@ -1610,7 +1614,7 @@ guage 'english'. Reported on input line 2073.
 88B110.pygtex)
 Package babel Info: No hyphenation patterns were set for
 (babel)             lan
-guage 'english'. Reported on input line 2228.
+guage 'english'. Reported on input line 2236.
  [17]
 \openout3 = Reference.pyg
 
@@ -1670,7 +1674,7 @@ guage 'english'. Reported on input line 2228.
 88B110.pygtex)
 Package babel Info: No hyphenation patterns were set for
 (babel)             lan
-guage 'english'. Reported on input line 2400.
+guage 'english'. Reported on input line 2408.
  [18]
 \openout3 = Reference.pyg
 
@@ -1706,7 +1710,7 @@ guage 'english'. Reported on input line 2400.
 272C6A.pygtex)
 Package babel Info: No hyphenation patterns were set for
 (babel)             lan
-guage 'english'. Reported on input line 2543.
+guage 'english'. Reported on input line 2551.
  [19]
 \openout3 = Reference.pyg
 
@@ -1742,7 +1746,7 @@ guage 'english'. Reported on input line 2543.
 88B110.pygtex)
 Package babel Info: No hyphenation patterns were set for
 (babel)             lan
-guage 'english'. Reported on input line 2688.
+guage 'english'. Reported on input line 2696.
  [20]
 \openout3 = Reference.pyg
 
@@ -1802,7 +1806,7 @@ guage 'english'. Reported on input line 2688.
 88B110.pygtex)
 Package babel Info: No hyphenation patterns were set for
 (babel)             lan
-guage 'english'. Reported on input line 2850.
+guage 'english'. Reported on input line 2858.
  [21]
 \openout3 = Reference.pyg
 
@@ -1852,18 +1856,18 @@ Package babel Info: No hyphenation patterns were set for
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 52.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 52.
 Package rerunfilecheck Info: File `Reference.out' has not changed.
-(rerunfilecheck)             Checksum: 3C036AC3061FCAED18F49163B98AB210;6025.
+(rerunfilecheck)             Checksum: 234DE4C420E7D61EBE79FE0D0F22591D;6091.
 )
 
 Here is how much of LuaTeX's memory you used:
- 17195 strings out of 494338
+ 17214 strings out of 494338
  125171,552014 words of node,token memory allocated
  435 words of node memory still in use:
    3 hlist, 1 vlist, 1 rule, 2 glue, 3 kern, 1 glyph, 5 attribute, 53 glue_spec,
  5 attribute_list, 1 write nodes
-   avail lists: 1:1,2:7023,3:512,4:1837,5:829,6:208,7:3393,8:102,9:800,10:10,11:
+   avail lists: 1:1,2:7023,3:517,4:1837,5:829,6:210,7:3393,8:103,9:800,10:10,11:
 55
- 16526 multiletter control sequences out of 65536+200000
+ 16527 multiletter control sequences out of 65536+200000
  54 fonts using 4526735 bytes
  44i,18n,45p,842b,643s stack positions out of 5000i,500n,10000p,200000b,50000s
 </home/san/.miktex/texmfs/install/fonts/opentype/public/lm/lmmono10-italic.otf><
@@ -1874,9 +1878,9 @@ home/san/.miktex/texmfs/install/fonts/opentype/public/lm/lmroman10-regular.otf><
 me/san/.miktex/texmfs/install/fonts/opentype/public/lm/lmsans10-regular.otf></ho
 me/san/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmmi5.pfb></home/sa
 n/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmsy5.pfb>
-Output written on Reference.pdf (22 pages, 258147 bytes).
+Output written on Reference.pdf (22 pages, 258721 bytes).
 
-PDF statistics: 669 PDF objects out of 1000 (max. 8388607)
- 123 named destinations out of 1000 (max. 131072)
- 793 words of extra memory for PDF output out of 10000 (max. 100000000)
+PDF statistics: 674 PDF objects out of 1000 (max. 8388607)
+ 124 named destinations out of 1000 (max. 131072)
+ 801 words of extra memory for PDF output out of 10000 (max. 100000000)
 

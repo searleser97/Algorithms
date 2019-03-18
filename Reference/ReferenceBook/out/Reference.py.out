@@ -18,8 +18,8 @@ int clz(int n) {
 
 \needspace{8\baselineskip}
 \subsectionfont{\large\bfseries\sffamily\underline}
-\subsection*{Count set bits}
-\addcontentsline{toc}{subsection}{Count set bits}
+\subsection*{Count Set Bits}
+\addcontentsline{toc}{subsection}{Count Set Bits}
 \begin{minted}{cpp}
 int popCount(int n) {
   return __builtin_popcount(n);
@@ -51,10 +51,18 @@ int ctz(int n) {
 
 \needspace{3\baselineskip}
 \subsectionfont{\large\bfseries\sffamily\underline}
-\subsection*{Divide by 2}
-\addcontentsline{toc}{subsection}{Divide by 2}
+\subsection*{Divide By 2}
+\addcontentsline{toc}{subsection}{Divide By 2}
 \begin{minted}{cpp}
 int divideBy2(int n) { return n >> 1; }
+\end{minted}
+
+\needspace{3\baselineskip}
+\subsectionfont{\large\bfseries\sffamily\underline}
+\subsection*{Get Last Set Bit}
+\addcontentsline{toc}{subsection}{Get Last Set Bit}
+\begin{minted}{cpp}
+
 \end{minted}
 
 \needspace{3\baselineskip}
@@ -67,8 +75,8 @@ bool isEven(int n) { return n & 1; }
 
 \needspace{6\baselineskip}
 \subsectionfont{\large\bfseries\sffamily\underline}
-\subsection*{Is i-th bit set}
-\addcontentsline{toc}{subsection}{Is i-th bit set}
+\subsection*{Is i-th Bit Set}
+\addcontentsline{toc}{subsection}{Is i-th Bit Set}
 \begin{minted}{cpp}
 bool isIthBitSet(int n, int i) {
   return n & (1 << i);
@@ -85,8 +93,8 @@ bool isOdd(int n) { return ~n & 1; }
 
 \needspace{3\baselineskip}
 \subsectionfont{\large\bfseries\sffamily\underline}
-\subsection*{Is power of 2}
-\addcontentsline{toc}{subsection}{Is power of 2}
+\subsection*{Is Power Of 2}
+\addcontentsline{toc}{subsection}{Is Power Of 2}
 \begin{minted}{cpp}
 bool isPowerOf2(int n) { return n & (n - 1); }
 \end{minted}
@@ -112,8 +120,8 @@ int Log2(int n) {
 
 \needspace{3\baselineskip}
 \subsectionfont{\large\bfseries\sffamily\underline}
-\subsection*{Multiply by 2}
-\addcontentsline{toc}{subsection}{Multiply by 2}
+\subsection*{Multiply By 2}
+\addcontentsline{toc}{subsection}{Multiply By 2}
 \begin{minted}{cpp}
 int multiplyBy2(int n) { return n << 1; }
 \end{minted}
@@ -147,8 +155,8 @@ bool parityCheck(int n) {
 
 \needspace{3\baselineskip}
 \subsectionfont{\large\bfseries\sffamily\underline}
-\subsection*{Set i-th bit}
-\addcontentsline{toc}{subsection}{Set i-th bit}
+\subsection*{Set i-th Bit}
+\addcontentsline{toc}{subsection}{Set i-th Bit}
 \begin{minted}{cpp}
 int setIthBit(int n, int i) { return n | (1 << i); }
 \end{minted}
@@ -167,8 +175,8 @@ void swap(int &a, int &b) {
 
 \needspace{6\baselineskip}
 \subsectionfont{\large\bfseries\sffamily\underline}
-\subsection*{Toggle i-th bit}
-\addcontentsline{toc}{subsection}{Toggle i-th bit}
+\subsection*{Toggle i-th Bit}
+\addcontentsline{toc}{subsection}{Toggle i-th Bit}
 \begin{minted}{cpp}
 int toggleIthBit(int n, int i) {
   return n ^ (1 << i);
@@ -185,8 +193,8 @@ int twosComplement(int n) { return ~n + 1; }
 
 \needspace{6\baselineskip}
 \subsectionfont{\large\bfseries\sffamily\underline}
-\subsection*{Unset i-th bit}
-\addcontentsline{toc}{subsection}{Unset i-th bit}
+\subsection*{Unset i-th Bit}
+\addcontentsline{toc}{subsection}{Unset i-th Bit}
 \begin{minted}{cpp}
 int unsetIthBit(int n, int i) {
   return n & (~(1 << i));
@@ -791,7 +799,7 @@ struct SegmentTree {
     // return a * b;
     // return min(a, b);
   }
-  \end{minted}
+\end{minted}
 \vspace{-12pt}
 \needspace{5\baselineskip}
 \begin{minted}{cpp}
@@ -800,7 +808,7 @@ struct SegmentTree {
     for (int i = N - 1; i > 0; i--)
       st[i] = F(st[i << 1], st[i << 1 | 1]);
   }
-  \end{minted}
+\end{minted}
 \vspace{-12pt}
 \needspace{5\baselineskip}
 \begin{minted}{cpp}
@@ -871,7 +879,7 @@ struct SegmentTree {
       : st(2 * n, neutro), d(n), u(n, 0) {
     H = sizeof(int) * 8 - __builtin_clz(N = n);
   }
-  \end{minted}
+\end{minted}
 \vspace{-12pt}
 \needspace{6\baselineskip}
 \begin{minted}{cpp}
@@ -881,7 +889,7 @@ struct SegmentTree {
     // return a * b;
     // return min(a, b);
   }
-  \end{minted}
+\end{minted}
 \vspace{-12pt}
 \needspace{6\baselineskip}
 \begin{minted}{cpp}
