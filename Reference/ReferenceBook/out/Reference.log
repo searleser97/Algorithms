@@ -1,4 +1,4 @@
-This is LuaTeX, Version 1.09.2 (MiKTeX 2.9.6980)  (format=lualatex 2018.12.9)  18 MAR 2019 10:42
+This is LuaTeX, Version 1.09.2 (MiKTeX 2.9.6980)  (format=lualatex 2018.12.9)  18 MAR 2019 10:45
  system commands enabled.
  file:line:error style messages enabled.
 **Reference.tex
@@ -49,7 +49,7 @@ Inserting `luaotfload.aux.set_capheight' at position 3 in `luaotfload.patch_font
 '.
 Inserting `luaotfload.rewrite_fontname' at position 4 in `luaotfload.patch_font'
 .
-luaotfload | main : initialization completed in 0.148 seconds
+luaotfload | main : initialization completed in 0.147 seconds
 (/home/san/.miktex/texmfs/install/tex/latex/base/article.cls
 Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
 (/home/san/.miktex/texmfs/install/tex/latex/base/size10.clo
@@ -834,7 +834,7 @@ LaTeX Font Info:    Font shape `TU/lmtt/bx/n' in size <10> not available
 88B110.pygtex)
 \openout3 = Reference.pyg
 
-(./_minted-Reference/68B329DA9893E34099C7D8AD5CB9C940C4FF0AC38A5820C254F083BF98
+(./_minted-Reference/4E2AA8C3F4BA828F2E4A34C243F0EF98C4FF0AC38A5820C254F083BF98
 88B110.pygtex)
 \openout3 = Reference.pyg
 
@@ -1860,14 +1860,14 @@ Package rerunfilecheck Info: File `Reference.out' has not changed.
 )
 
 Here is how much of LuaTeX's memory you used:
- 17214 strings out of 494338
+ 17215 strings out of 494338
  125171,552014 words of node,token memory allocated
  435 words of node memory still in use:
    3 hlist, 1 vlist, 1 rule, 2 glue, 3 kern, 1 glyph, 5 attribute, 53 glue_spec,
  5 attribute_list, 1 write nodes
    avail lists: 1:1,2:7023,3:517,4:1837,5:829,6:210,7:3393,8:103,9:800,10:10,11:
 55
- 16527 multiletter control sequences out of 65536+200000
+ 16528 multiletter control sequences out of 65536+200000
  54 fonts using 4526735 bytes
  44i,18n,45p,842b,643s stack positions out of 5000i,500n,10000p,200000b,50000s
 </home/san/.miktex/texmfs/install/fonts/opentype/public/lm/lmmono10-italic.otf><
@@ -1878,7 +1878,7 @@ home/san/.miktex/texmfs/install/fonts/opentype/public/lm/lmroman10-regular.otf><
 me/san/.miktex/texmfs/install/fonts/opentype/public/lm/lmsans10-regular.otf></ho
 me/san/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmmi5.pfb></home/sa
 n/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmsy5.pfb>
-Output written on Reference.pdf (22 pages, 258721 bytes).
+Output written on Reference.pdf (22 pages, 258814 bytes).
 
 PDF statistics: 674 PDF objects out of 1000 (max. 8388607)
  124 named destinations out of 1000 (max. 131072)

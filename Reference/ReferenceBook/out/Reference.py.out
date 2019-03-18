@@ -62,7 +62,7 @@ int divideBy2(int n) { return n >> 1; }
 \subsection*{Get Last Set Bit}
 \addcontentsline{toc}{subsection}{Get Last Set Bit}
 \begin{minted}{cpp}
-
+int lastSetBit(int n) { return n & -n; }
 \end{minted}
 
 \needspace{3\baselineskip}
@@ -799,7 +799,7 @@ struct SegmentTree {
     // return a * b;
     // return min(a, b);
   }
-\end{minted}
+  \end{minted}
 \vspace{-12pt}
 \needspace{5\baselineskip}
 \begin{minted}{cpp}
@@ -808,7 +808,7 @@ struct SegmentTree {
     for (int i = N - 1; i > 0; i--)
       st[i] = F(st[i << 1], st[i << 1 | 1]);
   }
-\end{minted}
+  \end{minted}
 \vspace{-12pt}
 \needspace{5\baselineskip}
 \begin{minted}{cpp}
