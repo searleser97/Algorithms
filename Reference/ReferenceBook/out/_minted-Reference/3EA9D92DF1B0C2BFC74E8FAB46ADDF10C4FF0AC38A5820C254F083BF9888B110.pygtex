@@ -1,0 +1,7 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{// val = value}
+\PYG{k}{typedef} \PYG{n}{string} \PYG{n}{Val}\PYG{p}{;}
+\PYG{n}{unordered\PYGZus{}map}\PYG{o}{\PYGZlt{}}\PYG{n}{Val}\PYG{p}{,} \PYG{k+kt}{int}\PYG{o}{\PYGZgt{}} \PYG{n}{intForVal}\PYG{p}{;}
+\PYG{n}{unordered\PYGZus{}map}\PYG{o}{\PYGZlt{}}\PYG{k+kt}{int}\PYG{p}{,} \PYG{n}{Val}\PYG{o}{\PYGZgt{}} \PYG{n}{valForInt}\PYG{p}{;}
+\PYG{k+kt}{int} \PYG{n}{mapId} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{;}
+\end{Verbatim}

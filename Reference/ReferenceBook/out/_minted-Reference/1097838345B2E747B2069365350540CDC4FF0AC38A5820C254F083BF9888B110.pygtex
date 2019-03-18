@@ -1,0 +1,5 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k+kt}{bool} \PYG{n+nf}{parityCheck}\PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{n}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+  \PYG{k}{return} \PYG{n}{isEven}\PYG{p}{(}\PYG{n}{popCount}\PYG{p}{(}\PYG{n}{n}\PYG{p}{));}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

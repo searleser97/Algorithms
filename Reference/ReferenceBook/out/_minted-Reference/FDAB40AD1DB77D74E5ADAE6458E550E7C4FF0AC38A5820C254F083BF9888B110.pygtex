@@ -1,0 +1,7 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{typedef} \PYG{k+kt}{long} \PYG{k+kt}{long} \PYG{k+kt}{int} \PYG{n}{lli}\PYG{p}{;}
+
+\PYG{n}{lli} \PYG{n+nf}{bitsInInt}\PYG{p}{(}\PYG{n}{lli} \PYG{n}{n}\PYG{p}{)} \PYG{p}{\PYGZob{}}  \PYG{c+c1}{// clz = count leading zeroes}
+  \PYG{k}{return} \PYG{k}{sizeof}\PYG{p}{(}\PYG{n}{n}\PYG{p}{)} \PYG{o}{*} \PYG{l+m+mi}{8} \PYG{o}{\PYGZhy{}} \PYG{n}{\PYGZus{}\PYGZus{}builtin\PYGZus{}clzll}\PYG{p}{(}\PYG{n}{n}\PYG{p}{);}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

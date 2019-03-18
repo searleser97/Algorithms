@@ -1,0 +1,10 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{// iterative}
+\PYG{k+kt}{int} \PYG{n+nf}{gcd}\PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{a}\PYG{p}{,} \PYG{k+kt}{int} \PYG{n}{b}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+  \PYG{k}{while} \PYG{p}{(}\PYG{n}{b}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+    \PYG{n}{a} \PYG{o}{\PYGZpc{}=} \PYG{n}{b}\PYG{p}{;}
+    \PYG{n}{swap}\PYG{p}{(}\PYG{n}{a}\PYG{p}{,} \PYG{n}{b}\PYG{p}{);}
+  \PYG{p}{\PYGZcb{}}
+  \PYG{k}{return} \PYG{n}{a}\PYG{p}{;}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

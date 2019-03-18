@@ -7,6 +7,6 @@ int popCount(int n) {
 // 5
 int popCount(int n) {
   int c = 0;
-  while (n) c += n & 1, n >>= 1;
+  while (n) c++, n &= n - 1;
   return c;
 }

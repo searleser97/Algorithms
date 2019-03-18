@@ -1,0 +1,6 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k+kt}{bool} \PYG{n+nf}{cmp}\PYG{p}{(}\PYG{n}{Query} \PYG{o}{\PYGZam{}}\PYG{n}{a}\PYG{p}{,} \PYG{n}{Query} \PYG{o}{\PYGZam{}}\PYG{n}{b}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+  \PYG{k}{if} \PYG{p}{(}\PYG{n}{a}\PYG{p}{.}\PYG{n}{l} \PYG{o}{==} \PYG{n}{b}\PYG{p}{.}\PYG{n}{l}\PYG{p}{)} \PYG{k}{return} \PYG{n}{a}\PYG{p}{.}\PYG{n}{r} \PYG{o}{\PYGZlt{}} \PYG{n}{b}\PYG{p}{.}\PYG{n}{r}\PYG{p}{;}
+  \PYG{k}{return} \PYG{n}{a}\PYG{p}{.}\PYG{n}{l} \PYG{o}{/} \PYG{n}{blksize} \PYG{o}{\PYGZlt{}} \PYG{n}{b}\PYG{p}{.}\PYG{n}{l} \PYG{o}{/} \PYG{n}{blksize}\PYG{p}{;}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

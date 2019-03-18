@@ -1,0 +1,9 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{// O(N)}
+\PYG{k+kt}{void} \PYG{n+nf}{build}\PYG{p}{()} \PYG{p}{\PYGZob{}}
+  \PYG{k}{for} \PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{i} \PYG{o}{=} \PYG{l+m+mi}{1}\PYG{p}{;} \PYG{n}{i} \PYG{o}{\PYGZlt{}} \PYG{n}{bit}\PYG{p}{.}\PYG{n}{size}\PYG{p}{();} \PYG{n}{i}\PYG{o}{++}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+    \PYG{k+kt}{int} \PYG{n}{j} \PYG{o}{=} \PYG{n}{i} \PYG{o}{+} \PYG{p}{(}\PYG{n}{i} \PYG{o}{\PYGZam{}} \PYG{o}{\PYGZhy{}}\PYG{n}{i}\PYG{p}{);}
+    \PYG{k}{if} \PYG{p}{(}\PYG{n}{j} \PYG{o}{\PYGZlt{}} \PYG{n}{bit}\PYG{p}{.}\PYG{n}{size}\PYG{p}{())} \PYG{n}{bit}\PYG{p}{[}\PYG{n}{j}\PYG{p}{]} \PYG{o}{=} \PYG{n}{F}\PYG{p}{(}\PYG{n}{bit}\PYG{p}{[}\PYG{n}{j}\PYG{p}{],} \PYG{n}{bit}\PYG{p}{[}\PYG{n}{i}\PYG{p}{]);}
+  \PYG{p}{\PYGZcb{}}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}
