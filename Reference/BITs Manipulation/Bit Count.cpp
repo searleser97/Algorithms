@@ -1,6 +1,6 @@
 // 3
 int bitCount(int n) {
-  return sizeof(n) * 8 - __builtin_clz(n) + 1;
+  return sizeof(n) * 8 - __builtin_clz(n);
 }
 // 5
 int bitCount(int n) {
