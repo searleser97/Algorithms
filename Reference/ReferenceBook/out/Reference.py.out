@@ -271,31 +271,6 @@ cout << fixed << setprecision(N) << n << endl;
 using namespace std;
 \end{minted}
 
-\needspace{7\baselineskip}
-\subsubsectionfont{\large\bfseries\sffamily\underline}
-\subsubsection*{Int To Binary}
-\addcontentsline{toc}{subsubsection}{Int To Binary}
-\begin{minted}{cpp}
-typedef long long int lli;
-
-lli bitsInInt(lli n) {  // clz = count leading zeroes
-  return sizeof(n) * 8 - __builtin_clzll(n);
-}
-\end{minted}
-\vspace{-12pt}
-\needspace{9\baselineskip}
-\begin{minted}{cpp}
-vector<bool> intToBitsArray(lli n) {
-  n = abs(n);
-  if (!n) return {};
-  int length = bitsInInt(n), lastPos = length - 1;
-  vector<bool> v(length);
-  for (lli i = lastPos, j = 0; i > -1LL; i--, j++)
-    v[j] = (n >> i) & 1LL;
-  return v;
-}
-\end{minted}
-
 \needspace{6\baselineskip}
 \subsubsectionfont{\large\bfseries\sffamily\underline}
 \subsubsection*{IO Optimization}
@@ -918,7 +893,7 @@ struct SegmentTree {
       : st(2 * n, neutro), d(n), u(n, 0) {
     H = sizeof(int) * 8 - __builtin_clz(N = n);
   }
-  \end{minted}
+\end{minted}
 \vspace{-12pt}
 \needspace{6\baselineskip}
 \begin{minted}{cpp}
@@ -928,7 +903,7 @@ struct SegmentTree {
     // return a * b;
     // return min(a, b);
   }
-  \end{minted}
+\end{minted}
 \vspace{-12pt}
 \needspace{6\baselineskip}
 \begin{minted}{cpp}

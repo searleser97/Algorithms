@@ -23,80 +23,79 @@
 \contentsline {subsection}{C++}{5}{section*.23}
 \contentsline {subsubsection}{Decimal Precision}{5}{section*.24}
 \contentsline {subsubsection}{Include All Libraries}{5}{section*.25}
-\contentsline {subsubsection}{Int To Binary}{5}{section*.26}
-\contentsline {subsubsection}{IO Optimization}{5}{section*.27}
-\contentsline {subsubsection}{Map Value To Int}{5}{section*.28}
-\contentsline {subsubsection}{Permutations}{6}{section*.29}
-\contentsline {subsubsection}{Print Vector}{6}{section*.30}
-\contentsline {subsubsection}{Priority Queue Of Object}{6}{section*.31}
-\contentsline {subsubsection}{Random}{6}{section*.32}
-\contentsline {subsubsection}{Read Line}{6}{section*.33}
-\contentsline {subsubsection}{Sort Pair}{6}{section*.34}
-\contentsline {subsubsection}{Sort Vector Of Object}{6}{section*.35}
-\contentsline {subsubsection}{Split String}{6}{section*.36}
-\contentsline {subsubsection}{Typedef}{7}{section*.37}
-\contentsline {subsection}{Python}{7}{section*.38}
-\contentsline {subsubsection}{Combinations}{7}{section*.39}
-\contentsline {subsubsection}{Fast IO}{7}{section*.40}
-\contentsline {subsubsection}{Permutations}{7}{section*.41}
-\contentsline {subsubsection}{Random}{7}{section*.42}
-\contentsline {subsubsection}{Sort List}{7}{section*.43}
-\contentsline {subsubsection}{Sort List Of Object}{7}{section*.44}
-\contentsline {section}{Data Structures}{7}{section*.45}
-\contentsline {subsection}{Geometry}{7}{section*.46}
-\contentsline {subsubsection}{K-D Tree}{7}{section*.47}
-\contentsline {subsection}{Graphs}{7}{section*.48}
-\contentsline {subsubsection}{UnionFind}{7}{section*.49}
-\contentsline {subsection}{Ranges}{8}{section*.50}
-\contentsline {subsubsection}{BIT}{8}{section*.51}
-\contentsline {subsubsection}{BIT Range Update}{8}{section*.52}
-\contentsline {subsubsection}{Segment Tree}{8}{section*.53}
-\contentsline {subsubsection}{Segment Tree Lazy Propagation}{9}{section*.54}
-\contentsline {subsubsection}{Sparse Table}{10}{section*.55}
-\contentsline {subsection}{Strings}{10}{section*.56}
-\contentsline {subsubsection}{Trie}{10}{section*.57}
-\contentsline {subsection}{Trees And Heaps}{11}{section*.58}
-\contentsline {subsubsection}{Red Black Tree}{11}{section*.59}
-\contentsline {subsubsection}{Treap}{12}{section*.60}
-\contentsline {section}{Geometry}{12}{section*.61}
-\contentsline {subsection}{Convex Hull}{12}{section*.62}
-\contentsline {subsection}{Max Interval Overlap}{12}{section*.63}
-\contentsline {section}{Graphs}{12}{section*.64}
-\contentsline {subsection}{Articulation Points And Bridges}{12}{section*.65}
-\contentsline {subsection}{Connected Components}{13}{section*.66}
-\contentsline {subsection}{Flood Fill}{13}{section*.67}
-\contentsline {subsection}{Heavy Light Decomposition}{13}{section*.68}
-\contentsline {subsection}{Is Bipartite}{14}{section*.69}
-\contentsline {subsection}{LCA}{14}{section*.70}
-\contentsline {subsection}{MST Kruskal}{15}{section*.71}
-\contentsline {subsection}{MST Prim}{15}{section*.72}
-\contentsline {subsection}{Strongly Connected Components}{16}{section*.73}
-\contentsline {subsection}{Topological Sort}{16}{section*.74}
-\contentsline {subsection}{Topological Sort (All possible sorts)}{17}{section*.75}
-\contentsline {subsection}{Cycles}{17}{section*.76}
-\contentsline {subsubsection}{Get All Simple Cycles}{17}{section*.77}
-\contentsline {subsubsection}{Get Some Cycles}{17}{section*.78}
-\contentsline {subsubsection}{Has Cycle}{17}{section*.79}
-\contentsline {subsection}{Flow}{18}{section*.80}
-\contentsline {subsubsection}{Max Flow Dinic}{18}{section*.81}
-\contentsline {subsubsection}{Maximum Bipartite Matching}{18}{section*.82}
-\contentsline {subsection}{ShortestPaths}{18}{section*.83}
-\contentsline {subsubsection}{Bellman Ford}{18}{section*.84}
-\contentsline {subsubsection}{Dijkstra}{19}{section*.85}
-\contentsline {subsubsection}{Shortest Path in Directed Acyclic Graph}{19}{section*.86}
-\contentsline {section}{Maths}{20}{section*.87}
-\contentsline {subsection}{Number Theory}{20}{section*.88}
-\contentsline {subsubsection}{Divisibility Criterion}{20}{section*.89}
-\contentsline {subsubsection}{Extended Euclidean}{20}{section*.90}
-\contentsline {subsubsection}{GCD}{20}{section*.91}
-\contentsline {subsubsection}{LCM}{21}{section*.92}
-\contentsline {subsubsection}{Prime Check Miller Rabin}{21}{section*.93}
-\contentsline {subsubsection}{Prime Sieve}{21}{section*.94}
-\contentsline {section}{Strings}{21}{section*.95}
-\contentsline {subsection}{KMP}{21}{section*.96}
-\contentsline {subsection}{Rabin Karp}{21}{section*.97}
-\contentsline {section}{Techniques}{22}{section*.98}
-\contentsline {subsection}{Binary Search}{22}{section*.99}
-\contentsline {subsection}{Multiple Queries}{22}{section*.100}
-\contentsline {subsubsection}{Mo}{22}{section*.101}
-\contentsline {subsubsection}{SQRT Decomposition}{23}{section*.102}
+\contentsline {subsubsection}{IO Optimization}{5}{section*.26}
+\contentsline {subsubsection}{Map Value To Int}{5}{section*.27}
+\contentsline {subsubsection}{Permutations}{6}{section*.28}
+\contentsline {subsubsection}{Print Vector}{6}{section*.29}
+\contentsline {subsubsection}{Priority Queue Of Object}{6}{section*.30}
+\contentsline {subsubsection}{Random}{6}{section*.31}
+\contentsline {subsubsection}{Read Line}{6}{section*.32}
+\contentsline {subsubsection}{Sort Pair}{6}{section*.33}
+\contentsline {subsubsection}{Sort Vector Of Object}{6}{section*.34}
+\contentsline {subsubsection}{Split String}{6}{section*.35}
+\contentsline {subsubsection}{Typedef}{6}{section*.36}
+\contentsline {subsection}{Python}{7}{section*.37}
+\contentsline {subsubsection}{Combinations}{7}{section*.38}
+\contentsline {subsubsection}{Fast IO}{7}{section*.39}
+\contentsline {subsubsection}{Permutations}{7}{section*.40}
+\contentsline {subsubsection}{Random}{7}{section*.41}
+\contentsline {subsubsection}{Sort List}{7}{section*.42}
+\contentsline {subsubsection}{Sort List Of Object}{7}{section*.43}
+\contentsline {section}{Data Structures}{7}{section*.44}
+\contentsline {subsection}{Geometry}{7}{section*.45}
+\contentsline {subsubsection}{K-D Tree}{7}{section*.46}
+\contentsline {subsection}{Graphs}{7}{section*.47}
+\contentsline {subsubsection}{UnionFind}{7}{section*.48}
+\contentsline {subsection}{Ranges}{8}{section*.49}
+\contentsline {subsubsection}{BIT}{8}{section*.50}
+\contentsline {subsubsection}{BIT Range Update}{8}{section*.51}
+\contentsline {subsubsection}{Segment Tree}{8}{section*.52}
+\contentsline {subsubsection}{Segment Tree Lazy Propagation}{9}{section*.53}
+\contentsline {subsubsection}{Sparse Table}{10}{section*.54}
+\contentsline {subsection}{Strings}{10}{section*.55}
+\contentsline {subsubsection}{Trie}{10}{section*.56}
+\contentsline {subsection}{Trees And Heaps}{11}{section*.57}
+\contentsline {subsubsection}{Red Black Tree}{11}{section*.58}
+\contentsline {subsubsection}{Treap}{11}{section*.59}
+\contentsline {section}{Geometry}{11}{section*.60}
+\contentsline {subsection}{Convex Hull}{11}{section*.61}
+\contentsline {subsection}{Max Interval Overlap}{12}{section*.62}
+\contentsline {section}{Graphs}{12}{section*.63}
+\contentsline {subsection}{Articulation Points And Bridges}{12}{section*.64}
+\contentsline {subsection}{Connected Components}{12}{section*.65}
+\contentsline {subsection}{Flood Fill}{13}{section*.66}
+\contentsline {subsection}{Heavy Light Decomposition}{13}{section*.67}
+\contentsline {subsection}{Is Bipartite}{14}{section*.68}
+\contentsline {subsection}{LCA}{14}{section*.69}
+\contentsline {subsection}{MST Kruskal}{14}{section*.70}
+\contentsline {subsection}{MST Prim}{15}{section*.71}
+\contentsline {subsection}{Strongly Connected Components}{16}{section*.72}
+\contentsline {subsection}{Topological Sort}{16}{section*.73}
+\contentsline {subsection}{Topological Sort (All possible sorts)}{16}{section*.74}
+\contentsline {subsection}{Cycles}{17}{section*.75}
+\contentsline {subsubsection}{Get All Simple Cycles}{17}{section*.76}
+\contentsline {subsubsection}{Get Some Cycles}{17}{section*.77}
+\contentsline {subsubsection}{Has Cycle}{17}{section*.78}
+\contentsline {subsection}{Flow}{17}{section*.79}
+\contentsline {subsubsection}{Max Flow Dinic}{17}{section*.80}
+\contentsline {subsubsection}{Maximum Bipartite Matching}{18}{section*.81}
+\contentsline {subsection}{ShortestPaths}{18}{section*.82}
+\contentsline {subsubsection}{Bellman Ford}{18}{section*.83}
+\contentsline {subsubsection}{Dijkstra}{18}{section*.84}
+\contentsline {subsubsection}{Shortest Path in Directed Acyclic Graph}{19}{section*.85}
+\contentsline {section}{Maths}{19}{section*.86}
+\contentsline {subsection}{Number Theory}{19}{section*.87}
+\contentsline {subsubsection}{Divisibility Criterion}{19}{section*.88}
+\contentsline {subsubsection}{Extended Euclidean}{20}{section*.89}
+\contentsline {subsubsection}{GCD}{20}{section*.90}
+\contentsline {subsubsection}{LCM}{20}{section*.91}
+\contentsline {subsubsection}{Prime Check Miller Rabin}{20}{section*.92}
+\contentsline {subsubsection}{Prime Sieve}{21}{section*.93}
+\contentsline {section}{Strings}{21}{section*.94}
+\contentsline {subsection}{KMP}{21}{section*.95}
+\contentsline {subsection}{Rabin Karp}{21}{section*.96}
+\contentsline {section}{Techniques}{21}{section*.97}
+\contentsline {subsection}{Binary Search}{21}{section*.98}
+\contentsline {subsection}{Multiple Queries}{21}{section*.99}
+\contentsline {subsubsection}{Mo}{21}{section*.100}
+\contentsline {subsubsection}{SQRT Decomposition}{22}{section*.101}
