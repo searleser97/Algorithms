@@ -4,8 +4,6 @@ using namespace std;
 typedef unsigned long long ulli;
 typedef long long lli;
 
-lli maxunsigned;
-
 lli countCol(lli a, int col) {
 	return ((lli)((a + 1ll) / (1ll << col))) * (1ll << (col - 1)) + max(0ll, ((a + 1ll) % (1ll << col)) - (1ll << (col - 1ll)));
 }
