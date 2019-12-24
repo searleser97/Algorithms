@@ -1,3 +1,0 @@
-https://www.slideshare.net/KuoE0/acmicpc-dinics-algorithm
-
-https://cs.stackexchange.com/questions/55041/residual-graph-in-maximum-flow

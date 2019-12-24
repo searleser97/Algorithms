@@ -1,17 +1,17 @@
 // 3
-vector<vector<int>> ady;
+vector<vector<int>> adj;
 
-void initVars(int N) { ady.assign(N, vector<int>()); }
+void init(int N) { adj.assign(N, vector<int>()); }
 // 4
 void addEdge(int u, int v) {
-  ady[u].push_back(v);
-  ady[v].push_back(u);
+  adj[u].push_back(v);
+  adj[v].push_back(u);
 }
 // 20
 // O(N)
 bool isBipartite() {
-  vector<int> color(ady.size(), -1);
-  for (int s = 0; s < ady.size(); s++) {
+  vector<int> color(adj.size(), -1);
+  for (int s = 0; s < adj.size(); s++) {
     if (color[s] > -1) continue;
     color[s] = 0;
     queue<int> q;
@@ -19,7 +19,7 @@ bool isBipartite() {
     while (!q.empty()) {
       int u = q.front();
       q.pop();
-      for (int &v : ady[u]) {
+      for (int &v : adj[u]) {
         if (color[v] < 0)
           q.push(v), color[v] = !color[u];
         if (color[v] == color[u]) return false;

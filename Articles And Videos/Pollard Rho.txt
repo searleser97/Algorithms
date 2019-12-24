@@ -1,0 +1,11 @@
+https://www.cs.colorado.edu/~srirams/courses/csci2824-spr14/pollardsRho.html
+
+https://www.csh.rit.edu/~pat/math/quickies/rho/
+
+https://betterexplained.com/articles/understanding-the-birthday-paradox/
+
+https://en.wikipedia.org/wiki/Birthday_problem
+
+https://www.geeksforgeeks.org/pollards-rho-algorithm-prime-factorization/
+
+https://www.geeksforgeeks.org/brents-cycle-detection-algorithm/

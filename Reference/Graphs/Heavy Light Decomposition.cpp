@@ -2,12 +2,12 @@
 // p = parent;
 #include "../Data Structures/Ranges/Segment Tree.cpp"
 typedef int T;
-vector<vector<int>> ady;
+vector<vector<int>> adj;
 vector<int> p, heavy, depth, root, stPos, vals;
 SegmentTree<T> st(0);
 // 7
-void initVars(int n) {
-  ady.assign(n, vector<int>());
+void init(int n) {
+  adj.assign(n, vector<int>());
   heavy.assign(n, -1);
   vals.assign(n, 0);
   p = root = stPos = depth = heavy;
@@ -15,7 +15,7 @@ void initVars(int n) {
 }
 // 4
 void addEdge(int u, int v, T val) {
-  ady[u].push_back(v);
+  adj[u].push_back(v);
   p[v] = u, vals[v] = val;
 }
 
@@ -24,7 +24,7 @@ T F(T a, T b) { return a + b; }
 // O(N)
 int dfs(int u) {
   int size = 1, maxSubtree = 0;
-  for (int &v : ady[u]) {
+  for (int &v : adj[u]) {
     depth[v] = depth[u] + 1;
     int subtree = dfs(v);
     if (subtree > maxSubtree)
@@ -36,9 +36,9 @@ int dfs(int u) {
 // 12
 // O(N)
 void initHeavyLight() {
-  for (int i = 0; i < ady.size(); i++)
+  for (int i = 0; i < adj.size(); i++)
     if (p[i] < 0) dfs(i);
-  for (int i = 0, pos = 0; i < ady.size(); i++)
+  for (int i = 0, pos = 0; i < adj.size(); i++)
     if (p[i] < 0 || heavy[p[i]] != i)
       for (int j = i; ~j; j = heavy[j]) {
         st.setValAt(vals[j], stPos[j] = pos++);

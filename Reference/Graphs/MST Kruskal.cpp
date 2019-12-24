@@ -8,7 +8,7 @@ vector<Wedge> Wedges;
 vector<Wedge> mst;
 UnionFind uf(0);
 // 5
-void initVars(int N) {
+void init(int N) {
   mst.clear();
   Wedges.clear();
   uf = UnionFind(N);

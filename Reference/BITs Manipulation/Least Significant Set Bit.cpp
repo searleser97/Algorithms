@@ -1,0 +1,1 @@
+int lsb(int n) { return n & -n; }

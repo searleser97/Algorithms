@@ -1,5 +1,5 @@
 // mbm = maximum bipartite matching
-#include "Max Flow Dinic.cpp"
+#include "Max Flow Min Cut Dinic.cpp"
 // 4
 void addEdgeMBM(int u, int v) {
   addEdge(u += 2, v += 2, 1);
@@ -8,4 +8,4 @@ void addEdgeMBM(int u, int v) {
 }
 // 2
 // O(E * V^2)
-T mbm() { return dinicMaxFlow(0, 1); }
+T mbm() { return maxFlowMinCut(0, 1); }

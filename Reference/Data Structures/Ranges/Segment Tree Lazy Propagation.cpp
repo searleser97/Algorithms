@@ -12,23 +12,32 @@ struct SegmentTree {
   vector<T> st, d;
   vector<bool> u;
   // 4
-  SegmentTree(int n)
-      : st(2 * n, neutro), d(n), u(n, 0) {
+  SegmentTree(int n, T val)
+      : st(2 * n, val), d(n), u(n) {
     H = sizeof(int) * 8 - __builtin_clz(N = n);
   }
-  // 6
-  T F(T a, T b) {
-    return a + b;
-    // return __gcd(a, b);
-    // return a * b;
-    // return min(a, b);
+  // 4
+  inline T kTimesF(T a, T k) {
+    return a * k;
+    // return pow(a, k);
+    // return a;
   }
   // 6
+  inline T F(T a, T b) {
+    return a + b;
+    // return a * b;
+    // return __gcd(a, b);
+    // return min(a, b);
+  }
+  // 4
+  inline T UF(T a, T b) {
+    return b;  // replace update
+    // return F(a, b); // apply F to current value
+  }
+  // 4
   void apply(int i, T val, int k) {
-    st[i] = val * k;  // sum
-    // st[i] = val; // min, max, gcd
-    // st[i] = pow(a, k); // multiplication
-    if (i < N) d[i] = val, u[i] = 1;
+    st[i] = UF(st[i], kTimesF(val, k));
+    if (i < N) d[i] = UF(d[i], val), u[i] = 1;
   }
   // 3
   void calc(int i) {
@@ -83,5 +92,5 @@ struct SegmentTree {
     return ans;
   }
   // 2
-  void setValAt(T val, int i) { st[i + N] = val; }
+  T& operator[](int i) { return st[i + N]; }
 };

@@ -1,31 +1,32 @@
-// 5
+// 6
 // APB = articulation points and bridges
-// ap = Articulation Point
+// Ap = Articulation Point
 // br = bridges, p = parent
 // disc = discovery time
 // low = lowTime, ch = children
+// nup = number of edges from u to p
 // 5
 typedef pair<int, int> Edge;
 int Time;
-vector<vector<int>> ady;
-vector<int> disc, low, ap;
+vector<vector<int>> adj;
+vector<int> disc, low, isAp;
 vector<Edge> br;
 
-void initVars(int N) { ady.assign(N, vector<int>()); }
+void init(int N) { adj.assign(N, vector<int>()); }
 // 4
 void addEdge(int u, int v) {
-  ady[u].push_back(v);
-  ady[v].push_back(u);
+  adj[u].push_back(v);
+  adj[v].push_back(u);
 }
 // 15
 int dfsAPB(int u, int p) {
-  int ch = 0;
+  int ch = 0, nup = 0;
   low[u] = disc[u] = ++Time;
-  for (int &v : ady[u]) {
-    if (v == p) continue;
+  for (int &v : adj[u]) {
+    if (v == p && !nup++) continue;
     if (!disc[v]) {
       ch++, dfsAPB(v, u);
-      if (disc[u] <= low[v]) ap[u]++;
+      if (disc[u] <= low[v]) isAp[u]++;
       if (disc[u] < low[v]) br.push_back({u, v});
       low[u] = min(low[u], low[v]);
     } else
@@ -37,8 +38,8 @@ int dfsAPB(int u, int p) {
 // O(N)
 void APB() {
   br.clear();
-  ap = low = disc = vector<int>(ady.size());
+  isAp = low = disc = vector<int>(adj.size());
   Time = 0;
-  for (int u = 0; u < ady.size(); u++)
-    if (!disc[u]) ap[u] = dfsAPB(u, u) > 1;
+  for (int u = 0; u < adj.size(); u++)
+    if (!disc[u]) isAp[u] = dfsAPB(u, u) > 1;
 }

@@ -1,0 +1,9 @@
+https://www.slideshare.net/KuoE0/acmicpc-dinics-algorithm
+
+https://cs.stackexchange.com/questions/55041/residual-graph-in-maximum-flow
+
+https://brilliant.org/wiki/max-flow-min-cut-algorithm/
+
+https://www.youtube.com/watch?v=M6cm8UeeziI
+
+https://www.geeksforgeeks.org/dinics-algorithm-maximum-flow/

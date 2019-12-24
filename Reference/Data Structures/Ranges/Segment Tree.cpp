@@ -12,7 +12,7 @@ struct SegmentTree {
   // 8
   SegmentTree(int n) : st(2 * n, neutro), N(n) {}
 
-  T F(T a, T b) {
+  inline T F(T a, T b) {
     return a + b;
     // return __gcd(a, b);
     // return a * b;
@@ -25,7 +25,7 @@ struct SegmentTree {
       st[i] = F(st[i << 1], st[i << 1 | 1]);
   }
   // 5
-  // O(lg(2N))
+  // O(lg(2N)), works like replacing arr[i] with val
   void update(int i, T val) {
     for (st[i += N] = val; i > 1; i >>= 1)
       st[i >> 1] = F(st[i], st[i ^ 1]);
@@ -51,5 +51,5 @@ struct SegmentTree {
     return ans;
   }
   // 2
-  void setValAt(T val, int i) { st[i + N] = val; }
+  T& operator[](int i) { return st[i + N]; }
 };

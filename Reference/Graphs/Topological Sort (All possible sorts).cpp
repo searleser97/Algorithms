@@ -1,17 +1,17 @@
 // 4
 // indeg0 = indegree 0
 vector<int> vis, indegree, path;
-vector<vector<int>> ady, toposorts;
+vector<vector<int>> adj, toposorts;
 deque<int> indeg0;
 // 5
-void initVars(int n) {
-  ady.assign(n, vector<int>());
+void init(int n) {
+  adj.assign(n, vector<int>());
   vis.assign(n, 0);
   indegree = vis;
 }
 // 4
 void addEdge(int u, int v) {
-  ady[u].push_back(v);
+  adj[u].push_back(v);
   indegree[v]++;
 }
 // 19
@@ -21,13 +21,13 @@ void dfs() {
     int u = indeg0.front();
     indeg0.pop_front();
     path.push_back(u);
-    for (auto &v : ady[u])
+    for (auto &v : adj[u])
       if (!--indegree[v]) indeg0.push_back(v);
     if (!indeg0.size()) toposorts.push_back(path);
     dfs();
-    for (int v = ady[u].size() - 1; ~v; v--) {
-      indegree[ady[u][v]]++;
-      if (indeg0.back() == ady[u][v])
+    for (int v = adj[u].size() - 1; ~v; v--) {
+      indegree[adj[u][v]]++;
+      if (indeg0.back() == adj[u][v])
         indeg0.pop_back();
     }
     indeg0.push_back(u);
@@ -37,7 +37,7 @@ void dfs() {
 // 6
 // O(V + V!)
 void allToposorts() {
-  for (int u = 0; u < ady.size(); u++)
+  for (int u = 0; u < adj.size(); u++)
     if (!indegree[u]) indeg0.push_back(u);
   dfs();
 }

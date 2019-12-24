@@ -1,0 +1,97 @@
+\vspace{1em}
+\sffamily
+
+When performing operations with different primitive data types in C++,
+the operand with smaller rank gets converted to the data type of the operand
+with the greater rank.
+
+\begin{center}
+\begin{tabular}{| >{\centering}m{1cm}|m{7cm}|}
+\hline
+\multicolumn{2}{|c|}{\textbf{Data Type Ranks}}
+\tabularnewline \hline
+\textbf{Rank}
+&
+\centering
+\textbf{Data Type}
+\tabularnewline \hline
+1
+&
+\begin{minipage}[c]{\linewidth}
+\begin{minted}{cpp}
+bool
+\end{minted}
+\end{minipage}
+\tabularnewline \hline
+2
+&
+\begin{minipage}[c]{\linewidth}
+\begin{minted}{cpp}
+char, signed char, unsigned char
+\end{minted}
+\end{minipage}
+\tabularnewline \hline
+3
+&
+\begin{minipage}[c]{\linewidth}
+\begin{minted}{cpp}
+short int, unsigned short int
+\end{minted}
+\end{minipage}
+\tabularnewline \hline
+4
+&
+\begin{minipage}[c]{\linewidth}
+\begin{minted}{cpp}
+int, unsigned int
+\end{minted}
+\end{minipage}
+\tabularnewline \hline
+5
+&
+\begin{minipage}[c]{\linewidth}
+\begin{minted}{cpp}
+long int, unsigned long int
+\end{minted}
+\end{minipage}
+\tabularnewline \hline
+6
+&
+\begin{minipage}[c]{\linewidth}
+\begin{minted}{cpp}
+long long int, unsigned long long int
+\end{minted}
+\end{minipage}
+\tabularnewline \hline
+7
+&
+{\fontfamily{lmtt}\selectfont\textcolor{pinegreen}{\textbf{\_\_int128\_t}}}
+\tabularnewline \hline
+8
+&
+\begin{minipage}[c]{\linewidth}
+\begin{minted}{cpp}
+float
+\end{minted}
+\end{minipage}
+\tabularnewline \hline
+9
+&
+\begin{minipage}[c]{\linewidth}
+\begin{minted}{cpp}
+double
+\end{minted}
+\end{minipage}
+\tabularnewline \hline
+10
+&
+\begin{minipage}[c]{\linewidth}
+\begin{minted}{cpp}
+long double
+\end{minted}
+\end{minipage}
+\tabularnewline \hline
+\end{tabular}
+\end{center}
+\vspace{1em}
+Source: \textcolor{prussianblue}{https://en.cppreference.com/w/c/language/conversion}

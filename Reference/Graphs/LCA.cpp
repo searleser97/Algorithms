@@ -1,17 +1,17 @@
 // 7
-// st = sparse table
+// st = sparse table, p = parent
 typedef pair<int, int> T;
 int neutro = 0;
 vector<vector<T>> st;
 vector<int> first;
 vector<T> tour;
-vector<vector<int>> ady;
+vector<vector<int>> adj;
 
-void initVars(int N) { ady.assign(N, vector<int>()); }
+void init(int N) { adj.assign(N, vector<int>()); }
 // 4
 void addEdge(int u, int v) {
-  ady[u].push_back(v);
-  ady[v].push_back(u);
+  adj[u].push_back(v);
+  adj[v].push_back(u);
 }
 
 T F(T a, T b) { return a.first < b.first ? a : b; }
@@ -29,18 +29,19 @@ void build() {
 void eulerTour(int u, int p, int h) {
   first[u] = tour.size();
   tour.push_back({h, u});
-  for (int v : ady[u])
+  for (int v : adj[u])
     if (v != p) {
       eulerTour(v, u, h + 1);
       tour.push_back({h, u});
     }
 }
-// 7
+// 8
 // O(N * lg(N))
 void preprocess() {
   tour.clear();
-  first.assign(ady.size(), -1);
-  eulerTour(0, 0, 0);
+  first.assign(adj.size(), -1);
+  vector<int> roots = {0};
+  for (auto &root : roots) eulerTour(root, -1, 0);
   build();
 }
 // 7

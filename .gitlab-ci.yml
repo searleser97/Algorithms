@@ -1,0 +1,12 @@
+pages:
+  stage: deploy
+  script:
+    - mkdir public
+    - cp "Reference/Coding Resources/C++/Competitive Programming Template.cpp" public/template.cpp
+    - cp "Reference/ReferenceBook/Reference.pdf" public/reference.pdf
+    - cp -avr Animations public/animations
+  artifacts:
+    paths:
+      - public
+  only:
+    - master

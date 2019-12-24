@@ -3,7 +3,8 @@
 // 'getline' just use getline and split
 string input() {
   string ans;
-  // cin >> ws; // eats all whitespaces.
+  cin >> ws;
+  cin.ignore(numeric_limits<streamsize>::max(), '\n');
   getline(cin, ans);
   return ans;
 }

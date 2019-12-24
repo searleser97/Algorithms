@@ -3,7 +3,8 @@ from os.path import isfile, isdir, join
 import re
 
 PATH = '/home/san/Algorithms/Reference'
-excluded = set(['ReferenceBook', '.vscode'])
+excluded = set(['ReferenceBook', '.vscode', '__pycache__'])
+numberOfColumns = 2
 
 
 def printSectionType(sectionName, depth, isFile):
@@ -20,6 +21,10 @@ def printSectionType(sectionName, depth, isFile):
     elif depth == 3:
         sectionType = 'subsubsection'
         style += '\\Large'
+        vspace = 1
+    else:
+        sectionType = 'paragraph'
+        style += '\\large'
         vspace = 1
     if isFile:
         sectionName = sectionName[:sectionName.rfind('.')]
@@ -51,8 +56,14 @@ def needspaceForDepth(depth):
 def printFile(path, depth, sections):
     extension = sections[-1][sections[-1].rfind('.') + 1:]
     if extension == 'tex':
-        print('\\cfinput{' + path + '}')
-    elif extension == 'h':
+        print('\\end{multicols*}')
+        for i in range(len(sections)):
+            printSectionType(sections[i], depth -
+                             len(sections) + i + 1, i == len(sections) - 1)
+        print('\\input{"' + path + '"}')
+        print('\\begin{multicols*}{' + str(numberOfColumns) + '}')
+        return
+    if extension == 'h':
         extension = 'cpp'
     with open(path, 'r') as f:
         content = f.read()
@@ -85,7 +96,12 @@ def main(currPath, depth, sections):
         return
     sortedDirs = sorted(
         listdir(currPath),
-        key=lambda x: (isdir(join(currPath, x)), x.split('.')[0].lower())
+        key=lambda x: (
+            x == 'Extras',
+            x == 'Problems Solved',
+            isdir(join(currPath, x)),
+            '' if x == 'Coding Resources' else x.split('.')[0].lower()
+        )
     )
     isFirst = True
     for dirOrFile in sortedDirs:
@@ -107,4 +123,5 @@ def main(currPath, depth, sections):
 
 
 sections = []
+# PATH += '/Extras'
 main(PATH, 0, sections)

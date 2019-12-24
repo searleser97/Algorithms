@@ -5,60 +5,33 @@ typedef int T;
 typedef pair<int, int> Edge;
 typedef pair<T, Edge> Wedge;
 typedef pair<T, int> DistNode;
-int INF = 1 << 30;
-vector<vector<int>> ady;
+long long int inf = (1ll << 62) - 1;
+vector<vector<int>> adj;
 unordered_map<int, unordered_map<int, T>> weight;
 vector<int> p, vis;
 vector<T> dist;
 vector<vector<Wedge>> msts;
 // 8
-void initVars(int N) {
-  ady.assign(N, vector<int>());
+void init(int N) {
+  adj.assign(N, vector<int>());
   p.assign(N, 0);
   vis.assign(N, 0);
-  dist.assign(N, INF);
+  dist.assign(N, inf);
   weight.clear();
   msts.clear();
 }
 // 6
 void addEdge(int u, int v, T w) {
-  ady[u].push_back(v);
+  adj[u].push_back(v);
   weight[u][v] = w;
-  ady[v].push_back(u);
+  adj[v].push_back(u);
   weight[v][u] = w;
 }
 // 25
-// O(E * log(V))
+// ~ O(E * log(V))
 T prim(int s) {
   vector<Wedge> mst;
-  vector<set<Edge>::iterator> pos(ady.size());
-  vector<T> dist(ady.size(), INF);
-  set<Edge> q;
-  T cost = dist[s] = 0;
-  q.insert({0, s});
-  while (q.size()) {
-    int u = q.begin()->second;
-    q.erase(q.begin());
-    vis[u] = 1, cost += dist[u];
-    mst.push_back({dist[u], {p[u], u}});
-    for (int &v : ady[u]) {
-      T w = weight[u][v];
-      if (!vis[v] && w < dist[v]) {
-        if (dist[v] != INF) q.erase(pos[v]);
-        pos[v] = q.insert({dist[v] = w, v}).first;
-      }
-    }
-  }
-  msts.push_back(
-      vector<Wedge>(mst.begin() + 1, mst.end()));
-  return cost;
-}
-// 25
-// ~ O(E * log(V))
-T primLazy(int s) {
-  vector<Wedge> mst;
-  vector<set<Edge>::iterator> pos(ady.size());
-  vector<T> dist(ady.size(), INF);
+  vector<T> dist(adj.size(), inf);
   priority_queue<DistNode> q;
   T cost = dist[s] = 0;
   q.push({0, s});
@@ -69,7 +42,7 @@ T primLazy(int s) {
     if (dist[u] < -aux.first) continue;
     vis[u] = 1, cost += dist[u];
     mst.push_back({dist[u], {p[u], u}});
-    for (int &v : ady[u]) {
+    for (int &v : adj[u]) {
       T w = weight[u][v];
       if (!vis[v] && w < dist[v])
         q.push({-(dist[v] = w), v});
@@ -84,7 +57,7 @@ T primLazy(int s) {
 T prim() {
   T cost = 0;
   map<int, T> q;
-  for (int i = 0; i < ady.size(); i++)
+  for (int i = 0; i < adj.size(); i++)
     if (!vis[i]) cost += prim(i);
   return cost;
 }

@@ -1,0 +1,71 @@
+\vspace{1em}
+\sffamily
+\begin{center}
+\begin{tabular}{| >{\centering}m{3cm}|m{7cm}|}
+\hline
+\multicolumn{2}{|c|}{\textbf{Properties}}
+\tabularnewline \hline
+\textbf{Width in bits}
+&
+\centering
+\textbf{Data Type}
+\tabularnewline \hline
+\textbf{8}
+&
+\begin{minipage}[c]{\linewidth}
+\begin{minted}{cpp}
+bool
+\end{minted}
+\end{minipage}
+\tabularnewline \hline
+At least \textbf{8}
+&
+\begin{minipage}[c]{\linewidth}
+\begin{minted}{cpp}
+char, signed char, unsigned char
+\end{minted}
+\end{minipage}
+\tabularnewline \hline
+At least \textbf{16}
+&
+\begin{minipage}[c]{\linewidth}
+\begin{minted}{cpp}
+short int, unsigned short int
+\end{minted}
+\end{minipage}
+\tabularnewline \hline
+At least \textbf{16}
+&
+\begin{minipage}[c]{\linewidth}
+\begin{minted}{cpp}
+int, unsigned int
+\end{minted}
+\end{minipage}
+\tabularnewline \hline
+At least \textbf{32}
+&
+\begin{minipage}[c]{\linewidth}
+\begin{minted}{cpp}
+long int, unsigned long int
+\end{minted}
+\end{minipage}
+\tabularnewline \hline
+At least \textbf{64}
+&
+\begin{minipage}[c]{\linewidth}
+\begin{minted}{cpp}
+long long int, unsigned long long int
+\end{minted}
+\end{minipage}
+\tabularnewline \hline
+\textbf{128}
+&
+{\fontfamily{lmtt}\selectfont\textcolor{pinegreen}{\textbf{\_\_int128\_t}}}
+\tabularnewline \hline
+\end{tabular}
+\end{center}
+Sources:\\
+\hangindent=2em
+\textcolor{prussianblue}{https://en.cppreference.com/w/cpp/language/types}\\
+\textcolor{prussianblue}{https://www.geeksforgeeks.org/c-data-types/}\\
+\textcolor{prussianblue}{https://stackoverflow.com/questions/2064550/c-why-bool-is-8-bits-long}
