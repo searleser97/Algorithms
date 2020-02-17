@@ -1,0 +1,16 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+cp}{\PYGZsh{}include} \PYG{c+cpf}{\PYGZlt{}bits/stdc++.h\PYGZgt{}}
+\PYG{k}{using} \PYG{k}{namespace} \PYG{n}{std}\PYG{p}{;}
+
+\PYG{c+cp}{\PYGZsh{}include} \PYG{c+cpf}{\PYGZdq{}../Data Structures/Strings/Suffix Automaton.cpp\PYGZdq{}}
+
+\PYG{k+kt}{int} \PYG{n+nf}{nOcurrences}\PYG{p}{(}\PYG{n}{string}\PYG{o}{\PYGZam{}} \PYG{n}{s}\PYG{p}{,} \PYG{n}{vector}\PYG{o}{\PYGZlt{}}\PYG{n}{string}\PYG{o}{\PYGZgt{}} \PYG{o}{\PYGZam{}}\PYG{n}{ps}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+  \PYG{n}{SuffixAutomaton} \PYG{n}{sa}\PYG{p}{(}\PYG{n}{s}\PYG{p}{);}
+
+
+\PYG{p}{\PYGZcb{}}
+
+\PYG{k+kt}{int} \PYG{n+nf}{main}\PYG{p}{()} \PYG{p}{\PYGZob{}}
+  \PYG{k}{return} \PYG{l+m+mi}{0}\PYG{p}{;}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

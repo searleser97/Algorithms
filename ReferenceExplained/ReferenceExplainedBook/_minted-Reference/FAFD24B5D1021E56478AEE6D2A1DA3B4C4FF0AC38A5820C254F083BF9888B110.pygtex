@@ -1,0 +1,9 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{// lte = less than or equal, 1\PYGZhy{}indexed}
+\PYG{c+c1}{// A = max\PYGZus{}element(from, to)}
+\PYG{c+c1}{// lcount = left children count}
+\PYG{k}{struct} \PYG{n}{WaveletTree} \PYG{p}{\PYGZob{}}
+  \PYG{n}{WaveletTree} \PYG{o}{*}\PYG{n}{l}\PYG{p}{,} \PYG{o}{*}\PYG{n}{r}\PYG{p}{;}
+  \PYG{k+kt}{int} \PYG{n}{lo}\PYG{p}{,} \PYG{n}{hi}\PYG{p}{;}
+  \PYG{n}{vector}\PYG{o}{\PYGZlt{}}\PYG{k+kt}{int}\PYG{o}{\PYGZgt{}} \PYG{n}{lcount}\PYG{p}{;}
+\end{Verbatim}

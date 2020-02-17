@@ -1,0 +1,25 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{// O(T * Log(T) + p.size() * ps.size())}
+\PYG{n}{vector}\PYG{o}{\PYGZlt{}}\PYG{k+kt}{int}\PYG{o}{\PYGZgt{}} \PYG{n}{nOcurrences}\PYG{p}{(}\PYG{n}{string}\PYG{o}{\PYGZam{}} \PYG{n}{t}\PYG{p}{,}
+                        \PYG{n}{vector}\PYG{o}{\PYGZlt{}}\PYG{n}{string}\PYG{o}{\PYGZgt{}\PYGZam{}} \PYG{n}{ps}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+  \PYG{n}{SuffixAutomaton} \PYG{n}{sa}\PYG{p}{(}\PYG{n}{t}\PYG{p}{);}
+  \PYG{n}{vector}\PYG{o}{\PYGZlt{}}\PYG{k+kt}{int}\PYG{o}{\PYGZgt{}} \PYG{n}{cnt}\PYG{p}{(}\PYG{n}{sa}\PYG{p}{.}\PYG{n}{size}\PYG{p}{),} \PYG{n}{aux}\PYG{p}{(}\PYG{n}{sa}\PYG{p}{.}\PYG{n}{size}\PYG{p}{),} \PYG{n}{ans}\PYG{p}{;}
+  \PYG{k}{for} \PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{u} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{;} \PYG{n}{u} \PYG{o}{\PYGZlt{}} \PYG{n}{sa}\PYG{p}{.}\PYG{n}{size}\PYG{p}{;} \PYG{n}{aux}\PYG{p}{[}\PYG{n}{u}\PYG{p}{]} \PYG{o}{=} \PYG{n}{u}\PYG{p}{,} \PYG{n}{u}\PYG{o}{++}\PYG{p}{)}
+    \PYG{k}{if} \PYG{p}{(}\PYG{o}{!}\PYG{n}{sa}\PYG{p}{.}\PYG{n}{isClone}\PYG{p}{[}\PYG{n}{u}\PYG{p}{])} \PYG{n}{cnt}\PYG{p}{[}\PYG{n}{u}\PYG{p}{]} \PYG{o}{=} \PYG{l+m+mi}{1}\PYG{p}{;}
+  \PYG{n}{sort}\PYG{p}{(}\PYG{n}{aux}\PYG{p}{.}\PYG{n}{begin}\PYG{p}{(),} \PYG{n}{aux}\PYG{p}{.}\PYG{n}{end}\PYG{p}{(),} \PYG{p}{[}\PYG{o}{\PYGZam{}}\PYG{p}{](}\PYG{k+kt}{int}\PYG{o}{\PYGZam{}} \PYG{n}{a}\PYG{p}{,} \PYG{k+kt}{int}\PYG{o}{\PYGZam{}} \PYG{n}{b}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+    \PYG{k}{return} \PYG{n}{sa}\PYG{p}{.}\PYG{n}{len}\PYG{p}{[}\PYG{n}{b}\PYG{p}{]} \PYG{o}{\PYGZlt{}} \PYG{n}{sa}\PYG{p}{.}\PYG{n}{len}\PYG{p}{[}\PYG{n}{a}\PYG{p}{];}
+  \PYG{p}{\PYGZcb{});}
+  \PYG{k}{for} \PYG{p}{(}\PYG{k}{auto}\PYG{o}{\PYGZam{}} \PYG{n+nl}{u} \PYG{p}{:} \PYG{n}{aux}\PYG{p}{)}
+    \PYG{k}{if} \PYG{p}{(}\PYG{n}{u}\PYG{p}{)} \PYG{n}{cnt}\PYG{p}{[}\PYG{n}{sa}\PYG{p}{.}\PYG{n}{link}\PYG{p}{[}\PYG{n}{u}\PYG{p}{]]} \PYG{o}{+=} \PYG{n}{cnt}\PYG{p}{[}\PYG{n}{u}\PYG{p}{];}
+  \PYG{k}{for} \PYG{p}{(}\PYG{k}{auto}\PYG{o}{\PYGZam{}} \PYG{n+nl}{p} \PYG{p}{:} \PYG{n}{ps}\PYG{p}{)}
+    \PYG{k}{for} \PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{u} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{,} \PYG{n}{i} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{;} \PYG{n}{i} \PYG{o}{\PYGZlt{}} \PYG{n}{p}\PYG{p}{.}\PYG{n}{size}\PYG{p}{();} \PYG{n}{i}\PYG{o}{++}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+      \PYG{k}{if} \PYG{p}{(}\PYG{o}{!}\PYG{n}{sa}\PYG{p}{.}\PYG{n}{next}\PYG{p}{[}\PYG{n}{u}\PYG{p}{].}\PYG{n}{count}\PYG{p}{(}\PYG{n}{p}\PYG{p}{[}\PYG{n}{i}\PYG{p}{]))} \PYG{p}{\PYGZob{}}
+        \PYG{n}{ans}\PYG{p}{.}\PYG{n}{push\PYGZus{}back}\PYG{p}{(}\PYG{l+m+mi}{0}\PYG{p}{);}
+        \PYG{k}{break}\PYG{p}{;}
+      \PYG{p}{\PYGZcb{}}
+      \PYG{n}{u} \PYG{o}{=} \PYG{n}{sa}\PYG{p}{.}\PYG{n}{next}\PYG{p}{[}\PYG{n}{u}\PYG{p}{][}\PYG{n}{p}\PYG{p}{[}\PYG{n}{i}\PYG{p}{]];}
+      \PYG{k}{if} \PYG{p}{(}\PYG{n}{i} \PYG{o}{+} \PYG{l+m+mi}{1} \PYG{o}{==} \PYG{n}{p}\PYG{p}{.}\PYG{n}{size}\PYG{p}{())} \PYG{n}{ans}\PYG{p}{.}\PYG{n}{push\PYGZus{}back}\PYG{p}{(}\PYG{n}{cnt}\PYG{p}{[}\PYG{n}{u}\PYG{p}{]);}
+    \PYG{p}{\PYGZcb{}}
+  \PYG{k}{return} \PYG{n}{ans}\PYG{p}{;}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

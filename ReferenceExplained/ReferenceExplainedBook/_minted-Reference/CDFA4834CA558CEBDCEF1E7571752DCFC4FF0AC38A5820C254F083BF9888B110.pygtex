@@ -1,0 +1,10 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+  \PYG{c+c1}{// O(N)}
+  \PYG{n}{unordered\PYGZus{}set}\PYG{o}{\PYGZlt{}}\PYG{k+kt}{int}\PYG{o}{\PYGZgt{}} \PYG{n}{getTerminals}\PYG{p}{()} \PYG{p}{\PYGZob{}}
+    \PYG{n}{unordered\PYGZus{}set}\PYG{o}{\PYGZlt{}}\PYG{k+kt}{int}\PYG{o}{\PYGZgt{}} \PYG{n}{terminals}\PYG{p}{;}
+    \PYG{k}{for} \PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{p} \PYG{o}{=} \PYG{n}{last}\PYG{p}{;} \PYG{n}{p}\PYG{p}{;} \PYG{n}{p} \PYG{o}{=} \PYG{n}{link}\PYG{p}{[}\PYG{n}{p}\PYG{p}{])}
+      \PYG{n}{terminals}\PYG{p}{.}\PYG{n}{insert}\PYG{p}{(}\PYG{n}{p}\PYG{p}{);}
+    \PYG{k}{return} \PYG{n}{terminals}\PYG{p}{;}
+  \PYG{p}{\PYGZcb{}}
+\PYG{p}{\PYGZcb{};}
+\end{Verbatim}

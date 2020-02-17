@@ -1,0 +1,22 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k+kt}{int} \PYG{n+nf}{main}\PYG{p}{()} \PYG{p}{\PYGZob{}}
+  \PYG{k+kt}{int} \PYG{n}{t}\PYG{p}{;}
+  \PYG{n}{scanf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}\PYGZpc{}d\PYGZdq{}}\PYG{p}{,} \PYG{o}{\PYGZam{}}\PYG{n}{t}\PYG{p}{);}
+  \PYG{k}{for} \PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{j} \PYG{o}{=} \PYG{l+m+mi}{1}\PYG{p}{;} \PYG{n}{j} \PYG{o}{\PYGZlt{}=} \PYG{n}{t}\PYG{p}{;} \PYG{n}{j}\PYG{o}{++}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+    \PYG{n}{lli} \PYG{n}{x}\PYG{p}{;}
+    \PYG{n}{scanf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}\PYGZpc{}lld\PYGZdq{}}\PYG{p}{,} \PYG{o}{\PYGZam{}}\PYG{n}{x}\PYG{p}{);}
+    \PYG{n}{lli} \PYG{n}{count} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{;}
+    \PYG{n}{V} \PYG{n}{divisors} \PYG{o}{=} \PYG{n}{getDivisors}\PYG{p}{(}\PYG{l+m+mi}{2LL} \PYG{o}{*} \PYG{n}{x}\PYG{p}{);}
+    \PYG{k}{for} \PYG{p}{(}\PYG{k}{auto} \PYG{o}{\PYGZam{}}\PYG{n+nl}{div} \PYG{p}{:} \PYG{n}{divisors}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+      \PYG{k+kt}{double} \PYG{n}{d} \PYG{o}{=}
+          \PYG{p}{((}\PYG{k+kt}{double}\PYG{p}{)}\PYG{n}{x} \PYG{o}{/} \PYG{n}{div}\PYG{p}{)} \PYG{o}{+} \PYG{p}{((}\PYG{l+m+mf}{1.00} \PYG{o}{\PYGZhy{}} \PYG{n}{div}\PYG{p}{)} \PYG{o}{/} \PYG{l+m+mf}{2.00}\PYG{p}{);}
+      \PYG{k}{if} \PYG{p}{(}\PYG{n}{d} \PYG{o}{\PYGZgt{}} \PYG{l+m+mi}{0} \PYG{o}{\PYGZam{}\PYGZam{}} \PYG{n}{div} \PYG{o}{\PYGZgt{}} \PYG{l+m+mi}{1} \PYG{o}{\PYGZam{}\PYGZam{}} \PYG{n}{d} \PYG{o}{==} \PYG{n}{floor}\PYG{p}{(}\PYG{n}{d}\PYG{p}{)} \PYG{o}{\PYGZam{}\PYGZam{}}
+          \PYG{n}{div} \PYG{o}{\PYGZlt{}} \PYG{n}{x} \PYG{o}{\PYGZam{}\PYGZam{}}
+          \PYG{p}{(}\PYG{l+m+mi}{2} \PYG{o}{*} \PYG{n}{d} \PYG{o}{*} \PYG{n}{div} \PYG{o}{+} \PYG{p}{(}\PYG{n}{div} \PYG{o}{\PYGZhy{}} \PYG{l+m+mi}{1}\PYG{p}{)} \PYG{o}{*} \PYG{n}{div} \PYG{o}{==} \PYG{l+m+mi}{2} \PYG{o}{*} \PYG{n}{x}\PYG{p}{))} \PYG{p}{\PYGZob{}}
+        \PYG{n}{count}\PYG{o}{++}\PYG{p}{;}
+      \PYG{p}{\PYGZcb{}}
+    \PYG{p}{\PYGZcb{}}
+    \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}case \PYGZpc{}d: \PYGZpc{}lld}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s}{\PYGZdq{}}\PYG{p}{,} \PYG{n}{j}\PYG{p}{,} \PYG{n}{count}\PYG{p}{);}
+  \PYG{p}{\PYGZcb{}}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

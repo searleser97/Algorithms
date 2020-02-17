@@ -1,0 +1,6 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+  \PYG{k+kr}{inline} \PYG{n}{T} \PYG{n+nf}{kTimesF}\PYG{p}{(}\PYG{n}{T} \PYG{n}{a}\PYG{p}{,} \PYG{n}{T} \PYG{n}{k}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+    \PYG{k}{return} \PYG{n}{a}\PYG{p}{;}
+    \PYG{c+c1}{// return a * k;}
+  \PYG{p}{\PYGZcb{}}
+\end{Verbatim}

@@ -1,0 +1,5 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k+kt}{int} \PYG{n+nf}{lsb}\PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{n}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+  \PYG{k}{return} \PYG{n}{n} \PYG{o}{\PYGZam{}} \PYG{o}{\PYGZhy{}}\PYG{n}{n}\PYG{p}{;}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

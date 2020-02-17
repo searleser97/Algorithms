@@ -1,0 +1,7 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n}{Map} \PYG{n+nf}{primeFactors}\PYG{p}{(}\PYG{n}{li} \PYG{n}{n}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+  \PYG{n}{Map} \PYG{n}{factors}\PYG{p}{;}
+  \PYG{n}{primeFactors}\PYG{p}{(}\PYG{n}{n}\PYG{p}{,} \PYG{n}{factors}\PYG{p}{);}
+  \PYG{k}{return} \PYG{n}{factors}\PYG{p}{;}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

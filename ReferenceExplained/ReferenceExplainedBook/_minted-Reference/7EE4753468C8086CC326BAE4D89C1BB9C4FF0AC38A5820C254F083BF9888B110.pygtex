@@ -1,0 +1,8 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+  \PYG{k+kt}{void} \PYG{n+nf}{calc}\PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{i}\PYG{p}{,} \PYG{k+kt}{int} \PYG{n}{k}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+    \PYG{c+c1}{// if (u[i])}
+    \PYG{c+c1}{//   st[i] = UF(st[i], kTimesF(d[i], k));}
+    \PYG{c+c1}{// else}
+      \PYG{n}{st}\PYG{p}{[}\PYG{n}{i}\PYG{p}{]} \PYG{o}{=} \PYG{n}{F}\PYG{p}{(}\PYG{n}{st}\PYG{p}{[}\PYG{n}{i} \PYG{o}{\PYGZlt{}\PYGZlt{}} \PYG{l+m+mi}{1}\PYG{p}{],} \PYG{n}{st}\PYG{p}{[(}\PYG{n}{i} \PYG{o}{\PYGZlt{}\PYGZlt{}} \PYG{l+m+mi}{1}\PYG{p}{)} \PYG{o}{|} \PYG{l+m+mi}{1}\PYG{p}{]);}
+  \PYG{p}{\PYGZcb{}}
+\end{Verbatim}

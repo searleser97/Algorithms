@@ -1,0 +1,5 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+  \PYG{n}{Point} \PYG{k}{operator}\PYG{o}{*}\PYG{p}{(}\PYG{k}{const} \PYG{n}{ld} \PYG{o}{\PYGZam{}}\PYG{n}{k}\PYG{p}{)} \PYG{k}{const} \PYG{p}{\PYGZob{}}
+    \PYG{k}{return} \PYG{n}{Point}\PYG{p}{(}\PYG{n}{x} \PYG{o}{*} \PYG{n}{k}\PYG{p}{,} \PYG{n}{y} \PYG{o}{*} \PYG{n}{k}\PYG{p}{);}
+  \PYG{p}{\PYGZcb{}}
+\end{Verbatim}

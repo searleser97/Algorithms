@@ -1,0 +1,5 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+  \PYG{k+kt}{bool} \PYG{k}{operator}\PYG{o}{==}\PYG{p}{(}\PYG{k}{const} \PYG{n}{Point} \PYG{o}{\PYGZam{}}\PYG{n}{p}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+    \PYG{k}{return} \PYG{n}{abs}\PYG{p}{(}\PYG{n}{x} \PYG{o}{\PYGZhy{}} \PYG{n}{p}\PYG{p}{.}\PYG{n}{x}\PYG{p}{)} \PYG{o}{\PYGZlt{}} \PYG{n}{eps} \PYG{o}{\PYGZam{}\PYGZam{}} \PYG{n}{abs}\PYG{p}{(}\PYG{n}{y} \PYG{o}{\PYGZhy{}} \PYG{n}{p}\PYG{p}{.}\PYG{n}{y}\PYG{p}{)} \PYG{o}{\PYGZlt{}} \PYG{n}{eps}\PYG{p}{;}
+  \PYG{p}{\PYGZcb{}}
+\end{Verbatim}

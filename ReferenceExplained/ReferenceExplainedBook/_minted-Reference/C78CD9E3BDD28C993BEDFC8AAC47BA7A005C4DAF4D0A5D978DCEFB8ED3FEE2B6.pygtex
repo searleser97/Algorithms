@@ -1,0 +1,5 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n+nf}{somePredicate}\PYG{p}{(}\PYG{n+nv}{A}\PYG{p}{,} \PYG{n+nv}{B}\PYG{p}{)} \PYG{p}{:\PYGZhy{}}
+    \PYG{n+nf}{arbitraryPredicate}\PYG{p}{(}\PYG{n+nv}{A}\PYG{p}{),}
+    \PYG{n+nf}{anotherPredicate}\PYG{p}{(}\PYG{n+nv}{B}\PYG{p}{).}
+\end{Verbatim}

@@ -1,0 +1,9 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+cm}{/* if v contains e then it returns a vector where:}
+\PYG{c+cm}{  [0] = [1] = position where e is found}
+\PYG{c+cm}{else}
+\PYG{c+cm}{  e should be between [0] and [1]}
+\PYG{c+cm}{if there are duplicates in v between l and r then:}
+\PYG{c+cm}{lower = 0 looks for the last ocurrence of e in v}
+\PYG{c+cm}{lower = 1 looks for the first ocurrence of e in v */}
+\end{Verbatim}

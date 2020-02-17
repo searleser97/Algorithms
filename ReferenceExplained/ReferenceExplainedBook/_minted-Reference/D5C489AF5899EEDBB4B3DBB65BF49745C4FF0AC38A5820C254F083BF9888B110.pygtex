@@ -1,0 +1,6 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{// st = sparse table, Arith = Arithmetic}
+\PYG{k}{typedef} \PYG{k+kt}{int} \PYG{n}{T}\PYG{p}{;}
+\PYG{k+kt}{int} \PYG{n}{neutro} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{;}
+\PYG{n}{vector}\PYG{o}{\PYGZlt{}}\PYG{n}{vector}\PYG{o}{\PYGZlt{}}\PYG{n}{T}\PYG{o}{\PYGZgt{}\PYGZgt{}} \PYG{n}{st}\PYG{p}{;}
+\end{Verbatim}

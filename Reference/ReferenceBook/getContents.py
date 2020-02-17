@@ -90,7 +90,6 @@ def printFile(path, depth, sections):
     content += '\n\\end{minted}\n'
     print(content)
 
-
 def main(currPath, depth, sections):
     if len(sections) and sections[-1] in excluded:
         return
@@ -99,8 +98,10 @@ def main(currPath, depth, sections):
         key=lambda x: (
             x == 'Extras',
             x == 'Problems Solved',
+            x != 'Coding Resources',
+            x != 'Data Structures',
             isdir(join(currPath, x)),
-            '' if x == 'Coding Resources' else x.split('.')[0].lower()
+            x.split('.')[0].lower()
         )
     )
     isFirst = True

@@ -1,0 +1,23 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+  \PYG{c+c1}{// O(1)}
+  \PYG{k+kt}{void} \PYG{n+nf}{add}\PYG{p}{(}\PYG{k}{const} \PYG{k+kt}{char}\PYG{o}{\PYGZam{}} \PYG{n}{c}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+    \PYG{k+kt}{int} \PYG{n}{p} \PYG{o}{=} \PYG{n}{last}\PYG{p}{,} \PYG{n}{cur} \PYG{o}{=} \PYG{n}{size}\PYG{o}{++}\PYG{p}{;}
+    \PYG{n}{len}\PYG{p}{[}\PYG{n}{cur}\PYG{p}{]} \PYG{o}{=} \PYG{n}{len}\PYG{p}{[}\PYG{n}{p}\PYG{p}{]} \PYG{o}{+} \PYG{l+m+mi}{1}\PYG{p}{;}
+    \PYG{k}{while} \PYG{p}{(}\PYG{n}{p} \PYG{o}{!=} \PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1} \PYG{o}{\PYGZam{}\PYGZam{}} \PYG{o}{!}\PYG{n}{next}\PYG{p}{[}\PYG{n}{p}\PYG{p}{].}\PYG{n}{count}\PYG{p}{(}\PYG{n}{c}\PYG{p}{))}
+      \PYG{n}{next}\PYG{p}{[}\PYG{n}{p}\PYG{p}{][}\PYG{n}{c}\PYG{p}{]} \PYG{o}{=} \PYG{n}{cur}\PYG{p}{,} \PYG{n}{p} \PYG{o}{=} \PYG{n}{link}\PYG{p}{[}\PYG{n}{p}\PYG{p}{];}
+    \PYG{k}{if} \PYG{p}{(}\PYG{n}{p} \PYG{o}{==} \PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{)} \PYG{n}{link}\PYG{p}{[}\PYG{n}{cur}\PYG{p}{]} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{;}
+    \PYG{k}{else} \PYG{p}{\PYGZob{}}
+      \PYG{k+kt}{int} \PYG{n}{q} \PYG{o}{=} \PYG{n}{next}\PYG{p}{[}\PYG{n}{p}\PYG{p}{][}\PYG{n}{c}\PYG{p}{];}
+      \PYG{k}{if} \PYG{p}{(}\PYG{n}{len}\PYG{p}{[}\PYG{n}{p}\PYG{p}{]} \PYG{o}{+} \PYG{l+m+mi}{1} \PYG{o}{==} \PYG{n}{len}\PYG{p}{[}\PYG{n}{q}\PYG{p}{])} \PYG{n}{link}\PYG{p}{[}\PYG{n}{cur}\PYG{p}{]} \PYG{o}{=} \PYG{n}{q}\PYG{p}{;}
+      \PYG{k}{else} \PYG{p}{\PYGZob{}}
+        \PYG{k+kt}{int} \PYG{n}{clone} \PYG{o}{=} \PYG{n}{size}\PYG{o}{++}\PYG{p}{;}
+        \PYG{n}{len}\PYG{p}{[}\PYG{n}{clone}\PYG{p}{]} \PYG{o}{=} \PYG{n}{len}\PYG{p}{[}\PYG{n}{p}\PYG{p}{]} \PYG{o}{+} \PYG{l+m+mi}{1}\PYG{p}{;}
+        \PYG{n}{link}\PYG{p}{[}\PYG{n}{clone}\PYG{p}{]} \PYG{o}{=} \PYG{n}{link}\PYG{p}{[}\PYG{n}{q}\PYG{p}{],} \PYG{n}{next}\PYG{p}{[}\PYG{n}{clone}\PYG{p}{]} \PYG{o}{=} \PYG{n}{next}\PYG{p}{[}\PYG{n}{q}\PYG{p}{];}
+        \PYG{k}{while} \PYG{p}{(}\PYG{n}{p} \PYG{o}{!=} \PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1} \PYG{o}{\PYGZam{}\PYGZam{}} \PYG{n}{next}\PYG{p}{[}\PYG{n}{p}\PYG{p}{][}\PYG{n}{c}\PYG{p}{]} \PYG{o}{==} \PYG{n}{q}\PYG{p}{)}
+          \PYG{n}{next}\PYG{p}{[}\PYG{n}{p}\PYG{p}{][}\PYG{n}{c}\PYG{p}{]} \PYG{o}{=} \PYG{n}{clone}\PYG{p}{,} \PYG{n}{p} \PYG{o}{=} \PYG{n}{link}\PYG{p}{[}\PYG{n}{p}\PYG{p}{];}
+        \PYG{n}{link}\PYG{p}{[}\PYG{n}{q}\PYG{p}{]} \PYG{o}{=} \PYG{n}{link}\PYG{p}{[}\PYG{n}{cur}\PYG{p}{]} \PYG{o}{=} \PYG{n}{clone}\PYG{p}{;}
+      \PYG{p}{\PYGZcb{}}
+    \PYG{p}{\PYGZcb{}}
+    \PYG{n}{last} \PYG{o}{=} \PYG{n}{cur}\PYG{p}{;}
+  \PYG{p}{\PYGZcb{}}
+\end{Verbatim}

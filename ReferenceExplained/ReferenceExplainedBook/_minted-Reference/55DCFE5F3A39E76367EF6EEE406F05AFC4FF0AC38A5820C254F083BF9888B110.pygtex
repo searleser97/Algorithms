@@ -1,0 +1,6 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+  \PYG{c+c1}{// O(lg(N)) kth\PYGZhy{}Smallest in [l, r]}
+  \PYG{n}{T} \PYG{n+nf}{kth}\PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{l}\PYG{p}{,} \PYG{k+kt}{int} \PYG{n}{r}\PYG{p}{,} \PYG{k+kt}{int} \PYG{n}{k}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+    \PYG{k}{return} \PYG{n}{imap}\PYG{p}{[}\PYG{n}{wt}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{kth}\PYG{p}{(}\PYG{o}{++}\PYG{n}{l}\PYG{p}{,} \PYG{o}{++}\PYG{n}{r}\PYG{p}{,} \PYG{n}{k}\PYG{p}{)];}
+  \PYG{p}{\PYGZcb{}}
+\end{Verbatim}

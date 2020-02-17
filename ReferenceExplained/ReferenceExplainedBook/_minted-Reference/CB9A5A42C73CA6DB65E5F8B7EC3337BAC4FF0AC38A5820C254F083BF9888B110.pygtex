@@ -1,0 +1,9 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+cp}{\PYGZsh{}include} \PYG{c+cpf}{\PYGZdq{}Point.cpp\PYGZdq{}}
+
+\PYG{k}{struct} \PYG{n}{Vect} \PYG{p}{\PYGZob{}}
+  \PYG{n}{Point} \PYG{n}{u}\PYG{p}{,} \PYG{n}{v}\PYG{p}{;}
+  \PYG{n}{Vect}\PYG{p}{(}\PYG{k}{const} \PYG{n}{Point}\PYG{o}{\PYGZam{}} \PYG{n}{from}\PYG{p}{,} \PYG{k}{const} \PYG{n}{Point}\PYG{o}{\PYGZam{}} \PYG{n}{to}\PYG{p}{)}
+      \PYG{o}{:} \PYG{n}{u}\PYG{p}{(}\PYG{n}{from}\PYG{p}{),} \PYG{n}{v}\PYG{p}{(}\PYG{n}{to}\PYG{p}{)} \PYG{p}{\PYGZob{}\PYGZcb{}}
+\PYG{p}{\PYGZcb{};}
+\end{Verbatim}

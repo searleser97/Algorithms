@@ -1,0 +1,8 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+cp}{\PYGZsh{}include} \PYG{c+cpf}{\PYGZlt{}bits/stdc++.h\PYGZgt{}}
+\PYG{k}{using} \PYG{k}{namespace} \PYG{n}{std}\PYG{p}{;}
+\PYG{c+cp}{\PYGZsh{}define endl \PYGZsq{}\PYGZbs{}n\PYGZsq{}}
+\PYG{c+cp}{\PYGZsh{}define fori(x, n) for (int i = x; i \PYGZlt{} n; i++)}
+\PYG{c+cp}{\PYGZsh{}define forj(x, n) for (int j = x; j \PYGZlt{} n; j++)}
+\PYG{c+cp}{\PYGZsh{}define fork(x, n) for (int k = x; k \PYGZlt{} n; k++)}
+\end{Verbatim}

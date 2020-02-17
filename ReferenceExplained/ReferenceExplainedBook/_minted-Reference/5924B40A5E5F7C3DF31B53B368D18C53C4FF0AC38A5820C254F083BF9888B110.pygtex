@@ -1,0 +1,8 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+  \PYG{c+c1}{// O(lg(N))}
+  \PYG{k+kt}{int} \PYG{n+nf}{root}\PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{u}\PYG{p}{,} \PYG{k+kt}{int} \PYG{n}{ver}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+    \PYG{k}{while} \PYG{p}{(}\PYG{n}{version}\PYG{p}{[}\PYG{n}{u}\PYG{p}{]} \PYG{o}{\PYGZlt{}=} \PYG{n}{ver} \PYG{o}{\PYGZam{}\PYGZam{}} \PYG{n}{u} \PYG{o}{!=} \PYG{n}{dad}\PYG{p}{[}\PYG{n}{u}\PYG{p}{])}
+      \PYG{n}{u} \PYG{o}{=} \PYG{n}{dad}\PYG{p}{[}\PYG{n}{u}\PYG{p}{];}
+    \PYG{k}{return} \PYG{n}{u}\PYG{p}{;}
+  \PYG{p}{\PYGZcb{}}
+\end{Verbatim}

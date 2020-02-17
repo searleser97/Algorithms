@@ -1,0 +1,17 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{typedef} \PYG{k+kt}{long} \PYG{k+kt}{double} \PYG{n}{ld}\PYG{p}{;}
+\PYG{k}{const} \PYG{n}{ld} \PYG{n}{pi} \PYG{o}{=} \PYG{n}{acos}\PYG{p}{(}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{);}
+\PYG{k}{const} \PYG{n}{ld} \PYG{n}{eps} \PYG{o}{=} \PYG{l+m+mf}{0.0001}\PYG{p}{;}
+
+\PYG{k+kt}{bool} \PYG{n+nf}{geq}\PYG{p}{(}\PYG{n}{ld} \PYG{n}{a}\PYG{p}{,} \PYG{n}{ld} \PYG{n}{b}\PYG{p}{)\PYGZob{}}\PYG{k}{return} \PYG{n}{a}\PYG{o}{\PYGZhy{}}\PYG{n}{b} \PYG{o}{\PYGZgt{}=} \PYG{o}{\PYGZhy{}}\PYG{n}{eps}\PYG{p}{;\PYGZcb{}}     \PYG{c+c1}{//a \PYGZgt{}= b}
+\PYG{k+kt}{bool} \PYG{n+nf}{leq}\PYG{p}{(}\PYG{n}{ld} \PYG{n}{a}\PYG{p}{,} \PYG{n}{ld} \PYG{n}{b}\PYG{p}{)\PYGZob{}}\PYG{k}{return} \PYG{n}{b}\PYG{o}{\PYGZhy{}}\PYG{n}{a} \PYG{o}{\PYGZgt{}=} \PYG{o}{\PYGZhy{}}\PYG{n}{eps}\PYG{p}{;\PYGZcb{}}     \PYG{c+c1}{//a \PYGZlt{}= b}
+\PYG{k+kt}{bool} \PYG{n+nf}{ge}\PYG{p}{(}\PYG{n}{ld} \PYG{n}{a}\PYG{p}{,} \PYG{n}{ld} \PYG{n}{b}\PYG{p}{)\PYGZob{}}\PYG{k}{return} \PYG{n}{a}\PYG{o}{\PYGZhy{}}\PYG{n}{b} \PYG{o}{\PYGZgt{}} \PYG{n}{eps}\PYG{p}{;\PYGZcb{}}        \PYG{c+c1}{//a \PYGZgt{} b}
+\PYG{k+kt}{bool} \PYG{n+nf}{le}\PYG{p}{(}\PYG{n}{ld} \PYG{n}{a}\PYG{p}{,} \PYG{n}{ld} \PYG{n}{b}\PYG{p}{)\PYGZob{}}\PYG{k}{return} \PYG{n}{b}\PYG{o}{\PYGZhy{}}\PYG{n}{a} \PYG{o}{\PYGZgt{}} \PYG{n}{eps}\PYG{p}{;\PYGZcb{}}        \PYG{c+c1}{//a \PYGZlt{} b}
+\PYG{k+kt}{bool} \PYG{n+nf}{eq}\PYG{p}{(}\PYG{n}{ld} \PYG{n}{a}\PYG{p}{,} \PYG{n}{ld} \PYG{n}{b}\PYG{p}{)\PYGZob{}}\PYG{k}{return} \PYG{n}{abs}\PYG{p}{(}\PYG{n}{a}\PYG{o}{\PYGZhy{}}\PYG{n}{b}\PYG{p}{)} \PYG{o}{\PYGZlt{}=} \PYG{n}{eps}\PYG{p}{;\PYGZcb{}}  \PYG{c+c1}{//a == b}
+\PYG{k+kt}{bool} \PYG{n+nf}{neq}\PYG{p}{(}\PYG{n}{ld} \PYG{n}{a}\PYG{p}{,} \PYG{n}{ld} \PYG{n}{b}\PYG{p}{)\PYGZob{}}\PYG{k}{return} \PYG{n}{abs}\PYG{p}{(}\PYG{n}{a}\PYG{o}{\PYGZhy{}}\PYG{n}{b}\PYG{p}{)} \PYG{o}{\PYGZgt{}} \PYG{n}{eps}\PYG{p}{;\PYGZcb{}}  \PYG{c+c1}{//a != b}
+
+\PYG{k}{struct} \PYG{n}{Point} \PYG{p}{\PYGZob{}}
+  \PYG{n}{ld} \PYG{n}{x}\PYG{p}{,} \PYG{n}{y}\PYG{p}{;}
+  \PYG{n}{Point}\PYG{p}{()} \PYG{o}{:} \PYG{n}{x}\PYG{p}{(}\PYG{l+m+mi}{0}\PYG{p}{),} \PYG{n}{y}\PYG{p}{(}\PYG{l+m+mi}{0}\PYG{p}{)} \PYG{p}{\PYGZob{}\PYGZcb{}}
+  \PYG{n}{Point}\PYG{p}{(}\PYG{n}{ld} \PYG{n}{x}\PYG{p}{,} \PYG{n}{ld} \PYG{n}{y}\PYG{p}{)} \PYG{o}{:} \PYG{n}{x}\PYG{p}{(}\PYG{n}{x}\PYG{p}{),} \PYG{n}{y}\PYG{p}{(}\PYG{n}{y}\PYG{p}{)} \PYG{p}{\PYGZob{}\PYGZcb{}}
+\end{Verbatim}

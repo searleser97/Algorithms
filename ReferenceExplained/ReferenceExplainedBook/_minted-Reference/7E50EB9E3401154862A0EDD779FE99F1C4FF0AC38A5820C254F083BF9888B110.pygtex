@@ -1,0 +1,6 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+  \PYG{k+kt}{bool} \PYG{k}{operator}\PYG{o}{\PYGZlt{}}\PYG{p}{(}\PYG{k}{const} \PYG{n}{point} \PYG{o}{\PYGZam{}}\PYG{n}{p}\PYG{p}{)} \PYG{k}{const} \PYG{p}{\PYGZob{}}
+    \PYG{k}{if} \PYG{p}{(}\PYG{n}{eq}\PYG{p}{(}\PYG{n}{x}\PYG{p}{,} \PYG{n}{p}\PYG{p}{.}\PYG{n}{x}\PYG{p}{))} \PYG{k}{return} \PYG{n}{le}\PYG{p}{(}\PYG{n}{y}\PYG{p}{,} \PYG{n}{p}\PYG{p}{.}\PYG{n}{y}\PYG{p}{);}
+    \PYG{k}{return} \PYG{n+nf}{le}\PYG{p}{(}\PYG{n}{x}\PYG{p}{,} \PYG{n}{p}\PYG{p}{.}\PYG{n}{x}\PYG{p}{);}
+  \PYG{p}{\PYGZcb{}}
+\end{Verbatim}

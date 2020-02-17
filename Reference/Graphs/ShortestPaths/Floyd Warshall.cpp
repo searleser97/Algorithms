@@ -2,10 +2,10 @@
 // d = distance
 typedef int T;
 long long int inf = (1ll << 62) - 1;
-vector<vector<T>> d;
+vector<vector<long long int>> d;
 
 void init(int n) {
-  d.assign(n, vector<T>(n, inf));
+  d.assign(n, vector<long long int>(n, inf));
   for (int i = 0; i < n; i++) d[i][i] = 0;
 }
 // 5

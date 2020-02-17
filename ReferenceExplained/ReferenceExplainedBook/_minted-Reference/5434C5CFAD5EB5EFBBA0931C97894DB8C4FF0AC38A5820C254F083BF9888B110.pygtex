@@ -1,0 +1,7 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+  \PYG{c+c1}{// O(lg(N)) count of numbers \PYGZlt{}= to k in [l, r]}
+  \PYG{n}{T} \PYG{n+nf}{lte}\PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{l}\PYG{p}{,} \PYG{k+kt}{int} \PYG{n}{r}\PYG{p}{,} \PYG{n}{T} \PYG{n}{k}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+    \PYG{k+kt}{int} \PYG{n}{kk} \PYG{o}{=} \PYG{n}{Map}\PYG{p}{[}\PYG{n}{bSearch}\PYG{o}{\PYGZlt{}}\PYG{n}{T}\PYG{o}{\PYGZgt{}}\PYG{p}{(}\PYG{n}{o}\PYG{p}{,} \PYG{n}{k}\PYG{p}{,} \PYG{n}{l}\PYG{p}{,} \PYG{n}{r}\PYG{p}{)[}\PYG{l+m+mi}{1}\PYG{p}{]];}
+    \PYG{k}{return} \PYG{n}{imap}\PYG{p}{[}\PYG{n}{wt}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{lte}\PYG{p}{(}\PYG{o}{++}\PYG{n}{l}\PYG{p}{,} \PYG{o}{++}\PYG{n}{r}\PYG{p}{,} \PYG{n}{kk}\PYG{p}{)];}
+  \PYG{p}{\PYGZcb{}}
+\end{Verbatim}

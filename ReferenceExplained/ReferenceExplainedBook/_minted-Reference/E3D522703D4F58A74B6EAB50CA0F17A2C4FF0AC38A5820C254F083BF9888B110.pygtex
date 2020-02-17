@@ -1,0 +1,5 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+cp}{\PYGZsh{}include} \PYG{c+cpf}{\PYGZdq{}../Number Theory/Modular Exponentiation.cpp\PYGZdq{}}
+
+\PYG{k}{typedef} \PYG{k+kt}{int64\PYGZus{}t} \PYG{n}{lli}\PYG{p}{;}
+\end{Verbatim}

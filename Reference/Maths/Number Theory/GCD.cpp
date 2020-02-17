@@ -1,12 +1,12 @@
 // 5
-typedef __int128_t lli;
+typedef long long int li;
 
-lli gcd(lli a, lli b) {
+li gcd(li a, li b) {
   return !b ? a : gcd(b, a % b);
 }
 // 5
 // Iterative version
-lli gcdI(lli a, lli b) {
+li gcdI(li a, li b) {
   while (b) a %= b, swap(a, b);
   return a;
 }

@@ -1,0 +1,12 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{// ans[0] = true if e is in v else false}
+\PYG{c+c1}{// ans[1] = index pointing to the first element in}
+\PYG{c+c1}{// the range [l, r) which compares \PYGZgt{} to e.}
+\PYG{k}{template} \PYG{o}{\PYGZlt{}}\PYG{k}{class} \PYG{n+nc}{T}\PYG{o}{\PYGZgt{}}
+\PYG{n}{vector}\PYG{o}{\PYGZlt{}}\PYG{k+kt}{int}\PYG{o}{\PYGZgt{}} \PYG{n}{upperBound}\PYG{p}{(}\PYG{n}{vector}\PYG{o}{\PYGZlt{}}\PYG{n}{T}\PYG{o}{\PYGZgt{}\PYGZam{}} \PYG{n}{v}\PYG{p}{,} \PYG{n}{T} \PYG{n}{e}\PYG{p}{,} \PYG{k+kt}{int} \PYG{n}{l}\PYG{p}{,}
+                       \PYG{k+kt}{int} \PYG{n}{r}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+  \PYG{k}{auto} \PYG{n}{it} \PYG{o}{=} \PYG{n}{v}\PYG{p}{.}\PYG{n}{begin}\PYG{p}{();}
+  \PYG{k+kt}{int} \PYG{n}{i} \PYG{o}{=} \PYG{n}{upper\PYGZus{}bound}\PYG{p}{(}\PYG{n}{it} \PYG{o}{+} \PYG{n}{l}\PYG{p}{,} \PYG{n}{it} \PYG{o}{+} \PYG{n}{r}\PYG{p}{,} \PYG{n}{e}\PYG{p}{)} \PYG{o}{\PYGZhy{}} \PYG{n}{it}\PYG{p}{;}
+  \PYG{k}{return} \PYG{p}{\PYGZob{}}\PYG{n}{v}\PYG{p}{[}\PYG{n}{i} \PYG{o}{\PYGZhy{}} \PYG{l+m+mi}{1}\PYG{p}{]} \PYG{o}{==} \PYG{n}{e}\PYG{p}{,} \PYG{n}{i}\PYG{p}{\PYGZcb{};}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

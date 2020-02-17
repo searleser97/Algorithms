@@ -1,0 +1,4 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+  \PYG{n}{Point} \PYG{n+nf}{unit}\PYG{p}{()} \PYG{p}{\PYGZob{}} \PYG{k}{return} \PYG{p}{(}\PYG{o}{*}\PYG{k}{this}\PYG{p}{)} \PYG{o}{/} \PYG{n}{norm}\PYG{p}{();} \PYG{p}{\PYGZcb{}}
+\PYG{p}{\PYGZcb{};}
+\end{Verbatim}

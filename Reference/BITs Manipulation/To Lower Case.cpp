@@ -1,4 +1,1 @@
-// 3
-char lowerCase(char c) {
-  return c | ' ';
-}
+char lowerCase(char c) { return c | ' '; }

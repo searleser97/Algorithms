@@ -1,0 +1,10 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{struct} \PYG{n}{SuffixAutomaton} \PYG{p}{\PYGZob{}}
+  \PYG{k}{struct} \PYG{n}{State} \PYG{p}{\PYGZob{}}
+    \PYG{k+kt}{int} \PYG{n}{len}\PYG{p}{,} \PYG{n}{link}\PYG{p}{;}
+    \PYG{n}{unordered\PYGZus{}map}\PYG{o}{\PYGZlt{}}\PYG{k+kt}{char}\PYG{p}{,} \PYG{k+kt}{int}\PYG{o}{\PYGZgt{}} \PYG{n}{next}\PYG{p}{;}
+  \PYG{p}{\PYGZcb{};}
+
+  \PYG{n}{vector}\PYG{o}{\PYGZlt{}}\PYG{n}{State}\PYG{o}{\PYGZgt{}} \PYG{n}{st}\PYG{p}{;}
+  \PYG{k+kt}{int} \PYG{n}{size}\PYG{p}{,} \PYG{n}{last}\PYG{p}{;}
+\end{Verbatim}

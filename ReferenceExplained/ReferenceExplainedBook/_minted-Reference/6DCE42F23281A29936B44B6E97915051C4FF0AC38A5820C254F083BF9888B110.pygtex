@@ -1,0 +1,15 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{template} \PYG{o}{\PYGZlt{}}\PYG{k}{class} \PYG{n+nc}{K}\PYG{p}{,} \PYG{k}{class} \PYG{n+nc}{V}\PYG{o}{\PYGZgt{}}
+\PYG{k}{struct} \PYG{n}{RedBlackTree} \PYG{p}{\PYGZob{}}
+
+  \PYG{k}{struct} \PYG{n}{Node} \PYG{p}{\PYGZob{}}
+    \PYG{n}{K} \PYG{n}{key}\PYG{p}{;}
+    \PYG{n}{V} \PYG{n}{val}\PYG{p}{;}
+    \PYG{n}{Node} \PYG{o}{*}\PYG{n}{l}\PYG{p}{,} \PYG{o}{*}\PYG{n}{r}\PYG{p}{;}  \PYG{c+c1}{// left, right}
+    \PYG{k+kt}{bool} \PYG{n}{isRed}\PYG{p}{;}
+    \PYG{n}{Node}\PYG{p}{(}\PYG{n}{K} \PYG{n}{k}\PYG{p}{,} \PYG{n}{V} \PYG{n}{v}\PYG{p}{,} \PYG{k+kt}{bool} \PYG{n}{isRed}\PYG{p}{)}
+        \PYG{o}{:} \PYG{n}{key}\PYG{p}{(}\PYG{n}{k}\PYG{p}{),} \PYG{n}{val}\PYG{p}{(}\PYG{n}{v}\PYG{p}{),} \PYG{n}{isRed}\PYG{p}{(}\PYG{n}{isRed}\PYG{p}{)} \PYG{p}{\PYGZob{}\PYGZcb{}}
+  \PYG{p}{\PYGZcb{};}
+
+  \PYG{n}{Node} \PYG{o}{*}\PYG{n}{root} \PYG{o}{=} \PYG{k}{nullptr}\PYG{p}{;}
+\end{Verbatim}

@@ -1,0 +1,8 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+  \PYG{c+c1}{// O(N)}
+  \PYG{n}{SuffixAutomaton}\PYG{p}{(}\PYG{k}{const} \PYG{n}{string}\PYG{o}{\PYGZam{}} \PYG{n}{s}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+    \PYG{n}{init}\PYG{p}{(}\PYG{n}{s}\PYG{p}{.}\PYG{n}{size}\PYG{p}{());}
+    \PYG{n}{len}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{]} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{,} \PYG{n}{link}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{]} \PYG{o}{=} \PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{,} \PYG{n}{size} \PYG{o}{=} \PYG{l+m+mi}{1}\PYG{p}{,} \PYG{n}{last} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{;}
+    \PYG{k}{for} \PYG{p}{(}\PYG{k}{const} \PYG{k}{auto}\PYG{o}{\PYGZam{}} \PYG{n+nl}{c} \PYG{p}{:} \PYG{n}{s}\PYG{p}{)} \PYG{n}{add}\PYG{p}{(}\PYG{n}{c}\PYG{p}{);}
+  \PYG{p}{\PYGZcb{}}
+\end{Verbatim}

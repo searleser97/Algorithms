@@ -1,0 +1,13 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{// lte = less than or equal, c = compressed}
+\PYG{c+c1}{// o  = original, 1\PYGZhy{}indexed}
+\PYG{c+cp}{\PYGZsh{}include} \PYG{c+cpf}{\PYGZdq{}../../Techniques/Binary Search.cpp\PYGZdq{}}
+\PYG{c+cp}{\PYGZsh{}include} \PYG{c+cpf}{\PYGZdq{}Wavelet Tree.cpp\PYGZdq{}}
+
+\PYG{k}{template} \PYG{o}{\PYGZlt{}}\PYG{k}{class} \PYG{n+nc}{T}\PYG{o}{\PYGZgt{}}
+\PYG{k}{struct} \PYG{n}{WaveletTreeCompressed} \PYG{p}{\PYGZob{}}
+  \PYG{n}{unordered\PYGZus{}map}\PYG{o}{\PYGZlt{}}\PYG{k+kt}{int}\PYG{p}{,} \PYG{n}{T}\PYG{o}{\PYGZgt{}} \PYG{n}{imap}\PYG{p}{;}
+  \PYG{n}{unordered\PYGZus{}map}\PYG{o}{\PYGZlt{}}\PYG{n}{T}\PYG{p}{,} \PYG{k+kt}{int}\PYG{o}{\PYGZgt{}} \PYG{n}{Map}\PYG{p}{;}
+  \PYG{n}{WaveletTree}\PYG{o}{*} \PYG{n}{wt}\PYG{p}{;}
+  \PYG{n}{vector}\PYG{o}{\PYGZlt{}}\PYG{n}{T}\PYG{o}{\PYGZgt{}} \PYG{n}{o}\PYG{p}{;}
+\end{Verbatim}

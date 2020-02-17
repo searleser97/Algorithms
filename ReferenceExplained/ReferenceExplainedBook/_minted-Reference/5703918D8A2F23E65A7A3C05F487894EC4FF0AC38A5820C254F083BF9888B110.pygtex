@@ -1,0 +1,9 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{typedef} \PYG{k+kt}{long} \PYG{k+kt}{long} \PYG{k+kt}{int} \PYG{n}{li}\PYG{p}{;}
+\PYG{c+c1}{// if li == \PYGZus{}\PYGZus{}int128\PYGZus{}t: use map\PYGZlt{}li, int\PYGZgt{} Map;}
+\PYG{k}{typedef} \PYG{n}{unordered\PYGZus{}map}\PYG{o}{\PYGZlt{}}\PYG{n}{li}\PYG{p}{,} \PYG{k+kt}{int}\PYG{o}{\PYGZgt{}} \PYG{n}{Map}\PYG{p}{;}
+
+\PYG{n}{Map} \PYG{n+nf}{getPrimeFactors}\PYG{p}{(}\PYG{n}{li} \PYG{n}{n}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

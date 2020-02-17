@@ -1,0 +1,6 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{// link[u]: links to the longest suffix which is}
+\PYG{c+c1}{//          not in the same endpos\PYGZhy{}equivalence class}
+\PYG{c+c1}{// len[u]: length of the longest suffix that}
+\PYG{c+c1}{//         corresponds to u\PYGZsq{}s endpos\PYGZhy{}equivalence class}
+\end{Verbatim}

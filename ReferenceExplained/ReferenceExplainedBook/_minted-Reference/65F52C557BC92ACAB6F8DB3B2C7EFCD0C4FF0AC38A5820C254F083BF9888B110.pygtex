@@ -1,0 +1,21 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+  \PYG{c+c1}{// O(N*lg(A))}
+  \PYG{n}{WaveletTree}\PYG{p}{(}\PYG{n}{vector}\PYG{o}{\PYGZlt{}}\PYG{k+kt}{int}\PYG{o}{\PYGZgt{}::}\PYG{n}{iterator} \PYG{n}{from}\PYG{p}{,}
+              \PYG{n}{vector}\PYG{o}{\PYGZlt{}}\PYG{k+kt}{int}\PYG{o}{\PYGZgt{}::}\PYG{n}{iterator} \PYG{n}{to}\PYG{p}{,} \PYG{k+kt}{int} \PYG{n}{lo}\PYG{p}{,}
+              \PYG{k+kt}{int} \PYG{n}{hi}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+    \PYG{k}{this}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{lo} \PYG{o}{=} \PYG{n}{lo}\PYG{p}{,} \PYG{k}{this}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{hi} \PYG{o}{=} \PYG{n}{hi}\PYG{p}{;}
+    \PYG{k}{if} \PYG{p}{(}\PYG{n}{lo} \PYG{o}{==} \PYG{n}{hi} \PYG{n}{or} \PYG{n}{from} \PYG{o}{\PYGZgt{}=} \PYG{n}{to}\PYG{p}{)} \PYG{k}{return}\PYG{p}{;}
+    \PYG{k+kt}{int} \PYG{n}{mid} \PYG{o}{=} \PYG{p}{(}\PYG{n}{lo} \PYG{o}{+} \PYG{n}{hi}\PYG{p}{)} \PYG{o}{\PYGZgt{}\PYGZgt{}} \PYG{l+m+mi}{1}\PYG{p}{;}
+    \PYG{k}{auto} \PYG{n}{f} \PYG{o}{=} \PYG{p}{[}\PYG{n}{mid}\PYG{p}{](}\PYG{k+kt}{int} \PYG{n}{x}\PYG{p}{)} \PYG{p}{\PYGZob{}} \PYG{k}{return} \PYG{n}{x} \PYG{o}{\PYGZlt{}=} \PYG{n}{mid}\PYG{p}{;} \PYG{p}{\PYGZcb{};}
+    \PYG{n}{lcount}\PYG{p}{.}\PYG{n}{reserve}\PYG{p}{(}\PYG{n}{to} \PYG{o}{\PYGZhy{}} \PYG{n}{from} \PYG{o}{+} \PYG{l+m+mi}{1}\PYG{p}{);}
+    \PYG{n}{pref}\PYG{p}{.}\PYG{n}{reserve}\PYG{p}{(}\PYG{n}{to} \PYG{o}{\PYGZhy{}} \PYG{n}{from} \PYG{o}{+} \PYG{l+m+mi}{1}\PYG{p}{);}
+    \PYG{n}{lcount}\PYG{p}{.}\PYG{n}{push\PYGZus{}back}\PYG{p}{(}\PYG{l+m+mi}{0}\PYG{p}{);}
+    \PYG{n}{pref}\PYG{p}{.}\PYG{n}{push\PYGZus{}back}\PYG{p}{(}\PYG{l+m+mi}{0}\PYG{p}{);}
+    \PYG{k}{for} \PYG{p}{(}\PYG{k}{auto} \PYG{n}{it} \PYG{o}{=} \PYG{n}{from}\PYG{p}{;} \PYG{n}{it} \PYG{o}{!=} \PYG{n}{to}\PYG{p}{;} \PYG{n}{it}\PYG{o}{++}\PYG{p}{)}
+      \PYG{n}{lcount}\PYG{p}{.}\PYG{n}{push\PYGZus{}back}\PYG{p}{(}\PYG{n}{lcount}\PYG{p}{.}\PYG{n}{back}\PYG{p}{()} \PYG{o}{+} \PYG{n}{f}\PYG{p}{(}\PYG{o}{*}\PYG{n}{it}\PYG{p}{)),}
+          \PYG{n}{pref}\PYG{p}{.}\PYG{n}{push\PYGZus{}back}\PYG{p}{(}\PYG{n}{pref}\PYG{p}{.}\PYG{n}{back}\PYG{p}{()} \PYG{o}{+} \PYG{o}{*}\PYG{n}{it}\PYG{p}{);}
+    \PYG{k}{auto} \PYG{n}{pivot} \PYG{o}{=} \PYG{n}{stable\PYGZus{}partition}\PYG{p}{(}\PYG{n}{from}\PYG{p}{,} \PYG{n}{to}\PYG{p}{,} \PYG{n}{f}\PYG{p}{);}
+    \PYG{n}{l} \PYG{o}{=} \PYG{k}{new} \PYG{n}{WaveletTree}\PYG{p}{(}\PYG{n}{from}\PYG{p}{,} \PYG{n}{pivot}\PYG{p}{,} \PYG{n}{lo}\PYG{p}{,} \PYG{n}{mid}\PYG{p}{);}
+    \PYG{n}{r} \PYG{o}{=} \PYG{k}{new} \PYG{n}{WaveletTree}\PYG{p}{(}\PYG{n}{pivot}\PYG{p}{,} \PYG{n}{to}\PYG{p}{,} \PYG{n}{mid} \PYG{o}{+} \PYG{l+m+mi}{1}\PYG{p}{,} \PYG{n}{hi}\PYG{p}{);}
+  \PYG{p}{\PYGZcb{}}
+\end{Verbatim}

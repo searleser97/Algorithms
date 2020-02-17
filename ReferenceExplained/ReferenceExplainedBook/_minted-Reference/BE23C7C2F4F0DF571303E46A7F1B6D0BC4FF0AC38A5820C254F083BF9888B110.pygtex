@@ -1,0 +1,20 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+cp}{\PYGZsh{}include} \PYG{c+cpf}{\PYGZdq{}../Number Theory/GCD.cpp\PYGZdq{}}
+\PYG{c+cp}{\PYGZsh{}include} \PYG{c+cpf}{\PYGZdq{}./Is Prime Miller Rabin.cpp\PYGZdq{}}
+
+\PYG{k}{typedef} \PYG{k+kt}{int64\PYGZus{}t} \PYG{n}{lli}\PYG{p}{;}
+\PYG{k}{typedef} \PYG{n}{unordered\PYGZus{}map}\PYG{o}{\PYGZlt{}}\PYG{n}{lli}\PYG{p}{,} \PYG{k+kt}{int}\PYG{o}{\PYGZgt{}} \PYG{n}{Map}\PYG{p}{;}
+
+\PYG{n}{lli} \PYG{n+nf}{randomDivisor}\PYG{p}{(}\PYG{n}{lli} \PYG{n}{n}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+  \PYG{k}{if} \PYG{p}{(}\PYG{o}{\PYGZti{}}\PYG{n}{n} \PYG{o}{\PYGZam{}} \PYG{l+m+mi}{1}\PYG{p}{)} \PYG{k}{return} \PYG{l+m+mi}{2}\PYG{p}{;}
+  \PYG{n}{lli} \PYG{n}{a} \PYG{o}{=} \PYG{l+m+mi}{1LL} \PYG{o}{+} \PYG{n}{rand}\PYG{p}{()} \PYG{o}{\PYGZpc{}} \PYG{p}{(}\PYG{n}{n} \PYG{o}{\PYGZhy{}} \PYG{l+m+mi}{1LL}\PYG{p}{);}
+  \PYG{n}{lli} \PYG{n}{x} \PYG{o}{=} \PYG{l+m+mi}{2}\PYG{p}{,} \PYG{n}{y} \PYG{o}{=} \PYG{l+m+mi}{2}\PYG{p}{,} \PYG{n}{d} \PYG{o}{=} \PYG{l+m+mi}{1}\PYG{p}{;}
+  \PYG{k}{while} \PYG{p}{(}\PYG{n}{d} \PYG{o}{==} \PYG{l+m+mi}{1LL}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+    \PYG{n}{x} \PYG{o}{=} \PYG{p}{(}\PYG{n}{x} \PYG{o}{*} \PYG{n}{x} \PYG{o}{\PYGZpc{}} \PYG{n}{n} \PYG{o}{+} \PYG{n}{a}\PYG{p}{)} \PYG{o}{\PYGZpc{}} \PYG{n}{n}\PYG{p}{;}
+    \PYG{n}{y} \PYG{o}{=} \PYG{p}{(}\PYG{n}{y} \PYG{o}{*} \PYG{n}{y} \PYG{o}{\PYGZpc{}} \PYG{n}{n} \PYG{o}{+} \PYG{n}{a}\PYG{p}{)} \PYG{o}{\PYGZpc{}} \PYG{n}{n}\PYG{p}{;}
+    \PYG{n}{y} \PYG{o}{=} \PYG{p}{(}\PYG{n}{y} \PYG{o}{*} \PYG{n}{y} \PYG{o}{\PYGZpc{}} \PYG{n}{n} \PYG{o}{+} \PYG{n}{a}\PYG{p}{)} \PYG{o}{\PYGZpc{}} \PYG{n}{n}\PYG{p}{;}
+    \PYG{n}{d} \PYG{o}{=} \PYG{n}{gcd}\PYG{p}{(}\PYG{n}{abs}\PYG{p}{(}\PYG{n}{x} \PYG{o}{\PYGZhy{}} \PYG{n}{y}\PYG{p}{),} \PYG{n}{n}\PYG{p}{);}
+  \PYG{p}{\PYGZcb{}}
+  \PYG{k}{return} \PYG{n}{d}\PYG{p}{;}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

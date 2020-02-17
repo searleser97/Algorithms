@@ -1,0 +1,25 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+  \PYG{c+c1}{// kth\PYGZhy{}Smallest O(lg(A)) [a, b)}
+  \PYG{k+kt}{int} \PYG{n+nf}{kth}\PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{a}\PYG{p}{,} \PYG{k+kt}{int} \PYG{n}{b}\PYG{p}{,} \PYG{k+kt}{int} \PYG{n}{k}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+    \PYG{k}{if} \PYG{p}{(}\PYG{n}{a} \PYG{o}{\PYGZgt{}} \PYG{n}{b}\PYG{p}{)} \PYG{k}{return} \PYG{l+m+mi}{0}\PYG{p}{;}
+    \PYG{k}{if} \PYG{p}{(}\PYG{n}{lo} \PYG{o}{==} \PYG{n}{hi}\PYG{p}{)} \PYG{k}{return} \PYG{n}{lo}\PYG{p}{;}
+    \PYG{k+kt}{int} \PYG{n}{lc} \PYG{o}{=} \PYG{n}{lcount}\PYG{p}{[}\PYG{n}{a}\PYG{p}{],} \PYG{n}{rc} \PYG{o}{=} \PYG{n}{lcount}\PYG{p}{[}\PYG{n}{b}\PYG{p}{],}
+        \PYG{n}{inleft} \PYG{o}{=} \PYG{n}{rc} \PYG{o}{\PYGZhy{}} \PYG{n}{lc}\PYG{p}{;}
+    \PYG{k}{if} \PYG{p}{(}\PYG{n}{inleft} \PYG{o}{\PYGZlt{}} \PYG{n}{k}\PYG{p}{)}
+      \PYG{k}{return} \PYG{n}{r}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{kth}\PYG{p}{(}\PYG{n}{a} \PYG{o}{\PYGZhy{}} \PYG{n}{lc}\PYG{p}{,} \PYG{n}{b} \PYG{o}{\PYGZhy{}} \PYG{n}{rc}\PYG{p}{,} \PYG{n}{k} \PYG{o}{\PYGZhy{}} \PYG{n}{inleft}\PYG{p}{);}
+    \PYG{k}{return} \PYG{n}{l}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{kth}\PYG{p}{(}\PYG{n}{lc}\PYG{p}{,} \PYG{n}{rc}\PYG{p}{,} \PYG{n}{k}\PYG{p}{);}
+  \PYG{p}{\PYGZcb{}}
+  \PYG{c+c1}{//}
+  \PYG{c+c1}{// O(lg(A)) count of numbers \PYGZlt{}= to k in [a, b)}
+  \PYG{k+kt}{int} \PYG{n+nf}{lte}\PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{a}\PYG{p}{,} \PYG{k+kt}{int} \PYG{n}{b}\PYG{p}{,} \PYG{k+kt}{int} \PYG{n}{k}\PYG{p}{)} \PYG{p}{\PYGZob{}} \PYG{k}{return} \PYG{l+m+mi}{0}\PYG{p}{;} \PYG{p}{\PYGZcb{}}
+  \PYG{c+c1}{//}
+  \PYG{c+c1}{// O(lg(A)) sum of numbers \PYGZlt{}= to k in [a, b)}
+  \PYG{k+kt}{int} \PYG{n+nf}{sumlte}\PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{a}\PYG{p}{,} \PYG{k+kt}{int} \PYG{n}{b}\PYG{p}{,} \PYG{k+kt}{int} \PYG{n}{k}\PYG{p}{)} \PYG{p}{\PYGZob{}} \PYG{k}{return} \PYG{l+m+mi}{0}\PYG{p}{;} \PYG{p}{\PYGZcb{}}
+\PYG{p}{\PYGZcb{};}
+
+\PYG{k+kt}{int} \PYG{n+nf}{main}\PYG{p}{()} \PYG{p}{\PYGZob{}}
+  \PYG{n}{vector}\PYG{o}{\PYGZlt{}}\PYG{k+kt}{int}\PYG{o}{\PYGZgt{}} \PYG{n}{v} \PYG{o}{=} \PYG{p}{\PYGZob{}}\PYG{l+m+mi}{9}\PYG{p}{,} \PYG{l+m+mi}{8}\PYG{p}{,} \PYG{l+m+mi}{9}\PYG{p}{,} \PYG{l+m+mi}{7}\PYG{p}{,} \PYG{l+m+mi}{4}\PYG{p}{,} \PYG{l+m+mi}{2}\PYG{p}{,} \PYG{l+m+mi}{1}\PYG{p}{,} \PYG{l+m+mi}{4}\PYG{p}{,} \PYG{l+m+mi}{9}\PYG{p}{\PYGZcb{};}
+  \PYG{n}{WaveletTree} \PYG{n}{wt}\PYG{p}{(}\PYG{n}{v}\PYG{p}{.}\PYG{n}{begin}\PYG{p}{(),} \PYG{n}{v}\PYG{p}{.}\PYG{n}{end}\PYG{p}{(),} \PYG{l+m+mi}{1}\PYG{p}{,} \PYG{l+m+mi}{9}\PYG{p}{);}
+  \PYG{n}{cout} \PYG{o}{\PYGZlt{}\PYGZlt{}} \PYG{n}{wt}\PYG{p}{.}\PYG{n}{freq}\PYG{p}{(}\PYG{l+m+mi}{6}\PYG{p}{,} \PYG{l+m+mi}{9}\PYG{p}{,} \PYG{l+m+mi}{4}\PYG{p}{)} \PYG{o}{\PYGZlt{}\PYGZlt{}} \PYG{n}{endl}\PYG{p}{;}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

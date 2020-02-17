@@ -1,0 +1,12 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+cm}{/* if e in v and lower = false (upper\PYGZus{}bound):}
+\PYG{c+cm}{  r = position of e in v}
+\PYG{c+cm}{  l = r + 1}
+\PYG{c+cm}{if e in v and lower = true (lower\PYGZus{}bound):}
+\PYG{c+cm}{  l = position of e in v}
+\PYG{c+cm}{  r = l \PYGZhy{} 1}
+\PYG{c+cm}{if e not in v and inv = false it means that:}
+\PYG{c+cm}{  v[r] \PYGZlt{} e \PYGZlt{} v[l]}
+\PYG{c+cm}{if e not in v and inv = true it means that:}
+\PYG{c+cm}{  v[r] \PYGZgt{} e \PYGZgt{} v[l] */}
+\end{Verbatim}

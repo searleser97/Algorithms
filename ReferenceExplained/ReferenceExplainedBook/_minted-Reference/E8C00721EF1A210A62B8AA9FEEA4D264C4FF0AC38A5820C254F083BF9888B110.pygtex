@@ -1,0 +1,9 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{// returns a vector with 3 values where:}
+\PYG{c+c1}{// [0] = position where e is found}
+\PYG{c+c1}{// [1] = position of the greatest element \PYGZlt{}= e}
+\PYG{c+c1}{// [1] = \PYGZhy{}1 if e \PYGZlt{} v[l]}
+\PYG{c+c1}{// [2] = position of the smallest element \PYGZgt{}= e}
+\PYG{c+c1}{// [2] = h + 1 if e \PYGZgt{} v[h]}
+\PYG{c+c1}{// for inv = true [1] and [2] invert}
+\end{Verbatim}

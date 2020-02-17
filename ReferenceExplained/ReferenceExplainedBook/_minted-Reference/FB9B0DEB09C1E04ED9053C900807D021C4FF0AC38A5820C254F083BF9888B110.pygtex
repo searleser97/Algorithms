@@ -1,0 +1,6 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+  \PYG{c+c1}{// O(lg(N)) frequency of k in [a, b]}
+  \PYG{k+kt}{int} \PYG{n+nf}{freq}\PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{l}\PYG{p}{,} \PYG{k+kt}{int} \PYG{n}{r}\PYG{p}{,} \PYG{n}{T} \PYG{n}{k}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+    \PYG{k}{return} \PYG{n}{wt}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{freq}\PYG{p}{(}\PYG{n}{l}\PYG{p}{,} \PYG{n}{r}\PYG{p}{,} \PYG{n}{Map}\PYG{p}{[}\PYG{n}{k}\PYG{p}{]);}
+  \PYG{p}{\PYGZcb{}}
+\end{Verbatim}

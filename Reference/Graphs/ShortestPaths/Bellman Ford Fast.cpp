@@ -18,16 +18,15 @@ void addEdge(int u, int v, T w, bool isDirected = 0) {
   adj[v].push_back(u);
   weight[v][u] = w;
 }
-// 20
+// 19
 // O(V * E)
 vector<T> bellmanFordFast(int s) {
-  vector<T> dist(adj.size(), inf);
+  vector<long long int> dist(adj.size(), inf);
   vector<int> its(adj.size()), inqueue(adj.size());
   queue<int> q;
   q.push(s), dist[s] = 0, its[s] = 1;
   while (!q.empty()) {
-    int u = q.front();
-    q.pop(), inqueue[u] = 0;
+    int u = q.front(); q.pop(), inqueue[u] = 0;
     for (auto &v : adj[u]) {
       T d = dist[u] + weight[u][v];
       if (d < dist[v]) {

@@ -1,0 +1,5 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k+kt}{char} \PYG{n+nf}{upperCase}\PYG{p}{(}\PYG{k+kt}{char} \PYG{n}{c}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+  \PYG{k}{return} \PYG{n}{c} \PYG{o}{\PYGZam{}} \PYG{l+s+sc}{\PYGZsq{}\PYGZus{}\PYGZsq{}}\PYG{p}{;}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

@@ -74,7 +74,7 @@
 	\tableofcontents
 	\newpage
 	\cleardoublepage
-\needspace{27\baselineskip}
+\needspace{29\baselineskip}
 \sectionfont{\bfseries\sffamily\centering\Huge}
 \vspace{1em}
 \section*{Coding Resources}
@@ -97,14 +97,15 @@ https://searleser97.gitlab.io/algorithms/template.cpp
 #include <bits/stdc++.h>
 using namespace std;
 #define endl '\n'
-#define forr(_, x, n) for (int _ = x; ~_; _--)
-#define fos(_, x, n, s) for(int _ = x; _ < n; _ += s)
-#define forn(_, x, n) fos (_, x, n, 1)
+#define forr(_, x, n) for (int _ = x; _ > n; _--)
+#define fos(_, x, n, s) for (int _ = x; _ < n; _ += s)
+#define forn(_, x, n) fos(_, x, n, 1)
 #define rep(_, n) forn(_, 0, n)
 #define fi first
 #define se second
 #define pb push_back
 #define pairii pair<int, int>
+#define cerr(s) cerr << "\033[48;5;196m\033[38;5;15m" << s << "\033[0m"
 // typedef __int128_t lli;
 typedef long long int li;
 typedef long double ld;
@@ -113,12 +114,11 @@ typedef long double ld;
 \needspace{12\baselineskip}
 \begin{minted}{cpp}
 void _main(int tc) {
-
+  
 }
 
 int main() {
-  ios_base::sync_with_stdio(0);
-  cin.tie(0), cout.tie(0);
+  ios_base::sync_with_stdio(0), cin.tie(0);
   _main(0); return 0;
   int tc;
   cin >> tc;
@@ -135,6 +135,22 @@ int main() {
 cout << setprecision(N) << n << endl;
 // specify N fixed number of decimals
 cout << fixed << setprecision(N) << n << endl;
+\end{minted}
+
+\needspace{11\baselineskip}
+\subsubsectionfont{\large\bfseries\sffamily\underline}
+\subsubsection*{Double Comparisons With Given Precision}
+\addcontentsline{toc}{subsubsection}{Double Comparisons With Given Precision}
+\begin{minted}{cpp}
+typedef long double ld;
+const ld eps = 1e-9;
+
+bool eq(ld a, ld b) { return abs(a - b) <= eps; }
+bool neq(ld a, ld b) { return abs(a - b) > eps; }
+bool gr(ld a, ld b) { return a - b > eps; }
+bool le(ld a, ld b) { return b - a > eps; }
+bool geq(ld a, ld b) { return a - b >= -eps; }
+bool leq(ld a, ld b) { return b - a >= -eps; }
 \end{minted}
 
 \needspace{4\baselineskip}
@@ -704,6 +720,15 @@ int Log2(int n) {
 }
 \end{minted}
 
+\needspace{5\baselineskip}
+\subsectionfont{\large\bfseries\sffamily\underline}
+\subsection*{Modulo With Power Of 2}
+\addcontentsline{toc}{subsection}{Modulo With Power Of 2}
+\begin{minted}{cpp}
+// b must be a power of 2
+int mod(int a, int b) { return a & (b - 1); }
+\end{minted}
+
 \needspace{6\baselineskip}
 \subsectionfont{\large\bfseries\sffamily\underline}
 \subsection*{Most Significant Set Bit}
@@ -730,11 +755,13 @@ int multiplyBy2(int n) { return n << 1; }
 int onesComplement(int n) { return ~n; }
 \end{minted}
 
-\needspace{8\baselineskip}
+\needspace{10\baselineskip}
 \subsectionfont{\large\bfseries\sffamily\underline}
 \subsection*{Parity Check}
 \addcontentsline{toc}{subsection}{Parity Check}
 \begin{minted}{cpp}
+#include "Count Set Bits.cpp"
+#include "Is Even.cpp"
 bool parityCheck(int n) {
   return !__builtin_parity(n);
   // return !__builtin_parityl(n); for long
@@ -781,34 +808,28 @@ void swap(int &a, int &b) {
 }
 \end{minted}
 
-\needspace{6\baselineskip}
+\needspace{3\baselineskip}
 \subsectionfont{\large\bfseries\sffamily\underline}
 \subsection*{To Lower Case}
 \addcontentsline{toc}{subsection}{To Lower Case}
 \begin{minted}{cpp}
-char lowerCase(char c) {
-  return c | ' ';
-}
+char lowerCase(char c) { return c | ' '; }
 \end{minted}
 
-\needspace{6\baselineskip}
+\needspace{3\baselineskip}
 \subsectionfont{\large\bfseries\sffamily\underline}
 \subsection*{To Upper Case}
 \addcontentsline{toc}{subsection}{To Upper Case}
 \begin{minted}{cpp}
-char upperCase(char c) {
-  return c & '_';
-}
+char upperCase(char c) { return c & '_'; }
 \end{minted}
 
-\needspace{6\baselineskip}
+\needspace{3\baselineskip}
 \subsectionfont{\large\bfseries\sffamily\underline}
 \subsection*{Toggle Case}
 \addcontentsline{toc}{subsection}{Toggle Case}
 \begin{minted}{cpp}
-char toggleCase(char c) {
-  return c ^ ' ';
-}
+char toggleCase(char c) { return c ^ ' '; }
 \end{minted}
 
 \needspace{6\baselineskip}
@@ -839,17 +860,32 @@ int unsetIthBit(int n, int i) {
 }
 \end{minted}
 
+\needspace{11\baselineskip}
+\subsectionfont{\large\bfseries\sffamily\underline}
+\subsection*{XOR From 1 To N}
+\addcontentsline{toc}{subsection}{XOR From 1 To N}
+\begin{minted}{cpp}
+int xorToN(int n) {
+  switch (n & 3) {
+    case 0: return n;
+    case 1: return 1;
+    case 2: return n + 1;
+    case 3: return 0;
+  }
+}
+\end{minted}
+
 \needspace{17\baselineskip}
 \sectionfont{\bfseries\sffamily\centering\Huge}
 \vspace{1em}
-\section*{Data Structures}
-\markboth{DATA STRUCTURES}{}
-\addcontentsline{toc}{section}{Data Structures}
+\section*{Geometry}
+\markboth{GEOMETRY}{}
+\addcontentsline{toc}{section}{Geometry}
 \vspace{3em}
 \subsectionfont{\bfseries\sffamily\centering\LARGE}
 \vspace{0em}
-\subsection*{Geometry}
-\addcontentsline{toc}{subsection}{Geometry}
+\subsection*{Data Structures}
+\addcontentsline{toc}{subsection}{Data Structures}
 \vspace{2em}
 \subsubsectionfont{\large\bfseries\sffamily\underline}
 \subsubsection*{Circle}
@@ -865,84 +901,423 @@ struct Circle {
 };
 \end{minted}
 
-\needspace{9\baselineskip}
+\needspace{11\baselineskip}
 \subsubsectionfont{\large\bfseries\sffamily\underline}
 \subsubsection*{Point}
 \addcontentsline{toc}{subsubsection}{Point}
 \begin{minted}{cpp}
-typedef long double ld;
-const ld pi = acos(-1);
+#include "../../Coding Resources/C++/Double Comparisons With Given Precision.cpp"
 
+const ld pi = acos(-1), inf = 1 << 30;
+// (PointB - PointA) = vector from A to B.
 struct Point {
   ld x, y;
   Point() : x(0), y(0) {}
   Point(ld x, ld y) : x(x), y(y) {}
-\end{minted}
+  \end{minted}
 \vspace{-12pt}
 \needspace{3\baselineskip}
 \begin{minted}{cpp}
-  Point operator+(const Point &p) {
+  Point operator+(const Point &p) const {
     return Point(x + p.x, y + p.y);
   }
-\end{minted}
+  \end{minted}
 \vspace{-12pt}
 \needspace{3\baselineskip}
 \begin{minted}{cpp}
-  Point operator-(const Point &p) {
+  Point operator-(const Point &p) const {
     return Point(x - p.x, y - p.y);
   }
-\end{minted}
+  \end{minted}
 \vspace{-12pt}
 \needspace{3\baselineskip}
 \begin{minted}{cpp}
-  Point operator*(const ld &k) {
+  Point operator*(const ld &k) const {
     return Point(x * k, y * k);
   }
-\end{minted}
+  \end{minted}
 \vspace{-12pt}
 \needspace{3\baselineskip}
 \begin{minted}{cpp}
-  Point operator/(const ld &k) {
+  Point operator/(const ld &k) const {
     return Point(x / k, y / k);
   }
-\end{minted}
+  \end{minted}
 \vspace{-12pt}
 \needspace{3\baselineskip}
 \begin{minted}{cpp}
-  ld dot(const Point &p) {
-    return x * p.x + y * p.y;
+  bool operator==(const Point &p) const {
+    return eq(x, p.x) && eq(y, p.y);
   }
-\end{minted}
+  \end{minted}
+\vspace{-12pt}
+\needspace{3\baselineskip}
+\begin{minted}{cpp}
+  bool operator!=(const Point &p) const {
+    return !(*this == p);
+  }
+  \end{minted}
+\vspace{-12pt}
+\needspace{3\baselineskip}
+\begin{minted}{cpp}
+  bool operator<(const Point &p) const {
+    return eq(x, p.x) ? le(y, p.y) : le(x, p.x);
+  }
+  \end{minted}
+\vspace{-12pt}
+\needspace{3\baselineskip}
+\begin{minted}{cpp}
+  bool operator>(const Point &p) const {
+    return eq(x, p.x) ? gr(y, p.y) : gr(x, p.x);
+  }
+
+  ld norm() const { return sqrt(x * x + y * y); }
+
+  ld dot(const Point &p) { return x * p.x + y * p.y; }
+  \end{minted}
 \vspace{-12pt}
 \needspace{3\baselineskip}
 \begin{minted}{cpp}
   ld cross(const Point &p) {
     return x * p.y - y * p.x;
   }
-\end{minted}
-\vspace{-12pt}
-\needspace{3\baselineskip}
-\begin{minted}{cpp}
-  ld norm() const { return sqrt(x * x + y * y); }
+
   Point perpendicularLeft() { return Point(-y, x); }
+
   Point perpendicularRight() { return Point(y, -x); }
 \end{minted}
 \vspace{-12pt}
-\needspace{6\baselineskip}
+\needspace{5\baselineskip}
 \begin{minted}{cpp}
   Point rotate(ld deg) {
     ld rad = (deg * pi) / 180.0;
     return Point(x * cos(rad) - y * sin(rad),
                  x * sin(rad) + y * cos(rad));
   }
+
+  Point unit() const { return (*this) / norm(); }
+  \end{minted}
+\vspace{-12pt}
+\needspace{3\baselineskip}
+\begin{minted}{cpp}
+  Point projectOn(const Point &p) {
+    return p.unit() * (dot(p) / p.norm());
+  }
+\end{minted}
+\vspace{-12pt}
+\needspace{4\baselineskip}
+\begin{minted}{cpp}
+  ld angleWith(const Point &p) {
+    ld x = dot(p) / norm() / p.norm();
+    return acos(max(-1.0L, min(1.0L, x)));
+  }
+\end{minted}
+\vspace{-12pt}
+\needspace{4\baselineskip}
+\begin{minted}{cpp}
+  bool isPerpendicularWith(const Point &p) {
+    return dot(p);
+  }
+\end{minted}
+\vspace{-12pt}
+\needspace{5\baselineskip}
+\begin{minted}{cpp}
+  // ans > 0 p is on the left
+  // ans < 0 p is on the right
+  // ans == 0 p has our same direction
+  ld positionOf(const Point &p) { return cross(p); }
 };
 \end{minted}
+\vspace{-12pt}
+\needspace{3\baselineskip}
+\begin{minted}{cpp}
+istream &operator>>(istream &is, Point &p) {
+  return is >> p.x >> p.y;
+}
+\end{minted}
+\vspace{-12pt}
+\needspace{3\baselineskip}
+\begin{minted}{cpp}
+ostream &operator<<(ostream &os, const Point &p) {
+  return os << "(" << p.x << ", " << p.y << ")";
+}
+\end{minted}
 
+\needspace{3\baselineskip}
+\subsectionfont{\large\bfseries\sffamily\underline}
+\subsection*{Intersection Points Of Segments In A Plane}
+\addcontentsline{toc}{subsection}{Intersection Points Of Segments In A Plane}
+\begin{minted}{cpp}
+#include <bits/stdc++.h>
+using namespace std;
+
+#include "Data Structures/Point.cpp"
+
+vector<Point> intersections(
+    vector<pair<Point, Point>>& segs) {
+      
+  return {};
+}
+\end{minted}
+
+\needspace{8\baselineskip}
+\subsectionfont{\large\bfseries\sffamily\underline}
+\subsection*{Is Point In Line}
+\addcontentsline{toc}{subsection}{Is Point In Line}
+\begin{minted}{cpp}
+#include "Data Structures/Point.cpp"
+
+bool isPointInLine(Point& a, Point& b, Point& p) {
+  return !(b - a).cross(p - a);
+}
+\end{minted}
+
+\needspace{9\baselineskip}
+\subsectionfont{\large\bfseries\sffamily\underline}
+\subsection*{Is Point In Segment}
+\addcontentsline{toc}{subsection}{Is Point In Segment}
+\begin{minted}{cpp}
+#include "Data Structures/Point.cpp"
+
+bool isPointInSegment(Point& a, Point& b, Point& p) {
+  return !(b - a).cross(p - a) &&
+         (a - p).dot(b - p) <= 0;
+}
+\end{minted}
+
+\needspace{14\baselineskip}
+\subsectionfont{\large\bfseries\sffamily\underline}
+\subsection*{Line-Line Intersection}
+\addcontentsline{toc}{subsection}{Line-Line Intersection}
+\begin{minted}{cpp}
+#include "Data Structures/Point.cpp"
+
+pair<int, Point> llintersection(Point& a, Point& b,
+                                Point& u, Point& v) {
+  if ((b - a).cross(v - u))  // single point
+    return {1, a + (b - a) * ((u - a).cross(v - u) /
+                              (b - a).cross(v - u))};
+  if ((b - a).cross(u - a))
+    return {0, Point()};  // no points
+  return {-1, Point()};   // infinity points
+}
+\end{minted}
+
+\needspace{9\baselineskip}
+\subsectionfont{\large\bfseries\sffamily\underline}
+\subsection*{Line-Segment Intersection}
+\addcontentsline{toc}{subsection}{Line-Segment Intersection}
+\begin{minted}{cpp}
+#include "Data Structures/Point.cpp"
+
+int sign(ld x) {
+  if (x < 0) return -1;
+  return x > 0;
+}
+\end{minted}
+\vspace{-12pt}
 \needspace{12\baselineskip}
+\begin{minted}{cpp}
+// line: a-b, segment: u-v
+// 0: no point, 1: single point, -1: infinity points
+pair<int, Point> lsintersection(Point& a, Point& b,
+                                Point& u, Point& v) {
+  if ((b - a).cross(v - u))
+    return {sign((b - a).cross(u - a)) !=
+                sign((b - a).cross(v - a)),
+            a + (b - a) * ((u - a).cross(v - u) /
+                           (b - a).cross(v - u))};
+  if ((u - a).cross(b - a)) return {0, Point()};
+  return {-1, Point()};
+}
+\end{minted}
+
+\needspace{6\baselineskip}
+\subsectionfont{\large\bfseries\sffamily\underline}
+\subsection*{Max Interval Overlap}
+\addcontentsline{toc}{subsection}{Max Interval Overlap}
+\begin{minted}{cpp}
+typedef long long int T;
+typedef pair<T, T> Interval;
+vector<Interval> maxIntervals;
+\end{minted}
+\vspace{-12pt}
+\needspace{23\baselineskip}
+\begin{minted}{cpp}
+// O(N * lg(N))
+int maxOverlap(vector<Interval> &arr) {
+  maxIntervals.clear();
+  map<T, int> m;
+  int maxI = 0, curr = 0, isFirst = 1;
+  T l = -1LL, r = -1LL;
+  for (auto &i : arr) m[i.first]++, m[i.second + 1]--;
+  for (auto &p : m) {
+    curr += p.second;
+    if (curr > maxI) maxI = curr, l = p.first;
+    if (curr == maxI) r = p.first;
+  }
+  curr = 0;
+  for (auto &p : m) {
+    curr += p.second;
+    if (curr == maxI && isFirst)
+      l = p.first, isFirst = 0;
+    if (curr < maxI && !isFirst)
+      maxIntervals.push_back({l, p.first - 1}),
+          isFirst = 1;
+  }
+  return maxI;
+}
+\end{minted}
+\vspace{-12pt}
+\needspace{23\baselineskip}
+\begin{minted}{cpp}
+// O(MaxPoint) maxPoint < vector::max_size
+int maxOverlap(vector<Interval> &arr) {
+  maxIntervals.clear();
+  T maxPoint = 0;
+  for (auto &i : arr)
+    if (i.second > maxPoint) maxPoint = i.second;
+  vector<int> x(maxPoint + 2);
+  for (auto &i : arr) x[i.first]++, x[i.second + 1]--;
+  int maxI = 0, curr = 0, isFirst = 1;
+  T l = -1LL, r = -1LL;
+  for (int i = 0; i < x.size(); i++) {
+    curr += x[i];
+    if (curr > maxI) maxI = curr;
+  }
+  curr = 0;
+  for (int i = 0; i < x.size(); i++) {
+    curr += x[i];
+    if (curr == maxI && isFirst) l = i, isFirst = 0;
+    if (curr < maxI && !isFirst)
+      maxIntervals.push_back({l, i - 1}), isFirst = 1;
+  }
+  return maxI;
+}
+\end{minted}
+
+\needspace{11\baselineskip}
+\subsectionfont{\large\bfseries\sffamily\underline}
+\subsection*{Point Projection On Line}
+\addcontentsline{toc}{subsection}{Point Projection On Line}
+\begin{minted}{cpp}
+#include "Data Structures/Point.cpp"
+
+Point projectionOnLine(Point& a, Point& b, Point& p) {
+  Point pr = a + (p - a).projectOn(b - a);
+  if (abs(pr.x) < eps) pr.x = 0;
+  if (abs(pr.y) < eps) pr.y = 0;
+  return pr;
+}
+\end{minted}
+
+\needspace{11\baselineskip}
+\subsectionfont{\large\bfseries\sffamily\underline}
+\subsection*{Point Reflection On Line}
+\addcontentsline{toc}{subsection}{Point Reflection On Line}
+\begin{minted}{cpp}
+#include "Data Structures/Point.cpp"
+
+Point reflectionOnLine(Point& a, Point& b, Point& p) {
+  Point r = a * 2 + (p - a).projectOn(b - a) * 2 - p;
+  if (abs(r.x) < eps) r.x = 0;
+  if (abs(r.y) < eps) r.y = 0;
+  return r;
+}
+\end{minted}
+
+\needspace{8\baselineskip}
+\subsectionfont{\large\bfseries\sffamily\underline}
+\subsection*{Point-Line Distance}
+\addcontentsline{toc}{subsection}{Point-Line Distance}
+\begin{minted}{cpp}
+#include "Data Structures/Point.cpp"
+
+ld pointLineDist(Point& a, Point& b, Point& p) {
+  return ((p - a).projectOn(b - a) - (p - a)).norm();
+}
+\end{minted}
+
+\needspace{9\baselineskip}
+\subsectionfont{\large\bfseries\sffamily\underline}
+\subsection*{Point-Line Distance (Signed)}
+\addcontentsline{toc}{subsection}{Point-Line Distance (Signed)}
+\begin{minted}{cpp}
+#include "Data Structures/Point.cpp"
+// ans > 0 p is on the left of a-b
+// ans < 0 p is on the right of a-b
+ld pointLineDist(Point& a, Point& b, Point& p) {
+  return (b - a).cross(p - a) / (b - a).norm();
+}
+\end{minted}
+
+\needspace{9\baselineskip}
+\subsectionfont{\large\bfseries\sffamily\underline}
+\subsection*{Segment-Segment Intersection}
+\addcontentsline{toc}{subsection}{Segment-Segment Intersection}
+\begin{minted}{cpp}
+#include "Data Structures/Point.cpp"
+
+int sign(ld x) {
+  if (x < 0) return -1;
+  return x > 0;
+}
+\end{minted}
+\vspace{-12pt}
+\needspace{3\baselineskip}
+\begin{minted}{cpp}
+void swap(Point& a, Point& b) {
+  swap(a.x, b.x), swap(a.y, b.y);
+}
+\end{minted}
+\vspace{-12pt}
+\needspace{17\baselineskip}
+\begin{minted}{cpp}
+// 0: no point, 1: single point, -1: infinity points
+pair<int, Point> ssintersection(Point a, Point b,
+                                Point u, Point v) {
+  if ((b - a).cross(v - u))
+    return {sign((b - a).cross(u - a)) !=
+                    sign((b - a).cross(v - a)) &&
+                sign((v - u).cross(a - u)) !=
+                    sign((v - u).cross(b - u)),
+            a + (b - a) * ((u - a).cross(v - u) /
+                           (b - a).cross(v - u))};
+  if ((b - a).cross(u - a)) return {0, Point()};
+  if (a > b) swap(a, b);
+  if (u > v) swap(u, v);
+  if (a > u) swap(a, u), swap(b, v);
+  if (u < b) return {-1, Point()};
+  return {b == u, u};
+}
+\end{minted}
+
+\needspace{11\baselineskip}
+\subsectionfont{\large\bfseries\sffamily\underline}
+\subsection*{Sort Points Along Line With Direction}
+\addcontentsline{toc}{subsection}{Sort Points Along Line With Direction}
+\begin{minted}{cpp}
+#include "Data Structures/Point.cpp"
+
+void sortAlongLine(Point& a, Point& b,
+                   vector<Point>& ps) {
+  sort(ps.begin(), ps.end(), [&](Point& u, Point& v) {
+    return u.dot(b - a) < v.dot(b - a);
+  });
+}
+\end{minted}
+
+\needspace{16\baselineskip}
+\sectionfont{\bfseries\sffamily\centering\Huge}
+\vspace{1em}
+\section*{Graphs}
+\markboth{GRAPHS}{}
+\addcontentsline{toc}{section}{Graphs}
+\vspace{3em}
 \subsectionfont{\bfseries\sffamily\centering\LARGE}
 \vspace{0em}
-\subsection*{Graphs}
-\addcontentsline{toc}{subsection}{Graphs}
+\subsection*{Data Structures}
+\addcontentsline{toc}{subsection}{Data Structures}
 \vspace{2em}
 \subsubsectionfont{\large\bfseries\sffamily\underline}
 \subsubsection*{Union Find}
@@ -1065,987 +1440,7 @@ struct UnionFind {
 };
 \end{minted}
 
-\needspace{8\baselineskip}
-\subsectionfont{\bfseries\sffamily\centering\LARGE}
-\vspace{0em}
-\subsection*{Ranges}
-\addcontentsline{toc}{subsection}{Ranges}
-\vspace{2em}
-\subsubsectionfont{\large\bfseries\sffamily\underline}
-\subsubsection*{BIT}
-\addcontentsline{toc}{subsubsection}{BIT}
-\begin{minted}{cpp}
-template <class T>
-struct BIT {
-  T neutro = 0;
-  vector<T> bit;
-\end{minted}
-\vspace{-12pt}
-\needspace{7\baselineskip}
-\begin{minted}{cpp}
-  BIT(int n) { bit.assign(++n, neutro); }
-
-  inline T F(T a, T b) {
-    return a + b;
-    // return a * b;
-  }
-\end{minted}
-\vspace{-12pt}
-\needspace{5\baselineskip}
-\begin{minted}{cpp}
-  // Inverse of F
-  inline T I(T a, T b) {
-    return a - b;
-    // return a / b;
-  }
-\end{minted}
-\vspace{-12pt}
-\needspace{7\baselineskip}
-\begin{minted}{cpp}
-  // O(N)
-  void build() {
-    for (int i = 1; i < bit.size(); i++) {
-      int j = i + (i & -i);
-      if (j < bit.size()) bit[j] = F(bit[j], bit[i]);
-    }
-  }
-\end{minted}
-\vspace{-12pt}
-\needspace{4\baselineskip}
-\begin{minted}{cpp}
-  // O(lg(N))
-  void update(int i, T val) {
-    for (i++; i < bit.size(); i += i & -i)
-      bit[i] = F(bit[i], val);
-  }
-\end{minted}
-\vspace{-12pt}
-\needspace{6\baselineskip}
-\begin{minted}{cpp}
-  // O(lg(N))
-  T query(int i) {
-    T ans = neutro;
-    for (i++; i; i -= i & -i) ans = F(ans, bit[i]);
-    return ans;
-  }
-\end{minted}
-\vspace{-12pt}
-\needspace{6\baselineskip}
-\begin{minted}{cpp}
-  // O(lg(N)), [l, r]
-  T query(int l, int r) {
-    return I(query(r), query(--l));
-  }
-
-  T& operator[](int i) { return bit[++i]; }
-};
-\end{minted}
-
-\needspace{5\baselineskip}
-\subsubsectionfont{\large\bfseries\sffamily\underline}
-\subsubsection*{BIT Range Update}
-\addcontentsline{toc}{subsubsection}{BIT Range Update}
-\begin{minted}{cpp}
-typedef long long int T;
-T neutro = 0;
-vector<T> bit1, bit2;
-\end{minted}
-\vspace{-12pt}
-\needspace{4\baselineskip}
-\begin{minted}{cpp}
-void initVars(int n) {
-  bit1.assign(++n, neutro);
-  bit2 = bit1;
-}
-\end{minted}
-\vspace{-12pt}
-\needspace{5\baselineskip}
-\begin{minted}{cpp}
-// O(lg(N))
-void update(vector<T> &bit, int i, T val) {
-  for (i++; i < bit.size(); i += i & -i)
-    bit[i] += val;
-}
-\end{minted}
-\vspace{-12pt}
-\needspace{7\baselineskip}
-\begin{minted}{cpp}
-// O(lg(N)), [l, r]
-void update(int l, int r, T val) {
-  update(bit1, l, val);
-  update(bit1, r + 1, -val);
-  update(bit2, r + 1, val * r);
-  update(bit2, l, -val * (l - 1));
-}
-\end{minted}
-\vspace{-12pt}
-\needspace{6\baselineskip}
-\begin{minted}{cpp}
-// O(lg(N))
-T query(vector<T> &bit, int i) {
-  T ans = neutro;
-  for (i++; i; i -= i & -i) ans += bit[i];
-  return ans;
-}
-\end{minted}
-\vspace{-12pt}
-\needspace{4\baselineskip}
-\begin{minted}{cpp}
-// O(lg(N))
-T query(int i) {
-  return query(bit1, i) * i + query(bit2, i);
-}
-\end{minted}
-\vspace{-12pt}
-\needspace{4\baselineskip}
-\begin{minted}{cpp}
-// O(lg(N)), [l, r]
-T query(int l, int r) {
-  return query(r) - query(l - 1);
-}
-\end{minted}
-
-\needspace{6\baselineskip}
-\subsubsectionfont{\large\bfseries\sffamily\underline}
-\subsubsection*{Segment Tree}
-\addcontentsline{toc}{subsubsection}{Segment Tree}
-\begin{minted}{cpp}
-// st = segment tree. st[1] = root;
-// neutro = operation neutral value
-// e.g. for sum is 0, for multiplication
-// is 1, for gcd is 0, for min is INF, etc.
-\end{minted}
-\vspace{-12pt}
-\needspace{5\baselineskip}
-\begin{minted}{cpp}
-template <class T>
-struct SegmentTree {
-  T neutro = 0;
-  int N;
-  vector<T> st;
-\end{minted}
-\vspace{-12pt}
-\needspace{8\baselineskip}
-\begin{minted}{cpp}
-  SegmentTree(int n) : st(2 * n, neutro), N(n) {}
-
-  inline T F(T a, T b) {
-    return a + b;
-    // return __gcd(a, b);
-    // return a * b;
-    // return min(a, b);
-  }
-\end{minted}
-\vspace{-12pt}
-\needspace{5\baselineskip}
-\begin{minted}{cpp}
-  // O(2N)
-  void build() {
-    for (int i = N - 1; i > 0; i--)
-      st[i] = F(st[i << 1], st[i << 1 | 1]);
-  }
-\end{minted}
-\vspace{-12pt}
-\needspace{5\baselineskip}
-\begin{minted}{cpp}
-  // O(lg(2N)), works like replacing arr[i] with val
-  void update(int i, T val) {
-    for (st[i += N] = val; i > 1; i >>= 1)
-      st[i >> 1] = F(st[i], st[i ^ 1]);
-  }
-\end{minted}
-\vspace{-12pt}
 \needspace{9\baselineskip}
-\begin{minted}{cpp}
-  // O(3N), [l, r]
-  void update(int l, int r, T val) {
-    if (l == r)
-      update(l, val);
-    else {
-      for (l += N, r += N; l <= r; l++) st[l] = val;
-      build();
-    }
-  }
-\end{minted}
-\vspace{-12pt}
-\needspace{9\baselineskip}
-\begin{minted}{cpp}
-  // O(lg(2N)), [l, r]
-  T query(int l, int r) {
-    T ans = neutro;
-    for (l += N, r += N; l <= r; l >>= 1, r >>= 1) {
-      if (l & 1) ans = F(ans, st[l++]);
-      if (~r & 1) ans = F(ans, st[r--]);
-    }
-    return ans;
-  }
-\end{minted}
-\vspace{-12pt}
-\needspace{2\baselineskip}
-\begin{minted}{cpp}
-  T& operator[](int i) { return st[i + N]; }
-};
-\end{minted}
-
-\needspace{7\baselineskip}
-\subsubsectionfont{\large\bfseries\sffamily\underline}
-\subsubsection*{Segment Tree Lazy Propagation}
-\addcontentsline{toc}{subsubsection}{Segment Tree Lazy Propagation}
-\begin{minted}{cpp}
-// st = segment tree, st[1] = root, H = height of d
-// u = updates, d = delayed updates
-// neutro = operation neutral val
-// e.g. for sum is 0, for multiplication
-// is 1, for gcd is 0, for min is INF, etc.
-\end{minted}
-\vspace{-12pt}
-\needspace{6\baselineskip}
-\begin{minted}{cpp}
-template <class T>
-struct SegmentTree {
-  T neutro = 0;
-  int N, H;
-  vector<T> st, d;
-  vector<bool> u;
-\end{minted}
-\vspace{-12pt}
-\needspace{4\baselineskip}
-\begin{minted}{cpp}
-  SegmentTree(int n, T val)
-      : st(2 * n, val), d(n), u(n) {
-    H = sizeof(int) * 8 - __builtin_clz(N = n);
-  }
-\end{minted}
-\vspace{-12pt}
-\needspace{4\baselineskip}
-\begin{minted}{cpp}
-  inline T kTimesF(T a, T k) {
-    return a * k;
-    // return pow(a, k);
-    // return a;
-  }
-  \end{minted}
-\vspace{-12pt}
-\needspace{6\baselineskip}
-\begin{minted}{cpp}
-  inline T F(T a, T b) {
-    return a + b;
-    // return a * b;
-    // return __gcd(a, b);
-    // return min(a, b);
-  }
-\end{minted}
-\vspace{-12pt}
-\needspace{4\baselineskip}
-\begin{minted}{cpp}
-  inline T UF(T a, T b) {
-    return b;  // replace update
-    // return F(a, b); // apply F to current value
-  }
-\end{minted}
-\vspace{-12pt}
-\needspace{4\baselineskip}
-\begin{minted}{cpp}
-  void apply(int i, T val, int k) {
-    st[i] = UF(st[i], kTimesF(val, k));
-    if (i < N) d[i] = UF(d[i], val), u[i] = 1;
-  }
-\end{minted}
-\vspace{-12pt}
-\needspace{3\baselineskip}
-\begin{minted}{cpp}
-  void calc(int i) {
-    if (!u[i]) st[i] = F(st[i << 1], st[i << 1 | 1]);
-  }
-\end{minted}
-\vspace{-12pt}
-\needspace{4\baselineskip}
-\begin{minted}{cpp}
-  // O(2N)
-  void build() {
-    for (int i = N - 1; i > 0; i--) calc(i);
-  }
-\end{minted}
-\vspace{-12pt}
-\needspace{4\baselineskip}
-\begin{minted}{cpp}
-  // O(lg(N))
-  void build(int p) {
-    while (p > 1) p >>= 1, calc(p);
-  }
-\end{minted}
-\vspace{-12pt}
-\needspace{12\baselineskip}
-\begin{minted}{cpp}
-  // O(lg(N))
-  void push(int p) {
-    for (int s = H, k = 1 << (H - 1); s > 0;
-         s--, k >>= 1) {
-      int i = p >> s;
-      if (u[i]) {
-        apply(i << 1, d[i], k);
-        apply(i << 1 | 1, d[i], k);
-        u[i] = 0, d[i] = neutro;
-      }
-    }
-  }
-\end{minted}
-\vspace{-12pt}
-\needspace{12\baselineskip}
-\begin{minted}{cpp}
-  // O(lg(N)), [l, r]
-  void update(int l, int r, T val) {
-    push(l += N);
-    push(r += N);
-    int ll = l, rr = r, k = 1;
-    for (; l <= r; l >>= 1, r >>= 1, k <<= 1) {
-      if (l & 1) apply(l++, val, k);
-      if (~r & 1) apply(r--, val, k);
-    }
-    build(ll);
-    build(rr);
-  }
-\end{minted}
-\vspace{-12pt}
-\needspace{11\baselineskip}
-\begin{minted}{cpp}
-  // O(lg(2N)), [l, r]
-  T query(int l, int r) {
-    push(l += N);
-    push(r += N);
-    T ans = neutro;
-    for (; l <= r; l >>= 1, r >>= 1) {
-      if (l & 1) ans = F(ans, st[l++]);
-      if (~r & 1) ans = F(ans, st[r--]);
-    }
-    return ans;
-  }
-\end{minted}
-\vspace{-12pt}
-\needspace{2\baselineskip}
-\begin{minted}{cpp}
-  T& operator[](int i) { return st[i + N]; }
-};
-\end{minted}
-
-\needspace{6\baselineskip}
-\subsubsectionfont{\large\bfseries\sffamily\underline}
-\subsubsection*{Sparse Table}
-\addcontentsline{toc}{subsubsection}{Sparse Table}
-\begin{minted}{cpp}
-// st = sparse table, Arith = Arithmetic
-typedef int T;
-int neutro = 0;
-vector<vector<T>> st;
-\end{minted}
-\vspace{-12pt}
-\needspace{6\baselineskip}
-\begin{minted}{cpp}
-T F(T a, T b) {
-  // return min(a, b);
-  return __gcd(a, b);
-  // return a + b; // Arith
-  // return a * b; // Arith
-}
-\end{minted}
-\vspace{-12pt}
-\needspace{9\baselineskip}
-\begin{minted}{cpp}
-// O(Nlg(N))
-void build(vector<T> &arr) {
-  st.assign(log2(arr.size()), vector<T>(arr.size()));
-  st[0] = arr;
-  for (int i = 1; (1 << i) <= arr.size(); i++)
-    for (int j = 0; j + (1 << i) <= arr.size(); j++)
-      st[i][j] = F(st[i - 1][j],
-                   st[i - 1][j + (1 << (i - 1))]);
-}
-\end{minted}
-\vspace{-12pt}
-\needspace{5\baselineskip}
-\begin{minted}{cpp}
-// O(1), [l, r]
-T query(int l, int r) {
-  int i = log2(r - l + 1);
-  return F(st[i][l], st[i][r + 1 - (1 << i)]);
-}
-\end{minted}
-\vspace{-12pt}
-\needspace{11\baselineskip}
-\begin{minted}{cpp}
-// O(lg(N)), [l, r]
-T queryArith(int l, int r) {
-  T ans = neutro;
-  while (true) {
-    int k = log2(r - l + 1);
-    ans = F(ans, st[k][l]);
-    l += 1 << k;
-    if (l > r) break;
-  }
-  return ans;
-}
-\end{minted}
-
-\needspace{10\baselineskip}
-\subsubsectionfont{\large\bfseries\sffamily\underline}
-\subsubsection*{Wavelet Tree}
-\addcontentsline{toc}{subsubsection}{Wavelet Tree}
-\begin{minted}{cpp}
-// pref = prefix sum
-// lte = less than or equal, 1-indexed
-// A = max_element(from, to)
-// lcount = left children count
-struct WaveletTree {
-  WaveletTree *l, *r;
-  int lo, hi;
-  vector<int> lcount, pref;
-\end{minted}
-\vspace{-12pt}
-\needspace{17\baselineskip}
-\begin{minted}{cpp}
-  // O(N*lg(A))
-  WaveletTree(vector<int>::iterator from,
-              vector<int>::iterator to, int lo,
-              int hi) {
-    this->lo = lo, this->hi = hi;
-    if (lo == hi or from >= to) return;
-    int mid = (lo + hi) >> 1;
-    auto f = [mid](int x) { return x <= mid; };
-    lcount.reserve(to - from + 1);
-    pref.reserve(to - from + 1);
-    lcount.push_back(0);
-    pref.push_back(0);
-    for (auto it = from; it != to; it++)
-      lcount.push_back(lcount.back() + f(*it)),
-          pref.push_back(pref.back() + *it);
-    auto pivot = stable_partition(from, to, f);
-    l = new WaveletTree(from, pivot, lo, mid);
-    r = new WaveletTree(pivot, to, mid + 1, hi);
-  }
-\end{minted}
-\vspace{-12pt}
-\needspace{9\baselineskip}
-\begin{minted}{cpp}
-  // O(lg(A)) frequency of k in [a, b]
-  int freq(int a, int b, int k) {
-    if (a > b or k < lo or k > hi) return 0;
-    if (lo == hi) return b - a + 1;
-    int lc = lcount[a - 1], rc = lcount[b];
-    if (k > ((lo + hi) >> 1))
-      return r->freq(a - lc, b - rc, k);
-    return l->freq(lc + 1, rc, k);
-  }
-\end{minted}
-\vspace{-12pt}
-\needspace{10\baselineskip}
-\begin{minted}{cpp}
-  // O(lg(A)) kth-Smallest element in [a, b]
-  int kth(int a, int b, int k) {
-    if (a > b) return 0;
-    if (lo == hi) return lo;
-    int lc = lcount[a - 1], rc = lcount[b],
-        inleft = rc - lc;
-    if (k > inleft)
-      return r->kth(a - lc, b - rc, k - inleft);
-    return l->kth(lc + 1, rc, k);
-  }
-\end{minted}
-\vspace{-12pt}
-\needspace{8\baselineskip}
-\begin{minted}{cpp}
-  // O(lg(A)) count of elements <= to k in [a, b]
-  int lte(int a, int b, int k) {
-    if (a > b or k < lo) return 0;
-    if (hi <= k) return b - a + 1;
-    int lc = lcount[a - 1], rc = lcount[b];
-    return l->lte(lc + 1, rc, k) +
-           r->lte(a - lc, b - rc, k);
-  }
-\end{minted}
-\vspace{-12pt}
-\needspace{8\baselineskip}
-\begin{minted}{cpp}
-  // O(lg(A)) sum of numbers <= to k in [a, b]
-  int sumlte(int a, int b, int k) {
-    if (a > b or k < lo) return 0;
-    if (hi <= k) return pref[b] - pref[a - 1];
-    int lc = lcount[a - 1], rc = lcount[b];
-    return l->sumlte(lc + 1, rc, k) +
-           r->sumlte(a - lc, b - rc, k);
-  }
-};
-\end{minted}
-
-\needspace{13\baselineskip}
-\subsubsectionfont{\large\bfseries\sffamily\underline}
-\subsubsection*{Wavelet Tree Compressed}
-\addcontentsline{toc}{subsubsection}{Wavelet Tree Compressed}
-\begin{minted}{cpp}
-// lte = less than or equal, c = compressed
-// o  = original, 0-indexed
-#include "../../Techniques/Binary Search.cpp"
-#include "Wavelet Tree.cpp"
-
-template <class T>
-struct WaveletTreeCompressed {
-  unordered_map<int, T> imap;
-  unordered_map<T, int> Map;
-  WaveletTree* wt;
-  vector<T> o;
-\end{minted}
-\vspace{-12pt}
-\needspace{12\baselineskip}
-\begin{minted}{cpp}
-  // O(N*lg(N))
-  WaveletTreeCompressed(vector<T>& v) {
-    o = v;
-    int inf = 1 << 30, n = 0, lo = inf, hi = -inf;
-    set<T> s(v.begin(), v.end());
-    vector<int> c(v.size());
-    for (auto& e : s) Map[e] = n++;
-    for (int i = 0; i < v.size(); i++)
-      c[i] = Map[v[i]], imap[Map[v[i]]] = v[i];
-    for (auto& e : c)
-      lo = min(lo, e), hi = max(hi, e);
-    wt = new WaveletTree(c.begin(), c.end(), lo, hi);
-  }
-\end{minted}
-\vspace{-12pt}
-\needspace{4\baselineskip}
-\begin{minted}{cpp}
-  // O(lg(N)) frequency of k in [a, b]
-  int freq(int l, int r, T k) {
-    return wt->freq(++l, ++r, Map[k]);
-  }
-\end{minted}
-\vspace{-12pt}
-\needspace{4\baselineskip}
-\begin{minted}{cpp}
-  // O(lg(N)) kth-Smallest element in [l, r]
-  T kth(int l, int r, int k) {
-    return imap[wt->kth(++l, ++r, k)];
-  }
-\end{minted}
-\vspace{-12pt}
-\needspace{5\baselineskip}
-\begin{minted}{cpp}
-  // O(lg(N)) count of numbers <= to k in [l, r]
-  T lte(int l, int r, T k) {
-    int kk = Map[bSearch<T>(o, k, l, r)[1]];
-    return imap[wt->lte(++l, ++r, kk)];
-  }
-\end{minted}
-\vspace{-12pt}
-\needspace{5\baselineskip}
-\begin{minted}{cpp}
-  // O(lg(N)) sum of numbers <= to k in [l, r]
-  T sumlte(int l, int r, T k) {
-    int kk = Map[bSearch<T>(o, k, l, r)[1]];
-    return imap[wt->sumlte(++l, ++r, kk)];
-  }
-};
-\end{minted}
-
-\needspace{9\baselineskip}
-\subsectionfont{\bfseries\sffamily\centering\LARGE}
-\vspace{0em}
-\subsection*{Strings}
-\addcontentsline{toc}{subsection}{Strings}
-\vspace{2em}
-\subsubsectionfont{\large\bfseries\sffamily\underline}
-\subsubsection*{Suffix Automaton}
-\addcontentsline{toc}{subsubsection}{Suffix Automaton}
-\begin{minted}{cpp}
-// link[u]: links to the longest suffix which is
-//          not in the same endpos-equivalence class
-// len[u]: length of the longest suffix that
-//         corresponds to u's endpos-equivalence class
-\end{minted}
-\vspace{-12pt}
-\needspace{4\baselineskip}
-\begin{minted}{cpp}
-struct SuffixAutomaton {
-  vector<int> len, link, isClone, first;
-  vector<map<char, int>> next;
-  int size, last;
-\end{minted}
-\vspace{-12pt}
-\needspace{5\baselineskip}
-\begin{minted}{cpp}
-  void init(int n) {
-    first = isClone = len = link = vector<int>(2 * n);
-    next.resize(2 * n);
-    len[0] = 0, link[0] = -1, size = 1, last = 0;
-  }
-\end{minted}
-\vspace{-12pt}
-\needspace{5\baselineskip}
-\begin{minted}{cpp}
-  // O(N)
-  SuffixAutomaton(const string& s) {
-    init(s.size());
-    for (const auto& c : s) add(c);
-  }
-\end{minted}
-\vspace{-12pt}
-\needspace{22\baselineskip}
-\begin{minted}{cpp}
-  // O(1)
-  void add(const char& c) {
-    int p = last, u = size++;
-    len[u] = len[p] + 1, first[u] = len[p];
-    while (p != -1 && !next[p].count(c))
-      next[p][c] = u, p = link[p];
-    if (p == -1) link[u] = 0;
-    else {
-      int q = next[p][c];
-      if (len[p] + 1 == len[q]) link[u] = q;
-      else {
-        int clone = size++;
-        first[clone] = first[q];
-        len[clone] = len[p] + 1, isClone[clone] = 1;
-        link[clone] = link[q], next[clone] = next[q];
-        while (p != -1 && next[p][c] == q)
-          next[p][c] = clone, p = link[p];
-        link[q] = link[u] = clone;
-      }
-    }
-    last = u;
-  }
-\end{minted}
-\vspace{-12pt}
-\needspace{7\baselineskip}
-\begin{minted}{cpp}
-  // O(N)
-  unordered_set<int> getTerminals() {
-    unordered_set<int> terminals;
-    for (int p = last; p; p = link[p])
-      terminals.insert(p);
-    return terminals;
-  }
-};
-\end{minted}
-
-\needspace{5\baselineskip}
-\subsubsectionfont{\large\bfseries\sffamily\underline}
-\subsubsection*{Trie}
-\addcontentsline{toc}{subsubsection}{Trie}
-\begin{minted}{cpp}
-// wpt = number of words passing through
-// w = number of words ending in the node
-// c = character
-\end{minted}
-\vspace{-12pt}
-\needspace{8\baselineskip}
-\begin{minted}{cpp}
-struct Trie {
-
-  struct Node {
-    // for lexicographical order use 'map'
-    // map<char, Node *> ch;
-    unordered_map<char, Node *> ch;
-    int w = 0, wpt = 0;
-  };
-\end{minted}
-\vspace{-12pt}
-\needspace{12\baselineskip}
-\begin{minted}{cpp}
-  Node *root = new Node();
-
-  // O(STR.SIZE)
-  void insert(string str) {
-    Node *curr = root;
-    for (auto &c : str) {
-      if (!curr->ch.count(c))
-        curr->ch[c] = new Node();
-      curr->wpt++, curr = curr->ch[c];
-    }
-    curr->wpt++, curr->w++;
-  }
-\end{minted}
-\vspace{-12pt}
-\needspace{9\baselineskip}
-\begin{minted}{cpp}
-  // O(STR.SIZE)
-  Node *find(string &str) {
-    Node *curr = root;
-    for (auto &c : str) {
-      if (!curr->ch.count(c)) return nullptr;
-      curr = curr->ch[c];
-    }
-    return curr;
-  }
-\end{minted}
-\vspace{-12pt}
-\needspace{5\baselineskip}
-\begin{minted}{cpp}
-  // O(STR.SIZE) number of words with given prefix
-  int prefixCount(string prefix) {
-    Node *node = find(prefix);
-    return node ? node->wpt : 0;
-  }
-\end{minted}
-\vspace{-12pt}
-\needspace{5\baselineskip}
-\begin{minted}{cpp}
-  // O(STR.SIZE) number of words matching str
-  int strCount(string str) {
-    Node *node = find(str);
-    return node ? node->w : 0;
-  }
-\end{minted}
-\vspace{-12pt}
-\needspace{10\baselineskip}
-\begin{minted}{cpp}
-  // O(N)
-  void getWords(Node *curr, vector<string> &words,
-                string &word) {
-    if (!curr) return;
-    if (curr->w) words.push_back(word);
-    for (auto &c : curr->ch) {
-      getWords(c.second, words, word += c.first);
-      word.pop_back();
-    }
-  }
-\end{minted}
-\vspace{-12pt}
-\needspace{7\baselineskip}
-\begin{minted}{cpp}
-  // O(N)
-  vector<string> getWords() {
-    vector<string> words;
-    string word = "";
-    getWords(root, words, word);
-    return words;
-  }
-\end{minted}
-\vspace{-12pt}
-\needspace{5\baselineskip}
-\begin{minted}{cpp}
-  // O(N)
-  vector<string> getWordsByPrefix(string prefix) {
-    vector<string> words;
-    getWords(find(prefix), words, prefix);
-  }
-\end{minted}
-\vspace{-12pt}
-\needspace{15\baselineskip}
-\begin{minted}{cpp}
-  // O(STR.SIZE)
-  bool remove(Node *curr, string &str, int &i) {
-    if (i == str.size()) {
-      curr->wpt--;
-      return curr->w ? !(curr->w = 0) : 0;
-    }
-    int c = str[i];
-    if (!curr->ch.count(c)) return false;
-    if (remove(curr->ch[c], str, ++i)) {
-      if (!curr->ch[c]->wpt)
-        curr->wpt--, curr->ch.erase(c);
-      return true;
-    }
-    return false;
-  }
-\end{minted}
-\vspace{-12pt}
-\needspace{6\baselineskip}
-\begin{minted}{cpp}
-  // O(STR.SIZE)
-  int remove(string str) {
-    int i = 0;
-    return remove(root, str, i);
-  }
-};
-\end{minted}
-
-\needspace{17\baselineskip}
-\subsectionfont{\bfseries\sffamily\centering\LARGE}
-\vspace{0em}
-\subsection*{Trees And Heaps}
-\addcontentsline{toc}{subsection}{Trees And Heaps}
-\vspace{2em}
-\subsubsectionfont{\large\bfseries\sffamily\underline}
-\subsubsection*{Red Black Tree}
-\addcontentsline{toc}{subsubsection}{Red Black Tree}
-\begin{minted}{cpp}
-template <class K, class V>
-struct RedBlackTree {
-
-  struct Node {
-    K key;
-    V val;
-    Node *l, *r;  // left, right
-    bool isRed;
-    Node(K k, V v, bool isRed)
-        : key(k), val(v), isRed(isRed) {}
-  };
-
-  Node *root = nullptr;
-\end{minted}
-\vspace{-12pt}
-\needspace{5\baselineskip}
-\begin{minted}{cpp}
-  int compare(K a, K b) {
-    if (a < b) return -1;
-    if (a > b) return 1;
-    return 0;
-  }
-\end{minted}
-\vspace{-12pt}
-\needspace{11\baselineskip}
-\begin{minted}{cpp}
-  // O(lg(N))
-  V at(K key) {
-    Node *x = root;
-    while (x) {
-      int cmp = compare(key, x->key);
-      if (!cmp) return x->val;
-      if (cmp < 0) x = x->l;
-      if (cmp > 0) x = x->r;
-    }
-    throw runtime_error("Key doesn't exist");
-  }
-\end{minted}
-\vspace{-12pt}
-\needspace{8\baselineskip}
-\begin{minted}{cpp}
-  Node *rotateLeft(Node *h) {
-    Node *x = h->r;
-    h->r = x->l;
-    x->l = h;
-    x->isRed = h->isRed;
-    h->isRed = 1;
-    return x;
-  }
-\end{minted}
-\vspace{-12pt}
-\needspace{8\baselineskip}
-\begin{minted}{cpp}
-  Node *rotateRight(Node *h) {
-    Node *x = h->l;
-    h->l = x->r;
-    x->r = h;
-    x->isRed = h->isRed;
-    h->isRed = 1;
-    return x;
-  }
-\end{minted}
-\vspace{-12pt}
-\needspace{5\baselineskip}
-\begin{minted}{cpp}
-  void flipColors(Node *h) {
-    h->isRed = 1;
-    h->l->isRed = 0;
-    h->r->isRed = 0;
-  }
-\end{minted}
-\vspace{-12pt}
-\needspace{16\baselineskip}
-\begin{minted}{cpp}
-  // O(lg(N))
-  Node *insert(Node *h, K key, V val) {
-    if (!h) return new Node(key, val, 1);
-    int cmp = compare(key, h->key);
-    if (!cmp) h->val = val;
-    if (cmp < 0) h->l = insert(h->l, key, val);
-    if (cmp > 0) h->r = insert(h->r, key, val);
-    if (h->r && h->r->isRed && !(h->l && h->l->isRed))
-      h = rotateLeft(h);
-    if (h->l && h->l->isRed && h->l->l &&
-        h->l->l->isRed)
-      h = rotateRight(h);
-    if (h->l && h->l->isRed && h->r && h->r->isRed)
-      flipColors(h);
-    return h;
-  }
-\end{minted}
-\vspace{-12pt}
-\needspace{5\baselineskip}
-\begin{minted}{cpp}
-  // O(lg(N))
-  void insert(K key, V val) {
-    root = insert(root, key, val);
-  }
-};
-\end{minted}
-
-\needspace{10\baselineskip}
-\sectionfont{\bfseries\sffamily\centering\Huge}
-\vspace{1em}
-\section*{Geometry}
-\markboth{GEOMETRY}{}
-\addcontentsline{toc}{section}{Geometry}
-\vspace{3em}
-\subsectionfont{\large\bfseries\sffamily\underline}
-\subsection*{Max Interval Overlap}
-\addcontentsline{toc}{subsection}{Max Interval Overlap}
-\begin{minted}{cpp}
-typedef long long int T;
-typedef pair<T, T> Interval;
-vector<Interval> maxIntervals;
-\end{minted}
-\vspace{-12pt}
-\needspace{23\baselineskip}
-\begin{minted}{cpp}
-// O(N * lg(N))
-int maxOverlap(vector<Interval> &arr) {
-  maxIntervals.clear();
-  map<T, int> m;
-  int maxI = 0, curr = 0, isFirst = 1;
-  T l = -1LL, r = -1LL;
-  for (auto &i : arr) m[i.first]++, m[i.second + 1]--;
-  for (auto &p : m) {
-    curr += p.second;
-    if (curr > maxI) maxI = curr, l = p.first;
-    if (curr == maxI) r = p.first;
-  }
-  curr = 0;
-  for (auto &p : m) {
-    curr += p.second;
-    if (curr == maxI && isFirst)
-      l = p.first, isFirst = 0;
-    if (curr < maxI && !isFirst)
-      maxIntervals.push_back({l, p.first - 1}),
-          isFirst = 1;
-  }
-  return maxI;
-}
-\end{minted}
-\vspace{-12pt}
-\needspace{23\baselineskip}
-\begin{minted}{cpp}
-// O(MaxPoint) maxPoint < vector::max_size
-int maxOverlap(vector<Interval> &arr) {
-  maxIntervals.clear();
-  T maxPoint = 0;
-  for (auto &i : arr)
-    if (i.second > maxPoint) maxPoint = i.second;
-  vector<int> x(maxPoint + 2);
-  for (auto &i : arr) x[i.first]++, x[i.second + 1]--;
-  int maxI = 0, curr = 0, isFirst = 1;
-  T l = -1LL, r = -1LL;
-  for (int i = 0; i < x.size(); i++) {
-    curr += x[i];
-    if (curr > maxI) maxI = curr;
-  }
-  curr = 0;
-  for (int i = 0; i < x.size(); i++) {
-    curr += x[i];
-    if (curr == maxI && isFirst) l = i, isFirst = 0;
-    if (curr < maxI && !isFirst)
-      maxIntervals.push_back({l, i - 1}), isFirst = 1;
-  }
-  return maxI;
-}
-\end{minted}
-
-\needspace{13\baselineskip}
-\sectionfont{\bfseries\sffamily\centering\Huge}
-\vspace{1em}
-\section*{Graphs}
-\markboth{GRAPHS}{}
-\addcontentsline{toc}{section}{Graphs}
-\vspace{3em}
 \subsectionfont{\large\bfseries\sffamily\underline}
 \subsection*{Articulation Points And Bridges}
 \addcontentsline{toc}{subsection}{Articulation Points And Bridges}
@@ -2715,6 +2110,65 @@ void allToposorts() {
 
 \end{minted}
 
+\needspace{6\baselineskip}
+\subsectionfont{\large\bfseries\sffamily\underline}
+\subsection*{Tree Diameter (Longest Path Between 2 Nodes)}
+\addcontentsline{toc}{subsection}{Tree Diameter (Longest Path Between 2 Nodes)}
+\begin{minted}{cpp}
+int inf = (1 << 30) - 1;
+vector<vector<int>> adj;
+
+void init(int N) { adj.assign(N, vector<int>()); }
+\end{minted}
+\vspace{-12pt}
+\needspace{4\baselineskip}
+\begin{minted}{cpp}
+void addEdge(int u, int v) {
+  adj[u].push_back(v);
+  adj[v].push_back(u);
+}
+\end{minted}
+\vspace{-12pt}
+\needspace{16\baselineskip}
+\begin{minted}{cpp}
+int bfs(int u) {
+  vector<int> dist(adj.size(), inf);
+  queue<int> q;
+  q.push(u), dist[u] = 0;
+  while (q.size()) {
+    int u = q.front();
+    q.pop();
+    for (int& v : adj[u])
+      if (dist[v] == inf)
+        q.push(v), dist[v] = dist[u] + 1;
+  }
+  int node, maxx = -inf;
+  for (int u = 0; u < adj.size(); u++)
+    if (dist[u] > maxx) maxx = dist[u], node = u;
+  return node;
+}
+\end{minted}
+\vspace{-12pt}
+\needspace{16\baselineskip}
+\begin{minted}{cpp}
+vector<int> diameter() {
+  int u = bfs(0), v = bfs(u);
+  vector<int> path = {v}, vis(adj.size());
+  function<bool(int)> dfs = [&](int a) {
+    if (a == v) return true;
+    vis[a] = 1;
+    for (int& b : adj[a]) {
+      if (vis[b] || !dfs(b)) continue;
+      path.push_back(a);
+      return true;
+    }
+    return false;
+  };
+  dfs(u);
+  return path;
+}
+\end{minted}
+
 \needspace{10\baselineskip}
 \subsectionfont{\bfseries\sffamily\centering\LARGE}
 \vspace{0em}
@@ -2997,12 +2451,12 @@ void addEdge(int u, int v, T w, bool isDirected = 0) {
 \begin{minted}{cpp}
 // O(E)
 vector<T> bfs(int s) {
-  vector<T> dist(adj.size(), inf);
+  vector<long long int> dist(adj.size(), inf);
   dist[s] = 0;
   deque<int> q;
   q.push_front(s);
   while (q.size()) {
-    int u = q.front();
+    int u = q.front(); q.pop_front();
     for (auto& v : adj[u]) {
       T d = dist[u] + weight[u][v];
       if (d < dist[v])
@@ -3050,7 +2504,7 @@ void addEdge(int u, int v, T w, bool isDirected = 0) {
 \begin{minted}{cpp}
 // O(V * E)
 vector<T> bellmanFord(int s) {
-  vector<T> dist(adj.size(), inf);
+  vector<long long int> dist(adj.size(), inf);
   dist[s] = 0;
   for (int i = 1; i <= adj.size(); i++)
     for (int u = 0; u < adj.size(); u++)
@@ -3097,17 +2551,16 @@ void addEdge(int u, int v, T w, bool isDirected = 0) {
 }
 \end{minted}
 \vspace{-12pt}
-\needspace{20\baselineskip}
+\needspace{19\baselineskip}
 \begin{minted}{cpp}
 // O(V * E)
 vector<T> bellmanFordFast(int s) {
-  vector<T> dist(adj.size(), inf);
+  vector<long long int> dist(adj.size(), inf);
   vector<int> its(adj.size()), inqueue(adj.size());
   queue<int> q;
   q.push(s), dist[s] = 0, its[s] = 1;
   while (!q.empty()) {
-    int u = q.front();
-    q.pop(), inqueue[u] = 0;
+    int u = q.front(); q.pop(), inqueue[u] = 0;
     for (auto &v : adj[u]) {
       T d = dist[u] + weight[u][v];
       if (d < dist[v]) {
@@ -3157,7 +2610,7 @@ void addEdge(int u, int v, T w, bool isDirected = 0) {
 \begin{minted}{cpp}
 // ~ O(E * lg(V))
 vector<T> dijkstra(int s) {
-  vector<T> dist(adj.size(), inf);
+  vector<long long int> dist(adj.size(), inf);
   priority_queue<DistNode> q;
   q.push({0, s}), dist[s] = 0;
   while (q.size()) {
@@ -3182,10 +2635,10 @@ vector<T> dijkstra(int s) {
 // d = distance
 typedef int T;
 long long int inf = (1ll << 62) - 1;
-vector<vector<T>> d;
+vector<vector<long long int>> d;
 
 void init(int n) {
-  d.assign(n, vector<T>(n, inf));
+  d.assign(n, vector<long long int>(n, inf));
   for (int i = 0; i < n; i++) d[i][i] = 0;
 }
 \end{minted}
@@ -3241,7 +2694,7 @@ void addEdge(int u, int v, int w) {
 \begin{minted}{cpp}
 // O(N)
 vector<T> dagsssp(int s) {
-  vector<T> dist(adj.size(), inf);
+  vector<long long int> dist(adj.size(), inf);
   dist[s] = 0;
   toposort(s);
   while (toposorted.size()) {
@@ -3256,7 +2709,7 @@ vector<T> dagsssp(int s) {
 }
 \end{minted}
 
-\needspace{20\baselineskip}
+\needspace{13\baselineskip}
 \sectionfont{\bfseries\sffamily\centering\Huge}
 \vspace{1em}
 \section*{Maths}
@@ -3265,44 +2718,105 @@ vector<T> dagsssp(int s) {
 \vspace{3em}
 \subsectionfont{\bfseries\sffamily\centering\LARGE}
 \vspace{0em}
-\subsection*{Matrix Operations}
-\addcontentsline{toc}{subsection}{Matrix Operations}
+\subsection*{Data Structures}
+\addcontentsline{toc}{subsection}{Data Structures}
 \vspace{2em}
 \subsubsectionfont{\large\bfseries\sffamily\underline}
-\subsubsection*{Addition}
-\addcontentsline{toc}{subsubsection}{Addition}
+\subsubsection*{Matrix}
+\addcontentsline{toc}{subsubsection}{Matrix}
 \begin{minted}{cpp}
-typedef int T;
-typedef vector<vector<T>> Matrix;
-
-// O(N * M)
-Matrix add(Matrix a, Matrix b) {
-  Matrix ans(a.size(), vector<T>(a[0].size()));
-  for (int i = 0; i < a.size(); i++)
-    for (int j = 0; j < a[i].size(); j++)
-      ans[i][j] = a[i][j] + b[i][j];
-  return ans;
-}
+template <class T>
+struct Matrix {
+  int rows, cols;
+  vector<vector<T>> m;
 \end{minted}
-
-\needspace{15\baselineskip}
-\subsubsectionfont{\large\bfseries\sffamily\underline}
-\subsubsection*{Multiplication}
-\addcontentsline{toc}{subsubsection}{Multiplication}
+\vspace{-12pt}
+\needspace{3\baselineskip}
 \begin{minted}{cpp}
-typedef int T;
-typedef vector<vector<T>> Matrix;
-
-// O(N^3)
-Matrix multiply(Matrix a, Matrix b) {
-  if (a[0].size() != b.size()) return {};
-  Matrix ans(a.size(), vector<T>(b[0].size()));
-  for (int i = 0; i < a.size(); i++)
-    for (int j = 0; j < b[i].size(); j++)
-      for (int k = 0; k < b.size(); k++)
-        ans[i][j] += a[i][k] * b[k][j];
-  return ans;
-}
+  Matrix(int r, int c) : rows(r), cols(c) {
+    m.assign(r, vector<T>(c));
+  }
+\end{minted}
+\vspace{-12pt}
+\needspace{2\baselineskip}
+\begin{minted}{cpp}
+  Matrix(const vector<vector<T>>& b)
+      : rows(b.size()), cols(b[0].size()), m(b) {}
+\end{minted}
+\vspace{-12pt}
+\needspace{4\baselineskip}
+\begin{minted}{cpp}
+  Matrix(int n) {
+    m.assign(n, vector<T>(n));
+    while (n--) m[n][n] = 1;
+  }
+\end{minted}
+\vspace{-12pt}
+\needspace{3\baselineskip}
+\begin{minted}{cpp}
+  vector<T>& operator[](int i) const {
+    return const_cast<Matrix*>(this)->m[i];
+  }
+\end{minted}
+\vspace{-12pt}
+\needspace{8\baselineskip}
+\begin{minted}{cpp}
+  // O(N * M)
+  Matrix operator+(const Matrix& b) {
+    Matrix ans(rows, cols);
+    for (int i = 0; i < rows; i++)
+      for (int j = 0; j < m[i].size(); j++)
+        ans[i][j] = m[i][j] + b[i][j];
+    return ans;
+  }
+\end{minted}
+\vspace{-12pt}
+\needspace{8\baselineskip}
+\begin{minted}{cpp}
+  // O(N * M)
+  Matrix operator-(const Matrix& b) {
+    Matrix ans(rows, cols);
+    for (int i = 0; i < rows; i++)
+      for (int j = 0; j < m[i].size(); j++)
+        ans[i][j] = m[i][j] - b[i][j];
+    return ans;
+  }
+\end{minted}
+\vspace{-12pt}
+\needspace{10\baselineskip}
+\begin{minted}{cpp}
+  // O(N^3)
+  Matrix operator*(const Matrix& b) {
+    if (cols != b.rows) return Matrix(0, 0);
+    Matrix ans(rows, b.cols);
+    for (int i = 0; i < rows; i++)
+      for (int j = 0; j < b[i].size(); j++)
+        for (int k = 0; k < b.rows; k++)
+          ans[i][j] += m[i][k] * b[k][j];
+    return ans;
+  }
+\end{minted}
+\vspace{-12pt}
+\needspace{3\baselineskip}
+\begin{minted}{cpp}
+  Matrix& operator+=(const Matrix& b) {
+    return *this = *this + b;
+  }
+\end{minted}
+\vspace{-12pt}
+\needspace{3\baselineskip}
+\begin{minted}{cpp}
+  Matrix& operator-=(const Matrix& b) {
+    return *this = *this - b;
+  }
+\end{minted}
+\vspace{-12pt}
+\needspace{4\baselineskip}
+\begin{minted}{cpp}
+  Matrix& operator*=(const Matrix& b) {
+    return *this = *this * b;
+  }
+};
 \end{minted}
 
 \needspace{15\baselineskip}
@@ -3315,15 +2829,49 @@ Matrix multiply(Matrix a, Matrix b) {
 \subsubsection*{Binary Exponentiation}
 \addcontentsline{toc}{subsubsection}{Binary Exponentiation}
 \begin{minted}{cpp}
-typedef __int128_t lli;
+typedef long long int li;
 
-lli binPow(lli a, lli p) {
-  lli ans = 1LL;
+li binPow(li a, li p) {
+  li ans = 1LL;
   while (p) {
     if (p & 1LL) ans *= a;
     a *= a, p >>= 1LL;
   }
   return ans;
+}
+\end{minted}
+
+\needspace{11\baselineskip}
+\subsubsectionfont{\large\bfseries\sffamily\underline}
+\subsubsection*{Diophantine Equation (Base Solution)}
+\addcontentsline{toc}{subsubsection}{Diophantine Equation (Base Solution)}
+\begin{minted}{cpp}
+#include "Extended Euclidean Algorithm.cpp"
+typedef long long int li;
+
+pair<li, li> diophantineBase(li a, li b, li c) {
+  li d, x, y;
+  tie(d, x, y) = extendedGCD(a, b);
+  if (c % d) return {0, 0};
+  return {c / d * x, c / d * y};
+}
+\end{minted}
+
+\needspace{13\baselineskip}
+\subsubsectionfont{\large\bfseries\sffamily\underline}
+\subsubsection*{Diophantine Equation (Particular Solution)}
+\addcontentsline{toc}{subsubsection}{Diophantine Equation (Particular Solution)}
+\begin{minted}{cpp}
+#include "Extended Euclidean Algorithm.cpp"
+typedef long long int li;
+
+// returns the i-th solution or {0, 0} if no solutions
+pair<li, li> diophantineSol(li a, li b, li c, li i) {
+  li d, x, y;
+  tie(d, x, y) = extendedGCD(a, b);
+  if (c % d) return {0, 0};
+  return {c / d * x + i / d * b,
+          c / d * y - i / d * a};
 }
 \end{minted}
 
@@ -3440,38 +2988,29 @@ V getDivisors(li n) {
 
 // counts the number of integers (Xi) between 1 and n
 // which are coprime (gcd(Xi, n) = 1) to n
-lli phi(lli n) {
-  if (isPrime(n)) return n - 1;
+li phi(li n) {
   Map pf = getPrimeFactors(n);
+  if (pf.count(n)) return n - 1;  // if n is prime
   for (auto &p : pf) n -= n / p.first;
   return n;
 }
 \end{minted}
 
-\needspace{25\baselineskip}
+\needspace{12\baselineskip}
 \subsubsectionfont{\large\bfseries\sffamily\underline}
-\subsubsection*{Extended Euclidean}
-\addcontentsline{toc}{subsubsection}{Extended Euclidean}
+\subsubsection*{Extended Euclidean Algorithm}
+\addcontentsline{toc}{subsubsection}{Extended Euclidean Algorithm}
 \begin{minted}{cpp}
-// r = remainder
+#include "Modulo with negative numbers.cpp"
+typedef long long int li;
 
-typedef __int128_t lli;
 // gcd(a, b) = ax + by
-vector<lli> extendedGCD(lli a, lli b) {
-  if (a > 0 && b == 0) return {a, 1, 0};
-  lli x = 1, y, prevx, prevy = 1, q, r;
-  while (true) {
-    q = a / b, r = a - b * q;
-    if (!r) break;
-    a = b, b = r;
-    x -= prevx * q;
-    swap(x, prevx);
-    y -= prevy * q;
-    swap(y, prevy);
-  }
-  // gcd = b, x = prevx, y = prevy
-  return {b, prevx, prevy};
-}
+tuple<li, li, li> extendedGCD(li a, li b) {
+  if (!a) return {b, 0, 1};
+  li d, x, y;
+  tie(d, x, y) = extendedGCD(mod(b, a), a);
+  return {d, y - floor((double) b / a) * x, x};
+}  // {gcd(a, b), x, y}
 \end{minted}
 
 \needspace{7\baselineskip}
@@ -3479,9 +3018,9 @@ vector<lli> extendedGCD(lli a, lli b) {
 \subsubsection*{GCD}
 \addcontentsline{toc}{subsubsection}{GCD}
 \begin{minted}{cpp}
-typedef __int128_t lli;
+typedef long long int li;
 
-lli gcd(lli a, lli b) {
+li gcd(li a, li b) {
   return !b ? a : gcd(b, a % b);
 }
 \end{minted}
@@ -3489,7 +3028,7 @@ lli gcd(lli a, lli b) {
 \needspace{5\baselineskip}
 \begin{minted}{cpp}
 // Iterative version
-lli gcdI(lli a, lli b) {
+li gcdI(li a, li b) {
   while (b) a %= b, swap(a, b);
   return a;
 }
@@ -3502,9 +3041,9 @@ lli gcdI(lli a, lli b) {
 \begin{minted}{cpp}
 #include "GCD.cpp"
 
-int lcm(lli a, lli b) {
-  int c = gcd(a, b);
-  return c ? a / c * b : 0;
+int lcm(li a, li b) {
+  int d = gcd(a, b);
+  return d ? a / d * b : 0;
 }
 \end{minted}
 
@@ -3516,9 +3055,9 @@ int lcm(lli a, lli b) {
 #include "./Modular Multiplication.cpp"
 
 // O(lg(p))
-lli pow(lli a, lli p, lli m) {
+li pow(li a, li p, li m) {
   a %= m;
-  lli ans = 1;
+  li ans = 1;
   while (p) {
     if (p & 1LL) ans = multiply(ans, a, m);
     a = multiply(a, a, m), p >>= 1;
@@ -3532,12 +3071,12 @@ lli pow(lli a, lli p, lli m) {
 \subsubsection*{Modular Multiplication}
 \addcontentsline{toc}{subsubsection}{Modular Multiplication}
 \begin{minted}{cpp}
-typedef __int128_t lli;
+typedef long long int li;
 
 // O(lg(b))
-lli multiply(lli a, lli b, lli m) {
+li multiply(li a, li b, li m) {
   a %= m;
-  lli ans = 0;
+  li ans = 0;
   while (b) {
     if (b & 1)
       ans += a, ans = (ans >= m ? ans - m : ans);
@@ -3548,18 +3087,16 @@ lli multiply(lli a, lli b, lli m) {
 }
 \end{minted}
 
-\needspace{9\baselineskip}
+\needspace{7\baselineskip}
 \subsubsectionfont{\large\bfseries\sffamily\underline}
 \subsubsection*{Modulo with negative numbers}
 \addcontentsline{toc}{subsubsection}{Modulo with negative numbers}
 \begin{minted}{cpp}
-typedef int T;
+typedef long long int li;
 
-T mod(T a, T b) {
-  if (a < 0 && b >= 0) return a % b + b;
-  if (a >= 0 && b < 0) return -(a % b + b);
-  return a % b;
-}
+// if b is positive the answer is positive
+// if b is negative the answer is negative
+li mod(li a, li b) { return (b + (a % b)) % b; }
 \end{minted}
 
 \needspace{30\baselineskip}
@@ -3619,6 +3156,53 @@ Map getPrimeFactors(li n) {
 }
 \end{minted}
 
+\needspace{17\baselineskip}
+\subsubsectionfont{\large\bfseries\sffamily\underline}
+\subsubsection*{Prime Factorization (Sieve)}
+\addcontentsline{toc}{subsubsection}{Prime Factorization (Sieve)}
+\begin{minted}{cpp}
+#include "Primes Sieve.cpp"
+
+typedef unordered_map<int, int> Map;
+
+// O(lg(N)) n <= sieve.size()
+Map getPrimeFactors(int n) {
+  Map pf;
+  while (n > 1) {
+    int p = n & 1 ? sieve[n] : 2, c;
+    if (!p) p = n;
+    while (n % p == 0) n /= p, c++;
+    pf[p] = c;
+  }
+  return pf;
+}
+\end{minted}
+
+\needspace{20\baselineskip}
+\subsubsectionfont{\large\bfseries\sffamily\underline}
+\subsubsection*{Prime Factorization (Sieve) 2}
+\addcontentsline{toc}{subsubsection}{Prime Factorization (Sieve) 2}
+\begin{minted}{cpp}
+#include "Primes Sieve.cpp"
+
+typedef long long int li;
+// if li == __int128_t: use map<li, int> Map;
+typedef unordered_map<li, int> Map;
+
+// O(sqrt(N)) n <= sieve.size() ^ 2
+Map getPrimeFactors(li n) {
+  Map pf;
+  for (int& p : primes) {
+    if (p * p > n) break;
+    int c;
+    while (n % p == 0) n /= p, c++;
+    if (c) pf[p] = c;
+  }
+  if (n > 1) pf[n] = 1;
+  return pf;
+}
+\end{minted}
+
 \needspace{12\baselineskip}
 \subsubsectionfont{\large\bfseries\sffamily\underline}
 \subsubsection*{Prime Factorization Pollard Rho}
@@ -3650,7 +3234,7 @@ li getRandomDivisor(li n) {
 }
 \end{minted}
 \vspace{-12pt}
-\needspace{10\baselineskip}
+\needspace{9\baselineskip}
 \begin{minted}{cpp}
 void getpf(li n, Map &pf) {
   if (n == 1LL) return;
@@ -3659,8 +3243,7 @@ void getpf(li n, Map &pf) {
     return;
   }
   li divisor = getRandomDivisor(n);
-  getpf(divisor, pf);
-  getpf(n / divisor, pf);
+  getpf(divisor, pf), getpf(n / divisor, pf);
 }
 \end{minted}
 \vspace{-12pt}
@@ -3676,8 +3259,8 @@ Map getPrimeFactors(li n) {
 
 \needspace{15\baselineskip}
 \subsubsectionfont{\large\bfseries\sffamily\underline}
-\subsubsection*{Prime Sieve}
-\addcontentsline{toc}{subsubsection}{Prime Sieve}
+\subsubsection*{Primes Sieve}
+\addcontentsline{toc}{subsubsection}{Primes Sieve}
 \begin{minted}{cpp}
 vector<int> sieve, primes;
 
@@ -3695,13 +3278,798 @@ void primeSieve(int n) {
 }
 \end{minted}
 
-\needspace{20\baselineskip}
+\needspace{12\baselineskip}
+\sectionfont{\bfseries\sffamily\centering\Huge}
+\vspace{1em}
+\section*{Ranges}
+\markboth{RANGES}{}
+\addcontentsline{toc}{section}{Ranges}
+\vspace{3em}
+\subsectionfont{\bfseries\sffamily\centering\LARGE}
+\vspace{0em}
+\subsection*{Data Structures}
+\addcontentsline{toc}{subsection}{Data Structures}
+\vspace{2em}
+\subsubsectionfont{\large\bfseries\sffamily\underline}
+\subsubsection*{BIT}
+\addcontentsline{toc}{subsubsection}{BIT}
+\begin{minted}{cpp}
+template <class T>
+struct BIT {
+  T neutro = 0;
+  vector<T> bit;
+\end{minted}
+\vspace{-12pt}
+\needspace{7\baselineskip}
+\begin{minted}{cpp}
+  BIT(int n) { bit.assign(++n, neutro); }
+
+  inline T F(T a, T b) {
+    return a + b;
+    // return a * b;
+  }
+\end{minted}
+\vspace{-12pt}
+\needspace{5\baselineskip}
+\begin{minted}{cpp}
+  // Inverse of F
+  inline T I(T a, T b) {
+    return a - b;
+    // return a / b;
+  }
+\end{minted}
+\vspace{-12pt}
+\needspace{7\baselineskip}
+\begin{minted}{cpp}
+  // O(N)
+  void build() {
+    for (int i = 1; i < bit.size(); i++) {
+      int j = i + (i & -i);
+      if (j < bit.size()) bit[j] = F(bit[j], bit[i]);
+    }
+  }
+\end{minted}
+\vspace{-12pt}
+\needspace{4\baselineskip}
+\begin{minted}{cpp}
+  // O(lg(N))
+  void update(int i, T val) {
+    for (i++; i < bit.size(); i += i & -i)
+      bit[i] = F(bit[i], val);
+  }
+\end{minted}
+\vspace{-12pt}
+\needspace{6\baselineskip}
+\begin{minted}{cpp}
+  // O(lg(N))
+  T query(int i) {
+    T ans = neutro;
+    for (i++; i; i -= i & -i) ans = F(ans, bit[i]);
+    return ans;
+  }
+\end{minted}
+\vspace{-12pt}
+\needspace{6\baselineskip}
+\begin{minted}{cpp}
+  // O(lg(N)), [l, r]
+  T query(int l, int r) {
+    return I(query(r), query(--l));
+  }
+
+  T& operator[](int i) { return bit[++i]; }
+};
+\end{minted}
+
+\needspace{5\baselineskip}
+\subsubsectionfont{\large\bfseries\sffamily\underline}
+\subsubsection*{BIT Range Update}
+\addcontentsline{toc}{subsubsection}{BIT Range Update}
+\begin{minted}{cpp}
+typedef long long int T;
+T neutro = 0;
+vector<T> bit1, bit2;
+\end{minted}
+\vspace{-12pt}
+\needspace{4\baselineskip}
+\begin{minted}{cpp}
+void initVars(int n) {
+  bit1.assign(++n, neutro);
+  bit2 = bit1;
+}
+\end{minted}
+\vspace{-12pt}
+\needspace{5\baselineskip}
+\begin{minted}{cpp}
+// O(lg(N))
+void update(vector<T> &bit, int i, T val) {
+  for (i++; i < bit.size(); i += i & -i)
+    bit[i] += val;
+}
+\end{minted}
+\vspace{-12pt}
+\needspace{7\baselineskip}
+\begin{minted}{cpp}
+// O(lg(N)), [l, r]
+void update(int l, int r, T val) {
+  update(bit1, l, val);
+  update(bit1, r + 1, -val);
+  update(bit2, r + 1, val * r);
+  update(bit2, l, -val * (l - 1));
+}
+\end{minted}
+\vspace{-12pt}
+\needspace{6\baselineskip}
+\begin{minted}{cpp}
+// O(lg(N))
+T query(vector<T> &bit, int i) {
+  T ans = neutro;
+  for (i++; i; i -= i & -i) ans += bit[i];
+  return ans;
+}
+\end{minted}
+\vspace{-12pt}
+\needspace{4\baselineskip}
+\begin{minted}{cpp}
+// O(lg(N))
+T query(int i) {
+  return query(bit1, i) * i + query(bit2, i);
+}
+\end{minted}
+\vspace{-12pt}
+\needspace{4\baselineskip}
+\begin{minted}{cpp}
+// O(lg(N)), [l, r]
+T query(int l, int r) {
+  return query(r) - query(l - 1);
+}
+\end{minted}
+
+\needspace{6\baselineskip}
+\subsubsectionfont{\large\bfseries\sffamily\underline}
+\subsubsection*{Segment Tree}
+\addcontentsline{toc}{subsubsection}{Segment Tree}
+\begin{minted}{cpp}
+// st = segment tree. st[1] = root;
+// neutro = operation neutral value
+// e.g. for sum is 0, for multiplication
+// is 1, for gcd is 0, for min is INF, etc.
+\end{minted}
+\vspace{-12pt}
+\needspace{5\baselineskip}
+\begin{minted}{cpp}
+template <class T>
+struct SegmentTree {
+  T neutro = 0;
+  int N;
+  vector<T> st;
+\end{minted}
+\vspace{-12pt}
+\needspace{8\baselineskip}
+\begin{minted}{cpp}
+  SegmentTree(int n) : st(2 * n, neutro), N(n) {}
+
+  inline T F(T a, T b) {
+    return a + b;
+    // return __gcd(a, b);
+    // return a * b;
+    // return min(a, b);
+  }
+  \end{minted}
+\vspace{-12pt}
+\needspace{5\baselineskip}
+\begin{minted}{cpp}
+  // O(2N)
+  void build() {
+    for (int i = N - 1; i > 0; i--)
+      st[i] = F(st[i << 1], st[i << 1 | 1]);
+  }
+  \end{minted}
+\vspace{-12pt}
+\needspace{5\baselineskip}
+\begin{minted}{cpp}
+  // O(lg(2N)), works like replacing arr[i] with val
+  void update(int i, T val) {
+    for (st[i += N] = val; i > 1; i >>= 1)
+      st[i >> 1] = F(st[i], st[i ^ 1]);
+  }
+\end{minted}
+\vspace{-12pt}
+\needspace{9\baselineskip}
+\begin{minted}{cpp}
+  // O(3N), [l, r]
+  void update(int l, int r, T val) {
+    if (l == r)
+      update(l, val);
+    else {
+      for (l += N, r += N; l <= r; l++) st[l] = val;
+      build();
+    }
+  }
+\end{minted}
+\vspace{-12pt}
+\needspace{9\baselineskip}
+\begin{minted}{cpp}
+  // O(lg(2N)), [l, r]
+  T query(int l, int r) {
+    T ans = neutro;
+    for (l += N, r += N; l <= r; l >>= 1, r >>= 1) {
+      if (l & 1) ans = F(ans, st[l++]);
+      if (~r & 1) ans = F(ans, st[r--]);
+    }
+    return ans;
+  }
+\end{minted}
+\vspace{-12pt}
+\needspace{2\baselineskip}
+\begin{minted}{cpp}
+  T& operator[](int i) { return st[i + N]; }
+};
+\end{minted}
+
+\needspace{7\baselineskip}
+\subsubsectionfont{\large\bfseries\sffamily\underline}
+\subsubsection*{Segment Tree Lazy Propagation}
+\addcontentsline{toc}{subsubsection}{Segment Tree Lazy Propagation}
+\begin{minted}{cpp}
+// st = segment tree, st[1] = root, H = height of d
+// u = updates, d = delayed updates
+// neutro = operation neutral val
+// e.g. for sum is 0, for multiplication
+// is 1, for gcd is 0, for min is INF, etc.
+\end{minted}
+\vspace{-12pt}
+\needspace{6\baselineskip}
+\begin{minted}{cpp}
+template <class T>
+struct SegmentTree {
+  T neutro = 0;
+  int N, H;
+  vector<T> st, d;
+  vector<bool> u;
+\end{minted}
+\vspace{-12pt}
+\needspace{4\baselineskip}
+\begin{minted}{cpp}
+  SegmentTree(int n, T val)
+      : st(2 * n, val), d(n), u(n) {
+    H = sizeof(int) * 8 - __builtin_clz(N = n);
+  }
+\end{minted}
+\vspace{-12pt}
+\needspace{6\baselineskip}
+\begin{minted}{cpp}
+  inline T F(T a, T b) {
+    return a + b;
+    // return a * b;
+    // return __gcd(a, b);
+    // return min(a, b);
+  }
+\end{minted}
+\vspace{-12pt}
+\needspace{7\baselineskip}
+\begin{minted}{cpp}
+  void apply(int i, T val, int k) {
+    // operation to update st[i] in O(1) time
+    st[i] += val * k; // updates the tree
+    // operation to update d[i] in O(1) time
+    // which updates values for future updates
+    if (i < N) d[i] += val, u[i] = 1;
+  }
+\end{minted}
+\vspace{-12pt}
+\needspace{3\baselineskip}
+\begin{minted}{cpp}
+  void calc(int i) {
+    if (!u[i]) st[i] = F(st[i << 1], st[i << 1 | 1]);
+  }
+\end{minted}
+\vspace{-12pt}
+\needspace{4\baselineskip}
+\begin{minted}{cpp}
+  // O(2N)
+  void build() {
+    for (int i = N - 1; i > 0; i--) calc(i);
+  }
+\end{minted}
+\vspace{-12pt}
+\needspace{4\baselineskip}
+\begin{minted}{cpp}
+  // O(lg(N))
+  void build(int p) {
+    while (p > 1) p >>= 1, calc(p);
+  }
+\end{minted}
+\vspace{-12pt}
+\needspace{12\baselineskip}
+\begin{minted}{cpp}
+  // O(lg(N))
+  void push(int p) {
+    for (int s = H, k = 1 << (H - 1); s > 0;
+         s--, k >>= 1) {
+      int i = p >> s;
+      if (u[i]) {
+        apply(i << 1, d[i], k);
+        apply(i << 1 | 1, d[i], k);
+        u[i] = 0, d[i] = 0;
+      }
+    }
+  }
+\end{minted}
+\vspace{-12pt}
+\needspace{12\baselineskip}
+\begin{minted}{cpp}
+  // O(lg(N)), [l, r]
+  void update(int l, int r, T val) {
+    push(l += N);
+    push(r += N);
+    int ll = l, rr = r, k = 1;
+    for (; l <= r; l >>= 1, r >>= 1, k <<= 1) {
+      if (l & 1) apply(l++, val, k);
+      if (~r & 1) apply(r--, val, k);
+    }
+    build(ll);
+    build(rr);
+  }
+\end{minted}
+\vspace{-12pt}
+\needspace{11\baselineskip}
+\begin{minted}{cpp}
+  // O(lg(2N)), [l, r]
+  T query(int l, int r) {
+    push(l += N);
+    push(r += N);
+    T ans = neutro;
+    for (; l <= r; l >>= 1, r >>= 1) {
+      if (l & 1) ans = F(ans, st[l++]);
+      if (~r & 1) ans = F(ans, st[r--]);
+    }
+    return ans;
+  }
+\end{minted}
+\vspace{-12pt}
+\needspace{2\baselineskip}
+\begin{minted}{cpp}
+  T& operator[](int i) { return st[i + N]; }
+};
+\end{minted}
+
+\needspace{6\baselineskip}
+\subsubsectionfont{\large\bfseries\sffamily\underline}
+\subsubsection*{Sparse Table}
+\addcontentsline{toc}{subsubsection}{Sparse Table}
+\begin{minted}{cpp}
+// st = sparse table, Arith = Arithmetic
+typedef int T;
+int neutro = 0;
+vector<vector<T>> st;
+\end{minted}
+\vspace{-12pt}
+\needspace{6\baselineskip}
+\begin{minted}{cpp}
+T F(T a, T b) {
+  // return min(a, b);
+  return __gcd(a, b);
+  // return a + b; // Arith
+  // return a * b; // Arith
+}
+\end{minted}
+\vspace{-12pt}
+\needspace{9\baselineskip}
+\begin{minted}{cpp}
+// O(Nlg(N))
+void build(vector<T> &arr) {
+  st.assign(log2(arr.size()), vector<T>(arr.size()));
+  st[0] = arr;
+  for (int i = 1; (1 << i) <= arr.size(); i++)
+    for (int j = 0; j + (1 << i) <= arr.size(); j++)
+      st[i][j] = F(st[i - 1][j],
+                   st[i - 1][j + (1 << (i - 1))]);
+}
+\end{minted}
+\vspace{-12pt}
+\needspace{5\baselineskip}
+\begin{minted}{cpp}
+// O(1), [l, r]
+T query(int l, int r) {
+  int i = log2(r - l + 1);
+  return F(st[i][l], st[i][r + 1 - (1 << i)]);
+}
+\end{minted}
+\vspace{-12pt}
+\needspace{11\baselineskip}
+\begin{minted}{cpp}
+// O(lg(N)), [l, r]
+T queryArith(int l, int r) {
+  T ans = neutro;
+  while (true) {
+    int k = log2(r - l + 1);
+    ans = F(ans, st[k][l]);
+    l += 1 << k;
+    if (l > r) break;
+  }
+  return ans;
+}
+\end{minted}
+
+\needspace{10\baselineskip}
+\subsubsectionfont{\large\bfseries\sffamily\underline}
+\subsubsection*{Wavelet Tree}
+\addcontentsline{toc}{subsubsection}{Wavelet Tree}
+\begin{minted}{cpp}
+// pref = prefix sum
+// lte = less than or equal, 1-indexed
+// A = max_element(from, to)
+// lcount = left children count
+struct WaveletTree {
+  WaveletTree *l, *r;
+  int lo, hi;
+  vector<int> lcount, pref;
+\end{minted}
+\vspace{-12pt}
+\needspace{17\baselineskip}
+\begin{minted}{cpp}
+  // O(N*lg(A))
+  WaveletTree(vector<int>::iterator from,
+              vector<int>::iterator to, int lo,
+              int hi) {
+    this->lo = lo, this->hi = hi;
+    if (lo == hi or from >= to) return;
+    int mid = (lo + hi) >> 1;
+    auto f = [mid](int x) { return x <= mid; };
+    lcount.reserve(to - from + 1);
+    pref.reserve(to - from + 1);
+    lcount.push_back(0);
+    pref.push_back(0);
+    for (auto it = from; it != to; it++)
+      lcount.push_back(lcount.back() + f(*it)),
+          pref.push_back(pref.back() + *it);
+    auto pivot = stable_partition(from, to, f);
+    l = new WaveletTree(from, pivot, lo, mid);
+    r = new WaveletTree(pivot, to, mid + 1, hi);
+  }
+\end{minted}
+\vspace{-12pt}
+\needspace{9\baselineskip}
+\begin{minted}{cpp}
+  // O(lg(A)) frequency of k in [a, b]
+  int freq(int a, int b, int k) {
+    if (a > b or k < lo or k > hi) return 0;
+    if (lo == hi) return b - a + 1;
+    int lc = lcount[a - 1], rc = lcount[b];
+    if (k > ((lo + hi) >> 1))
+      return r->freq(a - lc, b - rc, k);
+    return l->freq(lc + 1, rc, k);
+  }
+\end{minted}
+\vspace{-12pt}
+\needspace{10\baselineskip}
+\begin{minted}{cpp}
+  // O(lg(A)) kth-Smallest element in [a, b]
+  int kth(int a, int b, int k) {
+    if (a > b) return 0;
+    if (lo == hi) return lo;
+    int lc = lcount[a - 1], rc = lcount[b],
+        inleft = rc - lc;
+    if (k > inleft)
+      return r->kth(a - lc, b - rc, k - inleft);
+    return l->kth(lc + 1, rc, k);
+  }
+\end{minted}
+\vspace{-12pt}
+\needspace{8\baselineskip}
+\begin{minted}{cpp}
+  // O(lg(A)) count of elements <= to k in [a, b]
+  int lte(int a, int b, int k) {
+    if (a > b or k < lo) return 0;
+    if (hi <= k) return b - a + 1;
+    int lc = lcount[a - 1], rc = lcount[b];
+    return l->lte(lc + 1, rc, k) +
+           r->lte(a - lc, b - rc, k);
+  }
+\end{minted}
+\vspace{-12pt}
+\needspace{8\baselineskip}
+\begin{minted}{cpp}
+  // O(lg(A)) sum of numbers <= to k in [a, b]
+  int sumlte(int a, int b, int k) {
+    if (a > b or k < lo) return 0;
+    if (hi <= k) return pref[b] - pref[a - 1];
+    int lc = lcount[a - 1], rc = lcount[b];
+    return l->sumlte(lc + 1, rc, k) +
+           r->sumlte(a - lc, b - rc, k);
+  }
+};
+\end{minted}
+
+\needspace{13\baselineskip}
+\subsubsectionfont{\large\bfseries\sffamily\underline}
+\subsubsection*{Wavelet Tree Compressed}
+\addcontentsline{toc}{subsubsection}{Wavelet Tree Compressed}
+\begin{minted}{cpp}
+// lte = less than or equal, c = compressed
+// o  = original, 1-indexed
+#include "../../Techniques/Binary Search.cpp"
+#include "Wavelet Tree.cpp"
+
+template <class T>
+struct WaveletTreeCompressed {
+  unordered_map<int, T> imap;
+  unordered_map<T, int> Map;
+  WaveletTree* wt;
+  vector<T> o;
+\end{minted}
+\vspace{-12pt}
+\needspace{12\baselineskip}
+\begin{minted}{cpp}
+  // O(N*lg(N))
+  WaveletTreeCompressed(vector<T>& v) {
+    o = v;
+    int inf = 1 << 30, n = 0, lo = inf, hi = -inf;
+    set<T> s(v.begin(), v.end());
+    vector<int> c(v.size());
+    for (auto& e : s) Map[e] = n++;
+    for (int i = 0; i < v.size(); i++)
+      c[i] = Map[v[i]], imap[Map[v[i]]] = v[i];
+    for (auto& e : c)
+      lo = min(lo, e), hi = max(hi, e);
+    wt = new WaveletTree(c.begin(), c.end(), lo, hi);
+  }
+\end{minted}
+\vspace{-12pt}
+\needspace{4\baselineskip}
+\begin{minted}{cpp}
+  // O(lg(N)) frequency of k in [a, b]
+  int freq(int l, int r, T k) {
+    return wt->freq(l, r, Map[k]);
+  }
+\end{minted}
+\vspace{-12pt}
+\needspace{4\baselineskip}
+\begin{minted}{cpp}
+  // O(lg(N)) kth-Smallest element in [l, r]
+  T kth(int l, int r, int k) {
+    return imap[wt->kth(l, r, k)];
+  }
+\end{minted}
+\vspace{-12pt}
+\needspace{5\baselineskip}
+\begin{minted}{cpp}
+  // O(lg(N)) count of numbers <= to k in [l, r]
+  T lte(int l, int r, T k) {
+    int kk = Map[bSearch<T>(o, k, l, r)[1]];
+    return imap[wt->lte(l, r, kk)];
+  }
+\end{minted}
+\vspace{-12pt}
+\needspace{5\baselineskip}
+\begin{minted}{cpp}
+  // O(lg(N)) sum of numbers <= to k in [l, r]
+  T sumlte(int l, int r, T k) {
+    int kk = Map[bSearch<T>(o, k, l, r)[1]];
+    return imap[wt->sumlte(l, r, kk)];
+  }
+};
+\end{minted}
+
+\needspace{13\baselineskip}
 \sectionfont{\bfseries\sffamily\centering\Huge}
 \vspace{1em}
 \section*{Strings}
 \markboth{STRINGS}{}
 \addcontentsline{toc}{section}{Strings}
 \vspace{3em}
+\subsectionfont{\bfseries\sffamily\centering\LARGE}
+\vspace{0em}
+\subsection*{Data Structures}
+\addcontentsline{toc}{subsection}{Data Structures}
+\vspace{2em}
+\subsubsectionfont{\large\bfseries\sffamily\underline}
+\subsubsection*{Suffix Automaton}
+\addcontentsline{toc}{subsubsection}{Suffix Automaton}
+\begin{minted}{cpp}
+// link[u]: links to the longest suffix which is
+//          not in the same endpos-equivalence class
+// len[u]: length of the longest suffix that
+//         corresponds to u's endpos-equivalence class
+\end{minted}
+\vspace{-12pt}
+\needspace{4\baselineskip}
+\begin{minted}{cpp}
+struct SuffixAutomaton {
+  vector<int> len, link, isClone, first;
+  vector<map<char, int>> next;
+  int size, last;
+\end{minted}
+\vspace{-12pt}
+\needspace{5\baselineskip}
+\begin{minted}{cpp}
+  void init(int n) {
+    first = isClone = len = link = vector<int>(2 * n);
+    next.resize(2 * n);
+    len[0] = 0, link[0] = -1, size = 1, last = 0;
+  }
+\end{minted}
+\vspace{-12pt}
+\needspace{5\baselineskip}
+\begin{minted}{cpp}
+  // O(N)
+  SuffixAutomaton(const string& s) {
+    init(s.size());
+    for (const auto& c : s) add(c);
+  }
+\end{minted}
+\vspace{-12pt}
+\needspace{22\baselineskip}
+\begin{minted}{cpp}
+  // O(1)
+  void add(const char& c) {
+    int p = last, u = size++;
+    len[u] = len[p] + 1, first[u] = len[p];
+    while (p != -1 && !next[p].count(c))
+      next[p][c] = u, p = link[p];
+    if (p == -1) link[u] = 0;
+    else {
+      int q = next[p][c];
+      if (len[p] + 1 == len[q]) link[u] = q;
+      else {
+        int clone = size++;
+        first[clone] = first[q];
+        len[clone] = len[p] + 1, isClone[clone] = 1;
+        link[clone] = link[q], next[clone] = next[q];
+        while (p != -1 && next[p][c] == q)
+          next[p][c] = clone, p = link[p];
+        link[q] = link[u] = clone;
+      }
+    }
+    last = u;
+  }
+\end{minted}
+\vspace{-12pt}
+\needspace{7\baselineskip}
+\begin{minted}{cpp}
+  // O(N)
+  unordered_set<int> getTerminals() {
+    unordered_set<int> terminals;
+    for (int p = last; p; p = link[p])
+      terminals.insert(p);
+    return terminals;
+  }
+};
+\end{minted}
+
+\needspace{5\baselineskip}
+\subsubsectionfont{\large\bfseries\sffamily\underline}
+\subsubsection*{Trie}
+\addcontentsline{toc}{subsubsection}{Trie}
+\begin{minted}{cpp}
+// wpt = number of words passing through
+// w = number of words ending in the node
+// c = character
+\end{minted}
+\vspace{-12pt}
+\needspace{8\baselineskip}
+\begin{minted}{cpp}
+struct Trie {
+
+  struct Node {
+    // for lexicographical order use 'map'
+    // map<char, Node *> ch;
+    unordered_map<char, Node *> ch;
+    int w = 0, wpt = 0;
+  };
+\end{minted}
+\vspace{-12pt}
+\needspace{12\baselineskip}
+\begin{minted}{cpp}
+  Node *root = new Node();
+
+  // O(STR.SIZE)
+  void insert(string str) {
+    Node *curr = root;
+    for (auto &c : str) {
+      if (!curr->ch.count(c))
+        curr->ch[c] = new Node();
+      curr->wpt++, curr = curr->ch[c];
+    }
+    curr->wpt++, curr->w++;
+  }
+\end{minted}
+\vspace{-12pt}
+\needspace{9\baselineskip}
+\begin{minted}{cpp}
+  // O(STR.SIZE)
+  Node *find(string &str) {
+    Node *curr = root;
+    for (auto &c : str) {
+      if (!curr->ch.count(c)) return nullptr;
+      curr = curr->ch[c];
+    }
+    return curr;
+  }
+\end{minted}
+\vspace{-12pt}
+\needspace{5\baselineskip}
+\begin{minted}{cpp}
+  // O(STR.SIZE) number of words with given prefix
+  int prefixCount(string prefix) {
+    Node *node = find(prefix);
+    return node ? node->wpt : 0;
+  }
+\end{minted}
+\vspace{-12pt}
+\needspace{5\baselineskip}
+\begin{minted}{cpp}
+  // O(STR.SIZE) number of words matching str
+  int strCount(string str) {
+    Node *node = find(str);
+    return node ? node->w : 0;
+  }
+\end{minted}
+\vspace{-12pt}
+\needspace{10\baselineskip}
+\begin{minted}{cpp}
+  // O(N)
+  void getWords(Node *curr, vector<string> &words,
+                string &word) {
+    if (!curr) return;
+    if (curr->w) words.push_back(word);
+    for (auto &c : curr->ch) {
+      getWords(c.second, words, word += c.first);
+      word.pop_back();
+    }
+  }
+\end{minted}
+\vspace{-12pt}
+\needspace{7\baselineskip}
+\begin{minted}{cpp}
+  // O(N)
+  vector<string> getWords() {
+    vector<string> words;
+    string word = "";
+    getWords(root, words, word);
+    return words;
+  }
+\end{minted}
+\vspace{-12pt}
+\needspace{5\baselineskip}
+\begin{minted}{cpp}
+  // O(N)
+  vector<string> getWordsByPrefix(string prefix) {
+    vector<string> words;
+    getWords(find(prefix), words, prefix);
+  }
+\end{minted}
+\vspace{-12pt}
+\needspace{15\baselineskip}
+\begin{minted}{cpp}
+  // O(STR.SIZE)
+  bool remove(Node *curr, string &str, int &i) {
+    if (i == str.size()) {
+      curr->wpt--;
+      return curr->w ? !(curr->w = 0) : 0;
+    }
+    int c = str[i];
+    if (!curr->ch.count(c)) return false;
+    if (remove(curr->ch[c], str, ++i)) {
+      if (!curr->ch[c]->wpt)
+        curr->wpt--, curr->ch.erase(c);
+      return true;
+    }
+    return false;
+  }
+\end{minted}
+\vspace{-12pt}
+\needspace{6\baselineskip}
+\begin{minted}{cpp}
+  // O(STR.SIZE)
+  int remove(string str) {
+    int i = 0;
+    return remove(root, str, i);
+  }
+};
+\end{minted}
+
+\needspace{16\baselineskip}
 \subsectionfont{\large\bfseries\sffamily\underline}
 \subsection*{Distinct Substring Count}
 \addcontentsline{toc}{subsection}{Distinct Substring Count}
@@ -3820,6 +4188,46 @@ string smallestCyclicShift(const string& s) {
       break;
     }
   return ans;
+}
+\end{minted}
+
+\needspace{17\baselineskip}
+\subsectionfont{\large\bfseries\sffamily\underline}
+\subsection*{Longest Common Substring of 2 Strings}
+\addcontentsline{toc}{subsection}{Longest Common Substring of 2 Strings}
+\begin{minted}{cpp}
+#include "../Data Structures/Strings/Suffix Automaton.cpp"
+
+string lcs(string& a, string& b) {
+  SuffixAutomaton sa(a);
+  int bestLen = 0, bestPos = -1;
+  for (int i = 0, u = 0, l = 0; i < b.size(); i++) {
+    while (u && !sa.next[u].count(b[i]))
+      u = sa.link[u], l = sa.len[u];
+    if (sa.next[u].count(b[i]))
+      u = sa.next[u][b[i]], l++;
+    if (l > bestLen) bestLen = l, bestPos = i;
+  }
+  return b.substr(bestPos - bestLen + 1, bestLen);
+}
+\end{minted}
+
+\needspace{3\baselineskip}
+\subsectionfont{\large\bfseries\sffamily\underline}
+\subsection*{Longest Common Substring of Multiple Strings}
+\addcontentsline{toc}{subsection}{Longest Common Substring of Multiple Strings}
+\begin{minted}{cpp}
+#include <bits/stdc++.h>
+using namespace std;
+
+#include "../Data Structures/Strings/Suffix Automaton.cpp"
+
+string lcs(vector<string>& ss) {
+  
+}
+
+int main() {
+
 }
 \end{minted}
 
@@ -3969,16 +4377,21 @@ vector<int> rabinKarp(RollingHash &rhStr,
 }
 \end{minted}
 
-\needspace{17\baselineskip}
+\needspace{19\baselineskip}
 \sectionfont{\bfseries\sffamily\centering\Huge}
 \vspace{1em}
 \section*{Techniques}
 \markboth{TECHNIQUES}{}
 \addcontentsline{toc}{section}{Techniques}
 \vspace{3em}
-\subsectionfont{\large\bfseries\sffamily\underline}
+\subsectionfont{\bfseries\sffamily\centering\LARGE}
+\vspace{0em}
 \subsection*{Binary Search}
 \addcontentsline{toc}{subsection}{Binary Search}
+\vspace{2em}
+\subsubsectionfont{\large\bfseries\sffamily\underline}
+\subsubsection*{Binary Search}
+\addcontentsline{toc}{subsubsection}{Binary Search}
 \begin{minted}{cpp}
 /* if e in v and lower = false (upper_bound):
   r = position of e in v
@@ -3998,23 +4411,24 @@ if e not in v and inv = true it means that:
 template <class T>
 vector<T> bSearch(vector<T> &v, T e, int l, int r,
                   bool lower = 0, bool inv = 0) {
+  int ll = l, rr = r;
   while (l <= r) {
-    int mid = l + (r - l) / 2;
-    if (e < v[mid])
-      inv ? l = mid + 1 : r = mid - 1;
+    int mid = l + (r - l) >> 1;
+    if (e < v[mid]) inv ? l = mid + 1 : r = mid - 1;
     else if (e > v[mid])
       inv ? r = mid - 1 : l = mid + 1;
     else
       lower ? r = mid - 1 : l = mid + 1;
   }  // bSearch[0] tells if the element was found
-  return {lower ? v[l] == e : v[r] == e, r, l};
-}  // be aware that r can be < given l and l > given r
+  return {lower ?
+    v[min(rr, l)] == e : v[max(ll, r)] == e, r, l};
+}
 \end{minted}
 
-\needspace{5\baselineskip}
-\subsectionfont{\large\bfseries\sffamily\underline}
-\subsection*{Bitonic Search}
-\addcontentsline{toc}{subsection}{Bitonic Search}
+\needspace{4\baselineskip}
+\subsubsectionfont{\large\bfseries\sffamily\underline}
+\subsubsection*{Bitonic Search}
+\addcontentsline{toc}{subsubsection}{Bitonic Search}
 \begin{minted}{cpp}
 /* assumes that the bitonic point is the greastest
  * value in v*/
@@ -4041,6 +4455,84 @@ vector<vector<int>> bitonicSearch(vector<T> &v, T e) {
   return {
       bSearch<T>(v, e, 0, mid),
       bSearch<T>(v, e, mid, v.size() - 1, false, true)};
+}
+\end{minted}
+
+\needspace{12\baselineskip}
+\subsubsectionfont{\large\bfseries\sffamily\underline}
+\subsubsection*{C++ lower bound}
+\addcontentsline{toc}{subsubsection}{C++ lower bound}
+\begin{minted}{cpp}
+// ans[0] = true if e is in v else false
+// ans[1] = index pointing to the first element in
+// the range [l, r) which compares >= to e.
+template <class T>
+vector<int> lowerBound(vector<T>& v, T e, int l,
+                       int r) {
+  auto it = v.begin();
+  int i = lower_bound(it + l, it + r, e) - it;
+  return {v[i] == e, i};
+}
+\end{minted}
+
+\needspace{12\baselineskip}
+\subsubsectionfont{\large\bfseries\sffamily\underline}
+\subsubsection*{C++ upper bound}
+\addcontentsline{toc}{subsubsection}{C++ upper bound}
+\begin{minted}{cpp}
+// ans[0] = true if e is in v else false
+// ans[1] = index pointing to the first element in
+// the range [l, r) which compares > to e.
+template <class T>
+vector<int> upperBound(vector<T>& v, T e, int l,
+                       int r) {
+  auto it = v.begin();
+  int i = upper_bound(it + l, it + r, e) - it;
+  return {v[i - 1] == e, i};
+}
+\end{minted}
+
+\needspace{17\baselineskip}
+\subsubsectionfont{\large\bfseries\sffamily\underline}
+\subsubsection*{Lower Bound}
+\addcontentsline{toc}{subsubsection}{Lower Bound}
+\begin{minted}{cpp}
+// ans[0] = true if e is in v else false
+// ans[1] = index pointing to the first element in
+// the range [l, r] which compares >= to e.
+
+// O(lg(r - l)) [l, r]
+template <class T>
+vector<int> lowerBound(vector<T>& v, T e, int l,
+                       int r) {
+  int rr = r;
+  while (l <= r) {
+    int mid = l + (r - l) >> 1;
+    e <= v[mid] ? r = mid - 1, l = mid + 1;
+  }
+  return {v[min(rr, l)] == e, l};
+}
+\end{minted}
+
+\needspace{17\baselineskip}
+\subsubsectionfont{\large\bfseries\sffamily\underline}
+\subsubsection*{Upper Bound}
+\addcontentsline{toc}{subsubsection}{Upper Bound}
+\begin{minted}{cpp}
+// ans[0] = true if e is in v else false
+// ans[1] = index pointing to the first element in
+// the range [l, r] which compares > to e.
+
+// O(lg(r - l)) [l, r]
+template <class T>
+vector<int> upperBound(vector<T>& v, T e, int l,
+                       int r) {
+  int ll = l;
+  while (l <= r) {
+    int mid = l + (r - l) >> 1;
+    e < v[mid] ? r = mid - 1, l = mid + 1;
+  }
+  return {v[max(ll, r)] == e, l};
 }
 \end{minted}
 
@@ -4210,6 +4702,118 @@ int main() {
 }
 \end{minted}
 
+\needspace{19\baselineskip}
+\sectionfont{\bfseries\sffamily\centering\Huge}
+\vspace{1em}
+\section*{Trees And Heaps}
+\markboth{TREES AND HEAPS}{}
+\addcontentsline{toc}{section}{Trees And Heaps}
+\vspace{3em}
+\subsectionfont{\large\bfseries\sffamily\underline}
+\subsection*{Red Black Tree}
+\addcontentsline{toc}{subsection}{Red Black Tree}
+\begin{minted}{cpp}
+template <class K, class V>
+struct RedBlackTree {
+
+  struct Node {
+    K key;
+    V val;
+    Node *l, *r;  // left, right
+    bool isRed;
+    Node(K k, V v, bool isRed)
+        : key(k), val(v), isRed(isRed) {}
+  };
+
+  Node *root = nullptr;
+\end{minted}
+\vspace{-12pt}
+\needspace{5\baselineskip}
+\begin{minted}{cpp}
+  int compare(K a, K b) {
+    if (a < b) return -1;
+    if (a > b) return 1;
+    return 0;
+  }
+\end{minted}
+\vspace{-12pt}
+\needspace{11\baselineskip}
+\begin{minted}{cpp}
+  // O(lg(N))
+  V at(K key) {
+    Node *x = root;
+    while (x) {
+      int cmp = compare(key, x->key);
+      if (!cmp) return x->val;
+      if (cmp < 0) x = x->l;
+      if (cmp > 0) x = x->r;
+    }
+    throw runtime_error("Key doesn't exist");
+  }
+\end{minted}
+\vspace{-12pt}
+\needspace{8\baselineskip}
+\begin{minted}{cpp}
+  Node *rotateLeft(Node *h) {
+    Node *x = h->r;
+    h->r = x->l;
+    x->l = h;
+    x->isRed = h->isRed;
+    h->isRed = 1;
+    return x;
+  }
+\end{minted}
+\vspace{-12pt}
+\needspace{8\baselineskip}
+\begin{minted}{cpp}
+  Node *rotateRight(Node *h) {
+    Node *x = h->l;
+    h->l = x->r;
+    x->r = h;
+    x->isRed = h->isRed;
+    h->isRed = 1;
+    return x;
+  }
+\end{minted}
+\vspace{-12pt}
+\needspace{5\baselineskip}
+\begin{minted}{cpp}
+  void flipColors(Node *h) {
+    h->isRed = 1;
+    h->l->isRed = 0;
+    h->r->isRed = 0;
+  }
+\end{minted}
+\vspace{-12pt}
+\needspace{16\baselineskip}
+\begin{minted}{cpp}
+  // O(lg(N))
+  Node *insert(Node *h, K key, V val) {
+    if (!h) return new Node(key, val, 1);
+    int cmp = compare(key, h->key);
+    if (!cmp) h->val = val;
+    if (cmp < 0) h->l = insert(h->l, key, val);
+    if (cmp > 0) h->r = insert(h->r, key, val);
+    if (h->r && h->r->isRed && !(h->l && h->l->isRed))
+      h = rotateLeft(h);
+    if (h->l && h->l->isRed && h->l->l &&
+        h->l->l->isRed)
+      h = rotateRight(h);
+    if (h->l && h->l->isRed && h->r && h->r->isRed)
+      flipColors(h);
+    return h;
+  }
+\end{minted}
+\vspace{-12pt}
+\needspace{5\baselineskip}
+\begin{minted}{cpp}
+  // O(lg(N))
+  void insert(K key, V val) {
+    root = insert(root, key, val);
+  }
+};
+\end{minted}
+
 \needspace{9\baselineskip}
 \sectionfont{\bfseries\sffamily\centering\Huge}
 \vspace{1em}
@@ -4257,6 +4861,22 @@ int main() {
 \vspace{3em}
 \subsectionfont{\bfseries\sffamily\centering\LARGE}
 \vspace{0em}
+\subsection*{Data Structures}
+\addcontentsline{toc}{subsection}{Data Structures}
+\vspace{2em}
+\subsubsectionfont{\bfseries\sffamily\centering\Large}
+\vspace{0em}
+\subsubsection*{Strings}
+\addcontentsline{toc}{subsubsection}{Strings}
+\vspace{2em}
+\paragraphfont{\large\bfseries\sffamily\underline}
+\paragraph*{Suffix Automaton}
+\addcontentsline{toc}{paragraph}{Suffix Automaton}
+\input{"/home/san/Algorithms/Reference/Extras/Data Structures/Strings/Suffix Automaton.tex"}
+\begin{multicols*}{2}
+\end{multicols*}
+\subsectionfont{\bfseries\sffamily\centering\LARGE}
+\vspace{0em}
 \subsection*{C++}
 \addcontentsline{toc}{subsection}{C++}
 \vspace{2em}
@@ -4270,22 +4890,6 @@ int main() {
 \subsubsection*{Integer Types Properties}
 \addcontentsline{toc}{subsubsection}{Integer Types Properties}
 \input{"/home/san/Algorithms/Reference/Extras/C++/Integer Types Properties.tex"}
-\begin{multicols*}{2}
-\end{multicols*}
-\subsectionfont{\bfseries\sffamily\centering\LARGE}
-\vspace{0em}
-\subsection*{Data Structures}
-\addcontentsline{toc}{subsection}{Data Structures}
-\vspace{2em}
-\subsubsectionfont{\bfseries\sffamily\centering\Large}
-\vspace{0em}
-\subsubsection*{Strings}
-\addcontentsline{toc}{subsubsection}{Strings}
-\vspace{2em}
-\paragraphfont{\large\bfseries\sffamily\underline}
-\paragraph*{Suffix Automaton}
-\addcontentsline{toc}{paragraph}{Suffix Automaton}
-\input{"/home/san/Algorithms/Reference/Extras/Data Structures/Strings/Suffix Automaton.tex"}
 \begin{multicols*}{2}
 \end{multicols*}
 \subsectionfont{\bfseries\sffamily\centering\LARGE}

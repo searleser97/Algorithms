@@ -1,0 +1,7 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+cp}{\PYGZsh{}include} \PYG{c+cpf}{\PYGZdq{}../Number Theory/GCD.cpp\PYGZdq{}}
+\PYG{c+cp}{\PYGZsh{}include} \PYG{c+cpf}{\PYGZdq{}./Is Prime Miller Rabin.cpp\PYGZdq{}}
+
+\PYG{k}{typedef} \PYG{k+kt}{int64\PYGZus{}t} \PYG{n}{lli}\PYG{p}{;}
+\PYG{k}{typedef} \PYG{n}{unordered\PYGZus{}map}\PYG{o}{\PYGZlt{}}\PYG{n}{lli}\PYG{p}{,} \PYG{k+kt}{int}\PYG{o}{\PYGZgt{}} \PYG{n}{Map}\PYG{p}{;}
+\end{Verbatim}

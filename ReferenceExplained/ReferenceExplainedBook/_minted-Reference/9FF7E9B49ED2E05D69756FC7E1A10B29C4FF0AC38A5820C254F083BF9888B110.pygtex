@@ -1,0 +1,8 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n}{vector}\PYG{o}{\PYGZlt{}}\PYG{n}{string}\PYG{o}{\PYGZgt{}} \PYG{n}{split}\PYG{p}{(}\PYG{n}{string} \PYG{n}{str}\PYG{p}{,} \PYG{k+kt}{char} \PYG{n}{token}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+  \PYG{n}{stringstream} \PYG{n}{ss}\PYG{p}{(}\PYG{n}{str}\PYG{p}{);}
+  \PYG{n}{vector}\PYG{o}{\PYGZlt{}}\PYG{n}{string}\PYG{o}{\PYGZgt{}} \PYG{n}{v}\PYG{p}{;}
+  \PYG{k}{while} \PYG{p}{(}\PYG{n}{getline}\PYG{p}{(}\PYG{n}{ss}\PYG{p}{,} \PYG{n}{str}\PYG{p}{,} \PYG{n}{token}\PYG{p}{))} \PYG{n}{v}\PYG{p}{.}\PYG{n}{push\PYGZus{}back}\PYG{p}{(}\PYG{n}{str}\PYG{p}{);}
+  \PYG{k}{return} \PYG{n}{v}\PYG{p}{;}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

@@ -1,0 +1,19 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+cm}{/* inv = 0 assumes v[l] \PYGZlt{}= v[r] (non\PYGZhy{}decreasing)}
+\PYG{c+cm}{inv = 1 assumes v[l] \PYGZgt{}= v[r] (non\PYGZhy{}increasing)}
+\PYG{c+cm}{if inv = 0 returns a vector with 3 values where:}
+\PYG{c+cm}{[0] = position where e is found}
+\PYG{c+cm}{[1] = position of the greatest element \PYGZlt{}= e}
+\PYG{c+cm}{[1] = l \PYGZhy{} 1 if e \PYGZlt{} v[l]}
+\PYG{c+cm}{[2] = position of the smallest element \PYGZgt{}= e}
+\PYG{c+cm}{[2] = r + 1 if e \PYGZgt{} v[r]}
+\PYG{c+cm}{if inv = 1 returns a vector with 3 values where:}
+\PYG{c+cm}{[0] = position where e is found}
+\PYG{c+cm}{[1] = position of the smallest element \PYGZgt{}= e}
+\PYG{c+cm}{[1] = l \PYGZhy{} 1 if e \PYGZgt{} v[l]}
+\PYG{c+cm}{[2] = position of the greatest element \PYGZlt{}= e}
+\PYG{c+cm}{[2] = r + 1 if e \PYGZlt{} v[r]}
+\PYG{c+cm}{if there are duplicates in v between l and r then:}
+\PYG{c+cm}{lower = 0 looks for the last ocurrence of e in v}
+\PYG{c+cm}{lower = 1 looks for the first ocurrence of e in v */}
+\end{Verbatim}

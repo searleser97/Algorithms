@@ -1,0 +1,7 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+  \PYG{c+c1}{// O(N)}
+  \PYG{n}{SuffixAutomaton}\PYG{p}{(}\PYG{k}{const} \PYG{n}{string}\PYG{o}{\PYGZam{}} \PYG{n}{s}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+    \PYG{n}{init}\PYG{p}{(}\PYG{n}{s}\PYG{p}{.}\PYG{n}{size}\PYG{p}{());}
+    \PYG{k}{for} \PYG{p}{(}\PYG{k}{const} \PYG{k}{auto}\PYG{o}{\PYGZam{}} \PYG{n+nl}{c} \PYG{p}{:} \PYG{n}{s}\PYG{p}{)} \PYG{n}{add}\PYG{p}{(}\PYG{n}{c}\PYG{p}{);}
+  \PYG{p}{\PYGZcb{}}
+\end{Verbatim}

@@ -4,9 +4,9 @@
 
 // counts the number of integers (Xi) between 1 and n
 // which are coprime (gcd(Xi, n) = 1) to n
-lli phi(lli n) {
-  if (isPrime(n)) return n - 1;
+li phi(li n) {
   Map pf = getPrimeFactors(n);
+  if (pf.count(n)) return n - 1;  // if n is prime
   for (auto &p : pf) n -= n / p.first;
   return n;
 }

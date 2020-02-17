@@ -1,0 +1,11 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{typedef} \PYG{k+kt}{long} \PYG{k+kt}{double} \PYG{n}{ld}\PYG{p}{;}
+\PYG{k}{const} \PYG{n}{ld} \PYG{n}{eps} \PYG{o}{=} \PYG{l+m+mf}{1e\PYGZhy{}9}\PYG{p}{;}
+
+\PYG{k+kt}{bool} \PYG{n+nf}{eq}\PYG{p}{(}\PYG{n}{ld} \PYG{n}{a}\PYG{p}{,} \PYG{n}{ld} \PYG{n}{b}\PYG{p}{)} \PYG{p}{\PYGZob{}} \PYG{k}{return} \PYG{n}{abs}\PYG{p}{(}\PYG{n}{a} \PYG{o}{\PYGZhy{}} \PYG{n}{b}\PYG{p}{)} \PYG{o}{\PYGZlt{}=} \PYG{n}{eps}\PYG{p}{;} \PYG{p}{\PYGZcb{}}
+\PYG{k+kt}{bool} \PYG{n+nf}{neq}\PYG{p}{(}\PYG{n}{ld} \PYG{n}{a}\PYG{p}{,} \PYG{n}{ld} \PYG{n}{b}\PYG{p}{)} \PYG{p}{\PYGZob{}} \PYG{k}{return} \PYG{n}{abs}\PYG{p}{(}\PYG{n}{a} \PYG{o}{\PYGZhy{}} \PYG{n}{b}\PYG{p}{)} \PYG{o}{\PYGZgt{}} \PYG{n}{eps}\PYG{p}{;} \PYG{p}{\PYGZcb{}}
+\PYG{k+kt}{bool} \PYG{n+nf}{gr}\PYG{p}{(}\PYG{n}{ld} \PYG{n}{a}\PYG{p}{,} \PYG{n}{ld} \PYG{n}{b}\PYG{p}{)} \PYG{p}{\PYGZob{}} \PYG{k}{return} \PYG{n}{a} \PYG{o}{\PYGZhy{}} \PYG{n}{b} \PYG{o}{\PYGZgt{}} \PYG{n}{eps}\PYG{p}{;} \PYG{p}{\PYGZcb{}}
+\PYG{k+kt}{bool} \PYG{n+nf}{le}\PYG{p}{(}\PYG{n}{ld} \PYG{n}{a}\PYG{p}{,} \PYG{n}{ld} \PYG{n}{b}\PYG{p}{)} \PYG{p}{\PYGZob{}} \PYG{k}{return} \PYG{n}{b} \PYG{o}{\PYGZhy{}} \PYG{n}{a} \PYG{o}{\PYGZgt{}} \PYG{n}{eps}\PYG{p}{;} \PYG{p}{\PYGZcb{}}
+\PYG{k+kt}{bool} \PYG{n+nf}{geq}\PYG{p}{(}\PYG{n}{ld} \PYG{n}{a}\PYG{p}{,} \PYG{n}{ld} \PYG{n}{b}\PYG{p}{)} \PYG{p}{\PYGZob{}} \PYG{k}{return} \PYG{n}{a} \PYG{o}{\PYGZhy{}} \PYG{n}{b} \PYG{o}{\PYGZgt{}=} \PYG{o}{\PYGZhy{}}\PYG{n}{eps}\PYG{p}{;} \PYG{p}{\PYGZcb{}}
+\PYG{k+kt}{bool} \PYG{n+nf}{leq}\PYG{p}{(}\PYG{n}{ld} \PYG{n}{a}\PYG{p}{,} \PYG{n}{ld} \PYG{n}{b}\PYG{p}{)} \PYG{p}{\PYGZob{}} \PYG{k}{return} \PYG{n}{b} \PYG{o}{\PYGZhy{}} \PYG{n}{a} \PYG{o}{\PYGZgt{}=} \PYG{o}{\PYGZhy{}}\PYG{n}{eps}\PYG{p}{;} \PYG{p}{\PYGZcb{}}
+\end{Verbatim}

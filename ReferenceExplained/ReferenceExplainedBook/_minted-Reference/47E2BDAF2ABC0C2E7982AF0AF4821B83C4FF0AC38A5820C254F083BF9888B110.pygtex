@@ -1,0 +1,16 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+cp}{\PYGZsh{}include} \PYG{c+cpf}{\PYGZdq{}../Data Structures/Strings/Suffix Automaton.cpp\PYGZdq{}}
+
+\PYG{n}{string} \PYG{n+nf}{lcs}\PYG{p}{(}\PYG{n}{string}\PYG{o}{\PYGZam{}} \PYG{n}{a}\PYG{p}{,} \PYG{n}{string}\PYG{o}{\PYGZam{}} \PYG{n}{b}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+  \PYG{n}{SuffixAutomaton} \PYG{n}{sa}\PYG{p}{(}\PYG{n}{a}\PYG{p}{);}
+  \PYG{k+kt}{int} \PYG{n}{bestLen} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{,} \PYG{n}{bestPos} \PYG{o}{=} \PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{;}
+  \PYG{k}{for} \PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{i} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{,} \PYG{n}{u} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{,} \PYG{n}{l} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{;} \PYG{n}{i} \PYG{o}{\PYGZlt{}} \PYG{n}{b}\PYG{p}{.}\PYG{n}{size}\PYG{p}{();} \PYG{n}{i}\PYG{o}{++}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+    \PYG{k}{while} \PYG{p}{(}\PYG{n}{u} \PYG{o}{\PYGZam{}\PYGZam{}} \PYG{o}{!}\PYG{n}{sa}\PYG{p}{.}\PYG{n}{next}\PYG{p}{[}\PYG{n}{u}\PYG{p}{].}\PYG{n}{count}\PYG{p}{(}\PYG{n}{b}\PYG{p}{[}\PYG{n}{i}\PYG{p}{]))}
+      \PYG{n}{u} \PYG{o}{=} \PYG{n}{sa}\PYG{p}{.}\PYG{n}{link}\PYG{p}{[}\PYG{n}{u}\PYG{p}{],} \PYG{n}{l} \PYG{o}{=} \PYG{n}{sa}\PYG{p}{.}\PYG{n}{len}\PYG{p}{[}\PYG{n}{u}\PYG{p}{];}
+    \PYG{k}{if} \PYG{p}{(}\PYG{n}{sa}\PYG{p}{.}\PYG{n}{next}\PYG{p}{[}\PYG{n}{u}\PYG{p}{].}\PYG{n}{count}\PYG{p}{(}\PYG{n}{b}\PYG{p}{[}\PYG{n}{i}\PYG{p}{]))}
+      \PYG{n}{u} \PYG{o}{=} \PYG{n}{sa}\PYG{p}{.}\PYG{n}{next}\PYG{p}{[}\PYG{n}{u}\PYG{p}{][}\PYG{n}{b}\PYG{p}{[}\PYG{n}{i}\PYG{p}{]],} \PYG{n}{l}\PYG{o}{++}\PYG{p}{;}
+    \PYG{k}{if} \PYG{p}{(}\PYG{n}{l} \PYG{o}{\PYGZgt{}} \PYG{n}{bestLen}\PYG{p}{)} \PYG{n}{bestLen} \PYG{o}{=} \PYG{n}{l}\PYG{p}{,} \PYG{n}{bestPos} \PYG{o}{=} \PYG{n}{i}\PYG{p}{;}
+  \PYG{p}{\PYGZcb{}}
+  \PYG{k}{return} \PYG{n}{b}\PYG{p}{.}\PYG{n}{substr}\PYG{p}{(}\PYG{n}{bestPos} \PYG{o}{\PYGZhy{}} \PYG{n}{bestLen} \PYG{o}{+} \PYG{l+m+mi}{1}\PYG{p}{,} \PYG{n}{bestLen}\PYG{p}{);}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

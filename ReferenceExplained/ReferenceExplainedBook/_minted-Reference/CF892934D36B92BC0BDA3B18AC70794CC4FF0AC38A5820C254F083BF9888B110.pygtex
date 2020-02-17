@@ -1,0 +1,6 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+  \PYG{k+kt}{void} \PYG{n+nf}{apply}\PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{i}\PYG{p}{,} \PYG{n}{T} \PYG{n}{val}\PYG{p}{,} \PYG{k+kt}{int} \PYG{n}{k}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+    \PYG{n}{st}\PYG{p}{[}\PYG{n}{i}\PYG{p}{]} \PYG{o}{=} \PYG{n}{UF}\PYG{p}{(}\PYG{n}{st}\PYG{p}{[}\PYG{n}{i}\PYG{p}{],} \PYG{n}{kTimesF}\PYG{p}{(}\PYG{n}{val}\PYG{p}{,} \PYG{n}{k}\PYG{p}{));}
+    \PYG{k}{if} \PYG{p}{(}\PYG{n}{i} \PYG{o}{\PYGZlt{}} \PYG{n}{N}\PYG{p}{)} \PYG{n}{d}\PYG{p}{[}\PYG{n}{i}\PYG{p}{]} \PYG{o}{=} \PYG{n}{UF}\PYG{p}{(}\PYG{n}{d}\PYG{p}{[}\PYG{n}{i}\PYG{p}{],} \PYG{n}{val}\PYG{p}{),} \PYG{n}{u}\PYG{p}{[}\PYG{n}{i}\PYG{p}{]} \PYG{o}{=} \PYG{l+m+mi}{1}\PYG{p}{;}
+  \PYG{p}{\PYGZcb{}}
+\end{Verbatim}

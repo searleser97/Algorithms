@@ -1,0 +1,86 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k+kn}{from} \PYG{n+nn}{os} \PYG{k+kn}{import} \PYG{n}{listdir}
+\PYG{k+kn}{from} \PYG{n+nn}{os.path} \PYG{k+kn}{import} \PYG{n}{isfile}\PYG{p}{,} \PYG{n}{isdir}\PYG{p}{,} \PYG{n}{join}
+\PYG{k+kn}{import} \PYG{n+nn}{re}
+
+\PYG{n}{PATH} \PYG{o}{=} \PYG{l+s+s1}{\PYGZsq{}/home/san/Algorithms/ReferenceExplained\PYGZsq{}}
+\PYG{n}{excluded} \PYG{o}{=} \PYG{n+nb}{set}\PYG{p}{([}\PYG{l+s+s1}{\PYGZsq{}ReferenceBook\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}.vscode\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}\PYGZus{}\PYGZus{}pycache\PYGZus{}\PYGZus{}\PYGZsq{}}\PYG{p}{])}
+\PYG{n}{numberOfColumns} \PYG{o}{=} \PYG{l+m+mi}{2}
+
+
+\PYG{k}{def} \PYG{n+nf}{printSectionType}\PYG{p}{(}\PYG{n}{sectionName}\PYG{p}{,} \PYG{n}{depth}\PYG{p}{,} \PYG{n}{isFile}\PYG{p}{):}
+    \PYG{n}{vspace} \PYG{o}{=} \PYG{l+m+mi}{0}
+    \PYG{n}{style} \PYG{o}{=} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+se}{\PYGZbs{}\PYGZbs{}}\PYG{l+s+s1}{bfseries}\PYG{l+s+se}{\PYGZbs{}\PYGZbs{}}\PYG{l+s+s1}{sffamily}\PYG{l+s+se}{\PYGZbs{}\PYGZbs{}}\PYG{l+s+s1}{centering\PYGZsq{}}
+    \PYG{k}{if} \PYG{n}{depth} \PYG{o}{==} \PYG{l+m+mi}{1}\PYG{p}{:}
+        \PYG{n}{sectionType} \PYG{o}{=} \PYG{l+s+s1}{\PYGZsq{}section\PYGZsq{}}
+        \PYG{n}{style} \PYG{o}{+=} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+se}{\PYGZbs{}\PYGZbs{}}\PYG{l+s+s1}{Huge\PYGZsq{}}
+        \PYG{n}{vspace} \PYG{o}{=} \PYG{l+m+mi}{2}
+    \PYG{k}{elif} \PYG{n}{depth} \PYG{o}{==} \PYG{l+m+mi}{2}\PYG{p}{:}
+        \PYG{n}{sectionType} \PYG{o}{=} \PYG{l+s+s1}{\PYGZsq{}subsection\PYGZsq{}}
+        \PYG{n}{style} \PYG{o}{+=} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+se}{\PYGZbs{}\PYGZbs{}}\PYG{l+s+s1}{LARGE\PYGZsq{}}
+        \PYG{n}{vspace} \PYG{o}{=} \PYG{l+m+mi}{1}
+    \PYG{k}{elif} \PYG{n}{depth} \PYG{o}{==} \PYG{l+m+mi}{3}\PYG{p}{:}
+        \PYG{n}{sectionType} \PYG{o}{=} \PYG{l+s+s1}{\PYGZsq{}subsubsection\PYGZsq{}}
+        \PYG{n}{style} \PYG{o}{+=} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+se}{\PYGZbs{}\PYGZbs{}}\PYG{l+s+s1}{Large\PYGZsq{}}
+        \PYG{n}{vspace} \PYG{o}{=} \PYG{l+m+mi}{1}
+    \PYG{k}{else}\PYG{p}{:}
+        \PYG{n}{sectionType} \PYG{o}{=} \PYG{l+s+s1}{\PYGZsq{}paragraph\PYGZsq{}}
+        \PYG{n}{style} \PYG{o}{+=} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+se}{\PYGZbs{}\PYGZbs{}}\PYG{l+s+s1}{large\PYGZsq{}}
+        \PYG{n}{vspace} \PYG{o}{=} \PYG{l+m+mi}{1}
+    \PYG{k}{if} \PYG{n}{isFile}\PYG{p}{:}
+        \PYG{n}{sectionName} \PYG{o}{=} \PYG{n}{sectionName}\PYG{p}{[:}\PYG{n}{sectionName}\PYG{o}{.}\PYG{n}{rfind}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}.\PYGZsq{}}\PYG{p}{)]}
+        \PYG{n}{style} \PYG{o}{=} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+se}{\PYGZbs{}\PYGZbs{}}\PYG{l+s+s1}{large}\PYG{l+s+se}{\PYGZbs{}\PYGZbs{}}\PYG{l+s+s1}{bfseries}\PYG{l+s+se}{\PYGZbs{}\PYGZbs{}}\PYG{l+s+s1}{sffamily}\PYG{l+s+se}{\PYGZbs{}\PYGZbs{}}\PYG{l+s+s1}{underline\PYGZsq{}}
+        \PYG{n}{vspace} \PYG{o}{=} \PYG{l+m+mi}{0}
+    \PYG{k}{print}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+se}{\PYGZbs{}\PYGZbs{}}\PYG{l+s+s1}{\PYGZsq{}} \PYG{o}{+} \PYG{n}{sectionType} \PYG{o}{+} \PYG{l+s+s1}{\PYGZsq{}font\PYGZob{}\PYGZsq{}} \PYG{o}{+} \PYG{n}{style} \PYG{o}{+} \PYG{l+s+s1}{\PYGZsq{}\PYGZcb{}\PYGZsq{}}\PYG{p}{)}
+    \PYG{k}{if} \PYG{n}{vspace}\PYG{p}{:}
+        \PYG{k}{print}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+se}{\PYGZbs{}\PYGZbs{}}\PYG{l+s+s1}{vspace\PYGZob{}\PYGZsq{}} \PYG{o}{+} \PYG{n+nb}{str}\PYG{p}{(}\PYG{n}{vspace} \PYG{o}{\PYGZhy{}} \PYG{l+m+mi}{1}\PYG{p}{)} \PYG{o}{+} \PYG{l+s+s1}{\PYGZsq{}em\PYGZcb{}\PYGZsq{}}\PYG{p}{)}
+    \PYG{k}{print}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+se}{\PYGZbs{}\PYGZbs{}}\PYG{l+s+s1}{\PYGZsq{}} \PYG{o}{+} \PYG{n}{sectionType} \PYG{o}{+} \PYG{l+s+s1}{\PYGZsq{}*\PYGZob{}\PYGZsq{}} \PYG{o}{+} \PYG{n}{sectionName} \PYG{o}{+} \PYG{l+s+s1}{\PYGZsq{}\PYGZcb{}\PYGZsq{}}\PYG{p}{)}
+    \PYG{k}{if} \PYG{n}{depth} \PYG{o}{==} \PYG{l+m+mi}{1}\PYG{p}{:}
+        \PYG{k}{print}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+se}{\PYGZbs{}\PYGZbs{}}\PYG{l+s+s1}{markboth\PYGZob{}\PYGZsq{}} \PYG{o}{+} \PYG{n}{sectionName}\PYG{o}{.}\PYG{n}{upper}\PYG{p}{()} \PYG{o}{+} \PYG{l+s+s1}{\PYGZsq{}\PYGZcb{}\PYGZob{}\PYGZcb{}\PYGZsq{}}\PYG{p}{)}
+    \PYG{k}{print}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+se}{\PYGZbs{}\PYGZbs{}}\PYG{l+s+s1}{addcontentsline\PYGZob{}toc\PYGZcb{}\PYGZob{}\PYGZsq{}} \PYG{o}{+} \PYG{n}{sectionType} \PYG{o}{+} \PYG{l+s+s1}{\PYGZsq{}\PYGZcb{}\PYGZob{}\PYGZsq{}} \PYG{o}{+} \PYG{n}{sectionName} \PYG{o}{+} \PYG{l+s+s1}{\PYGZsq{}\PYGZcb{}\PYGZsq{}}\PYG{p}{)}
+    \PYG{k}{if} \PYG{n}{vspace}\PYG{p}{:}
+        \PYG{k}{print}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+se}{\PYGZbs{}\PYGZbs{}}\PYG{l+s+s1}{vspace\PYGZob{}\PYGZsq{}} \PYG{o}{+} \PYG{n+nb}{str}\PYG{p}{(}\PYG{n}{vspace} \PYG{o}{+} \PYG{l+m+mi}{1}\PYG{p}{)} \PYG{o}{+} \PYG{l+s+s1}{\PYGZsq{}em\PYGZcb{}\PYGZsq{}}\PYG{p}{)}
+
+
+\PYG{k}{def} \PYG{n+nf}{needspaceForDepth}\PYG{p}{(}\PYG{n}{depth}\PYG{p}{):}
+    \PYG{k}{if} \PYG{n}{depth} \PYG{o}{==} \PYG{l+m+mi}{1}\PYG{p}{:}
+        \PYG{n}{needspace} \PYG{o}{=} \PYG{l+m+mi}{4}
+    \PYG{k}{elif} \PYG{n}{depth} \PYG{o}{==} \PYG{l+m+mi}{2}\PYG{p}{:}
+        \PYG{n}{needspace} \PYG{o}{=} \PYG{l+m+mi}{3}
+    \PYG{k}{elif} \PYG{n}{depth} \PYG{o}{==} \PYG{l+m+mi}{3}\PYG{p}{:}
+        \PYG{n}{needspace} \PYG{o}{=} \PYG{l+m+mi}{2}
+    \PYG{k}{else}\PYG{p}{:}
+        \PYG{n}{needspace} \PYG{o}{=} \PYG{l+m+mi}{1}
+    \PYG{k}{return} \PYG{n}{needspace}
+
+
+\PYG{k}{def} \PYG{n+nf}{printFile}\PYG{p}{(}\PYG{n}{path}\PYG{p}{,} \PYG{n}{depth}\PYG{p}{,} \PYG{n}{sections}\PYG{p}{):}
+    \PYG{n}{extension} \PYG{o}{=} \PYG{n}{sections}\PYG{p}{[}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{][}\PYG{n}{sections}\PYG{p}{[}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{]}\PYG{o}{.}\PYG{n}{rfind}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}.\PYGZsq{}}\PYG{p}{)} \PYG{o}{+} \PYG{l+m+mi}{1}\PYG{p}{:]}
+    \PYG{k}{if} \PYG{n}{extension} \PYG{o}{==} \PYG{l+s+s1}{\PYGZsq{}tex\PYGZsq{}}\PYG{p}{:}
+        \PYG{k}{print}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+se}{\PYGZbs{}\PYGZbs{}}\PYG{l+s+s1}{end\PYGZob{}multicols*\PYGZcb{}\PYGZsq{}}\PYG{p}{)}
+        \PYG{k}{for} \PYG{n}{i} \PYG{o+ow}{in} \PYG{n+nb}{range}\PYG{p}{(}\PYG{n+nb}{len}\PYG{p}{(}\PYG{n}{sections}\PYG{p}{)):}
+            \PYG{n}{printSectionType}\PYG{p}{(}\PYG{n}{sections}\PYG{p}{[}\PYG{n}{i}\PYG{p}{],} \PYG{n}{depth} \PYG{o}{\PYGZhy{}}
+                             \PYG{n+nb}{len}\PYG{p}{(}\PYG{n}{sections}\PYG{p}{)} \PYG{o}{+} \PYG{n}{i} \PYG{o}{+} \PYG{l+m+mi}{1}\PYG{p}{,} \PYG{n}{i} \PYG{o}{==} \PYG{n+nb}{len}\PYG{p}{(}\PYG{n}{sections}\PYG{p}{)} \PYG{o}{\PYGZhy{}} \PYG{l+m+mi}{1}\PYG{p}{)}
+        \PYG{k}{print}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+se}{\PYGZbs{}\PYGZbs{}}\PYG{l+s+s1}{input\PYGZob{}\PYGZdq{}\PYGZsq{}} \PYG{o}{+} \PYG{n}{path} \PYG{o}{+} \PYG{l+s+s1}{\PYGZsq{}\PYGZdq{}\PYGZcb{}\PYGZsq{}}\PYG{p}{)}
+        \PYG{k}{print}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+se}{\PYGZbs{}\PYGZbs{}}\PYG{l+s+s1}{begin\PYGZob{}multicols*\PYGZcb{}\PYGZob{}\PYGZsq{}} \PYG{o}{+} \PYG{n+nb}{str}\PYG{p}{(}\PYG{n}{numberOfColumns}\PYG{p}{)} \PYG{o}{+} \PYG{l+s+s1}{\PYGZsq{}\PYGZcb{}\PYGZsq{}}\PYG{p}{)}
+        \PYG{k}{return}
+    \PYG{k}{if} \PYG{n}{extension} \PYG{o}{==} \PYG{l+s+s1}{\PYGZsq{}h\PYGZsq{}}\PYG{p}{:}
+        \PYG{n}{extension} \PYG{o}{=} \PYG{l+s+s1}{\PYGZsq{}cpp\PYGZsq{}}
+    \PYG{k}{with} \PYG{n+nb}{open}\PYG{p}{(}\PYG{n}{path}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}r\PYGZsq{}}\PYG{p}{)} \PYG{k}{as} \PYG{n}{f}\PYG{p}{:}
+        \PYG{n}{content} \PYG{o}{=} \PYG{n}{f}\PYG{o}{.}\PYG{n}{read}\PYG{p}{()}
+    \PYG{n}{firstLine} \PYG{o}{=} \PYG{n}{content}\PYG{p}{[:}\PYG{n}{content}\PYG{o}{.}\PYG{n}{find}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)} \PYG{o}{+} \PYG{l+m+mi}{1}\PYG{p}{]}
+    \PYG{n}{needspace} \PYG{o}{=} \PYG{l+m+mi}{0}
+    \PYG{k}{if} \PYG{n}{re}\PYG{o}{.}\PYG{n}{fullmatch}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{} *(?:\PYGZsh{}|(?://)) ?[1\PYGZhy{}9][0\PYGZhy{}9]*}\PYG{l+s+se}{\PYGZbs{}\PYGZbs{}}\PYG{l+s+s1}{n\PYGZsq{}}\PYG{p}{,} \PYG{n}{firstLine}\PYG{p}{):}
+        \PYG{n}{content} \PYG{o}{=} \PYG{n}{content}\PYG{p}{[}\PYG{n+nb}{len}\PYG{p}{(}\PYG{n}{firstLine}\PYG{p}{):]}
+        \PYG{n}{needspace} \PYG{o}{=} \PYG{n+nb}{int}\PYG{p}{(}\PYG{n}{firstLine}\PYG{o}{.}\PYG{n}{strip}\PYG{p}{()[}\PYG{l+m+mi}{2}\PYG{p}{:]}\PYG{o}{.}\PYG{n}{strip}\PYG{p}{())}
+    \PYG{k}{for} \PYG{n}{i} \PYG{o+ow}{in} \PYG{n+nb}{range}\PYG{p}{(}\PYG{n+nb}{len}\PYG{p}{(}\PYG{n}{sections}\PYG{p}{)):}
+        \PYG{n}{needspace} \PYG{o}{+=} \PYG{n}{needspaceForDepth}\PYG{p}{(}\PYG{n}{depth} \PYG{o}{\PYGZhy{}} \PYG{n}{i}\PYG{p}{)}
+    \PYG{k}{print}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+se}{\PYGZbs{}\PYGZbs{}}\PYG{l+s+s1}{needspace\PYGZob{}\PYGZsq{}} \PYG{o}{+} \PYG{n+nb}{str}\PYG{p}{(}\PYG{n}{needspace}\PYG{p}{)} \PYG{o}{+} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+se}{\PYGZbs{}\PYGZbs{}}\PYG{l+s+s1}{baselineskip\PYGZcb{}\PYGZsq{}}\PYG{p}{)}
+    \PYG{k}{for} \PYG{n}{i} \PYG{o+ow}{in} \PYG{n+nb}{range}\PYG{p}{(}\PYG{n+nb}{len}\PYG{p}{(}\PYG{n}{sections}\PYG{p}{)):}
+        \PYG{n}{printSectionType}\PYG{p}{(}\PYG{n}{sections}\PYG{p}{[}\PYG{n}{i}\PYG{p}{],} \PYG{n}{depth} \PYG{o}{\PYGZhy{}}
+                         \PYG{n+nb}{len}\PYG{p}{(}\PYG{n}{sections}\PYG{p}{)} \PYG{o}{+} \PYG{n}{i} \PYG{o}{+} \PYG{l+m+mi}{1}\PYG{p}{,} \PYG{n}{i} \PYG{o}{==} \PYG{n+nb}{len}\PYG{p}{(}\PYG{n}{sections}\PYG{p}{)} \PYG{o}{\PYGZhy{}} \PYG{l+m+mi}{1}\PYG{p}{)}
+    \PYG{n}{content} \PYG{o}{=} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+se}{\PYGZbs{}\PYGZbs{}}\PYG{l+s+s1}{begin\PYGZob{}minted\PYGZcb{}\PYGZob{}\PYGZsq{}} \PYG{o}{+} \PYG{n}{extension} \PYG{o}{+} \PYG{l+s+s1}{\PYGZsq{}\PYGZcb{}}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s+s1}{\PYGZsq{}} \PYG{o}{+} \PYG{n}{content}
+    \PYG{n}{needspaces} \PYG{o}{=} \PYG{n+nb}{set}\PYG{p}{(}\PYG{n}{re}\PYG{o}{.}\PYG{n}{findall}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{} *(?:\PYGZsh{}|(?://)) ?[1\PYGZhy{}9][0\PYGZhy{}9]*}\PYG{l+s+se}{\PYGZbs{}\PYGZbs{}}\PYG{l+s+s1}{n\PYGZsq{}}\PYG{p}{,} \PYG{n}{content}\PYG{p}{))}
+    \PYG{k}{for} \PYG{n}{needspace} \PYG{o+ow}{in} \PYG{n}{needspaces}\PYG{p}{:}
+        \PYG{n}{news} \PYG{o}{=} \PYG{l+s+s1}{\PYGZsq{}\PYGZsq{}}\PYGZbs{}
+\end{Verbatim}

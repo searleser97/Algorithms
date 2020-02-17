@@ -1,0 +1,5 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+  \PYG{n}{ld} \PYG{n+nf}{norm}\PYG{p}{()} \PYG{k}{const} \PYG{p}{\PYGZob{}} \PYG{k}{return} \PYG{n}{sqrt}\PYG{p}{(}\PYG{n}{x} \PYG{o}{*} \PYG{n}{x} \PYG{o}{+} \PYG{n}{y} \PYG{o}{*} \PYG{n}{y}\PYG{p}{);} \PYG{p}{\PYGZcb{}}
+  \PYG{n}{Point} \PYG{n+nf}{perpendicularLeft}\PYG{p}{()} \PYG{p}{\PYGZob{}} \PYG{k}{return} \PYG{n}{Point}\PYG{p}{(}\PYG{o}{\PYGZhy{}}\PYG{n}{y}\PYG{p}{,} \PYG{n}{x}\PYG{p}{);} \PYG{p}{\PYGZcb{}}
+  \PYG{n}{Point} \PYG{n+nf}{perpendicularRight}\PYG{p}{()} \PYG{p}{\PYGZob{}} \PYG{k}{return} \PYG{n}{Point}\PYG{p}{(}\PYG{n}{y}\PYG{p}{,} \PYG{o}{\PYGZhy{}}\PYG{n}{x}\PYG{p}{);} \PYG{p}{\PYGZcb{}}
+\end{Verbatim}

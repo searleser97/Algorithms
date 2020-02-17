@@ -1,0 +1,7 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+  \PYG{c+c1}{// O(N)}
+  \PYG{n}{vector}\PYG{o}{\PYGZlt{}}\PYG{n}{string}\PYG{o}{\PYGZgt{}} \PYG{n}{getWordsByPrefix}\PYG{p}{(}\PYG{n}{string} \PYG{n}{prefix}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+    \PYG{n}{vector}\PYG{o}{\PYGZlt{}}\PYG{n}{string}\PYG{o}{\PYGZgt{}} \PYG{n}{words}\PYG{p}{;}
+    \PYG{n}{getWords}\PYG{p}{(}\PYG{n}{find}\PYG{p}{(}\PYG{n}{prefix}\PYG{p}{),} \PYG{n}{words}\PYG{p}{,} \PYG{n}{prefix}\PYG{p}{);}
+  \PYG{p}{\PYGZcb{}}
+\end{Verbatim}

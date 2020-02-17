@@ -20,7 +20,7 @@ li getRandomDivisor(li n) {
     a = f(a), b = f(f(b)), d = gcd(_abs(a - b), n);
   return d;
 }
-// 10
+// 9
 void getpf(li n, Map &pf) {
   if (n == 1LL) return;
   if (isPrime(n)) {
@@ -28,8 +28,7 @@ void getpf(li n, Map &pf) {
     return;
   }
   li divisor = getRandomDivisor(n);
-  getpf(divisor, pf);
-  getpf(n / divisor, pf);
+  getpf(divisor, pf), getpf(n / divisor, pf);
 }
 // 6
 // ~O(N^(1/4))

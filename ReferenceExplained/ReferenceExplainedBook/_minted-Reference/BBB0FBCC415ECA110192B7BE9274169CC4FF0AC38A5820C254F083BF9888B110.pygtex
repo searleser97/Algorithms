@@ -1,0 +1,12 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+  \PYG{c+c1}{// O(lg(A)) kth\PYGZhy{}Smallest element in [a, b]}
+  \PYG{k+kt}{int} \PYG{n+nf}{kth}\PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{a}\PYG{p}{,} \PYG{k+kt}{int} \PYG{n}{b}\PYG{p}{,} \PYG{k+kt}{int} \PYG{n}{k}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+    \PYG{k}{if} \PYG{p}{(}\PYG{n}{a} \PYG{o}{\PYGZgt{}} \PYG{n}{b}\PYG{p}{)} \PYG{k}{return} \PYG{l+m+mi}{0}\PYG{p}{;}
+    \PYG{k}{if} \PYG{p}{(}\PYG{n}{lo} \PYG{o}{==} \PYG{n}{hi}\PYG{p}{)} \PYG{k}{return} \PYG{n}{lo}\PYG{p}{;}
+    \PYG{k+kt}{int} \PYG{n}{lc} \PYG{o}{=} \PYG{n}{lcount}\PYG{p}{[}\PYG{n}{a} \PYG{o}{\PYGZhy{}} \PYG{l+m+mi}{1}\PYG{p}{],} \PYG{n}{rc} \PYG{o}{=} \PYG{n}{lcount}\PYG{p}{[}\PYG{n}{b}\PYG{p}{],}
+        \PYG{n}{inleft} \PYG{o}{=} \PYG{n}{rc} \PYG{o}{\PYGZhy{}} \PYG{n}{lc}\PYG{p}{;}
+    \PYG{k}{if} \PYG{p}{(}\PYG{n}{k} \PYG{o}{\PYGZgt{}} \PYG{n}{inleft}\PYG{p}{)}
+      \PYG{k}{return} \PYG{n}{r}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{kth}\PYG{p}{(}\PYG{n}{a} \PYG{o}{\PYGZhy{}} \PYG{n}{lc}\PYG{p}{,} \PYG{n}{b} \PYG{o}{\PYGZhy{}} \PYG{n}{rc}\PYG{p}{,} \PYG{n}{k} \PYG{o}{\PYGZhy{}} \PYG{n}{inleft}\PYG{p}{);}
+    \PYG{k}{return} \PYG{n}{l}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{kth}\PYG{p}{(}\PYG{n}{lc} \PYG{o}{+} \PYG{l+m+mi}{1}\PYG{p}{,} \PYG{n}{rc}\PYG{p}{,} \PYG{n}{k}\PYG{p}{);}
+  \PYG{p}{\PYGZcb{}}
+\end{Verbatim}

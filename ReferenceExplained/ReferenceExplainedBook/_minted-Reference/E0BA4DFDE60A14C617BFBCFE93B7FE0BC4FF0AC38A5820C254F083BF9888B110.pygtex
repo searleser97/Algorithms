@@ -1,0 +1,5 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n}{Point} \PYG{n+nf}{rotate}\PYG{p}{(}\PYG{n}{Point}\PYG{o}{\PYGZam{}} \PYG{n}{from}\PYG{p}{,} \PYG{n}{Point}\PYG{o}{\PYGZam{}} \PYG{n}{to}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

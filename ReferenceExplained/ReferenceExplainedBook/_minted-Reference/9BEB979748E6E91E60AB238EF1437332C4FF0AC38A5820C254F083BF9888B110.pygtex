@@ -1,0 +1,13 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+cp}{\PYGZsh{}include} \PYG{c+cpf}{\PYGZlt{}bits/stdc++.h\PYGZgt{}}
+\PYG{k}{using} \PYG{k}{namespace} \PYG{n}{std}\PYG{p}{;}
+
+\PYG{k+kt}{int} \PYG{n+nf}{main}\PYG{p}{()} \PYG{p}{\PYGZob{}}
+  \PYG{k+kt}{int} \PYG{n}{n} \PYG{o}{=} \PYG{n}{stoi}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}123\PYGZdq{}}\PYG{p}{)} \PYG{o}{+} \PYG{l+m+mi}{1}\PYG{p}{;}
+  \PYG{n}{cout} \PYG{o}{\PYGZlt{}\PYGZlt{}} \PYG{n}{n} \PYG{o}{\PYGZlt{}\PYGZlt{}} \PYG{n}{endl}\PYG{p}{;}  \PYG{c+c1}{// output: 124}
+  \PYG{c+c1}{// stoll for long long int}
+  \PYG{c+c1}{// stoull for unsigned long int}
+  \PYG{c+c1}{// stod for double}
+  \PYG{c+c1}{// stold for long double}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

@@ -1,0 +1,10 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+  \PYG{k+kt}{bool} \PYG{k}{operator}\PYG{o}{\PYGZgt{}}\PYG{p}{(}\PYG{k}{const} \PYG{n}{point} \PYG{o}{\PYGZam{}}\PYG{n}{p}\PYG{p}{)} \PYG{k}{const} \PYG{p}{\PYGZob{}}
+    \PYG{k}{if} \PYG{p}{(}\PYG{n}{eq}\PYG{p}{(}\PYG{n}{x}\PYG{p}{,} \PYG{n}{p}\PYG{p}{.}\PYG{n}{x}\PYG{p}{))} \PYG{k}{return} \PYG{n}{gr}\PYG{p}{(}\PYG{n}{y}\PYG{p}{,} \PYG{n}{p}\PYG{p}{.}\PYG{n}{y}\PYG{p}{);}
+    \PYG{k}{return} \PYG{n+nf}{gr}\PYG{p}{(}\PYG{n}{x}\PYG{p}{,} \PYG{n}{p}\PYG{p}{.}\PYG{n}{x}\PYG{p}{);}
+  \PYG{p}{\PYGZcb{}}
+
+  \PYG{n}{ld} \PYG{n}{norm}\PYG{p}{()} \PYG{p}{\PYGZob{}} \PYG{k}{return} \PYG{n}{sqrt}\PYG{p}{(}\PYG{n}{x} \PYG{o}{*} \PYG{n}{x} \PYG{o}{+} \PYG{n}{y} \PYG{o}{*} \PYG{n}{y}\PYG{p}{);} \PYG{p}{\PYGZcb{}}
+
+  \PYG{n}{ld} \PYG{n}{dot}\PYG{p}{(}\PYG{k}{const} \PYG{n}{Point} \PYG{o}{\PYGZam{}}\PYG{n}{p}\PYG{p}{)} \PYG{p}{\PYGZob{}} \PYG{k}{return} \PYG{n}{x} \PYG{o}{*} \PYG{n}{p}\PYG{p}{.}\PYG{n}{x} \PYG{o}{+} \PYG{n}{y} \PYG{o}{*} \PYG{n}{p}\PYG{p}{.}\PYG{n}{y}\PYG{p}{;} \PYG{p}{\PYGZcb{}}
+\end{Verbatim}

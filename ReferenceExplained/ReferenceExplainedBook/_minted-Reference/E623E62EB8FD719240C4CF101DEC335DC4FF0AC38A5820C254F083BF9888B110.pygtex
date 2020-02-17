@@ -1,0 +1,6 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+  \PYG{n}{SegmentTree}\PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{n}\PYG{p}{,} \PYG{n}{T} \PYG{n}{val}\PYG{p}{)}
+      \PYG{o}{:} \PYG{n}{st}\PYG{p}{(}\PYG{l+m+mi}{2} \PYG{o}{*} \PYG{n}{n}\PYG{p}{,} \PYG{n}{val}\PYG{p}{),} \PYG{n}{d}\PYG{p}{(}\PYG{n}{n}\PYG{p}{),} \PYG{n}{u}\PYG{p}{(}\PYG{n}{n}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+    \PYG{n}{H} \PYG{o}{=} \PYG{k}{sizeof}\PYG{p}{(}\PYG{k+kt}{int}\PYG{p}{)} \PYG{o}{*} \PYG{l+m+mi}{8} \PYG{o}{\PYGZhy{}} \PYG{n}{\PYGZus{}\PYGZus{}builtin\PYGZus{}clz}\PYG{p}{(}\PYG{n}{N} \PYG{o}{=} \PYG{n}{n}\PYG{p}{);}
+  \PYG{p}{\PYGZcb{}}
+\end{Verbatim}

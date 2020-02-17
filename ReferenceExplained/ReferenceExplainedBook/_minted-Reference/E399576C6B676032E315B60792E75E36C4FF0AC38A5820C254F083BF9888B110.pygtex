@@ -1,0 +1,10 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+  \PYG{n}{SegmentTree}\PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{n}\PYG{p}{)} \PYG{o}{:} \PYG{n}{st}\PYG{p}{(}\PYG{l+m+mi}{2} \PYG{o}{*} \PYG{n}{n}\PYG{p}{,} \PYG{n}{neutro}\PYG{p}{),} \PYG{n}{N}\PYG{p}{(}\PYG{n}{n}\PYG{p}{)} \PYG{p}{\PYGZob{}\PYGZcb{}}
+
+  \PYG{k+kr}{inline} \PYG{n}{T} \PYG{n}{F}\PYG{p}{(}\PYG{n}{T} \PYG{n}{a}\PYG{p}{,} \PYG{n}{T} \PYG{n}{b}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+    \PYG{k}{return} \PYG{n}{a} \PYG{o}{+} \PYG{n}{b}\PYG{p}{;}
+    \PYG{c+c1}{// return \PYGZus{}\PYGZus{}gcd(a, b);}
+    \PYG{c+c1}{// return a * b;}
+    \PYG{c+c1}{// return min(a, b);}
+  \PYG{p}{\PYGZcb{}}
+\end{Verbatim}

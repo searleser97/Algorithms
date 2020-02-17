@@ -1,0 +1,15 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+cp}{\PYGZsh{}include} \PYG{c+cpf}{\PYGZdq{}../Data Structures/Strings/Suffix Automaton.cpp\PYGZdq{}}
+
+\PYG{k+kt}{int} \PYG{n+nf}{distinctSubstrCount}\PYG{p}{(}\PYG{k}{const} \PYG{n}{string}\PYG{o}{\PYGZam{}} \PYG{n}{s}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+  \PYG{n}{SuffixAutomaton} \PYG{n}{sa}\PYG{p}{(}\PYG{n}{s}\PYG{p}{);}
+  \PYG{n}{vector}\PYG{o}{\PYGZlt{}}\PYG{k+kt}{int}\PYG{o}{\PYGZgt{}} \PYG{n}{dp}\PYG{p}{(}\PYG{n}{sa}\PYG{p}{.}\PYG{n}{size}\PYG{p}{);}
+  \PYG{n}{function}\PYG{o}{\PYGZlt{}}\PYG{k+kt}{int}\PYG{p}{(}\PYG{k+kt}{int}\PYG{p}{)}\PYG{o}{\PYGZgt{}} \PYG{n}{dfs} \PYG{o}{=} \PYG{p}{[}\PYG{o}{\PYGZam{}}\PYG{p}{](}\PYG{k+kt}{int} \PYG{n}{cur}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+    \PYG{k}{if} \PYG{p}{(}\PYG{n}{dp}\PYG{p}{[}\PYG{n}{cur}\PYG{p}{])} \PYG{k}{return} \PYG{n}{dp}\PYG{p}{[}\PYG{n}{cur}\PYG{p}{];}
+    \PYG{k}{for} \PYG{p}{(}\PYG{k}{auto}\PYG{o}{\PYGZam{}} \PYG{n+nl}{tran} \PYG{p}{:} \PYG{n}{sa}\PYG{p}{.}\PYG{n}{st}\PYG{p}{[}\PYG{n}{cur}\PYG{p}{].}\PYG{n}{next}\PYG{p}{)}
+      \PYG{n}{dp}\PYG{p}{[}\PYG{n}{cur}\PYG{p}{]} \PYG{o}{+=} \PYG{n}{dfs}\PYG{p}{(}\PYG{n}{tran}\PYG{p}{.}\PYG{n}{second}\PYG{p}{);}
+    \PYG{k}{return} \PYG{o}{++}\PYG{n}{dp}\PYG{p}{[}\PYG{n}{cur}\PYG{p}{];}
+  \PYG{p}{\PYGZcb{};}
+  \PYG{k}{return} \PYG{n}{dfs}\PYG{p}{(}\PYG{l+m+mi}{0}\PYG{p}{)} \PYG{o}{\PYGZhy{}} \PYG{l+m+mi}{1}\PYG{p}{;}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

@@ -1,0 +1,19 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+  \PYG{n}{dfs}\PYG{p}{(}\PYG{l+m+mi}{0}\PYG{p}{);}
+  \PYG{n}{vector}\PYG{o}{\PYGZlt{}}\PYG{n}{string}\PYG{o}{\PYGZgt{}} \PYG{n}{ans}\PYG{p}{;}
+  \PYG{k}{for} \PYG{p}{(}\PYG{k}{auto} \PYG{n+nl}{k} \PYG{p}{:} \PYG{n}{ks}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+    \PYG{k+kt}{int} \PYG{n}{u} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{;}
+    \PYG{n}{string} \PYG{n}{ss}\PYG{p}{;}
+    \PYG{k}{while} \PYG{p}{(}\PYG{n}{k}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+      \PYG{k}{for} \PYG{p}{(}\PYG{k}{auto}\PYG{o}{\PYGZam{}} \PYG{n+nl}{v} \PYG{p}{:} \PYG{n}{sa}\PYG{p}{.}\PYG{n}{next}\PYG{p}{[}\PYG{n}{u}\PYG{p}{])}
+        \PYG{k}{if} \PYG{p}{(}\PYG{n}{k} \PYG{o}{\PYGZlt{}=} \PYG{n}{dp}\PYG{p}{[}\PYG{n}{v}\PYG{p}{.}\PYG{n}{second}\PYG{p}{])} \PYG{p}{\PYGZob{}}
+          \PYG{n}{ss} \PYG{o}{+=} \PYG{n}{v}\PYG{p}{.}\PYG{n}{first}\PYG{p}{,} \PYG{n}{u} \PYG{o}{=} \PYG{n}{v}\PYG{p}{.}\PYG{n}{second}\PYG{p}{,} \PYG{n}{k}\PYG{o}{\PYGZhy{}\PYGZhy{}}\PYG{p}{;}
+          \PYG{k}{break}\PYG{p}{;}
+        \PYG{p}{\PYGZcb{}} \PYG{k}{else}
+          \PYG{n}{k} \PYG{o}{\PYGZhy{}=} \PYG{n}{dp}\PYG{p}{[}\PYG{n}{v}\PYG{p}{.}\PYG{n}{second}\PYG{p}{];}
+    \PYG{p}{\PYGZcb{}}
+    \PYG{n}{ans}\PYG{p}{.}\PYG{n}{push\PYGZus{}back}\PYG{p}{(}\PYG{n}{ss}\PYG{p}{);}
+  \PYG{p}{\PYGZcb{}}
+  \PYG{k}{return} \PYG{n}{ans}\PYG{p}{;}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

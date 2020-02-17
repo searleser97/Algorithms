@@ -1,0 +1,9 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k+kt}{int} \PYG{n+nf}{Map}\PYG{p}{(}\PYG{n}{Val} \PYG{n}{val}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+  \PYG{k}{if} \PYG{p}{(}\PYG{n}{intForVal}\PYG{p}{.}\PYG{n}{count}\PYG{p}{(}\PYG{n}{val}\PYG{p}{))} \PYG{k}{return} \PYG{n}{intForVal}\PYG{p}{[}\PYG{n}{val}\PYG{p}{];}
+  \PYG{n}{valForInt}\PYG{p}{[}\PYG{n}{mapId}\PYG{p}{]} \PYG{o}{=} \PYG{n}{val}\PYG{p}{;}
+  \PYG{k}{return} \PYG{n}{intForVal}\PYG{p}{[}\PYG{n}{val}\PYG{p}{]} \PYG{o}{=} \PYG{n}{mapId}\PYG{o}{++}\PYG{p}{;}
+\PYG{p}{\PYGZcb{}}
+
+\PYG{n}{Val} \PYG{n+nf}{IMap}\PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{n}\PYG{p}{)} \PYG{p}{\PYGZob{}} \PYG{k}{return} \PYG{n}{valForInt}\PYG{p}{[}\PYG{n}{n}\PYG{p}{];} \PYG{p}{\PYGZcb{}}
+\end{Verbatim}

@@ -1,7 +1,7 @@
 // 6
 #include "GCD.cpp"
 
-int lcm(lli a, lli b) {
-  int c = gcd(a, b);
-  return c ? a / c * b : 0;
+int lcm(li a, li b) {
+  int d = gcd(a, b);
+  return d ? a / d * b : 0;
 }

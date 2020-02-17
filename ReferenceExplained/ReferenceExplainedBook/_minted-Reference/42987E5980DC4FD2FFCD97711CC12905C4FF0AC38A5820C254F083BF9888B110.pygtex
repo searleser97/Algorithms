@@ -1,0 +1,9 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{typedef} \PYG{k+kt}{int} \PYG{n}{T}\PYG{p}{;}
+
+\PYG{n}{T} \PYG{n+nf}{mod}\PYG{p}{(}\PYG{n}{T} \PYG{n}{a}\PYG{p}{,} \PYG{n}{T} \PYG{n}{b}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+  \PYG{k}{if} \PYG{p}{(}\PYG{n}{a} \PYG{o}{\PYGZlt{}} \PYG{l+m+mi}{0} \PYG{o}{\PYGZam{}\PYGZam{}} \PYG{n}{b} \PYG{o}{\PYGZgt{}=} \PYG{l+m+mi}{0}\PYG{p}{)} \PYG{k}{return} \PYG{n}{a} \PYG{o}{\PYGZpc{}} \PYG{n}{b} \PYG{o}{+} \PYG{n}{b}\PYG{p}{;}
+  \PYG{k}{if} \PYG{p}{(}\PYG{n}{a} \PYG{o}{\PYGZgt{}=} \PYG{l+m+mi}{0} \PYG{o}{\PYGZam{}\PYGZam{}} \PYG{n}{b} \PYG{o}{\PYGZlt{}} \PYG{l+m+mi}{0}\PYG{p}{)} \PYG{k}{return} \PYG{o}{\PYGZhy{}}\PYG{p}{(}\PYG{n}{a} \PYG{o}{\PYGZpc{}} \PYG{n}{b} \PYG{o}{+} \PYG{n}{b}\PYG{p}{);}
+  \PYG{k}{return} \PYG{n}{a} \PYG{o}{\PYGZpc{}} \PYG{n}{b}\PYG{p}{;}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

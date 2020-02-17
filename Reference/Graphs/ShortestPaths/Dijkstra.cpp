@@ -21,7 +21,7 @@ void addEdge(int u, int v, T w, bool isDirected = 0) {
 // 16
 // ~ O(E * lg(V))
 vector<T> dijkstra(int s) {
-  vector<T> dist(adj.size(), inf);
+  vector<long long int> dist(adj.size(), inf);
   priority_queue<DistNode> q;
   q.push({0, s}), dist[s] = 0;
   while (q.size()) {

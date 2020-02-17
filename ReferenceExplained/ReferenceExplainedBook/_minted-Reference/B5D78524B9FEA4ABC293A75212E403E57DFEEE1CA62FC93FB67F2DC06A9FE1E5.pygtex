@@ -1,0 +1,86 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{x}{from os import listdir}
+\PYG{x}{from os.path import isfile, isdir, join}
+\PYG{x}{import re}
+
+\PYG{x}{PATH = \PYGZsq{}/home/san/Algorithms/ReferenceExplained\PYGZsq{}}
+\PYG{x}{excluded = set([\PYGZsq{}ReferenceBookExplained\PYGZsq{}, \PYGZsq{}.vscode\PYGZsq{}, \PYGZsq{}\PYGZus{}\PYGZus{}pycache\PYGZus{}\PYGZus{}\PYGZsq{}])}
+\PYG{x}{numberOfColumns = 2}
+
+
+\PYG{x}{def printSectionType(sectionName, depth, isFile):}
+\PYG{x}{    vspace = 0}
+\PYG{x}{    style = \PYGZsq{}\PYGZbs{}\PYGZbs{}bfseries\PYGZbs{}\PYGZbs{}sffamily\PYGZbs{}\PYGZbs{}centering\PYGZsq{}}
+\PYG{x}{    if depth == 1:}
+\PYG{x}{        sectionType = \PYGZsq{}section\PYGZsq{}}
+\PYG{x}{        style += \PYGZsq{}\PYGZbs{}\PYGZbs{}Huge\PYGZsq{}}
+\PYG{x}{        vspace = 2}
+\PYG{x}{    elif depth == 2:}
+\PYG{x}{        sectionType = \PYGZsq{}subsection\PYGZsq{}}
+\PYG{x}{        style += \PYGZsq{}\PYGZbs{}\PYGZbs{}LARGE\PYGZsq{}}
+\PYG{x}{        vspace = 1}
+\PYG{x}{    elif depth == 3:}
+\PYG{x}{        sectionType = \PYGZsq{}subsubsection\PYGZsq{}}
+\PYG{x}{        style += \PYGZsq{}\PYGZbs{}\PYGZbs{}Large\PYGZsq{}}
+\PYG{x}{        vspace = 1}
+\PYG{x}{    else:}
+\PYG{x}{        sectionType = \PYGZsq{}paragraph\PYGZsq{}}
+\PYG{x}{        style += \PYGZsq{}\PYGZbs{}\PYGZbs{}large\PYGZsq{}}
+\PYG{x}{        vspace = 1}
+\PYG{x}{    if isFile:}
+\PYG{x}{        sectionName = sectionName[:sectionName.rfind(\PYGZsq{}.\PYGZsq{})]}
+\PYG{x}{        style = \PYGZsq{}\PYGZbs{}\PYGZbs{}large\PYGZbs{}\PYGZbs{}bfseries\PYGZbs{}\PYGZbs{}sffamily\PYGZbs{}\PYGZbs{}underline\PYGZsq{}}
+\PYG{x}{        vspace = 0}
+\PYG{x}{    print(\PYGZsq{}\PYGZbs{}\PYGZbs{}\PYGZsq{} + sectionType + \PYGZsq{}font\PYGZob{}\PYGZsq{} + style + \PYGZsq{}\PYGZcb{}\PYGZsq{})}
+\PYG{x}{    if vspace:}
+\PYG{x}{        print(\PYGZsq{}\PYGZbs{}\PYGZbs{}vspace\PYGZob{}\PYGZsq{} + str(vspace \PYGZhy{} 1) + \PYGZsq{}em\PYGZcb{}\PYGZsq{})}
+\PYG{x}{    print(\PYGZsq{}\PYGZbs{}\PYGZbs{}\PYGZsq{} + sectionType + \PYGZsq{}*\PYGZob{}\PYGZsq{} + sectionName + \PYGZsq{}\PYGZcb{}\PYGZsq{})}
+\PYG{x}{    if depth == 1:}
+\PYG{x}{        print(\PYGZsq{}\PYGZbs{}\PYGZbs{}markboth\PYGZob{}\PYGZsq{} + sectionName.upper() + \PYGZsq{}\PYGZcb{}\PYGZob{}\PYGZcb{}\PYGZsq{})}
+\PYG{x}{    print(\PYGZsq{}\PYGZbs{}\PYGZbs{}addcontentsline\PYGZob{}toc\PYGZcb{}\PYGZob{}\PYGZsq{} + sectionType + \PYGZsq{}\PYGZcb{}\PYGZob{}\PYGZsq{} + sectionName + \PYGZsq{}\PYGZcb{}\PYGZsq{})}
+\PYG{x}{    if vspace:}
+\PYG{x}{        print(\PYGZsq{}\PYGZbs{}\PYGZbs{}vspace\PYGZob{}\PYGZsq{} + str(vspace + 1) + \PYGZsq{}em\PYGZcb{}\PYGZsq{})}
+
+
+\PYG{x}{def needspaceForDepth(depth):}
+\PYG{x}{    if depth == 1:}
+\PYG{x}{        needspace = 4}
+\PYG{x}{    elif depth == 2:}
+\PYG{x}{        needspace = 3}
+\PYG{x}{    elif depth == 3:}
+\PYG{x}{        needspace = 2}
+\PYG{x}{    else:}
+\PYG{x}{        needspace = 1}
+\PYG{x}{    return needspace}
+
+
+\PYG{x}{def printFile(path, depth, sections):}
+\PYG{x}{    extension = sections[\PYGZhy{}1][sections[\PYGZhy{}1].rfind(\PYGZsq{}.\PYGZsq{}) + 1:]}
+\PYG{x}{    if extension == \PYGZsq{}tex\PYGZsq{}:}
+\PYG{x}{        print(\PYGZsq{}\PYGZbs{}\PYGZbs{}end\PYGZob{}multicols*\PYGZcb{}\PYGZsq{})}
+\PYG{x}{        for i in range(len(sections)):}
+\PYG{x}{            printSectionType(sections[i], depth \PYGZhy{}}
+\PYG{x}{                             len(sections) + i + 1, i == len(sections) \PYGZhy{} 1)}
+\PYG{x}{        print(\PYGZsq{}\PYGZbs{}\PYGZbs{}input\PYGZob{}\PYGZdq{}\PYGZsq{} + path + \PYGZsq{}\PYGZdq{}\PYGZcb{}\PYGZsq{})}
+\PYG{x}{        print(\PYGZsq{}\PYGZbs{}\PYGZbs{}begin\PYGZob{}multicols*\PYGZcb{}\PYGZob{}\PYGZsq{} + str(numberOfColumns) + \PYGZsq{}\PYGZcb{}\PYGZsq{})}
+\PYG{x}{        return}
+\PYG{x}{    if extension == \PYGZsq{}h\PYGZsq{}:}
+\PYG{x}{        extension = \PYGZsq{}cpp\PYGZsq{}}
+\PYG{x}{    with open(path, \PYGZsq{}r\PYGZsq{}) as f:}
+\PYG{x}{        content = f.read()}
+\PYG{x}{    firstLine = content[:content.find(\PYGZsq{}\PYGZbs{}n\PYGZsq{}) + 1]}
+\PYG{x}{    needspace = 0}
+\PYG{x}{    if re.fullmatch(\PYGZsq{} *(?:\PYGZsh{}|(?://)) ?[1\PYGZhy{}9][0\PYGZhy{}9]*\PYGZbs{}\PYGZbs{}n\PYGZsq{}, firstLine):}
+\PYG{x}{        content = content[len(firstLine):]}
+\PYG{x}{        needspace = int(firstLine.strip()[2:].strip())}
+\PYG{x}{    for i in range(len(sections)):}
+\PYG{x}{        needspace += needspaceForDepth(depth \PYGZhy{} i)}
+\PYG{x}{    print(\PYGZsq{}\PYGZbs{}\PYGZbs{}needspace\PYGZob{}\PYGZsq{} + str(needspace) + \PYGZsq{}\PYGZbs{}\PYGZbs{}baselineskip\PYGZcb{}\PYGZsq{})}
+\PYG{x}{    for i in range(len(sections)):}
+\PYG{x}{        printSectionType(sections[i], depth \PYGZhy{}}
+\PYG{x}{                         len(sections) + i + 1, i == len(sections) \PYGZhy{} 1)}
+\PYG{x}{    content = \PYGZsq{}\PYGZbs{}\PYGZbs{}begin\PYGZob{}minted\PYGZcb{}\PYGZob{}\PYGZsq{} + extension + \PYGZsq{}\PYGZcb{}\PYGZbs{}n\PYGZsq{} + content}
+\PYG{x}{    needspaces = set(re.findall(\PYGZsq{} *(?:\PYGZsh{}|(?://)) ?[1\PYGZhy{}9][0\PYGZhy{}9]*\PYGZbs{}\PYGZbs{}n\PYGZsq{}, content))}
+\PYG{x}{    for needspace in needspaces:}
+\PYG{x}{        news = \PYGZsq{}\PYGZsq{}\PYGZbs{}}
+\end{Verbatim}

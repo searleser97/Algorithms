@@ -1,0 +1,5 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{struct} \PYG{n}{UnionFind} \PYG{p}{\PYGZob{}}
+  \PYG{k+kt}{int} \PYG{n}{n}\PYG{p}{,} \PYG{n}{currVer}\PYG{p}{;}
+  \PYG{n}{vector}\PYG{o}{\PYGZlt{}}\PYG{k+kt}{int}\PYG{o}{\PYGZgt{}} \PYG{n}{dad}\PYG{p}{,} \PYG{n}{size}\PYG{p}{,} \PYG{n}{ver}\PYG{p}{;}
+\end{Verbatim}

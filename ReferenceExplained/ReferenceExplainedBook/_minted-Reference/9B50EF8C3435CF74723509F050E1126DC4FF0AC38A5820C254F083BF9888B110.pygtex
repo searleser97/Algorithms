@@ -1,0 +1,19 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+cm}{/****************************************************}
+\PYG{c+cm}{https://searleser97.gitlab.io/algorithms/template.cpp}
+\PYG{c+cm}{****************************************************/}
+
+\PYG{c+cp}{\PYGZsh{}include} \PYG{c+cpf}{\PYGZlt{}bits/stdc++.h\PYGZgt{}}
+\PYG{k}{using} \PYG{k}{namespace} \PYG{n}{std}\PYG{p}{;}
+\PYG{c+cp}{\PYGZsh{}define endl \PYGZsq{}\PYGZbs{}n\PYGZsq{}}
+\PYG{c+cp}{\PYGZsh{}define fos(\PYGZus{}, x, n, s) for(int \PYGZus{} = x; \PYGZus{} \PYGZlt{} n; \PYGZus{} += s)}
+\PYG{c+cp}{\PYGZsh{}define forn(\PYGZus{}, x, n) fos (\PYGZus{}, x, n, 1)}
+\PYG{c+cp}{\PYGZsh{}define rep(\PYGZus{}, n) forn(\PYGZus{}, 0, n)}
+\PYG{c+cp}{\PYGZsh{}define fi first}
+\PYG{c+cp}{\PYGZsh{}define se second}
+\PYG{c+cp}{\PYGZsh{}define pb push\PYGZus{}back}
+\PYG{c+cp}{\PYGZsh{}define pairii pair\PYGZlt{}int, int\PYGZgt{}}
+\PYG{k}{typedef} \PYG{n}{\PYGZus{}\PYGZus{}int128\PYGZus{}t} \PYG{n}{lli}\PYG{p}{;}
+\PYG{k}{typedef} \PYG{k+kt}{long} \PYG{k+kt}{long} \PYG{k+kt}{int} \PYG{n}{li}\PYG{p}{;}
+\PYG{k}{typedef} \PYG{k+kt}{long} \PYG{k+kt}{double} \PYG{n}{ld}\PYG{p}{;}
+\end{Verbatim}

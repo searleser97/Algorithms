@@ -1,0 +1,11 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{typedef} \PYG{k+kt}{int} \PYG{n}{T}\PYG{p}{;}
+
+\PYG{k}{struct} \PYG{n}{pairhash} \PYG{p}{\PYGZob{}}
+  \PYG{k}{template} \PYG{o}{\PYGZlt{}}\PYG{k}{class} \PYG{n+nc}{T1}\PYG{p}{,} \PYG{k}{class} \PYG{n+nc}{T2}\PYG{o}{\PYGZgt{}}
+  \PYG{k+kt}{size\PYGZus{}t} \PYG{k}{operator}\PYG{p}{()(}\PYG{k}{const} \PYG{n}{pair}\PYG{o}{\PYGZlt{}}\PYG{n}{T1}\PYG{p}{,} \PYG{n}{T2}\PYG{o}{\PYGZgt{}} \PYG{o}{\PYGZam{}}\PYG{n}{p}\PYG{p}{)} \PYG{k}{const} \PYG{p}{\PYGZob{}}
+    \PYG{k}{return} \PYG{n}{hash}\PYG{o}{\PYGZlt{}}\PYG{n}{T1}\PYG{o}{\PYGZgt{}}\PYG{p}{\PYGZob{}\PYGZcb{}(}\PYG{n}{p}\PYG{p}{.}\PYG{n}{first}\PYG{p}{)} \PYG{o}{\PYGZca{}}
+           \PYG{p}{(}\PYG{n}{hash}\PYG{o}{\PYGZlt{}}\PYG{n}{T2}\PYG{o}{\PYGZgt{}}\PYG{p}{\PYGZob{}\PYGZcb{}(}\PYG{n}{p}\PYG{p}{.}\PYG{n}{second}\PYG{p}{)} \PYG{o}{\PYGZlt{}\PYGZlt{}} \PYG{l+m+mi}{32}\PYG{p}{);}
+  \PYG{p}{\PYGZcb{}}
+\PYG{p}{\PYGZcb{};}
+\end{Verbatim}

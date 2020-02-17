@@ -20,12 +20,12 @@ void addEdge(int u, int v, T w, bool isDirected = 0) {
 // 17
 // O(E)
 vector<T> bfs(int s) {
-  vector<T> dist(adj.size(), inf);
+  vector<long long int> dist(adj.size(), inf);
   dist[s] = 0;
   deque<int> q;
   q.push_front(s);
   while (q.size()) {
-    int u = q.front();
+    int u = q.front(); q.pop_front();
     for (auto& v : adj[u]) {
       T d = dist[u] + weight[u][v];
       if (d < dist[v])

@@ -1,0 +1,12 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+cp}{\PYGZsh{}include} \PYG{c+cpf}{\PYGZlt{}bits/stdc++.h\PYGZgt{}}
+\PYG{k}{using} \PYG{k}{namespace} \PYG{n}{std}\PYG{p}{;}
+
+\PYG{k+kt}{int} \PYG{n+nf}{main}\PYG{p}{()} \PYG{p}{\PYGZob{}}
+  \PYG{c+c1}{// to\PYGZus{}string method converts any type of number}
+  \PYG{c+c1}{// (int, double, long long int, ...) to string}
+  \PYG{n}{string} \PYG{n}{str} \PYG{o}{=} \PYG{l+s}{\PYGZdq{}str+\PYGZdq{}} \PYG{o}{+} \PYG{n}{to\PYGZus{}string}\PYG{p}{(}\PYG{l+m+mi}{123} \PYG{o}{+} \PYG{l+m+mi}{1}\PYG{p}{);}
+  \PYG{n}{cout} \PYG{o}{\PYGZlt{}\PYGZlt{}} \PYG{n}{str} \PYG{o}{\PYGZlt{}\PYGZlt{}} \PYG{n}{endl}\PYG{p}{;}  \PYG{c+c1}{// output: str+124}
+  \PYG{k}{return} \PYG{l+m+mi}{0}\PYG{p}{;}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

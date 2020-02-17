@@ -1,0 +1,11 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{// O(N * ks.size)}
+\PYG{n}{vector}\PYG{o}{\PYGZlt{}}\PYG{n}{string}\PYG{o}{\PYGZgt{}} \PYG{n}{kthSubstr}\PYG{p}{(}\PYG{n}{string}\PYG{o}{\PYGZam{}} \PYG{n}{s}\PYG{p}{,} \PYG{n}{vector}\PYG{o}{\PYGZlt{}}\PYG{k+kt}{int}\PYG{o}{\PYGZgt{}\PYGZam{}} \PYG{n}{ks}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+  \PYG{n}{SuffixAutomaton} \PYG{n}{sa}\PYG{p}{(}\PYG{n}{s}\PYG{p}{);}
+  \PYG{n}{vector}\PYG{o}{\PYGZlt{}}\PYG{k+kt}{int}\PYG{o}{\PYGZgt{}} \PYG{n}{dp}\PYG{p}{(}\PYG{n}{sa}\PYG{p}{.}\PYG{n}{size}\PYG{p}{);}
+  \PYG{n}{function}\PYG{o}{\PYGZlt{}}\PYG{k+kt}{int}\PYG{p}{(}\PYG{k+kt}{int}\PYG{p}{)}\PYG{o}{\PYGZgt{}} \PYG{n}{dfs} \PYG{o}{=} \PYG{p}{[}\PYG{o}{\PYGZam{}}\PYG{p}{](}\PYG{k+kt}{int} \PYG{n}{u}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+    \PYG{k}{if} \PYG{p}{(}\PYG{n}{dp}\PYG{p}{[}\PYG{n}{u}\PYG{p}{])} \PYG{k}{return} \PYG{n}{dp}\PYG{p}{[}\PYG{n}{u}\PYG{p}{];}
+    \PYG{k}{for} \PYG{p}{(}\PYG{k}{auto}\PYG{o}{\PYGZam{}} \PYG{n+nl}{v} \PYG{p}{:} \PYG{n}{sa}\PYG{p}{.}\PYG{n}{next}\PYG{p}{[}\PYG{n}{u}\PYG{p}{])} \PYG{n}{dp}\PYG{p}{[}\PYG{n}{u}\PYG{p}{]} \PYG{o}{+=} \PYG{n}{dfs}\PYG{p}{(}\PYG{n}{v}\PYG{p}{.}\PYG{n}{second}\PYG{p}{);}
+    \PYG{k}{return} \PYG{o}{++}\PYG{n}{dp}\PYG{p}{[}\PYG{n}{u}\PYG{p}{];}
+  \PYG{p}{\PYGZcb{};}
+\end{Verbatim}

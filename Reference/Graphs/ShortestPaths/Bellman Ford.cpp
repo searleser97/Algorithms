@@ -21,7 +21,7 @@ void addEdge(int u, int v, T w, bool isDirected = 0) {
 // 15
 // O(V * E)
 vector<T> bellmanFord(int s) {
-  vector<T> dist(adj.size(), inf);
+  vector<long long int> dist(adj.size(), inf);
   dist[s] = 0;
   for (int i = 1; i <= adj.size(); i++)
     for (int u = 0; u < adj.size(); u++)

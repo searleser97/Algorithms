@@ -1,0 +1,18 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+cp}{\PYGZsh{}include} \PYG{c+cpf}{\PYGZlt{}bits/stdc++.h\PYGZgt{}}
+\PYG{k}{using} \PYG{k}{namespace} \PYG{n}{std}\PYG{p}{;}
+
+\PYG{c+cp}{\PYGZsh{}include} \PYG{c+cpf}{\PYGZdq{}../Data Structures/Strings/Suffix Automaton.cpp\PYGZdq{}}
+
+\PYG{n}{string} \PYG{n+nf}{smallestCyclicShift}\PYG{p}{(}\PYG{n}{string}\PYG{o}{\PYGZam{}} \PYG{n}{s}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+  \PYG{n}{SuffixAutomaton} \PYG{n}{sa}\PYG{p}{(}\PYG{n}{s} \PYG{o}{+} \PYG{n}{s}\PYG{p}{);}
+  \PYG{k+kt}{int} \PYG{n}{k} \PYG{o}{=} \PYG{n}{s}\PYG{p}{.}\PYG{n}{size}\PYG{p}{(),} \PYG{n}{u} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{;}
+  \PYG{n}{string} \PYG{n}{ans}\PYG{p}{;}
+  \PYG{k}{while} \PYG{p}{(}\PYG{n}{k}\PYG{p}{)}
+    \PYG{k}{for} \PYG{p}{(}\PYG{k}{auto}\PYG{o}{\PYGZam{}} \PYG{n+nl}{v} \PYG{p}{:} \PYG{n}{sa}\PYG{p}{.}\PYG{n}{next}\PYG{p}{[}\PYG{n}{u}\PYG{p}{])} \PYG{p}{\PYGZob{}}
+      \PYG{n}{ans} \PYG{o}{+=} \PYG{n}{v}\PYG{p}{.}\PYG{n}{first}\PYG{p}{,} \PYG{n}{u} \PYG{o}{=} \PYG{n}{v}\PYG{p}{.}\PYG{n}{second}\PYG{p}{,} \PYG{n}{k}\PYG{o}{\PYGZhy{}\PYGZhy{}}\PYG{p}{;}
+      \PYG{k}{break}\PYG{p}{;}
+    \PYG{p}{\PYGZcb{}}
+  \PYG{k}{return} \PYG{n}{ans}\PYG{p}{;}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

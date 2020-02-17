@@ -1,0 +1,9 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{typedef} \PYG{k+kt}{long} \PYG{k+kt}{double} \PYG{n}{ld}\PYG{p}{;}
+\PYG{n}{ld} \PYG{n}{pi} \PYG{o}{=} \PYG{n}{acos}\PYG{p}{(}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{);}
+
+\PYG{k}{struct} \PYG{n}{Point} \PYG{p}{\PYGZob{}}
+  \PYG{n}{ld} \PYG{n}{x}\PYG{p}{,} \PYG{n}{y}\PYG{p}{;}
+  \PYG{n}{Point}\PYG{p}{()} \PYG{o}{:} \PYG{n}{x}\PYG{p}{(}\PYG{l+m+mi}{0}\PYG{p}{),} \PYG{n}{y}\PYG{p}{(}\PYG{l+m+mi}{0}\PYG{p}{)} \PYG{p}{\PYGZob{}\PYGZcb{}}
+  \PYG{n}{Point}\PYG{p}{(}\PYG{n}{ld} \PYG{n}{x}\PYG{p}{,} \PYG{n}{ld} \PYG{n}{y}\PYG{p}{)} \PYG{o}{:} \PYG{n}{x}\PYG{p}{(}\PYG{n}{x}\PYG{p}{),} \PYG{n}{y}\PYG{p}{(}\PYG{n}{y}\PYG{p}{)} \PYG{p}{\PYGZob{}\PYGZcb{}}
+\end{Verbatim}

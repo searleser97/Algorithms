@@ -1,0 +1,17 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{// if inv = 0 returns a vector with 3 values where:}
+\PYG{c+c1}{// [0] = position where e is found}
+\PYG{c+c1}{// [1] = position of the greatest element \PYGZlt{}= e}
+\PYG{c+c1}{// [1] = l \PYGZhy{} 1 if e \PYGZlt{} v[l]}
+\PYG{c+c1}{// [2] = position of the smallest element \PYGZgt{}= e}
+\PYG{c+c1}{// [2] = h + 1 if e \PYGZgt{} v[h]}
+\PYG{c+c1}{// if inv = 1 returns a vector with 3 values where:}
+\PYG{c+c1}{// [0] = position where e is found}
+\PYG{c+c1}{// [1] = position of the smallest element \PYGZgt{}= e}
+\PYG{c+c1}{// [1] = l \PYGZhy{} 1 if e \PYGZgt{} v[l]}
+\PYG{c+c1}{// [2] = position of the greatest element \PYGZlt{}= e}
+\PYG{c+c1}{// [2] = h + 1 if e \PYGZlt{} v[h]}
+\PYG{c+c1}{// if there are duplicates in v between l and h then:}
+\PYG{c+c1}{// lower = 0 looks for the last ocurrence of e in v}
+\PYG{c+c1}{// lower = 1 looks for the first ocurrence of e in v}
+\end{Verbatim}

@@ -1,0 +1,6 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+cm}{/* inv = false assumes that the greatest value in v}
+\PYG{c+cm}{  is the bitonic point.}
+\PYG{c+cm}{  inv = true assumes that the smallest value in v is}
+\PYG{c+cm}{  the bitonic point. */}
+\end{Verbatim}

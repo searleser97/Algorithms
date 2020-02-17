@@ -1,0 +1,17 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{typedef} \PYG{k+kt}{int} \PYG{n}{T}\PYG{p}{;}
+
+\PYG{n}{vector}\PYG{o}{\PYGZlt{}}\PYG{k+kt}{int}\PYG{o}{\PYGZgt{}} \PYG{n}{bSearch}\PYG{p}{(}\PYG{n}{vector}\PYG{o}{\PYGZlt{}}\PYG{n}{T}\PYG{o}{\PYGZgt{}} \PYG{o}{\PYGZam{}}\PYG{n}{v}\PYG{p}{,} \PYG{n}{T} \PYG{n}{e}\PYG{p}{,} \PYG{k+kt}{int} \PYG{n}{l}\PYG{p}{,} \PYG{k+kt}{int} \PYG{n}{r}\PYG{p}{,}
+                    \PYG{k+kt}{bool} \PYG{n}{lower} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{,} \PYG{k+kt}{bool} \PYG{n}{inv} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+  \PYG{k}{while} \PYG{p}{(}\PYG{n}{l} \PYG{o}{\PYGZlt{}=} \PYG{n}{r}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+    \PYG{k+kt}{int} \PYG{n}{mid} \PYG{o}{=} \PYG{p}{(}\PYG{n}{l} \PYG{o}{+} \PYG{n}{r}\PYG{p}{)} \PYG{o}{/} \PYG{l+m+mi}{2}\PYG{p}{;}
+    \PYG{k}{if} \PYG{p}{(}\PYG{n}{e} \PYG{o}{\PYGZlt{}} \PYG{n}{v}\PYG{p}{[}\PYG{n}{mid}\PYG{p}{])}
+      \PYG{n}{inv} \PYG{o}{?} \PYG{n}{l} \PYG{o}{=} \PYG{n}{mid} \PYG{o}{+} \PYG{l+m+mi}{1} \PYG{o}{:} \PYG{n}{r} \PYG{o}{=} \PYG{n}{mid} \PYG{o}{\PYGZhy{}} \PYG{l+m+mi}{1}\PYG{p}{;}
+    \PYG{k}{else} \PYG{n+nf}{if} \PYG{p}{(}\PYG{n}{e} \PYG{o}{\PYGZgt{}} \PYG{n}{v}\PYG{p}{[}\PYG{n}{mid}\PYG{p}{])}
+      \PYG{n}{inv} \PYG{o}{?} \PYG{n}{r} \PYG{o}{=} \PYG{n}{mid} \PYG{o}{\PYGZhy{}} \PYG{l+m+mi}{1} \PYG{o}{:} \PYG{n}{l} \PYG{o}{=} \PYG{n}{mid} \PYG{o}{+} \PYG{l+m+mi}{1}\PYG{p}{;}
+    \PYG{k}{else}
+      \PYG{n}{lower} \PYG{o}{?} \PYG{n}{r} \PYG{o}{=} \PYG{n}{mid} \PYG{o}{\PYGZhy{}} \PYG{l+m+mi}{1} \PYG{o}{:} \PYG{n}{l} \PYG{o}{=} \PYG{n}{mid} \PYG{o}{+} \PYG{l+m+mi}{1}\PYG{p}{;}
+  \PYG{p}{\PYGZcb{}}
+  \PYG{k}{return} \PYG{p}{\PYGZob{}}\PYG{n}{r}\PYG{p}{,} \PYG{n}{l}\PYG{p}{\PYGZcb{};}
+\PYG{p}{\PYGZcb{}}  \PYG{c+c1}{// be aware that r can be \PYGZlt{} given l and l \PYGZgt{} given r}
+\end{Verbatim}

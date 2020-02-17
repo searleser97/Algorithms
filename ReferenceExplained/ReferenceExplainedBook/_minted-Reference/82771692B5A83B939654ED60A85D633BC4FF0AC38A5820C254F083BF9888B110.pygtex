@@ -1,0 +1,21 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k+kt}{int} \PYG{n+nf}{query}\PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{l}\PYG{p}{,} \PYG{k+kt}{int} \PYG{n}{r}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+  \PYG{k+kt}{int} \PYG{n}{sum} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{;}
+  \PYG{k+kt}{int} \PYG{n}{lblk} \PYG{o}{=} \PYG{n}{l} \PYG{o}{/} \PYG{n}{blks}\PYG{p}{.}\PYG{n}{size}\PYG{p}{();}
+  \PYG{k}{if} \PYG{p}{(}\PYG{n}{l} \PYG{o}{!=} \PYG{n}{blks}\PYG{p}{.}\PYG{n}{size}\PYG{p}{()} \PYG{o}{*} \PYG{n}{lblk}\PYG{o}{++}\PYG{p}{)}
+    \PYG{k}{while} \PYG{p}{(}\PYG{n}{l} \PYG{o}{\PYGZlt{}} \PYG{n}{r} \PYG{o}{\PYGZam{}\PYGZam{}} \PYG{n}{l} \PYG{o}{!=} \PYG{n}{lblk} \PYG{o}{*} \PYG{n}{blks}\PYG{p}{.}\PYG{n}{size}\PYG{p}{())} \PYG{p}{\PYGZob{}}
+      \PYG{n}{sum} \PYG{o}{+=} \PYG{n}{arr}\PYG{p}{[}\PYG{n}{l}\PYG{p}{];}  \PYG{c+c1}{// problem specific}
+      \PYG{n}{l}\PYG{o}{++}\PYG{p}{;}
+    \PYG{p}{\PYGZcb{}}
+
+  \PYG{k}{while} \PYG{p}{(}\PYG{n}{l} \PYG{o}{+} \PYG{n}{blks}\PYG{p}{.}\PYG{n}{size}\PYG{p}{()} \PYG{o}{\PYGZlt{}=} \PYG{n}{r}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+    \PYG{n}{sum} \PYG{o}{+=} \PYG{n}{blks}\PYG{p}{[}\PYG{n}{l} \PYG{o}{/} \PYG{n}{blks}\PYG{p}{.}\PYG{n}{size}\PYG{p}{()];}  \PYG{c+c1}{// problem specific}
+    \PYG{n}{l} \PYG{o}{+=} \PYG{n}{blks}\PYG{p}{.}\PYG{n}{size}\PYG{p}{();}
+  \PYG{p}{\PYGZcb{}}
+  \PYG{k}{while} \PYG{p}{(}\PYG{n}{l} \PYG{o}{\PYGZlt{}=} \PYG{n}{r}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+    \PYG{n}{sum} \PYG{o}{+=} \PYG{n}{arr}\PYG{p}{[}\PYG{n}{l}\PYG{p}{];}  \PYG{c+c1}{// problem specific}
+    \PYG{n}{l}\PYG{o}{++}\PYG{p}{;}
+  \PYG{p}{\PYGZcb{}}
+  \PYG{k}{return} \PYG{n}{sum}\PYG{p}{;}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

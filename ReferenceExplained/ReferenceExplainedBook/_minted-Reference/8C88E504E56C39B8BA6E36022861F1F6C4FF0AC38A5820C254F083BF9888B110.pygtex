@@ -1,0 +1,5 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+  \PYG{k+kt}{void} \PYG{n+nf}{calc}\PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{i}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+    \PYG{k}{if} \PYG{p}{(}\PYG{o}{!}\PYG{n}{u}\PYG{p}{[}\PYG{n}{i}\PYG{p}{])} \PYG{n}{st}\PYG{p}{[}\PYG{n}{i}\PYG{p}{]} \PYG{o}{=} \PYG{n}{min}\PYG{p}{(}\PYG{n}{st}\PYG{p}{[}\PYG{n}{i} \PYG{o}{\PYGZlt{}\PYGZlt{}} \PYG{l+m+mi}{1}\PYG{p}{],} \PYG{n}{st}\PYG{p}{[}\PYG{n}{i} \PYG{o}{\PYGZlt{}\PYGZlt{}} \PYG{l+m+mi}{1} \PYG{o}{|} \PYG{l+m+mi}{1}\PYG{p}{]);}
+  \PYG{p}{\PYGZcb{}}
+\end{Verbatim}

@@ -1,0 +1,6 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{struct} \PYG{n}{SuffixAutomaton} \PYG{p}{\PYGZob{}}
+  \PYG{n}{vector}\PYG{o}{\PYGZlt{}}\PYG{k+kt}{int}\PYG{o}{\PYGZgt{}} \PYG{n}{len}\PYG{p}{,} \PYG{n}{link}\PYG{p}{,} \PYG{n}{isClone}\PYG{p}{;}
+  \PYG{n}{vector}\PYG{o}{\PYGZlt{}}\PYG{n}{map}\PYG{o}{\PYGZlt{}}\PYG{k+kt}{char}\PYG{p}{,} \PYG{k+kt}{int}\PYG{o}{\PYGZgt{}\PYGZgt{}} \PYG{n}{next}\PYG{p}{;}
+  \PYG{k+kt}{int} \PYG{n}{size}\PYG{p}{,} \PYG{n}{last}\PYG{p}{;}
+\end{Verbatim}

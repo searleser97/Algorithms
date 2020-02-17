@@ -1,0 +1,14 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k+kt}{void} \PYG{n+nf}{\PYGZus{}main}\PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{tc}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+
+\PYG{p}{\PYGZcb{}}
+
+\PYG{k+kt}{int} \PYG{n+nf}{main}\PYG{p}{()} \PYG{p}{\PYGZob{}}
+  \PYG{n}{ios\PYGZus{}base}\PYG{o}{::}\PYG{n}{sync\PYGZus{}with\PYGZus{}stdio}\PYG{p}{(}\PYG{l+m+mi}{0}\PYG{p}{),} \PYG{n}{cin}\PYG{p}{.}\PYG{n}{tie}\PYG{p}{(}\PYG{l+m+mi}{0}\PYG{p}{);}
+  \PYG{n}{\PYGZus{}main}\PYG{p}{(}\PYG{l+m+mi}{0}\PYG{p}{);}
+  \PYG{k}{return} \PYG{l+m+mi}{0}\PYG{p}{;}
+  \PYG{k+kt}{int} \PYG{n}{tc}\PYG{p}{;}
+  \PYG{n}{cin} \PYG{o}{\PYGZgt{}\PYGZgt{}} \PYG{n}{tc}\PYG{p}{;}
+  \PYG{n}{rep}\PYG{p}{(}\PYG{n}{i}\PYG{p}{,} \PYG{n}{tc}\PYG{p}{)} \PYG{n}{\PYGZus{}main}\PYG{p}{(}\PYG{n}{i} \PYG{o}{+} \PYG{l+m+mi}{1}\PYG{p}{);}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

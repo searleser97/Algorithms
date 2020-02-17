@@ -1,0 +1,8 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n}{vector}\PYG{o}{\PYGZlt{}}\PYG{n}{li}\PYG{o}{\PYGZgt{}} \PYG{n}{divisors}\PYG{p}{(}\PYG{n}{li} \PYG{n}{n}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+  \PYG{n}{Map} \PYG{n}{pf} \PYG{o}{=} \PYG{n}{primeFactors}\PYG{p}{(}\PYG{n}{n}\PYG{p}{);}
+  \PYG{n}{vector}\PYG{o}{\PYGZlt{}}\PYG{n}{li}\PYG{o}{\PYGZgt{}} \PYG{n}{d}\PYG{p}{;}
+  \PYG{n}{divs}\PYG{p}{(}\PYG{n}{pf}\PYG{p}{,} \PYG{n}{d}\PYG{p}{,} \PYG{l+m+mi}{1}\PYG{p}{,} \PYG{n}{pf}\PYG{p}{.}\PYG{n}{begin}\PYG{p}{()}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{first}\PYG{p}{);}
+  \PYG{k}{return} \PYG{n}{d}\PYG{p}{;}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

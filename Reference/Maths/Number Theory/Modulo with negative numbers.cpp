@@ -1,8 +1,6 @@
-// 7
-typedef int T;
+// 5
+typedef long long int li;
 
-T mod(T a, T b) {
-  if (a < 0 && b >= 0) return a % b + b;
-  if (a >= 0 && b < 0) return -(a % b + b);
-  return a % b;
-}
+// if b is positive the answer is positive
+// if b is negative the answer is negative
+li mod(li a, li b) { return (b + (a % b)) % b; }

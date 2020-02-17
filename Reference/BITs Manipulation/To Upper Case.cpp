@@ -1,4 +1,1 @@
-// 3
-char upperCase(char c) {
-  return c & '_';
-}
+char upperCase(char c) { return c & '_'; }

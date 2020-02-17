@@ -19,7 +19,7 @@ void addEdge(int u, int v, int w) {
 // 14
 // O(N)
 vector<T> dagsssp(int s) {
-  vector<T> dist(adj.size(), inf);
+  vector<long long int> dist(adj.size(), inf);
   dist[s] = 0;
   toposort(s);
   while (toposorted.size()) {

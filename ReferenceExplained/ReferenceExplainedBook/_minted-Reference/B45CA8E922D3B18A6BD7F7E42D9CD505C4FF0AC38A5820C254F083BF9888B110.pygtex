@@ -1,0 +1,8 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n}{T} \PYG{n+nf}{F}\PYG{p}{(}\PYG{n}{T} \PYG{n}{a}\PYG{p}{,} \PYG{n}{T} \PYG{n}{b}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+  \PYG{c+c1}{// return min(a, b);}
+  \PYG{k}{return} \PYG{n}{\PYGZus{}\PYGZus{}gcd}\PYG{p}{(}\PYG{n}{a}\PYG{p}{,} \PYG{n}{b}\PYG{p}{);}
+  \PYG{c+c1}{// return a + b; // Arith}
+  \PYG{c+c1}{// return a * b; // Arith}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

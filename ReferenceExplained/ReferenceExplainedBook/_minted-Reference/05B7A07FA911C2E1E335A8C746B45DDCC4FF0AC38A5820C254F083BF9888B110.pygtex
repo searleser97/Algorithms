@@ -1,0 +1,6 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{// O(lg(N))}
+\PYG{n}{T} \PYG{n+nf}{query}\PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{i}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+  \PYG{k}{return} \PYG{n}{query}\PYG{p}{(}\PYG{n}{bit1}\PYG{p}{,} \PYG{n}{i}\PYG{p}{)} \PYG{o}{*} \PYG{n}{i} \PYG{o}{+} \PYG{n}{query}\PYG{p}{(}\PYG{n}{bit2}\PYG{p}{,} \PYG{n}{i}\PYG{p}{);}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

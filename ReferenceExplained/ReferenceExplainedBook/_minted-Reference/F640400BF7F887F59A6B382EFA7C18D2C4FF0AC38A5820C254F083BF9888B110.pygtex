@@ -1,0 +1,6 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k+kt}{double} \PYG{n+nf}{random}\PYG{p}{(}\PYG{k+kt}{double} \PYG{n}{min}\PYG{p}{,} \PYG{k+kt}{double} \PYG{n}{max}\PYG{p}{)} \PYG{p}{\PYGZob{}}  \PYG{c+c1}{// [min, max)}
+  \PYG{k}{return} \PYG{n}{uniform\PYGZus{}real\PYGZus{}distribution}\PYG{o}{\PYGZlt{}}\PYG{k+kt}{double}\PYG{o}{\PYGZgt{}}\PYG{p}{(}\PYG{n}{min}\PYG{p}{,}
+                                           \PYG{n}{max}\PYG{p}{)(}\PYG{n}{seed}\PYG{p}{);}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

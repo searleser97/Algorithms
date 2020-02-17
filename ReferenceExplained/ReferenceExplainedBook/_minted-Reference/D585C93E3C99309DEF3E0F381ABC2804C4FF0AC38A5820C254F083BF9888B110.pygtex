@@ -1,0 +1,4 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+cp}{\PYGZsh{}define endl \PYGZsq{}\PYGZbs{}n\PYGZsq{}}
+\PYG{c+cp}{\PYGZsh{}define seq(x, n) for (int i = x; i \PYGZlt{} n; i++)}
+\end{Verbatim}

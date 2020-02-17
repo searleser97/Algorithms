@@ -1,0 +1,11 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+cm}{/*}
+\PYG{c+cm}{if e is in v then it returns a vector of size 1 where:}
+\PYG{c+cm}{  if lower = false then:}
+\PYG{c+cm}{    ans[0] = rightmost position of e in v}
+\PYG{c+cm}{  else}
+\PYG{c+cm}{    ans[0] = leftmost position of e in v}
+\PYG{c+cm}{else it returns a vector of size 2 which means that:}
+\PYG{c+cm}{  ans[0] \PYGZlt{} e \PYGZlt{} ans[1] if inv = false}
+\PYG{c+cm}{  ans[0] \PYGZgt{} e \PYGZgt{} ans[1] if inv = true*/}
+\end{Verbatim}

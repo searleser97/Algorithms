@@ -1,4 +1,1 @@
-// 3
-char toggleCase(char c) {
-  return c ^ ' ';
-}
+char toggleCase(char c) { return c ^ ' '; }

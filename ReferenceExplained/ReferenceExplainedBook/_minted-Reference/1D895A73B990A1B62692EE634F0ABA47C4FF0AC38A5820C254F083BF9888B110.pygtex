@@ -1,0 +1,24 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+cp}{\PYGZsh{}include} \PYG{c+cpf}{\PYGZlt{}bits/stdc++.h\PYGZgt{}}
+
+\PYG{k}{using} \PYG{k}{namespace} \PYG{n}{std}\PYG{p}{;}
+
+\PYG{c+cp}{\PYGZsh{}include} \PYG{c+cpf}{\PYGZdq{}./Is Prime Miller Rabin.cpp\PYGZdq{}}
+
+\PYG{k}{typedef} \PYG{k+kt}{int64\PYGZus{}t} \PYG{n}{lli}\PYG{p}{;}
+\PYG{k}{typedef} \PYG{n}{unordered\PYGZus{}map}\PYG{o}{\PYGZlt{}}\PYG{n}{lli}\PYG{p}{,} \PYG{k+kt}{int}\PYG{o}{\PYGZgt{}} \PYG{n}{Map}\PYG{p}{;}
+
+\PYG{n}{lli} \PYG{n+nf}{getRandomDivisor}\PYG{p}{(}\PYG{n}{lli} \PYG{n}{n}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+
+
+\PYG{p}{\PYGZcb{}}
+
+\PYG{n}{Map} \PYG{n+nf}{primeFactors}\PYG{p}{(}\PYG{n}{lli} \PYG{n}{n}\PYG{p}{,} \PYG{n}{Map} \PYG{n}{primeFactors} \PYG{o}{=} \PYG{n}{Map}\PYG{p}{())} \PYG{p}{\PYGZob{}}
+
+\PYG{p}{\PYGZcb{}}
+
+\PYG{k+kt}{int} \PYG{n+nf}{main}\PYG{p}{()} \PYG{p}{\PYGZob{}}
+  \PYG{n}{primeFactors}\PYG{p}{(}\PYG{l+m+mi}{56}\PYG{p}{,} \PYG{n}{Map}\PYG{p}{());}
+  \PYG{k}{return} \PYG{l+m+mi}{0}\PYG{p}{;}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

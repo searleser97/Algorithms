@@ -1,0 +1,8 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k+kt}{int} \PYG{n+nf}{main}\PYG{p}{()} \PYG{p}{\PYGZob{}}
+  \PYG{k}{auto} \PYG{n}{cmp} \PYG{o}{=} \PYG{p}{[](}\PYG{k}{const} \PYG{n}{Object}\PYG{o}{\PYGZam{}} \PYG{n}{a}\PYG{p}{,} \PYG{k}{const} \PYG{n}{Object}\PYG{o}{\PYGZam{}} \PYG{n}{b}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+    \PYG{k}{return} \PYG{n}{a}\PYG{p}{.}\PYG{n}{second} \PYG{o}{\PYGZgt{}} \PYG{n}{b}\PYG{p}{.}\PYG{n}{second}\PYG{p}{;}
+  \PYG{p}{\PYGZcb{};}
+  \PYG{n}{set}\PYG{o}{\PYGZlt{}}\PYG{n}{Object}\PYG{p}{,} \PYG{k}{decltype}\PYG{p}{(}\PYG{n}{cmp}\PYG{p}{)}\PYG{o}{\PYGZgt{}} \PYG{n}{pq}\PYG{p}{(}\PYG{n}{cmp}\PYG{p}{);}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

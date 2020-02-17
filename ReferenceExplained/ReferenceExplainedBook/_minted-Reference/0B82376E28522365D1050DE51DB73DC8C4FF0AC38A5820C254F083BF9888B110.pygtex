@@ -1,0 +1,11 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{// when reading lines, don\PYGZsq{}t mix \PYGZsq{}cin\PYGZsq{} with}
+\PYG{c+c1}{// \PYGZsq{}getline\PYGZsq{} just use getline and split}
+\PYG{n}{string} \PYG{n+nf}{input}\PYG{p}{()} \PYG{p}{\PYGZob{}}
+  \PYG{n}{string} \PYG{n}{ans}\PYG{p}{;}
+  \PYG{c+c1}{// cin.ignore(numeric\PYGZus{}limits\PYGZlt{}streamsize\PYGZgt{}::max(), \PYGZsq{}\PYGZbs{}n\PYGZsq{});}
+  \PYG{n}{cin} \PYG{o}{\PYGZgt{}\PYGZgt{}} \PYG{n}{ws}\PYG{p}{;}
+  \PYG{n}{getline}\PYG{p}{(}\PYG{n}{cin}\PYG{p}{,} \PYG{n}{ans}\PYG{p}{);}
+  \PYG{k}{return} \PYG{n}{ans}\PYG{p}{;}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

@@ -1,0 +1,4 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+  \PYG{n}{T}\PYG{o}{\PYGZam{}} \PYG{k}{operator}\PYG{p}{[](}\PYG{k+kt}{int} \PYG{n}{i}\PYG{p}{)} \PYG{p}{\PYGZob{}} \PYG{k}{return} \PYG{n}{st}\PYG{p}{[}\PYG{n}{i} \PYG{o}{+} \PYG{n}{N}\PYG{p}{];} \PYG{p}{\PYGZcb{}}
+\PYG{p}{\PYGZcb{};}
+\end{Verbatim}
